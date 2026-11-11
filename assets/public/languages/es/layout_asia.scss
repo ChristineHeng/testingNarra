@@ -1,0 +1,82 @@
+$activeView: mAsia !default;
+@use '../../../themes/colours/config'with ($activeView: $activeView,
+    $view: asia,
+    $language: es,
+);
+@use '_font';
+@use '../../layout/css/_layout_shared';
+@use '../../layout/css/_fl_layout_shared';
+@use '../../layout/css/_layout_sub_asia';
+$n_font1: 8px;
+$event_lsiting_header_minheight: 42px;
+$event_lsiting_overallcontent_minheight: 95px;
+// .handicap {
+//     .title { // ttl (moved)
+//         padding-right: 2px;
+//     }
+// }
+// .n_header {
+//     &.n_header_sports,
+//     &.n_header_promo {
+//         .title { // ttl (moved)
+//             font-size: $n_font1 + 4px !important;
+//         }
+//     }
+// }
+// .n_footer {
+//     font-size: $n_font1 + 3px !important;
+// }
+// .pop_tutorial {
+// 	.result_wrap {
+// 		font-size: $n_font1 + 2px;
+// 	}
+// }
+// [DES-808] Soccer Player Proposition Bet Type - start
+// .sld_new {//sev (moved)
+//     right: -2px;
+// }
+// [DES-808] Soccer Player Proposition Bet Type - end
+// pb_rmb_ls_tooltip not in used already
+// .pb_rmb_ls_tooltip {
+//     width: 180px;
+//     top: -87px;
+//     left: -82px;
+//     .fl & {
+//         top: -99px;
+//         left: -73px;
+//     }
+// }
+// .n_sev_view .tennis { // sev (moved)
+//     .sb_table {
+//         .n_num.set {
+//             width: 36px;
+//         }
+//     }
+// }
+// .race_track_status {
+//     font-size: $n_font1 + 1px;
+// }
+// .track_tt {
+//     &:first-child {
+//         padding-right: 4px;
+//     }
+//     &:last-child {
+//         padding-left: 4px;
+//     }
+//     &:not(:first-child):not(:last-child) {
+//         padding: 0 4px;
+//     }
+// }
+// [DES-1414/1415] Tennis and volleyball scoreboard live layout
+// .n_sev_top { // sev (moved)
+//     .tennis .sb_table {
+//         .n_num.set {
+//             width: 45px;
+//         }
+//     }
+//     .volleyball .sb_table {
+//         .n_num.set:last-child {
+//             width: 45px;
+//         }
+//     }
+// }

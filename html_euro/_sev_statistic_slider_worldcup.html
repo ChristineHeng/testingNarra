@@ -1,0 +1,66 @@
+<div class="n_sports_menu slider_wrap_flexi eu_sevSlider eu_sevSliderStats n_sticky DontCopyDev_worldcup_stat thinner_slider">
+    <div class="item_wrap active"><div class="item">Schedule</div></div>
+    <div class="item_wrap"><div class="item">Standings</div></div>
+    <div class="item_wrap"><div class="item">History</div></div>
+    <div class="slider"></div>
+</div>
+<div class="n_tab_nav_withBG tab_nav_2 DontCopyDev_schedule">
+    <div class="tab_nav_item active">Today</div>
+    <div class="tab_nav_item">Tomorrow</div>
+</div>
+<div class="n_tab_nav_withBG tab_nav_2 DontCopyDev_standings" style="display: none;">
+    <div class="tab_nav_item">Group Stage</div>
+    <div class="tab_nav_item">Knockout Stage</div>
+</div>
+<div class="n_tab_nav_withBG tab_nav_8 DontCopyDev_history" style="display: none;">
+    <div class="tab_nav_item">All</div>
+    <div class="tab_nav_item">25/09</div>
+    <div class="tab_nav_item">24/09</div>
+    <div class="tab_nav_item">23/09</div>
+    <div class="tab_nav_item">22/09</div>
+    <div class="tab_nav_item">21/09</div>
+    <div class="tab_nav_item">20/09</div>
+    <div class="tab_nav_item">19/09</div>
+    <div class="slider"></div>
+</div>
+
+<script>
+    // DES-522 Cyber PES: Show different tab content
+    $(".DontCopyDev_worldcup_stat .item_wrap").click(function() {
+        $(".DontCopyDev_worldcup_stat .item_wrap").removeClass("active");
+        $(".tab_nav_2 .tab_nav_item").removeClass("active");
+        $(".DontCopyDev_schedule, .DontCopyDev_standings, .DontCopyDev_history").hide();
+        $(".DontCopyDev_today, .DontCopyDev_group_stage, .DontCopyDev_knockout_stage, .DontCopyDev_all").hide();
+        $(this).addClass("active");
+        var tab = $(this).text().toLowerCase();
+        $(".DontCopyDev_" + tab).show();
+        if (tab == "schedule") {
+            $(".tab_nav_2 .tab_nav_item:contains('Today')").addClass("active");
+            $("#world_cup_stats_container_sample").show();
+            $(".DontCopyDev_today").show();
+            $(".DontCopyDev_group_stage").hide();
+            $(".DontCopyDev_history").hide();
+        } else if (tab == "standings") {
+            $(".tab_nav_2 .tab_nav_item:contains('Group Stage')").addClass("active");
+            $("#world_cup_stats_container_sample").show();
+            $(".DontCopyDev_today").hide();
+            $(".DontCopyDev_group_stage").show();
+            $(".DontCopyDev_history").hide();
+        } else if (tab == "history") {
+            $(".tab_nav_2 .tab_nav_item:contains('All')").addClass("active");
+            $("#world_cup_stats_container_sample").show();
+            $(".DontCopyDev_today").hide();
+            $(".DontCopyDev_group_stage").hide();
+            $(".DontCopyDev_knockout_stage").hide();
+            $(".DontCopyDev_history").show();
+        }
+    });
+    $(".tab_nav_2 .tab_nav_item").click(function() {
+        $(".tab_nav_2 .tab_nav_item").removeClass("active");
+        $(".DontCopyDev_today, .DontCopyDev_group_stage, .DontCopyDev_knockout_stage, .DontCopyDev_all").hide();
+        $(this).addClass("active");
+        $("#world_cup_stats_container_sample").show();
+        var tab = $(this).text().toLowerCase().replace(/ /g, '_');
+        $(".DontCopyDev_" + tab).show();
+    });
+</script>

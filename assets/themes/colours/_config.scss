@@ -1,0 +1,138 @@
+@use "sass:list";
+@use "sass:string";
+@use "sass:meta";
+
+$theme: null !default;
+$view: null !default;
+$language: null !default;
+$activeView: null !default;
+
+$themeType: null !default;
+
+$isDarkTheme: false !default;
+$themeRed: false !default;
+$viewMAsia: false !default;
+$viewMEuro: false !default;
+$viewMCyberbattle: false !default;
+$viewWAsia: false !default;
+$viewMobile: false !default;
+$viewWeb: false !default;
+$viewMAsiaCyberbattle: false !default;
+$viewMAsiaEuro: false !default;
+$languageChs: false !default;
+$languageEng: false !default;
+$languageEs: false !default;
+$languageHi: false !default;
+$languageId: false !default;
+$languageKor: false !default;
+$languagePt: false !default;
+$languageTh: false !default;
+$languageTr: false !default;
+$languageVn: false !default;
+
+$dark-themes: (default, betway, dark1, dark2, default1);
+$bright-themes: (red, brown, blue, bafa, green, xinli, wellbet);
+$red-themes: (red, xinli, wellbet, dark2);
+$supported-languages: (chs, eng, es, hi, id, kor, pt, th, tr, vn);
+
+@function _id($x) {
+  @if meta.type-of($x) == "string" {
+    @return string.unquote($x);
+  }
+
+  @return $x;
+}
+
+@function theme-type($t) {
+  $t: _id($t);
+
+  @if list.index($dark-themes, $t) {
+    @return "dark_theme";
+  }
+
+  @if list.index($bright-themes, $t) {
+    @return "bright_theme";
+  }
+
+  @return null;
+}
+
+@function is-red-theme($t) {
+	$t: _id($t);
+	@return list.index($red-themes, $t) != null;
+}
+
+@function is-m-asia-view($v) {
+	$v: _id($v);
+	@return $v == mAsia;
+}
+
+@function is-m-euro-view($v) {
+	$v: _id($v);
+	@return $v == mEuro;
+}
+
+@function is-m-cyberbattle-view($v) {
+	$v: _id($v);
+	@return $v == mCyberbattle or $v == mCyberBattle;
+}
+
+@function is-w-asia-view($v) {
+	$v: _id($v);
+	@return $v == wAsia;
+}
+
+@function is-language($l, $target) {
+	$l: _id($l);
+	$target: _id($target);
+	@return $l == $target;
+}
+
+// Compute
+@if $activeView == null {
+	$activeView: $view;
+}
+
+$themeType: theme-type($theme);
+$isDarkTheme: $themeType == 'dark_theme';
+$themeRed: is-red-theme($theme);
+$viewMAsia: is-m-asia-view($activeView);
+$viewMEuro: is-m-euro-view($activeView);
+$viewMCyberbattle: is-m-cyberbattle-view($activeView);
+$viewWAsia: is-w-asia-view($activeView);
+$viewMobile: $viewMAsia or $viewMEuro or $viewMCyberbattle;
+$viewWeb: $viewWAsia;
+$viewMAsiaCyberbattle: $viewMAsia or $viewMCyberbattle;
+$viewMAsiaEuro: $viewMAsia or $viewMEuro;
+$languageChs: is-language($language, chs);
+$languageEng: is-language($language, eng);
+$languageEs: is-language($language, es);
+$languageHi: is-language($language, hi);
+$languageId: is-language($language, id);
+$languageKor: is-language($language, kor);
+$languagePt: is-language($language, pt);
+$languageTh: is-language($language, th);
+$languageTr: is-language($language, tr);
+$languageVn: is-language($language, vn);
+
+// Optional: warn if theme not recognized
+@if $themeType == null and $theme != null {
+	@warn "Unknown theme `#{$theme}`: set \$themeType manually if needed.";
+}
+
+@if $language != null and list.index($supported-languages, _id($language)) == null {
+	@warn "Unknown language `#{$language}`: add it to \$supported-languages and partials/_mixin.scss if needed.";
+}
+
+// Dark or Bright Theme : for Asia or Cyber or Euro View
+// @if $theme == "default" or $theme == "betway" or $theme == "dark1" or $theme == "dark2" or $theme == "default1" {
+// 	$themeType: "dark_theme";
+// }
+
+// @if $theme =="red" or $theme == "brown" or $theme == "blue" or $theme == "bafa" or $theme == "green" or $theme == "xinli" or $theme == "wellbet" {
+// 	$themeType: "bright_theme";
+// }
+
+// @if $theme == "red" or $theme == "xinli" or $theme == "wellbet" or $theme == "dark2" {
+// 	$themeRed: "red_theme";
+// }

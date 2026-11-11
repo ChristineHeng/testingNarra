@@ -1,0 +1,2999 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Narra - html template</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover,user-scalable=no" />
+		<!-- <meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="theme-color" content="#000"> -->
+		<!--Base Styles-->
+		<link rel="stylesheet" type="text/css" href="../assets/public/layout/css/basestyle.min.css" />
+		<!--<link rel="stylesheet" type="text/css" href="../merchants/merchant1/css/style_asia.css">-->
+		<link rel="stylesheet" type="text/css" href="../assets/public/languages/eng/layout_asia.min.css" id="detect_language" />
+		<link rel="stylesheet" type="text/css" href="#" id="design_view" />
+
+		<script src="../assets/public/lib/jquery.js"></script>
+		<script src="../assets/public/layout/js/scripts_main.js"></script>
+		<script src="../assets/public/layout/js/scripts_asia.js"></script>
+	</head>
+
+	<body id="root">
+		<div class="n_container">
+			<div id="mock_menu_tab"></div>
+			<div class="n_content_wrap_wth_bcktop rac_main_wrp">
+				<div id="mock_fl_menu"></div>
+				<div class="mr_tracks_slider new_tracks n_sticky">
+					<div class="mr_tracks_wrp">
+						<div class="tracks_side_button">
+							<i class="icon-fi-track-menu-right"></i>
+						</div>
+						<div class="mr_tracks_inner">
+							<div class="tracks_tab">
+								<div class="cat_label">3v2</div>
+								Haruna
+							</div>
+							<div class="tracks_tab" id="mock_trigger_mr_tutorial2">
+								<div class="cat_label">S8</div>
+								Tutorial
+							</div>
+							<div class="tracks_tab mock_trigger_mr_1v1">
+								<div class="cat_label">1v1</div>
+								Canyon
+							</div>
+							<div class="tracks_tab mock_trigger_mr_1v1">
+								<div class="cat_label">1v1</div>
+								Maple Farm
+							</div>
+							<div class="tracks_tab">
+								<div class="cat_label">S8</div>
+								Icefield
+							</div>
+							<div class="tracks_tab">
+								<div class="cat_label">S8</div>
+								LeMans
+							</div>
+							<div class="tracks_tab">
+								<div class="cat_label">3v3</div>
+								Nexus
+							</div>
+							<div class="tracks_tab">
+								<div class="cat_label">S8</div>
+								Haruna
+							</div>
+							<div class="tracks_tab">
+								<div class="cat_label">S8</div>
+								Haruna
+							</div>
+							<div class="tracks_tab">
+								<div class="cat_label">S8</div>
+								Haruna
+							</div>
+							<div class="tracks_tab">
+								<div class="cat_label">S8</div>
+								Haruna
+							</div>
+							<div class="tracks_tab">
+								<div class="cat_label">S8</div>
+								Haruna
+							</div>
+							<div class="tracks_tab">
+								<div class="cat_label">S8</div>
+								Haruna
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bg_mask mr_mask" id="mr_mask2" style="display: none"></div>
+				<div class="mask_button highlighted mr_msk_btn" style="display: none" id="mr_msk_btn2">Got It</div>
+				<!-- racing sev in event listing start-->
+				<div class="rac_sev_wrp"></div>
+				<!-- racing sev in event listing end-->
+				<!--Track details bar--1-->
+
+				<div class="track_bar n_sticky">
+					<div class="track_item">
+						<img src="../assets/public/layout/images/pre-live-race.svg" />
+						Pre & Live Race
+					</div>
+					<div class="track_item">
+						<div class="mr_icon mr_count">
+							<span>5</span>
+						</div>
+						5 Marbles
+						<!-- 6 Canicas en Competencia -->
+					</div>
+					<div class="track_item">
+						<img src="../assets/public/layout/images/lap.svg" />
+						1 Lap
+					</div>
+				</div>
+
+				<!--MM warning msg --2-->
+				<div class="mr_alert_banner n_sticky">
+					<i class="icon-fi-exclamation-sign"></i>
+					Marble track issue detected, bets are locked for this race.
+				</div>
+				<!--marble magic-->
+				<div class="mr_main">
+					<div>
+						<div class="mr_ev_card newTemplate">
+							<div class="mr_ev_hdr n_sticky">
+								<div class="mr_ev_hdr_l">
+									<span>#<span>570451</span>(1v1 Canyon - Green vs Red)</span>
+								</div>
+								<div class="mr_ev_hdr_r">
+									<div class="live_icon smaller_icon_v2">OPEN</div>
+								</div>
+							</div>
+							<div class="mr_ev_card_ct mr_new_layout el_new_tracks">
+								<div class="mr_ct_wrp">
+									<div class="mr_bettype_hd">
+										<i class="icon-fi-winner-time"></i>
+										<div class="mr_bettype_title">Winner Time Over/Under</div>
+										<i class="icon-fi-pin"></i>
+										<i class="icon-fi-arrow-up1"></i>
+									</div>
+									<div class="mr_title_info">
+										Winner Time Predictor
+										<div class="info_wrp info_bottom">
+											<div class="info_icn"><i class="icon-fi-info"></i></div>
+											<div class="info_txt">
+												This widget predicts the final winner time based on live race progress.<br /><br />
+												Each time the leading marble passes a checkpoint (25%, 50%, 75%), a new estimated finish time is generated for Winner Time Over/Under bets.
+											</div>
+										</div>
+									</div>
+									<div class="mr_ct col_2">
+										<!-- Winner Time Over/Under added Live Race Tracker -->
+										<div class="mr_liveTrk_wrp">
+											<div class="tracker_container" data-progress="60">
+												<div class="tracker_line"></div>
+												<div class="tracker_line_fill demo_tracker_fill"></div>
+												<!-- 0% node -->
+												<div class="step" data-percent="0" style="left: 0%">0</div>
+												<!-- 25% node -->
+												<div class="step" data-percent="25" style="left: 25%">25</div>
+												<div class="step_box" style="left: 25%">
+													<i class="icon-fi-winner-flag"></i>
+													<div class="step_mark">64.40s</div>
+												</div>
+												<!-- 50% node -->
+												<div class="step" data-percent="50" style="left: 50%">50</div>
+												<div class="step_box" style="left: 50%">
+													<i class="icon-fi-winner-flag"></i>
+													<div class="step_mark">72.31s</div>
+												</div>
+												<!-- 75% node -->
+												<div class="step" data-percent="75" style="left: 75%">75</div>
+												<div class="step_box" style="left: 75%">
+													<i class="icon-fi-winner-flag"></i>
+													<div class="step_mark">--.--</div>
+												</div>
+												<!-- 100% node -->
+												<div class="step completed" data-percent="100" style="left: 100%">
+													<i class="icon-fi-winner-flag"></i>
+												</div>
+											</div>
+										</div>
+										<div class="mr_item">
+											<div class="mr_row">
+												<div class="fl_odds_wrp">
+													<div class="fl_odds_type">
+														<div class="ou_arrow up">
+															<i class="icon-fi-ou-arrow-up"></i>
+														</div>
+														Over <span class="change_alert changed">83.32s</span>
+													</div>
+													<div class="fl_odds_grp">
+														<div class="fl_odds">1.95</div>
+													</div>
+												</div>
+												<div class="fl_odds_wrp">
+													<div class="fl_odds_type">
+														<div class="ou_arrow down">
+															<i class="icon-fi-ou-arrow-down"></i>
+														</div>
+														Under <span class="change_alert">83.32s</span>
+													</div>
+													<div class="fl_odds_grp">
+														<div class="fl_odds">3.28</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="mr_form_row">
+											<div class="mr_form_title">Results</div>
+											<div class="mr_form_info">
+												<span>
+													<span class="ou_arrow up">
+														<i class="icon-fi-ou-arrow-up"></i>
+													</span>
+													63.13s
+												</span>
+												<span>
+													<span class="ou_arrow down">
+														<i class="icon-fi-ou-arrow-down"></i>
+													</span>
+													61.45s
+												</span>
+												<span>
+													<span class="ou_arrow up">
+														<i class="icon-fi-ou-arrow-up"></i>
+													</span>
+													64.14s
+												</span>
+												<span>
+													<span class="rt_hol_circle"></span>
+													63.77s
+												</span>
+												<span>
+													<span class="ou_arrow up">
+														<i class="icon-fi-ou-arrow-up"></i>
+													</span>
+													63.13s
+												</span>
+												<span class="n_highlight">
+													<span class="ou_arrow down">
+														<i class="icon-fi-ou-arrow-down"></i>
+													</span>
+													63.98s
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="mr_bettype_hd">
+										<i class="icon-fi-n-trophy"></i>
+										<div class="mr_bettype_title">Winner Head To Head</div>
+										<i class="icon-fi-pin"></i>
+										<i class="icon-fi-arrow-up1"></i>
+									</div>
+									<!--red and blue marbles-->
+									<!--<div class="mr_ct col_2">
+									<div class="mr_item">
+										<div class="mr_row">
+											<div class="fl_odds_wrp">
+												<div class="fl_odds_type">
+													<div class="win_circle red"></div>
+													Team Red
+												</div>
+												<div class="fl_odds_grp">
+													<div class="fl_odds">1.95</div>
+												</div>
+											</div>
+											<div class="fl_odds_wrp">
+												<div class="fl_odds_type">
+													<div class="win_circle blue"></div>
+													Team Blue
+												</div>
+												<div class="fl_odds_grp">
+													<div class="fl_odds">1.95</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="mr_form_row">
+										<div class="mr_form_title">Results</div>
+										<div class="mr_form_info">
+											<div class="win_circle red"></div>
+											<div class="win_circle blue"></div>
+											<div class="win_circle red"></div>
+											<div class="win_circle red"></div>
+											<div class="win_circle blue"></div>
+											<div class="win_circle blue"></div>
+											<div class="win_circle blue"></div>
+											<div class="win_circle red"></div>
+											<div class="win_circle blue"></div>
+											<div class="win_circle red latest_winner"></div>
+										</div>
+									</div>
+								</div>-->
+									<!--red and green marbles-->
+									<div class="mr_ct col_2">
+										<div class="mr_item">
+											<div class="mr_row">
+												<div class="fl_odds_wrp">
+													<div class="fl_odds_type">
+														<div class="win_circle green"></div>
+														Team Green
+													</div>
+													<div class="fl_odds_grp">
+														<div class="fl_odds">1.95</div>
+													</div>
+												</div>
+												<div class="fl_odds_wrp">
+													<div class="fl_odds_type">
+														<div class="win_circle red"></div>
+														Team Red
+													</div>
+													<div class="fl_odds_grp">
+														<div class="fl_odds">1.95</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="mr_form_row">
+											<div class="mr_form_title">Results</div>
+											<div class="mr_form_info">
+												<div class="win_circle red"></div>
+												<div class="win_circle green"></div>
+												<div class="win_circle red"></div>
+												<div class="win_circle red"></div>
+												<div class="win_circle green"></div>
+												<div class="win_circle green"></div>
+												<div class="win_circle green"></div>
+												<div class="win_circle red"></div>
+												<div class="win_circle green"></div>
+												<div class="win_circle red latest_winner"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mr_ev_card newTemplate" id="mr_liveTrack_tutorial">
+							<div class="mr_ev_hdr n_sticky">
+								<div class="mr_ev_hdr_l">
+									<span>#<span>570451</span>(Solo 8 Icefield)</span>
+								</div>
+								<div class="mr_ev_hdr_r">
+									<div class="live_bet_label">Live Closing</div>
+									<div class="live_icon smaller_icon_v2 rb_count">00:11</div>
+								</div>
+							</div>
+							<div class="mr_ev_card_ct mr_new_layout el_new_tracks">
+								<div class="mr_ct_wrp">
+									<div class="mr_bettype_hd">
+										<i class="icon-fi-winner-time"></i>
+										<div class="mr_bettype_title">Winner Time Over/Under</div>
+										<i class="icon-fi-pin"></i>
+										<i class="icon-fi-arrow-up1"></i>
+									</div>
+									<div class="mr_title_info">
+										Winner Time Predictor
+										<div class="info_wrp info_bottom">
+											<div class="info_icn"><i class="icon-fi-info"></i></div>
+											<div class="info_txt">
+												This widget predicts the final winner time based on live race progress.<br /><br />
+												Each time the leading marble passes a checkpoint (25%, 50%, 75%), a new estimated finish time is generated for Winner Time Over/Under bets.
+											</div>
+										</div>
+									</div>
+									<div class="mr_ct col_2">
+										<!-- Winner Time Over/Under added Live Race Tracker -->
+										<div class="mr_liveTrk_wrp" id="mr_liveTrack_tut">
+											<div class="tracker_container" data-progress="60">
+												<div class="tracker_line"></div>
+												<div class="tracker_line_fill demo_tracker_fill"></div>
+												<!-- 0% node -->
+												<div class="step" data-percent="0" style="left: 0%">
+													0
+													<svg class="mr_tut4 mr_tut4_arr" xmlns="http://www.w3.org/2000/svg" width="47" height="49" viewBox="0 0 47 49" fill="none" style="display: none">
+														<path d="M46.4339 4.35355C46.6292 4.15829 46.6292 3.84171 46.4339 3.64644L43.252 0.464464C43.0567 0.269201 42.7401 0.269201 42.5449 0.464464C42.3496 0.659727 42.3496 0.976309 42.5449 1.17157L45.3733 4L42.5449 6.82842C42.3496 7.02369 42.3496 7.34027 42.5449 7.53553C42.7401 7.73079 43.0567 7.73079 43.252 7.53553L46.4339 4.35355ZM2.07251 48.4115C0.755339 41.0848 1.3784 30.1008 7.49584 20.9657C13.5924 11.8618 25.2099 4.5 46.0804 4.5L46.0804 3.5C24.9509 3.5 12.9851 10.9715 6.66494 20.4093C0.365722 29.8158 -0.261215 41.0819 1.08828 48.5885L2.07251 48.4115Z" fill="white" />
+													</svg>
+													<div class="dot_box highlighted mr_tut4 mr_desc mr_tut4_desc" style="display: none">
+														<div>3.</div>
+														<div>The Live Race Tracker shows real-time passing times at 25%, 50%, and 75% of the track to help you evaluate Winner Time Over/Under bets.</div>
+													</div>
+												</div>
+												<!-- 25% node -->
+												<div class="step" data-percent="25" style="left: 25%">25</div>
+												<div class="step_box" style="left: 25%">
+													<i class="icon-fi-winner-flag"></i>
+													<div class="step_mark">64.40s</div>
+												</div>
+												<!-- 50% node -->
+												<div class="step" data-percent="50" style="left: 50%">50</div>
+												<div class="step_box" style="left: 50%">
+													<i class="icon-fi-winner-flag"></i>
+													<div class="step_mark">72.31s</div>
+												</div>
+												<!-- 75% node -->
+												<div class="step" data-percent="75" style="left: 75%">75</div>
+												<div class="step_box" style="left: 75%">
+													<i class="icon-fi-winner-flag"></i>
+													<div class="step_mark">--.--</div>
+												</div>
+												<!-- 100% node -->
+												<div class="step completed" data-percent="100" style="left: 100%">
+													<i class="icon-fi-winner-flag"></i>
+												</div>
+											</div>
+										</div>
+										<div class="mr_item">
+											<div class="mr_row">
+												<div class="fl_odds_wrp">
+													<div class="fl_odds_type">
+														<div class="ou_arrow up">
+															<i class="icon-fi-ou-arrow-up"></i>
+														</div>
+														Over <span class="change_alert changed">83.32s</span>
+													</div>
+													<div class="fl_odds_grp">
+														<div class="fl_odds">1.95</div>
+													</div>
+												</div>
+												<div class="fl_odds_wrp">
+													<div class="fl_odds_type">
+														<div class="ou_arrow down">
+															<i class="icon-fi-ou-arrow-down"></i>
+														</div>
+														Under <span class="change_alert">83.32s</span>
+													</div>
+													<div class="fl_odds_grp">
+														<div class="fl_odds">3.28</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="mr_form_row">
+											<div class="mr_form_title">Results</div>
+											<div class="mr_form_info">
+												<span>
+													<span class="ou_arrow up">
+														<i class="icon-fi-ou-arrow-up"></i>
+													</span>
+													63.13s
+												</span>
+												<span>
+													<span class="ou_arrow down">
+														<i class="icon-fi-ou-arrow-down"></i>
+													</span>
+													61.45s
+												</span>
+												<span>
+													<span class="ou_arrow up">
+														<i class="icon-fi-ou-arrow-up"></i>
+													</span>
+													64.14s
+												</span>
+												<span>
+													<span class="rt_hol_circle"></span>
+													63.77s
+												</span>
+												<span>
+													<span class="ou_arrow up">
+														<i class="icon-fi-ou-arrow-up"></i>
+													</span>
+													63.13s
+												</span>
+												<span class="n_highlight">
+													<span class="ou_arrow down">
+														<i class="icon-fi-ou-arrow-down"></i>
+													</span>
+													63.98s
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="mr_bettype_hd">
+										<i class="icon-fi-big-small"></i>
+										<div class="mr_bettype_title">Winner Big/Small</div>
+										<i class="icon-fi-pin"></i>
+										<i class="icon-fi-arrow-up1"></i>
+									</div>
+									<div class="mr_ct col_2">
+										<div class="mr_item">
+											<div class="mr_row">
+												<div class="fl_odds_wrp">
+													<div class="fl_odds_type">Big</div>
+													<div class="fl_odds_grp">
+														<div class="fl_odds">1.95</div>
+													</div>
+												</div>
+												<div class="fl_odds_wrp">
+													<div class="fl_odds_type">Small</div>
+													<div class="fl_odds_grp">
+														<div class="fl_odds">1.95</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="mr_form_row">
+											<div class="mr_form_title">Results</div>
+											<div class="mr_form_info">
+												<span>B</span>
+												<span>S</span>
+												<span>B</span>
+												<span>S</span>
+												<span>B</span>
+												<span>B</span>
+												<span>B</span>
+												<span>B</span>
+												<span>S</span>
+												<span class="n_highlight">S</span>
+											</div>
+										</div>
+									</div>
+									<div class="mr_ct newCol3">
+										<div class="mr_bettype_hd">
+											<div class="mr_bettype_left">
+												<i class="icon-fi-win-position"></i>
+												<div class="mr_bettype_title">Winning Position</div>
+											</div>
+											<div class="mr_order">
+												<div class="mr_order_title">Marble Order</div>
+												<div class="sort_button">
+													<div class="st_arrow up"></div>
+													<div class="st_arrow down"></div>
+												</div>
+												<div class="ob_st_popup" style="display: none">
+													<div class="ob_st_content">
+														<div class="ob_st_rw active">Odds Ascending</div>
+														<div class="ob_st_rw">Odds Descending</div>
+														<div class="ob_st_rw">Marble Order</div>
+													</div>
+												</div>
+											</div>
+											<i class="icon-fi-pin"></i>
+											<i class="icon-fi-arrow-up1"></i>
+										</div>
+										<div class="mr_hd_t2">
+											<div class="mr_hdr_title">Marble/Results</div>
+											<div class="mr_hdr t1">
+												<div class="win_tt">Winner</div>
+												<div class="win_tt">
+													Top 2
+													<div class="info_wrp info_top">
+														<div class="info_icn"><i class="icon-fi-info"></i></div>
+														<div class="info_txt">Bet wins if selection finishes 1st place or 2nd place.</div>
+													</div>
+												</div>
+												<div class="win_tt">
+													Top 3
+													<div class="info_wrp info_top">
+														<div class="info_icn"><i class="icon-fi-info"></i></div>
+														<div class="info_txt">Bet wins if selection finishes 1st place or 2nd place.</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="mr_ev_ct_wrp">
+											<div class="mr_ev_ct">
+												<div class="col_mm">
+													<div class="mr_row">
+														<div class="mr_icon_item">
+															<div class="mr_icon mr1">1</div>
+															<div class="mr_wp_info">
+																<div class="mr_wp_name">Cheetah</div>
+																<div class="mr_wp_form">
+																	<div class="fm_result">
+																		<span>3</span>
+																		<span>6</span>
+																		<span>1</span>
+																		<span>6</span>
+																		<span class="n_highlight">5</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="mr_odds_grp">
+															<div class="fl_odds_wrp add">
+																<div class="fl_odds_grp">
+																	<div class="fl_odds">9.53</div>
+																	<div class="fl_arrow"></div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="mr_row">
+														<div class="mr_icon_item">
+															<div class="mr_icon mr2">2</div>
+															<div class="mr_wp_info">
+																<div class="mr_wp_name">Shark</div>
+																<div class="mr_wp_form">
+																	<div class="fm_result">
+																		<span>3</span>
+																		<span>6</span>
+																		<span>1</span>
+																		<span>6</span>
+																		<span class="n_highlight">5</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="mr_odds_grp">
+															<div class="fl_odds_wrp up">
+																<div class="fl_odds_grp">
+																	<div class="fl_odds">9.53</div>
+																	<div class="fl_arrow">
+																		<i class="icon-fi-arrow-up"></i>
+																	</div>
+																</div>
+															</div>
+															<div class="fl_odds_wrp down">
+																<div class="fl_odds_grp">
+																	<div class="fl_odds">4.76</div>
+																	<div class="fl_arrow">
+																		<i class="icon-fi-arrow-down"></i>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="mr_row">
+														<div class="mr_icon_item">
+															<div class="mr_icon mr3">3</div>
+															<div class="mr_wp_info">
+																<div class="mr_wp_name">Koi</div>
+																<div class="mr_wp_form">
+																	<div class="fm_result">
+																		<span>3</span>
+																		<span>6</span>
+																		<span>1</span>
+																		<span>6</span>
+																		<span class="n_highlight">5</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="mr_odds_grp">
+															<div class="fl_odds_wrp">
+																<div class="fl_odds_grp">
+																	<div class="fl_odds">1.20</div>
+																	<div class="fl_arrow"></div>
+																</div>
+															</div>
+															<div class="fl_odds_wrp">
+																<div class="fl_odds_grp">
+																	<div class="fl_odds">4.76</div>
+																	<div class="fl_arrow"></div>
+																</div>
+															</div>
+															<div class="fl_odds_wrp">
+																<div class="fl_odds_grp">
+																	<div class="fl_odds">3.17</div>
+																	<div class="fl_arrow"></div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="mr_row">
+														<div class="mr_icon_item">
+															<div class="mr_icon mr4">4</div>
+															<div class="mr_wp_info">
+																<div class="mr_wp_name">Mamba</div>
+																<div class="mr_wp_form">
+																	<div class="fm_result">
+																		<span>3</span>
+																		<span>6</span>
+																		<span>1</span>
+																		<span>6</span>
+																		<span class="n_highlight">5</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="mr_odds_grp">
+															<div class="fl_odds_wrp">
+																<div class="fl_odds_grp">
+																	<div class="fl_odds">2.20</div>
+																	<div class="fl_arrow"></div>
+																</div>
+															</div>
+															<div class="fl_odds_wrp">
+																<div class="fl_odds_grp">
+																	<div class="fl_odds">4.76</div>
+																	<div class="fl_arrow"></div>
+																</div>
+															</div>
+															<div class="fl_odds_wrp">
+																<div class="fl_odds_grp">
+																	<div class="fl_odds">3.17</div>
+																	<div class="fl_arrow"></div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col_mm">
+													<div class="mr_row">
+														<div class="mr_icon_item">
+															<div class="mr_icon mr5 m8Track">5</div>
+															<div class="mr_wp_info">
+																<div class="mr_wp_name">Flamingo</div>
+																<div class="mr_wp_form">
+																	<div class="fm_result">
+																		<span>3</span>
+																		<span>6</span>
+																		<span>1</span>
+																		<span>6</span>
+																		<span class="n_highlight">5</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="mr_odds_grp">
+															<div class="fl_odds_wrp">
+																<div class="fl_odds_grp">
+																	<div class="fl_odds">9.52</div>
+																	<div class="fl_arrow"></div>
+																</div>
+															</div>
+															<div class="fl_odds_wrp">
+																<div class="fl_odds_grp">
+																	<div class="fl_odds">4.76</div>
+																	<div class="fl_arrow"></div>
+																</div>
+															</div>
+															<div class="fl_odds_wrp">
+																<div class="fl_odds_grp">
+																	<div class="fl_odds">3.17</div>
+																	<div class="fl_arrow"></div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="mr_row">
+														<div class="mr_icon_item">
+															<div class="mr_icon mr6">6</div>
+															<div class="mr_wp_info">
+																<div class="mr_wp_name">Mantis</div>
+																<div class="mr_wp_form">
+																	<div class="fm_result">
+																		<span>3</span>
+																		<span>6</span>
+																		<span>1</span>
+																		<span>6</span>
+																		<span class="n_highlight">5</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="mr_odds_grp">
+															<div class="fl_odds_wrp">
+																<div class="fl_odds_grp">
+																	<div class="fl_odds">9.67</div>
+																	<div class="fl_arrow"></div>
+																</div>
+															</div>
+															<div class="fl_odds_wrp">
+																<div class="fl_odds_grp">
+																	<div class="fl_odds">4.76</div>
+																	<div class="fl_arrow"></div>
+																</div>
+															</div>
+															<div class="fl_odds_wrp">
+																<div class="fl_odds_grp">
+																	<div class="fl_odds">3.17</div>
+																	<div class="fl_arrow"></div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="mr_row">
+														<div class="mr_icon_item">
+															<div class="mr_icon mr7 m8Track">7</div>
+															<div class="mr_wp_info">
+																<div class="mr_wp_name">Hare</div>
+																<div class="mr_wp_form">
+																	<div class="fm_result">
+																		<span>3</span>
+																		<span>6</span>
+																		<span>1</span>
+																		<span>6</span>
+																		<span class="n_highlight">5</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="mr_odds_grp">
+															<div class="fl_odds_wrp">
+																<div class="fl_odds_grp">
+																	<div class="fl_odds">3.55</div>
+																	<div class="fl_arrow"></div>
+																</div>
+															</div>
+															<div class="fl_odds_wrp">
+																<div class="fl_odds_grp">
+																	<div class="fl_odds">4.76</div>
+																	<div class="fl_arrow"></div>
+																</div>
+															</div>
+															<div class="fl_odds_wrp">
+																<div class="fl_odds_grp">
+																	<div class="fl_odds">3.17</div>
+																	<div class="fl_arrow"></div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="mr_row">
+														<div class="mr_icon_item">
+															<div class="mr_icon mr8">8</div>
+															<div class="mr_wp_info">
+																<div class="mr_wp_name">Eagle</div>
+																<div class="mr_wp_form">
+																	<div class="fm_result">
+																		<span>3</span>
+																		<span>6</span>
+																		<span>1</span>
+																		<span>6</span>
+																		<span class="n_highlight">5</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="mr_odds_grp">
+															<div class="fl_odds_wrp">
+																<div class="fl_odds_grp">
+																	<div class="fl_odds">9.55</div>
+																	<div class="fl_arrow"></div>
+																</div>
+															</div>
+															<div class="fl_odds_wrp">
+																<div class="fl_odds_grp">
+																	<div class="fl_odds">--</div>
+																	<div class="fl_arrow"></div>
+																</div>
+															</div>
+															<div class="fl_odds_wrp">
+																<div class="fl_odds_grp">
+																	<div class="fl_odds">3.17</div>
+																	<div class="fl_arrow"></div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mr_ev_card newTemplate">
+							<div class="mr_ev_hdr n_sticky">
+								<div class="mr_ev_hdr_l">
+									<span><span>Preparing</span>(Solo 5 Alphs)</span>
+								</div>
+								<div class="mr_ev_hdr_r">
+									<div class="live_icon smaller_icon_v2">--:--</div>
+								</div>
+							</div>
+							<div class="mr_ev_card_ct mr_new_layout el_new_tracks">
+								<div class="mr_ct_wrp">
+									<div class="mr_bettype_hd">
+										<i class="icon-fi-winner-time"></i>
+										<div class="mr_bettype_title">Winner Time Over/Under</div>
+										<i class="icon-fi-pin"></i>
+										<i class="icon-fi-arrow-up1"></i>
+									</div>
+									<div class="mr_title_info">
+										Winner Time Predictor
+										<div class="info_wrp info_bottom">
+											<div class="info_icn"><i class="icon-fi-info"></i></div>
+											<div class="info_txt">
+												This widget predicts the final winner time based on live race progress.<br /><br />
+												Each time the leading marble passes a checkpoint (25%, 50%, 75%), a new estimated finish time is generated for Winner Time Over/Under bets.
+											</div>
+										</div>
+									</div>
+									<div class="mr_ct col_2">
+										<!-- Winner Time Over/Under added Live Race Tracker -->
+										<div class="mr_liveTrk_wrp">
+											<div class="tracker_container" data-progress="0">
+												<div class="tracker_line"></div>
+												<div class="tracker_line_fill"></div>
+												<!-- 0% node -->
+												<div class="step" data-percent="0" style="left: 0%">0</div>
+												<!-- 25% node -->
+												<div class="step" data-percent="25" style="left: 25%">25</div>
+												<div class="step_box" style="left: 25%">
+													<i class="icon-fi-winner-flag"></i>
+													<div class="step_mark">--.--</div>
+												</div>
+												<!-- 50% node -->
+												<div class="step" data-percent="50" style="left: 50%">50</div>
+												<div class="step_box" style="left: 50%">
+													<i class="icon-fi-winner-flag"></i>
+													<div class="step_mark">--.--</div>
+												</div>
+												<!-- 75% node -->
+												<div class="step" data-percent="75" style="left: 75%">75</div>
+												<div class="step_box" style="left: 75%">
+													<i class="icon-fi-winner-flag"></i>
+													<div class="step_mark">--.--</div>
+												</div>
+												<!-- 100% node -->
+												<div class="step completed" data-percent="100" style="left: 100%">
+													<i class="icon-fi-winner-flag"></i>
+												</div>
+											</div>
+										</div>
+										<div class="mr_item">
+											<div class="mr_row">
+												<div class="fl_odds_wrp">
+													<div class="fl_odds_type">
+														<div class="ou_arrow up">
+															<i class="icon-fi-ou-arrow-up"></i>
+														</div>
+														Over -
+													</div>
+													<div class="fl_odds_grp">
+														<i class="lock_icon icon-fi-lock"></i>
+													</div>
+												</div>
+												<div class="fl_odds_wrp">
+													<div class="fl_odds_type">
+														<div class="ou_arrow down">
+															<i class="icon-fi-ou-arrow-down"></i>
+														</div>
+														Under -
+													</div>
+													<div class="fl_odds_grp">
+														<i class="lock_icon icon-fi-lock"></i>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="mr_form_row">
+											<div class="mr_form_title">Results</div>
+											<div class="mr_form_info">
+												<span>
+													<span class="ou_arrow up">
+														<i class="icon-fi-ou-arrow-up"></i>
+													</span>
+													63.13s
+												</span>
+												<span>
+													<span class="ou_arrow down">
+														<i class="icon-fi-ou-arrow-down"></i>
+													</span>
+													61.45s
+												</span>
+												<span>
+													<span class="ou_arrow up">
+														<i class="icon-fi-ou-arrow-up"></i>
+													</span>
+													64.14s
+												</span>
+												<span>
+													<span class="rt_hol_circle"></span>
+													63.77s
+												</span>
+												<span>
+													<span class="ou_arrow up">
+														<i class="icon-fi-ou-arrow-up"></i>
+													</span>
+													63.13s
+												</span>
+												<span class="n_highlight">
+													<span class="ou_arrow down">
+														<i class="icon-fi-ou-arrow-down"></i>
+													</span>
+													63.98s
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="mr_bettype_hd">
+										<i class="icon-fi-odd-even"></i>
+										<div class="mr_bettype_title">Winner Odd/Even</div>
+										<i class="icon-fi-pin"></i>
+										<i class="icon-fi-arrow-up1"></i>
+									</div>
+									<div class="mr_ct col_2">
+										<div class="mr_item">
+											<div class="mr_row">
+												<div class="fl_odds_wrp">
+													<div class="fl_odds_type">Team Odds</div>
+													<div class="fl_odds_grp">
+														<div class="fl_odds"><i class="lock_icon icon-fi-lock"></i></div>
+													</div>
+												</div>
+												<div class="fl_odds_wrp">
+													<div class="fl_odds_type">Team Evens</div>
+													<div class="fl_odds_grp">
+														<div class="fl_odds"><i class="lock_icon icon-fi-lock"></i></div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="mr_form_row">
+											<div class="mr_form_title">Results</div>
+											<div class="mr_form_info">
+												<span>O</span>
+												<span>E</span>
+												<span>O</span>
+												<span>O</span>
+												<span>E</span>
+												<span>O</span>
+												<span>E</span>
+												<span>E</span>
+												<span>E</span>
+												<span class="n_highlight">O</span>
+											</div>
+										</div>
+									</div>
+									<div class="mr_ct newCol3">
+										<div class="mr_bettype_hd">
+											<div class="mr_bettype_left">
+												<i class="icon-fi-win-position"></i>
+												<div class="mr_bettype_title">Winning Position</div>
+											</div>
+											<div class="mr_order">
+												<div class="mr_order_title">Marble Order</div>
+												<div class="sort_button">
+													<div class="st_arrow up"></div>
+													<div class="st_arrow down"></div>
+												</div>
+												<div class="ob_st_popup" style="display: none">
+													<div class="ob_st_content">
+														<div class="ob_st_rw active">Odds Ascending</div>
+														<div class="ob_st_rw">Odds Descending</div>
+														<div class="ob_st_rw">Marble Order</div>
+													</div>
+												</div>
+											</div>
+											<i class="icon-fi-pin"></i>
+											<i class="icon-fi-arrow-up1"></i>
+										</div>
+										<div class="mr_hd_t2">
+											<div class="mr_hdr_title">Marble/Results</div>
+											<div class="mr_hdr t1">
+												<div class="win_tt">Winner</div>
+												<div class="win_tt">
+													Top 2
+													<div class="info_wrp info_top">
+														<div class="info_icn"><i class="icon-fi-info"></i></div>
+														<div class="info_txt">Bet wins if selection finishes 1st place or 2nd place.</div>
+													</div>
+												</div>
+												<div class="win_tt">
+													Top 3
+													<div class="info_wrp info_top">
+														<div class="info_icn"><i class="icon-fi-info"></i></div>
+														<div class="info_txt">Bet wins if selection finishes 1st place or 2nd place.</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="mr_ev_ct_wrp">
+											<div class="mr_ev_ct">
+												<div class="col_mm">
+													<div class="mr_row">
+														<div class="mr_icon_item">
+															<div class="mr_icon mr1">1</div>
+															<div class="mr_wp_info">
+																<div class="mr_wp_name">Cheetah</div>
+																<div class="mr_wp_form">
+																	<div class="fm_result">
+																		<span>3</span>
+																		<span>6</span>
+																		<span>1</span>
+																		<span>6</span>
+																		<span class="n_highlight">5</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="mr_odds_grp">
+															<div class="fl_odds_wrp">
+																<div class="fl_odds_grp">
+																	<i class="lock_icon icon-fi-lock"></i>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="mr_row">
+														<div class="mr_icon_item">
+															<div class="mr_icon mr2">2</div>
+															<div class="mr_wp_info">
+																<div class="mr_wp_name">Shark</div>
+																<div class="mr_wp_form">
+																	<div class="fm_result">
+																		<span>3</span>
+																		<span>6</span>
+																		<span>1</span>
+																		<span>6</span>
+																		<span class="n_highlight">5</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="mr_odds_grp">
+															<div class="fl_odds_wrp">
+																<div class="fl_odds_grp">
+																	<i class="lock_icon icon-fi-lock"></i>
+																</div>
+															</div>
+															<div class="fl_odds_wrp">
+																<div class="fl_odds_grp">
+																	<i class="lock_icon icon-fi-lock"></i>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="mr_row">
+														<div class="mr_icon_item">
+															<div class="mr_icon mr3">3</div>
+															<div class="mr_wp_info">
+																<div class="mr_wp_name">Koi</div>
+																<div class="mr_wp_form">
+																	<div class="fm_result">
+																		<span>3</span>
+																		<span>6</span>
+																		<span>1</span>
+																		<span>6</span>
+																		<span class="n_highlight">5</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="mr_odds_grp">
+															<div class="fl_odds_wrp">
+																<div class="fl_odds_grp">
+																	<i class="lock_icon icon-fi-lock"></i>
+																</div>
+															</div>
+															<div class="fl_odds_wrp">
+																<div class="fl_odds_grp">
+																	<i class="lock_icon icon-fi-lock"></i>
+																</div>
+															</div>
+															<div class="fl_odds_wrp">
+																<div class="fl_odds_grp">
+																	<i class="lock_icon icon-fi-lock"></i>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="mr_row">
+														<div class="mr_icon_item">
+															<div class="mr_icon mr4">4</div>
+															<div class="mr_wp_info">
+																<div class="mr_wp_name">Mamba</div>
+																<div class="mr_wp_form">
+																	<div class="fm_result">
+																		<span>3</span>
+																		<span>6</span>
+																		<span>1</span>
+																		<span>6</span>
+																		<span class="n_highlight">5</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="mr_odds_grp">
+															<div class="fl_odds_wrp">
+																<div class="fl_odds_grp">
+																	<i class="lock_icon icon-fi-lock"></i>
+																</div>
+															</div>
+															<div class="fl_odds_wrp">
+																<div class="fl_odds_grp">
+																	<i class="lock_icon icon-fi-lock"></i>
+																</div>
+															</div>
+															<div class="fl_odds_wrp">
+																<div class="fl_odds_grp">
+																	<i class="lock_icon icon-fi-lock"></i>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col_mm">
+													<div class="mr_row">
+														<div class="mr_icon_item">
+															<div class="mr_icon mr5 m8Track">5</div>
+															<div class="mr_wp_info">
+																<div class="mr_wp_name">Flamingo</div>
+																<div class="mr_wp_form">
+																	<div class="fm_result">
+																		<span>3</span>
+																		<span>6</span>
+																		<span>1</span>
+																		<span>6</span>
+																		<span class="n_highlight">5</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="mr_odds_grp">
+															<div class="fl_odds_wrp">
+																<div class="fl_odds_grp">
+																	<i class="lock_icon icon-fi-lock"></i>
+																</div>
+															</div>
+															<div class="fl_odds_wrp">
+																<div class="fl_odds_grp">
+																	<i class="lock_icon icon-fi-lock"></i>
+																</div>
+															</div>
+															<div class="fl_odds_wrp">
+																<div class="fl_odds_grp">
+																	<i class="lock_icon icon-fi-lock"></i>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mr_ev_card newTemplate">
+							<div class="mr_ev_hdr n_sticky">
+								<div class="mr_ev_hdr_l">
+									<span>#<span>570451</span>(3v2 Haruna - Red vs Blue)</span>
+								</div>
+								<div class="mr_ev_hdr_r">
+									<div class="live_bet_label">Pre Race Closing</div>
+									<div class="live_icon smaller_icon_v2 count_up">00:03</div>
+								</div>
+							</div>
+							<div class="mr_ev_card_ct mr_new_layout el_new_tracks">
+								<div class="mr_ct_wrp">
+									<div class="mr_bettype_hd">
+										<i class="icon-fi-winner-time"></i>
+										<div class="mr_bettype_title">Winner Time Over/Under</div>
+										<i class="icon-fi-pin"></i>
+										<i class="icon-fi-arrow-up1"></i>
+									</div>
+									<div class="mr_title_info">
+										Winner Time Predictor
+										<div class="info_wrp info_bottom">
+											<div class="info_icn"><i class="icon-fi-info"></i></div>
+											<div class="info_txt">
+												This widget predicts the final winner time based on live race progress.<br /><br />
+												Each time the leading marble passes a checkpoint (25%, 50%, 75%), a new estimated finish time is generated for Winner Time Over/Under bets.
+											</div>
+										</div>
+									</div>
+									<div class="mr_ct col_2">
+										<!-- Winner Time Over/Under added Live Race Tracker -->
+										<div class="mr_liveTrk_wrp">
+											<div class="tracker_container" data-progress="0">
+												<div class="tracker_line"></div>
+												<div class="tracker_line_fill"></div>
+												<!-- 0% node -->
+												<div class="step" data-percent="0" style="left: 0%">0</div>
+												<!-- 25% node -->
+												<div class="step" data-percent="25" style="left: 25%">25</div>
+												<div class="step_box" style="left: 25%">
+													<i class="icon-fi-winner-flag"></i>
+													<div class="step_mark">--.--</div>
+												</div>
+												<!-- 50% node -->
+												<div class="step" data-percent="50" style="left: 50%">50</div>
+												<div class="step_box" style="left: 50%">
+													<i class="icon-fi-winner-flag"></i>
+													<div class="step_mark">--.--</div>
+												</div>
+												<!-- 75% node -->
+												<div class="step" data-percent="75" style="left: 75%">75</div>
+												<div class="step_box" style="left: 75%">
+													<i class="icon-fi-winner-flag"></i>
+													<div class="step_mark">--.--</div>
+												</div>
+												<!-- 100% node -->
+												<div class="step completed" data-percent="100" style="left: 100%">
+													<i class="icon-fi-winner-flag"></i>
+												</div>
+											</div>
+										</div>
+										<div class="mr_item">
+											<div class="mr_row">
+												<div class="fl_odds_wrp">
+													<div class="fl_odds_type">
+														<div class="ou_arrow up">
+															<i class="icon-fi-ou-arrow-up"></i>
+														</div>
+														Over <span class="change_alert changed">83.32s</span>
+													</div>
+													<div class="fl_odds_grp">
+														<div class="fl_odds">1.95</div>
+													</div>
+												</div>
+												<div class="fl_odds_wrp">
+													<div class="fl_odds_type">
+														<div class="ou_arrow down">
+															<i class="icon-fi-ou-arrow-down"></i>
+														</div>
+														Under <span class="change_alert">83.32s</span>
+													</div>
+													<div class="fl_odds_grp">
+														<div class="fl_odds">3.28</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="mr_form_row">
+											<div class="mr_form_title">Results</div>
+											<div class="mr_form_info">
+												<span>
+													<span class="ou_arrow up">
+														<i class="icon-fi-ou-arrow-up"></i>
+													</span>
+													63.13s
+												</span>
+												<span>
+													<span class="ou_arrow down">
+														<i class="icon-fi-ou-arrow-down"></i>
+													</span>
+													61.45s
+												</span>
+												<span>
+													<span class="ou_arrow up">
+														<i class="icon-fi-ou-arrow-up"></i>
+													</span>
+													64.14s
+												</span>
+												<span>
+													<span class="rt_hol_circle"></span>
+													63.77s
+												</span>
+												<span>
+													<span class="ou_arrow up">
+														<i class="icon-fi-ou-arrow-up"></i>
+													</span>
+													63.13s
+												</span>
+												<span class="n_highlight">
+													<span class="ou_arrow down">
+														<i class="icon-fi-ou-arrow-down"></i>
+													</span>
+													63.98s
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="mr_bettype_hd">
+										<i class="icon-fi-n-trophy"></i>
+										<div class="mr_bettype_title">Winner Head To Head</div>
+										<i class="icon-fi-pin"></i>
+										<i class="icon-fi-arrow-up1"></i>
+									</div>
+									<div class="mr_ct col_2">
+										<div class="mr_item">
+											<div class="mr_row">
+												<div class="fl_odds_wrp">
+													<div class="fl_odds_type">
+														<div class="win_circle red"></div>
+														Team Red
+													</div>
+													<div class="fl_odds_grp">
+														<div class="fl_odds">1.95</div>
+													</div>
+												</div>
+												<div class="fl_odds_wrp">
+													<div class="fl_odds_type">
+														<div class="win_circle blue"></div>
+														Team Blue
+													</div>
+													<div class="fl_odds_grp">
+														<div class="fl_odds">1.95</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="mr_form_row">
+											<div class="mr_form_title">Results</div>
+											<div class="mr_form_info">
+												<div class="win_circle red"></div>
+												<div class="win_circle blue"></div>
+												<div class="win_circle red"></div>
+												<div class="win_circle red"></div>
+												<div class="win_circle blue"></div>
+												<div class="win_circle blue"></div>
+												<div class="win_circle blue"></div>
+												<div class="win_circle red"></div>
+												<div class="win_circle blue"></div>
+												<div class="win_circle red latest_winner"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mr_ev_card newTemplate">
+							<div class="mr_ev_hdr n_sticky">
+								<div class="mr_ev_hdr_l">
+									<span>#<span>570451</span>(3v2 Emirates Desert - Green vs Orange)</span>
+								</div>
+								<div class="mr_ev_hdr_r">
+									<div class="live_bet_label">Live Closing</div>
+									<div class="live_icon smaller_icon_v2 rb_live">00:03</div>
+								</div>
+							</div>
+							<div class="mr_ev_card_ct mr_new_layout el_new_tracks">
+								<div class="mr_ct_wrp">
+									<div class="mr_bettype_hd">
+										<i class="icon-fi-winner-time"></i>
+										<div class="mr_bettype_title">Winner Time Over/Under</div>
+										<i class="icon-fi-pin"></i>
+										<i class="icon-fi-arrow-up1"></i>
+									</div>
+									<div class="mr_title_info">
+										Winner Time Predictor
+										<div class="info_wrp info_bottom">
+											<div class="info_icn"><i class="icon-fi-info"></i></div>
+											<div class="info_txt">
+												This widget predicts the final winner time based on live race progress.<br /><br />
+												Each time the leading marble passes a checkpoint (25%, 50%, 75%), a new estimated finish time is generated for Winner Time Over/Under bets.
+											</div>
+										</div>
+									</div>
+									<div class="mr_ct col_2">
+										<!-- Winner Time Over/Under added Live Race Tracker -->
+										<div class="mr_liveTrk_wrp">
+											<div class="tracker_container" data-progress="0">
+												<div class="tracker_line"></div>
+												<div class="tracker_line_fill"></div>
+												<!-- 0% node -->
+												<div class="step" data-percent="0" style="left: 0%">0</div>
+												<!-- 25% node -->
+												<div class="step" data-percent="25" style="left: 25%">25</div>
+												<div class="step_box" style="left: 25%">
+													<i class="icon-fi-winner-flag"></i>
+													<div class="step_mark">--.--</div>
+												</div>
+												<!-- 50% node -->
+												<div class="step" data-percent="50" style="left: 50%">50</div>
+												<div class="step_box" style="left: 50%">
+													<i class="icon-fi-winner-flag"></i>
+													<div class="step_mark">--.--</div>
+												</div>
+												<!-- 75% node -->
+												<div class="step" data-percent="75" style="left: 75%">75</div>
+												<div class="step_box" style="left: 75%">
+													<i class="icon-fi-winner-flag"></i>
+													<div class="step_mark">--.--</div>
+												</div>
+												<!-- 100% node -->
+												<div class="step completed" data-percent="100" style="left: 100%">
+													<i class="icon-fi-winner-flag"></i>
+												</div>
+											</div>
+										</div>
+										<div class="mr_item">
+											<div class="mr_row">
+												<div class="fl_odds_wrp">
+													<div class="fl_odds_type">
+														<div class="ou_arrow up">
+															<i class="icon-fi-ou-arrow-up"></i>
+														</div>
+														Over <span class="change_alert changed">83.32s</span>
+													</div>
+													<div class="fl_odds_grp">
+														<div class="fl_odds">1.95</div>
+													</div>
+												</div>
+												<div class="fl_odds_wrp">
+													<div class="fl_odds_type">
+														<div class="ou_arrow down">
+															<i class="icon-fi-ou-arrow-down"></i>
+														</div>
+														Under <span class="change_alert">83.32s</span>
+													</div>
+													<div class="fl_odds_grp">
+														<div class="fl_odds">3.28</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="mr_form_row">
+											<div class="mr_form_title">Results</div>
+											<div class="mr_form_info">
+												<span>
+													<span class="ou_arrow up">
+														<i class="icon-fi-ou-arrow-up"></i>
+													</span>
+													63.13s
+												</span>
+												<span>
+													<span class="ou_arrow down">
+														<i class="icon-fi-ou-arrow-down"></i>
+													</span>
+													61.45s
+												</span>
+												<span>
+													<span class="ou_arrow up">
+														<i class="icon-fi-ou-arrow-up"></i>
+													</span>
+													64.14s
+												</span>
+												<span>
+													<span class="rt_hol_circle"></span>
+													63.77s
+												</span>
+												<span>
+													<span class="ou_arrow up">
+														<i class="icon-fi-ou-arrow-up"></i>
+													</span>
+													63.13s
+												</span>
+												<span class="n_highlight">
+													<span class="ou_arrow down">
+														<i class="icon-fi-ou-arrow-down"></i>
+													</span>
+													63.98s
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="mr_bettype_hd">
+										<i class="icon-fi-n-trophy"></i>
+										<div class="mr_bettype_title">Winner Head To Head</div>
+										<i class="icon-fi-pin"></i>
+										<i class="icon-fi-arrow-up1"></i>
+									</div>
+									<div class="mr_ct col_2">
+										<div class="mr_item">
+											<div class="mr_row">
+												<div class="fl_odds_wrp">
+													<div class="fl_odds_type">
+														<div class="win_circle green"></div>
+														Team Green
+													</div>
+													<div class="fl_odds_grp">
+														<div class="fl_odds">1.95</div>
+													</div>
+												</div>
+												<div class="fl_odds_wrp">
+													<div class="fl_odds_type">
+														<div class="win_circle orange"></div>
+														Team Orange
+													</div>
+													<div class="fl_odds_grp">
+														<div class="fl_odds">1.95</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="mr_form_row">
+											<div class="mr_form_title">Results</div>
+											<div class="mr_form_info">
+												<div class="win_circle green"></div>
+												<div class="win_circle orange"></div>
+												<div class="win_circle green"></div>
+												<div class="win_circle green"></div>
+												<div class="win_circle orange"></div>
+												<div class="win_circle orange"></div>
+												<div class="win_circle orange"></div>
+												<div class="win_circle green"></div>
+												<div class="win_circle orange"></div>
+												<div class="win_circle green latest_winner"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mr_ev_card newTemplate">
+							<div class="mr_ev_hdr n_sticky">
+								<div class="mr_ev_hdr_l">
+									<span>#<span>570451</span>(3v3 Nexus - Red vs Yellow)</span>
+								</div>
+								<div class="mr_ev_hdr_r">
+									<div class="live_icon smaller_icon_v2 live">LIVE</div>
+								</div>
+							</div>
+							<div class="mr_ev_card_ct mr_new_layout el_new_tracks">
+								<div class="mr_ct_wrp">
+									<div class="mr_bettype_hd">
+										<i class="icon-fi-winner-time"></i>
+										<div class="mr_bettype_title">Winner Time Over/Under</div>
+										<i class="icon-fi-pin"></i>
+										<i class="icon-fi-arrow-up1"></i>
+									</div>
+									<div class="mr_title_info">
+										Winner Time Predictor
+										<div class="info_wrp info_bottom">
+											<div class="info_icn"><i class="icon-fi-info"></i></div>
+											<div class="info_txt">
+												This widget predicts the final winner time based on live race progress.<br /><br />
+												Each time the leading marble passes a checkpoint (25%, 50%, 75%), a new estimated finish time is generated for Winner Time Over/Under bets.
+											</div>
+										</div>
+									</div>
+									<div class="mr_ct col_2">
+										<!-- Winner Time Over/Under added Live Race Tracker -->
+										<div class="mr_liveTrk_wrp">
+											<div class="tracker_container" data-progress="0">
+												<div class="tracker_line"></div>
+												<div class="tracker_line_fill"></div>
+												<!-- 0% node -->
+												<div class="step" data-percent="0" style="left: 0%">0</div>
+												<!-- 25% node -->
+												<div class="step" data-percent="25" style="left: 25%">25</div>
+												<div class="step_box" style="left: 25%">
+													<i class="icon-fi-winner-flag"></i>
+													<div class="step_mark">--.--</div>
+												</div>
+												<!-- 50% node -->
+												<div class="step" data-percent="50" style="left: 50%">50</div>
+												<div class="step_box" style="left: 50%">
+													<i class="icon-fi-winner-flag"></i>
+													<div class="step_mark">--.--</div>
+												</div>
+												<!-- 75% node -->
+												<div class="step" data-percent="75" style="left: 75%">75</div>
+												<div class="step_box" style="left: 75%">
+													<i class="icon-fi-winner-flag"></i>
+													<div class="step_mark">--.--</div>
+												</div>
+												<!-- 100% node -->
+												<div class="step completed" data-percent="100" style="left: 100%">
+													<i class="icon-fi-winner-flag"></i>
+												</div>
+											</div>
+										</div>
+										<div class="mr_item">
+											<div class="mr_row">
+												<div class="fl_odds_wrp">
+													<div class="fl_odds_type">
+														<div class="ou_arrow up">
+															<i class="icon-fi-ou-arrow-up"></i>
+														</div>
+														Over <span class="change_alert changed">83.32s</span>
+													</div>
+													<div class="fl_odds_grp">
+														<div class="fl_odds">1.95</div>
+													</div>
+												</div>
+												<div class="fl_odds_wrp">
+													<div class="fl_odds_type">
+														<div class="ou_arrow down">
+															<i class="icon-fi-ou-arrow-down"></i>
+														</div>
+														Under <span class="change_alert">83.32s</span>
+													</div>
+													<div class="fl_odds_grp">
+														<div class="fl_odds">3.28</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="mr_form_row">
+											<div class="mr_form_title">Results</div>
+											<div class="mr_form_info">
+												<span>
+													<span class="ou_arrow up">
+														<i class="icon-fi-ou-arrow-up"></i>
+													</span>
+													63.13s
+												</span>
+												<span>
+													<span class="ou_arrow down">
+														<i class="icon-fi-ou-arrow-down"></i>
+													</span>
+													61.45s
+												</span>
+												<span>
+													<span class="ou_arrow up">
+														<i class="icon-fi-ou-arrow-up"></i>
+													</span>
+													64.14s
+												</span>
+												<span>
+													<span class="rt_hol_circle"></span>
+													63.77s
+												</span>
+												<span>
+													<span class="ou_arrow up">
+														<i class="icon-fi-ou-arrow-up"></i>
+													</span>
+													63.13s
+												</span>
+												<span class="n_highlight">
+													<span class="ou_arrow down">
+														<i class="icon-fi-ou-arrow-down"></i>
+													</span>
+													63.98s
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="mr_bettype_hd">
+										<i class="icon-fi-n-trophy"></i>
+										<div class="mr_bettype_title">Winner Head To Head</div>
+										<i class="icon-fi-pin"></i>
+										<i class="icon-fi-arrow-up1"></i>
+									</div>
+									<div class="mr_ct col_2">
+										<div class="mr_item">
+											<div class="mr_row">
+												<div class="fl_odds_wrp">
+													<div class="fl_odds_type">
+														<div class="win_circle red"></div>
+														Team Red
+													</div>
+													<div class="fl_odds_grp">
+														<div class="fl_odds">1.95</div>
+													</div>
+												</div>
+												<div class="fl_odds_wrp">
+													<div class="fl_odds_type">
+														<div class="win_circle yellow"></div>
+														Team Yellow
+													</div>
+													<div class="fl_odds_grp">
+														<div class="fl_odds">1.95</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="mr_form_row">
+											<div class="mr_form_title">Results</div>
+											<div class="mr_form_info">
+												<div class="win_circle red"></div>
+												<div class="win_circle yellow"></div>
+												<div class="win_circle red"></div>
+												<div class="win_circle yellow"></div>
+												<div class="win_circle red"></div>
+												<div class="win_circle yellow"></div>
+												<div class="win_circle red"></div>
+												<div class="win_circle yellow"></div>
+												<div class="win_circle red"></div>
+												<div class="win_circle red latest_winner"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mr_ev_card newTemplate">
+							<div class="mr_ev_hdr n_sticky">
+								<div class="mr_ev_hdr_l">
+									<span>#<span>570451</span>(3v3 Fiery Pits - Yellow vs Black)</span>
+								</div>
+								<div class="mr_ev_hdr_r">
+									<div class="live_icon smaller_icon_v2 closed">CLOSED</div>
+								</div>
+							</div>
+							<div class="mr_ev_card_ct mr_new_layout el_new_tracks">
+								<div class="mr_ct_wrp">
+									<div class="mr_bettype_hd">
+										<i class="icon-fi-winner-time"></i>
+										<div class="mr_bettype_title">Winner Time Over/Under</div>
+										<i class="icon-fi-pin"></i>
+										<i class="icon-fi-arrow-up1"></i>
+									</div>
+									<div class="mr_title_info">
+										Winner Time Predictor
+										<div class="info_wrp info_bottom">
+											<div class="info_icn"><i class="icon-fi-info"></i></div>
+											<div class="info_txt">
+												This widget predicts the final winner time based on live race progress.<br /><br />
+												Each time the leading marble passes a checkpoint (25%, 50%, 75%), a new estimated finish time is generated for Winner Time Over/Under bets.
+											</div>
+										</div>
+									</div>
+									<div class="mr_ct col_2">
+										<!-- Winner Time Over/Under added Live Race Tracker -->
+										<div class="mr_liveTrk_wrp">
+											<div class="tracker_container" data-progress="0">
+												<div class="tracker_line"></div>
+												<div class="tracker_line_fill"></div>
+												<!-- 0% node -->
+												<div class="step" data-percent="0" style="left: 0%">0</div>
+												<!-- 25% node -->
+												<div class="step" data-percent="25" style="left: 25%">25</div>
+												<div class="step_box" style="left: 25%">
+													<i class="icon-fi-winner-flag"></i>
+													<div class="step_mark">--.--</div>
+												</div>
+												<!-- 50% node -->
+												<div class="step" data-percent="50" style="left: 50%">50</div>
+												<div class="step_box" style="left: 50%">
+													<i class="icon-fi-winner-flag"></i>
+													<div class="step_mark">--.--</div>
+												</div>
+												<!-- 75% node -->
+												<div class="step" data-percent="75" style="left: 75%">75</div>
+												<div class="step_box" style="left: 75%">
+													<i class="icon-fi-winner-flag"></i>
+													<div class="step_mark">--.--</div>
+												</div>
+												<!-- 100% node -->
+												<div class="step completed" data-percent="100" style="left: 100%">
+													<i class="icon-fi-winner-flag"></i>
+												</div>
+											</div>
+										</div>
+										<div class="mr_item">
+											<div class="mr_row">
+												<div class="fl_odds_wrp">
+													<div class="fl_odds_type">
+														<div class="ou_arrow up">
+															<i class="icon-fi-ou-arrow-up"></i>
+														</div>
+														Over -
+													</div>
+													<div class="fl_odds_grp">
+														<i class="lock_icon icon-fi-lock"></i>
+													</div>
+												</div>
+												<div class="fl_odds_wrp">
+													<div class="fl_odds_type">
+														<div class="ou_arrow down">
+															<i class="icon-fi-ou-arrow-down"></i>
+														</div>
+														Under -
+													</div>
+													<div class="fl_odds_grp">
+														<i class="lock_icon icon-fi-lock"></i>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="mr_form_row">
+											<div class="mr_form_title">Results</div>
+											<div class="mr_form_info">
+												<span>
+													<span class="ou_arrow up">
+														<i class="icon-fi-ou-arrow-up"></i>
+													</span>
+													63.13s
+												</span>
+												<span>
+													<span class="ou_arrow down">
+														<i class="icon-fi-ou-arrow-down"></i>
+													</span>
+													61.45s
+												</span>
+												<span>
+													<span class="ou_arrow up">
+														<i class="icon-fi-ou-arrow-up"></i>
+													</span>
+													64.14s
+												</span>
+												<span>
+													<span class="rt_hol_circle"></span>
+													63.77s
+												</span>
+												<span>
+													<span class="ou_arrow up">
+														<i class="icon-fi-ou-arrow-up"></i>
+													</span>
+													63.13s
+												</span>
+												<span class="n_highlight">
+													<span class="ou_arrow down">
+														<i class="icon-fi-ou-arrow-down"></i>
+													</span>
+													63.98s
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="mr_bettype_hd">
+										<i class="icon-fi-n-trophy"></i>
+										<div class="mr_bettype_title">Winner Head To Head</div>
+										<i class="icon-fi-pin"></i>
+										<i class="icon-fi-arrow-up1"></i>
+									</div>
+									<div class="mr_ct col_2">
+										<div class="mr_item">
+											<div class="mr_row">
+												<div class="fl_odds_wrp">
+													<div class="fl_odds_type">
+														<div class="win_circle yellow"></div>
+														Team Yellow
+													</div>
+													<div class="fl_odds_grp">
+														<i class="lock_icon icon-fi-lock"></i>
+													</div>
+												</div>
+												<div class="fl_odds_wrp">
+													<div class="fl_odds_type">
+														<div class="win_circle black"></div>
+														Team Black
+													</div>
+													<div class="fl_odds_grp">
+														<i class="lock_icon icon-fi-lock"></i>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="mr_form_row">
+											<div class="mr_form_title">Results</div>
+											<div class="mr_form_info">
+												<div class="win_circle black"></div>
+												<div class="win_circle yellow"></div>
+												<div class="win_circle black"></div>
+												<div class="win_circle yellow"></div>
+												<div class="win_circle black"></div>
+												<div class="win_circle yellow"></div>
+												<div class="win_circle black"></div>
+												<div class="win_circle yellow"></div>
+												<div class="win_circle black"></div>
+												<div class="win_circle yellow latest_winner"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- track maintenance popup -->
+		<div class="popup_window track_popup" id="track_maintenance" style="display: none">
+			<div class="popup_window_center">
+				<div class="n_popup_content">
+					<div class="n_popup_header"><i class="icon-fi-warning-sign"></i>Message</div>
+					<div class="betslip_detail">
+						<div class="betslip_detail_top">
+							<div class="betslip_teams_wrap">
+								<i class="icon-fi-exclamation-sign"></i>
+								This track is temporarily unavailable. Please select another track.
+							</div>
+						</div>
+						<div class="betslip_border"></div>
+						<div class="betslip_detail_bottom">
+							<div class="n_popup_button_wrap">
+								<div class="betslip_bottom_button confirm">Ok</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="demoOnly_global_pop_item"></div>
+
+		<!--new track: left side menu-->
+		<div class="track_left_panel">
+			<div class="track_panel_hd">
+				<span class="race_title">Race Track</span>
+				<i class="icon-fi-track-menu-left"></i>
+			</div>
+			<div class="race_track_list">
+				<div class="race_track_item">
+					<div class="race_track_name">
+						<img src="../assets/public/layout/images/sports/trkimg_haruna.png" />
+						<div class="race_info">
+							<div class="track_row1">
+								Harunaaaaaa Haruna Haruna
+								<div class="cat_label">3v2</div>
+							</div>
+							<div class="track_row2">
+								<div class="track_tt">Pre & Live Race</div>
+								<div class="track_tt">5 Marbles</div>
+								<div class="track_tt">1 Lap</div>
+							</div>
+						</div>
+					</div>
+					<div class="race_track_status preparing">
+						<div class="team_dot"></div>
+						Preparing testtesttest
+					</div>
+				</div>
+				<div class="race_track_item active">
+					<div class="race_track_name">
+						<img src="../assets/public/layout/images/sports/trkimg_canyon.png" />
+						<div class="race_info">
+							<div class="track_row1">
+								Canyon
+								<div class="cat_label">1v1</div>
+							</div>
+							<div class="track_row2">
+								<div class="track_tt">Pre Race</div>
+								<div class="track_tt">2 Marbles</div>
+								<div class="track_tt">1 Lap</div>
+							</div>
+						</div>
+					</div>
+					<div class="race_track_status open">
+						<div class="team_dot"></div>
+						Open
+					</div>
+				</div>
+				<div class="race_track_item">
+					<div class="race_track_name">
+						<img src="../assets/public/layout/images/sports/trkimg_maplefarm.png" />
+						<div class="race_info">
+							<div class="track_row1">
+								Maple Farm
+								<div class="cat_label">1v1</div>
+							</div>
+							<div class="track_row2">
+								<div class="track_tt">Pre Race</div>
+								<div class="track_tt">2 Marbles</div>
+								<div class="track_tt">1 Lap</div>
+							</div>
+						</div>
+					</div>
+					<div class="race_track_status closed">
+						<div class="team_dot"></div>
+						Closed
+					</div>
+				</div>
+				<div class="race_track_item">
+					<div class="race_track_name">
+						<img src="../assets/public/layout/images/sports/trkimg_icefield.png" />
+						<div class="race_info">
+							<div class="track_row1">
+								Icefield
+								<div class="cat_label">Solo 8</div>
+							</div>
+							<div class="track_row2">
+								<div class="track_tt">Pre & Live Race</div>
+								<div class="track_tt">8 Marbles</div>
+								<div class="track_tt">2 Laps</div>
+							</div>
+						</div>
+					</div>
+					<div class="race_track_status open">
+						<div class="team_dot"></div>
+						Open
+					</div>
+				</div>
+				<div class="race_track_item">
+					<div class="race_track_name">
+						<img src="../assets/public/layout/images/sports/trkimg_lemans.png" />
+						<div class="race_info">
+							<div class="track_row1">
+								LeMans
+								<div class="cat_label">Solo 8</div>
+							</div>
+							<div class="track_row2">
+								<div class="track_tt">Pre & Live Race</div>
+								<div class="track_tt">8 Marbles</div>
+								<div class="track_tt">2 Laps</div>
+							</div>
+						</div>
+					</div>
+					<div class="race_track_status live">
+						<div class="team_dot"></div>
+						Live
+					</div>
+				</div>
+				<div class="race_track_item">
+					<div class="race_track_name">
+						<img src="../assets/public/layout/images/sports/trkimg_nexus.png" />
+						<div class="race_info">
+							<div class="track_row1">
+								Nexus
+								<div class="cat_label">3v3</div>
+							</div>
+							<div class="track_row2">
+								<div class="track_tt">Pre Race</div>
+								<div class="track_tt">6 Marbles</div>
+								<div class="track_tt">1 Lap</div>
+							</div>
+						</div>
+					</div>
+					<div class="race_track_status closed">
+						<div class="team_dot"></div>
+						Closed
+					</div>
+				</div>
+				<div class="race_track_item">
+					<div class="race_track_name">
+						<img src="../assets/public/layout/images/sports/trkimg_fiery.png" />
+						<div class="race_info">
+							<div class="track_row1">
+								Fiery
+								<div class="cat_label">3v3</div>
+							</div>
+							<div class="track_row2">
+								<div class="track_tt">Pre Race</div>
+								<div class="track_tt">6 Marbles</div>
+								<div class="track_tt">1 Lap</div>
+							</div>
+						</div>
+					</div>
+					<div class="race_track_status closed">
+						<div class="team_dot"></div>
+						Closed
+					</div>
+				</div>
+				<div class="race_track_item">
+					<div class="race_track_name">
+						<img src="../assets/public/layout/images/sports/trkimg_alps.png" />
+						<div class="race_info">
+							<div class="track_row1">
+								Fiery
+								<div class="cat_label">3v3</div>
+							</div>
+							<div class="track_row2">
+								<div class="track_tt">Pre Race</div>
+								<div class="track_tt">6 Marbles</div>
+								<div class="track_tt">1 Lap</div>
+							</div>
+						</div>
+					</div>
+					<div class="race_track_status maint">
+						<div class="team_dot"></div>
+						Maintenance
+					</div>
+				</div>
+				<div class="race_track_item">
+					<div class="race_track_name">
+						<img src="../assets/public/layout/images/sports/trkimg_alps.png" />
+						<div class="race_info">
+							<div class="track_row1">
+								Alps
+								<div class="cat_label">Solo 5</div>
+							</div>
+							<div class="track_row2">
+								<div class="track_tt">Pre Race</div>
+								<div class="track_tt">5 Marbles</div>
+								<div class="track_tt">1 Lap</div>
+							</div>
+						</div>
+					</div>
+					<div class="race_track_status preparing">
+						<div class="team_dot"></div>
+						Sedang Disiapkan
+					</div>
+				</div>
+				<div class="race_track_item">
+					<div class="race_track_name">
+						<img src="../assets/public/layout/images/sports/trkimg_stoneforest.png" />
+						<div class="race_info">
+							<div class="track_row1">
+								Stone Forest
+								<div class="cat_label">Solo 5</div>
+							</div>
+							<div class="track_row2">
+								<div class="track_tt">Pre & Live Race</div>
+								<div class="track_tt">5 Marbles</div>
+								<div class="track_tt">2 Laps</div>
+							</div>
+						</div>
+					</div>
+					<div class="race_track_status live">
+						<div class="team_dot"></div>
+						Live
+					</div>
+				</div>
+				<div class="race_track_item">
+					<div class="race_track_name">
+						<img src="../assets/public/layout/images/trkimg_default.png" />
+						<div class="race_info">
+							<div class="track_row1">
+								Alps
+								<div class="cat_label">Solo 5</div>
+							</div>
+							<div class="track_row2">
+								<div class="track_tt">Pre & live Race</div>
+								<div class="track_tt">5 Marbles</div>
+								<div class="track_tt">1 Lap</div>
+							</div>
+						</div>
+					</div>
+					<div class="race_track_status maint">
+						<div class="team_dot"></div>
+						Mantenimiento testtest
+					</div>
+				</div>
+				<div class="race_track_item devDontCopy_raceTrackLoading">
+					<div class="race_track_name">
+						<img src="../assets/public/layout/images/trkimg_default.png" />
+						<div class="race_info">
+							<div class="track_row1">Loading</div>
+						</div>
+					</div>
+				</div>
+				<div class="race_track_item devDontCopy_raceTrackNotAvailable">
+					<div class="race_track_name">
+						<img src="../assets/public/layout/images/trkimg_default.png" />
+						<div class="race_info">
+							<div class="track_row1">Not Available</div>
+						</div>
+					</div>
+				</div>
+				<div class="fl_loading_wrp" style="display: none">
+					<div class="fl_loading">
+						<div class="fl_load_ring">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div style="display: none"></div>
+						</div>
+					</div>
+					Loading...
+				</div>
+				<div class="msg_wrap" style="display: none">
+					<svg class="notavailable" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175 147" width="72" fill="#cacaca">
+						<path
+							d="M26.7 97.4c-12.1 0-21.9 9.8-21.9 21.9s9.8 21.9 21.9 21.9 21.9-9.8 21.9-21.9c-.1-12.1-9.9-21.9-21.9-21.9zm5 2.9l-5.1 2-5.1-2c3.4-.9 6.9-.9 10.2 0zm-5 13.2l5.9 4.7-1.8 7.1h-8.3l-1.8-7.1 6-4.7zm-8.3-12.1l7.1 2.8v7.3l-6.3 5-7.4-2.5-1.4-5.9c2-2.9 4.8-5.2 8-6.7zM8.8 111l.9 3.7-2.6 3.2c.1-2.4.7-4.8 1.7-6.9zm1.3 18.8c-1.7-2.6-2.7-5.6-3-8.6l4.2-5 7.3 2.4 1.9 7.5-3.6 4.8-6.8-1.1zm2 2.6l4.6.7 2.8 4.4c-2.8-1.1-5.4-2.8-7.4-5.1zm10.6 6.1l-4-6.3 3.5-4.7h8.9l3.6 4.7-3.5 6.2c-2.8.6-5.7.6-8.5.1zm11.6-1.2l2.4-4.2 4.5-.7a19.79 19.79 0 0 1-6.9 4.9zm8.9-7.5l-6.7 1.1-3.6-4.8 1.9-7.5 7.3-2.4 4.2 5c-.4 3.1-1.5 6.1-3.1 8.6zm1.3-18.8a20.71 20.71 0 0 1 1.8 6.9l-2.6-3.2.8-3.7zm-3 3.1l-7.4 2.5-6.3-5v-7.3l7.1-2.8c3.2 1.5 6 3.8 8 6.7l-1.4 5.9zm127.5 4.3V117l-.1-.6c0-.2-.1-.4-.1-.6 0-.1 0-.3-.1-.4 0-.2-.1-.4-.1-.6l-.1-.4c0-.2-.1-.4-.2-.6l-.1-.3c-.1-.2-.1-.4-.2-.6l-.1-.3c-.1-.2-.1-.4-.2-.6l-.2-.5c-.1-.1-.1-.3-.2-.4s-.1-.3-.2-.4l-.2-.4c-.8-1.7-1.9-3.3-3.1-4.7l-.5-.6-.3-.3c-4-4-9.2-6.2-14.8-6.2s-10.8 2.2-14.8 6.2l-.8.9c-1.3 1.4-2.3 3-3.1 4.7l-.2.4c-.1.2-.1.3-.2.5s-.1.3-.2.5l-.1.4c-.1.2-.1.4-.2.6l-.1.3c-.1.2-.1.4-.2.6l-.1.3c-.1.2-.1.4-.2.6l-.1.4c0 .2-.1.4-.1.6l-.1.5c0 .2-.1.3-.1.5s0 .3-.1.5v5.5a.9.9 0 0 0 .1.5v.1c0 .1 0 .3.1.4 0 .2.1.4.1.6 0 .1.1.2.1.4s.1.4.2.6l.1.3c.1.2.1.4.2.6l.1.3c.1.2.1.4.2.6l.2.4c.1.2.1.3.2.5.1.1.1.3.2.4l.2.4c.8 1.7 1.9 3.3 3.1 4.7l.5.6.3.3c3.9 4 9.2 6.2 14.8 6.2s10.8-2.2 14.8-6.2l.8-.9c1.3-1.4 2.3-3 3.1-4.7l.2-.4c.1-.1.1-.3.2-.4s.1-.3.2-.4l.2-.5c.1-.2.1-.4.2-.6l.1-.3c.1-.2.1-.4.2-.6l.1-.3c.1-.2.1-.4.2-.6l.1-.4c0-.2.1-.4.1-.6 0-.1 0-.3.1-.4 0-.2.1-.4.1-.6 0-.1 0-.3.1-.5v-3.6zm-35.6 12.3c-.2-.2-.4-.5-.6-.8l-.2-.2c-.2-.4-.5-.7-.7-1.1l-.8-1.6c-.2-.5-.4-.9-.5-1.3v-.1c-.3-.9-.6-1.9-.8-2.9v-.2c-.1-.5-.1-.9-.2-1.4v-.2c0-.5-.1-1-.1-1.5s0-.9.1-1.5v-.2c0-.5.1-.9.2-1.4v-.2c.2-1 .4-2 .8-2.9v-.1c.2-.4.3-.9.5-1.3l.8-1.6c.2-.4.4-.7.7-1.1l.2-.2c.2-.3.4-.5.6-.8.7.9 1.3 1.9 1.8 3l-.8.3c-.3.1-.5.3-.6.5-.1.3-.2.6-.1.8a1.08 1.08 0 0 0 1.4.7l1-.3c.2.5.3 1 .5 1.5l-1.2.2c-.1 0-.3.1-.4.1l-.3.3c-.1.1-.1.2-.2.4v.4c.1.6.6 1 1.2.9l1.4-.2c.1.5.1 1 .1 1.5h-1a1.11 1.11 0 0 0-1.1 1.1 1.11 1.11 0 0 0 1.1 1.1h1c0 .5-.1 1.1-.1 1.5l-1.4-.2h-.4c-.1 0-.2.1-.3.2l-.3.3c-.1.1-.1.2-.1.4 0 .3 0 .6.2.8s.4.4.7.4l1.2.2c-.1.5-.3 1-.5 1.5l-1-.3a1.08 1.08 0 0 0-1.4.7c-.1.3-.1.6.1.8.1.3.4.5.6.6l.8.3c-.6 1.2-1.2 2.2-1.9 3.1zm14.8 7.3c-5.1 0-9.8-2-13.4-5.6 1-1.2 1.8-2.5 2.5-4l1.3.4a1.08 1.08 0 0 0 1.4-.7c.1-.3.1-.6-.1-.8-.1-.3-.4-.5-.6-.6l-1.2-.4c.2-.6.4-1.3.6-1.9l1.5.2c.6.1 1.2-.3 1.2-.9 0-.3 0-.6-.2-.8s-.4-.4-.7-.4l-1.4-.2c.1-.6.1-1.2.2-1.9h1.1a1.11 1.11 0 0 0 1.1-1.1 1.11 1.11 0 0 0-1.1-1.1h-1.1c0-.6-.1-1.2-.2-1.9l1.4-.2c.6-.1 1-.6.9-1.2 0-.3-.2-.5-.4-.7s-.5-.2-.8-.2l-1.5.2c-.2-.7-.4-1.3-.6-1.9l1.2-.4a1.08 1.08 0 0 0 .7-1.4.9.9 0 0 0-.6-.6c-.3-.1-.6-.2-.8-.1l-1.3.4a24.18 24.18 0 0 0-2.5-4c3.5-3.6 8.3-5.6 13.4-5.6s9.8 2 13.4 5.6c-1 1.2-1.8 2.5-2.5 4l-1.3-.4c-.3-.1-.6-.1-.8.1-.3.1-.5.4-.6.6-.1.3-.1.6.1.8.1.3.4.5.6.5l1.2.4c-.2.6-.4 1.3-.6 1.9l-1.5-.2c-.6-.1-1.2.3-1.2.9-.1.6.3 1.2.9 1.2l1.4.2c-.1.6-.1 1.2-.2 1.9H156a1.11 1.11 0 0 0-1.1 1.1 1.11 1.11 0 0 0 1.1 1.1h1.1c0 .6.1 1.2.2 1.9l-1.4.2c-.3 0-.5.2-.7.4s-.2.5-.2.8c.1.6.6 1 1.2.9l1.5-.2c.2.7.4 1.3.6 1.9l-1.2.4c-.3.1-.5.3-.6.5-.1.3-.2.6-.1.8.2.5.7.8 1.3.7h.1l1.3-.4a24.18 24.18 0 0 0 2.5 4c-3.6 3.8-8.3 5.8-13.4 5.8zm18.6-17.2v.2c0 .5-.1.9-.2 1.4v.2c-.2 1-.4 2-.8 2.9l.4.1h-.4c-.2.4-.3.9-.5 1.3l-.8 1.6c-.2.4-.4.7-.7 1.1l-.2.2c-.2.3-.4.5-.6.8-.7-.9-1.3-1.9-1.8-3l.8-.3c.3-.1.5-.3.6-.5.1-.3.2-.6.1-.8a1.08 1.08 0 0 0-1.4-.7l-1 .3c-.2-.5-.3-1-.5-1.5l1.2-.2c.1 0 .3-.1.4-.1l.3-.3c.1-.1.1-.2.2-.4v-.4c0-.3-.2-.5-.4-.7s-.5-.2-.8-.2l-1.4.2c-.1-.5-.1-1-.1-1.5h1a1.11 1.11 0 0 0 1.1-1.1 1.11 1.11 0 0 0-1.1-1.1h-1c0-.5.1-1.1.1-1.5l1.4.2c.6.1 1.2-.3 1.2-.9v-.4a.76.76 0 0 0-.2-.4l-.3-.3c-.1-.1-.2-.1-.4-.1l-1.2-.2c.1-.5.3-1 .5-1.5l1 .3c.5.2 1.2-.1 1.4-.7.1-.3.1-.6-.1-.8-.1-.3-.4-.5-.6-.5l-.8-.3c.5-1.1 1.1-2.1 1.8-3 .2.2.4.5.6.8l.2.2c.2.4.5.7.7 1.1l.8 1.6c.2.5.4.9.5 1.3l.4-.1-.3.2c.3.9.6 1.9.8 2.9v.1c.1.5.1.9.2 1.4v.2c0 .5.1 1 .1 1.5-.2.4-.2.9-.2 1.4zm-26.4-49.2a21.5 21.5 0 1 0-43 0 21.47 21.47 0 0 0 21.5 21.5c11.8 0 21.5-9.7 21.5-21.5zm-12.2-16.9c6.2 3.4 10 9.8 10 16.9 0 .6 0 1.2-.1 1.7-1.9-6.7-4.9-12-12.2-15.9l1.2-1.5c.4-.4.7-.8 1.1-1.2zm-7.3-1.9l.3-.3c1.7.2 3.3.6 4.9 1.2-.2.3-.4.5-.7.8-3.8 4.5-6.6 7.7-7.6 16.3-1.8.6-3.8.9-5.9 1.1 1.3-9.8 4.2-13.3 9-19.1zm-6.6.1c1.4-.3 2.7-.5 4.1-.6-4.4 5.3-7.5 9.4-8.7 19.6-1.4 0-2.8-.1-4.3-.2 1.1-9.5 3.4-12.4 8.1-17.9l.8-.9zm-4.3 1.6c-3.6 4.5-5.8 8.1-6.8 16.9-1.2-.2-2.4-.4-3.6-.7.3-6.9 4.4-13.1 10.4-16.2zM99.7 73c7 1.6 13.4 1.5 18.8-.1a47.16 47.16 0 0 1 2.4 3.3c-9.5 3.8-13.8 3.4-20.6.3-.4-1.2-.6-2.4-.6-3.5zm1.5 6.3c3.2 1.3 5.8 1.9 8.5 1.9 3.3 0 7-.9 12.2-3 .8 1.5 1.5 3 2 4.5-8.7 3.4-12.7 3-20 1.1a20.67 20.67 0 0 1-2.7-4.5zm17.7 11.5c-4.3 0-8.5-1.4-11.9-4.1 2.3.5 4.1.7 5.9.7 3.4 0 6.9-.8 11.7-2.7.4 1.6.8 3.2 1 4.9-2.1.8-4.4 1.2-6.7 1.2zm8.9-2.1c-1-6.5-3.5-12.3-7.6-17.3l-.1-.1c.3-2.4.7-4.4 1.2-6.1 7.4 5.2 10.6 11.4 10.6 20.7-1.3 1-2.7 2-4.1 2.8zM122.1 63a19.26 19.26 0 0 1 2.3-3.8c8 4.2 10.7 10.2 12.5 19.1-.7 1.9-1.7 3.6-2.9 5.2-.5-8.9-4.2-15.3-11.9-20.5zm-46.4 8.7c0-5.7-2.2-11.1-6.2-15.1-8.3-8.3-21.9-8.3-30.2 0-4 4-6.2 9.4-6.2 15.1s2.2 11.1 6.2 15.1S48.7 93 54.4 93s11.1-2.2 15.1-6.2 6.2-9.4 6.2-15.1zM57 53c4 .5 7.7 2.4 10.7 5.4 3.4 3.4 5.3 7.8 5.5 12.4-2.1-3.4-5-5.8-8.5-7.1l-.9-.3c-.3-.1-.6-.2-.8-.3-.3-.1-.5-.2-.8-.2-.2-.1-.4-.1-.6-.2-1.8-.5-3.7-.8-6.6-1.1-.2 0-.4-.1-.6-.1-.1 0-.2 0-.3-.1-.1 0-.3-.1-.4-.1s-.3-.1-.4-.1-.1-.1-.2-.1l-1.2-.6c2.1-2.6 3.7-5 5.1-7.5zm-2.8-.1a68.6 68.6 0 0 1-4.1 6c-1.3-1.5-2-2.9-2.1-4.3v-.2c0-.1 0-.1-.1-.2V54c2.1-.7 4.2-1.1 6.3-1.1zm-8.8 2.2c.3 2.4 1.7 4.3 3 5.7l-1.8 2.1c-2.2-3-3.4-5.2-3.9-6a21.11 21.11 0 0 1 2.7-1.8zm-4.7 3.5c.6 1.1 1.9 3.3 4 6.1-.4.4-.8.8-1.2 1.1-1.4-1.2-3.4-2.8-5.8-3.1.8-1.4 1.8-2.9 3-4.1zm-4.1 6.7h.3l.1.1h.1c1.7.1 3.1 1.1 4.4 2.2-2.7 2.2-4.8 3.5-6 4.2 0-2.3.4-4.4 1.1-6.5zM41 85.1c-2.9-2.9-4.7-6.5-5.3-10.5 2.5-1.3 5-3 7.4-5 .4.8.9 1.9 1 2.9.2 1.4.3 2.6.5 3.6 0 .2.1.5.1.7.3 1.9.7 3.4 1.5 5.4 1.4 3.5 3.7 6.4 7 8.4-4.5-.3-8.9-2.3-12.2-5.5zm17.2 5.1l-.2-.1c-4.7-1.9-7.9-4.9-9.4-8.9-1.1-3-1.4-4.8-2-9.1-.2-1.6-.9-3.1-1.6-4.2.4-.4.8-.7 1.2-1.1 5.7 7.1 12.9 13.3 21.2 18.5-2.4 2.4-5.6 4.1-9.2 4.9zm9.1-8C57.8 76.1 51.7 69.6 48.1 65c.8-.8 1.5-1.6 2.3-2.5 1.5.9 3 1.5 4.3 1.6 1.3.2 2.4.3 3.4.5 2.1.3 3.6.7 5.7 1.5 4.1 1.5 7 4.7 8.8 9.3 0 .1.1.2.1.3-.6 2.8-1.8 5.4-3.6 7.7l-1.8-1.2zm15-37.7c2.1 1.6 4.5 4.3 4.5 8.3 0 .6.5 1.2 1.2 1.2s1.2-.5 1.2-1.2c0-4.2 3-7 5.5-8.6 7.7-2.8 12.9-10.2 12.9-18.4 0-10.8-8.8-19.5-19.5-19.5s-19.5 8.8-19.5 19.5c-.2 8.6 5.5 16.3 13.7 18.7zm5.7 3.3a9.63 9.63 0 0 0-1.6-2.5h3.3c-.7.8-1.2 1.6-1.7 2.5zm0-39.1c.6 0 1.1 0 1.6.1h.1c.5.1 1 .1 1.5.2h.1c.5.1 1 .2 1.4.4h.2c.5.1.9.3 1.4.5H94s-.1 0-.1.1c0 0-.1 0-.1.1l-.1.1s-.1 0-.1.1l-.2.2s0 .1-.1.1v.5c0 2.2 1.8 4.1 4.1 4.1.6 0 1.2-.5 1.2-1.2s-.5-1.2-1.2-1.2c-.9 0-1.7-.8-1.7-1.7 0-.1 0-.3-.1-.4 0-.1-.1-.2-.2-.3.3.2.6.3.9.5.1 0 .2.1.2.1.3.1.5.3.7.5.1 0 .1.1.2.1.3.2.6.4.8.6l.2.2c.2.2.4.4.6.5l.2.2c.3.2.5.5.8.7l.7.7c.1.1.1.2.2.2.2.3.4.5.7.8v.1c.2.3.4.5.6.8.1.1.1.2.2.3.2.3.3.5.5.8l.1.1c.2.3.3.6.5.9 0 .1.1.2.1.3.1.3.2.5.3.8 0 .1.1.1.1.2.1.3.2.7.3 1 0 .1 0 .2.1.2.1.3.2.6.2.9 0 .1 0 .2.1.3.1.4.1.7.2 1.1v.2c0 .3.1.6.1 1v3.3c0-.1-.1-.1-.1-.2l-.2-.2h-.1c-.1 0-.1-.1-.2-.1h-.4c-.5 0-.9-.2-1.2-.5s-.5-.8-.5-1.2v-.3a.76.76 0 0 0-.2-.4c-.2-.3-.5-.5-.9-.5-.3 0-.6.1-.8.3s-.4.5-.4.8c0 1.1.3 2.1 1.1 2.9.7.8 1.7 1.3 2.9 1.3.1 0 .2 0 .4-.1h.1c.1 0 .2-.1.3-.2 0 .1 0 .2-.1.3 0 .2-.1.3-.1.5-.1.3-.1.5-.2.8 0 .1-.1.3-.1.4-.1.3-.2.5-.3.8 0 .1-.1.2-.1.3-.2.4-.3.7-.5 1.1 0 .1-.1.1-.1.2-.2.3-.3.6-.5.9-.1.1-.2.2-.2.4-.1.2-.3.4-.4.7-.1.1-.2.3-.3.4-.2.2-.3.4-.5.6-.1.1-.2.2-.3.4l-.9.9c-.3.3-.6.6-.9.8l-.1.1c-.3.2-.6.5-.8.7-.1.1-.2.2-.3.2-.2.2-.4.3-.7.5-.1.1-.3.2-.4.3-.2.1-.5.3-.7.4a.76.76 0 0 1-.4.2c-.3.1-.5.3-.8.4-.1.1-.2.1-.4.2-.4.2-.8.3-1.2.5-.4.1-.7.2-1.1.3l.1.4-.2-.4-1.2.3.1.4-.2-.4c-.8.2-1.7.2-2.5.3h-.1c-.9 0-1.7 0-2.7-.1-.8-.1-1.7-.3-2.5-.5-7.3-2.1-12.5-8.9-12.5-16.5.1-9.8 7.8-17.5 17.3-17.5zm7 11.4c.6 0 1.2-.5 1.2-1.2s-.5-1.2-1.2-1.2c-.9 0-1.7-.8-1.7-1.7 0-.6-.5-1.2-1.2-1.2s-1.2.5-1.2 1.2c0 2.3 1.9 4.1 4.1 4.1zm.4 2.4c0-.6-.5-1.2-1.1-1.2-.7 0-1.2.5-1.2 1.1 0 1.1.3 2.1 1.1 2.9.7.8 1.7 1.3 2.8 1.3.6 0 1.1-.5 1.2-1.1 0-.6-.5-1.2-1.1-1.2-.5 0-.9-.2-1.2-.5-.4-.4-.5-.8-.5-1.3zm6.2-.6c.7 0 1.2-.5 1.2-1.1s-.5-1.2-1.1-1.2c-.5 0-.9-.2-1.2-.5s-.5-.8-.5-1.2c0-.6-.5-1.2-1.1-1.2s0 0 0 0c-.3 0-.6.1-.8.3s-.4.5-.4.8c0 1.1.3 2.1 1.1 2.9.7.7 1.7 1.2 2.8 1.2zM88.3 99.3c-2.6 0-5.2.5-7.6 1.4l-.7.3s-.1 0-.2.1c-.5.2-1 .5-1.5.7-.1 0-.1.1-.2.1l-.1.1c-.4.2-.8.4-1.1.7-.2.1-.4.3-.6.4-.3.2-.6.4-.9.7-.2.2-.4.3-.7.5s-.5.5-.8.7c-.2.2-.4.3-.5.5-.3.3-.5.6-.8.9l-.1.1c-.1.1-.2.3-.4.4a4.44 4.44 0 0 0-.8 1.1c-.1.1-.2.3-.3.4-.3.4-.5.8-.8 1.2l-.2.3c-.3.5-.5 1-.7 1.5l-.3.8c-1.1 2.5-1.6 5.2-1.6 8 0 11.5 9.3 20.8 20.8 20.8s20.8-9.3 20.8-20.8c.1-11.6-9.3-20.9-20.7-20.9zm-16.1 11.4l.1-.3c.2-.3.4-.7.7-1.1.1-.1.2-.2.2-.3.2-.3.4-.6.7-.9.1-.2.3-.3.4-.5.2-.2.4-.4.6-.7l1-1c.2-.2.5-.4.7-.6s.4-.3.6-.5l.1-.1c.1-.1.2-.2.4-.3.3-.2.6-.4 1-.6a.76.76 0 0 1 .4-.2 4.67 4.67 0 0 1 1-.5c2 1.6 4.8 2.4 8 2.2 4.8.2 8.6 2.9 10.4 7.2 1.5 3.7.9 8.2-1.7 11.8-.9 1.2-1.9 2.4-3 3.4-1.8 1.7-3.9 2.7-6 3.1-3.5.6-7-.3-9.8-2.5-.3-.3-.6-.5-.9-.8-2-2-3.2-4.8-3.4-7.8v-2.4c0-.2 0-.3-.1-.5 0-.2-.1-.4-.1-.7 0-.1-.1-.2-.1-.4s-.1-.5-.2-.7c0-.1-.1-.2-.1-.3-.1-.2-.1-.4-.2-.6 0-.1-.1-.2-.2-.4l-.3-.6c-.1-.2-.2-.3-.3-.5-.1-.1-.1-.3-.2-.4-.2-.3-.4-.5-.6-.8.6-.1.8-.4.9-.7zm-2.5.9zm18.6 27.1c-10.3 0-18.6-8.3-18.6-18.6 0-2 .3-4.1 1-6 .9 1.5 1.2 3.5 1.1 5.6v.1c.2 4.2 2 7.8 5.1 10.3 3.2 2.5 7.4 3.6 11.5 2.9 2.5-.4 4.9-1.7 7-3.6 1.2-1.1 2.4-2.4 3.3-3.7 3-4.1 3.8-9.5 2-13.9-2.1-5.1-6.7-8.3-12.4-8.6h-.1c-2.1.1-4-.2-5.5-1 1.8-.6 3.6-.8 5.5-.8 10.3 0 18.6 8.3 18.6 18.6.1 10.3-8.3 18.7-18.5 18.7z"
+						></path>
+					</svg>
+					No event
+				</div>
+			</div>
+		</div>
+		<!--track left panel-->
+		<div class="popup_window" id="track_left_panel_mask"></div>
+
+		<!--marble magic tutorial-->
+		<div class="htp_tut_popup" id="marble_magic_tutorial"></div>
+		<script>
+			$(window).resize(function () {
+				eventlisting();
+			});
+
+			$(document).ready(function () {
+				headerLoad();
+				flMenuLoad();
+				flEventListing();
+				$(document.documentElement).css('--recHdrH', $('.mr_tracks_slider').outerHeight(true) + 'px');
+				let mr_tracks_slider_top = 98;
+
+				var isPinned = false;
+				var isNavReset = true;
+
+				$(window).scroll(function () {
+					if ($('body').hasClass('navScroll')) {
+						isNavReset = false;
+						cardHdr();
+					}
+					if ($('body').hasClass('navReset')) {
+						isNavReset = true;
+						cardHdr();
+					}
+				});
+
+				const cardHdr = () => {
+					const cardHdrPinned = () => {
+						//new track: alert banner change when scroll
+						// $(".track_bar").css("top", $(".n_header").outerHeight() + $(".fl_menu_wrp").outerHeight() + $(".mr_tracks_slider").outerHeight() + $(".s_iframe").outerHeight() + "px");
+						// $(".mr_alert_banner").css("top", $(".n_header").outerHeight() + $(".fl_menu_wrp").outerHeight() + $(".mr_tracks_slider").outerHeight() + $(".s_iframe").outerHeight() + $(".track_bar").outerHeight() + "px");
+						$('.track_bar').css('top', $('.s_iframe').height() + mr_tracks_slider_top + $('.mr_tracks_slider').outerHeight() + 'px');
+						$('.mr_alert_banner').css('top', $('.s_iframe').height() + mr_tracks_slider_top + $('.mr_tracks_slider').outerHeight() + $('.track_bar').outerHeight() + 'px');
+						if ($('.n_info_dev_can_delete').hasClass('info')) {
+							$('.mr_ev_hdr').css('top', $('.n_header').outerHeight() + $('.fl_menu_wrp').outerHeight() + $('.mr_tracks_slider').outerHeight() + $('.s_iframe').outerHeight() + $('.track_bar').outerHeight() + $('.mr_alert_banner').outerHeight() + $('.n_info_msg').outerHeight() + 'px');
+						} else {
+							$('.mr_ev_hdr').css('top', $('.n_header').outerHeight() + $('.fl_menu_wrp').outerHeight() + $('.mr_tracks_slider').outerHeight() + $('.s_iframe').outerHeight() + $('.track_bar').outerHeight() + $('.mr_alert_banner').outerHeight() + parseInt($('.mr_ev_card').css('margin-top'), 10) + 'px');
+						}
+					};
+					const cardHdrWoutPin = () => {
+						$('.track_bar').css('top', 'unset');
+						$('.mr_alert_banner').css('top', $('.n_header').outerHeight() + $('.mr_tracks_slider').outerHeight() + 'px');
+						$('.mr_ev_hdr').css('top', $('.n_header').outerHeight() + $('.mr_tracks_slider').outerHeight() + $('.mr_alert_banner').outerHeight() + parseInt($('.mr_ev_card').css('margin-top'), 10) + 'px');
+					};
+					return isPinned ? cardHdrPinned() : cardHdrWoutPin();
+				};
+				cardHdr();
+				// var isPreRace = true;
+				// var isLive = true;
+				// $('.demoPreRaceClosing').click(function () {
+				// 	$(this).closest('.mr_ev_card').find('.live_bet_label').toggle();
+				// 	isPreRace = !isPreRace;
+
+				// 	isPreRace ? $(this).closest('.mr_ev_card').find('.live_icon').text('OPEN') : $(this).closest('.mr_ev_card').find('.live_icon').text('00:30');
+				// });
+
+				// $('.demoLiveClosing').click(function () {
+				// 	$(this).closest('.mr_ev_card').find('.live_bet_label').toggle();
+				// 	isLive = !isLive;
+				// 	isLive ? $(this).closest('.mr_ev_card').find('.live_icon').text('LIVE') : $(this).closest('.mr_ev_card').find('.live_icon').text('00:30');
+				// });
+
+				// $('.demoNoRecord').click(function () {
+				// 	$('.n_inner_loading').show();
+				// });
+
+				// $('.demoLoading').click(function () {
+				// 	$('.loading_item').show();
+				// });
+
+				// $('.demoPlacingLayout1').click(function () {
+				// 	$(this).closest('.mr_ct').find('.mr_pos_wrp').show();
+				// 	$(this).closest('.mr_ct').find('.mr_ev_ct.col_3').show();
+				// 	$(this).closest('.mr_ct').find('.mr_hdr.t1').show();
+				// 	$(this).closest('.mr_ct').find('.mr_ev_ct.t2').hide();
+				// });
+
+				// $('.demoPlacingLayout2').click(function () {
+				// 	$(this).closest('.mr_ct').find('.mr_pos_wrp').hide();
+				// 	$(this).closest('.mr_ct').find('.mr_ev_ct.col_3').hide();
+				// 	$(this).closest('.mr_ct').find('.mr_hdr.t1').hide();
+				// 	$(this).closest('.mr_ct').find('.mr_ev_ct.t2').show();
+				// });
+
+				const groupMrBettypeSections = () => {
+					$('.mr_ct_wrp').each(function () {
+						const $container = $(this);
+						// Group all bettype sections so pin can reorder consistently,
+						// including "Winning Position" layout where header sits inside .mr_ct.newCol3.
+						while ($container.children().not('.mr_bettype_grp').length) {
+							const $firstUngrouped = $container.children().not('.mr_bettype_grp').first();
+
+							if ($firstUngrouped.is('.mr_bettype_hd')) {
+								const $sectionNodes = $firstUngrouped.nextUntil('.mr_bettype_hd, .mr_ct.newCol3:has(> .mr_bettype_hd)').addBack();
+								$sectionNodes.wrapAll('<div class="mr_bettype_grp"></div>');
+								continue;
+							}
+
+							if ($firstUngrouped.is('.mr_ct.newCol3') && $firstUngrouped.children('.mr_bettype_hd').length) {
+								$firstUngrouped.wrap('<div class="mr_bettype_grp"></div>');
+								continue;
+							}
+
+							$firstUngrouped.wrap('<div class="mr_bettype_grp"></div>');
+						}
+					});
+				};
+
+				const moveWithSlide = ($item, moveFn, done, shouldAnimate = true) => {
+					if (!shouldAnimate) {
+						moveFn();
+						if (typeof done === 'function') {
+							done(true);
+						}
+						return;
+					}
+					$item.stop(true, true).slideUp(200, function () {
+						moveFn();
+						$item.stop(true, true).slideDown(200, function () {
+							if (typeof done === 'function') {
+								done(true);
+							}
+						});
+					});
+				};
+
+				const reorderMrCard = ($pin, isNowActive, done) => {
+					const $card = $pin.closest('.mr_ev_card');
+					const $cardContainer = $card.parent();
+					const $currentPinnedCards = $cardContainer.children('.mr_ev_card').filter(function () {
+						return $(this).find('.mr_bettype_hd .icon-fi-pin.active').length > 0;
+					});
+					const $lastPinnedCard = $currentPinnedCards.not($card).last();
+					const currentIndex = $card.index();
+					const lastPinnedIndex = $lastPinnedCard.length ? $lastPinnedCard.index() : -1;
+					const activeCountInCard = $card.find('.mr_bettype_hd .icon-fi-pin.active').length;
+					const willCardBePinned = isNowActive ? true : activeCountInCard > 1;
+					const shouldMoveToPinnedZone = willCardBePinned && ($lastPinnedCard.length ? currentIndex !== lastPinnedIndex + 1 : currentIndex > 0);
+					const shouldMoveOutOfPinnedZone = !willCardBePinned && $lastPinnedCard.length && currentIndex !== lastPinnedIndex + 1;
+
+					if (shouldMoveToPinnedZone) {
+						if ($lastPinnedCard.length) {
+							moveWithSlide($card, () => $card.insertAfter($lastPinnedCard), done);
+						} else {
+							moveWithSlide($card, () => $cardContainer.prepend($card), done);
+						}
+						return;
+					}
+
+					if (shouldMoveOutOfPinnedZone) {
+						moveWithSlide($card, () => $card.insertAfter($lastPinnedCard), done);
+						return;
+					}
+
+					if (typeof done === 'function') {
+						done(false);
+					}
+				};
+
+				const reorderMrBettypeSection = ($pin, isNowActive, done, shouldAnimate = true) => {
+					const $currentSection = $pin.closest('.mr_bettype_grp');
+					const $sectionContainer = $currentSection.closest('.mr_ct_wrp');
+					const $lastPinnedSection = $sectionContainer.find('.mr_bettype_grp .icon-fi-pin.active').closest('.mr_bettype_grp').not($currentSection).last();
+					const currentIndex = $currentSection.index();
+					const lastPinnedIndex = $lastPinnedSection.length ? $lastPinnedSection.index() : -1;
+					const shouldMoveToPinnedZone = isNowActive && ($lastPinnedSection.length ? currentIndex !== lastPinnedIndex + 1 : currentIndex > 0);
+					const shouldMoveOutOfPinnedZone = !isNowActive && $lastPinnedSection.length && currentIndex !== lastPinnedIndex + 1;
+
+					if (shouldMoveToPinnedZone) {
+						if ($lastPinnedSection.length) {
+							moveWithSlide($currentSection, () => $currentSection.insertAfter($lastPinnedSection), done, shouldAnimate);
+						} else {
+							moveWithSlide($currentSection, () => $sectionContainer.prepend($currentSection), done, shouldAnimate);
+						}
+						return;
+					}
+
+					if (shouldMoveOutOfPinnedZone) {
+						moveWithSlide($currentSection, () => $currentSection.insertAfter($lastPinnedSection), done, shouldAnimate);
+						return;
+					}
+
+					if (typeof done === 'function') {
+						done(false);
+					}
+				};
+
+				groupMrBettypeSections();
+
+				$(document)
+					.off('click.mrBettypePinFlow', '.mr_main .mr_bettype_hd .icon-fi-pin')
+					.on('click.mrBettypePinFlow', '.mr_main .mr_bettype_hd .icon-fi-pin', function (e) {
+						e.preventDefault();
+						e.stopPropagation();
+
+						const $pin = $(this);
+						const isNowActive = !$pin.hasClass('active');
+
+						// 1) Move whole card in page pinned order.
+						reorderMrCard($pin, isNowActive, function (cardMoved) {
+							// 2) Then move section to pinned order within the card.
+							// If card already animated, move section instantly to avoid double bounce.
+							reorderMrBettypeSection(
+								$pin,
+								isNowActive,
+								function () {
+									$pin.toggleClass('active');
+								},
+								!cardMoved,
+							);
+						});
+					});
+
+				$('.mr_main').find('.mr_ev_card_ct').hide();
+				$('.mr_main').find('.mr_ev_card_ct').first().show();
+				$('.mr_ev_hdr').click(function () {
+					//var mr_ev_card_ct = $(this).closest(".mr_ev_card").find($(".mr_ev_card_ct"));
+					if (!$(this).closest('.mr_ev_card').find('.mr_ev_card_ct').is(':visible')) {
+						$(this).closest('.mr_ev_card').parent().find('.mr_ev_card_ct').hide();
+						$(this).closest('.mr_ev_card').find('.mr_ev_card_ct').show();
+					} else {
+						$(this).closest('.mr_ev_card').find('.mr_ev_card_ct').hide();
+					}
+				});
+
+				function mrSliderFunction(slider_id) {
+					$(slider_id + ' .slider').css('width', $(slider_id + ' .item.active').width());
+					$(slider_id + ' .slider').css('left', $(slider_id + ' .item.active').offset().left + $(slider_id).scrollLeft());
+
+					$(slider_id + ' .item').click(function () {
+						$(slider_id + ' .item').removeClass('active');
+						$(this).addClass('active');
+						$(slider_id + ' .slider').css('width', $(slider_id + ' .item.active').width());
+						$(slider_id + ' .slider').css('left', $(slider_id + ' .item.active').offset().left + $(slider_id).scrollLeft());
+						if ($(this).offset().left + $(this).outerWidth() > $(window).width()) {
+							$(slider_id).scrollLeft($(slider_id).scrollLeft() + $(this).offset().left + $(this).outerWidth() - $(window).width());
+						} else if ($(this).offset().left < 0) {
+							$(slider_id).scrollLeft($(slider_id).scrollLeft() + $(this).offset().left);
+						}
+
+						if ($(this).hasClass('demoClassPlacing')) {
+							$(this).closest('.mr_ev_card').find('.demoAllMkt').show();
+							$(this).closest('.mr_ev_card').find('.demoLgtn2').hide();
+						} else if ($(this).hasClass('demoLightningTop2')) {
+							$(this).closest('.mr_ev_card').find('.demoAllMkt').hide();
+							$(this).closest('.mr_ev_card').find('.demoLgtn2').show();
+						}
+					});
+				}
+
+				$('#demoOnly_global_pop_item').load('_global_pop_item.html', function () {
+					$('#main_footer').unwrap();
+					// OverallEventListing("today", "");
+				});
+
+				//racing load sev
+				$('.rac_sev_wrp').load('_sev_dashboard_innerpage_shared.html', function () {
+					$('.rac_sev_wrp').find('.n_header_sev').hide();
+					$('#sev_all').show();
+					$('.s_iframe').show();
+					$('.n_visualization_vertical_top_wrap, .s_nav_btn_wrp').hide();
+					showMrLiveStreamOnly();
+					$('.rac_sev_wrp').find('.n_content_wrap_wth_bcktop ').show();
+					OverallEventListing('today', '');
+					$('.mr_stream_overlay').show();
+
+					Move_sev_to_ev();
+					if (!$('.rac_sev_wrp').hasClass('n_sticky')) {
+						$('.rac_sev_wrp').find('.n_pin_dev_can_delete').first().trigger('click');
+					}
+
+					cardHdr();
+					if (isPinned) {
+						$('.s_iframe').on('load', function () {
+							cardHdr();
+						});
+					}
+				});
+
+				//Show hide live stream
+				// no longer in used: start
+				// $('.n_event_listing_header')
+				// 	.find('.live_stream_btn')
+				// 	.click(function (e) {
+				// 		if ($(this).hasClass('active')) {
+				// 			$(this).removeClass('active');
+				// 			$('.rac_sev_wrp').hide();
+				// 		} else {
+				// 			$(this).addClass('active');
+				// 			$('.rac_sev_wrp').show();
+				// 			$('.s_iframe').show();
+				// 		}
+				// 		e.stopPropagation();
+				// 	});
+				// no longer in used: end
+				marbleRunTutorial();
+
+				//Track slider
+				//$(".expend_name").hide();
+				$('.mr_tracks_inner')
+					.find('.tracks_tab')
+					.click(function () {
+						if ($(this).hasClass('disable')) {
+							return;
+						} else {
+							$(this).parent().find('.tracks_tab').removeClass('active');
+							$(this).parent().find('.expend_name').hide();
+							$(this).parent().find('.tracks_title').show();
+							$(this).addClass('active');
+							$(this).find('.tracks_title').hide();
+							$(this).find('.expend_name').show();
+						}
+					});
+				$('.track_popup .betslip_bottom_button.confirm').click(function () {
+					$('#track_maintenance').hide();
+					$('.mr_tracks_inner').find('.tracks_tab').removeClass('active');
+					$('.mr_tracks_inner').find('.tracks_title').show();
+					$('.mr_tracks_inner').find('.tracks_tab').first().addClass('active');
+					$('.mr_tracks_inner').find('.tracks_tab').first().find('.tracks_title').hide();
+				});
+
+				function showMrLiveStreamOnly() {
+					var $racSevWrp = $('.rac_sev_wrp');
+					$racSevWrp.find('.s_iframe').addClass('showStay');
+					$racSevWrp.find('#open_visualization').hide().removeClass('slide_to_left');
+					$racSevWrp.find('#open_live_streaming').show().removeClass('slide_to_right');
+					$racSevWrp.find('.s_nav_btn_wrp').hide();
+					page = 'live';
+				}
+
+				//move sev to event listing page
+				function Move_sev_to_ev() {
+					var device_width = $(window).width();
+					var iframeRatio = device_width * (9 / 16); /*ratio from betradar with footer*/
+					var $racSevWrp = $('.rac_sev_wrp');
+					var $liveStream = $racSevWrp.find('#open_live_streaming');
+					var $mrStreamOverlay = $racSevWrp.find('.mr_stream_overlay');
+					var isMrStreamOverlayShown = $mrStreamOverlay.is(':visible');
+					var $footerControls = $liveStream
+						.find('> .n_visualization_vertical_btm_wrap, > .n_visualization_horizontal_wrap.mrWithFooter')
+						.filter(function () {
+							return $(this).find('.n_pin_dev_can_delete, .n_info_dev_can_delete').length;
+						})
+						.first();
+					var $horizontalControls = $liveStream.find('> .n_visualization_horizontal_wrap').not($footerControls);
+					$('.rac_sev_wrp')
+						.find('.s_iframe')
+						.css('height', iframeRatio + 'px');
+					showMrLiveStreamOnly();
+
+					if (isMrStreamOverlayShown) {
+						var $mrHorizontalControls = $footerControls.hasClass('mrWithFooter') ? $footerControls : $horizontalControls.first();
+						if ($footerControls.length && $mrHorizontalControls.length) {
+							var $mrControlBtns = $footerControls.find('.n_pin_dev_can_delete, .n_info_dev_can_delete').detach();
+							$mrHorizontalControls.removeClass('withfooter').addClass('mrWithFooter').empty().append($mrControlBtns).show();
+							$mrHorizontalControls.find('.n_info_dev_can_delete i').removeClass('icon-fi-info').addClass('icon-fi-info-round').attr('aria-hidden', 'true');
+							$footerControls.not($mrHorizontalControls).hide();
+						}
+					} else {
+						$footerControls.removeClass('n_visualization_horizontal_wrap mrWithFooter').addClass('n_visualization_vertical_btm_wrap withfooter').show();
+						$horizontalControls.removeClass('mrWithFooter').addClass('withfooter').show().children('div').hide();
+						$footerControls.children().show();
+					}
+					$racSevWrp.find('.n_volume_dev_can_delete').toggle(!isMrStreamOverlayShown);
+					$('.rac_sev_wrp').find('.s_nav_right').hide();
+					$('.rac_sev_wrp').find('#open_live_streaming').find('.chan_error_wrp').hide();
+					$('.rac_sev_wrp').find('.n_info_msg').hide();
+					$('.rac_sev_wrp')
+						.find('.sampleMockOnly_channel')
+						.click(function () {
+							$('.chan_popup').show();
+						});
+					//trigger info
+					$('.rac_sev_wrp')
+						.find('.n_info_dev_can_delete')
+						.click(function () {
+							var $infoBtns = $('.rac_sev_wrp').find('.n_info_dev_can_delete');
+							var isInfoActive = !$(this).hasClass('info');
+							$infoBtns.toggleClass('info', isInfoActive);
+							$('.n_info_msg').toggle(isInfoActive);
+
+							if ($('.n_pin_dev_can_delete').hasClass('pin')) {
+								if (isInfoActive) {
+									//new track: alert banner change when click info
+									$('.n_info_msg').insertAfter($('.mr_alert_banner'));
+									var topWarningMsg = $('.n_header').outerHeight() + $('.fl_menu_wrp').outerHeight() + $('.mr_tracks_slider').outerHeight() + $('.s_iframe').outerHeight() + $('.track_bar').outerHeight();
+									var topInfoMsg = topWarningMsg + $('.mr_alert_banner').outerHeight();
+									var topHdr = topInfoMsg + $('.n_info_msg').outerHeight();
+									$('.n_info_msg').css('top', topInfoMsg);
+									$('.mr_ev_hdr').css('top', topHdr);
+									sevSlider.css('top', sevSlider_Pinned_withInfo_Top);
+									sevSlider_stats.css('top', sevSlider_Pinned_withInfo_Top);
+									$('.mr_sel_wrp').css('top', $('.n_header').outerHeight() + $('.mr_tracks_slider').outerHeight() + $('.s_iframe').outerHeight() + $('.n_info_msg').outerHeight());
+								} else {
+									$('.n_info_msg').insertAfter($('.new_h2h_wrp'));
+									var topWarningMsgNoPin = $('.n_header').outerHeight() + $('.fl_menu_wrp').outerHeight() + $('.mr_tracks_slider').outerHeight();
+									sevSlider.css('top', sevSlider_Pinned_Top);
+									sevSlider_stats.css('top', sevSlider_Pinned_Top);
+									//$(".mr_alert_banner").css("top", topWarningMsg);
+									$('.n_info_msg').css('top', 'unset');
+									$('.mr_ev_hdr').css('top', $('.n_header').outerHeight() + $('.fl_menu_wrp').outerHeight() + $('.mr_tracks_slider').outerHeight() + $('.s_iframe').outerHeight() + $('.track_bar').outerHeight() + $('.mr_alert_banner').outerHeight() + parseInt($('.mr_ev_card').css('margin-top'), 10));
+									$('.mr_sel_wrp').css('top', $('.n_header').outerHeight() + $('.mr_tracks_slider').outerHeight() + $('.s_iframe').outerHeight());
+								}
+							} else {
+								if (isInfoActive) {
+									$('.n_info_msg').insertAfter($('.mr_alert_banner'));
+								} else {
+									$('.n_info_msg').insertAfter($('.new_h2h_wrp'));
+								}
+							}
+						});
+
+					$('.rac_sev_wrp')
+						.find('.demoOnly_dontCopy_close')
+						.click(function () {
+							page = 'home';
+							$('.n_sev_view').css('z-index', 1);
+							$('.s_iframe').hide();
+							$('#open_visualization').removeClass('slide_to_left');
+							$('#open_live_streaming').removeClass('slide_to_right');
+							$('.n_info_msg').hide();
+							$('.n_sev_bottom').show(); // show back visual/live stream button
+							$('.s_iframe').removeClass('n_sticky');
+							$('.s_iframe').css('top', 'unset');
+							$('.n_pin_dev_can_delete').removeClass('pin');
+							$('.n_pin_dev_can_delete').find('i').removeClass('pinned');
+							$('.n_pin_dev_can_delete').css('top', 'unset');
+							$('.n_info_dev_can_delete').removeClass('info');
+							$('.n_info_msg').removeClass('n_sticky');
+							$('.n_info_msg').css('top', 'unset');
+							$('.n_sev_top').show();
+							// no longer in used: start
+							// $('.n_event_listing_header').find('.live_stream_btn').removeClass('active');
+							// no longer in used: end
+							sevSlider.css('top', sevSlider_Top);
+							sevSlider_stats.css('top', sevSlider_Top);
+						});
+
+					// trigger pin & unpin
+					$('.rac_sev_wrp')
+						.find('.n_pin_dev_can_delete')
+						.click(function () {
+							var $pinBtns = $('.rac_sev_wrp').find('.n_pin_dev_can_delete');
+							isPinned = !$(this).hasClass('pin');
+							$('.mr_tracks_slider').toggleClass('pinned', isPinned);
+							$pinBtns.toggleClass('pin', isPinned);
+							$pinBtns.find('i').toggleClass('pinned', isPinned);
+							$('.s_iframe').toggleClass('n_sticky', isPinned);
+							$('.n_info_msg').toggleClass('n_sticky', isPinned);
+							$('.rac_sev_wrp').toggleClass('n_sticky', isPinned);
+							if (isPinned) {
+								havePinned();
+							} else {
+								noPin();
+							}
+							$('.fl_menu_wrp').toggleClass('n_sticky', isPinned);
+							cardHdr();
+
+							// pin from unpin, menu jumping issue
+							// if ($('.fl_menu_wrp').hasClass('with_rc') && !$('.cls_el_mainmenu_wrp').hasClass('no_jump')) {
+							// 	$('.cls_el_mainmenu_wrp').addClass('no_jump');
+							// }
+
+							function scrollFinished() {
+								let item = document.getElementById('demoOnlyRecentHdr');
+								var topValueOnScroll = item.getBoundingClientRect().top;
+
+								console.log(topValueOnScroll);
+
+								if (topValueOnScroll <= 40) {
+									return;
+								} else {
+									$('.mr_tracks_slider').removeClass('n_sticky').css('position', 'static');
+									$(document.documentElement).css('--recHdrOffsetTop', topValueOnScroll + 'px');
+								}
+							}
+
+							$(window).on('scrollend', () => {
+								scrollFinished();
+							});
+						});
+
+					var sev_Banner_Frame = $('.n_visualization_wrap');
+					var sevSlider = $('.DontCopy_test_sev_filter_menu');
+					var sevSlider_stats = $('.DontCopy_test_sev_filter_menu_statistic');
+					var sevSlider_Top = $('#sample_tw_pin').outerHeight();
+					var sevSlider_Pinned_Top = sevSlider_Top;
+					var sevSlider_Pinned_withInfo_Top = sevSlider_Top;
+					function havePinned() {
+						$('.rac_sev_wrp').css('top', mr_tracks_slider_top + $('.mr_tracks_slider').outerHeight());
+						$('.s_iframe').css('top', $('.n_header_sev').outerHeight());
+
+						if (page == 'live' || page == 'visual') {
+							sevSlider_Pinned_Top = sev_Banner_Frame.outerHeight() + $('.s_iframe').outerHeight();
+						}
+						sevSlider_Pinned_withInfo_Top = sevSlider_Pinned_Top;
+						sevSlider.css('top', sevSlider_Pinned_Top);
+						sevSlider_stats.css('top', sevSlider_Pinned_Top);
+
+						if ($('.n_info_dev_can_delete').hasClass('info')) {
+							$('.n_info_msg').css('top', sevSlider_Pinned_Top);
+							sevSlider.css('top', sevSlider_Pinned_withInfo_Top);
+							sevSlider_stats.css('top', sevSlider_Pinned_withInfo_Top);
+						}
+					}
+					function noPin() {
+						if (page == 'home') {
+							sevSlider_Top = $('#sample_tw_pin').outerHeight();
+						}
+						if (page == 'live' || page == 'visual') {
+							sevSlider_Top = sev_Banner_Frame.outerHeight();
+						}
+						sevSlider.css('top', sevSlider_Top);
+						sevSlider_stats.css('top', sevSlider_Top);
+						$('.s_iframe').css('top', 'unset');
+						$('.n_info_msg').css('top', 'unset');
+						$('.rac_sev_wrp').css('top', 'unset');
+					}
+
+					var sevSlider_stats = $('.DontCopy_test_sev_filter_menu_statistic');
+					//change view to statistic/ SEV
+					$('.rac_sev_wrp')
+						.find('.n_visualization_horizontal_wrap .devDontCopy_stats_icon')
+						.click(function () {
+							var contentminheight = $(window).outerHeight() - 5 - $('.sev_compact').outerHeight() - $('.n_sports_menu').outerHeight() - $('#main_footer').outerHeight();
+							sevSlider_stats.show();
+							/*   $("#sample_dev_dont_copy_stats").show();
+			$("#sample_dev_dont_copy_stats").siblings(".n_visualization_btn").hide(); */
+							$('.DontCopy_test_sev_filter_menu').hide();
+							$('#sev_stats_container_sample').css('display', 'none');
+							$('.n_sev_item_content_wrap').css('display', 'none');
+							$('body').addClass('n_body_stats');
+							var iframeHeight = $(window).outerHeight() - $('.n_sev_view').outerHeight() - $('.DontCopy_test_sev_filter_menu_statistic').outerHeight() - 98;
+							$('#iframe_statistics').css('height', iframeHeight);
+						});
+					//trigger stats & volume
+					$('.rac_sev_wrp')
+						.find('.n_volume_dev_can_delete')
+						.click(function () {
+							$(this).find('i').toggleClass('icon-fi-voice-on icon-fi-voice-mute');
+							$(this).toggleClass('volume');
+						});
+
+					$('.rac_sev_wrp')
+						.find('.n_visualization_horizontal_wrap .DontCopy_world_cup')
+						.click(function () {
+							var contentminheight = $(window).outerHeight() - 5 - $('.sev_compact').outerHeight() - $('.n_sports_menu').outerHeight() - $('#main_footer').outerHeight();
+							sevSlider_stats.show();
+							$('.DontCopy_world_cup').hide();
+							$('.DontCopy_worldcup_chanindi').show();
+							$('.DontCopy_test_sev_filter_menu').hide();
+							// $('.sev_inner_world_cup_stat').show();
+							$('#sev_stats_container_sample').css('display', 'none');
+							$('.n_sev_item_content_wrap').css('display', 'none');
+							$('body').addClass('n_body_stats');
+							$('.DontCopy_test_sev_filter_menu_statistic').hide();
+							$('.DontCopy_world_cup_stat').show();
+							$('.DontCopyDev_today').show();
+
+							// show different tab content for world cup stat icon
+							var sevSlider_Active = $('.DontCopy_world_cup_stat .item_wrap.active');
+							var sevSlider_Active_item = $('.DontCopy_world_cup_stat .item_wrap.active .item');
+							var pd_left = parseInt(sevSlider_Active_item.css('padding-left'));
+							var pd_right = parseInt(sevSlider_Active_item.css('padding-right'));
+							var total_padding = pd_left + pd_right;
+							var width_no_padding = sevSlider_Active.width() - total_padding;
+							var sevSlider_position = sevSlider_Active.offset().left - sevSlider.offset().left + sevSlider.scrollLeft() + pd_left;
+							console.log(sevSlider_position);
+							$('.DontCopy_world_cup_stat .n_sports_menu .slider').css('left', sevSlider_position);
+							$('.DontCopy_world_cup_stat .n_sports_menu .slider').css('width', width_no_padding);
+
+							$('.DontCopy_world_cup_stat .n_sports_menu .item_wrap').click(function () {
+								$('.DontCopy_world_cup_stat .n_sports_menu .item_wrap').removeClass('active');
+								$('.tab_nav .tab_nav_item').removeClass('active');
+								$('.DontCopyDev_schedule, .DontCopyDev_standings, .DontCopyDev_history').hide();
+								$('.DontCopyDev_today, .DontCopyDev_group_stage, .DontCopyDev_knockout_stage, .DontCopyDev_all').hide();
+								$(this).addClass('active');
+								var tab = $(this).text().trim().toLowerCase();
+								$('.DontCopyDev_' + tab).show();
+								if (tab == 'schedule') {
+									$(".tab_nav .tab_nav_item:contains('Today')").addClass('active');
+									$('#world_cup_stats_container_sample').show();
+									$('.DontCopyDev_today').show();
+									$('.DontCopyDev_group_stage').hide();
+									$('.DontCopyDev_all').hide();
+								} else if (tab == 'standings') {
+									$(".tab_nav .tab_nav_item:contains('Group Stage')").addClass('active');
+									$('#world_cup_stats_container_sample').show();
+									$('.DontCopyDev_today').hide();
+									$('.DontCopyDev_group_stage').show();
+									$('.DontCopyDev_all').hide();
+								} else if (tab == 'history') {
+									$(".tab_nav .tab_nav_item:contains('All')").addClass('active');
+									$('#world_cup_stats_container_sample').show();
+									$('.DontCopyDev_today').hide();
+									$('.DontCopyDev_group_stage').hide();
+									$('.DontCopyDev_knockout_stage').hide();
+									$('.DontCopyDev_all').show();
+								}
+
+								var sevSlider_Active_item = $(this).find('.item');
+								var pd_left = parseInt(sevSlider_Active_item.css('padding-left'));
+								var pd_right = parseInt(sevSlider_Active_item.css('padding-right'));
+								var total_padding = pd_left + pd_right;
+								var width_no_padding = $(this).width() - total_padding;
+								sevSlider_position = $(this).offset().left - sevSlider.offset().left + sevSlider.scrollLeft() + pd_left;
+								$('.DontCopy_world_cup_stat .n_sports_menu .slider').css('left', sevSlider_position);
+								$('.DontCopy_world_cup_stat .n_sports_menu .slider').css('width', width_no_padding);
+							});
+							$('.DontCopy_world_cup_stat .tab_nav .tab_nav_item').click(function () {
+								$('.DontCopy_world_cup_stat .tab_nav .tab_nav_item').removeClass('active');
+								$('.DontCopyDev_today, .DontCopyDev_group_stage, .DontCopyDev_knockout_stage, .DontCopyDev_all').hide();
+								$(this).addClass('active');
+								$('#world_cup_stats_container_sample').show();
+								var tab = $(this).text().toLowerCase().replace(/ /g, '_');
+								$('.DontCopyDev_' + tab).show();
+							});
+						});
+					$('.rac_sev_wrp')
+						.find('.DontCopy_worldcup_chanindi')
+						.click(function () {
+							sevSlider_stats.hide();
+							$('.DontCopy_world_cup').show();
+							$('.DontCopy_worldcup_chanindi').hide();
+							$('.DontCopy_test_sev_filter_menu').show();
+							// $('.sev_inner_world_cup_stat').hide();
+							$('#sev_stats_container_sample').css('display', 'none');
+							$('.n_sev_item_content_wrap').css('display', '');
+							$('body').removeClass('n_body_stats');
+							$('.DontCopy_world_cup_stat').hide();
+							$('.schedule_team_wrp').hide();
+						});
+					$('.rac_sev_wrp')
+						.find('.chan_popup')
+						.on('click', function () {
+							$('.chan_popup').hide();
+						});
+					$('.rac_sev_wrp')
+						.find('.chan_btn')
+						.not('#dont_copy_channel_popup')
+						.on('click', function () {
+							$('.chan_btn').removeClass('active');
+							$(this).addClass('active').parents('.n_iframe_visualization').find('.chan_indi div').text($(this).text());
+						});
+					/*switching between visualization and live stream: start*/
+					$('.rac_sev_wrp')
+						.find('.s_nav_left .s_nav_btn')
+						.click(function () {
+							showMrLiveStreamOnly();
+						});
+					$('.rac_sev_wrp')
+						.find('.s_nav_right .s_nav_btn')
+						.click(function () {
+							showMrLiveStreamOnly();
+						});
+
+					$('#open_live_streaming').find('.icon-fi-stats').parent().remove();
+					$('#open_live_streaming').find('.DontCopy_world_cup').remove();
+					$('.DontCopy_test_sev_filter_menu').hide();
+
+					$(window).resize(function () {
+						var device_width = $(window).width();
+						var iframeRatio = device_width * (257.95 / 363); /*ratio from betradar with footer*/
+						$('.rac_sev_wrp')
+							.find('.s_iframe')
+							.css('height', iframeRatio + 'px');
+						if ($('.n_pin_dev_can_delete').hasClass('pin')) {
+							if ($('.n_info_dev_can_delete').hasClass('info')) {
+								$('.n_info_msg').css('top', sevSlider_Pinned_Top);
+								sevSlider.css('top', sevSlider_Pinned_withInfo_Top);
+								sevSlider_stats.css('top', sevSlider_Pinned_withInfo_Top);
+								$('.mr_sel_wrp').css('top', $('.n_header').outerHeight() + $('.mr_tracks_slider').outerHeight() + $('.s_iframe').outerHeight() + $('.n_info_msg').outerHeight());
+							} else {
+								sevSlider.css('top', sevSlider_Pinned_Top);
+								sevSlider_stats.css('top', sevSlider_Pinned_Top);
+								$('.n_info_msg').css('top', 'unset');
+								$('.mr_sel_wrp').css('top', $('.n_header').outerHeight() + $('.mr_tracks_slider').outerHeight() + $('.s_iframe').outerHeight());
+							}
+						}
+					});
+					//lightening control
+					setTimeout(function () {
+						$('.mr_main').find('.mr_sel_grp').find('.ltn_bg').addClass('hide');
+						$('.mr_main').find('.mr_sel_grp').find('.mr_box').not(':first').removeClass('active');
+						$('.mr_main').find('.mr_sel_grp').find('.mr_box').first().find('.mr_box_inner').addClass('mr_fadeIn');
+						$('.mr_main').find('.mr_sel_grp').find('.mr_box').first().find('.mr_icon').first().removeClass('mr_unknw').addClass('mr10').text('10');
+						$('.mr_main').find('.mr_sel_grp').find('.mr_box').first().find('.mr_icon').last().removeClass('mr_unknw').addClass('mr2').text('2');
+						$('.mr_main').find('.mr_sel_grp').find('.mr_box').first().find('.mr_btm_info').removeClass('unknw').text('200');
+					}, 2000);
+				}
+
+				//marble order sortting
+				$('.mr_order')
+					.find('.mr_order_title,.sort_button')
+					.click(function () {
+						if ($(this).parent().find('.ob_st_popup').is(':visible')) {
+							$(this).parent().find('.ob_st_popup').hide();
+						} else {
+							$(this).parent().find('.ob_st_popup').show();
+							$(this).parent().find('.ob_st_popup').find('.ob_st_rw').removeClass('active');
+							if ($(this).parent().find('.mr_order_title').text() === 'Odds Ascending') {
+								$(this).parent().find('.ob_st_popup').find('.ob_st_rw').first().addClass('active');
+							} else if ($(this).parent().find('.mr_order_title').text() === 'Odds Descending') {
+								$(this).parent().find('.ob_st_popup').find('.ob_st_rw').first().next().addClass('active');
+							} else {
+								$(this).parent().find('.ob_st_popup').find('.ob_st_rw').last().addClass('active');
+							}
+						}
+					});
+
+				$('.mr_order')
+					.find('.ob_st_popup')
+					.find('.ob_st_rw')
+					.click(function () {
+						$(this).parents().find('.ob_st_rw').removeClass('active');
+						$(this).addClass('active');
+						if ($(this).text() === 'Odds Ascending') {
+							$(this).closest('.mr_order').find('.sort_button').removeClass('dsd').addClass('asd');
+						} else if ($(this).text() === 'Odds Descending') {
+							$(this).closest('.mr_order').find('.sort_button').removeClass('asd').addClass('dsd');
+						} else {
+							$(this).closest('.mr_order').find('.sort_button').removeClass('asd').removeClass('dsd');
+						}
+						$(this).closest('.mr_order').find('.mr_order_title').text($(this).text());
+						$(this).closest('.ob_st_popup').hide();
+					});
+
+				$('.mr_order')
+					.find('.ob_st_popup')
+					.each(function () {
+						$(this).find('.ob_st_rw').first().trigger('click');
+					});
+
+				initProgressBar();
+
+				// tracker left panel
+				$('.tracks_side_button').on('click', function (e) {
+					e.stopPropagation();
+					if ($('.track_left_panel').hasClass('expanded')) {
+						closePanel();
+					} else {
+						openPanel();
+					}
+				});
+
+				$('.track_left_panel').on('click', '.icon-fi-track-menu-left', function (e) {
+					e.stopPropagation();
+					closePanel();
+				});
+
+				// click left panel else to close it
+				$(document).on('click', function (e) {
+					if (!$(e.target).closest('.track_left_panel').length && !$(e.target).closest('.tracks_side_button').length) {
+						closePanel();
+					}
+				});
+
+				//MM tutorial
+				$('#marble_magic_tutorial').hide();
+				$('#marble_magic_tutorial').load('_popup_marble_magic_tutorial.html', function () {});
+
+				/*standardize popup and toolti: start*/
+				infoPop('.n_content_wrap_wth_bcktop');
+				/*standardize popup and toolti: end*/
+
+				// Race Track Menu - Loading
+				$('.devDontCopy_raceTrackLoading').click(function () {
+					$(this).parent().find('.race_track_item').hide();
+					$(this).parent().find('.fl_loading_wrp').show();
+				});
+
+				// Race Track Menu - Not Available
+				$('.devDontCopy_raceTrackNotAvailable').click(function () {
+					$(this).parent().find('.race_track_item').hide();
+					$(this).parent().find('.msg_wrap').show();
+				});
+
+				$('.mock_trigger_mr_1v1').click(function () {
+					const firstItem = $('.track_bar .track_item').eq(0);
+					firstItem.html('<img src="../assets/public/layout/images/pre-live-race.svg"> Pre Race');
+
+					const secondItem = $('.track_bar .track_item').eq(1);
+					secondItem.html('<div class="mr_icon mr_count"><span>2</span></div> 2 Marbles');
+				});
+			});
+		</script>
+	</body>
+</html>

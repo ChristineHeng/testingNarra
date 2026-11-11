@@ -1,0 +1,255 @@
+@font-face {
+  font-family: 'fontico';
+  src: url('fonts/fontdeviceinfo.woff2') format('woff2'),
+    url('fonts/fontdeviceinfo.woff') format('woff'),
+    url('fonts/fontdeviceinfo.ttf') format('truetype');
+   
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'fontico' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-fi-id:before {
+  content: "\e900";
+}
+.icon-fi-time-left:before {
+  content: "\e901";
+}
+.icon-fi-browser:before {
+  content: "\e902";
+}
+.icon-fi-operating-system:before {
+  content: "\e903";
+}
+.icon-fi-worldwide:before {
+  content: "\e904";
+}
+.icon-fi-member-code:before {
+  content: "\e905";
+}
+.icon-fi-device-info:before {
+  content: "\e906";
+}
+.icon-fi-arrow-left:before {
+  content: "\e907";
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(255,255,255,0);
+    -webkit-overflow-scrolling: touch;
+}
+
+body {
+    font-family: Helvetica,Arial,"Microsoft Yahei","微软雅黑",STXihei,"华文细黑",sans-serif;
+    font-size: 12px;
+    background: #1D2129;
+    color: #cacaca;
+}
+
+body:before {
+    content: "";
+    position: fixed;
+    transform: translateZ(0);
+    -webkit-transform: translate3d(0, 0, 0);
+    background: inherit;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    will-change: transform;
+    background: #242932;
+}
+
+.n_header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    padding: 0 4px;
+    min-height: 40px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #fff;
+    background: #111217;
+    font-size: 14px;
+}
+.n_header .title i {
+    padding-right: 4px;
+    font-size: 16px;
+}
+.n_back {
+    text-align: left;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    white-space: nowrap;
+    max-width: 33.33%;
+}
+
+.n_back_link {
+    height: 28px;
+    padding: 8px;
+    margin: -8px;
+}
+
+a {
+    color: inherit;
+}
+
+a, a:hover, a:focus {
+    text-decoration: none !important;
+}
+
+.title {
+    min-width: 33.33%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    padding: 0 4px;
+}
+
+.title i {
+    padding-right: 4px;
+    font-size: 20px;
+}
+
+.deviceInfo_wrap {
+    padding: 8px;
+    margin: auto;
+}
+
+.deviceInfo_inner {
+    border-radius: 4px;
+    background-clip: padding-box;
+    overflow: hidden;
+    background: #28303A;
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.5);
+    border: 1px solid #434C56;
+}
+
+.deviceInfo_item {
+    padding: 8px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.deviceInfo_item:not(:last-child) {
+    border-bottom: 1px solid rgba(59,70,85,0.82);
+}
+
+.deviceInfo_item.lastitem {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.deviceInfo_item.lastitem .left_lantency {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.info_icon {
+    font-size: 20px;
+    padding: 0 14px 0 0;
+    color: #fff;
+}
+
+.details .item_title {
+    font-size: 12px;
+    color: #cacaca;
+}
+
+.details .info {
+    font-size: 14px;
+    margin-top: 7px;
+    color: #23dae7;
+}
+
+.right_lantency {
+    text-align: center;
+    border-radius: 8px;
+    background-clip: padding-box;
+    padding: 5.88px 8.4px;
+    background: #434d5e;
+}
+
+@media screen and (max-width: 400px){
+    .right_lantency {
+        min-width: 60px;
+    }
+}
+
+.right_lantency .test {
+    font-size: 14px;
+    height: 25px;
+    line-height: 25px;
+}
+
+.loading_lantency {
+    margin: auto;
+    width: 25px;
+    height: 25px;
+    background: url(img/loading.svg);
+    background-size: cover;
+}
+
+.test {
+    font-size: 14px;
+    height: 25px;
+    line-height: 25px;
+}
+
+.screenshot_msg {
+    padding: 17.6px 16px;
+    line-height: 19.2px;
+    font-size: 11.2px;
+    text-align: center;
+}
+
+@supports (padding: 0px) {
+    .n_header{
+        padding-top: max(0px, env(safe-area-inset-top));
+    }
+}

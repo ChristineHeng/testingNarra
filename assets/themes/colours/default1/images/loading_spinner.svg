@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg class="lds-curve-bars" width="80px" height="80px" preserveAspectRatio="xMidYMid" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+	<g transform="translate(50,50)" fill="none" stroke-width="4">
+		<circle id="loading-spinner1" r="8.3333" stroke="#4689FA" />
+		<circle id="loading-spinner2" r="16.667" stroke="#4D85FA" />
+		<circle id="loading-spinner3" r="25" stroke="#5C7BF6" />
+		<circle id="loading-spinner4" r="33.333" stroke="#9E52E9" />
+		<circle id="loading-spinner5" r="41.667" stroke="#CD34DF" />
+	</g>
+
+	<style>
+		#loading-spinner1 {
+			animation: loading-spinner1 1s linear infinite;
+			stroke-dasharray: 26.179938779914945 26.179938779914945;
+		}
+
+		@keyframes loading-spinner1 {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
+		#loading-spinner2 {
+			animation: loading-spinner2 1s linear infinite;
+			stroke-dasharray: 52.35987755982989 52.35987755982989;
+		}
+
+		@keyframes loading-spinner2 {
+			0% {
+				transform: rotate(72deg);
+			}
+
+			100% {
+				transform: rotate(432deg);
+			}
+		}
+
+		#loading-spinner3 {
+			animation: loading-spinner3 1s linear infinite;
+			stroke-dasharray: 78.53981633974483 78.53981633974483;
+		}
+
+		@keyframes loading-spinner3 {
+			0% {
+				transform: rotate(144deg);
+			}
+
+			100% {
+				transform: rotate(504deg);
+			}
+		}
+
+		#loading-spinner4 {
+			animation: loading-spinner4 1s linear infinite;
+			stroke-dasharray: 104.71975511965978 104.71975511965978;
+		}
+
+		@keyframes loading-spinner4 {
+			0% {
+				transform: rotate(216deg);
+			}
+
+			100% {
+				transform: rotate(576deg);
+			}
+		}
+
+		#loading-spinner5 {
+			animation: loading-spinner5 1s linear infinite;
+			stroke-dasharray: 130.89969389957471 130.89969389957471;
+		}
+
+		@keyframes loading-spinner5 {
+			0% {
+				transform: rotate(288deg);
+			}
+
+			100% {
+				transform: rotate(648deg);
+			}
+		}
+	</style>
+</svg>

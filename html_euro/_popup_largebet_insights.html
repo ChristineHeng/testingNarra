@@ -1,0 +1,209 @@
+<div class="n_header n_header_main">
+	<div class="heder_lf">
+		<div class="lf_menu">
+			<i class="icon-fi-left-menu"></i>
+		</div>
+		<div class="v_split"></div>
+		<div class="logo">
+			<img src="../merchants/merchant1/images/logo.png" />
+		</div>
+	</div>
+	<div class="heder_rt">
+		<i class="icon-fi-n-results dontcoopythisclass_sample_button_results"></i>
+		<div class="item demoOnlyDontCopt_betslip">
+			<i class="icon-fi-n-betlist"></i>
+			<div class="noti mybet_noti_cancel">2</div>
+			<div class="noti mybet_noti_pending">1</div>
+		</div>
+		<div class="er_myacct">
+			<i class="icon-fi-n-mine dontcoopythisclass_sample_button_myacct"></i>
+			<div class="red_dot"></div>
+		</div>
+		<div class="n_balance">
+			<div class="currency">(RMB)</div>
+			100,962,132.5555
+		</div>
+	</div>
+</div>
+<div class="euNav_bar_wrp sticky lb_header">
+	<ul class="nav_bar">
+		<li onClick="(function(){window.location.href = 'index.html'})();">Home<i class="icon-fi-arrow-right" aria-hidden="true"></i></li>
+		<li>Insights - Large Bets Signal</li>
+	</ul>
+</div>
+<div class="n_container lb_container">
+	<div id="demoOnly_insights_content_lb_euro"></div>
+</div>
+<script>
+	$(document).ready(function () {
+		$('.mock_cb_n_back_link').click(function () {
+			$('#largebetinsights').hide();
+			popupOff();
+			backtotop();
+		});
+		$('#demoOnly_insights_content_lb_euro').load('../html_public/_largebet_record.html', function () {
+			updateLbStickyOffsets();
+			$('.lb_top_rw .fl_comp_t').find('i').show();
+			$('.lb_combo .lb_i .item').find('i').show();
+			$('.lb_top_rw .fl_comp_t').find('img').hide();
+			$('.lb_combo .lb_i .item').find('img').hide();
+			$('.lb_c_tl > img').attr('src', '../assets/public/layout/images/large_bet_profile_euro.svg');
+			// large bet (remove): start
+			// $('.lb_flt').click(function () {
+			// 	$(this).find('.ob_st_popup').toggle();
+			// 	$(this).find('.icon-fi-arrow-up1').toggleClass('fl_rotate');
+			// });
+			// large bet (remove): end
+			$('.mock_no_largebet').click(function () {
+				$('.lb_xwrp').show();
+				$('.lb_c').hide();
+				document.getElementById('lb_xwrp_img').setAttribute('src', '../assets/public/layout/images/large_bet_euro.svg');
+			});
+			$('.fl_comp_lb .fl_comp_t').click(function () {
+				$('.fl_comp_lb .fl_comp_t').removeClass('active');
+				$(this).addClass('active');
+			});
+			$('#mock_add_lb').on('click', function () {
+				addLbCard();
+			});
+
+			$(document).on('click', '.lb_c_tl img', function (e) {
+				e.preventDefault();
+				var $card = $(this).closest('.lb_c');
+				removeLbCard($card);
+			});
+
+			$('.mock_lb_tut').on('click', function () {
+				var $card = $($(this).data('tut-card'));
+				var $mask = $($(this).data('tut-mask'));
+
+				$('.lb_wrp, .n_header').add($card).addClass('lb_mask');
+				$mask.show();
+				$('#sample_footer_pre_bet').hide();
+
+				if ($(this).data('tut-expand')) {
+					$card.find('.tips_t_r .icon-fi-full-up').removeClass('fl_rotate');
+					$card.find('.tips_b').slideDown(200);
+					setTipsToggleText($card.find('.tips_t_r'), 'Read Less ');
+				}
+			});
+
+			$('.mock_lb_btn').on('click', function () {
+				var $card = $($(this).data('tut-card'));
+				var $mask = $($(this).data('tut-mask'));
+
+				$('.lb_wrp, .n_header').add($card).removeClass('lb_mask');
+				$mask.hide();
+				$('#sample_footer_pre_bet').show();
+			});
+
+			$('.ss_tml_btn').on('click', function () {
+				if ($(this).hasClass('mock_lb_tut')) {
+					return;
+				}
+
+				$(this).addClass('add');
+			});
+
+			infoPop('.euNav_bar_wrp');
+		});
+
+		function setTipsToggleText($target, text) {
+			$target
+				.contents()
+				.filter(function () {
+					return this.nodeType === 3 && $.trim(this.nodeValue).length;
+				})
+				.first()
+				.replaceWith(text);
+		}
+
+		function addLbCard() {
+			var newCard = $(`
+						<div class="lb_c">
+							<div class="lb_c_t">
+								<div class="lb_c_tl">
+									<img src="../assets/public/layout/images/large_bet_profile.svg">
+									<div class="lb_c_tlp">***lop, ***909, ***pop</div>
+								</div>
+								<div class="lb_c_time">Just Now</div>
+							</div>
+							<div class="lb_cm">1x2<span class="odds_type">(Euro)</span></div>
+							<div class="lb_cs">
+								<div class="lb_csl">
+									<div class="lb_cslt">
+										New Bet <span class="fl_at">@</span>2.68
+									</div>
+									<div class="lb_cscn">France Pro A League</div>
+									<div class="lb_csld">Real Madrid vs Inter Milan</div>
+								</div>
+								<div class="ss_tml_btn">
+									<div class="fl_tub_add">
+										<i class="icon-fi-remove-mid"></i>
+									</div>
+									Follow Bet
+								</div>
+							</div>
+							<div class="lb_b">
+								<div class="lb_bl">
+									<i class="icon-fi-coins"></i>
+									<div class="lb_blt">
+										Total: <span class="lb_blt_cur">RMB </span>
+										<span class="lb_blt_stake">76,380</span><img src="../assets/public/layout/images/lb_fire.svg" />
+									</div>
+								</div>
+								<div class="lb_p">
+									<i class="icon-fi-people"></i>
+									<span class="lb_pc">3</span> players followed
+								</div>
+							</div>
+						</div>
+					`);
+
+			newCard.css({
+				opacity: 0,
+				height: 0,
+				overflow: 'hidden',
+			});
+
+			$('#mock_insights_largebets').prepend(newCard);
+			var height = newCard.prop('scrollHeight');
+			newCard.animate(
+				{
+					height: height,
+					opacity: 1,
+				},
+				400,
+				function () {
+					newCard.css({
+						height: '',
+						overflow: '',
+					});
+				},
+			);
+		}
+
+		function removeLbCard($card) {
+			var height = $card.height();
+
+			$card.css({
+				position: 'relative',
+				height: height,
+				overflow: 'hidden',
+			});
+
+			$card.animate(
+				{
+					opacity: 0,
+					left: '-100%',
+				},
+				300,
+				function () {
+					$card.animate({ height: 0 }, 200, function () {
+						$card.remove();
+					});
+				},
+			);
+		}
+	});
+</script>

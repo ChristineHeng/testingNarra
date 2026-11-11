@@ -1,0 +1,1033 @@
+@use '../../assets/themes/colours/brand'as brand;
+@use '../../assets/public/layout/css/base'as base;
+@use '../mixin'as mix;
+
+.fl_prcdDsc {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            min-height: 30px;
+            padding: 0 8px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                background: brand.t(BGGray);
+            }
+
+            @include mix.darkTheme {
+                @include mix.themeName(default1) {
+                    background: brand.t(MediumBlue);
+                }
+
+                @include mix.notThemeName(default1) {
+                    background: brand.t(Gray);
+                }
+            }
+        }
+    }
+}
+
+.bet_now {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            @include base.borderRadius(4px);
+            text-align: center;
+            font-size: 12px;
+            font-weight: bold;
+            height: 20px;
+            padding: 0 8px;
+            cursor: pointer;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(White);
+                background: brand.t(ActiveLight);
+            }
+
+            @include mix.darkTheme {
+                @include mix.themeName(default1) {
+                    color: brand.t(White);
+                    background: brand.t(PurpleMain);
+                }
+
+                @include mix.notThemeName(default1) {
+                    color: brand.t(Black);
+                    background: brand.t(ActiveLight);
+                }
+            }
+        }
+    }
+}
+
+.fl_prcdDsc_info {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            flex: 1;
+            padding: 2px 6px 2px 2px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.themeName(default1) {
+                color: brand.t(White);
+            }
+
+            @include mix.notThemeName(default1) {
+                color: brand.t(ActiveLight);
+            }
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 18px;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+.prcdDsc {
+    @include mix.layout {
+        @include mix.mobile {
+            text-align: center;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(Black);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(LightGray);
+            }
+        }
+    }
+}
+
+.new_prcdTab {
+    @include mix.layout {
+        @include mix.mobile {
+            padding: 8px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                background: brand.t(White);
+            }
+
+            @include mix.darkTheme {
+                @include mix.themeName(default1) {
+                    background: brand.t(BGDarkBlue);
+                }
+
+                @include mix.notThemeName(default1) {
+                    background: brand.t(DarkBlack);
+                }
+            }
+        }
+    }
+}
+
+.prcdItm {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.justifyContent(center);
+            @include base.alignItems(center);
+            @include base.transition(ease 0.25s);
+            width: 100%;
+            text-align: center;
+            padding: 12px 0;
+            position: relative;
+            border: 0;
+            cursor: pointer;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(Black);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(LightGray);
+            }
+        }
+    }
+
+    &:first-child {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.borderRadius(8px);
+                border-right: none;
+            }
+        }
+    }
+
+    &:nth-child(2) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.borderRadius(8px);
+                border-left: none;
+            }
+        }
+    }
+
+    &.active {
+        @include mix.layout {
+            @include mix.mobile {
+                border: 0;
+                font-weight: 700;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.brightTheme {
+                    background: brand.t(White);
+                    color: brand.t(ActiveLight);
+                }
+
+                @include mix.darkTheme {
+                    @include mix.themeName(default1) {
+                        background: brand.t(PurpleMain);
+                        color: brand.t(White);
+                    }
+
+                    @include mix.notThemeName(default1) {
+                        background: brand.t(Gray02);
+                        color: brand.t(ActiveLight);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.prcdHisT {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.justifyContent(space-between);
+            font-size: 14px;
+            font-weight: 700;
+        }
+    }
+}
+
+.prcdWrp {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.borderRadius(10px);
+            height: 30px;
+            padding: 3px;
+            margin: 0;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                background: brand.t(BGGray);
+                color: brand.t(Black);
+            }
+
+            @include mix.darkTheme {
+                @include mix.themeName(default1) {
+                    background: brand.t(Blue);
+                    color: brand.t(LightGray);
+                }
+
+                @include mix.notThemeName(default1) {
+                    background: brand.t(LightBlack);
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+}
+
+.prcdSld {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.transition(left 0.25s);
+            margin-top: 20px;
+            position: absolute;
+            bottom: -2px;
+            height: 2px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.themeName(default1) {
+                background: brand.t(PinkPurpleGradient);
+            }
+
+            @include mix.notThemeName(default1) {
+                background: brand.t(ActiveLight);
+            }
+        }
+    }
+}
+
+.prcdLtTtl {
+    @include mix.layout {
+        @include mix.mobile {
+            font-weight: bold;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.themeName(default1) {
+                color: brand.t(Orange);
+            }
+
+            @include mix.notThemeName(default1) {
+                color: brand.t(ActiveLight);
+            }
+        }
+    }
+}
+
+.prcdLts {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.borderRadius(4px);
+            position: relative;
+            border: 0;
+            margin: 10px;
+            padding: 10px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(Black);
+                background: brand.t(White);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(LightGray);
+
+                @include mix.themeName(default1) {
+                    background: brand.t(MediumBlue);
+                }
+
+                @include mix.notThemeName(default1) {
+                    background: brand.t(LightBlack);
+                }
+            }
+        }
+    }
+}
+
+.doneHis {
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                border-color: brand.t(Main_Active_Color);
+            }
+        }
+    }
+}
+
+.prcdInfo,
+.prcdHisInfMr {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(baseline);
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(DarkGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(LightGray);
+            }
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.rotateIcon();
+                font-size: 8px;
+                margin-left: 4px;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    @include mix.themeName(default1) {
+                        color: brand.t(LightGray);
+                    }
+
+                    @include mix.notThemeName(default1) {
+                        color: brand.t(Gray03);
+                    }
+                }
+            }
+        }
+    }
+
+    span {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+.prc_obp_header {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            margin-bottom: 10px;
+            margin-left: -1px;
+        }
+    }
+
+    i {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+}
+
+.prc_obp_title {
+    @include mix.layout {
+        @include mix.mobile {
+            font-size: 12px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(DarkGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(LightGray);
+            }
+        }
+    }
+}
+
+.prcdTxtIn {
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(DarkGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(LightGray);
+            }
+        }
+    }
+}
+
+.prcdLtPrc {
+    @include mix.layout {
+        @include mix.mobile {
+            font-weight: 700;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.themeName(default1) {
+                color: brand.t(Orange);
+            }
+
+            @include mix.notThemeName(default1) {
+                color: brand.t(ActiveLight);
+            }
+        }
+    }
+}
+
+.prcdHisVs {
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.themeName(default1) {
+                color: brand.t(Orange);
+            }
+
+            @include mix.notThemeName(default1) {
+                color: brand.t(ActiveLight);
+            }
+        }
+    }
+}
+
+.prcdDscBtn {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.borderRadius(2px);
+            padding: 6px 20px;
+            font-size: 11px;
+            width: fit-content;
+            margin: 6px auto 0 auto;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            color: brand.t(Color_odds_wrap_odds_add);
+            background: brand.t(BG_odds_wrap_odds_add);
+        }
+    }
+}
+
+.prcdTlItm {
+    @include mix.layout {
+        @include mix.mobile {
+            width: 30%;
+            text-align: center;
+            padding: 10px 0;
+            cursor: pointer;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(DarkGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(LightGray);
+            }
+        }
+    }
+
+    &.active {
+        @include mix.layout {
+            @include mix.mobile {
+                font-weight: 700;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+                }
+            }
+        }
+    }
+}
+
+.prcdTlAvlb,
+.prcdTlPnd {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            padding: 0 8px;
+            margin: 0;
+            justify-content: unset;
+            position: relative;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                background: brand.t(White);
+                border-bottom: 2px solid brand.t(DividerGray);
+            }
+
+            @include mix.darkTheme {
+                @include mix.themeName(default1) {
+                    background: brand.t(BGDarkBlue);
+                    border-bottom: 2px solid brand.t(Stroke);
+                }
+
+                @include mix.notThemeName(default1) {
+                    background: brand.t(DarkBlack);
+                    border-bottom: 2px solid brand.t(Gray02);
+                }
+            }
+        }
+    }
+}
+
+.prcTerm {
+    @include mix.layout {
+        @include mix.mobile {
+            padding: 10px 0;
+            margin-bottom: 10px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(Black);
+                border-bottom: 1px solid brand.t(DividerGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(White);
+
+                @include mix.themeName(default1) {
+                    border-bottom: 1px solid brand.t(Stroke);
+                }
+
+                @include mix.notThemeName(default1) {
+                    border-bottom: 1px solid brand.t(Gray02);
+                }
+            }
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+.prcdRw {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.themeName(default1) {
+                color: brand.t(Orange);
+            }
+
+            @include mix.notThemeName(default1) {
+                color: brand.t(ActiveLight);
+            }
+        }
+    }
+
+    &:not(:last-child) {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.brightTheme {
+                    border-bottom: 1px solid brand.t(DividerGray);
+                }
+
+                @include mix.darkTheme {
+                    @include mix.themeName(default1) {
+                        border-bottom: 1px solid brand.t(Stroke);
+                    }
+
+                    @include mix.notThemeName(default1) {
+                        border-bottom: 1px solid brand.t(Gray02);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.prcdClT {
+    @include mix.layout {
+        @include mix.mobile {
+            padding: 7px 0;
+            width: 25%;
+            text-align: center;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(Black);
+                background: brand.t(MediumGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(White);
+
+                @include mix.themeName(default1) {
+                    background: brand.t(BGDarkBlue);
+                }
+
+                @include mix.notThemeName(default1) {
+                    background: brand.t(Black);
+                }
+            }
+        }
+    }
+
+    .prcdRw:first-child & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.borderRadius(5px 0 0 0);
+            }
+        }
+    }
+
+    .prcdRw:last-child & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.borderRadius(0 0 0 5px);
+            }
+        }
+    }
+}
+
+.prcdHisIB {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.borderRadius(5px);
+            padding: 12px;
+            margin-top: 8px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(Black);
+                background: brand.t(BGGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(White);
+
+                @include mix.themeName(default1) {
+                    background: brand.t(BGDarkBlue);
+                }
+
+                @include mix.notThemeName(default1) {
+                    background: brand.t(Black);
+                }
+            }
+        }
+    }
+}
+
+.prcdT {
+    i {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+
+    &.expiry {
+        @include mix.theme {
+            @include mix.mobile {
+                color: brand.t(Red);
+            }
+        }
+    }
+
+    &.expiry i {
+        @include mix.theme {
+            @include mix.mobile {
+                color: brand.t(Red);
+            }
+        }
+    }
+
+    .odds_reversed &.expiry {
+        @include mix.theme {
+            @include mix.mobile {
+                color: brand.t(Green);
+            }
+        }
+    }
+
+    .odds_reversed &.expiry i {
+        @include mix.theme {
+            @include mix.mobile {
+                color: brand.t(Green);
+            }
+        }
+    }
+}
+
+.prcdTbl {
+    @include mix.layout {
+        @include mix.mobile {
+            margin: 8px 0;
+            border: 0;
+            @include base.borderRadius(5px);
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                background: brand.t(BGGray);
+            }
+
+            @include mix.darkTheme {
+                @include mix.themeName(default1) {
+                    background: brand.t(DarkBlue);
+                }
+
+                @include mix.notThemeName(default1) {
+                    background: brand.t(Gray01);
+                }
+            }
+        }
+    }
+}
+
+.pro_date {
+    @include mix.layout {
+        @include mix.mobile {
+            margin-left: auto;
+            margin-right: -6px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(Black);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(LightGray);
+            }
+        }
+    }
+}
+
+.prcdHisBItm {
+    &:has(.pro_date) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.flexbox();
+                @include base.alignItems(center);
+            }
+        }
+    }
+
+    &:not(:last-child) {
+        @include mix.layout {
+            @include mix.mobile {
+                margin-bottom: 4px;
+            }
+        }
+    }
+}
+
+.prcdLtsRed {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.borderRadius(50%);
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            top: -(4px);
+            right: -(4px);
+            z-index: 1;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            background: brand.t(Red);
+            color: brand.t(Red);
+        }
+    }
+}
+
+.prcdLt {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.justifyContent(space-between);
+            font-size: 14px;
+        }
+    }
+}
+
+.prcdDtl {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.justifyContent(space-between);
+            margin-top: 8px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(DarkGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(LightGray);
+            }
+        }
+    }
+}
+
+.prcdCl {
+    @include mix.layout {
+        @include mix.mobile {
+            width: 75%;
+            padding: 4px 8px;
+        }
+    }
+}
+
+.prcdLst {
+    @include mix.layout {
+        @include mix.mobile {
+            margin: 4px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(Black);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(White);
+            }
+        }
+    }
+}
+
+.prcdPndBtn {
+    @include mix.layout {
+        @include mix.mobile {
+            padding: 2px 12px;
+            @include base.borderRadius(2px);
+            font-size: 11px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            color: brand.t(Color_prematch_live_icon);
+
+            @include mix.mAsia {
+                background: brand.t(BG_prematch_live_icon);
+            }
+        }
+    }
+
+    &.active {
+        @include mix.theme {
+            @include mix.mobile {
+                background: brand.t(BG_odds_wrap_odds_add);
+                color: brand.t(Color_odds_wrap_odds_add);
+            }
+        }
+    }
+}
+
+.prcdHisItm {
+    @include mix.layout {
+        @include mix.mobile {
+            margin: 4px 0;
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+.prcdHisInf {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.justifyContent(space-between);
+        }
+    }
+}
+
+.prcdHisInfD {
+    @include mix.layout {
+        @include mix.mobile {
+            margin-top: 4px;
+        }
+    }
+}
+
+.prcdHisPrc {
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(Black);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(White);
+            }
+        }
+    }
+}

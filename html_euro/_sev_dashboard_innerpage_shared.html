@@ -1,0 +1,49 @@
+ <!--visualization-->
+ <div id="open_visualization" class="n_iframe_visualization" style="display: none;">
+    <!-- <img src="../assets/public/layout/images/mock_betradar1.png" width="100%" /> -->
+    <iframe id="visualizationIframe"  src="https://narra-mlycdn.weicloud360.com/vs/lmtPlus.html?brEventId=52023713&lang=en&timezone=undefined&v=65376&header=disable&footer=enable" allowfullscreen="" frameborder="no" scrolling="no" style="width: 100%; height: 100%; pointer-events: none;"></iframe>
+</div>
+<!--live streaming-->
+<div id="open_live_streaming" class="n_iframe_visualization" style="display: none;">
+    <!--<video autoplay playsinline x5-playsinline="" playsinline="" webkit-playsinline="" allowfullscreen height="100%">
+        <source src="https://media.istockphoto.com/videos/soccer-player-makes-a-jump-video-id503630084" />
+        <source src="http://videos.criticalcommons.org/transcoded/http/www.criticalcommons.org/Members/sammondn/clips/anchors-aweigh-1945-gene-kelly-and-jerry-mouse/video_file/webm-low/tom-and-jerry-scene-anchors_aweigh-mp4.webm" />
+        <source src="http://vjs.zencdn.net/v/oceans.mp4">
+        <source src="http://hlstx.plu.cn/lzlive/197918_900.m3u8?txSecret=5d594e86bbabf42b91e72536fe530d9c&amp;txTime=5aec0dd1" />
+    </video>-->
+    <video autoplay playsinline allowfullscreen height="100%">
+        <source src="https://media.istockphoto.com/videos/soccer-player-makes-a-jump-video-id503630084">
+    </video>
+
+    <!--SFCRQ-2282: Note for Andriod: Sample to block click on Iframe: iframeVideo_nonclickable-->
+   <!--  <iframe class="iframeVideo_nonclickable" src="https://sports-web-stg-ls.inplaymatrix.com:4650/livestreaming/index?video=https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8"  width=100%; height="100%" allow="autoplay"></iframe>
+  -->
+    <div class="chan_popup" style="display: none;">
+        <div class="chan_cont">
+            <div class="chan_inner">
+                <div class="chan_grp">
+                    <div class="chan_btn active">Saluran 1</div>
+                    <div class="chan_btn" id="dont_copy_channel_popup">Msg Popup</div>
+                    <div class="chan_btn">Channel 3</div>
+                    <div class="chan_btn">Channel 4</div>
+                    <div class="chan_btn" id="dont_copy_bet_error_popup">Bet Error</div>
+                </div>
+            </div>
+            <div class="chan_txt">Jika video tidak dapat dimainkan silahkan pilih saluran lain untuk melanjutkan menonton</div>
+        </div>
+    </div>
+    <!-- Remove soon for ticket [SFCRQ-2719][SFCRQ-2720] To implement new handling for message pop up: start -->
+    <div class="chan_error_wrp bet_error_wrap" style="display: none;">
+        <div class="chan_error">You have not placed any bets in the last 3 days. Please place at least one bet to continue watching live streaming.</div>
+    </div>
+    <!-- Remove soon for ticket [SFCRQ-2719][SFCRQ-2720] To implement new handling for message pop up: end -->
+</div>
+<!--h2h frame-->
+<div id="euro_sev_h2h_widnow" class="n_iframe_visualization">
+    <iframe class="result_iframe" type="text/html" width="100%" bord="0" src="https://h2h.circesports.com/h2h/87813928?sportId=1&lg=1&tz=+0800" height="100%" ></iframe>
+</div>
+
+<div id="s_sev_top" class="s_sev_top">
+    <div class="n_sev_top" id="demo_sample_dashboard_scenarios">
+    </div>
+</div>

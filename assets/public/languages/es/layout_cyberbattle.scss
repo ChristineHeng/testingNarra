@@ -1,0 +1,6 @@
+@use 'layout_asia' with ($activeView: mCyberbattle);
+@use '../../layout/css/_layout_sub_cyberbattle';
+
+.cb_filter_wrp {
+	font-size: 10.5px;
+}

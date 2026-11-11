@@ -1,0 +1,5638 @@
+@use "../../assets/themes/colours/brand"as brand;
+@use "../../assets/public/layout/css/base"as base;
+@use "../mixin"as mix;
+$themeImgFolder: "images/";
+$Height_mr_tracks_slider: 34px;
+
+.mr_ev_card {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.borderRadius(4px);
+                margin: 6px 10px 0;
+            }
+        }
+    }
+}
+
+.mr_tracks_slider {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                padding: 0 8px;
+                position: relative;
+                z-index: 8 !important;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    background: brand.t(LightGray);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(Black);
+                }
+            }
+        }
+    }
+
+    &.pinned {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    top: 98px !important;
+                }
+            }
+        }
+    }
+
+    .navReset & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    top: 98px;
+                }
+            }
+        }
+    }
+
+    .navScroll & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    top: 40px;
+                }
+            }
+        }
+    }
+}
+
+.mr_tracks_inner {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.hide_scrollbar();
+                height: $Height_mr_tracks_slider;
+                white-space: nowrap;
+                overflow-x: auto;
+                overflow-y: hidden;
+            }
+        }
+    }
+
+    .new_tracks & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    width: calc(100% - 30px);
+                }
+            }
+        }
+    }
+}
+
+.mr_tracks_wrp {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                width: 100%;
+            }
+        }
+    }
+}
+
+.tracks_side_button {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.borderRadius(4px);
+                font-size: 10px;
+                padding: 6px 3px;
+                height: 24px;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                    background: brand.t(MediumGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+                    background: brand.t(Gray02);
+                }
+            }
+        }
+    }
+}
+
+.track_left_panel {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.transition(left 0.3s);
+                width: 90%;
+                height: 100%;
+                left: -90%;
+                top: 0;
+                position: fixed;
+                overflow: auto;
+                z-index: 1000006;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    background: brand.t(White);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(LightBlack);
+                }
+            }
+        }
+    }
+
+    &.expanded {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    left: 0 !important;
+                }
+            }
+        }
+    }
+}
+
+.track_panel_hd {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(space-between);
+                padding: 25px 10px 12px 10px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+                }
+            }
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
+
+.race_title {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                margin-left: 8px;
+                font-size: 16px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+                }
+            }
+        }
+    }
+}
+
+.race_info {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                margin-left: 8px;
+            }
+        }
+    }
+}
+
+.race_track_list {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.race_track_item {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(space-between);
+                padding: 12px 6px;
+                position: relative;
+            }
+        }
+    }
+
+    &.active {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        background: brand.t(LightGray);
+                    }
+
+                    @include mix.darkTheme {
+                        background: brand.t(Gray01);
+                    }
+                }
+            }
+        }
+    }
+
+    &.active::before {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: 1;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.redTheme {
+                        border-right: 2px solid brand.t(PeachHDP);
+                    }
+
+                    @include mix.notRedTheme {
+                        border-right: 2px solid brand.t(ActiveLight);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.race_track_name {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                flex: 1;
+            }
+        }
+    }
+
+    img {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    width: 36px;
+                    height: 36px;
+                }
+            }
+        }
+    }
+}
+
+.race_track_status {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.justifyContent(flex-end);
+                width: 30%;
+                font-size: 10px;
+                font-weight: 700;
+                text-align: right;
+
+                @include mix.languageNames(id, es) {
+                    font-size: 9px;
+                }
+            }
+        }
+    }
+
+    &.preparing,
+    &.maint {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        color: brand.t(DarkGray);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(LightGray);
+                    }
+                }
+            }
+        }
+    }
+
+    &.open {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    color: brand.t(ActiveLight);
+                }
+            }
+        }
+    }
+
+    &.closed {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        color: brand.t(DarkYellow);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(Yellow);
+                    }
+                }
+            }
+        }
+    }
+
+    &.live {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    color: brand.t(Green);
+                }
+            }
+        }
+    }
+}
+
+.track_row1 {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                font-size: 12px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+                }
+            }
+        }
+    }
+}
+
+.track_row2 {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                margin-top: 8px;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.track_tt {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                position: relative;
+                font-size: 10px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+
+    &:not(:last-child)::before {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    content: "";
+                    position: absolute;
+                    height: 50%;
+                    width: 1px;
+                    top: 25%;
+                    right: 0;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        background: brand.t(MediumGray);
+                    }
+
+                    @include mix.darkTheme {
+                        background: brand.t(Gray03);
+                    }
+                }
+            }
+        }
+    }
+
+    &:first-child {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding-right: 8px;
+
+                    @include mix.languageNames(id, es) {
+                        padding-right: 4px;
+                    }
+                }
+            }
+        }
+    }
+
+    &:last-child {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding-left: 8px;
+
+                    @include mix.languageNames(id, es) {
+                        padding-left: 4px;
+                    }
+                }
+            }
+        }
+    }
+
+    &:not(:first-child):not(:last-child) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding: 0 8px;
+
+                    @include mix.languageNames(id, es) {
+                        padding: 0 4px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.track_bar {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.justifyContent(center);
+                width: 100%;
+                min-height: 26px;
+                position: relative;
+                z-index: 7 !important;
+                padding: 0 4px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    background: linear-gradient(180deg, #fff 0%, #ccc 100%);
+                }
+
+                @include mix.darkTheme {
+                    background: linear-gradient(180deg, #3a3a3a 0%, #222 100%);
+                }
+            }
+        }
+    }
+}
+
+.track_item {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(center);
+                position: relative;
+                width: 100%;
+                margin: 4px;
+                font-size: 10px;
+                font-weight: 700;
+                text-align: center;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+                }
+            }
+        }
+    }
+
+    &:not(:last-child) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding-right: 6px;
+                }
+            }
+        }
+    }
+
+    &:not(:last-child)::before {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    content: "";
+                    position: absolute;
+                    height: 50%;
+                    width: 1px;
+                    top: 25%;
+                    right: 0;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        background: brand.t(MediumGray);
+                    }
+
+                    @include mix.darkTheme {
+                        background: brand.t(Gray02);
+                    }
+                }
+            }
+        }
+    }
+
+    img {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    width: 12px;
+                    min-width: 12px;
+                    margin-right: 4px;
+                }
+            }
+        }
+    }
+}
+
+.mr_datetime {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
+.mr_count {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                margin-right: 4px;
+                width: 12px !important;
+                min-width: 12px !important;
+                height: 12px !important;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                border: 1px solid rgba(0, 0, 0, 0);
+            }
+        }
+    }
+
+    span {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    font-size: 9px;
+                }
+            }
+        }
+    }
+
+    &:before {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin: -2px;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    background: conic-gradient(from -50deg,
+                            #ff7a00 0deg,
+                            #fbe31a 50deg,
+                            #9cff3b 75deg,
+                            #28e5c4 122deg,
+                            #0099ff 166deg,
+                            #3a63ff 207deg,
+                            #28e5c4 252deg,
+                            #ff7a00 322deg);
+                }
+            }
+        }
+    }
+
+    >span {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include base.flexbox();
+                    @include base.alignItems(center);
+                    @include base.justifyContent(center);
+                    @include base.borderRadius(50%);
+                    position: relative;
+                    z-index: 1;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    background: radial-gradient(163.91% 163.91% at 12.26% 13.77%,
+                            #fff 39%,
+                            #ddf2f2 45%,
+                            #9cd9d9 56%,
+                            #66c5c5 67%,
+                            #3cb5b5 78%,
+                            #1ea9a9 87%,
+                            #0ba2a2 94%,
+                            #05a0a0 100%);
+                }
+            }
+        }
+    }
+
+    .track_type & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    width: 15px;
+                    height: 15px;
+                    min-width: 15px;
+                    margin-right: unset;
+                }
+            }
+        }
+    }
+}
+
+.mr1 {
+    &:before {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaEuro {
+                    background: #ecc744;
+                }
+            }
+        }
+    }
+}
+
+.mr2 {
+    &:before {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaEuro {
+                    background: #2b56da;
+                }
+            }
+        }
+    }
+}
+
+.mr3 {
+    &:before {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaEuro {
+                    background: #d63131;
+                }
+            }
+        }
+    }
+}
+
+.mr4 {
+    &:before {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaEuro {
+                    background: #9f50cd;
+                }
+            }
+        }
+    }
+}
+
+.mr5 {
+    &:before {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaEuro {
+                    background: #e8903e;
+                }
+            }
+        }
+    }
+
+    &.m8Track:before {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaEuro {
+                    background: #e4769b;
+                }
+            }
+        }
+    }
+}
+
+.mr6 {
+    &:before {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaEuro {
+                    background: #55c98e;
+                }
+            }
+        }
+    }
+}
+
+.mr7 {
+    &:before {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaEuro {
+                    background: #8c4252;
+                }
+            }
+        }
+    }
+
+    &.m8Track:before {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaEuro {
+                    background: #a5a5a5;
+                }
+            }
+        }
+    }
+}
+
+.mr8 {
+    &:before {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaEuro {
+                    background: #414141;
+                }
+            }
+        }
+    }
+}
+
+.mr9 {
+    &:before {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaEuro {
+                    background: #e4769b;
+                }
+            }
+        }
+    }
+}
+
+.mr10 {
+    &:before {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaEuro {
+                    background: #a5a5a5;
+                }
+            }
+        }
+    }
+}
+
+// underline for 6,9
+.mr6,
+.mr9 {
+    &:after {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaEuro {
+                    content: "";
+                    position: absolute;
+                    width: 4.8px;
+                    bottom: 1.2px;
+                    height: 1px;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaEuro {
+                    background: #121212;
+                }
+            }
+        }
+
+        .mr_new_layout & {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsia {
+                        bottom: 2.8px;
+                        height: 1.2px;
+                    }
+                }
+            }
+        }
+
+        .mr_pick2 & {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsiaEuro {
+                        width: 7px;
+                        bottom: 2.5px; //for width 30px
+                        height: 1.2px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mr_icon {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaEuro {
+                @include base.borderRadius(50%);
+                @include base.flexbox();
+                @include base.justifyContent(center);
+                @include base.alignItems(center);
+                border: 3px solid transparent;
+                position: relative;
+                background-clip: padding-box;
+                width: 20px;
+                min-width: 20px;
+                height: 20px;
+                line-height: 20px;
+                box-sizing: border-box;
+                font-size: 12px;
+                font-weight: 700;
+                text-align: center;
+                word-break: keep-all;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaEuro {
+                color: brand.t(Black);
+                background-color: #f6f6f6;
+            }
+        }
+    }
+
+    &:before {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaEuro {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                    z-index: -1;
+                    margin: -3px;
+                    border-radius: inherit;
+                }
+            }
+        }
+    }
+
+    &.mr_unknw {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    border: 0;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    background-color: brand.t(LightGray);
+                    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5));
+                }
+            }
+        }
+    }
+
+    .mr_bslp_score & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    margin-left: 6px;
+                }
+            }
+        }
+    }
+
+    .mr_new_layout & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    width: 25px;
+                    min-width: 25px;
+                    height: 25px;
+                    box-shadow: none !important;
+                }
+            }
+        }
+    }
+
+    .newCol3 & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        box-shadow: 0 0 0px 4px brand.t(BGGray);
+                    }
+
+                    @include mix.darkTheme {
+                        box-shadow: 0 0 0px 4px rgba(43, 43, 43, 0.5);
+                    }
+                }
+            }
+        }
+    }
+
+    .betslip_selection &,
+    .betslip_winningselection &,
+    .bet_item_content .selection>& {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include base.inlineFlex();
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+
+    .mr_result_itm & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin: auto;
+                }
+            }
+        }
+    }
+
+    .mr_sti_bal &+.mr_icon {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaEuro {
+                    margin-left: -3px;
+                }
+            }
+        }
+    }
+
+    .mr_pick2 & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaEuro {
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .mr_icon_item:not(:has(.mr_wp_info)) & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-left: -8px;
+                }
+            }
+        }
+    }
+
+    .betslip_mr_info & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+}
+
+.mr_icon_item {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                width: 28%;
+            }
+        }
+    }
+
+    &:not(:has(.mr_wp_info)) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include base.justifyContent(center);
+                    width: 16%;
+                }
+            }
+        }
+    }
+}
+
+.mr_odds_grp {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                flex: 1;
+                margin-left: 8px;
+            }
+        }
+    }
+
+    .mr_icon_item:not(:has(.mr_wp_info))+& {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+.mr_order {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                margin-left: auto;
+                position: relative;
+            }
+        }
+    }
+}
+
+.sort_button {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.inlineFlex();
+                @include base.flexDirection(column);
+                @include base.alignItems(center);
+                gap: 2.5px;
+                margin-left: 4px;
+                width: 10px;
+            }
+        }
+    }
+
+    &.asd .st_arrow.up {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    border-bottom-color: brand.t(Green);
+                }
+            }
+        }
+    }
+
+    &.dsd .st_arrow.down {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    border-top-color: brand.t(Green);
+                }
+            }
+        }
+    }
+}
+
+.st_arrow {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                width: 0;
+                height: 0;
+                border-left: 4.5px solid transparent;
+                border-right: 4.5px solid transparent;
+            }
+        }
+    }
+
+    &.up {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    border-bottom: 4px solid brand.t(Gray03);
+                }
+            }
+        }
+    }
+
+    &.down {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    border-top: 4px solid brand.t(Gray03);
+                }
+            }
+        }
+    }
+}
+
+.mr_order_title {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                font-size: 10px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(Black) !important;
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray) !important;
+                }
+            }
+        }
+    }
+}
+
+.mr_v1 {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                padding: 10px 8px 0px !important;
+            }
+        }
+    }
+}
+
+.col_mm {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                width: 100%;
+            }
+        }
+    }
+
+    &+& {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-top: 4px;
+                }
+            }
+        }
+    }
+}
+
+.mr_bslp_score {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mEuro {
+                @include base.flexbox();
+                @include base.alignItems(center);
+            }
+        }
+    }
+
+    .bslp_score>&:first-child {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    flex: none;
+                }
+            }
+        }
+    }
+
+    &+& {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    padding-left: 8px;
+                }
+            }
+        }
+    }
+}
+
+.mr_seperator {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaEuro {
+                display: inline-block;
+                height: 8px;
+                width: 1px;
+                margin: 0 4px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaEuro {
+                background: brand.t(Border_n_fix_top_home);
+            }
+        }
+    }
+
+    &.b_sprt {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaEuro {
+                    @include mix.brightTheme {
+                        background: brand.t(MediumGray);
+                    }
+
+                    @include mix.darkTheme {
+                        background: brand.t(LightGray);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mr_form_info {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.flexWrap(wrap);
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+                }
+            }
+        }
+    }
+
+    span {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin: 0 3px;
+                }
+            }
+        }
+    }
+
+    >span {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include base.flexbox();
+                    @include base.alignItems(center);
+                }
+            }
+        }
+    }
+
+    .ou_arrow i {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    font-size: 6px;
+                }
+            }
+        }
+    }
+}
+
+.mr_form_row {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                width: 100%;
+                font-size: 10px;
+                padding: 0 8px 10px;
+            }
+        }
+    }
+}
+
+.mr_item {
+    .mr_liveTrk_wrp+& {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+
+    .mr_new_layout & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding: 10px 8px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.mr_ct {
+    .mr_new_layout & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include base.flexDirection(column);
+                }
+            }
+        }
+    }
+
+    .newTemplate &:not(.mr_lgtn2, .newCol3) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include base.flexbox();
+                    @include base.alignItems(center);
+                }
+            }
+        }
+    }
+
+    .newTemplate &:has(.t2) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    position: relative;
+                }
+            }
+        }
+    }
+
+    .newTemplate &:has(.t2):has(+ .mr_ct .t2)::after {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    content: "";
+                    position: absolute;
+                    left: 8px;
+                    right: 6px;
+                    height: 1px;
+                    bottom: 0;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    background: brand.t(Border_n_fix_top_home);
+                }
+            }
+        }
+    }
+
+    .newTemplate &:has(.mr_row + .mr_hdr) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include base.alignItems(start);
+                }
+            }
+        }
+    }
+
+    &:has(.mr_ev_ct.col_2) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding: 10px 8px;
+                }
+            }
+        }
+    }
+
+    &:has(+ .mr_lgtn2) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include base.borderRadius(0 0 4px 4px);
+                }
+            }
+        }
+    }
+}
+
+.mr_wp_name {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                font-size: 12px;
+                font-weight: 700;
+                letter-spacing: 0.16px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+                }
+            }
+        }
+    }
+}
+
+.mr_bettype_title {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                font-size: 12px;
+                font-weight: 700;
+                margin-left: 8px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+                }
+            }
+        }
+    }
+
+    +.icon-fi-arrow-up1 {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}
+
+.mr_bettype_left {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+            }
+        }
+    }
+}
+
+.mr_form_title {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                white-space: nowrap;
+                padding-right: 3px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+}
+
+.fm_title {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                font-size: 10px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+}
+
+.fm_result {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                margin-left: 3px;
+                line-height: 10px;
+                letter-spacing: 0.16px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+                }
+            }
+        }
+    }
+
+    span {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+    span:not(:first-child) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding-left: 2px;
+                }
+            }
+        }
+    }
+
+    .el_new_tracks & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+.mr_wp_form {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                margin-top: 2px;
+            }
+        }
+    }
+}
+
+.mr_title_info {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                font-size: 10px;
+                font-weight: 700;
+                margin: 8px 8px 0;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+}
+
+.mr_term {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                font-weight: 700;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+                }
+            }
+        }
+    }
+}
+
+.win_teamname {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                font-weight: 700;
+                font-size: 10px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+                }
+            }
+        }
+    }
+
+    .betslip_winningselection & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding-left: 4px;
+                    font-size: 12px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+.win_wtoc_result {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                font-size: 10px;
+                margin-top: 5px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+}
+
+.win_result {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.flexDirection(column);
+                margin-left: 6px;
+            }
+        }
+    }
+}
+
+.tracker_container {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                position: relative;
+                height: 34px;
+                padding: 10px 8px;
+            }
+        }
+    }
+}
+
+.tracker_line {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.borderRadius(4px);
+                position: absolute;
+                top: 60%;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                transform: translateY(-50%);
+                z-index: 1;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    background: brand.t(DividerGray);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(Gray02);
+                }
+            }
+        }
+    }
+}
+
+.tracker_line_fill {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.borderRadius(4px);
+                position: absolute;
+                top: 60%;
+                left: 0;
+                height: 1px;
+                transform: translateY(-50%);
+                width: 0%;
+                transition: width 2s linear;
+                z-index: 1;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                background: brand.t(Green);
+            }
+        }
+    }
+}
+
+.step_box {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(center);
+                @include base.borderRadius(2px);
+                position: absolute;
+                top: -32%;
+                transform: translateX(-50%);
+                transition:
+                    background 0.5s,
+                    color 0.5s;
+                padding: 3px 4px;
+                font-size: 10px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                    background: brand.t(BGGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                    background: brand.t(Gray02);
+                }
+            }
+        }
+    }
+
+    &.active {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    font-weight: 700;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    background: #2cda43;
+                    color: #0a4011 !important;
+                }
+            }
+        }
+    }
+
+    &.active i {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    color: #0a4011 !important;
+                }
+            }
+        }
+    }
+}
+
+.step_mark {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                margin-left: 4px;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.step {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(center);
+                @include base.borderRadius(50%);
+                position: absolute;
+                top: 60%;
+                width: 17px;
+                height: 17px;
+                font-weight: 700;
+                transform: translate(-50%, -50%);
+                z-index: 1;
+                font-size: 10px;
+                line-height: 17px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    border: 1px solid brand.t(BGGray);
+                    background: brand.t(White);
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    border: 1px solid brand.t(Gray03);
+                    background: brand.t(LightBlack);
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+
+    &.completed {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    font-size: 8px;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        color: brand.t(DarkGray);
+                    }
+
+                    @include mix.darkTheme {
+                        color: #d9d9d9;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mr_liveTrk_wrp {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                width: calc(100% - 16px);
+                padding: 8px 8px 0 8px;
+                margin-top: 14px;
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    .active {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    border-color: #2cda43 !important;
+                    color: #2cda43;
+                }
+            }
+        }
+    }
+}
+
+.mr_wp_info {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.flexDirection(column);
+                text-align: left;
+                margin-left: 6px;
+            }
+        }
+    }
+}
+
+.mr_ev_ct_wrp {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                padding: 6px 8px 10px;
+            }
+        }
+    }
+}
+
+.mr_ev_ct {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.flexDirection(column);
+                text-align: center;
+            }
+        }
+    }
+
+    .mr_new_layout & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.mr_hdr_title {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                width: 28%;
+                font-size: 10px;
+                font-weight: 700;
+                word-break: break-word;
+                padding: 10px 0px 0 !important;
+            }
+        }
+    }
+}
+
+.rt_hol_circle {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.borderRadius(50%);
+                box-sizing: border-box;
+                width: 6px;
+                min-width: 6px;
+                height: 6px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    border: 1px solid brand.t(MediumGray);
+                }
+
+                @include mix.darkTheme {
+                    border: 1px solid brand.t(Gray03);
+                }
+            }
+        }
+    }
+}
+
+.fl_odds_type {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                font-size: 10px;
+                font-weight: 700;
+                word-break: break-word;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+
+    .fl_odds_wrp.add & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.notThemeNames(default, betway) {
+                        color: brand.t(White) !important;
+                    }
+
+                    @include mix.themeNames(default, betway) {
+                        color: brand.t(DarkBlack) !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mr_ct_r {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                flex-basis: 60%;
+            }
+        }
+    }
+}
+
+.ou_arrow {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+            }
+        }
+    }
+
+    .mr_result & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-right: 2px;
+                    font-size: 6px;
+                }
+            }
+        }
+    }
+
+    .el_new_tracks & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-right: 4px;
+                }
+            }
+        }
+    }
+
+    .el_new_tracks & i {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    font-size: 7px;
+                }
+            }
+        }
+    }
+
+    .fl_odds_type & i {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding-left: 0;
+                    font-size: 8px;
+                }
+            }
+        }
+    }
+
+    .fl_odds_wrp.add & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.notThemeNames(default, betway) {
+                        color: brand.t(White) !important;
+                    }
+
+                    @include mix.themeNames(default, betway) {
+                        color: brand.t(DarkBlack) !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mr_bettype_hd {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                padding: 6px 8px;
+                height: 30px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    background: brand.t(LightGray);
+                    border-bottom: 1px solid brand.t(DividerGray);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(Black);
+                }
+            }
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    font-size: 13px;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        color: brand.t(Black);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(LightGray);
+                    }
+                }
+            }
+        }
+    }
+
+    i+i {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-left: 6px;
+                }
+            }
+        }
+    }
+
+    .icon-fi-winner-time {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    font-size: 18px !important;
+                }
+            }
+        }
+    }
+
+    .icon-fi-n-trophy {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    font-size: 16px;
+                    position: relative;
+                    top: -0.5px;
+                }
+            }
+        }
+    }
+
+    .icon-fi-arrow-up1 {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include base.rotateIcon();
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+    .mr_order+.icon-fi-arrow-up1 {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-left: 6px;
+                }
+            }
+        }
+    }
+
+    .icon-fi-pin {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    font-size: 10px;
+                    padding-left: 8px;
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+
+    .mr_order+.icon-fi-pin {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-left: unset;
+                }
+            }
+        }
+    }
+}
+
+.mr_row {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                padding: 4px 8px 0;
+            }
+        }
+    }
+
+    .mr_new_layout & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    position: relative;
+                    z-index: 0;
+                    width: 100%;
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    .mr_new_layout &:not(:first-child) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-top: 4px;
+                }
+            }
+        }
+    }
+
+    .t2 & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    display: grid;
+                    grid-template-columns: repeat(3, minmax(auto, 1fr));
+                    grid-gap: 4px;
+                    grid-auto-rows: 30px;
+                    padding: 0 8px 12px;
+                }
+            }
+        }
+    }
+
+    .newTemplate .t2 & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    grid-template-columns: repeat(5, minmax(auto, 1fr));
+                    padding: 10px 6px;
+                }
+            }
+        }
+    }
+
+    .newTemplate .t2 &.m8Track {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    grid-template-columns: repeat(4, minmax(auto, 1fr));
+                }
+            }
+        }
+    }
+
+    .col_2 & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    .col_3 &:last-child {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    .newTemplate & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding-left: 6px;
+                    padding-right: 6px;
+                }
+            }
+        }
+    }
+
+    .mr_hdr+& {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+}
+
+.tracks_tab {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.justifyContent(center);
+                @include base.alignItems(center);
+                @include base.boxSizing(border-box);
+                @include base.borderRadius(4px);
+                position: relative;
+                font-size: 10px;
+                padding: 8px 4px;
+                white-space: nowrap;
+                min-width: fit-content;
+                height: 24px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    background: brand.t(DividerGray);
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(Gray);
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+
+    &:not(:first-child) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-left: 4px;
+                }
+            }
+        }
+    }
+
+    &.active {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include base.transition(all 0.15s ease-in-out);
+                    font-weight: 700;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    background: brand.t(ActiveLight);
+                    color: brand.t(Color_active_tracks_tab);
+                }
+            }
+        }
+    }
+
+    &.disable {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    cursor: not-allowed;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        color: #b8b8b8;
+                    }
+
+                    @include mix.darkTheme {
+                        @include mix.themeNames(betway, dark1, dark2) {
+                            color: #787878;
+                        }
+
+                        @include mix.notThemeNames(betway, dark1, dark2) {
+                            color: #525e73;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .new_tracks & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding: 5px 4px;
+                    margin-left: 4px;
+                }
+            }
+        }
+    }
+}
+
+.mr_ev_hdr {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.justifyContent(space-between);
+                @include base.alignItems(center);
+                @include base.boxSizing(border-box);
+                @include base.borderRadius(4px 4px 0 0);
+                padding: 4px 8px;
+                min-height: 30px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    background: brand.t(White);
+                    border-bottom: 1px solid brand.t(DividerGray);
+                    color: brand.t(DarkBlack);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(Gray);
+                    border-bottom: 1px solid brand.t(Gray02);
+                    color: brand.t(White);
+                }
+            }
+        }
+    }
+
+    &::before {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    content: "";
+                    position: absolute;
+                    top: -6px;
+                    height: 6px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &::before,
+    &::after {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        background: brand.t(BGGray);
+                    }
+
+                    @include mix.darkTheme {
+                        background: brand.t(DarkBlack);
+                    }
+                }
+            }
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    font-size: 10px;
+                    padding-right: 6px;
+                }
+            }
+        }
+    }
+
+    .newTemplate & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include base.alignItems(stretch);
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    .newTemplate &:has(+ .mr_ev_card_ct[style*="display: none"]) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    border-bottom-left-radius: 4px;
+                    border-bottom-right-radius: 4px;
+                }
+            }
+        }
+    }
+}
+
+.live_bet_label {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.borderRadius(2px);
+                @include base.boxSizing(border-box);
+                display: block;
+                word-break: keep-all;
+                min-width: fit-content;
+                text-align: center;
+                padding: 4px 6px;
+                font-size: 10px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                color: brand.t(White);
+
+                @include mix.brightTheme {
+                    background: brand.t(ActiveLight);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(ActiveDark);
+                }
+            }
+        }
+    }
+}
+
+.mr_ev_hdr_l {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                word-break: break-word;
+                padding-right: 8px;
+                flex: 1;
+            }
+        }
+    }
+
+    .newTemplate & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding: 4px 8px;
+                }
+            }
+        }
+    }
+
+    span span {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    font-weight: 700;
+                    padding-right: 4px;
+                }
+            }
+        }
+    }
+}
+
+.mr_ev_hdr_r {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+            }
+        }
+    }
+
+    span {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    color: brand.t(Color_main_text_body);
+                }
+            }
+        }
+    }
+}
+
+.mr_ev_card_ct {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                position: relative;
+            }
+        }
+    }
+}
+
+@keyframes change_alert {
+    50% {
+        background: #ffc915;
+
+        @include mix.darkTheme {
+            color: #121212;
+        }
+
+        @include mix.brightTheme {
+            color: #333333;
+        }
+    }
+}
+
+.change_alert {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                padding: 2px;
+            }
+        }
+    }
+
+    &.changed {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include base.borderRadius(4px);
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    animation: change_alert 1s 0s infinite;
+                }
+            }
+        }
+    }
+
+    .el_new_tracks & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-left: 2px;
+                }
+            }
+        }
+    }
+}
+
+.winner_time {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaEuro {
+                font-size: 12px;
+                font-weight: 700;
+                padding-left: 4px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+                }
+            }
+
+            @include mix.mEuro {
+                @include mix.notThemeNames(default, dark1, dark2) {
+                    color: brand.t(Color_main_text_body);
+                }
+
+                @include mix.themeNames(default, dark1, dark2) {
+                    color: brand.t(Color_main_text_title);
+                }
+            }
+        }
+    }
+}
+
+.mr_stream_overlay {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(center);
+                background: url("#{base.$sharedImgFolder}mr_starting_soon_bg.png#{base.$img_version}") center center;
+                background-size: cover;
+                text-align: center;
+                position: absolute;
+                flex-direction: column;
+                z-index: 1;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                font-weight: 700;
+                backdrop-filter: blur(2px);
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                color: brand.t(White);
+                background-color: rgba(202, 202, 202, 0.5);
+            }
+        }
+    }
+
+    span:nth-child(1) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    span:nth-child(2) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+
+    span:nth-child(3) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+}
+
+.mr_result {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(space-between);
+                padding: 8px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                    background: brand.t(White);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+
+                    @include mix.themeName(default1) {
+                        background: brand.t(MediumBlue);
+                    }
+
+                    @include mix.notThemeName(default1) {
+                        background: brand.t(LightBlack);
+                    }
+                }
+            }
+        }
+    }
+
+    &+.mr_result {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        border-top: 1px solid brand.t(DividerGray);
+                    }
+
+                    @include mix.darkTheme {
+                        @include mix.themeName(default1) {
+                            border-top: 1px solid brand.t(Stroke);
+                        }
+
+                        @include mix.notThemeName(default1) {
+                            border-top: 1px solid brand.t(Gray02);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mr_result_l {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                font-size: base.$n_font3;
+                flex-shrink: 0;
+                padding-right: 18px;
+            }
+        }
+    }
+}
+
+.mr_result_r {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.justifyContent(flex-end);
+                width: 100%;
+            }
+        }
+    }
+
+    .type_3vs3 &,
+    .solo & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    width: 30%;
+                    justify-content: flex-start;
+                }
+            }
+        }
+    }
+}
+
+.mr_win_title {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+            }
+        }
+    }
+
+    .type_3vs3 & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .solo & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    width: 33.3%;
+                }
+            }
+        }
+    }
+
+    .competition & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        color: brand.t(DarkGray);
+                    }
+
+                    @include mix.darkTheme {
+                        color: #cacaac;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mr_num {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                flex: 1;
+            }
+        }
+    }
+
+    .competition & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        color: brand.t(DarkGray);
+                    }
+
+                    @include mix.darkTheme {
+                        color: #cacaac;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mr_grps {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.justifyContent(flex-end);
+            }
+        }
+    }
+
+    .type_3vs3 & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    width: 30%;
+                }
+            }
+        }
+    }
+
+    .solo & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    width: 75%;
+                }
+            }
+        }
+    }
+}
+
+.mr_win_info {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+            }
+        }
+    }
+
+    .solo & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    position: relative;
+                    z-index: 0;
+                }
+            }
+        }
+    }
+}
+
+.mr_result_itm {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.justifyContent(space-between);
+                @include base.alignItems(center);
+                flex-direction: column;
+                text-align: center;
+                padding: 0 10px;
+                z-index: 0;
+            }
+        }
+    }
+}
+
+.mr_result_cnl {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                font-size: 12px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                color: brand.t(Color_results_result_score);
+            }
+        }
+    }
+
+    .mr_winner & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    width: 20px;
+                }
+            }
+        }
+    }
+}
+
+.mr_alert_banner {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(start);
+                padding: 4px 8px;
+                font-size: 10px;
+                box-sizing: border-box;
+                z-index: 6 !important;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                background: brand.t(BG_newtag);
+                color: #fff;
+            }
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    font-size: 12px;
+                    padding-right: 4px;
+                }
+            }
+        }
+    }
+}
+
+.tut_inner {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.transition(transform 0.3s ease-in-out);
+                @include base.borderRadius(20px 20px 0 0);
+                @include base.transform(translateY(100%));
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 1000006;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    background: brand.t(White);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(DarkBlack);
+                }
+            }
+        }
+    }
+
+    &.show {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include base.transform(translateY(0));
+                }
+            }
+        }
+    }
+
+    &:before {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-image: url("#{base.$sharedImgFolder}mm_tut_bg.png#{base.$img_version}");
+                    background-size: 170% auto;
+                    background-position: top center;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+}
+
+.mm_tut_close {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(center);
+                font-size: 20px;
+                width: 42px;
+                height: 42px;
+                text-align: center;
+                margin-left: auto;
+                position: absolute;
+                right: 0;
+                top: 0;
+                z-index: 10;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                color: brand.t(White);
+            }
+        }
+    }
+}
+
+.tut_page_title {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(center);
+                position: absolute;
+                width: 100%;
+                padding: 10px 50px;
+                font-size: 12px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                color: brand.t(White);
+            }
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-right: 6px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+.tut_content {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.flexDirection(column);
+                @include base.borderRadius(20px 20px 0 0);
+                width: 100%;
+                height: 80svh;
+                bottom: 0;
+                position: absolute;
+                overflow: hidden;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    background: brand.t(White);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(DarkBlack);
+                }
+            }
+        }
+    }
+}
+
+.tab_circle {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(center);
+                @include base.borderRadius(50%);
+                @include base.boxSizing(border-box);
+                font-size: 12px;
+                font-weight: bold;
+                width: 24px;
+                min-width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    background: brand.t(White);
+                    border: 2px solid brand.t(DividerGray);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(DarkBlack);
+                    border: 2px solid brand.t(Gray02);
+                }
+            }
+        }
+    }
+
+    &:not(:first-child) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-left: 40px;
+                }
+            }
+        }
+    }
+
+    &.active {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    color: brand.t(ActiveLight);
+                    border: 2px solid brand.t(ActiveLight);
+                }
+            }
+        }
+    }
+}
+
+.tut_nav_wrp {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.flexDirection(column);
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.tut_nav {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(center);
+                @include base.flexDirection(row);
+                margin: auto;
+                width: 60%;
+                min-height: 60px;
+            }
+        }
+    }
+}
+
+.tut_details {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                width: 100%;
+                flex: 1;
+                overflow-y: auto;
+            }
+        }
+    }
+
+    ul {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-top: 14px;
+                    padding-left: 10px;
+                    list-style-type: disc;
+                }
+            }
+        }
+    }
+
+    li {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    font-size: 12px;
+                    line-height: 14px;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        color: brand.t(DarkGray);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(LightGray);
+                    }
+                }
+            }
+        }
+    }
+
+    li:not(:first-child) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-top: 16px;
+                    word-break: break-word;
+                }
+            }
+        }
+    }
+}
+
+.tut_details_header {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.borderRadius(4px);
+                height: 30px;
+                font-size: 12px;
+                font-weight: 700;
+                padding: 0 8px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    background: brand.t(LightGray);
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(Gray);
+                    color: brand.t(White);
+                }
+            }
+        }
+    }
+
+    &+.tut_details_main {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-top: 14px;
+                }
+            }
+        }
+    }
+}
+
+.tut_ico {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(center);
+                width: 15px;
+                min-width: 15px;
+                height: 15px;
+                font-size: 15px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(DarkYellow);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(Yellow);
+                }
+            }
+        }
+    }
+}
+
+.tut_details_inner {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                margin-bottom: calc(50px + 8px * 4 + env(safe-area-inset-bottom));
+            }
+        }
+    }
+}
+
+.tut_details_sort {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                transition: all 0.3s ease;
+            }
+        }
+    }
+}
+
+.tut_bottom {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(flex-end);
+                padding: 8px 10px;
+                width: 100%;
+                position: fixed;
+                bottom: 0;
+                z-index: 1;
+                margin-bottom: env(safe-area-inset-bottom);
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    background: brand.t(White);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(DarkBlack);
+                }
+            }
+        }
+    }
+
+    .pb_button {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    width: 100% !important;
+                    height: 50px;
+                    font-size: 16px !important;
+                    padding: 0;
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+
+    .pb_button.pre {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include base.borderRadius(4px);
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    border: 1px solid brand.t(ActiveLight);
+                    color: brand.t(ActiveLight);
+
+                    @include mix.brightTheme {
+                        background: brand.t(White);
+                    }
+
+                    @include mix.darkTheme {
+                        background: brand.t(DarkBlack);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.tut_details_item {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                padding: 0 20px;
+            }
+        }
+    }
+
+    ul {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+
+    &+& {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
+
+.tut_details_col_two {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.flexDirection(row);
+            }
+        }
+    }
+
+    &+& {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
+
+.track_type {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(center);
+                @include base.borderRadius(10px);
+                width: 30px;
+                height: 30px;
+                min-width: 30px;
+                z-index: 1;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    background: brand.t(BGGray);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(Gray);
+                }
+            }
+        }
+    }
+
+    img {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    width: 15px;
+                }
+            }
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+.track_type_info_hrd {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                font-size: 12px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+                }
+            }
+        }
+    }
+}
+
+.track_type_info_text {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                margin-top: 4px;
+                font-size: 12px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+}
+
+.track_type_info {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.flexDirection(column);
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+.win_circle {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaEuro {
+                @include base.borderRadius(50%);
+                width: 20px;
+                min-width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    .betslip_winningselection &,
+    .bslp_score & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaEuro {
+                    @include base.inlineFlex();
+                    position: relative;
+                    width: 15px;
+                    min-width: 15px;
+                    height: 15px;
+                }
+            }
+        }
+    }
+
+    .betslip_winningselection & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaEuro {
+                    bottom: -3px;
+                    margin-left: 6px;
+                }
+            }
+        }
+    }
+
+    .mr_bslp_score+&,
+    &+.mr_bslp_score {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    margin-left: 4px;
+                }
+            }
+        }
+    }
+
+    .fl_odds_wrp & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    width: 15px;
+                    min-width: 15px;
+                    height: 15px;
+                    margin-right: 6px;
+                }
+            }
+        }
+    }
+
+    .mr_form_info & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    width: 8px;
+                    min-width: 8px;
+                    height: 8px;
+                    position: relative;
+                }
+            }
+        }
+    }
+
+    .mr_form_info &:not(:first-child) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+
+    &.yellow {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaEuro {
+                    background: linear-gradient(0deg, #ecc744 0%, #ffe37e 100%);
+                }
+            }
+        }
+    }
+
+    &.red {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaEuro {
+                    background: linear-gradient(0deg, #d63131 0%, #ff6868 100%);
+                }
+            }
+        }
+    }
+
+    &.black {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaEuro {
+                    background: linear-gradient(180deg, #818181 0%, #353535 100%);
+                }
+            }
+        }
+    }
+
+    &.blue {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaEuro {
+                    background: linear-gradient(0deg, #2A427E 0%, #527BE0 100%);
+                }
+            }
+        }
+    }
+
+    &.green {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaEuro {
+                    background: linear-gradient(0deg, #069A31 0%, #00FF4A 100%);
+                }
+            }
+        }
+    }
+
+    &.orange {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaEuro {
+                    background: linear-gradient(0deg, #F57D21 0%, #FFC293 100%);
+                }
+            }
+        }
+    }
+}
+
+.latest_winner {
+    &::before {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    content: "";
+                    @include base.borderRadius(50%);
+                    position: absolute;
+                    top: -3px;
+                    left: -3px;
+                    width: 14px;
+                    min-width: 14px;
+                    height: 14px;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.redTheme {
+                        border: 1px solid brand.t(PeachHDP);
+                    }
+
+                    @include mix.notRedTheme {
+                        border: 1px solid brand.t(ActiveLight);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mr_slider {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                position: relative;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    background: brand.t(White);
+                    border-bottom: 1px solid brand.t(DividerGray);
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(LightBlack);
+                    border-bottom: 1px solid brand.t(Gray02);
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+
+    .item {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include base.flexbox();
+                    @include base.alignItems(center);
+                    @include base.justifyContent(center);
+                    padding: 8px 10px;
+                }
+            }
+        }
+    }
+
+    .item.active {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    font-weight: 700;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    color: brand.t(ActiveLight);
+                }
+            }
+        }
+    }
+}
+
+.mr_ct_wrp {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    background: brand.t(White);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(LightBlack);
+                }
+            }
+        }
+    }
+}
+
+.mr_ct_l {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                flex-basis: 40%;
+                padding: 10px 4px 6px 8px;
+            }
+        }
+    }
+
+    .newCol3 & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding: 10px 4px 4px 8px;
+                }
+            }
+        }
+    }
+}
+
+.mr_sel_bal {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.alignItems(center);
+                display: flex !important;
+            }
+        }
+    }
+}
+
+.mr_sti_bal {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaEuro {
+                @include base.flexbox();
+                @include base.justifyContent(center);
+                z-index: 0;
+            }
+        }
+    }
+
+    .mr_sel_bal & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+
+    .betlist_item & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaEuro {
+                    @include base.inlineFlex();
+                    padding-right: 8px;
+                }
+            }
+        }
+    }
+}
+
+.mr_hd_t2 {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.justifyContent(flex-end);
+                padding: 0 8px;
+            }
+        }
+    }
+}
+
+.mr_ct_hdr {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                word-break: break-word;
+                padding: 8px;
+                font-size: 10px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    background: brand.t(LightGray);
+                    color: brand.t(Black);
+                    border-bottom: 1px solid brand.t(DividerGray);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(Black);
+                    color: brand.t(White);
+                }
+            }
+        }
+    }
+}
+
+.mr_hdr {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                font-size: 10px;
+                font-weight: 700;
+                word-break: break-word;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+
+    &.t1 {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include base.flexbox();
+                    @include base.alignItems(center);
+                }
+            }
+        }
+    }
+
+    .col_2 & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include base.flexbox();
+                    @include base.alignItems(center);
+                    padding: 10px 8px 6px;
+                }
+            }
+        }
+    }
+
+    .col_2 &>div {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    width: 50%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .newTemplate .col_2 & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding: 10px 6px 6px;
+                }
+            }
+        }
+    }
+
+    .newTemplate .col_2 &>div+div {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-left: 4px;
+                }
+            }
+        }
+    }
+
+    &.t1>div {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding: 4px 6px 2px;
+                    text-align: center;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+
+    &.t1>div:first-child {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    flex-basis: 28%;
+                    position: relative;
+                }
+            }
+        }
+    }
+
+    &.t1>div:first-child::before {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: -1px;
+                    width: 1px;
+                    bottom: -1px;
+                }
+            }
+        }
+    }
+
+    &.t1>div:not(:first-child) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    flex-basis: 28%;
+                }
+            }
+        }
+    }
+
+    &.t1>div:not(:first-child):nth-child(2) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding-left: 16px;
+                }
+            }
+        }
+    }
+
+    &.t1>div:not(:first-child):nth-child(4) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding-right: 16px;
+                }
+            }
+        }
+    }
+
+    &.t1>div:not(:first-child):nth-child(2):nth-last-child(2),
+    &.t1>div:not(:first-child):nth-child(2):nth-last-child(2)~div {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    flex-basis: 42%;
+                }
+            }
+        }
+    }
+
+    &.t1>div:not(:first-child):nth-child(2):nth-last-child(1),
+    &.t1>div:not(:first-child):nth-child(2):nth-last-child(1)~div {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    flex-basis: 84%;
+                }
+            }
+        }
+    }
+
+    .t2 & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding: 10px 8px 6px;
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    .mr_hd_t2 &.t1 {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    width: 72%;
+                    padding: 10px 0 6px;
+                }
+            }
+        }
+    }
+
+    .mr_new_layout .newCol3:not(:has(.mr_wp_info)) .mr_hd_t2 &.t1 {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    width: 84%;
+                }
+            }
+        }
+    }
+
+    .mr_new_layout .mr_hd_t2 &.t1 {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding: 10px 0 0 !important;
+                }
+            }
+        }
+    }
+
+    .el_new_tracks .mr_hd_t2 &.t1 {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    width: unset;
+                    flex: 1;
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+}
+
+.cat_label {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.inlineFlex();
+                @include base.alignItems(center);
+                @include base.borderRadius(4px);
+                padding: 2px 4px;
+                font-size: 10px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                color: brand.t(White);
+
+                @include mix.brightTheme {
+                    background: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(Gray02);
+                }
+            }
+        }
+    }
+
+    .new_tracks & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-right: 4px;
+                }
+            }
+        }
+    }
+
+    .race_track_item & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-left: 6px;
+                    white-space: nowrap;
+                    align-self: flex-start;
+                }
+            }
+        }
+    }
+
+    .race_track_item.active & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.redTheme {
+                        background: brand.t(PeachHDP);
+                    }
+
+                    @include mix.notRedTheme {
+                        background: brand.t(ActiveLight);
+                    }
+
+                    @include mix.brightTheme {
+                        color: brand.t(White);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(Black);
+                    }
+                }
+            }
+        }
+    }
+
+    .tracks_tab.active & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        background: brand.t(White);
+                        color: brand.t(ActiveLight);
+                    }
+
+                    @include mix.darkTheme {
+                        background: brand.t(Black);
+                        color: brand.t(White);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.win_tt {
+    .mr_hd_t2 .mr_hdr.t1 & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    flex: 1 !important;
+                    padding: 0 !important;
+                }
+            }
+        }
+    }
+}
+
+.track_popup {
+    .n_popup_header i {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-right: 4px;
+                }
+            }
+        }
+    }
+
+    .betslip_teams_wrap i {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-right: 4px;
+                }
+            }
+        }
+    }
+}
+
+// lightning 2: start
+.mr_sel_wrp {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                padding: 6px 8px;
+                margin-bottom: 6px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    background: brand.t(White);
+                    border-bottom: 1px solid brand.t(DividerGray);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(Black);
+                    border-bottom: 1px solid brand.t(Gray02);
+                }
+            }
+        }
+    }
+
+    &.n_sticky {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    width: unset;
+                }
+            }
+        }
+    }
+
+    &.sel_enhmt {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.themeName(default) {
+                        background: #111217;
+                        border-bottom: 1px solid #525e73;
+                    }
+
+                    @include mix.themeNames(betway, dark1, dark2) {
+                        border-bottom: 1px solid #3e3e3e;
+                    }
+
+                    @include mix.notThemeNames(default, betway, dark1, dark2) {
+                        border-bottom: 1px solid #b9b6b6;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mr_sel_grp {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.justifyContent(center);
+                @include base.borderRadius(10px);
+                position: relative;
+            }
+        }
+    }
+}
+
+.mr_box {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(center);
+                @include base.borderRadius(10px);
+                @include base.boxSizing(border-box);
+                position: relative;
+                height: base.$mr_ltn_boxH;
+                width: calc((100% - (base.$mr_ltn_boxM * 4)) / 5);
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                border: 2px solid transparent;
+
+                @include mix.brightTheme {
+                    background: brand.t(LightGray);
+                    border-color: brand.t(MediumGray);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(DarkBlack);
+                    border-color: brand.t(Gray03);
+                }
+            }
+        }
+    }
+
+    &:not(:first-child) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-left: base.$mr_ltn_boxM;
+                }
+            }
+        }
+    }
+
+    &.active {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    border-color: #ffe895;
+                    box-shadow: 0 4px 10px rgba(243, 195, 24, 0.25);
+                }
+            }
+        }
+    }
+}
+
+.mr_fadeIn {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.animation(showLoop 0.3s ease-in forwards);
+            }
+        }
+    }
+}
+
+.mr_btm_info {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                margin-top: 6px;
+                font-size: 10px;
+                font-weight: 700;
+                text-align: center;
+                word-break: break-word;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(DarkYellow);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(Yellow);
+                }
+            }
+        }
+    }
+
+    &.unknw {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        color: brand.t(DarkGray);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(LightGray);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ltn_bg {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.borderRadius(10px);
+                @include base.animation(flash_str 0.2s steps(2) infinite);
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: base.$mr_ltn_boxH;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                background-image: url("#{base.$sharedImgFolder}ltn_bg.svg#{base.$img_version}");
+                background-position: center top;
+            }
+        }
+    }
+}
+
+@keyframes flash_str {
+    0% {
+        background-position-y: 0;
+    }
+
+    100% {
+        background-position-y: -120px;
+    }
+}
+
+.mr_lgtn2 {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                padding: 14px 0;
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+            }
+        }
+    }
+}
+
+.mr_bigTxt {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                font-size: 12px;
+                font-weight: 700;
+                text-align: center;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+                }
+            }
+        }
+    }
+
+    .mr_lgtn2 & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include base.boxSizing(border-box);
+                    padding: 0 8px;
+                }
+            }
+        }
+    }
+}
+
+.mr_smallTxt {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+
+    .mr_bigTxt+& {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include base.boxSizing(border-box);
+                    padding: 4px 8px 8px;
+                }
+            }
+        }
+    }
+}
+
+.mr_pick2 {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(center);
+                @include base.flexDirection(column);
+                @include base.boxSizing(border-box);
+                @include base.borderRadius(4px);
+                padding: 0 10px;
+                margin: 0 8px;
+                min-height: 66px;
+                position: relative;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                background-size: cover;
+                border: 1px solid brand.t(Border_mr_pick2);
+
+                @include mix.brightTheme {
+                    background: url("#{$themeImgFolder}lightning_top_banner_light.png#{base.$img_version}") brand.t(BGGray) no-repeat center;
+                }
+
+                @include mix.darkTheme {
+                    background: url("#{$themeImgFolder}lightning_top_banner_dark.png#{base.$img_version}") brand.t(DarkBlack) no-repeat center;
+                }
+            }
+        }
+    }
+}
+
+.mr_selMarble {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.boxSizing(border-box);
+                width: 22px;
+            }
+        }
+    }
+}
+
+.mr_selOdds {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.boxSizing(border-box);
+                width: 25px;
+            }
+        }
+    }
+}
+
+.mr_pick {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.flexWrap(wrap);
+                @include base.boxSizing(border-box);
+                padding: 8px 6px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.mr_opt {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(center);
+                @include base.boxSizing(border-box);
+                @include base.borderRadius(4px);
+                width: calc((100% - 20px) / 5);
+                height: 30px;
+                margin: 2px;
+                padding: 0 5px;
+                z-index: 0;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    background: brand.t(BGGray);
+                    border: 1px solid brand.t(DividerGray);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(Gray01);
+                    border: 1px solid brand.t(Gray02);
+                }
+            }
+        }
+    }
+
+    &.active {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.redTheme {
+                        @include base.bgOpacity(brand.t(PeachHDP), 0.2);
+                        border-color: brand.t(PeachHDP);
+                    }
+
+                    @include mix.notRedTheme {
+                        @include base.bgOpacity(brand.t(ActiveLight), 0.2);
+                        border-color: brand.t(ActiveLight);
+                    }
+                }
+            }
+        }
+    }
+
+    .m8Track & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    width: calc((100% - 20px) / 4);
+                }
+            }
+        }
+    }
+}
+
+.mr_btnGrp {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(space-between);
+                @include base.boxSizing(border-box);
+                padding: 20px 8px 6px;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.mr_btn {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(center);
+                @include base.borderRadius(4px);
+                @include base.boxSizing(border-box);
+                min-height: 40px;
+                width: calc(50% - 4px);
+                padding: 0 4px;
+                text-align: center;
+                font-size: 14px;
+                font-weight: 700;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.mr_reset {
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                background: brand.t(BG_mr_reset);
+
+                @include mix.notThemeName(default) {
+                    opacity: 0.5;
+                }
+
+                @include mix.brightTheme {
+                    border: 1px solid brand.t(MediumGray);
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    border: 1px solid brand.t(Gray02);
+                    color: brand.t(Gray03);
+                }
+            }
+        }
+    }
+
+    .active & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    border: none;
+                    color: brand.t(White);
+
+                    @include mix.notThemeName(default) {
+                        opacity: 1;
+                    }
+
+                    @include mix.brightTheme {
+                        background: brand.t(DarkGray);
+                    }
+
+                    @include mix.darkTheme {
+                        background: brand.t(Gray02);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mr_confirm {
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.notThemeName(default) {
+                    opacity: 0.5;
+                }
+
+                @include mix.brightTheme {
+                    background: brand.t(MediumGray);
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(Gray02);
+                    color: brand.t(Gray03);
+                }
+            }
+        }
+    }
+
+    .active & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    background: brand.t(ActiveLight);
+
+                    @include mix.notThemeName(default) {
+                        opacity: 1;
+                    }
+
+                    @include mix.themeName(default) {
+                        color: brand.t(Black);
+                    }
+
+                    @include mix.notThemeName(default) {
+                        color: brand.t(White);
+                    }
+                }
+            }
+        }
+    }
+}
+
+//l lightning 2: end
+// tutorial : start
+.mr_msk_btn {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                top: 75%;
+                display: block;
+                width: fit-content;
+                position: fixed;
+                right: 3%;
+                z-index: 1000006;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                background: brand.t(BG_bg_mask);
+            }
+        }
+    }
+}
+
+.mr_desc {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                position: absolute !important;
+                padding: 10px 12px;
+                text-align: left;
+                font-size: 12px;
+                line-height: 16px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                background: rgba(0, 0, 0, 0.5);
+                color: brand.t(BG_draw_dot1);
+            }
+        }
+    }
+
+    div:nth-child(2) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding-left: 6px;
+                }
+            }
+        }
+    }
+}
+
+.n_home_sports .item.mr_tutms_1 {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                z-index: 1000005;
+            }
+        }
+    }
+}
+
+.mr_tut1_arr {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.transform(scaleY(-1) rotate(-89deg));
+                position: absolute;
+                z-index: 1;
+                bottom: 110%;
+                right: 250px;
+            }
+        }
+    }
+}
+
+.mr_tut1_desc {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                width: 220px;
+                bottom: 108%;
+                right: unset;
+                left: 0px;
+            }
+        }
+    }
+}
+
+.rac_sev_wrp {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                position: relative;
+
+                &.n_sticky {
+                    position: sticky;
+                }
+            }
+        }
+    }
+}
+
+.mr_tutms_2 {
+    &.rac_sev_wrp {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    z-index: 1000005;
+                    position: relative;
+                    top: 0 !important;
+                }
+            }
+        }
+    }
+
+    &.mr_sel_wrp {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    z-index: 1000005;
+                    position: relative;
+                }
+            }
+        }
+    }
+
+    &.mr_slider {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    z-index: 1000005;
+                }
+            }
+        }
+    }
+
+    &.mr_tracks_slider {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    z-index: 1000005 !important;
+                    top: unset !important;
+                }
+            }
+        }
+    }
+
+    &.track_bar {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    z-index: 1000005 !important;
+                    top: unset;
+                }
+            }
+        }
+    }
+
+    &.mr_liveTrk_wrp {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    z-index: 1000005;
+                }
+            }
+        }
+    }
+
+    &.mr_stream_overlay {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    background: url("#{base.$sharedImgFolder}mr_bg.png#{base.$img_version}") center center;
+                    opacity: 0.3;
+                }
+            }
+        }
+    }
+
+    &.mrWithFooter {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.mr_tut2_arr {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.transform(rotate(270deg));
+                position: absolute;
+                top: 6px;
+                left: 20px;
+                z-index: 2;
+            }
+        }
+    }
+}
+
+.mr_tut2_desc {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                width: 210px;
+                top: 20px;
+                left: 70px;
+                z-index: 2;
+            }
+        }
+    }
+}
+
+.mr_tut3_arr {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.transform(scaleY(-1) rotate(-106deg));
+                position: absolute;
+                left: 80px;
+                bottom: 0;
+                z-index: 2;
+            }
+        }
+    }
+}
+
+.mr_tut3_desc {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                width: 210px;
+                bottom: 8px;
+                left: 135px;
+                z-index: 2;
+            }
+        }
+    }
+}
+
+.mr_tut4_arr {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.transform(scaleX(-1) rotate(270deg));
+                position: absolute;
+                left: 200px;
+                top: 20px;
+                z-index: 1000006;
+            }
+        }
+    }
+}
+
+.mr_tut4_desc {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                width: 200px;
+                left: -8px;
+                top: 22px;
+                z-index: 1000006;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.mr_tutms_5 {
+    &.betslip_detail {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    z-index: 1000005;
+                    position: relative;
+                }
+            }
+        }
+    }
+}
+
+.mr_tut5_arr {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.transform(rotate(-68deg));
+                position: absolute;
+                top: 103%;
+                left: 15%;
+            }
+        }
+    }
+}
+
+.mr_tut5_desc {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                width: 180px;
+                left: 2%;
+                top: 117%;
+            }
+        }
+    }
+}
+
+.mr_tut_wrp {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                position: relative;
+            }
+        }
+    }
+
+    .betslip_detail_top & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    width: calc(100% + 18px);
+                    margin-left: -9px;
+                    padding-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+.mr_tut_bg {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.mr_mask {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                z-index: 1000004;
+            }
+        }
+    }
+}
+
+.mr_mask2 {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                position: absolute;
+                width: 100vw;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                background: brand.t(BG_bg_mask);
+            }
+        }
+    }
+}
+
+// tutorial : end

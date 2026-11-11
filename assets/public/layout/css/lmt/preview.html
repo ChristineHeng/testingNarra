@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Live Match Tracker Demo</title>
+		<!-- <link rel="stylesheet" type="text/css" href="day.min.css"> -->
+		<link id="cssLink" rel="stylesheet" type="text/css" href="night.min.css" />
+		<!-- <link rel="stylesheet" type="text/css" href="default.min.css"> -->
+		<style>
+			body {
+				display: flex;
+				justify-content: center;
+			}
+			.widgets {
+				width: 100%;
+			}
+			.sr-widget {
+				border: rgba(0, 0, 0, 0.12) solid 1px;
+				margin-bottom: 24px;
+			}
+			.sr-widget-title {
+				font-weight: bold;
+				padding-bottom: 4px;
+			}
+		</style>
+	</head>
+	<body style="padding: 0; margin: 0">
+		<script>
+			//copy from dev code
+
+			function setTheme(theme) {
+				var cssLink = document.getElementById('cssLink');
+				var html = document.getElementsByTagName('html')[0];
+				var body = document.getElementsByTagName('body')[0];
+				if (theme) {
+					if (parseInt(theme) == 2) {
+						cssLink.setAttribute('href', 'day.min.css');
+						body.className = 'mainbody_day';
+					} else if (parseInt(theme) == 1) {
+						cssLink.setAttribute('href', 'night.min.css');
+						body.className = 'mainbody_night';
+					} else {
+						cssLink.setAttribute('href', 'default.min.css');
+						body.className = 'mainbody_default';
+					}
+				} else {
+					cssLink.setAttribute('href', 'default.min.css');
+					body.className = 'mainbody_default';
+				}
+			}
+
+			//demo change theme here
+			setTheme(1);
+
+			(function (a, b, c, d, e, f, g, h, i) {
+				a[e] ||
+					((i = a[e] =
+						function () {
+							(a[e].q = a[e].q || []).push(arguments);
+						}),
+					(i.l = 1 * new Date()),
+					(i.o = f),
+					(g = b.createElement(c)),
+					(h = b.getElementsByTagName(c)[0]),
+					(g.async = 1),
+					(g.src = d),
+					g.setAttribute('n', e),
+					h.parentNode.insertBefore(g, h));
+			})(window, document, 'script', 'https://ws-cdn001.akamaized.net/b8b1e37591e951674647e626f875a954/widgetloader', 'SIR', {
+				theme: false, // using custom theme
+				language: 'en',
+			});
+			SIR('addWidget', '.sr-widget-1', 'match.lmtPlus', { layout: 'topdown', matchId: 31976951 });
+		</script>
+
+		<div class="widgets">
+			<div><div class="sr-widget sr-widget-1"></div></div>
+		</div>
+	</body>
+</html>

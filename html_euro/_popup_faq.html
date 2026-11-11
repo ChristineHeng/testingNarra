@@ -1,0 +1,25 @@
+﻿<div class="n_container">
+    <div class="n_header n_header_sports tall">
+        <div class="n_back"><div class="n_back_link"><i class="icon-fi-arrow-left"></i> </div></div>
+        <div class="title"> General Betting Rules</div>
+    </div>
+    <div class="" style="background: white;">
+        <!--     https://www.imsb-bettingrules.inplaymatrix.com/?lang=zh -->
+        <iframe id="demoIframe" frameborder="0" width="100%" src=""></iframe>
+    </div>
+</div>
+
+<script>
+     $(document).ready(function () {
+
+        var iframeHeight = $(window).height() - $(".n_header").outerHeight();
+        $("#demoIframe").css("height", iframeHeight);
+
+        $("#demofaq .n_back_link").on("click", function () {
+                $("#demofaq").css("display", "none");
+                //$("body").removeClass("popupOn");
+                popupOff();
+        });
+
+    });
+</script>

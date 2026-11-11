@@ -1,0 +1,252 @@
+@use "../../assets/themes/colours/brand"as brand;
+@use "../../assets/public/layout/css/base"as base;
+@use "../mixin"as mix;
+@use "sass:string";
+
+.cr_outer_wrp {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                height: 100vh;
+                width: 100vw;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 1000004;
+
+                @supports (padding: max(0px)) {
+                    padding-bottom: string.unquote("max(0px, env(safe-area-inset-bottom))") !important;
+                }
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                background-color: #000000;
+            }
+        }
+    }
+}
+
+.cr_wrp {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                height: 100vh;
+                width: 100vw;
+                -webkit-clip-path: inset(0 round 20px 20px 0 0);
+                clip-path: inset(0 round 20px 20px 0 0);
+                background-image: url("#{base.$sharedImgFolder}classic_retirement/mask.png#{base.$img_version}");
+                background-position: center center;
+                background-size: cover;
+            }
+        }
+    }
+}
+
+.cr_wrp_ttl {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                font-size: 20px;
+                font-weight: 700;
+                padding: 6vh 8px 0;
+                text-align: center;
+                height: 94px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                color: #fff;
+            }
+        }
+    }
+}
+
+.cr_wrp_close {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                position: absolute;
+                top: 14px;
+                right: 14px;
+                font-size: 24px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                color: rgba(255, 255, 255, 0.5);
+            }
+        }
+    }
+}
+
+.cr_wrp_img {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                text-align: center;
+                position: relative;
+                z-index: -1;
+            }
+        }
+    }
+
+    &:after {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    content: "";
+                    width: 100vw;
+                    height: 30vh;
+                    bottom: 0;
+                    left: 0;
+                    position: absolute;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 70%);
+                }
+            }
+        }
+    }
+
+    img {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    max-height: calc(84vh - 100px - env(safe-area-inset-bottom));
+                }
+            }
+        }
+    }
+}
+
+.cr_wrp_t {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                width: 86vw;
+                text-align: center;
+                font-size: 14px;
+                line-height: 20px;
+                position: fixed;
+                left: 7vw;
+                height: 60px;
+                z-index: 1;
+                bottom: calc(11vh + env(safe-area-inset-bottom));
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                color: #ccc;
+            }
+        }
+    }
+}
+
+.cr_wrp_btn {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                padding: 0 10px;
+                gap: 10px;
+                position: fixed;
+                width: 100vw;
+                bottom: calc(2vh + env(safe-area-inset-bottom));
+            }
+        }
+    }
+
+    &:after {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    content: "";
+                    position: absolute;
+                    width: 100vw;
+                    height: 185px;
+                    z-index: -1;
+                    filter: blur(50px);
+                    top: -6vh;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    background: #21233d;
+                }
+            }
+        }
+    }
+}
+
+.cr_wrp_btn_prev {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(center);
+                @include base.borderRadius(4px);
+                height: 50px;
+                font-size: 16px;
+                font-weight: 700;
+                flex: 1;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                border: 1px solid #23dae7;
+                color: #23dae7;
+            }
+        }
+    }
+}
+
+.cr_wrp_btn_nx {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(center);
+                @include base.borderRadius(4px);
+                height: 50px;
+                font-size: 16px;
+                font-weight: 700;
+                flex: 1;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                background: #23dae7;
+                color: #121212;
+            }
+        }
+    }
+}

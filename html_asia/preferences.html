@@ -1,0 +1,693 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Narra - html template</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover,user-scalable=no" />
+		<!-- <meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="theme-color" content="#000"> -->
+		<!--Base Styles-->
+		<link rel="stylesheet" type="text/css" href="../assets/public/layout/css/basestyle.min.css" />
+		<!--<link rel="stylesheet" type="text/css" href="../merchants/merchant1/css/style_asia.css">-->
+		<link rel="stylesheet" type="text/css" href="../assets/public/languages/eng/layout_asia.min.css" id="detect_language" />
+		<link rel="stylesheet" type="text/css" href="#" id="design_view" />
+
+		<script src="../assets/public/lib/jquery.js"></script>
+		<script src="../assets/public/layout/js/scripts_main.js"></script>
+		<script src="../assets/public/layout/js/scripts_asia.js"></script>
+	</head>
+
+	<body id="root">
+		<div class="n_container">
+			<div class="n_header n_header_sports">
+				<div class="n_back">
+					<a class="n_back_link mock_cb_n_back_link" target="_self"> <i class="icon-fi-arrow-left"></i> 返回 </a>
+				</div>
+				<div class="title"><i class="icon-fi-preferences"></i> 设置</div>
+			</div>
+			<div class="n_content_wrap">
+				<div class="preferences_wrap">
+					<div class="form_grp_wrap">
+						<div class="rec_row">
+							<i class="icon-fi-notification"></i>
+							Receive recommended correct score, never miss out any chances!
+							<div class="custom_switch">
+								<div class="mylabel">
+									<input type="checkbox" id="coding" />
+									<div class="slidinggroove"></div>
+									<label class="mylabel" for="coding" name="skills"></label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="preferences_wrap">
+					<div class="form_grp_wrap">
+						<div class="form_grp_item">
+							<div class="form_item_label"><label>Betting Style：</label></div>
+							<div class="form_item_checkbox">
+								<div class="filter_group active">
+									<div class="filter_item selectbox_grp">
+										<div class="selectbox_title">
+											<div class="selectbox_titlerow" id="sample_mock_setting"></div>
+											<div class="select" style="display: none">
+												<select name="slct" id="slct_layout">
+													<option value="1">Professional</option>
+													<option value="2">Beginner/Simple</option>
+												</select>
+											</div>
+											<i class="icon-fi-angle-down" aria-hidden="true"></i>
+											<div class="ob_st_popup" style="display: none" id="slct_layout_ob_st_rw">
+												<div class="ob_st_content">
+													<div class="ob_st_rw active">Professional</div>
+													<div class="ob_st_rw">Beginner/Simple</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form_grp_item">
+							<div class="form_item_label"><label>Preferred Odds Type：</label></div>
+							<div class="form_item_checkbox">
+								<div class="filter_group">
+									<div class="filter_item selectbox_grp">
+										<div class="selectbox_title">
+											<div class="selectbox_titlerow">Hong Kong</div>
+											<div class="select" style="display: none">
+												<select class="filter_item selectbox_grp" name="slct" id="slct">
+													<option value="1">Hong Kong</option>
+													<option value="2">Malay</option>
+													<option value="3">Euro</option>
+													<option value="4">Indo</option>
+												</select>
+											</div>
+											<i class="icon-fi-angle-down" aria-hidden="true"></i>
+											<div class="ob_st_popup" style="display: none">
+												<div class="ob_st_content">
+													<div class="ob_st_rw active">Hong Kong</div>
+													<div class="ob_st_rw">Malay</div>
+													<div class="ob_st_rw">Euro</div>
+													<div class="ob_st_rw">Indo</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form_grp_item">
+							<div class="form_item_label"><label>Sorting Type：</label></div>
+							<div class="form_item_checkbox">
+								<div class="filter_group">
+									<div class="filter_item selectbox_grp">
+										<div class="selectbox_title">
+											<div class="selectbox_titlerow">Sort by Popularity 1234 12345 12312342</div>
+											<div class="select" style="display: none">
+												<select class="filter_item selectbox_grp" name="slct" id="slct">
+													<option value="1">Sort by Time</option>
+													<option value="2">Sort by Popularity</option>
+												</select>
+											</div>
+											<i class="icon-fi-angle-down" aria-hidden="true"></i>
+											<div class="ob_st_popup" style="display: none">
+												<div class="ob_st_content">
+													<div class="ob_st_rw active">Sort by Time</div>
+													<div class="ob_st_rw">Sort by Popularity</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form_grp_item">
+							<div class="form_item_label"><label>Time Range：</label></div>
+							<div class="form_item_checkbox">
+								<div class="filter_group">
+									<div class="filter_item selectbox_grp">
+										<div class="selectbox_title">
+											<div class="selectbox_titlerow">Next 3 Hours</div>
+											<div class="select" style="display: none">
+												<select class="filter_item selectbox_grp" name="slct" id="slct">
+													<option value="all">All</option>
+													<option value="3">Next 3 Hours</option>
+													<option value="6">Next 6 Hours</option>
+													<option value="9">Next 9 Hours</option>
+													<option value="12">Next 12 Hours</option>
+												</select>
+											</div>
+											<i class="icon-fi-angle-down" aria-hidden="true"></i>
+											<div class="ob_st_popup" style="display: none">
+												<div class="ob_st_content">
+													<div class="ob_st_rw active">All</div>
+													<div class="ob_st_rw">Next 3 Hours</div>
+													<div class="ob_st_rw">Next 6 Hours</div>
+													<div class="ob_st_rw">Next 9 Hours</div>
+													<div class="ob_st_rw">Next 12 Hours</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form_grp_item">
+							<div class="form_item_label"><label>Time Zone：</label></div>
+							<div class="form_item_checkbox">
+								<div class="filter_group">
+									<div class="filter_item selectbox_grp">
+										<div class="selectbox_title">
+											<div class="selectbox_titlerow">GMT-12</div>
+											<div class="select" style="display: none">
+												<select class="filter_item selectbox_grp" name="slct" id="slct">
+													<option value="-12">GMT-12</option>
+													<option value="-11">GMT-11</option>
+													<option value="-10">GMT-10</option>
+													<option value="-9">GMT-9</option>
+													<option value="-8">GMT-8</option>
+													<option value="-7">GMT-7</option>
+													<option value="-6">GMT-6</option>
+													<option value="-5">GMT-5</option>
+													<option value="-4">GMT-4</option>
+													<option value="-3">GMT-3</option>
+													<option value="-2">GMT-2</option>
+													<option value="-1">GMT-1</option>
+													<option value="1">GMT+1</option>
+													<option value="2">GMT+2</option>
+													<option value="3">GMT+3</option>
+													<option value="4">GMT+4</option>
+													<option value="5">GMT+5</option>
+													<option value="6">GMT+6</option>
+													<option value="7">GMT+7</option>
+													<option value="8">GMT+8</option>
+													<option value="9">GMT+9</option>
+													<option value="10">GMT+10</option>
+													<option value="11">GMT+11</option>
+													<option value="12">GMT+12</option>
+												</select>
+											</div>
+											<i class="icon-fi-angle-down" aria-hidden="true"></i>
+											<div class="ob_st_popup" style="display: none" id="ob_st_popup_timezone">
+												<div class="ob_st_content">
+													<div class="ob_st_rw active">GMT-12</div>
+													<div class="ob_st_rw">GMT-11</div>
+													<div class="ob_st_rw">GMT-10</div>
+													<div class="ob_st_rw">GMT-8</div>
+													<div class="ob_st_rw">GMT-7</div>
+													<div class="ob_st_rw">GMT-6</div>
+													<div class="ob_st_rw">GMT-5</div>
+													<div class="ob_st_rw">GMT-4</div>
+													<div class="ob_st_rw">GMT-3</div>
+													<div class="ob_st_rw">GMT-2</div>
+													<div class="ob_st_rw">GMT-1</div>
+													<div class="ob_st_rw">GMT+1</div>
+													<div class="ob_st_rw">GMT+2</div>
+													<div class="ob_st_rw">GMT+3</div>
+													<div class="ob_st_rw">GMT+4</div>
+													<div class="ob_st_rw">GMT+5</div>
+													<div class="ob_st_rw">GMT+6</div>
+													<div class="ob_st_rw">GMT+7</div>
+													<div class="ob_st_rw">GMT+8</div>
+													<div class="ob_st_rw">GMT+9</div>
+													<div class="ob_st_rw">GMT+10</div>
+													<div class="ob_st_rw">GMT+11</div>
+													<div class="ob_st_rw">GMT+12</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form_grp_item">
+							<div class="form_item_label"><label>语言：</label></div>
+							<div class="form_item_checkbox">
+								<div class="filter_group">
+									<div class="filter_item selectbox_grp">
+										<div class="selectbox_title">
+											<div class="selectbox_titlerow">简体中文</div>
+											<div class="select" style="display: none">
+												<select class="filter_item selectbox_grp" name="slct" id="slct">
+													<option value="cn">简体中文</option>
+												</select>
+											</div>
+											<i class="icon-fi-angle-down" aria-hidden="true"></i>
+											<div class="ob_st_popup" style="display: none">
+												<div class="ob_st_content">
+													<div class="ob_st_rw active">简体中文</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="preferences_wrap">
+					<div class="form_grp_wrap">
+						<div class="form_grp_item">
+							<div class="form_grp_item_inner">
+								<div class="form_grp_wrap_label" id="view_tutorial">
+									<label>Single Bet - Customize Fast Bet (View Tutorial)</label>
+									<!-- [SFCRQ-10113] remove vnd's info icon and tooltip -->
+									<!-- <div class="info_wrp info_top">
+										<div class="info_icn"><i class="icon-fi-info"></i></div>
+										<div class="info_txt">VND 1 displayed in UI is equivalent to VND 1000 in actual value.</div>
+									</div> -->
+								</div>
+								<div class="form_grp_wrap_fastbet">
+									<div class="fastbet_title">
+										<div class="fastbet_item">Fast Bet Key 1</div>
+										<div class="fastbet_item">Fast Bet Key 2</div>
+										<div class="fastbet_item">Fast Bet Key 3</div>
+									</div>
+								</div>
+								<div class="form_grp_wrap_fastbet">
+									<div class="fastbet_wrap">
+										<div class="fastbet_item link">5000</div>
+										<div class="fastbet_item">500</div>
+										<div class="fastbet_item">100</div>
+									</div>
+								</div>
+								<div class="form_grp_wrap_fastbet ft_more_btn">
+									<div class="fastbet_title">
+										<div class="fastbet_item">Fast Bet Key 4</div>
+										<div class="fastbet_item">Fast Bet Key 5</div>
+									</div>
+								</div>
+								<div class="form_grp_wrap_fastbet ft_more_btn">
+									<div class="fastbet_wrap">
+										<div class="fastbet_item link">1000000</div>
+										<div class="fastbet_item">5000</div>
+									</div>
+								</div>
+								<!--tutorial-->
+								<div class="dot_box dot_box_color highlighted prm_rd_mask" style="display: none"></div>
+								<div class="dot_box highlighted pref_msk_des" style="display: none">We are adding in more fast bet keys for your betting convenience!</div>
+								<svg class="rec_arrow" xmlns="http://www.w3.org/2000/svg" style="display: none" width="55" height="50" viewBox="0 0 38.12 50">
+									<path d="M4.35355 46.4339C4.15829 46.6292 3.84171 46.6292 3.64645 46.4339L0.464466 43.252C0.269203 43.0567 0.269203 42.7401 0.464466 42.5449C0.659729 42.3496 0.976311 42.3496 1.17157 42.5449L4 45.3733L6.82843 42.5449C7.02369 42.3496 7.34027 42.3496 7.53553 42.5449C7.7308 42.7401 7.7308 43.0567 7.53553 43.252L4.35355 46.4339ZM48.4115 2.07251C41.0848 0.75534 30.1008 1.3784 20.9657 7.49584C11.8618 13.5924 4.5 25.2099 4.5 46.0804H3.5C3.5 24.9509 10.9715 12.9851 20.4093 6.66495C29.8158 0.365723 41.0819 -0.261215 48.5885 1.08828L48.4115 2.07251Z"></path>
+								</svg>
+							</div>
+						</div>
+						<div class="form_grp_item">
+							<div class="form_grp_item_inner">
+								<div class="form_grp_wrap_label">
+									<label>Combo Bet - Customize Fast Bet</label>
+								</div>
+								<div class="form_grp_wrap_fastbet">
+									<div class="fastbet_title">
+										<div class="fastbet_item">Fast Bet Key 1</div>
+										<div class="fastbet_item">Fast Bet Key 2</div>
+										<div class="fastbet_item">Fast Bet Key 3</div>
+									</div>
+								</div>
+								<div class="form_grp_wrap_fastbet">
+									<div class="fastbet_wrap">
+										<div class="fastbet_item">100</div>
+										<div class="fastbet_item">500</div>
+										<div class="fastbet_item">3000</div>
+									</div>
+								</div>
+								<div class="form_grp_wrap_fastbet ft_more_btn">
+									<div class="fastbet_title">
+										<div class="fastbet_item">Fast Bet Key 4</div>
+										<div class="fastbet_item">Fast Bet Key 5</div>
+									</div>
+								</div>
+								<div class="form_grp_wrap_fastbet ft_more_btn">
+									<div class="fastbet_wrap">
+										<div class="fastbet_item">100000</div>
+										<div class="fastbet_item">5000</div>
+									</div>
+								</div>
+							</div>
+							<!--tutorial-->
+							<div class="dot_box dot_box_color highlighted prm_rd_mask" style="display: none"></div>
+						</div>
+					</div>
+				</div>
+				<div class="preferences_wrap">
+					<div class="form_grp_wrap">
+						<div class="rec_row">
+							Remember Last Stake
+							<div class="custom_switch">
+								<div class="mylabel">
+									<input type="checkbox" id="switch_last_stake" />
+									<div class="slidinggroove"></div>
+									<label class="mylabel" for="switch_last_stake" name="skills"></label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bet_info">
+					<div class="error_msg_wrap">
+						<i class="icon-fi-warning-sign"></i>
+						sample error msg
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="n_footer_l2 n_footer_popover">
+			<div class="footer_nav_inner_btngrp">
+				<div class="button normal_btn">Cancel</div>
+				<div class="button placebet_nav_button" id="samplemock_save_pref">Save</div>
+			</div>
+		</div>
+		<div class="popup_window remove_space" id="popupDialog_pref" style="display: none">
+			<div class="popup_window_center">
+				<div class="n_popup_content customize_fast_bet">
+					<!--new header layout-->
+					<div class="n_popup_header new_popup">
+						<div class="hd_top_title" id="view_tutorial2">Single Bet - Customize Fast Bet (View Tutorial)</div>
+						<div class="popup_top_close"><i class="icon-fi-remove-thin"></i></div>
+					</div>
+					<div class="pref_content_pop popup_content betslip_detail">
+						<label> New Fast Bet Amount: </label>
+						<div class="bet_input_wrap_outer focus">
+							<div class="bet_input_wrap_despt">Fast Bet Key 1</div>
+							<div class="bet_input_wrap">
+								<div class="bet_input_title">RMB</div>
+								<div class="bet_input">
+									<div class="inputbox">5000</div>
+								</div>
+								<div class="close">
+									<i class="icon-fi-close"></i>
+								</div>
+							</div>
+							<div class="keypad_wrap new_keypad">
+								<div class="keypad_row num_spe">
+									<div class="keypad_itm">1</div>
+									<div class="keypad_itm">2</div>
+									<div class="keypad_itm">3</div>
+									<div class="keypad_itm delete">
+										<div class="itm"><i class="icon-fi-back"></i></div>
+									</div>
+									<div class="keypad_itm">4</div>
+									<div class="keypad_itm">5</div>
+									<div class="keypad_itm">6</div>
+
+									<div class="keypad_itm">7</div>
+									<div class="keypad_itm">8</div>
+									<div class="keypad_itm">9</div>
+								</div>
+								<div class="keypad_row">
+									<!-- add "disabled" class for disable effect -->
+									<div class="keypad_itm disabled">.</div>
+									<div class="keypad_itm">0</div>
+									<div class="keypad_itm">00</div>
+									<div class="keypad_itm">
+										<div class="itm"><i class="icon-fi-keyboard"></i></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bet_input_wrap_outer">
+							<div class="bet_input_wrap_despt">Fast Bet Key 2</div>
+							<div class="bet_input_wrap">
+								<div class="bet_input_title">RMB</div>
+								<div class="bet_input">
+									<div class="inputbox">500</div>
+								</div>
+								<div class="close">
+									<i class="icon-fi-close"></i>
+								</div>
+							</div>
+							<div class="keypad_wrap new_keypad" style="display: none">
+								<div class="keypad_row num_spe">
+									<div class="keypad_itm">1</div>
+									<div class="keypad_itm">2</div>
+									<div class="keypad_itm">3</div>
+									<div class="keypad_itm delete">
+										<div class="itm"><i class="icon-fi-back"></i></div>
+									</div>
+									<div class="keypad_itm">4</div>
+									<div class="keypad_itm">5</div>
+									<div class="keypad_itm">6</div>
+
+									<div class="keypad_itm">7</div>
+									<div class="keypad_itm">8</div>
+									<div class="keypad_itm">9</div>
+								</div>
+								<div class="keypad_row">
+									<div class="keypad_itm">.</div>
+									<div class="keypad_itm">0</div>
+									<div class="keypad_itm">00</div>
+									<div class="keypad_itm">
+										<div class="itm"><i class="icon-fi-keyboard"></i></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bet_input_wrap_outer">
+							<div class="bet_input_wrap_despt">Fast Bet Key 3</div>
+							<div class="bet_input_wrap">
+								<div class="bet_input_title">RMB</div>
+								<div class="bet_input">
+									<div class="inputbox">100</div>
+								</div>
+								<div class="close">
+									<i class="icon-fi-close"></i>
+								</div>
+							</div>
+							<div class="keypad_wrap new_keypad" style="display: none">
+								<div class="keypad_row num_spe">
+									<div class="keypad_itm">1</div>
+									<div class="keypad_itm">2</div>
+									<div class="keypad_itm">3</div>
+									<div class="keypad_itm delete">
+										<div class="itm"><i class="icon-fi-back"></i></div>
+									</div>
+									<div class="keypad_itm">4</div>
+									<div class="keypad_itm">5</div>
+									<div class="keypad_itm">6</div>
+
+									<div class="keypad_itm">7</div>
+									<div class="keypad_itm">8</div>
+									<div class="keypad_itm">9</div>
+								</div>
+								<div class="keypad_row">
+									<div class="keypad_itm">.</div>
+									<div class="keypad_itm">0</div>
+									<div class="keypad_itm">00</div>
+									<div class="keypad_itm">
+										<div class="itm"><i class="icon-fi-keyboard"></i></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bet_input_wrap_outer ft_more_btn error_wrap">
+							<div class="dot_box highlighted pref_msk_des" style="display: none">Simply input your desired fast bet amounts in my preference page~</div>
+							<svg class="rec_arrow" xmlns="http://www.w3.org/2000/svg" width="55" height="50" viewBox="0 0 38.12 50" style="display: none">
+								<path d="M4.35355 46.4339C4.15829 46.6292 3.84171 46.6292 3.64645 46.4339L0.464466 43.252C0.269203 43.0567 0.269203 42.7401 0.464466 42.5449C0.659729 42.3496 0.976311 42.3496 1.17157 42.5449L4 45.3733L6.82843 42.5449C7.02369 42.3496 7.34027 42.3496 7.53553 42.5449C7.7308 42.7401 7.7308 43.0567 7.53553 43.252L4.35355 46.4339ZM48.4115 2.07251C41.0848 0.75534 30.1008 1.3784 20.9657 7.49584C11.8618 13.5924 4.5 25.2099 4.5 46.0804H3.5C3.5 24.9509 10.9715 12.9851 20.4093 6.66495C29.8158 0.365723 41.0819 -0.261215 48.5885 1.08828L48.4115 2.07251Z"></path>
+							</svg>
+							<div class="dot_box dot_box_color highlighted prm_rd_mask" style="display: none"></div>
+							<div class="bet_input_wrap_despt">Fast Bet Key 4</div>
+							<div class="bet_input_wrap">
+								<div class="bet_input_title">RMB</div>
+								<div class="bet_input">
+									<div class="inputbox">0</div>
+								</div>
+								<div class="close">
+									<i class="icon-fi-close"></i>
+								</div>
+							</div>
+							<div class="keypad_wrap new_keypad" style="display: none">
+								<div class="keypad_row num_spe">
+									<div class="keypad_itm">1</div>
+									<div class="keypad_itm">2</div>
+									<div class="keypad_itm">3</div>
+									<div class="keypad_itm delete">
+										<div class="itm"><i class="icon-fi-back"></i></div>
+									</div>
+									<div class="keypad_itm">4</div>
+									<div class="keypad_itm">5</div>
+									<div class="keypad_itm">6</div>
+
+									<div class="keypad_itm">7</div>
+									<div class="keypad_itm">8</div>
+									<div class="keypad_itm">9</div>
+								</div>
+								<div class="keypad_row">
+									<div class="keypad_itm">.</div>
+									<div class="keypad_itm">0</div>
+									<div class="keypad_itm">00</div>
+									<div class="keypad_itm">
+										<div class="itm"><i class="icon-fi-keyboard"></i></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bet_input_wrap_outer ft_more_btn error_wrap">
+							<div class="bet_input_wrap_despt">Fast Bet Key 5</div>
+							<div class="bet_input_wrap">
+								<div class="bet_input_title">RMB</div>
+								<div class="bet_input">
+									<div class="inputbox">0</div>
+								</div>
+								<div class="close">
+									<i class="icon-fi-close"></i>
+								</div>
+							</div>
+							<div class="keypad_wrap new_keypad" style="display: none">
+								<div class="keypad_row num_spe">
+									<div class="keypad_itm">1</div>
+									<div class="keypad_itm">2</div>
+									<div class="keypad_itm">3</div>
+									<div class="keypad_itm delete">
+										<div class="itm"><i class="icon-fi-back"></i></div>
+									</div>
+									<div class="keypad_itm">4</div>
+									<div class="keypad_itm">5</div>
+									<div class="keypad_itm">6</div>
+
+									<div class="keypad_itm">7</div>
+									<div class="keypad_itm">8</div>
+									<div class="keypad_itm">9</div>
+								</div>
+								<div class="keypad_row">
+									<div class="keypad_itm">.</div>
+									<div class="keypad_itm">0</div>
+									<div class="keypad_itm">00</div>
+									<div class="keypad_itm">
+										<div class="itm"><i class="icon-fi-keyboard"></i></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bet_input_wrap_outer">
+							<div class="error_msg_wrap">
+								<i class="icon-fi-warning-sign"></i>
+								Invalid fast bet amount! value must be numeric and between 1 to 999999
+							</div>
+						</div>
+					</div>
+					<div class="n_popup_button_wrap">
+						<div class="betslip_bottom_button confirm">确认</div>
+					</div>
+				</div>
+				<div class="bg_mask pref_pop_bg_msk" id="fb_mask2" style="display: none">
+					<div class="mask_button pref_msk_pop_close" id="pref_btn2">Got It</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="bg_mask pref_bg_msk" id="fb_mask" style="display: none">
+			<div class="mask_button pref_msk_btn" id="pref_btn">Got It</div>
+		</div>
+		<script>
+			$(document).ready(function () {
+				$('.preferences_wrap .fastbet_wrap .fastbet_item').click(function () {
+					$('#popupDialog_pref').show();
+					$('#popupDialog_pref .customize_fast_bet').addClass('show');
+					popupOn(false);
+					calculatePrefContentPop();
+				});
+				$('#popupDialog_pref .popup_top_close, #popupDialog_pref .betslip_bottom_button.confirm').click(function () {
+					$('#popupDialog_pref .customize_fast_bet').removeClass('show');
+					setTimeout(function () {
+						$('#popupDialog_pref').hide();
+					}, 100);
+				});
+
+				// console.log("layout: " + sessionStorage.getItem('layout'));
+
+				if (localStorage.getItem('iscurrentsimpleview') == 'true') {
+					$('#sample_mock_setting').text('Beginner');
+					$('#slct_layout').val('2');
+				} else if (localStorage.getItem('iscurrentsimpleview') == 'false' || localStorage.getItem('iscurrentsimpleview') == null) {
+					$('#sample_mock_setting').text('Professional');
+					$('#slct_layout').val('1');
+				}
+
+				$('.normal_btn').click(function () {
+					window.history.back();
+				});
+
+				if (localStorage.getItem('isFacelift') === 'true') {
+					$('.preferences_wrap .filter_item').click(function () {
+						$(this).find('.ob_st_popup').toggle();
+						$(this).find('i').toggleClass('fl_rotate');
+						if ($(this).find('.ob_st_popup').attr('id') == 'ob_st_popup_timezone') {
+							if ($(window).height() - $('#ob_st_popup_timezone').offset().top - $('#ob_st_popup_timezone').height() <= 0) {
+								$('#ob_st_popup_timezone').height($(window).height() - $('#ob_st_popup_timezone').offset().top - 30 - $('.n_footer_l2').height());
+								$('#ob_st_popup_timezone').css('overflow', 'auto');
+							}
+						}
+					});
+					$('.ob_st_rw').click(function () {
+						$(this).closest('.filter_item').find('.selectbox_titlerow').text($(this).text());
+						$(this).closest('.filter_item').find('.ob_st_rw').removeClass('active');
+						$(this).addClass('active');
+					});
+				} else {
+					$('.preferences_wrap .filter_item').find('.select').show();
+				}
+
+				//wizard box
+				$('#view_tutorial')
+					.find('label')
+					.click(function () {
+						if (!$('.n_container').hasClass('fl_pref_tutor')) {
+							$('.n_container').addClass('fl_pref_tutor');
+							$('#fb_mask').show();
+							$(this).addClass('highlighted');
+							$('.n_container').find('.ft_more_btn .fastbet_item').addClass('highlighted');
+							$('.dot_box.dot_box_color.highlighted.prm_rd_mask').show();
+							$('.form_grp_wrap_label').addClass('highlighted');
+							$('.dot_box.highlighted.pref_msk_des').show();
+							$('.rec_arrow').show();
+						} else {
+							$('.n_container').removeClass('fl_pref_tutor');
+							$('#fb_mask').hide();
+							$(this).removeClass('highlighted');
+							$('.n_container').find('.ft_more_btn .fastbet_item').addClass('highlighted');
+							$('.dot_box.dot_box_color.highlighted.prm_rd_mask').hide();
+							$('.form_grp_wrap_label').removeClass('highlighted');
+							$('.dot_box.highlighted.pref_msk_des').hide();
+							$('.rec_arrow').hide();
+						}
+					});
+				$('#pref_btn').click(function () {
+					$('#view_tutorial').find('label').trigger('click');
+				});
+				$('#view_tutorial2').click(function () {
+					if (!$('#popupDialog_pref').hasClass('fl_pref_popup_tutor')) {
+						$('#popupDialog_pref').addClass('fl_pref_popup_tutor');
+						$('#fb_mask2').show();
+						$('#popupDialog_pref').find('.ft_more_btn').addClass('highlighted');
+						$('#popupDialog_pref').find('.rec_arrow').show();
+						$('#popupDialog_pref').find('.dot_box.highlighted.pref_msk_des').show();
+						$('#popupDialog_pref').find('.dot_box.dot_box_color.highlighted.prm_rd_mask').show();
+					} else {
+						$('#popupDialog_pref').removeClass('fl_pref_popup_tutor');
+						$('#fb_mask2').hide();
+						$('#popupDialog_pref').find('.ft_more_btn').removeClass('highlighted');
+						$('#popupDialog_pref').find('.rec_arrow').hide();
+						$('#popupDialog_pref').find('.dot_box.highlighted.pref_msk_des').hide();
+						$('#popupDialog_pref').find('.dot_box.dot_box_color.highlighted.prm_rd_mask').hide();
+					}
+				});
+				$('#pref_btn2').click(function () {
+					$('#view_tutorial2').trigger('click');
+				});
+				cyberbattleBackButton();
+
+				$('.inputbox').click(function () {
+					$('.customize_fast_bet .keypad_wrap').hide();
+					$('.bet_input_wrap_outer').removeClass('focus');
+					$(this).closest('.bet_input_wrap_outer').addClass('focus').find('.keypad_wrap').show();
+				});
+
+				/*standardize popup and toolti: start*/
+				infoPop('.form_grp_item');
+				/*standardize popup and toolti: end*/
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,663 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Narra - html template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover,user-scalable=no" />
+	<!-- <meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="theme-color" content="#000"> -->
+	<!--Base Styles-->
+	<link rel="stylesheet" type="text/css" href="../assets/public/layout/css/basestyle.min.css">
+	<!--<link rel="stylesheet" type="text/css" href="../merchants/merchant1/css/style_asia.css">-->
+	<link rel="stylesheet" type="text/css" href="../assets/public/languages/eng/layout_asia.min.css" id="detect_language">
+	<link rel="stylesheet" type="text/css" href="#" id="design_view">
+
+	<script src="../assets/public/lib/jquery.js"></script>
+	<script src="../assets/public/layout/js/scripts_main.js"></script>
+	<script src="../assets/public/layout/js/scripts_asia.js"></script>
+
+</head>
+
+<body id="root">
+	<div class="n_container">
+		<div class="n_header n_header_sports">
+			<div class="n_back"><a class="n_back_link mock_cb_n_back_link"><i class="icon-fi-arrow-left"></i> 返回</a></div>
+			<div class="title">
+				<i class="icon-fi-n-promo"></i> 每日活动
+			</div>
+			<div class="n_record prmRcd">
+				我的免费投注记录
+				<div class="red_dot"></div>
+				<div class="prmRcd_arrow">
+					<i class="icon-fi-arrow-down1"></i>
+				</div>
+				<div class="ob_st_popup" style="display: none;">
+					<div class="ob_st_content">
+						<div class="ob_st_rw active" id="promoAvailable">有效免费投注<div class="red_dot"></div></div>
+						<div class="ob_st_rw" id="promoHistory">已使用/历史</div>
+					</div>
+				</div>
+				<div class="prmRcd_drpd" style="display: none;">
+					<div class="prmRcd_item" id="promoAvailable">
+						有效免费投注
+						<div class="red_dot"></div>
+					</div>
+					<div class="prmRcd_item" id="promoHistory">已使用/历史</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="n_content_wrap_wth_bcktop promo">
+			<div class="head promo_banner_lg">
+				<div class="prmBanner">
+					<img src="../assets/public/layout/images/promo_banner_en.png">
+				</div>
+				
+				<div class="prmText">
+					<div class="prmHl">每日做活动</div>
+					<div class="prmSplit"></div>
+					<div class="prmTagline">
+						多种礼品 等你来拿
+					</div>
+					<div class="prmSplit"></div>
+				</div>
+				<div class="prmDtlWrap">
+					<div class="prmDtlItm">
+						<label>活动对象:</label>
+						<div class="prmDtl">全体会员</div>
+					</div>
+					<div class="prmDtlItm">
+						<label>活动期間:</label>
+						<div class="prmDtl">2023/05/01 - 2023/10/01</div>
+					</div>
+					<div class="prmDtlItm">
+						<label>活动内容:</label>
+						<div class="prmDtl">
+							每日达成指定任务，即可获得对应的红利。每日达成指定任务，即可获得对应的红利。每日达成指定任务，即可获得对应的红利。每日达成指定任务，即可获得对应的红利。每日达成指定任务，即可获得对应的红利。
+						</div>
+					</div>
+				</div>
+				<div class="prmNtAv">Daily promotion tasks are currently not available.</div>
+				<div class="prmDlyMs">
+					New daily mission tasks starts in
+					<div class="prmTimeCtn">
+						<div class="prmTimeWrp min">
+							<div class="prmTimeAn"></div>
+							<div class="prmTime">15</div>
+							<div class="prmTimeT">Minutes</div>
+						</div>
+						<div class="prmTimeWrp sec">
+							<div class="prmTimeAn"></div>
+							<div class="prmTime">15</div>
+							<div class="prmTimeT">Seconds</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="prmCtntWrp">
+					<div class="prmTitle">
+						活动规则
+					</div>
+					<div class="prmTable">
+						<div class="prmRule">1.会员每日达成指定任务，即可获得对应的红利。会员每日达成指定任务，即可获得对应的红利。会员每日达成指定任务，即可获得对应的红利。会员每日达成指定任务，即可获得对应的红利。会员每日达成指定任务，即可获得对应的红利。</div>
+						<div class="prmRule">2. ...</div>
+						<div class="prmRule">3. ...</div>
+						<div class="prmRule">4. ...</div>
+						<div class="prmRule">5. ...</div>
+					</div>
+				</div>
+				<div class="prmCtntWrp">
+					<div class="prmTitle">
+						活动内容
+					</div>
+					<div class="prmTable">
+						<div class="prmRow">
+							<div class="prmCol">任务事项</div>
+							<div class="prmCol">
+								奖励
+								<div class="info_wrp info_top">
+									<div class="info_icn"><i class="icon-fi-info"></i></div>
+									<div class="info_txt">免费投注分数</div>
+								</div>
+							</div>
+							<div class="prmCol">进展</div>
+						</div>
+						<div class="prmRow prmOngoing">
+							<div class="prmCol">投注10笔足球独赢盘口</div>
+							<div class="prmCol">20</div>
+							<div class="prmCol">
+								<div class="prmBtn">
+									<span>1/5</span>
+									<div class="prmPrgs" style="width: 20%;"></div>
+								</div>
+							</div>
+						</div>
+						<div class="prmRow prmOngoing">
+							<div class="prmCol">投注10笔足球独赢盘口</div>
+							<div class="prmCol">20</div>
+							<div class="prmCol">
+								<div class="prmBtn">
+									<span>2/5</span>
+									<div class="prmPrgs" style="width: 40%;"></div>
+								</div>
+
+							</div>
+						</div>
+						<div class="prmRow prmOngoing">
+							<div class="prmCol">投注10笔足球独赢盘口</div>
+							<div class="prmCol">20</div>
+							<div class="prmCol">
+								<div class="prmBtn">
+									<span>3/5</span>
+									<div class="prmPrgs" style="width: 60%;"></div>
+								</div>
+
+							</div>
+						</div>
+						<div class="prmRow prmOngoing">
+							<div class="prmCol">投注10笔足球独赢盘口</div>
+							<div class="prmCol">20</div>
+							<div class="prmCol">
+								<div class="prmBtn">
+									<span>4/5</span>
+									<div class="prmPrgs" style="width: 80%;"></div>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="prmRow prmReceive">
+							<div class="prmCol">投注10笔足球独赢盘口</div>
+							<div class="prmCol">20</div>
+							<div class="prmCol">
+								<div class="prmBtn">
+									<span>领取</span>
+								</div>
+
+							</div>
+						</div>
+						<!-- <div class="prmRow prmPendng">
+							<div class="prmCol">投注10笔篮球独赢盘口</div>
+							<div class="prmCol">20</div>
+							<div class="prmCol">
+								<div class="prmBtn">
+									<span>待领取</span>
+								</div>
+							</div>
+						</div> -->
+						<div class="prmRow prmDone">
+							<div class="prmCol">投注10笔篮球大小盘口</div>
+							<div class="prmCol">20</div>
+							<div class="prmCol">
+								<div class="prmBtn">
+									<span>已领取</span>
+								</div>
+								<!-- <div class="prmPrgs"></div> -->
+							</div>
+						</div>
+						<div class="prmRow prmPendng prmOut">
+							<div class="prmCol">投注30笔篮球大小盘口</div>
+							<div class="prmCol">已完全领取</div>
+							<div class="prmCol">
+								<div class="prmBtn">
+									<span>领取</span>
+								</div>
+							</div>
+							<div class="prmGryOut"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--use "n_content_wrap_wth_bcktop" if include back to top feature, else , use "n_content_wrap"-->
+		<div class="n_content_wrap_wth_bcktop promo" style="display: none;">
+			<div class="head promo_banner_lg" style="z-index: 8;">
+				<div class="promo_base"></div>
+				<div class="promo_flag" style="min-height: 150px">
+					<div class="promo_flag_inner"></div>
+				</div>
+				<div class="promo_top">
+					<div class="promo_text">
+						<div class="promo_headline">
+							幸运抽奖活动幸运抽奖活动幸运抽奖dsfsdfd活动幸运s
+						</div>
+						<div class="promo_split"></div>
+						<div class="promo_tagline">
+							多种礼品 等你来拿
+						</div>
+						<div class="promo_split"></div>
+					</div>
+				</div>
+			</div>
+			<div class="body promo_banner_lg" style="z-index: 1;">
+				<div class="promo_top">
+				</div>
+				<div class="promo_flag">
+					<div class="promo_flag_inner"></div>
+				</div>
+				<div class="promo_rec">
+					<div class="promo_rec_inner">
+						<div class="promo_rec_frame">
+							<div class="promo_corner">
+								<div class="promo_float"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="promo_achievement">
+				<div class="promo_info">
+					<i class="icon-fi-info"></i>
+				</div>
+				<div class="promo_selection">
+					<div class="promo_select">
+						我的成绩
+					</div>
+					<i class="icon-fi-arrow-down1" aria-hidden="true"></i>
+				</div>
+			</div>
+			<div class="promo_info_dropdown" style="display: none;">
+				幸运抽奖点数会在每天的12:00(GMT-4)更新
+			</div>
+			<div class="promo_result_dropdown slideOutUp" style="display: none;">
+				<div class="list">
+					<div class="list_left">
+						我的排行
+					</div>
+					<div class="list_right">
+						15
+					</div>
+				</div>
+				<div class="list">
+					<div class="list_left">
+						回报点数
+					</div>
+					<div class="list_right">
+						15
+					</div>
+				</div>
+				<div class="list">
+					<div class="list_left">
+						幸运抽奖点数
+					</div>
+					<div class="list_right">
+						15
+					</div>
+				</div>
+			</div>
+			<div class="promo_duration">
+				活动日期：2020/10/01 - 2020/10/30
+			</div>
+
+			<div class="promo_participant n_sticky head " id="promo_list_header">
+				<div class="tab_nav">
+					<div class="tab_nav_item active" id="sample_participant">参赛者列表</div>
+					<div class="tab_nav_item" id="sample_dailywinner">每日赢家</div>
+					<div class="tab_nav_item" id="sample_grandwinner">大奖赢家</div>
+				</div>
+				<div class="table_top">
+					<div class="promo_schedule">
+						<!-- 更新时间 -->
+						<div>Tanggal / Waktu yang Diperbaruhi: &nbsp; </div>
+						<div>2020/10/07 下午03:00</div>
+					</div>
+					<div class="n_refresh_wrap ref_btn"><i class="icon-fi-refresh"></i></div>
+				</div>
+				<div class="table_bottom">
+					<!-- 3 column-->
+					<div id="sample_participant_table_head" class="row">
+						<div class="column col_l">用户名</div>
+						<div class="column">总回报点数</div>
+						<div class="column">总幸运抽奖点数</div>
+					</div>
+					<!--4 column-->
+					<div id="sample_dailywinner_table_head" class="row" style="display: none;">
+						<div class="column col_l">用户名</div>
+						<div class="column">奖品</div>
+						<div class="column col_s">数量</div>
+						<div class="column col_m">回报点</div>
+					</div>
+				</div>
+			</div>
+			<div class="promo_participant n_sticky body">
+				<!--3 column-->
+				<div id="sample_participant_table_body" class="table_bottom">
+					<div class="row">
+						<div class="column col_l">**ace123**</div>
+						<div class="column">0</div>
+						<div class="column">300</div>
+					</div>
+					<div class="row">
+						<div class="column col_l">**hello33322123**</div>
+						<div class="column">0</div>
+						<div class="column">300</div>
+					</div>
+					<div class="row">
+						<div class="column col_l">**hdasdadss**</div>
+						<div class="column">0</div>
+						<div class="column">300</div>
+					</div>
+					<div class="row">
+						<div class="column col_l">**ss**</div>
+						<div class="column">0</div>
+						<div class="column">300</div>
+					</div>
+					<div class="row">
+						<div class="column col_l">**cccccsss**</div>
+						<div class="column">0</div>
+						<div class="column">300</div>
+					</div>
+					<div class="row">
+						<div class="column col_l">**ace123**</div>
+						<div class="column">0</div>
+						<div class="column">300</div>
+					</div>
+					<div class="row">
+						<div class="column col_l">**ace123**</div>
+						<div class="column">0</div>
+						<div class="column">300</div>
+					</div>
+					<div class="row">
+						<div class="column col_l">**ace123**</div>
+						<div class="column">0</div>
+						<div class="column">300</div>
+					</div>
+
+				</div>
+				<!--4 column-->
+				<div id="sample_dailywinner_table_body" class="table_bottom" style="display: none;">
+
+					<div class="row">
+						<div class="column col_l">**ace123**</div>
+						<div class="column"><span>iPhone 12 Pro Max (1st Prize)</span></div>
+						<div class="column col_s">1</div>
+						<div class="column col_m">30</div>
+					</div>
+					<div class="row">
+						<div class="column col_l">**hellsdsdo33322123**</div>
+						<div class="column">iPhone 11 (2nd Prize)</div>
+						<div class="column col_s">1</div>
+						<div class="column col_m">30</div>
+					</div>
+					<div class="row">
+						<div class="column col_l">**member**</div>
+						<div class="column">iPhone 11 (2nd Prize)</div>
+						<div class="column col_s">1</div>
+						<div class="column col_m">30</div>
+					</div>
+					<div class="row">
+						<div class="column col_l">**rr**</div>
+						<div class="column" id="sample_long_col">
+							<span>
+								AirAsia Voucher Rm1000 AirAsia Voucher MYR 1000 - 2 ways fly back from Cambodia to Singapore
+							</span>
+						</div>
+						<div class="ellipsis_wrap" id="sample_long_col_tooltip" style="display: none;">
+							<div class="ellipsis_text">
+								AirAsia Voucher Rm1000 AirAsia Voucher MYR 1000 - 2 ways fly back from Cambodia to Singapore
+							</div>
+						</div>
+						<div class="column col_s">1</div>
+						<div class="column col_m">30</div>
+					</div>
+					<div class="row">
+						<div class="column col_l">**ace123**</div>
+						<div class="column">iPhone 11</div>
+						<div class="column col_s">1</div>
+						<div class="column col_m">30</div>
+					</div>
+					<div class="row">
+						<div class="column col_l">**ace123**</div>
+						<div class="column">iPhone 11</div>
+						<div class="column col_s">1</div>
+						<div class="column col_m">30</div>
+					</div>
+					<div class="row">
+						<div class="column col_l">**ace123**</div>
+						<div class="column">iPhone 11</div>
+						<div class="column col_s">1</div>
+						<div class="column col_m">30</div>
+					</div>
+					<div class="row">
+						<div class="column col_l">**ace123**</div>
+						<div class="column">iPhone 11</div>
+						<div class="column col_s">1</div>
+						<div class="column col_m">30</div>
+					</div>
+					<div class="row">
+						<div class="column col_l">**ace123**</div>
+						<div class="column">iPhone 11</div>
+						<div class="column col_s">1</div>
+						<div class="column col_m">30</div>
+					</div>
+					<div class="row">
+						<div class="column col_l">**ace123**</div>
+						<div class="column">iPhone 11</div>
+						<div class="column col_s">1</div>
+						<div class="column col_m">30</div>
+					</div>
+					<div class="row">
+						<div class="column col_l">**ace123**</div>
+						<div class="column">iPhone 11</div>
+						<div class="column col_s">1</div>
+						<div class="column col_m">30</div>
+					</div>
+					<div class="row">
+						<div class="column col_l">**ace123**</div>
+						<div class="column">iPhone 11</div>
+						<div class="column col_s">1</div>
+						<div class="column col_m">30</div>
+					</div>
+					<div class="row">
+						<div class="column col_l">**ace123**</div>
+						<div class="column">iPhone 11</div>
+						<div class="column col_s">1</div>
+						<div class="column col_m">30</div>
+					</div>
+					<div class="row">
+						<div class="column col_l">**ace123**</div>
+						<div class="column">iPhone 11</div>
+						<div class="column col_s">1</div>
+						<div class="column col_m">30</div>
+					</div>
+					<div class="row">
+						<div class="column col_l">**ace123**</div>
+						<div class="column">iPhone 11</div>
+						<div class="column col_s">1</div>
+						<div class="column col_m">30</div>
+					</div>
+					<div class="row">
+						<div class="column col_l">**ace123**</div>
+						<div class="column">iPhone 11</div>
+						<div class="column col_s">1</div>
+						<div class="column col_m">30</div>
+					</div>
+					<div class="row">
+						<div class="column col_l">**ace123**</div>
+						<div class="column">iPhone 11</div>
+						<div class="column col_s">1</div>
+						<div class="column col_m">30</div>
+					</div>
+					<div class="row">
+						<div class="column col_l">**ace123**</div>
+						<div class="column">iPhone 11</div>
+						<div class="column col_s">1</div>
+						<div class="column col_m">30</div>
+					</div>
+				</div>
+				<!--no record found-->
+				<div class="table_bottom" style="display: none;">
+					<div class="row empty">
+						当前还没有任何记录
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<!-- <div class="eventListingRefresh btn_backtop" id="top">
+		<i class="icon-fi-backtotop-euro"></i>
+	</div> -->
+
+	<div class="footer_main" id="main_footer"></div>
+	<div id="demoOnly_global_pop_item"></div>
+
+	<div class="eventListingRefresh btn_float_ref btn_backtop show promo" id="prmRefresh" style="bottom: 55px;">
+		<i class="icon-fi-refresh-euro"></i>
+	</div>
+
+	<div class="popup_window" id="popup_promotion" style="display: none;">
+		<div class="popup_window_center">
+			<div class="n_popup_content">
+				<div class="n_popup_header"><i class="icon-fi-exclamation-sign"></i>Message [380]</div>
+				<div class="betslip_detail">
+					<div class="betslip_detail_top">
+						<div class="betslip_teams_wrap">
+							抱歉，您目前无权享受此促销活动。
+						</div>
+					</div>
+					<div class="betslip_border"></div>
+					<div class="betslip_detail_bottom">
+						<div class="n_popup_button_wrap">
+							<div class="betslip_bottom_button confirm" id="popup_promotion_button">OK</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		$(document).ready(function () {
+			promoFooter();
+
+			$("#demoOnly_global_pop_item").load("_global_pop_item.html", function () {
+				$("#mybet").load("_popup_mybet_unsettled.html");
+			});
+
+			$('#promo_records').click(function () {
+				window.location.href = "promo-record.html";
+			});
+			$('.promo_selection').click(function () {
+				$(this).find("i").toggleClass("icon-fi-arrow-down1 icon-fi-arrow-up1");
+				$(".promo_result_dropdown").toggle().toggleClass("slideInDown slideOutUp");
+			});
+			$('.promo_info').click(function () {
+				$(".promo_info_dropdown").toggle();
+			});
+
+			$('#sample_long_col').click(function () {
+				$("#sample_long_col_tooltip").toggle();
+			});
+
+			function hideAllTable() {
+				$(".tab_nav_item").removeClass("active");
+				$("#sample_participant_table_head").hide();
+				$("#sample_participant_table_body").hide();
+				$("#sample_dailywinner_table_head").hide();
+				$("#sample_dailywinner_table_body").hide();
+				$("#sample_dailywinner_table_body").next().hide();
+			}
+
+			$('#sample_participant').click(function () {
+				hideAllTable();
+				$(this).addClass("active");
+				$("#sample_participant_table_head").show();
+				$("#sample_participant_table_body").show();
+				$(".ref_btn").show();
+			});
+			$('#sample_dailywinner').click(function () {
+				hideAllTable();
+				$(this).addClass("active");
+				$("#sample_dailywinner_table_head").show();
+				$("#sample_dailywinner_table_body").show();
+				$("#sample_dailywinner_table_head .col_m").show();
+				$("#sample_dailywinner_table_body .col_m").show();
+				$(".ref_btn").hide();
+			});
+			$('#sample_grandwinner').click(function () {
+				hideAllTable();
+				$(this).addClass("active");
+				$("#sample_dailywinner_table_head").show();
+				//$("#sample_dailywinner_table_body").show();
+				$("#sample_dailywinner_table_body").next().show();
+				$("#sample_dailywinner_table_head .col_m").hide();
+				$("#sample_dailywinner_table_body .col_m").hide();
+				$(".ref_btn").hide();
+			});
+
+			$('.ref_btn').click(function () {
+				$(this).addClass("rotate");
+				setTimeout(function () { $(".ref_btn").removeClass("rotate"); }, 1000);
+			});
+
+			var banner_lg_top = $(".n_header").outerHeight();
+
+
+			var minheight = 150 / 2;
+			var promo_headline_height = $(".promo_headline").outerHeight();
+
+			if (promo_headline_height > minheight) {
+				$(".promo_banner_lg.head .promo_flag").css("min-height", (minheight + promo_headline_height));
+			}
+
+			var promo_list_top = banner_lg_top + $(".promo_banner_lg.head").outerHeight() - 4;
+
+			$(".promo_banner_lg.head").addClass("sticky");
+			$(".promo_banner_lg.head").css("top", banner_lg_top);
+			$(".promo_participant.head").css("top", promo_list_top);
+
+			$(".prmRcd").click(function () {
+				$(this).find("i").toggleClass("icon-fi-arrow-down1 icon-fi-arrow-up1");
+				if ($("body").hasClass("fl")) {
+					$(this).find($(".ob_st_popup")).toggle();
+				} else {
+					$(this).find($(".prmRcd_drpd")).toggle();
+				}
+			});
+
+			promoRcd();
+
+			//Popup for promotion error
+			$(".prmReceive .prmBtn").click(function () {
+				$("#popup_promotion").show();
+			});
+
+			$("#popup_promotion_button").click(function () {
+				$("#popup_promotion").hide();
+			});
+
+			var lastScrollTop = 0;
+			// var n_footer_combo_height = $(".n_footer_combo_height").height();
+			$("#prmRefresh").css("bottom", "110px");
+			$(".n_container").scroll(function () {
+				var st = $(this).scrollTop();
+
+				var n_footer_combo_outerHeight = $(".n_footer_combo_height").outerHeight();
+
+				if (st > lastScrollTop) {
+					$("#prmRefresh").css("bottom", "55px");
+					// $("#toTop").css("bottom", n_footer_combo_height);
+					// $("#top").css("bottom", "110px");
+				} else {
+					// $("#top").css("bottom", "165px");
+					$("#prmRefresh").css("bottom", "110px");
+					// $("#toTop").css("bottom", n_footer_combo_height *2);
+				}
+				lastScrollTop = st <= 0 ? 0 : st;
+			});
+
+			promoTimer(1, 1);
+			cyberbattleBackButton();
+
+			/*standardize popup and toolti: start*/
+			infoPop(".prmTable");
+			/*standardize popup and toolti: end*/
+		});
+	</script>
+</body>
+
+</html>

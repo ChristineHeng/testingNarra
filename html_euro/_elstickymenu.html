@@ -1,0 +1,897 @@
+<div class="el_top_panel n_sticky">
+	<div class="n_annoucement">
+		<div class="n_annoucement_icon sample_dontcopy_mock_link_annouce"><i class="icon-fi-announcements"></i> Announcements</div>
+		<div class="n_annoucement_text">
+			<!--for animation , will change to reactJS handling due to SFUAT-3944,
+            add in id : "test_annoucement_mockfromReact" and remove "animation-duration: 29.5067s;" for simulation-->
+			<!--  <div class="n_annoucement_text_inner" style="animation-duration: 29.5067s;" >
+                 <span style="margin-left: 20px;">  [足球][墨西哥杯] '艾特莱-vs-帕丘卡' -30/07. *直播 由于错误显示分数，注单号：[1907302235531883,1907302235491858 ] 将被退款。正确运行的赛事分数是[1-0]而不是[0-0]</span>
+                 <span style="margin-left: 20px;">   [足球][美国职业大联盟] '科罗拉多急流-vs-新英伦革命' -04/07. *直播。由于直播中断，这场赛事将从网页删除。造成不便之处，敬请原谅！ ***</span>
+                 <span style="margin-left: 20px;">   。请重新检查您的投注单与账户结余，造成不便之处，敬请原谅！ ** end!!</span>
+             </div>  -->
+			<!-- animation pace: SFUAT-4019, use scrollamount="3"-->
+			<!-- <marquee scrollamount="3">
+				<span style="margin-left: 20px"> [足球][墨西哥杯] '艾特莱-vs-帕丘卡' -30/07. *直播 由于错误显示分数，注单号：[1907302235531883,1907302235491858 ] 将被退款。正确运行的赛事分数是[1-0]而不是[0-0]。</span>
+				<span style="margin-left: 20px"> [足球][美国职业大联盟] '科罗拉多急流-vs-新英伦革命' -04/07. *直播。由于直播中断，这场赛事将从网页删除。造成不便之处，敬请原谅！。 ***</span>
+				<span style="margin-left: 20px"> 请重新检查您的投注单与账户结余，造成不便之处，敬请原谅！ ** end!!</span>
+			</marquee> -->
+			<!-- [DES-1687][SFQAT-25490][EU][Announcement] Announcement should auto scroll in latest chrome updated version -->
+			<div class="n_annoucement_text_inner">
+				<span style="margin-left: 20px"> [足球][墨西哥杯] '艾特莱-vs-帕丘卡' -30/07. *直播 由于错误显示分数，注单号：[1907302235531883,1907302235491858 ] 将被退款。正确运行的赛事分数是[1-0]而不是[0-0]。</span>
+				<span style="margin-left: 20px"> [足球][美国职业大联盟] '科罗拉多急流-vs-新英伦革命' -04/07. *直播。由于直播中断，这场赛事将从网页删除。造成不便之处，敬请原谅！。 ***</span>
+				<span style="margin-left: 20px"> 请重新检查您的投注单与账户结余，造成不便之处，敬请原谅！ ** end!!</span>
+			</div>
+		</div>
+	</div>
+	<div class="selected_nav" id="demoOnly_header_euro" style="display: none">Euro Cup 2021</div>
+	<div class="selected_nav" id="demoOnly_header_inplay" style="display: none"><i class="icon-fi-n-liveball"></i>In-play Events</div>
+	<div class="selected_nav" id="demoOnly_header_today" style="display: none">
+		<i class="icon-fi-upcoming"></i>Today's Events
+		<div class="fltr_grp fltr_grp_test_el_top_panel">
+			<i class="icon-fi-n-filter-league"></i>
+			<div class="fltr_dd" style="display: none">
+				<div class="fltr_dd_itm active">All</div>
+				<div class="fltr_dd_itm">Next 3 Hours</div>
+				<div class="fltr_dd_itm">Next 6 Hours</div>
+				<div class="fltr_dd_itm">Next 9 Hours</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- note : for all slider, dev copy please add "slider_hidden_x" and use React/JS scroll,
+     do not use native scroll, (IOS overscroll issue)
+     mock for demo purposes only -->
+<div class="el_header_grp n_sticky">
+	<div class="er_main_menu smaller_tab" id="menu_scroll">
+		<div class="m_tab active" id="featured_tab">
+			<div class="icon home"><i class="icon-fi-n-popular"></i></div>
+			Featured
+		</div>
+		<div class="v_split"></div>
+		<div class="m_tab" id="favorite_tab">
+			<!-- <div class="m_tab" id="fav_tab"> -->
+			<div class="icon fav">
+				<i class="icon-fi-n-myfav"></i>
+				<sup>1</sup>
+			</div>
+			Favorites
+		</div>
+		<div class="v_split"></div>
+		<div class="m_tab" id="insights_tab">
+			<div class="icon">
+				<i class="icon-fi-insight"></i>
+			</div>
+			Insights
+			<div class="new_tag" id="mock_trigger_lb_tut">Tut</div>
+		</div>
+		<div class="v_split"></div>
+		<div class="m_tab" id="soccerfifa_tab" style="display: none">
+			<div class="icon home">
+				<img class="soccerfifa" src="../assets/public/layout/images/euro_fifa_logo.png" />
+			</div>
+			FIFA CWC
+			<div class="new_tag hot_tag">Hot</div>
+		</div>
+		<div class="v_split"></div>
+		<!-- <div class="m_tab active olympics" id="olympics_tab">
+            <div class="icon">
+                <img class="olympics" src="../assets/public/layout/images/olympics.png">
+                <sup>420</sup>
+            </div>
+            <div class="olympics_tx">Olympics</div>
+            <div class="new_tag ppl">热门</div>
+            <div class="olympics_bg"></div>
+        </div> -->
+		<div class="m_tab active" id="obAllBoost_tab">
+			<div class="icon home"><i class="icon-fi-odds-boost"></i></div>
+			Odds Boost
+		</div>
+		<div class="v_split"></div>
+		<div class="m_tab active" id="demoOnlyLuckyEPage">
+			<div class="icon"><i class="icon-fi-clover-line"></i></div>
+			Lucky 8
+			<div class="new_tag">New</div>
+		</div>
+		<div class="v_split"></div>
+		<div class="m_tab active" id="all_tab">
+			<div class="icon fav">
+				<i class="icon-fi-all-sports"></i>
+				<sup>142</sup>
+			</div>
+			All Sports
+		</div>
+		<div class="v_split"></div>
+		<div class="m_tab" id="fifa_world_cup_tab">
+			<div class="icon home">
+				<img class="big_comp_img" src="../assets/public/layout/images/euro_fifa_world_cup.png" />
+			</div>
+			FIFA World Cup 2026
+			<div class="new_tag hot_tag">Hot</div>
+		</div>
+		<div class="v_split"></div>
+		<div class="m_tab" id="winter_olympics_tab">
+			<div class="icon home">
+				<img class="big_comp_img" src="../assets/public/layout/images/euro_winter_olympics.png" />
+			</div>
+			2026 Winter Olympics
+			<div class="new_tag hot_tag">Hot</div>
+		</div>
+		<div class="v_split"></div>
+		<div class="m_tab" id="soccer_tab">
+			<div class="icon">
+				<i class="icon-fi-title-s1"></i>
+				<sup>420</sup>
+			</div>
+			Soccer
+		</div>
+		<div class="v_split"></div>
+		<div class="m_tab" id="soccer_tab">
+			<div class="icon">
+				<i class="icon-fi-title-s54"></i>
+				<sup>420</sup>
+			</div>
+			Cyber Soccer
+		</div>
+		<div class="v_split"></div>
+		<div class="m_tab" id="basketball_tab">
+			<div class="icon">
+				<i class="icon-fi-title-s2"></i>
+				<sup>300</sup>
+			</div>
+			Basketball
+		</div>
+		<div class="v_split"></div>
+		<div class="m_tab" id="basketball_tab">
+			<div class="icon">
+				<i class="icon-fi-title-s55"></i>
+				<sup>300</sup>
+			</div>
+			Cyber Basketball
+		</div>
+		<div class="v_split"></div>
+		<div class="m_tab" id="cricket_tab">
+			<div class="icon">
+				<i class="icon-fi-title-s13"></i>
+				<sup>300</sup>
+			</div>
+			Cricket
+		</div>
+		<div class="v_split"></div>
+		<div class="m_tab" id="cricket_tab">
+			<div class="icon">
+				<i class="icon-fi-title-s59"></i>
+				<sup>300</sup>
+			</div>
+			Cyber Cricket
+		</div>
+		<div class="v_split"></div>
+		<div class="m_tab" id="tennis_tab">
+			<div class="icon">
+				<i class="icon-fi-title-s3"></i>
+				<sup>3</sup>
+			</div>
+			Tennis
+		</div>
+		<div class="v_split"></div>
+		<div class="m_tab" id="tennis_tab">
+			<div class="icon">
+				<i class="icon-fi-title-s67"></i>
+				<sup>3</sup>
+			</div>
+			Cyber Tennis
+		</div>
+		<div class="v_split"></div>
+		<div class="m_tab" id="racing_tab">
+			<div class="icon">
+				<i class="icon-fi-title-s1001"></i>
+				<sup>40</sup>
+			</div>
+			Racing
+		</div>
+		<div class="v_split"></div>
+		<div class="m_tab" id="cyber_sport_tab">
+			<div class="icon">
+				<i class="icon-fi-title-cyber-sport"></i>
+				<sup>40</sup>
+			</div>
+			Cyber Sport
+		</div>
+		<div class="v_split"></div>
+		<div class="m_tab" id="esports_tab">
+			<div class="icon">
+				<i class="icon-fi-title-esports"></i>
+				<sup>300</sup>
+			</div>
+			Esports
+			<div class="new_tag">New</div>
+		</div>
+		<div class="v_split"></div>
+		<div class="m_tab" id="table_tennis_tab">
+			<div class="icon">
+				<i class="icon-fi-title-s36"></i>
+				<sup>3</sup>
+			</div>
+			Table Tennis
+		</div>
+		<!--hide this to remove unlink page-->
+		<!-- <div class="v_split"></div>
+        <div class="m_tab" id="financial_bets_tab">
+            <div class="icon">
+                <i class="icon-fi-title-s51"></i>
+                <sup>3</sup>
+            </div>
+            Financial Bets
+        </div> -->
+		<div class="v_split"></div>
+		<div class="m_tab" id="badminton_tab">
+			<div class="icon">
+				<i class="icon-fi-title-s7"></i>
+			</div>
+			Badminton
+			<div class="new_tag">新</div>
+		</div>
+		<div class="v_split"></div>
+		<div class="m_tab" id="baseball_tab">
+			<div class="icon">
+				<i class="icon-fi-title-s8"></i>
+			</div>
+			Baseball
+			<div class="new_tag">新</div>
+		</div>
+		<div class="v_split"></div>
+		<div class="m_tab" id="icehockey_tab">
+			<div class="icon">
+				<i class="icon-fi-title-s25"></i>
+			</div>
+			Ice Hockey
+		</div>
+		<div class="v_split"></div>
+		<div class="m_tab" id="volleyball_tab">
+			<div class="icon">
+				<i class="icon-fi-title-s40"></i>
+			</div>
+			Volleyball
+			<div class="new_tag">新</div>
+		</div>
+		<div class="v_split"></div>
+		<div class="m_tab" id="virtual_tab">
+			<div class="icon">
+				<i class="icon-fi-title-s52"></i>
+			</div>
+			Virtual
+		</div>
+		<div class="m_tab" id="american_football_tab">
+			<div class="icon">
+				<i class="icon-fi-title-s19"></i>
+			</div>
+			American Football
+			<div class="new_tag">新</div>
+		</div>
+		<div class="m_tab" id="rugby_tab">
+			<div class="icon">
+				<i class="icon-fi-title-s31"></i>
+			</div>
+			Rugby
+			<div class="new_tag">新</div>
+		</div>
+		<div class="m_tab" id="snooker_tab">
+			<div class="icon">
+				<i class="icon-fi-title-s34"></i>
+			</div>
+			Snooker / Pool
+			<div class="new_tag">新</div>
+		</div>
+	</div>
+	<div class="bg_mask esports_tut1" style="display: none">
+		<svg class="rec_arrow" xmlns="http://www.w3.org/2000/svg" width="30.91" height="51.39" viewBox="0 0 30.91 51.39">
+			<path d="M.36,.33C1.02-.22,1.62,0,2.27,.41,15.45,8.6,22.13,24.14,18.98,39.31c-.63,3.03-1.62,5.94-3,8.72-.03,.06-.04,.12-.1,.27,.24-.05,.42-.08,.59-.12,4.17-1.03,8.34-2.06,12.5-3.09,1.32-.33,1.88,.09,1.94,1.41l-.35,.58c-.36,.13-.71,.3-1.09,.39-5.13,1.27-10.26,2.54-15.39,3.81-1.13,.28-1.62,0-1.9-1.11-1.32-5.25-2.63-10.51-3.93-15.76-.21-.84,.12-1.47,.85-1.65,.72-.18,1.32,.22,1.53,1.06,1.03,4.12,2.05,8.24,3.08,12.35,.04,.17,.09,.34,.24,.53,.4-.95,.84-1.88,1.18-2.85,3.96-11.35,2.57-22.03-4.17-31.99C8.32,8.01,4.92,4.91,.92,2.47,.31,2.1-.06,1.65,0,.91L.36,.33Z"></path>
+		</svg>
+		<div class="dot_box highlighted esports_desc">Now launching our vey own E-sports!</div>
+	</div>
+	<div class="bg_mask lb_mask">
+		<svg class="rec_arrow lb_arrow" xmlns="http://www.w3.org/2000/svg" width="55" height="50" viewBox="0 0 38.12 50">
+			<path d="M4.35355 46.4339C4.15829 46.6292 3.84171 46.6292 3.64645 46.4339L0.464466 43.252C0.269203 43.0567 0.269203 42.7401 0.464466 42.5449C0.659729 42.3496 0.976311 42.3496 1.17157 42.5449L4 45.3733L6.82843 42.5449C7.02369 42.3496 7.34027 42.3496 7.53553 42.5449C7.7308 42.7401 7.7308 43.0567 7.53553 43.252L4.35355 46.4339ZM48.4115 2.07251C41.0848 0.75534 30.1008 1.3784 20.9657 7.49584C11.8618 13.5924 4.5 25.2099 4.5 46.0804H3.5C3.5 24.9509 10.9715 12.9851 20.4093 6.66495C29.8158 0.365723 41.0819 -0.261215 48.5885 1.08828L48.4115 2.07251Z" />
+		</svg>
+		<div class="dot_box highlighted lb_desc">1. Explore insights to help you make better bets.</div>
+	</div>
+</div>
+<!--cyber sport slider menu-->
+<div class="n_sports_menu slider_wrap_flexi sm_slider n_sticky" style="display: none">
+	<div class="item_wrap active">
+		<div class="item">Cyber Soccer</div>
+	</div>
+	<div class="item_wrap">
+		<div class="item">Cyber Basketball</div>
+	</div>
+	<div class="item_wrap" id="tabSoccerTestingShortContent">
+		<div class="item">Cyber Cricket</div>
+	</div>
+	<div class="item_wrap">
+		<div class="item">Cyber KOF XV</div>
+	</div>
+	<div class="slider"></div>
+</div>
+<!-- odds boost -->
+<div class="ob_listing_hdr">
+	<div class="ob_listing_hdr_l">
+		<i class="icon-fi-arrow-up1"></i>
+		Odds Boost
+		<div class="ob_badge">25+</div>
+	</div>
+	<div class="ob_btn" id="demoAllBoostPage">All Boost<i class="icon-fi-angle-right"></i></div>
+</div>
+<!-- <div class="ob_listing_hdr">
+    <div class="ob_listing_hdr_l">
+        <i class="icon-fi-arrow-down1 "></i>
+        Odds Boost
+        <div class="ob_badge">25+</div>
+    </div>
+    <div class="ob_btn" id="demoAllBoostPage"><i class="icon-fi-odds-boost"></i>All Boost<i
+            class="icon-fi-angle-right"></i></div>
+</div> -->
+<div class="ob_wrp">
+	<div class="ob_slide_wrp ob_banner_enhc_v2 ob_banner_att">
+		<div class="ob_card">
+			<div class="ob_hdr_wrp">
+				<div class="ob_pap_label enhc_lb_v2">Apuesta Combinada del Partido</div>
+				<div class="ob_bet_placed">
+					<img src="../assets/public/layout/images/ob_fire.png" />
+					<span>260</span>
+				</div>
+			</div>
+			<div class="ob_pap_title">Favourite's Choice</div>
+			<div class="ob_pap omp">
+				<div class="ob_teams_wrp">
+					<div class="ob_team">
+						<div class="team_icon">
+							<img src="../assets/public/layout/images/team_home.svg" />
+						</div>
+						<div class="team_name">Vissel Kobe Vissel Kobe Vissel Kobe</div>
+					</div>
+					<span>vs</span>
+					<div class="ob_team">
+						<div class="team_icon">
+							<img src="../assets/public/layout/images/team_home.svg" />
+						</div>
+						<div class="team_name">FC Seoul FC Seoul FC Seoul FC Seoul</div>
+					</div>
+				</div>
+				<div class="obp_wrp enhanced_tl">
+					<div class="obp_i">
+						<div class="obp_t_wrp">
+							<div class="obp_t">
+								<span>
+									Odd/Even
+									<span class="bs_hl">Odd</span>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="obp_i">
+						<div class="obp_t_wrp">
+							<div class="obp_t">
+								<span>Both Teams To Score <span class="bs_hl">Yes</span></span>
+							</div>
+						</div>
+					</div>
+					<div class="obp_i">
+						<div class="obp_t_wrp">
+							<div class="obp_t">
+								<span>Villarreal CF Clean Sheet CF <span class="bs_hl">Villarreal CF Yes</span></span>
+							</div>
+						</div>
+					</div>
+					<div class="obp_i">
+						<div class="obp_t_wrp">
+							<div class="obp_t">
+								<div class="ob_icon n_sev_period icon_1H">1H</div>
+								<span>Team To Score Goal 1 <span class="bs_hl">Vissel Kobe</span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ob_content">
+				<div class="ob_odds_chg" id="demoOnlyFTTrigger">Filter tutorial</div>
+			</div>
+		</div>
+		<div class="ob_card">
+			<div class="ob_hdr_wrp">
+				<div class="ob_pap_label enhc_lb_v2">Apuesta Combinada del Partido</div>
+				<div class="ob_bet_placed">
+					<img src="../assets/public/layout/images/ob_fire.png" />
+					<span>260</span>
+				</div>
+			</div>
+			<div class="ob_pap_title"></div>
+			<div class="ob_pap omp">
+				<div class="ob_teams_wrp">
+					<div class="ob_team">
+						<div class="team_icon">
+							<img src="../assets/public/layout/images/team_home.svg" />
+						</div>
+						<div class="team_name">Vissel Kobe Vissel Kobe Vissel Kobe</div>
+					</div>
+					<span>vs</span>
+					<div class="ob_team">
+						<div class="team_icon">
+							<img src="../assets/public/layout/images/team_home.svg" />
+						</div>
+						<div class="team_name">FC Seoul FC Seoul FC Seoul FC Seoul</div>
+					</div>
+				</div>
+				<div class="obp_wrp enhanced_tl">
+					<div class="obp_i">
+						<div class="obp_t_wrp">
+							<div class="obp_t">
+								<span>
+									Odd/Even
+									<span class="bs_hl">Odd</span>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="obp_i">
+						<div class="obp_t_wrp">
+							<div class="obp_t">
+								<span>Both Teams To Score <span class="bs_hl">Yes</span></span>
+							</div>
+						</div>
+					</div>
+					<div class="obp_i">
+						<div class="obp_t_wrp">
+							<div class="obp_t">
+								<span>Villarreal CF Clean Sheet CF <span class="bs_hl">Villarreal CF Yes</span></span>
+							</div>
+						</div>
+					</div>
+					<div class="obp_i">
+						<div class="obp_t_wrp">
+							<div class="obp_t">
+								<div class="ob_icon n_sev_period icon_1H">1H</div>
+								<span>Team To Score Goal 1 <span class="bs_hl">Vissel Kobe</span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ob_content">
+				<div class="ob_odds_chg">Empty Title</div>
+			</div>
+		</div>
+		<div class="ob_card">
+			<div class="ob_hdr_wrp">
+				<div class="ob_pap_label enhc_lb_v2">Apuesta Combinada del Partido</div>
+				<div class="ob_bet_placed"></div>
+			</div>
+			<div class="ob_pap_title">Hot Picks of the Day</div>
+			<div class="ob_pap">
+				<div class="obp_wrp enhanced_tl">
+					<div class="obp_i">
+						<div class="obp_t_wrp">
+							<div class="obp_t">
+								<span>Both Teams To Score <span class="bs_hl">Yes</span></span>
+							</div>
+							<div class="obp_c"><div>Argentinos Juniors vs CA Rosario Central</div></div>
+						</div>
+					</div>
+					<div class="obp_i">
+						<div class="obp_t_wrp">
+							<div class="obp_t">
+								<span>Both Teams To Score <span class="bs_hl">Yes</span></span>
+							</div>
+							<div class="obp_c"><div>Argentinos Juniors vs CA Rosario Central</div></div>
+						</div>
+					</div>
+					<div class="obp_i">
+						<div class="obp_t_wrp">
+							<div class="obp_t">
+								<span>Both Teams To Score <span class="bs_hl">Yes</span></span>
+							</div>
+							<div class="obp_c"><div>Club Atletico Banfield vs Gimnasia La Plata</div></div>
+						</div>
+					</div>
+					<div class="obp_i">
+						<div class="obp_t_wrp">
+							<div class="obp_t">
+								<span>Clube Atletico Mineiro Clean Sheet <span class="bs_hl">Clube Atletico Mineiro Yes</span></span>
+							</div>
+							<div class="obp_c"><div>Clube Atletico Mineiro vs Sport Club Internacional</div></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ob_content">
+				<div class="ob_odds_chg">
+					<span class="p_odds">99.86</span>
+					<i class="icon-fi-double-angle-right"></i>
+					<span class="b_odds">10.99<i class="icon-fi-odds-boost"></i></span>
+				</div>
+			</div>
+		</div>
+		<div class="ob_card">
+			<div class="ob_hdr_wrp">
+				<div class="ob_pap_label enhc_lb_v2">Single</div>
+				<div class="ob_bet_placed">
+					<img src="../assets/public/layout/images/ob_fire.png" />
+					<span>260</span>
+				</div>
+			</div>
+			<div class="ob_md">
+				<div class="ob_title">
+					<div class="n_sev_period icon_1H ob_icon">1H</div>
+					Correct Score
+					<span class="bs_hl">1 - 0</span>
+				</div>
+				<div class="ob_teams_wrp">
+					<div class="ob_team">
+						<div class="team_icon">
+							<img src="../assets/public/layout/images/team_home.svg" />
+						</div>
+						<div class="team_name">CFCI U23</div>
+					</div>
+					<div class="ob_team">
+						<div class="team_icon">
+							<img src="../assets/public/layout/images/team_home.svg" />
+						</div>
+						<div class="team_name">Kopana FC</div>
+					</div>
+				</div>
+			</div>
+			<div class="ob_content">
+				<div class="ob_odds_chg add">
+					<span class="p_odds">99.86</span>
+					<i class="icon-fi-double-angle-right"></i>
+					<span class="b_odds">10.99<i class="icon-fi-odds-boost"></i></span>
+				</div>
+			</div>
+		</div>
+		<div class="ob_card">
+			<div class="ob_hdr_wrp">
+				<div class="ob_pap_label enhc_lb_v2">Single</div>
+				<div class="ob_bet_placed">
+					<img src="../assets/public/layout/images/ob_fire.png" />
+					<span>260</span>
+				</div>
+			</div>
+			<div class="ob_md">
+				<div class="ob_title">
+					Correct Score
+					<span class="bs_hl">1 - 0</span>
+				</div>
+				<div class="ob_teams_wrp">
+					<div class="ob_team">
+						<div class="team_icon">
+							<img src="../assets/public/layout/images/team_home.svg" />
+						</div>
+						<div class="team_name">CFCI U23 CFCI U23 CFCI U23 CFCI U23 Romania CFCI U23CFCI U23 CFCI U23CFCI U23CFCI U23</div>
+					</div>
+					<div class="ob_team">
+						<div class="team_icon">
+							<img src="../assets/public/layout/images/team_home.svg" />
+						</div>
+						<div class="team_name">Kopana FC</div>
+					</div>
+				</div>
+			</div>
+			<div class="ob_content">
+				<div class="ob_odds_chg up">
+					<span class="p_odds">99.86</span>
+					<i class="icon-fi-double-angle-right"></i>
+					<span class="b_odds"
+						><span class="arrow"><i class="icon-fi-arrow-up"></i></span>10.99<i class="icon-fi-odds-boost"></i
+					></span>
+				</div>
+			</div>
+		</div>
+		<div class="ob_card">
+			<div class="ob_hdr_wrp">
+				<div class="ob_pap_label enhc_lb_v2">Single</div>
+				<div class="ob_bet_placed">
+					<img src="../assets/public/layout/images/ob_fire.png" />
+					<span>260</span>
+				</div>
+			</div>
+			<div class="ob_md">
+				<div class="ob_title">
+					Correct Score
+					<span class="bs_hl">1 - 0</span>
+				</div>
+				<div class="ob_teams_wrp">
+					<div class="ob_team">
+						<div class="team_icon">
+							<img src="../assets/public/layout/images/team_home.svg" />
+						</div>
+						<div class="team_name">CFCI U23 CFCI U23 CFCI U23 CFCI U23 Romania CFCI U23CFCI U23 CFCI U23CFCI U23CFCI U23</div>
+					</div>
+					<div class="ob_team">
+						<div class="team_icon">
+							<img src="../assets/public/layout/images/team_home.svg" />
+						</div>
+						<div class="team_name">Kopana FC</div>
+					</div>
+				</div>
+			</div>
+			<div class="ob_content">
+				<div class="ob_odds_chg add">
+					<span class="p_odds">99.86</span><i class="icon-fi-double-angle-right"></i
+					><span class="b_odds down"
+						><span class="arrow"><i class="icon-fi-arrow-down"></i></span>10.99<i class="icon-fi-odds-boost"></i
+					></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="ob_tut ob_tut_1 highlighted" id="obTut1" style="display: none">
+		<div class="dot_box highlighted">Check out the new pre-assembled multi-event odds boost parlay in the banner section.</div>
+		<svg class="rec_arrow highlighted" xmlns="http://www.w3.org/2000/svg" width="55" height="50" viewBox="0 0 38.12 50">
+			<path d="M4.35355 46.4339C4.15829 46.6292 3.84171 46.6292 3.64645 46.4339L0.464466 43.252C0.269203 43.0567 0.269203 42.7401 0.464466 42.5449C0.659729 42.3496 0.976311 42.3496 1.17157 42.5449L4 45.3733L6.82843 42.5449C7.02369 42.3496 7.34027 42.3496 7.53553 42.5449C7.7308 42.7401 7.7308 43.0567 7.53553 43.252L4.35355 46.4339ZM48.4115 2.07251C41.0848 0.75534 30.1008 1.3784 20.9657 7.49584C11.8618 13.5924 4.5 25.2099 4.5 46.0804H3.5C3.5 24.9509 10.9715 12.9851 20.4093 6.66495C29.8158 0.365723 41.0819 -0.261215 48.5885 1.08828L48.4115 2.07251Z" />
+		</svg>
+	</div>
+</div>
+<div class="outright_row n_sticky" id="mock_demo_pinned_competition_euro">
+	<div class="match_name pinned">Pinned Events</div>
+	<i class="icon-fi-arrow-up1"></i>
+</div>
+<div class="el_header n_sticky" id="mock_demo_pinned_competition_euro_header" style="display: none">
+	<div class="sport_info"><i class="icon-fi-title-s1 icon"></i>Soccer</div>
+	<div class="see_all">
+		<span id="all_tennis">See All</span>
+		<span class="comp_count">120</span>
+		<i class="icon-fi-arrow-up1"></i>
+	</div>
+</div>
+<div class="el_content_wrp"></div>
+<div class="outright_row n_sticky">
+	<div class="match_name featured">Featured</div>
+	<i class="icon-fi-arrow-up1"></i>
+</div>
+<!--preload template for el_header: add "preload" class beside "el_header" class and remove content inside the div-->
+<div class="el_header n_sticky" id="demoOnly_sportsheader">
+	<div class="sport_info" id="triggerRls"><i class="icon-fi-title-s1 icon"></i>Trigger rls</div>
+	<div class="fltr_grp">
+		<i class="icon-fi-n-filter-league"></i>
+		<div class="fltr_dd" style="display: none">
+			<div class="fltr_dd_itm active">All</div>
+			<div class="fltr_dd_itm">Next 3 Hours</div>
+			<div class="fltr_dd_itm">Next 6 Hours</div>
+			<div class="fltr_dd_itm">Next 9 Hours</div>
+		</div>
+	</div>
+	<div class="see_all">
+		<span id="all_soccer">See All<!--<span class="sub_info">(45)</span>--></span>
+		<span class="comp_count">45</span>
+		<i class="icon-fi-arrow-up1"></i>
+	</div>
+</div>
+<!-- note : for all slider, dev copy please add "slider_hidden_x" and use React/JS scroll,
+     do not use native scroll, (IOS overscroll issue)
+     mock for demo purposes only -->
+<div class="popular_wrp" id="olympics_switch" style="display: none">
+	<div class="popular_itm active" id="popular_itm_soccer">Soccer</div>
+	<div class="popular_itm">Basketball</div>
+	<div class="popular_itm">Tennis</div>
+	<div class="popular_itm">Baseball</div>
+	<div class="popular_itm">Badminton</div>
+	<div class="popular_itm">Volleyball</div>
+</div>
+<div class="sub_menu_panel n_sticky" style="display: none">
+	<div id="el_nav_slider" class="n_sports_menu slider_wrap_flexi">
+		<div class="item_wrap active">
+			<div class="item">滚球</div>
+		</div>
+		<div class="item_wrap">
+			<div class="item">今日</div>
+		</div>
+		<div class="item_wrap">
+			<div class="item">Future</div>
+		</div>
+		<div class="item_wrap" id="slider_outright">
+			<div class="item">Outright</div>
+		</div>
+		<div class="item_wrap" id="slider_leagues">
+			<div class="item">Leagues</div>
+		</div>
+		<div class="item_wrap" id="slider_tournaments" style="display: none">
+			<div class="item">Tournaments</div>
+		</div>
+		<div class="slider"></div>
+	</div>
+	<!-- n_sports_menu_wrap for shorter slider width for filter icon -->
+	<div id="el_nav_slider_soccer_fifa" class="n_sports_menu_wrap">
+		<div class="n_sports_menu slider_wrap_flexi">
+			<div class="item_wrap active">
+				<div class="item">In-Play</div>
+			</div>
+			<div class="item_wrap">
+				<div class="item">Today</div>
+			</div>
+			<div class="item_wrap">
+				<div class="item">Future</div>
+			</div>
+			<div class="item_wrap">
+				<div class="item">Outrights</div>
+			</div>
+			<div class="item_wrap">
+				<div class="item">Leagues</div>
+			</div>
+			<div class="slider"></div>
+		</div>
+		<div class="fltr_grp">
+			<i class="icon-fi-n-filter-league"></i>
+			<div class="fltr_dd" style="display: none">
+				<div class="fltr_dd_itm active">All</div>
+				<div class="fltr_dd_itm">Next 3 Hours</div>
+				<div class="fltr_dd_itm">Next 6 Hours</div>
+				<div class="fltr_dd_itm">Next 9 Hours</div>
+			</div>
+		</div>
+	</div>
+	<div id="el_nav_slider2" class="dev_dontCopy_demo_slider2 n_sports_menu slider_wrap_flexi n_sticky" style="z-index: 5; display: none">
+		<div class="item_wrap active" id="demo_torn_matches">
+			<div class="item">Matches</div>
+		</div>
+		<div class="item_wrap" id="demo_torn_outrights">
+			<div class="item">Outrights</div>
+		</div>
+		<div class="slider"></div>
+	</div>
+	<div id="el_nav_slider3" class="n_sports_menu slider_wrap_flexi n_sticky n_sports_menu_es" style="display: none">
+		<div class="item_wrap active">
+			<div class="item">
+				<i class="icon-fi-title-s63"></i>
+				LOL
+			</div>
+		</div>
+		<div class="item_wrap" id="esports_tab2">
+			<div class="item">
+				<i class="icon-fi-title-s64"></i>
+				DOTA2
+			</div>
+		</div>
+		<div class="item_wrap">
+			<div class="item">
+				<i class="icon-fi-title-s65"></i>
+				CS:GO
+			</div>
+		</div>
+		<div class="item_wrap">
+			<div class="item">
+				<i class="icon-fi-title-s66"></i>
+				KOG
+			</div>
+		</div>
+		<div class="item_wrap demoOnly_activeTabSlider">
+			<div class="item">
+				<i class="icon-fi-title-s66"></i>
+				Active Tab Slider
+			</div>
+		</div>
+		<div class="slider"></div>
+	</div>
+	<div class="bg_mask esports_tut2" style="display: none">
+		<svg class="rec_arrow" xmlns="http://www.w3.org/2000/svg" width="30.91" height="51.39" viewBox="0 0 30.91 51.39">
+			<path d="M.36,.33C1.02-.22,1.62,0,2.27,.41,15.45,8.6,22.13,24.14,18.98,39.31c-.63,3.03-1.62,5.94-3,8.72-.03,.06-.04,.12-.1,.27,.24-.05,.42-.08,.59-.12,4.17-1.03,8.34-2.06,12.5-3.09,1.32-.33,1.88,.09,1.94,1.41l-.35,.58c-.36,.13-.71,.3-1.09,.39-5.13,1.27-10.26,2.54-15.39,3.81-1.13,.28-1.62,0-1.9-1.11-1.32-5.25-2.63-10.51-3.93-15.76-.21-.84,.12-1.47,.85-1.65,.72-.18,1.32,.22,1.53,1.06,1.03,4.12,2.05,8.24,3.08,12.35,.04,.17,.09,.34,.24,.53,.4-.95,.84-1.88,1.18-2.85,3.96-11.35,2.57-22.03-4.17-31.99C8.32,8.01,4.92,4.91,.92,2.47,.31,2.1-.06,1.65,0,.91L.36,.33Z"></path>
+		</svg>
+		<div class="dot_box highlighted esports_desc">LOL, DOTA2, CS:GO and King of Glory sports type will be available for betting.</div>
+	</div>
+	<ul class="nav_bar">
+		<li onClick="(function(){window.location.href = 'index.html'})();">Home<i class="icon-fi-arrow-right" aria-hidden="true"></i></li>
+		<li>Sample</li>
+	</ul>
+</div>
+
+<script>
+	$(document).ready(function () {
+		const obTutTrigger = () => {
+			$('#obTut1, .ob_tut_mask').show();
+			$('.ob_wrp, .ob_listing_hdr').addClass('highlighted');
+			$('body').addClass('popupOn');
+			sessionStorage.setItem('ob_p1', 'false');
+		};
+		const obTutClose = () => {
+			$('.ob_wrp, .ob_listing_hdr').removeClass('highlighted');
+			$('#obTut1, .ob_tut_mask').hide();
+			$('body').removeClass('popupOn');
+
+			sessionStorage.setItem('ob_p1', 'false');
+			window.location.href = 'all-odds-boost.html';
+		};
+		$('#demoOnlyObTutTrigger').click(() => obTutTrigger());
+		$('#obTutBtn1').click(() => obTutClose());
+		function AnimateTranslate(position, repeat) {
+			var duration = 30000;
+			setTimeout(function () {
+				if (repeat && repeat == 'infinite') {
+					AnimateTranslate(position, repeat);
+				} else if (repeat && repeat > 1) {
+					AnimateTranslate(position, repeat - 1);
+				}
+			}, duration);
+			var $elem = $('#test_annoucement_mockfromReact');
+
+			$({ deg: 0 }).animate(
+				{ deg: position },
+				{
+					duration: duration,
+					step: function (now) {
+						$elem.css({
+							transform: 'translateX(' + now + '%)',
+						});
+					},
+				},
+			);
+		}
+		AnimateTranslate(-100, 'infinite');
+
+		$('.fltr_grp i').click(function () {
+			var fltrDd = $(this).closest('.fltr_grp').find('.fltr_dd');
+			if (fltrDd.is(':visible')) {
+				if ($(this).closest('.fltr_grp').hasClass('fltr_grp_test_el_top_panel')) {
+					$('.el_top_panel').removeClass('fltr_grp_popup');
+				}
+				fltrDd.hide();
+			} else {
+				if ($(this).closest('.fltr_grp').hasClass('fltr_grp_test_el_top_panel')) {
+					$('.el_top_panel').addClass('fltr_grp_popup');
+				}
+				fltrDd.show();
+			}
+		});
+
+		$('.fltr_dd_itm').click(function () {
+			$(this).closest('.fltr_grp').find('.fltr_dd_itm').removeClass('active');
+			$(this).addClass('active');
+			$(this).closest('.fltr_grp').find('.fltr_dd').hide();
+			$('.fltr_grp').addClass('active');
+		});
+
+		$('#demoAllBoostPage').click(function (e) {
+			e.stopPropagation();
+			window.location.href = 'all-odds-boost.html';
+		});
+
+		elFilterBar('euro');
+		if (window.location.pathname.includes('el_esport')) {
+			$('#el_nav_slider3').show();
+			var sevSlider = $('#el_nav_slider3');
+			var sevSlider_Active = $('#el_nav_slider3 .item_wrap.active');
+			var sevSlider_position = sevSlider_Active.offset().left - sevSlider.offset().left + sevSlider.scrollLeft();
+			$('#el_nav_slider3 .slider').css('left', sevSlider_position);
+			$('#el_nav_slider3 .slider').css('width', sevSlider_Active.width());
+
+			$('#el_nav_slider3 .item_wrap').click(function () {
+				$('#el_nav_slider3 .item_wrap').removeClass('active');
+				$(this).addClass('active');
+				sevSlider_position = $(this).offset().left - sevSlider.offset().left + sevSlider.scrollLeft();
+				$('#el_nav_slider3 .slider').css('width', $(this).width());
+				$('#el_nav_slider3 .slider').css('left', sevSlider_position);
+			});
+		}
+
+		$('#olympics_switch .popular_itm').click(function () {
+			$('#olympics_switch .popular_itm').removeClass('active');
+			$(this).addClass('active');
+		});
+
+		esportsTutorial();
+		triggerRls();
+		filterTutorial();
+
+		// [DES-1687][SFQAT-25490][EU][Announcement] Announcement should auto scroll in latest chrome updated version
+		/*--Annoucement change to dynamic text length with same speed -- start*/
+		function calcSpeed(speed) {
+			// Time = Distance/Speed
+			var spanSelector = document.querySelectorAll('.n_annoucement_text .n_annoucement_text_inner'),
+				i;
+			for (i = 0; i < spanSelector.length; i++) {
+				var spanLength = spanSelector[i].offsetWidth,
+					timeTaken = spanLength / speed;
+				spanSelector[i].style.animationDuration = timeTaken + 's';
+			}
+		}
+		calcSpeed(75);
+		lbTut();
+	});
+</script>

@@ -1,0 +1,26 @@
+﻿@use "../../lib/animation/_animate.scss";
+@use "_fonticon";
+@use "_fl_fonticon";
+
+.location_forbidden_wrap {
+    padding: 8px;
+    margin: auto;
+
+    .icon_block {
+        width: 120px;
+        height: 120px;
+        margin: auto;
+    }
+
+    .location_forbidden_content_wrap {
+        padding-top: 15px;
+        text-align: center;
+        font-size: 14px;
+
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            padding-bottom: 4px;
+        }
+    }
+}

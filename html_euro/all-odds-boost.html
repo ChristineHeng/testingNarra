@@ -1,0 +1,1086 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Narra - html template</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover,user-scalable=no" />
+
+		<!--Base Styles-->
+		<link rel="stylesheet" type="text/css" href="../assets/public/layout/css/basestyle.min.css" />
+		<!--<link rel="stylesheet" type="text/css" href="../merchants/merchant1/css/style_euro.css">-->
+		<link rel="stylesheet" type="text/css" href="../assets/public/languages/eng/layout_euro.min.css" id="detect_language" />
+
+		<!--theme-->
+		<link rel="stylesheet" type="text/css" href="#" id="design_view" />
+
+		<!-- Public JS -->
+		<script src="../assets/public/lib/jquery.js"></script>
+		<script src="../assets/public/layout/js/scripts_main.js"></script>
+		<script src="../assets/public/layout/js/scripts_euro.js"></script>
+	</head>
+
+	<body id="root" class="euro">
+		<div class="n_container">
+			<div class="n_header n_header_main">
+				<!-- main header here-->
+				<div class="heder_lf">
+					<div class="lf_menu">
+						<i class="icon-fi-left-menu"></i>
+					</div>
+					<div class="v_split"></div>
+					<div class="logo">
+						<img src="../merchants/merchant1/images/logo.png" />
+					</div>
+				</div>
+				<div class="heder_rt">
+					<i class="icon-fi-n-results dontcoopythisclass_sample_button_results"></i>
+					<div class="item demoOnlyDontCopt_betslip">
+						<i class="icon-fi-n-betlist"></i>
+						<div class="noti mybet_noti_cancel">2</div>
+						<div class="noti mybet_noti_pending">1</div>
+					</div>
+					<div class="er_myacct">
+						<i class="icon-fi-n-mine dontcoopythisclass_sample_button_myacct"></i>
+						<div class="red_dot"></div>
+					</div>
+					<div class="n_balance">
+						<div class="currency">(RMB)</div>
+						7,676,100,962,132.55
+					</div>
+				</div>
+			</div>
+			<div class="n_content_wrap_wth_bcktop with_ref">
+				<!-- content start here-->
+				<!--<div id="el_stickymenu" class="el_stickymenu sticky"></div>-->
+				<div class="sub_menu_panel n_sticky">
+					<ul class="nav_bar">
+						<li onClick="(function(){window.location.href = 'index.html'})();">Home<i class="icon-fi-arrow-right" aria-hidden="true"></i></li>
+						<li>All Boost: Lucky 8</li>
+					</ul>
+				</div>
+
+				<div class="el_content_wrp">
+					<!-- odds boost header slider -->
+					<div class="el_header_grp n_sticky ob_menu_wrp">
+						<div class="ob_toggle disabled">
+							<i class="icon-fi-arrow-up1"></i>
+						</div>
+						<div class="ob_menu ob_new_st menu_slider">
+							<div class="ob_menu_slider_wrap">
+								<div class="ob_menu_slider">
+									<div class="item_wrap active"><img src="../assets/public/layout/images/icon/icon_s1.png"/>Soccer</div>
+									<div class="item_wrap"><img src="../assets/public/layout/images/icon/icon_s2.png" />Basketball</div>
+									<!-- <div class="menu_tab active"><img src="../assets/public/layout/images/icon/icon_s1.png"/>Soccer</div>
+									<div class="menu_tab"><img src="../assets/public/layout/images/icon/icon_s2.png" />Basketball</div> -->
+									<!-- <div class="slider"></div> -->
+								</div>
+							</div>
+							<!-- <div class="menu_tab active">
+								<img src="../assets/public/layout/images/icon/icon_s1.png" />
+								Soccer
+							</div>
+							<div class="menu_tab">
+								<img src="../assets/public/layout/images/icon/icon_s2.png" />
+								Basketball
+							</div> -->
+							
+							<!-- <div class="menu_tab active">All</div>
+							<div class="menu_tab">Cricket</div> -->
+							<!-- <div class="menu_tab">Tennis</div>
+							<div class="menu_tab">Cyber Sports</div>
+							<div class="menu_tab">Table Tennis</div>
+							<div class="menu_tab">Basketball</div>
+							<div class="menu_tab">Baseball</div> -->
+						</div>
+						<!-- <div class="ob_sort_wrp">
+							<div class="ob_sort">
+								<i class="icon-fi-sort"></i>
+							</div>
+						</div> -->
+					</div>
+					<!-- odds boost tabs toggler -->
+					<div class="ob_tabs n_sticky ob_tabs_v2">
+						<div class="fl_comp">
+							<div class="fl_comp_t le_t" id="demoOnlyToggleSingleBoost">
+								<div class="item">Single Boost</div>
+							</div>
+							<div class="fl_comp_t le_t" id="demoOnlyToggleParlayBoost">
+								<div class="item">Parlay Boost</div>
+							</div>
+							<div class="fl_comp_t le_t active" id="demoOnlyToggleLuckyE">
+								<i class="icon-fi-clover"></i>
+								<div class="item">Lucky 8</div>
+								<div class="new_tag">New</div>
+							</div>
+							<div class="fl_comp_t le_t" id="demoOnlyToggleNoRecordO">
+								<div class="item">No Record outer</div>
+							</div>
+						</div>
+						<div class="ob_sort_wrp">
+							<div class="ob_sort">
+								<i class="icon-fi-sort-part"></i>
+								<i class="icon-fi-sort-popularity"></i>
+							</div>
+							<div class="ob_st_popup ob_sp_v2" style="display: none;">
+								<div class="ob_st_content">
+									<div class="ob_st_rw active"><i class="icon-fi-sort-popularity"></i><span>Sort by popularity</span><i class="icon-fi-tick"></i></div>
+									<div class="ob_st_rw"><i class="icon-fi-sort-alphabetical"></i><span>Sort by alphabetical</span><i class="icon-fi-tick"></i></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- odds boost content -->
+					<div class="ob_panel" id="demoOnlyLuckyE">
+						<!-- lucky 8 banner -->
+						<div class="le_bnnr le_bnnr_v2">
+							<img src="../assets/public/layout/images/lucky_eight_banner_2a.png">
+							<div class="le_bnnr_txt_wrp">
+								<span class="le_bnnr_big_txt">
+									<!-- 8 lựa chọn, tăng thêm 30% tiền thắng cược! -->
+									Extra <span class="le_bnnr_hl">30% payout boost</span> for 8 selections!
+								</span>
+								<span class="le_bnnr_sm_txt">Only supports Euro odds.</span>
+								<!-- <span class="le_bnnr_big_txt">Lucky 8 Challenge</span>
+								Pick 8 selections for an extra <span class="le_bnnr_hl">30%</span> payout boost! -->
+							</div>
+						</div>
+						<!-- <div class="lb_exp"><i class="icon-fi-info"></i>Lucky 8 only supports Euro Odds type.</div> -->
+						 <div class="ob_listing_hdr ob_listing_hdr_t2">
+							<div class="ob_listing_hdr_l">
+								<i class="icon-fi-winners"></i>
+								Recent Winners
+							</div>
+							<div class="ob_btn" id="demoRecWinsTg">38 Winners<i class="icon-fi-angle-right"></i></div>
+						</div>
+						<div class="le_rw_card_wrap">
+							<div class="le_rw_card w_bg">
+								<div class="le_rw_card_md">
+									<div class="le_rw_amt">
+										<i class="icon-fi-medal gold"></i>
+										<!-- <img src="../assets/public/layout/images/gold_medal.svg"/> -->
+										<span>RMB 8,000,000.00</span>
+									</div>
+									<div class="le_rw_multiplier"><span>1,251</span>x</div>
+								</div>
+								<div class="le_rw_names">
+									<span class="le_rw_nm_l">EPL Championship</span>
+									<span class="le_rw_nm_r">***001</span>
+								</div>
+							</div>
+							<div class="le_rw_card w_bg">
+								<div class="le_rw_card_md">
+									<div class="le_rw_amt">
+										<i class="icon-fi-medal silver"></i>
+										<!-- <img src="../assets/public/layout/images/silver_medal.svg"/> -->
+										<span>RMB 6,800.00</span>
+									</div>
+									<div class="le_rw_multiplier"><span>1,089</span>x</div>
+								</div>
+								<div class="le_rw_names">
+									<span class="le_rw_nm_l">European Crown European Crown European Crown European Crown European Crown European Crown</span>
+									<span class="le_rw_nm_r">***ler</span>
+								</div>
+							</div>
+							<div class="le_rw_card w_bg">
+								<div class="le_rw_card_md">
+									<div class="le_rw_amt">
+										<i class="icon-fi-medal bronze"></i>
+										<!-- <img src="../assets/public/layout/images/bronze_medal.svg"/> -->
+										<span>RMB 5,400.00</span>
+									</div>
+									<div class="le_rw_multiplier"><span>978</span>x</div>
+								</div>
+								<div class="le_rw_names">
+									<span class="le_rw_nm_l">Federal Trophy</span>
+									<span class="le_rw_nm_r">***099</span>
+								</div>
+							</div>
+							<div class="le_rw_card">
+								<div class="le_rw_card_md">
+									<div class="le_rw_amt">
+										<span>RMB 800.00</span>
+									</div>
+									<div class="le_rw_multiplier"><span>978</span>x</div>
+								</div>
+								<div class="le_rw_names">
+									<span class="le_rw_nm_l">Federal Trophy</span>
+									<span class="le_rw_nm_r">***099</span>
+								</div>
+							</div>
+							<div class="le_rw_card">
+								<div class="le_rw_card_md">
+									<div class="le_rw_amt">
+										<span>RMB 680.00</span>
+									</div>
+									<div class="le_rw_multiplier"><span>978</span>x</div>
+								</div>
+								<div class="le_rw_names">
+									<span class="le_rw_nm_l">Federal Trophy</span>
+									<span class="le_rw_nm_r">***099</span>
+								</div>
+							</div>
+						</div>
+						<div class="ob_listing_hdr ob_listing_hdr_t2">
+							<div class="ob_listing_hdr_l">
+								Themed Pools
+								<!-- Pool theo chủ đề -->
+							</div>
+						</div>
+						<div class="ob_menu_slider_wrap" id="ob_slider_2">
+							<div class="ob_menu_slider">
+								<div class="item_wrap active">
+									EPL Championship
+									<div class="new_tag">Hot</div>
+								</div>
+								<div class="item_wrap">Federal Trophy</div>
+								<div class="item_wrap">European Crown</div>
+								<div class="item_wrap">European Crown</div>
+								<div class="item_wrap">European Crown</div>
+								<div class="slider"></div>
+							</div>
+						</div>
+						<div class="ob_dpd_wrp ">
+							<div class="ob_listing_hdr ob_listing_hdr_t2">
+								<div class="ob_listing_hdr_l">
+									<i class="icon-fi-lightning"></i>
+									<span>
+										Quick Pick <span>(Auto-fill)</span>
+									</span>
+								</div>
+								<div class="ob_btn_wrp">
+									<div class="ob_btn">
+										<i class="icon-fi-dice"></i>Random
+									</div>
+									<div class="ob_btn">
+										<i class="icon-fi-shield"></i>Best Chance
+									</div>
+								</div>
+							</div>
+							<div class="ob_itm_wrp">
+								<div class="lazyload-wrapper">
+									<div class="ob_hdr_ter">07/02 15:35</div>
+									<div class="ob_hdr_tm">
+										<div class="team_icon"><img src="../assets/public/layout/images/team_home.svg" /></div><span>CFCI U23</span><span class="vs">VS</span><div class="team_icon"><img src="../assets/public/layout/images/team_away.svg" /></div><span>Kopana KopanaKopanaKopana Kopana KopanaKopanaKopana Kopana</span>
+									</div>
+									<div class="ob_itm_grp ob_itm_grp_v2">
+										<div class="ob_bet_item up">
+											<label>CFCI U23</label>
+											<div class="ob_odds_grp">
+												<div class="arrow">
+													<i class="icon-fi-arrow-up"></i>
+												</div>
+												<div class="odds">99.99</div>
+											</div>
+										</div>
+										<div class="ob_bet_item add down">
+											<label>Draw</label>
+											<div class="ob_odds_grp">
+												<div class="arrow">
+													<i class="icon-fi-arrow-down"></i>
+												</div>
+												<div class="odds">2.95</div>
+											</div>
+										</div>
+										<div class="ob_bet_item" id="demoOnlyLeTut">
+											<label>Trigger Tutorial</label>
+											<div class="ob_odds_grp">
+												<div class="odds">2.95</div>
+											</div>
+										</div>
+										<div class="le_tut le_tut_1" style="display: none">
+											<svg class="rec_arrow le_arrow highlighted" xmlns="http://www.w3.org/2000/svg" width="55" height="50" viewBox="0 0 38.12 50">
+												<path d="M4.35355 46.4339C4.15829 46.6292 3.84171 46.6292 3.64645 46.4339L0.464466 43.252C0.269203 43.0567 0.269203 42.7401 0.464466 42.5449C0.659729 42.3496 0.976311 42.3496 1.17157 42.5449L4 45.3733L6.82843 42.5449C7.02369 42.3496 7.34027 42.3496 7.53553 42.5449C7.7308 42.7401 7.7308 43.0567 7.53553 43.252L4.35355 46.4339ZM48.4115 2.07251C41.0848 0.75534 30.1008 1.3784 20.9657 7.49584C11.8618 13.5924 4.5 25.2099 4.5 46.0804H3.5C3.5 24.9509 10.9715 12.9851 20.4093 6.66495C29.8158 0.365723 41.0819 -0.261215 48.5885 1.08828L48.4115 2.07251Z"></path>
+											</svg>
+											<div class="dot_box highlighted le_desc">1. Tap any odds to add selections, you need 8 picks to complete your Lucky 8.</div>
+										</div>
+									</div>
+									<div class="ob_hdr_ter">07/02 15:35</div>
+									<div class="ob_hdr_tm">
+										<div class="team_icon"><img src="../assets/public/layout/images/team_home.svg" /></div><span>Everton</span><span class="vs">VS</span><div class="team_icon"><img src="../assets/public/layout/images/team_away.svg" /></div><span>Manchester United</span>
+									</div>
+									<div class="ob_itm_grp ob_itm_grp_v2">
+										<div class="ob_bet_item add" id="demoOnlyToggleLeaveLuckyE">
+											<label>Toggle Popup</label>
+											<div class="ob_odds_grp">
+												<div class="odds">99.95</div>
+											</div>
+										</div>
+										<div class="ob_bet_item">
+											<label>Draw</label>
+											<div class="ob_odds_grp">
+												<div class="lock"><i class="icon-fi-lock"></i></div>
+											</div>
+											<div class="fl_arrow"></div>
+										</div>
+										<div class="ob_bet_item">
+											<label>Manchester United</label>
+											<div class="ob_odds_grp">--</div>
+											<div class="fl_arrow"></div>
+										</div>
+									</div>
+									<div class="ob_hdr_ter">07/02 15:35</div>
+									<div class="ob_hdr_tm">
+										<div class="team_icon"><img src="../assets/public/layout/images/team_home.svg" /></div><span>AS Roma</span><span class="vs">VS</span><div class="team_icon"><img src="../assets/public/layout/images/team_away.svg" /></div><span>Atlanta</span>
+									</div>
+									<div class="ob_itm_grp ob_itm_grp_v2">
+										<div class="ob_bet_item">
+											<div class="lock"><i class="icon-fi-lock"></i></div>
+										</div>
+										<div class="ob_bet_item">--</div>
+										<div class="ob_bet_item" id="demoOnlyToggleNoRecordI">
+											<label>No record inner</label>
+											<div class="ob_odds_grp">
+												<div class="fl_odds">1.11</div>
+											</div>
+											<div class="fl_arrow"></div>
+										</div>
+									</div>
+									<div class="ob_hdr_ter">07/02 15:35</div>
+									<div class="ob_hdr_tm">
+										<div class="team_icon"><img src="../assets/public/layout/images/team_home.svg"></div><span>Arsenal</span><span class="vs">VS</span><div class="team_icon"><img src="../assets/public/layout/images/team_away.svg"></div><span>Chelsea</span>
+									</div>
+									<div class="ob_itm_grp ob_itm_grp_v2">
+										<div class="ob_bet_item">
+											<label>Arsenal</label>
+											<div class="ob_odds_grp">
+												<div class="fl_odds">2.15</div>
+											</div>
+											<div class="fl_arrow"></div>
+										</div>
+										<div class="ob_bet_item">
+											<label>Draw</label>
+											<div class="ob_odds_grp">
+												<div class="fl_odds">2.95</div>
+											</div>
+											<div class="fl_arrow"></div>
+										</div>
+										<div class="ob_bet_item">
+											<label>Chelsea</label>
+											<div class="ob_odds_grp">
+												<div class="fl_odds">2.95</div>
+											</div>
+											<div class="fl_arrow"></div>
+										</div>
+									</div>
+									<div class="ob_hdr_ter">07/02 15:35</div>
+									<div class="ob_hdr_tm">
+										<div class="team_icon"><img src="../assets/public/layout/images/team_home.svg"></div><span>Juventus</span><span class="vs">VS</span><div class="team_icon"><img src="../assets/public/layout/images/team_away.svg"></div><span>AC Milan</span>
+									</div>
+									<div class="ob_itm_grp ob_itm_grp_v2">
+										<div class="ob_bet_item">
+											<label>Juventus</label>
+											<div class="ob_odds_grp">
+												<div class="fl_odds">1.45</div>
+											</div>
+											<div class="fl_arrow"></div>
+										</div>
+										<div class="ob_bet_item">
+											<label>Draw</label>
+											<div class="ob_odds_grp">
+												<div class="fl_odds">2.95</div>
+											</div>
+											<div class="fl_arrow"></div>
+										</div>
+										<div class="ob_bet_item">
+											<label>AC Milan</label>
+											<div class="ob_odds_grp">
+												<div class="fl_odds">2.95</div>
+											</div>
+											<div class="fl_arrow"></div>
+										</div>
+									</div>
+									<div class="ob_hdr_ter">07/02 15:35</div>
+									<div class="ob_hdr_tm">
+										<div class="team_icon"><img src="../assets/public/layout/images/team_home.svg"></div><span>Bayern</span><span class="vs">VS</span><div class="team_icon"><img src="../assets/public/layout/images/team_away.svg"></div><span>Mainz</span>
+									</div>
+									<div class="ob_itm_grp ob_itm_grp_v2">
+										<div class="ob_bet_item">
+											<label>Bayern</label>
+											<div class="ob_odds_grp">
+												<div class="fl_odds">3.24</div>
+											</div>
+											<div class="fl_arrow"></div>
+										</div>
+										<div class="ob_bet_item">
+											<label>Draw</label>
+											<div class="ob_odds_grp">
+												<div class="fl_odds">2.95</div>
+											</div>
+											<div class="fl_arrow"></div>
+										</div>
+										<div class="ob_bet_item">
+											<label>Mainz</label>
+											<div class="ob_odds_grp">
+												<div class="fl_odds">2.95</div>
+											</div>
+											<div class="fl_arrow"></div>
+										</div>
+									</div>
+									<div class="ob_hdr_ter">07/02 15:35</div>
+									<div class="ob_hdr_tm">
+										<div class="team_icon"><img src="../assets/public/layout/images/team_home.svg"></div><span>Lazio</span><span class="vs">VS</span><div class="team_icon"><img src="../assets/public/layout/images/team_away.svg"></div><span>Bologna</span>
+									</div>
+									<div class="ob_itm_grp ob_itm_grp_v2">
+										<div class="ob_bet_item">
+											<label>Lazio</label>
+											<div class="ob_odds_grp">
+												<div class="fl_odds">1.10</div>
+											</div>
+											<div class="fl_arrow"></div>
+										</div>
+										<div class="ob_bet_item">
+											<label>Draw</label>
+											<div class="ob_odds_grp">
+												<div class="fl_odds">2.95</div>
+											</div>
+											<div class="fl_arrow"></div>
+										</div>
+										<div class="ob_bet_item">
+											<label>Bologna</label>
+											<div class="ob_odds_grp">
+												<div class="fl_odds">2.95</div>
+											</div>
+											<div class="fl_arrow"></div>
+										</div>
+									</div>
+									<div class="ob_hdr_ter">07/02 15:35</div>
+									<div class="ob_hdr_tm">
+										<div class="team_icon"><img src="../assets/public/layout/images/team_home.svg"></div><span>Borussia Dortmund</span><span class="vs">VS</span><div class="team_icon"><img src="../assets/public/layout/images/team_away.svg"></div><span>Real Madrid</span>
+									</div>
+									<div class="ob_itm_grp ob_itm_grp_v2">
+										<div class="ob_bet_item">
+											<label>Borussia Dortmund</label>
+											<div class="ob_odds_grp">
+												<div class="fl_odds">2.14</div>
+											</div>
+											<div class="fl_arrow"></div>
+										</div>
+										<div class="ob_bet_item">
+											<label>Draw</label>
+											<div class="ob_odds_grp">
+												<div class="fl_odds">2.95</div>
+											</div>
+											<div class="fl_arrow"></div>
+										</div>
+										<div class="ob_bet_item">
+											<label>Real Madrid</label>
+											<div class="ob_odds_grp">
+												<div class="fl_odds">2.95</div>
+											</div>
+											<div class="fl_arrow"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="ob_panel" id="demoOnlySingleBoost" style="display: none">
+						<div class="ob_dpd_wrp ">
+							<div class="ob_listing_hdr n_sticky ob_el_hdr">
+								<i class="icon-fi-arrow-up1"></i>
+								<img class="fl_comp_h_i" src="https://ipis-cdn.kemehkemeh.xyz/CompetitionImage/12128.png" />
+								India Mumbai Super Division
+								<div class="comp_count">999</div>
+							</div>
+							<div class="ob_itm_wrp">
+								<div class="ob_hdr_ter">07/02 15:35</div>
+								<div class="ob_hdr_tm">
+									<div class="team_icon"><img src="../assets/public/layout/images/team_home.svg" /></div>
+									<span>CFCI U23</span>
+									<span class="vs">VS</span>
+									<div class="team_icon"><img src="../assets/public/layout/images/team_away.svg" /></div>
+									<span>Kopana KopanaKopanaKopana Kopana KopanaKopanaKopana Kopana</span>
+								</div>
+								<div class="ob_itm_grp ob_itm_grp_v2">
+									<div class="ob_itm">
+										<div class="ob_label">
+											<div class="ob_icon n_sev_period icon_1H">1H</div>
+											<label>Correct Score <span class="bs_hl">3 - 1</span></label>
+										</div>
+										<div class="ob_odds_wrp">
+											<div class="lock"><i class="icon-fi-lock"></i></div>
+										</div>
+									</div>
+									<div class="ob_itm">
+										<div class="ob_label">
+											<div class="ob_icon n_sev_period icon_1H">1H</div>
+											<label>Correct Score <span class="bs_hl">1 - 1</span></label>
+										</div>
+										<div class="ob_odds_wrp add" id="demoNoEvent" style="color: #121212">No event</div>
+									</div>
+									<div class="ob_itm">
+										<div class="ob_label">
+											<div class="ob_icon n_sev_period icon_1H">1H</div>
+											<label>Total Goal <span class="bs_hl">2</span></label>
+										</div>
+										<div class="ob_odds_wrp add">
+											<span class="p_odds">0.70</span><i class="icon-fi-double-angle-right"></i><span class="b_odds">0.87</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ob_dpd_wrp ">
+							<div class="ob_listing_hdr n_sticky ob_el_hdr">
+								<i class="icon-fi-arrow-up1"></i>
+								<img class="fl_comp_h_i" src="https://ipis-cdn.kemehkemeh.xyz/CompetitionImage/12128.png" />
+								Argentina Liga Profesional de Ftbol Reserves -🍒🍒ไทย
+								<div class="comp_count">1</div>
+							</div>
+							<div class="ob_itm_wrp">
+								<div class="ob_hdr_ter">07/02 15:35</div>
+								<div class="ob_hdr_tm">
+									<div class="team_icon"><img src="../assets/public/layout/images/team_home.svg" /></div>
+									<span>Everton</span>
+									<span class="vs">VS</span>
+									<div class="team_icon"><img src="../assets/public/layout/images/team_away.svg" /></div>
+									<span>Bangu AC (RJ)</span>
+								</div>
+								<div class="ob_itm_grp ob_itm_grp_v2">
+									<div class="ob_itm">
+										<div class="ob_label">
+											<div class="ob_icon n_sev_period icon_2H">2H</div>
+											<label>Correct Score <span class="bs_hl">3 - 0</span></label>
+										</div>
+										<div class="ob_odds_wrp">
+											<span class="p_odds">0.70</span><i class="icon-fi-double-angle-right"></i><span class="b_odds">0.87</span>
+										</div>
+									</div>
+								</div>
+								<div class="ob_hdr_ter">07/02 15:35</div>
+								<div class="ob_hdr_tm">
+									<div class="team_icon"><img src="../assets/public/layout/images/team_home.svg" /></div>
+									<span>CFCI U23</span>
+									<span class="vs">VS</span>
+									<div class="team_icon"><img src="../assets/public/layout/images/team_away.svg" /></div>
+									<span>Kopana</span>
+								</div>
+								<div class="ob_itm_grp ob_itm_grp_v2">
+									<div class="ob_itm">
+										<div class="ob_label">
+											<div class="ob_icon n_sev_period icon_1H">1H</div>
+											<label>Team To Score Goal 1 <span class="bs_hl">Manchester City</span></label>
+										</div>
+										<div class="ob_odds_wrp add">
+											<span class="p_odds">0.70</span><i class="icon-fi-double-angle-right"></i><span class="b_odds up">0.87<span class="arrow"><i class="icon-fi-arrow-up"></i></span></span>
+										</div>
+									</div>
+									<div class="ob_itm">
+										<div class="ob_label">
+											<div class="ob_icon n_sev_period icon_1H">1H</div>
+											<label>Correct Score <span class="bs_hl">1 - 2</span></label>
+										</div>
+										<div class="ob_odds_wrp">
+											<span class="p_odds">0.70</span><i class="icon-fi-double-angle-right"></i><span class="b_odds down">0.87<span class="arrow"><i class="icon-fi-arrow-down"></i></span></span>
+										</div>
+									</div>
+									<div class="ob_itm">
+										<div class="ob_label">
+											<div class="ob_icon n_sev_period icon_1H">1H</div>
+											<label>Team To Score Goal 1 <span class="bs_hl">Club Atletico Tucuman SC</span></label>
+										</div>
+										<div class="ob_bet_placed">
+											<img src="../assets/public/layout/images/ob_fire.png" />
+											<span>260</span>
+										</div>
+										<div class="ob_odds_wrp">
+											<span class="p_odds">0.70</span><i class="icon-fi-double-angle-right"></i><span class="b_odds">0.87</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="ob_panel" id="demoOnlyParlayBoost" style="display: none">
+						<!--odds boost parlay-->
+						<div class="ob_dpd_wrp ">
+							<div class="ob_listing_hdr n_sticky ob_el_hdr">
+								<i class="icon-fi-arrow-up1"></i>
+								Parlay
+								<div class="comp_count">2</div>
+							</div>
+							<div class="ob_itm_wrp">
+								<div class="ob_pl_grp ob_itm_grp_v2">
+									<div class="ob_itm">
+										<div class="ob_pap_label  enhc_lb_v2">Parlay</div>
+										<div class="ob_bet_placed">
+											<img src="../assets/public/layout/images/ob_fire.png" />
+											<span>260</span>
+										</div>
+										<div class="ob_odds_wrp">
+											<span class="p_odds">0.70</span><i class="icon-fi-double-angle-right"></i><span class="b_odds">0.87</span>
+										</div>
+									</div>
+									<div class="obp_wrp obp_tli enhanced_tl">
+										<div class="obp_i">
+											<div class="obp_t_wrp">
+												<div class="obp_t datetime">09/03 21:00</div>
+												<div class="obp_t">
+													<div class="ob_icon n_sev_period icon_1H">1H</div>
+													Kocaelispor Clean Sheet <span class="bs_hl">Kocaelispor Yes</span>
+												</div>
+												<div class="obp_c">
+													<div>Eyupspor vs Kocaelispor</div>
+													<div>Turkey Super League</div>
+												</div>
+											</div>
+										</div>
+										<div class="obp_i">
+											<div class="obp_t_wrp">
+												<div class="obp_t datetime">09/03 21:00</div>
+												<div class="obp_t">
+													<div class="ob_icon n_sev_period icon_2H">2H</div>
+													Lokomotiv Moscow Clean Sheet <span class="bs_hl">Lokomotiv Moscow Yes</span>
+												</div>
+												<div class="obp_c">
+													<div>Eyupspor vs Kocaelispor</div>
+													<div>Turkey Super League</div>
+												</div>
+											</div>
+										</div>
+										<div class="obp_i">
+											<div class="obp_t_wrp">
+												<div class="obp_t datetime">09/03 21:00</div>
+												<div class="obp_t">Lokomotiv Moscow Clean Sheet <span class="bs_hl">Lokomotiv Moscow Yes</span></div>
+												<div class="obp_c">
+													<div>Eyupspor vs Kocaelispor</div>
+													<div>Turkey Super League</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="ob_pl_grp ob_itm_grp_v2">
+									<div class="ob_itm">
+										<div class="ob_pap_label  enhc_lb_v2">Parlay</div>
+										<div class="ob_bet_placed">
+											<img src="../assets/public/layout/images/ob_fire.png" />
+											<span>260</span>
+										</div>
+										<div class="ob_odds_wrp">
+											<span class="p_odds">0.70</span><i class="icon-fi-double-angle-right"></i><span class="b_odds">0.87</span>
+										</div>
+									</div>
+									<div class="obp_wrp obp_tli enhanced_tl">
+										<div class="obp_i">
+											<div class="obp_t_wrp">
+												<div class="obp_t datetime">09/03 21:00</div>
+												<div class="obp_t">
+													<div class="ob_icon n_sev_period icon_1H">1H</div>
+													Kocaelispor Clean Sheet <span class="bs_hl">Kocaelispor Yes</span>
+												</div>
+												<div class="obp_c">
+													<div>Eyupspor vs Kocaelispor</div>
+													<div>Turkey Super League</div>
+												</div>
+											</div>
+										</div>
+										<div class="obp_i">
+											<div class="obp_t_wrp">
+												<div class="obp_t datetime">09/03 21:00</div>
+												<div class="obp_t">
+													<div class="ob_icon n_sev_period icon_2H">2H</div>
+													Lokomotiv Moscow Clean Sheet <span class="bs_hl">Lokomotiv Moscow Yes</span>
+												</div>
+												<div class="obp_c">
+													<div>Eyupspor vs Kocaelispor</div>
+													<div>Turkey Super League</div>
+												</div>
+											</div>
+										</div>
+										<div class="obp_i">
+											<div class="obp_t_wrp">
+												<div class="obp_t datetime">09/03 21:00</div>
+												<div class="obp_t">Lokomotiv Moscow Clean Sheet <span class="bs_hl">Lokomotiv Moscow Yes</span></div>
+												<div class="obp_c">
+													<div>Eyupspor vs Kocaelispor</div>
+													<div>Turkey Super League</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ob_dpd_wrp ">
+							<div class="ob_listing_hdr n_sticky ob_el_hdr">
+								<i class="icon-fi-arrow-up1"></i>
+								Match parlay
+								<div class="comp_count">999</div>
+							</div>
+							<div class="ob_itm_wrp">
+								<div class="ob_tut ob_tut_2 highlighted" id="obTut1" style="display: none">
+									<div class="dot_box highlighted">All the odds boost parlay selections can now be found in the ‘Parlay Boost’ section of All Boosts page.</div>
+									<svg class="rec_arrow highlighted tutorialMockNewArrow" xmlns="http://www.w3.org/2000/svg" width="55" height="50" viewBox="0 0 38.12 50" style="display: none">
+										<path d="M4.35355 46.4339C4.15829 46.6292 3.84171 46.6292 3.64645 46.4339L0.464466 43.252C0.269203 43.0567 0.269203 42.7401 0.464466 42.5449C0.659729 42.3496 0.976311 42.3496 1.17157 42.5449L4 45.3733L6.82843 42.5449C7.02369 42.3496 7.34027 42.3496 7.53553 42.5449C7.7308 42.7401 7.7308 43.0567 7.53553 43.252L4.35355 46.4339ZM48.4115 2.07251C41.0848 0.75534 30.1008 1.3784 20.9657 7.49584C11.8618 13.5924 4.5 25.2099 4.5 46.0804H3.5C3.5 24.9509 10.9715 12.9851 20.4093 6.66495C29.8158 0.365723 41.0819 -0.261215 48.5885 1.08828L48.4115 2.07251Z" />
+									</svg>
+									<svg class="rec_arrow rec_aRT tutorialMockOldArrow" xmlns="http://www.w3.org/2000/svg" width="38.12" height="50" viewBox="0 0 38.12 50" style="display: none">
+										<path d="M.92,50C.11,49.72-.01,49.09,0,48.33,.22,32.81,10.08,19.06,24.7,13.93c2.92-1.03,5.93-1.68,9.02-1.93,.06,0,.12-.02,.28-.05-.17-.18-.28-.32-.41-.44-3.03-3.04-6.06-6.08-9.1-9.12-.96-.96-.9-1.66,.21-2.39h.68c.3,.24,.63,.46,.9,.73,3.74,3.73,7.47,7.48,11.2,11.22,.82,.82,.84,1.39,.03,2.2-3.82,3.84-7.64,7.67-11.47,11.5-.61,.61-1.32,.65-1.85,.13-.53-.52-.49-1.24,.12-1.85,2.99-3.01,5.99-6.01,8.99-9.01,.12-.12,.24-.25,.33-.48-1.02,.15-2.04,.25-3.05,.46-11.77,2.46-20.2,9.17-25.24,20.08-1.96,4.24-2.86,8.76-2.88,13.44,0,.71-.19,1.27-.86,1.59H.92Z"></path>
+									</svg>
+								</div>
+								<div class="ob_pl_grp ob_itm_grp_v2">
+									<div class="ob_itm">
+										<div class="ob_pap_label  enhc_lb_v2">Apuesta Combinada del Partido</div>
+										<div class="ob_bet_placed">
+											<img src="../assets/public/layout/images/ob_fire.png" />
+											<span>260</span>
+										</div>
+										<div class="ob_odds_wrp">
+											<span class="p_odds">0.70</span><i class="icon-fi-double-angle-right"></i><span class="b_odds">0.87</span>
+										</div>
+									</div>
+									<div class="omp enhanced_tl">
+										<div class="datetime">10/03 03:45</div>
+										<div class="ob_teams_wrp">
+											<div class="ob_team">
+												<div class="team_icon">
+													<img src="../assets/public/layout/images/team_home.svg" />
+												</div>
+												<div class="team_name">Lazio</div>
+											</div>
+											<span>vs</span>
+											<div class="ob_team">
+												<div class="team_icon">
+													<img src="../assets/public/layout/images/team_home.svg" />
+												</div>
+												<div class="team_name">US Sassuolo</div>
+											</div>
+										</div>
+										<div class="comp_name">Italy Serie A</div>
+										<div class="obp_wrp">
+											<div class="obp_i">
+												<div class="obp_t_wrp">
+													<div class="obp_t">
+														<div class="ob_icon n_sev_period icon_1H">1H</div>
+														Odd/Even <span class="bs_hl">Even</span>
+													</div>
+												</div>
+											</div>
+											<div class="obp_i">
+												<div class="obp_t_wrp">
+													<div class="obp_t">
+														<div class="ob_icon n_sev_period icon_2H">2H</div>
+														Total Goal <span class="bs_hl">4 - 6</span>
+													</div>
+												</div>
+											</div>
+											<div class="obp_i">
+												<div class="obp_t_wrp">
+													<div class="obp_t">US Sassuolo Clean Sheet <span class="bs_hl">US Sassuolo No</span></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="mask_button highlighted ob_msk_btn ob_tut2_btn" id="obTutBtn2" style="display: none">Got It</div>
+						</div>
+					</div>
+					<div class="rw_panel" style="display: none;">
+					<div class="lb_exp"><i class="icon-fi-info"></i>Only displays past 7 days winners.</div>
+					<div class="le_rwp_card">
+						<div class="le_rwp_c_hdr">
+							<div class="le_rwp_un">
+								<i class="icon-fi-medal gold"></i>
+								<span>***001</span>
+							</div>
+							<div class="le_rwp_c_axn">
+								<div class="le_rw_multiplier"><span>1,251</span>x</div>
+								<i class="icon-fi-arrow-down1 fl_rotate"></i>
+							</div>
+						</div>
+						<div class="le_rwp_c_bd">EPL Championship</div>
+						<div class="le_rwp_btm_wrap">
+							<div class="le_rwp_c_mt">
+								<div class="le_rwp_l">
+									<label>Stake:</label>
+									<span>RMB 100.00</span>
+								</div>
+								<div class="le_rwp_r">
+									<label>Win:</label>
+									<span class="win">RMB 2,888.00</span>
+								</div>
+							</div>
+							<div class="le_rwp_collapsible expanded"></div>
+						</div>
+					</div>
+					<div class="le_rwp_card">
+						<div class="le_rwp_c_hdr">
+							<div class="le_rwp_un">
+								<i class="icon-fi-medal silver"></i>
+								<span>***001</span>
+							</div>
+							<div class="le_rwp_c_axn">
+								<div class="le_rw_multiplier"><span>1,089</span>x</div>
+								<i class="icon-fi-arrow-down1"></i>
+							</div>
+						</div>
+						<div class="le_rwp_c_bd">EPL Championship</div>
+						<div class="le_rwp_btm_wrap">
+							<div class="le_rwp_c_mt">
+								<div class="le_rwp_l">
+									<label>Stake:</label>
+									<span>RMB 100.00</span>
+								</div>
+								<div class="le_rwp_r">
+									<label>Win:</label>
+									<span class="win">RMB 1,900.00</span>
+								</div>
+							</div>
+							<div class="le_rwp_collapsible collapsed" style="display: none;"></div>
+						</div>
+					</div>
+					<div class="le_rwp_card">
+						<div class="le_rwp_c_hdr">
+							<div class="le_rwp_un">
+								<i class="icon-fi-medal bronze"></i>
+								<span>***001</span>
+							</div>
+							<div class="le_rwp_c_axn">
+								<div class="le_rw_multiplier"><span>978</span>x</div>
+								<i class="icon-fi-arrow-down1"></i>
+							</div>
+						</div>
+						<div class="le_rwp_c_bd">EPL Championship</div>
+						<div class="le_rwp_btm_wrap">
+							<div class="le_rwp_c_mt">
+								<div class="le_rwp_l">
+									<label>Stake:</label>
+									<span>RMB 100.00</span>
+								</div>
+								<div class="le_rwp_r">
+									<label>Win:</label>
+									<span class="win">RMB 800.00</span>
+								</div>
+							</div>
+							<div class="le_rwp_collapsible collapsed" style="display: none;"></div>
+						</div>
+					</div>
+					<div class="le_rwp_card">
+						<div class="le_rwp_c_hdr">
+							<div class="le_rwp_un">
+								<span>***001</span>
+							</div>
+							<div class="le_rwp_c_axn">
+								<div class="le_rw_multiplier"><span>749</span>x</div>
+								<i class="icon-fi-arrow-down1"></i>
+							</div>
+						</div>
+						<div class="le_rwp_c_bd">EPL Championship</div>
+						<div class="le_rwp_btm_wrap">
+							<div class="le_rwp_c_mt">
+								<div class="le_rwp_l">
+									<label>Stake:</label>
+									<span>RMB 100.00</span>
+								</div>
+								<div class="le_rwp_r">
+									<label>Win:</label>
+									<span class="win">RMB 800.00</span>
+								</div>
+							</div>
+							<div class="le_rwp_collapsible collapsed" style="display: none;"></div>
+						</div>
+					</div>
+					<div class="le_rwp_card">
+						<div class="le_rwp_c_hdr">
+							<div class="le_rwp_un">
+								<span>***001</span>
+							</div>
+							<div class="le_rwp_c_axn">
+								<div class="le_rw_multiplier"><span>508</span>x</div>
+								<i class="icon-fi-arrow-down1"></i>
+							</div>
+						</div>
+						<div class="le_rwp_c_bd">EPL Championship</div>
+						<div class="le_rwp_btm_wrap">
+							<div class="le_rwp_c_mt">
+								<div class="le_rwp_l">
+									<label>Stake:</label>
+									<span>RMB 100.00</span>
+								</div>
+								<div class="le_rwp_r">
+									<label>Win:</label>
+									<span class="win">RMB 800.00</span>
+								</div>
+							</div>
+							<div class="le_rwp_collapsible collapsed" style="display: none;"></div>
+						</div>
+					</div>
+					<div class="le_rwp_card">
+						<div class="le_rwp_c_hdr">
+							<div class="le_rwp_un">
+								<span>***001</span>
+							</div>
+							<div class="le_rwp_c_axn">
+								<div class="le_rw_multiplier"><span>389</span>x</div>
+								<i class="icon-fi-arrow-down1"></i>
+							</div>
+						</div>
+						<div class="le_rwp_c_bd">EPL Championship</div>
+						<div class="le_rwp_btm_wrap">
+							<div class="le_rwp_c_mt">
+								<div class="le_rwp_l">
+									<label>Stake:</label>
+									<span>RMB 100.00</span>
+								</div>
+								<div class="le_rwp_r">
+									<label>Win:</label>
+									<span class="win">RMB 800.00</span>
+								</div>
+							</div>
+							<div class="le_rwp_collapsible collapsed" style="display: none;"></div>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+			<div class="general_wrap n_inner_loading" style="display: none">
+				<div class="rotate_wrap_content">
+					<div class="rotate_wrap_content_inner">
+						<div class="wrap">
+							<svg class="notavailable" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175 147" width="72" fill="#cacaca">
+								<path
+									d="M26.7 97.4c-12.1 0-21.9 9.8-21.9 21.9s9.8 21.9 21.9 21.9 21.9-9.8 21.9-21.9c-.1-12.1-9.9-21.9-21.9-21.9zm5 2.9l-5.1 2-5.1-2c3.4-.9 6.9-.9 10.2 0zm-5 13.2l5.9 4.7-1.8 7.1h-8.3l-1.8-7.1 6-4.7zm-8.3-12.1l7.1 2.8v7.3l-6.3 5-7.4-2.5-1.4-5.9c2-2.9 4.8-5.2 8-6.7zM8.8 111l.9 3.7-2.6 3.2c.1-2.4.7-4.8 1.7-6.9zm1.3 18.8c-1.7-2.6-2.7-5.6-3-8.6l4.2-5 7.3 2.4 1.9 7.5-3.6 4.8-6.8-1.1zm2 2.6l4.6.7 2.8 4.4c-2.8-1.1-5.4-2.8-7.4-5.1zm10.6 6.1l-4-6.3 3.5-4.7h8.9l3.6 4.7-3.5 6.2c-2.8.6-5.7.6-8.5.1zm11.6-1.2l2.4-4.2 4.5-.7a19.79 19.79 0 0 1-6.9 4.9zm8.9-7.5l-6.7 1.1-3.6-4.8 1.9-7.5 7.3-2.4 4.2 5c-.4 3.1-1.5 6.1-3.1 8.6zm1.3-18.8a20.71 20.71 0 0 1 1.8 6.9l-2.6-3.2.8-3.7zm-3 3.1l-7.4 2.5-6.3-5v-7.3l7.1-2.8c3.2 1.5 6 3.8 8 6.7l-1.4 5.9zm127.5 4.3V117l-.1-.6c0-.2-.1-.4-.1-.6 0-.1 0-.3-.1-.4 0-.2-.1-.4-.1-.6l-.1-.4c0-.2-.1-.4-.2-.6l-.1-.3c-.1-.2-.1-.4-.2-.6l-.1-.3c-.1-.2-.1-.4-.2-.6l-.2-.5c-.1-.1-.1-.3-.2-.4s-.1-.3-.2-.4l-.2-.4c-.8-1.7-1.9-3.3-3.1-4.7l-.5-.6-.3-.3c-4-4-9.2-6.2-14.8-6.2s-10.8 2.2-14.8 6.2l-.8.9c-1.3 1.4-2.3 3-3.1 4.7l-.2.4c-.1.2-.1.3-.2.5s-.1.3-.2.5l-.1.4c-.1.2-.1.4-.2.6l-.1.3c-.1.2-.1.4-.2.6l-.1.3c-.1.2-.1.4-.2.6l-.1.4c0 .2-.1.4-.1.6l-.1.5c0 .2-.1.3-.1.5s0 .3-.1.5v5.5a.9.9 0 0 0 .1.5v.1c0 .1 0 .3.1.4 0 .2.1.4.1.6 0 .1.1.2.1.4s.1.4.2.6l.1.3c.1.2.1.4.2.6l.1.3c.1.2.1.4.2.6l.2.4c.1.2.1.3.2.5.1.1.1.3.2.4l.2.4c.8 1.7 1.9 3.3 3.1 4.7l.5.6.3.3c3.9 4 9.2 6.2 14.8 6.2s10.8-2.2 14.8-6.2l.8-.9c1.3-1.4 2.3-3 3.1-4.7l.2-.4c.1-.1.1-.3.2-.4s.1-.3.2-.4l.2-.5c.1-.2.1-.4.2-.6l.1-.3c.1-.2.1-.4.2-.6l.1-.3c.1-.2.1-.4.2-.6l.1-.4c0-.2.1-.4.1-.6 0-.1 0-.3.1-.4 0-.2.1-.4.1-.6 0-.1 0-.3.1-.5v-3.6zm-35.6 12.3c-.2-.2-.4-.5-.6-.8l-.2-.2c-.2-.4-.5-.7-.7-1.1l-.8-1.6c-.2-.5-.4-.9-.5-1.3v-.1c-.3-.9-.6-1.9-.8-2.9v-.2c-.1-.5-.1-.9-.2-1.4v-.2c0-.5-.1-1-.1-1.5s0-.9.1-1.5v-.2c0-.5.1-.9.2-1.4v-.2c.2-1 .4-2 .8-2.9v-.1c.2-.4.3-.9.5-1.3l.8-1.6c.2-.4.4-.7.7-1.1l.2-.2c.2-.3.4-.5.6-.8.7.9 1.3 1.9 1.8 3l-.8.3c-.3.1-.5.3-.6.5-.1.3-.2.6-.1.8a1.08 1.08 0 0 0 1.4.7l1-.3c.2.5.3 1 .5 1.5l-1.2.2c-.1 0-.3.1-.4.1l-.3.3c-.1.1-.1.2-.2.4v.4c.1.6.6 1 1.2.9l1.4-.2c.1.5.1 1 .1 1.5h-1a1.11 1.11 0 0 0-1.1 1.1 1.11 1.11 0 0 0 1.1 1.1h1c0 .5-.1 1.1-.1 1.5l-1.4-.2h-.4c-.1 0-.2.1-.3.2l-.3.3c-.1.1-.1.2-.1.4 0 .3 0 .6.2.8s.4.4.7.4l1.2.2c-.1.5-.3 1-.5 1.5l-1-.3a1.08 1.08 0 0 0-1.4.7c-.1.3-.1.6.1.8.1.3.4.5.6.6l.8.3c-.6 1.2-1.2 2.2-1.9 3.1zm14.8 7.3c-5.1 0-9.8-2-13.4-5.6 1-1.2 1.8-2.5 2.5-4l1.3.4a1.08 1.08 0 0 0 1.4-.7c.1-.3.1-.6-.1-.8-.1-.3-.4-.5-.6-.6l-1.2-.4c.2-.6.4-1.3.6-1.9l1.5.2c.6.1 1.2-.3 1.2-.9 0-.3 0-.6-.2-.8s-.4-.4-.7-.4l-1.4-.2c.1-.6.1-1.2.2-1.9h1.1a1.11 1.11 0 0 0 1.1-1.1 1.11 1.11 0 0 0-1.1-1.1h-1.1c0-.6-.1-1.2-.2-1.9l1.4-.2c.6-.1 1-.6.9-1.2 0-.3-.2-.5-.4-.7s-.5-.2-.8-.2l-1.5.2c-.2-.7-.4-1.3-.6-1.9l1.2-.4a1.08 1.08 0 0 0 .7-1.4.9.9 0 0 0-.6-.6c-.3-.1-.6-.2-.8-.1l-1.3.4a24.18 24.18 0 0 0-2.5-4c3.5-3.6 8.3-5.6 13.4-5.6s9.8 2 13.4 5.6c-1 1.2-1.8 2.5-2.5 4l-1.3-.4c-.3-.1-.6-.1-.8.1-.3.1-.5.4-.6.6-.1.3-.1.6.1.8.1.3.4.5.6.5l1.2.4c-.2.6-.4 1.3-.6 1.9l-1.5-.2c-.6-.1-1.2.3-1.2.9-.1.6.3 1.2.9 1.2l1.4.2c-.1.6-.1 1.2-.2 1.9H156a1.11 1.11 0 0 0-1.1 1.1 1.11 1.11 0 0 0 1.1 1.1h1.1c0 .6.1 1.2.2 1.9l-1.4.2c-.3 0-.5.2-.7.4s-.2.5-.2.8c.1.6.6 1 1.2.9l1.5-.2c.2.7.4 1.3.6 1.9l-1.2.4c-.3.1-.5.3-.6.5-.1.3-.2.6-.1.8.2.5.7.8 1.3.7h.1l1.3-.4a24.18 24.18 0 0 0 2.5 4c-3.6 3.8-8.3 5.8-13.4 5.8zm18.6-17.2v.2c0 .5-.1.9-.2 1.4v.2c-.2 1-.4 2-.8 2.9l.4.1h-.4c-.2.4-.3.9-.5 1.3l-.8 1.6c-.2.4-.4.7-.7 1.1l-.2.2c-.2.3-.4.5-.6.8-.7-.9-1.3-1.9-1.8-3l.8-.3c.3-.1.5-.3.6-.5.1-.3.2-.6.1-.8a1.08 1.08 0 0 0-1.4-.7l-1 .3c-.2-.5-.3-1-.5-1.5l1.2-.2c.1 0 .3-.1.4-.1l.3-.3c.1-.1.1-.2.2-.4v-.4c0-.3-.2-.5-.4-.7s-.5-.2-.8-.2l-1.4.2c-.1-.5-.1-1-.1-1.5h1a1.11 1.11 0 0 0 1.1-1.1 1.11 1.11 0 0 0-1.1-1.1h-1c0-.5.1-1.1.1-1.5l1.4.2c.6.1 1.2-.3 1.2-.9v-.4a.76.76 0 0 0-.2-.4l-.3-.3c-.1-.1-.2-.1-.4-.1l-1.2-.2c.1-.5.3-1 .5-1.5l1 .3c.5.2 1.2-.1 1.4-.7.1-.3.1-.6-.1-.8-.1-.3-.4-.5-.6-.5l-.8-.3c.5-1.1 1.1-2.1 1.8-3 .2.2.4.5.6.8l.2.2c.2.4.5.7.7 1.1l.8 1.6c.2.5.4.9.5 1.3l.4-.1-.3.2c.3.9.6 1.9.8 2.9v.1c.1.5.1.9.2 1.4v.2c0 .5.1 1 .1 1.5-.2.4-.2.9-.2 1.4zm-26.4-49.2a21.5 21.5 0 1 0-43 0 21.47 21.47 0 0 0 21.5 21.5c11.8 0 21.5-9.7 21.5-21.5zm-12.2-16.9c6.2 3.4 10 9.8 10 16.9 0 .6 0 1.2-.1 1.7-1.9-6.7-4.9-12-12.2-15.9l1.2-1.5c.4-.4.7-.8 1.1-1.2zm-7.3-1.9l.3-.3c1.7.2 3.3.6 4.9 1.2-.2.3-.4.5-.7.8-3.8 4.5-6.6 7.7-7.6 16.3-1.8.6-3.8.9-5.9 1.1 1.3-9.8 4.2-13.3 9-19.1zm-6.6.1c1.4-.3 2.7-.5 4.1-.6-4.4 5.3-7.5 9.4-8.7 19.6-1.4 0-2.8-.1-4.3-.2 1.1-9.5 3.4-12.4 8.1-17.9l.8-.9zm-4.3 1.6c-3.6 4.5-5.8 8.1-6.8 16.9-1.2-.2-2.4-.4-3.6-.7.3-6.9 4.4-13.1 10.4-16.2zM99.7 73c7 1.6 13.4 1.5 18.8-.1a47.16 47.16 0 0 1 2.4 3.3c-9.5 3.8-13.8 3.4-20.6.3-.4-1.2-.6-2.4-.6-3.5zm1.5 6.3c3.2 1.3 5.8 1.9 8.5 1.9 3.3 0 7-.9 12.2-3 .8 1.5 1.5 3 2 4.5-8.7 3.4-12.7 3-20 1.1a20.67 20.67 0 0 1-2.7-4.5zm17.7 11.5c-4.3 0-8.5-1.4-11.9-4.1 2.3.5 4.1.7 5.9.7 3.4 0 6.9-.8 11.7-2.7.4 1.6.8 3.2 1 4.9-2.1.8-4.4 1.2-6.7 1.2zm8.9-2.1c-1-6.5-3.5-12.3-7.6-17.3l-.1-.1c.3-2.4.7-4.4 1.2-6.1 7.4 5.2 10.6 11.4 10.6 20.7-1.3 1-2.7 2-4.1 2.8zM122.1 63a19.26 19.26 0 0 1 2.3-3.8c8 4.2 10.7 10.2 12.5 19.1-.7 1.9-1.7 3.6-2.9 5.2-.5-8.9-4.2-15.3-11.9-20.5zm-46.4 8.7c0-5.7-2.2-11.1-6.2-15.1-8.3-8.3-21.9-8.3-30.2 0-4 4-6.2 9.4-6.2 15.1s2.2 11.1 6.2 15.1S48.7 93 54.4 93s11.1-2.2 15.1-6.2 6.2-9.4 6.2-15.1zM57 53c4 .5 7.7 2.4 10.7 5.4 3.4 3.4 5.3 7.8 5.5 12.4-2.1-3.4-5-5.8-8.5-7.1l-.9-.3c-.3-.1-.6-.2-.8-.3-.3-.1-.5-.2-.8-.2-.2-.1-.4-.1-.6-.2-1.8-.5-3.7-.8-6.6-1.1-.2 0-.4-.1-.6-.1-.1 0-.2 0-.3-.1-.1 0-.3-.1-.4-.1s-.3-.1-.4-.1-.1-.1-.2-.1l-1.2-.6c2.1-2.6 3.7-5 5.1-7.5zm-2.8-.1a68.6 68.6 0 0 1-4.1 6c-1.3-1.5-2-2.9-2.1-4.3v-.2c0-.1 0-.1-.1-.2V54c2.1-.7 4.2-1.1 6.3-1.1zm-8.8 2.2c.3 2.4 1.7 4.3 3 5.7l-1.8 2.1c-2.2-3-3.4-5.2-3.9-6a21.11 21.11 0 0 1 2.7-1.8zm-4.7 3.5c.6 1.1 1.9 3.3 4 6.1-.4.4-.8.8-1.2 1.1-1.4-1.2-3.4-2.8-5.8-3.1.8-1.4 1.8-2.9 3-4.1zm-4.1 6.7h.3l.1.1h.1c1.7.1 3.1 1.1 4.4 2.2-2.7 2.2-4.8 3.5-6 4.2 0-2.3.4-4.4 1.1-6.5zM41 85.1c-2.9-2.9-4.7-6.5-5.3-10.5 2.5-1.3 5-3 7.4-5 .4.8.9 1.9 1 2.9.2 1.4.3 2.6.5 3.6 0 .2.1.5.1.7.3 1.9.7 3.4 1.5 5.4 1.4 3.5 3.7 6.4 7 8.4-4.5-.3-8.9-2.3-12.2-5.5zm17.2 5.1l-.2-.1c-4.7-1.9-7.9-4.9-9.4-8.9-1.1-3-1.4-4.8-2-9.1-.2-1.6-.9-3.1-1.6-4.2.4-.4.8-.7 1.2-1.1 5.7 7.1 12.9 13.3 21.2 18.5-2.4 2.4-5.6 4.1-9.2 4.9zm9.1-8C57.8 76.1 51.7 69.6 48.1 65c.8-.8 1.5-1.6 2.3-2.5 1.5.9 3 1.5 4.3 1.6 1.3.2 2.4.3 3.4.5 2.1.3 3.6.7 5.7 1.5 4.1 1.5 7 4.7 8.8 9.3 0 .1.1.2.1.3-.6 2.8-1.8 5.4-3.6 7.7l-1.8-1.2zm15-37.7c2.1 1.6 4.5 4.3 4.5 8.3 0 .6.5 1.2 1.2 1.2s1.2-.5 1.2-1.2c0-4.2 3-7 5.5-8.6 7.7-2.8 12.9-10.2 12.9-18.4 0-10.8-8.8-19.5-19.5-19.5s-19.5 8.8-19.5 19.5c-.2 8.6 5.5 16.3 13.7 18.7zm5.7 3.3a9.63 9.63 0 0 0-1.6-2.5h3.3c-.7.8-1.2 1.6-1.7 2.5zm0-39.1c.6 0 1.1 0 1.6.1h.1c.5.1 1 .1 1.5.2h.1c.5.1 1 .2 1.4.4h.2c.5.1.9.3 1.4.5H94s-.1 0-.1.1c0 0-.1 0-.1.1l-.1.1s-.1 0-.1.1l-.2.2s0 .1-.1.1v.5c0 2.2 1.8 4.1 4.1 4.1.6 0 1.2-.5 1.2-1.2s-.5-1.2-1.2-1.2c-.9 0-1.7-.8-1.7-1.7 0-.1 0-.3-.1-.4 0-.1-.1-.2-.2-.3.3.2.6.3.9.5.1 0 .2.1.2.1.3.1.5.3.7.5.1 0 .1.1.2.1.3.2.6.4.8.6l.2.2c.2.2.4.4.6.5l.2.2c.3.2.5.5.8.7l.7.7c.1.1.1.2.2.2.2.3.4.5.7.8v.1c.2.3.4.5.6.8.1.1.1.2.2.3.2.3.3.5.5.8l.1.1c.2.3.3.6.5.9 0 .1.1.2.1.3.1.3.2.5.3.8 0 .1.1.1.1.2.1.3.2.7.3 1 0 .1 0 .2.1.2.1.3.2.6.2.9 0 .1 0 .2.1.3.1.4.1.7.2 1.1v.2c0 .3.1.6.1 1v3.3c0-.1-.1-.1-.1-.2l-.2-.2h-.1c-.1 0-.1-.1-.2-.1h-.4c-.5 0-.9-.2-1.2-.5s-.5-.8-.5-1.2v-.3a.76.76 0 0 0-.2-.4c-.2-.3-.5-.5-.9-.5-.3 0-.6.1-.8.3s-.4.5-.4.8c0 1.1.3 2.1 1.1 2.9.7.8 1.7 1.3 2.9 1.3.1 0 .2 0 .4-.1h.1c.1 0 .2-.1.3-.2 0 .1 0 .2-.1.3 0 .2-.1.3-.1.5-.1.3-.1.5-.2.8 0 .1-.1.3-.1.4-.1.3-.2.5-.3.8 0 .1-.1.2-.1.3-.2.4-.3.7-.5 1.1 0 .1-.1.1-.1.2-.2.3-.3.6-.5.9-.1.1-.2.2-.2.4-.1.2-.3.4-.4.7-.1.1-.2.3-.3.4-.2.2-.3.4-.5.6-.1.1-.2.2-.3.4l-.9.9c-.3.3-.6.6-.9.8l-.1.1c-.3.2-.6.5-.8.7-.1.1-.2.2-.3.2-.2.2-.4.3-.7.5-.1.1-.3.2-.4.3-.2.1-.5.3-.7.4a.76.76 0 0 1-.4.2c-.3.1-.5.3-.8.4-.1.1-.2.1-.4.2-.4.2-.8.3-1.2.5-.4.1-.7.2-1.1.3l.1.4-.2-.4-1.2.3.1.4-.2-.4c-.8.2-1.7.2-2.5.3h-.1c-.9 0-1.7 0-2.7-.1-.8-.1-1.7-.3-2.5-.5-7.3-2.1-12.5-8.9-12.5-16.5.1-9.8 7.8-17.5 17.3-17.5zm7 11.4c.6 0 1.2-.5 1.2-1.2s-.5-1.2-1.2-1.2c-.9 0-1.7-.8-1.7-1.7 0-.6-.5-1.2-1.2-1.2s-1.2.5-1.2 1.2c0 2.3 1.9 4.1 4.1 4.1zm.4 2.4c0-.6-.5-1.2-1.1-1.2-.7 0-1.2.5-1.2 1.1 0 1.1.3 2.1 1.1 2.9.7.8 1.7 1.3 2.8 1.3.6 0 1.1-.5 1.2-1.1 0-.6-.5-1.2-1.1-1.2-.5 0-.9-.2-1.2-.5-.4-.4-.5-.8-.5-1.3zm6.2-.6c.7 0 1.2-.5 1.2-1.1s-.5-1.2-1.1-1.2c-.5 0-.9-.2-1.2-.5s-.5-.8-.5-1.2c0-.6-.5-1.2-1.1-1.2s0 0 0 0c-.3 0-.6.1-.8.3s-.4.5-.4.8c0 1.1.3 2.1 1.1 2.9.7.7 1.7 1.2 2.8 1.2zM88.3 99.3c-2.6 0-5.2.5-7.6 1.4l-.7.3s-.1 0-.2.1c-.5.2-1 .5-1.5.7-.1 0-.1.1-.2.1l-.1.1c-.4.2-.8.4-1.1.7-.2.1-.4.3-.6.4-.3.2-.6.4-.9.7-.2.2-.4.3-.7.5s-.5.5-.8.7c-.2.2-.4.3-.5.5-.3.3-.5.6-.8.9l-.1.1c-.1.1-.2.3-.4.4a4.44 4.44 0 0 0-.8 1.1c-.1.1-.2.3-.3.4-.3.4-.5.8-.8 1.2l-.2.3c-.3.5-.5 1-.7 1.5l-.3.8c-1.1 2.5-1.6 5.2-1.6 8 0 11.5 9.3 20.8 20.8 20.8s20.8-9.3 20.8-20.8c.1-11.6-9.3-20.9-20.7-20.9zm-16.1 11.4l.1-.3c.2-.3.4-.7.7-1.1.1-.1.2-.2.2-.3.2-.3.4-.6.7-.9.1-.2.3-.3.4-.5.2-.2.4-.4.6-.7l1-1c.2-.2.5-.4.7-.6s.4-.3.6-.5l.1-.1c.1-.1.2-.2.4-.3.3-.2.6-.4 1-.6a.76.76 0 0 1 .4-.2 4.67 4.67 0 0 1 1-.5c2 1.6 4.8 2.4 8 2.2 4.8.2 8.6 2.9 10.4 7.2 1.5 3.7.9 8.2-1.7 11.8-.9 1.2-1.9 2.4-3 3.4-1.8 1.7-3.9 2.7-6 3.1-3.5.6-7-.3-9.8-2.5-.3-.3-.6-.5-.9-.8-2-2-3.2-4.8-3.4-7.8v-2.4c0-.2 0-.3-.1-.5 0-.2-.1-.4-.1-.7 0-.1-.1-.2-.1-.4s-.1-.5-.2-.7c0-.1-.1-.2-.1-.3-.1-.2-.1-.4-.2-.6 0-.1-.1-.2-.2-.4l-.3-.6c-.1-.2-.2-.3-.3-.5-.1-.1-.1-.3-.2-.4-.2-.3-.4-.5-.6-.8.6-.1.8-.4.9-.7zm-2.5.9zm18.6 27.1c-10.3 0-18.6-8.3-18.6-18.6 0-2 .3-4.1 1-6 .9 1.5 1.2 3.5 1.1 5.6v.1c.2 4.2 2 7.8 5.1 10.3 3.2 2.5 7.4 3.6 11.5 2.9 2.5-.4 4.9-1.7 7-3.6 1.2-1.1 2.4-2.4 3.3-3.7 3-4.1 3.8-9.5 2-13.9-2.1-5.1-6.7-8.3-12.4-8.6h-.1c-2.1.1-4-.2-5.5-1 1.8-.6 3.6-.8 5.5-.8 10.3 0 18.6 8.3 18.6 18.6.1 10.3-8.3 18.7-18.5 18.7z"
+								></path>
+							</svg>
+						</div>
+						<br />
+						No popular event / upcoming event / outright event / fixture event / sports available at the moment. Please check sports menu for event listing.
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="smallpop" style="display: none">
+			<div class="smallpop_wrp">
+				<div class="smallpop_wrp_inner">Please try again later, we are currently processing your bet</div>
+			</div>
+		</div>
+		<div class="bg_mask ob_tut_mask" style="display: none"></div>
+		<div class="le_action_bar w_pb_footer">
+			<div class="le_tut le_tut_2" style="display: none">
+				<svg class="rec_arrow le_arrow highlighted" xmlns="http://www.w3.org/2000/svg" width="55" height="50" viewBox="0 0 38.12 50">
+					<path d="M4.35355 46.4339C4.15829 46.6292 3.84171 46.6292 3.64645 46.4339L0.464466 43.252C0.269203 43.0567 0.269203 42.7401 0.464466 42.5449C0.659729 42.3496 0.976311 42.3496 1.17157 42.5449L4 45.3733L6.82843 42.5449C7.02369 42.3496 7.34027 42.3496 7.53553 42.5449C7.7308 42.7401 7.7308 43.0567 7.53553 43.252L4.35355 46.4339ZM48.4115 2.07251C41.0848 0.75534 30.1008 1.3784 20.9657 7.49584C11.8618 13.5924 4.5 25.2099 4.5 46.0804H3.5C3.5 24.9509 10.9715 12.9851 20.4093 6.66495C29.8158 0.365723 41.0819 -0.261215 48.5885 1.08828L48.4115 2.07251Z"></path>
+				</svg>
+				<div class="dot_box highlighted le_desc">2. Once you have 8 picks, review your total odds and tap Confirm to place your bet.</div>
+			</div>
+			<div class="le_details">
+				<div class="le_icon">
+					<i class="icon-fi-clover"></i>
+					<i class="icon-fi-clover active"></i>
+				</div>
+				<div class="le_md">
+					<div class="le_txt_top">
+						<span
+							><span class="le_figure"><span class="le_slxn_figure">3</span>/8</span> picks</span
+						>
+						<!-- add ".completed" for user select completed status, add ".in_progress"  for ongoing status-->
+						<div class="le_status completed">Completed</div>
+					</div>
+					<div class="le_txt_btm">
+						Total Odds:
+						<span class="odds ob_odds old">99.86</span>
+						<i class="icon-fi-double-angle-right"></i>
+						<span class="odds ob_odds new"> <span>101.99</span><i class="icon-fi-odds-boost"></i> </span>
+					</div>
+				</div>
+			</div>
+			<div class="le_btn_wrp">
+				<div class="btn">Clear</div>
+				<div class="btn active">Confirm</div>
+			</div>
+		</div>
+
+		<div class="bg_mask le_tut_mask" id="le_tut_mask" style="display: none">
+			<div class="mask_button highlighted le_msk_btn" id="leTutBtn">Got It</div>
+		</div>
+		<!-- any share items-->
+		<div id="demoOnly_global_pop_item_euro"></div>
+
+		<script>
+			$(document).ready(function () {
+				$('.sub_menu_panel').css('top', $('.n_header_main').outerHeight());
+				$('.ob_tabs').css('top', $('.sub_menu_panel').outerHeight() + $('.n_header_main').outerHeight());
+				$('.ob_listing_hdr').css('top', $('.sub_menu_panel').outerHeight() + $('.n_header_main').outerHeight() + $('.ob_tabs').outerHeight());
+
+				$('#demoNoEvent').click(function () {
+					$('.n_inner_loading').show();
+					$('.ob_dpd_wrp').hide();
+					// $(".loading_area").hide();
+				});
+
+				$('#demoOnly_global_pop_item_euro').load('_global_pop_item.html', function () {
+					// $('#main_footer').unwrap();
+				});
+
+				// ob_sort_eff('.ob_sort_wrp', '.ob_st_popup');
+				flexiSlider("#ob_slider_2")
+				toggleRecentWinners()
+
+				$('.ob_st_content .ob_st_rw').click(function () {
+					$(this).parent().children().removeClass('active');
+					$(this).addClass('active');
+
+					var sortText = $(this).text().trim();
+					var $icon = $('.ob_sort').find('i').last();
+					$icon.removeClass('icon-fi-sort-popularity icon-fi-sort-alphabetical');
+					if (sortText === 'Sort by popularity') {
+					   $icon.addClass('icon-fi-sort-popularity');
+					} else if (sortText === 'Sort by alphabetical') {
+					   $icon.addClass('icon-fi-sort-alphabetical');
+					}
+
+					$('.ob_st_popup').hide();
+					$('.ob_sort_wrp').removeClass('active');
+				});
+
+				const obTutTrigger2 = () => {
+					$('.ob_tut').closest('.ob_dpd_wrp').addClass('highlighted');
+					$('html, body').animate(
+						{
+							scrollTop: $('.ob_tut').closest('.ob_dpd_wrp').offset().top - 120,
+						},
+						500,
+						() => {
+							$('body').addClass('popupOn');
+							$('.ob_tut_mask').show();
+							$('.ob_tut').show().closest('.ob_dpd_wrp');
+							$('#obTutBtn2').show();
+						},
+					);
+				};
+				const obTutClose = () => {
+					$('.ob_tut').hide().closest('.ob_dpd_wrp').removeClass('highlighted');
+					$('.ob_tut_mask').hide();
+					$('body').removeClass('popupOn');
+					$('#obTutBtn2').hide();
+
+					sessionStorage.setItem('ob_p2', 'false');
+					window.location.href = 'index.html';
+				};
+				$('#obTutBtn2').click(() => obTutClose());
+				sessionStorage.getItem('ob_p1') == 'false' && obTutTrigger2();
+
+				toggleBoost();
+				$('#demoOnlyLeTut')
+					.off('click')
+					.on('click', function () {
+						$(this).addClass('highlighted add');
+						$('#le_tut_mask, .le_tut').show();
+						$('.le_action_bar').removeClass('w_pb_footer');
+						$('#main_footer').hide();
+						$('#favRefresh').hide();
+					});
+				$('#leTutBtn')
+					.off('click')
+					.on('click', function () {
+						$('#demoOnlyLeTut').removeClass('highlighted add');
+						$('#le_tut_mask, .le_tut').hide();
+						$('.le_action_bar').addClass('w_pb_footer');
+						$('#main_footer').show();
+						$('#favRefresh').show();
+					});
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,683 @@
+@use "../../assets/themes/colours/brand"as brand;
+@use "../../assets/public/layout/css/base"as base;
+@use "../mixin"as mix;
+// settings (moved)
+// settings (moved): start / end
+// settings (removed)
+// settings (removed): start / end
+$cb_web_width: 480px;
+$cb_web_height: 100vh;
+
+.fltr_popup {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                z-index: 1000001;
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            background: rgba(0, 0, 0, 0.6);
+        }
+    }
+
+    .cb_web & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mCyberbattle {
+                    width: $cb_web_width;
+                    left: calc(50vw - ($cb_web_width*0.5));
+                }
+            }
+        }
+    }
+}
+
+.ts_clr {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.justifyContent(center);
+            @include base.alignItems(center);
+            width: 100%;
+            max-width: 40px;
+            height: 24px;
+            position: relative;
+
+            @include mix.mAsiaCyberbattle {
+                @include base.borderRadius(4px);
+                cursor: pointer;
+            }
+        }
+    }
+
+    &.active {
+        @include mix.theme {
+            @include mix.mobile {
+                color: #dddddd;
+            }
+        }
+
+        &:after {
+            @include mix.layout {
+                @include mix.mobile {
+                    content: "";
+                    position: absolute;
+                    z-index: 1;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    @include base.borderRadius(inherit);
+                    pointer-events: none;
+                }
+            }
+
+            @include mix.theme {
+                @include mix.mobile {
+                    border: 1px solid #dddddd;
+                }
+            }
+        }
+    }
+
+    &+.ts_clr {
+        @include mix.layout {
+            @include mix.mobile {
+                margin-left: 6px;
+
+                @include mix.mAsiaCyberbattle {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+.theme_red {
+    @include mix.theme {
+        @include mix.mobile {
+            background: #a92128;
+        }
+    }
+}
+
+.theme_blue {
+    @include mix.theme {
+        @include mix.mobile {
+            background: #26739d;
+        }
+    }
+}
+
+.theme_bafa {
+    @include mix.theme {
+        @include mix.mobile {
+            background: #4988b8;
+        }
+    }
+}
+
+.theme_green {
+    @include mix.theme {
+        @include mix.mobile {
+            background: #009d73;
+        }
+    }
+}
+
+.theme_brown {
+    @include mix.theme {
+        @include mix.mobile {
+            background: #9c7656;
+        }
+    }
+}
+
+.theme_wellbet {
+    @include mix.theme {
+        @include mix.mobile {
+            background: #c3272f;
+        }
+    }
+}
+
+.theme_xinli {
+    @include mix.theme {
+        @include mix.mobile {
+            background: #a92128;
+        }
+    }
+}
+
+.theme_default {
+    @include mix.theme {
+        @include mix.mobile {
+            background: #3d4655;
+        }
+    }
+}
+
+.theme_betway {
+    @include mix.theme {
+        @include mix.mobile {
+            background: #acc540;
+        }
+    }
+}
+
+.theme_dark1 {
+    @include mix.theme {
+        @include mix.mobile {
+            background: #71c5fb;
+        }
+    }
+}
+
+.theme_dark2 {
+    @include mix.theme {
+        @include mix.mobile {
+            background: #ca432d;
+        }
+    }
+}
+
+.theme_default1 {
+    @include mix.theme {
+        @include mix.mobile {
+            background: #7230ff;
+        }
+    }
+}
+
+.lm2_dn {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mEuro {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                margin-left: auto;
+            }
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    margin-right: 8px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .icon-fi-sun-filled,
+    .icon-fi-moon-filled {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    color: brand.t(Color_lm2_dn_filled);
+                }
+            }
+        }
+    }
+}
+
+.lm2_dn_dot {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mEuro {
+                @include base.borderRadius(50%);
+                height: 10px;
+                width: 10px;
+            }
+        }
+    }
+}
+
+.lm2_theme {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mEuro {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                min-height: 44px;
+                // font-size: base.$n_font6;
+                font-size: 13px;
+                padding: 0 4px * 2;
+                min-height: 36px;
+            }
+        }
+    }
+
+    .leftmenu_wrp.lm2_euro & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    background: brand.t(BG_lm2_euro_theme);
+                }
+            }
+        }
+    }
+}
+
+.odds_arrow_grp {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.inlineFlex();
+            @include base.alignItems(center);
+            @include base.justifyContent(center);
+            @include base.boxSizing(border-box);
+            position: relative;
+            vertical-align: middle;
+
+            @include mix.mAsiaCyberbattle {
+                width: 20px;
+                min-width: 20px;
+                height: 20px;
+                min-height: 20px;
+            }
+
+            @include mix.mEuro {
+                width: 24px;
+                min-width: 24px;
+                height: 24px;
+                min-height: 24px;
+            }
+        }
+    }
+
+    .selectbox_title & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.brightTheme {
+                        background: #fff;
+                    }
+
+                    @include mix.darkTheme {
+                        background: #222;
+                    }
+                }
+            }
+        }
+    }
+
+    .selectbox_title>& {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include base.borderRadius(4px);
+                }
+            }
+        }
+    }
+
+    .lm2_dn & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    @include base.borderRadius(4px);
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    border: 0.5px solid #292a2f;
+
+                    @include mix.brightTheme {
+                        background: #000;
+                    }
+
+                    @include mix.darkTheme {
+                        background: #121212;
+                    }
+                }
+            }
+        }
+    }
+
+    &.active {
+        .lm2_dn & {
+            @include mix.theme {
+                @include mix.mobile {
+                    @include mix.mEuro {
+                        @include mix.darkTheme {
+                            background: #222222;
+
+                            @include mix.notThemeNames(dark2) {
+                                border-color: brand.t(Main_Active_Color);
+                            }
+
+                            @include mix.themeName(dark2) {
+                                border-color: brand.t(Color_cls_head_menu_active);
+                            }
+                        }
+
+                        @include mix.brightTheme {
+                            @include mix.notThemeNames(red, xinli) {
+                                border-color: brand.t(Main_Active_Color);
+                            }
+
+                            @include mix.themeName(red) {
+                                border-color: brand.t(Main_Active_Color2);
+                            }
+
+                            @include mix.themeName(xinli) {
+                                border-color: brand.t(BG_cls_el_swtchviw_Active);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &+& {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    margin-left: 6px;
+                }
+            }
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                position: absolute;
+
+                @include mix.mEuro {
+                    font-size: 10px;
+                    margin: auto;
+                }
+            }
+        }
+
+        &:first-child {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        left: 1px;
+                    }
+
+                    @include mix.mEuro {
+                        left: 5px;
+                    }
+                }
+            }
+        }
+
+        &:last-child {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        right: 1px;
+                    }
+
+                    @include mix.mEuro {
+                        right: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.comp_fltr {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(space-between);
+                padding: 16px 8px;
+            }
+        }
+    }
+
+    &.ts {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    font-size: 14px;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.brightTheme {
+                        background: brand.t(BGGray);
+                    }
+
+                    @include mix.darkTheme {
+                        @include mix.notThemeName(default1) {
+                            background: brand.t(Black);
+                        }
+
+                        @include mix.themeName(default1) {
+                            background: brand.t(Blue);
+                        }
+                    }
+                }
+            }
+        }
+
+        i {
+            @include mix.theme {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        @include mix.brightTheme {
+                            color: brand.t(DarkGray);
+                        }
+
+                        @include mix.darkTheme {
+                            color: brand.t(LightGray);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    font-size: 12px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .icon-fi-angle-right {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.brightTheme {
+                        color: brand.t(DarkGray);
+                    }
+
+                    @include mix.darkTheme {
+                        @include mix.notThemeName(default1) {
+                            color: brand.t(Gray03);
+                        }
+
+                        @include mix.themeName(default1) {
+                            color: brand.t(LightGray);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.fltr_grp_itm {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                padding: 0 8px;
+            }
+        }
+    }
+
+    &.ts {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include base.justifyContent(flex-end);
+                    border-bottom: none;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.brightTheme {
+                        background: brand.t(DividerGray);
+                    }
+
+                    @include mix.darkTheme {
+                        @include mix.notThemeName(default1) {
+                            background: brand.t(Black);
+                        }
+
+                        @include mix.themeName(default1) {
+                            background: brand.t(MediumBlue);
+                        }
+                    }
+                }
+
+                @include mix.mEuro {
+                    background: brand.t(BG_n_body);
+                }
+            }
+        }
+    }
+
+    &.dot_box {
+        &::before {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        height: calc(100% + 76px);
+                    }
+                }
+            }
+        }
+
+        &.highlighted {
+            @include mix.theme {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        @include mix.brightTheme {
+                            border-bottom-color: #595959;
+                            color: brand.t(White);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.fltr_grp_itm,
+.comp_fltr {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                height: 40px;
+                min-height: 40px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    border-bottom: 1px solid brand.t(DividerGray);
+                }
+
+                @include mix.darkTheme {
+                    @include mix.notThemeName(default1) {
+                        border-bottom: 1px solid brand.t(Gray02);
+                    }
+
+                    @include mix.themeName(default1) {
+                        border-bottom: 1px solid brand.t(Stroke);
+                    }
+                }
+            }
+
+            @include mix.mEuro {
+                border-bottom: 1px solid brand.t(Border_form_grp_wrap);
+            }
+        }
+    }
+}
+
+.comp_fltr_wrp {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.flexbox();
+                @include base.alignItems(baseline);
+            }
+        }
+    }
+}
+
+.fltr_btn {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                // @include base.borderRadius(base.$n_font7_andhalf * 0.25);
+                @include base.borderRadius(3.625px);
+                // padding: base.$n_font11 * 0.6;
+                padding: 10.8px;
+                text-align: center;
+                width: calc(100% - 16px);
+                font-weight: 700;
+                margin: 30px auto;
+                cursor: pointer;
+            }
+        }
+    }
+}

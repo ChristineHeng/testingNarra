@@ -1,0 +1,815 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Narra - html template</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover,user-scalable=no" />
+
+		<!--Base Styles-->
+		<link rel="stylesheet" type="text/css" href="../assets/public/layout/css/basestyle.min.css" />
+		<!--<link rel="stylesheet" type="text/css" href="../merchants/merchant1/css/style_euro.css">-->
+		<link rel="stylesheet" type="text/css" href="../assets/public/languages/eng/layout_euro.min.css" id="detect_language" />
+
+		<!--theme-->
+		<link rel="stylesheet" type="text/css" href="#" id="design_view" />
+	</head>
+
+	<body id="root" class="euro">
+		<div class="n_container">
+			<div class="n_header n_header_main">
+				<div class="bg_mask fltr_tut_msk" id="demoOnlyFltrTutMsk" style="display: none">
+					<div class="mask_button highlighted fltr_msk_btn" id="fltrMskBtn1">Got It</div>
+				</div>
+				<div class="heder_lf">
+					<div class="lf_menu">
+						<i class="icon-fi-left-menu"></i>
+						<div class="fltr_tut fltr_tut1" style="display: none">
+							<div class="dot_box highlighted">New feature has been added to the “Settings” tab!</div>
+							<svg class="rec_arrow highlighted tutorialMockNewArrow" xmlns="http://www.w3.org/2000/svg" width="55" height="50" viewBox="0 0 38.12 50">
+								<path d="M4.35355 46.4339C4.15829 46.6292 3.84171 46.6292 3.64645 46.4339L0.464466 43.252C0.269203 43.0567 0.269203 42.7401 0.464466 42.5449C0.659729 42.3496 0.976311 42.3496 1.17157 42.5449L4 45.3733L6.82843 42.5449C7.02369 42.3496 7.34027 42.3496 7.53553 42.5449C7.7308 42.7401 7.7308 43.0567 7.53553 43.252L4.35355 46.4339ZM48.4115 2.07251C41.0848 0.75534 30.1008 1.3784 20.9657 7.49584C11.8618 13.5924 4.5 25.2099 4.5 46.0804H3.5C3.5 24.9509 10.9715 12.9851 20.4093 6.66495C29.8158 0.365723 41.0819 -0.261215 48.5885 1.08828L48.4115 2.07251Z" />
+							</svg>
+						</div>
+					</div>
+					<div class="v_split"></div>
+					<div class="logo">
+						<img src="../merchants/merchant1/images/logo.png" />
+					</div>
+				</div>
+				<div class="heder_rt">
+					<i class="icon-fi-n-results dontcoopythisclass_sample_button_results"></i>
+					<div class="item demoOnlyDontCopt_betslip">
+						<i class="icon-fi-n-betlist"></i>
+						<div class="noti mybet_noti_cancel">2</div>
+						<div class="noti mybet_noti_pending">1</div>
+					</div>
+					<div class="er_myacct">
+						<i class="icon-fi-n-mine dontcoopythisclass_sample_button_myacct"></i>
+						<div class="red_dot"></div>
+					</div>
+					<div class="n_balance">
+						<!-- long currency code : GAMERSTAKE -->
+						<div class="currency">(FARTCOINNNN)</div>
+						100,962,132.5555
+					</div>
+				</div>
+			</div>
+			<div class="n_content_wrap_wth_bcktop with_ref w_pinned">
+				<!-- content start here-->
+				<!--<div id="el_stickymenu" class="el_stickymenu sticky"></div>-->
+				<div id="el_stickymenu" class=""></div>
+				<!--hide for ticket [SFCRQ-3478]: start-->
+				<!--<div class="el_header n_sticky">
+				<div class="sport_info">
+					<i class="icon-fi-title-s1 icon"></i>Soccer
+				</div>
+				<div class="see_all">
+					<span id="all_soccer">See All<span class="sub_info">(45)</span></span>
+					<span class="comp_count">45</span>
+					<i class="icon-fi-arrow-up1"></i>
+				</div>
+				</div>-->
+				<!--hide for ticket [SFCRQ-3478]: end-->
+				<div class="el_content_wrp">
+					<!-- Event Listing Preload Template (1/4): start -->
+					<div class="el_items" data-id="item1">
+						<div class="el_grp_header n_sticky">
+							<i class="icon-fi-arrow-up1"></i>
+							<div class="name">Italy Serie A</div>
+							<i class="icon-fi-pin"></i>
+							<span class="comp_count">6</span>
+						</div>
+						<div class="bet_type_wrp n_sticky">
+							<div class="bet_item">1</div>
+							<div class="bet_item">x</div>
+							<div class="bet_item">2</div>
+						</div>
+						<div class="el_grp_wrp">
+							<div class="event_content preload">
+								<div class="content_lf">
+									<div class="team_info">
+										<div class="name"></div>
+									</div>
+									<div class="team_info">
+										<div class="name"></div>
+									</div>
+									<div class="info_btm">
+										<div class="info_lf"></div>
+										<div class="more_icons"></div>
+									</div>
+								</div>
+								<div class="content_rt">
+									<div class="odds_box big"></div>
+									<div class="odds_box big"></div>
+									<div class="odds_box big"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Event Listing Preload Template (1/4): end -->
+					<div class="el_items" data-id="item2">
+						<div class="el_grp_header n_sticky">
+							<i class="icon-fi-arrow-up1"></i>
+							<div class="name">VS - IM PES21 World Cup</div>
+							<i class="icon-fi-joystick"></i>
+							<i class="icon-fi-pin"></i>
+							<span class="comp_count">2</span>
+						</div>
+						<div class="bet_type_wrp n_sticky">
+							<div class="bet_item">1</div>
+							<div class="bet_item">x</div>
+							<div class="bet_item">2</div>
+						</div>
+						<div class="el_grp_wrp">
+							<div class="event_content">
+								<!--add "iconPop" next to "content_lf" to show pop up-->
+								<div class="content_lf iconPop">
+									<div class="team_info">
+										<div class="name favteam">Boneveto</div>
+										<div class="score_grp">
+											<div class="score">2</div>
+										</div>
+									</div>
+									<div class="team_info">
+										<div class="name">Template 2 for info_btm: Match Interrupted and icons diff lines</div>
+										<div class="score_grp">
+											<div class="score">0</div>
+										</div>
+									</div>
+									<!-- template 2: add int_wrp for 2 lines text and icons -->
+									<div class="info_btm int_wrp info_btm_top">
+										<div class="info_lf">
+											Match Interrupted
+											<!--<div class="n_indicator">
+											<i class="icon-fi-info-circle" aria-hidden="true"></i>
+											<div class="indicator_pop">Weather Conditions</div>
+										</div>-->
+											<div class="info_wrp info_top">
+												<div class="info_icn"><i class="icon-fi-info"></i></div>
+												<div class="info_txt">Weather Conditions</div>
+											</div>
+										</div>
+										<div class="more_icons">
+											<div class="more_icons_wrp">
+												<div class="info_wrp info_top">
+													<div class="info_icn info_event">
+														<i class="icon-fi-pin"></i>
+													</div>
+												</div>
+												<div class="n_fav_on">
+													<i class="icon-fi-n-fav-on"></i>
+												</div>
+												<div class="info_wrp info_top">
+													<div class="info_icn"><i class="icon-fi-title-s201"></i></div>
+													<div class="info_txt">Corner</div>
+												</div>
+												<div class="info_wrp info_top">
+													<div class="info_icn"><i class="icon-fi-player-props"></i></div>
+													<div class="info_txt">Player Props</div>
+												</div>
+												<div class="info_wrp info_top">
+													<div class="info_icn"><i class="icon-fi-cashout"></i></div>
+													<div class="info_txt">Cash Out</div>
+												</div>
+												<div class="info_wrp info_top">
+													<div class="info_icn"><i class="icon-fi-visualization"></i></div>
+													<div class="info_txt">Visualization</div>
+												</div>
+											</div>
+											<div class="n_btn_sev">100<i class="icon-fi-angle-right"></i></div>
+										</div>
+									</div>
+								</div>
+								<div class="content_rt">
+									<div class="odds_box big">24.00</div>
+									<div class="odds_box big">24.00</div>
+									<div class="odds_box big">24.00</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="el_items" data-id="item3">
+						<div class="el_grp_header n_sticky">
+							<i class="icon-fi-arrow-up1"></i>
+							<!-- if want this row only display one line text, pls add 'single_line' behind name -->
+							<div class="name">ENGLISH LEAGUE TWO PLAYOFF - Which team will advance to next round Which team will advance to next round - Specials -end</div>
+							<i class="icon-fi-pin"></i>
+							<span class="comp_count">1</span>
+						</div>
+						<div class="bet_type_wrp n_sticky">
+							<div class="bet_item">1</div>
+							<div class="bet_item">x</div>
+							<div class="bet_item">2</div>
+						</div>
+						<div class="el_grp_wrp">
+							<div class="event_content">
+								<!--add "iconPop" next to "content_lf" to show pop up-->
+								<div class="content_lf iconPop">
+									<div class="team_info">
+										<div class="name">Virtus Entella</div>
+										<div class="score_grp">
+											<div class="score">2</div>
+										</div>
+									</div>
+									<div class="gitc_st">(Possible VAR)</div>
+									<div class="team_info">
+										<div class="name">Template 1 for info_btm: date time and icons same line</div>
+										<div class="score_grp">
+											<div class="score">0</div>
+										</div>
+									</div>
+									<div class="gitc_st">(Possible Red Card)</div>
+									<!-- template 1: normal handling for text and icons -->
+									<div class="info_btm info_btm_top">
+										<div class="info_lf">
+											<div class="info_lf_time">25/01 46:00</div>
+										</div>
+										<div class="more_icons">
+											<div class="more_icons_wrp">
+												<div class="info_wrp info_top">
+													<div class="info_icn info_event">
+														<i class="icon-fi-pin"></i>
+													</div>
+												</div>
+												<div class="n_fav_off">
+													<i class="icon-fi-n-fav-off"></i>
+												</div>
+												<!--<div class="n_indicator">
+												<i class="icon-fi-stats" aria-hidden="true"></i>
+												<div class="indicator_pop">Statistics</div>
+											</div>-->
+												<div class="info_wrp info_top">
+													<div class="info_icn"><i class="icon-fi-stats"></i></div>
+													<div class="info_txt">Statistics</div>
+												</div>
+												<div class="info_wrp info_top">
+													<div class="info_icn"><i class="icon-fi-visualization"></i></div>
+													<div class="info_txt">Visualization</div>
+												</div>
+												<!--<div class="n_indicator">
+												<i class="icon-fi-livestream" aria-hidden="true"></i>
+												<div class="indicator_pop">Live Stream</div>
+											</div>-->
+												<div class="info_wrp info_top">
+													<div class="info_icn"><i class="icon-fi-livestream"></i></div>
+													<div class="info_txt">Live Stream</div>
+												</div>
+											</div>
+											<div class="n_btn_sev">100<i class="icon-fi-angle-right"></i></div>
+										</div>
+									</div>
+								</div>
+								<div class="content_rt">
+									<div class="odds_box big add">24.00</div>
+									<div class="odds_box big">24.00</div>
+									<div class="odds_box big">24.00</div>
+								</div>
+							</div>
+							<div class="event_content">
+								<!--add "iconPop" next to "content_lf" to show pop up-->
+								<div class="content_lf iconPop">
+									<div class="team_info">
+										<div class="name">Virtus Entella</div>
+										<div class="score_grp">
+											<div class="score">1</div>
+										</div>
+									</div>
+									<div class="team_info">
+										<div class="name">Pisa</div>
+										<div class="score_grp">
+											<div class="score">0</div>
+										</div>
+									</div>
+									<div class="info_btm info_btm_top">
+										<div class="info_lf">
+											<div class="info_lf_time">46:00</div>
+										</div>
+										<div class="more_icons">
+											<div class="more_icons_wrp">
+												<div class="info_wrp info_top">
+													<div class="info_icn info_event">
+														<i class="icon-fi-pin"></i>
+													</div>
+												</div>
+												<div class="n_fav_off">
+													<i class="icon-fi-n-fav-off"></i>
+												</div>
+												<!--<div class="n_indicator">
+												<i class="icon-fi-world-cup" aria-hidden="true"></i>
+												<div class="indicator_pop">World Cup</div>
+											</div>-->
+												<div class="info_wrp info_top">
+													<div class="info_icn"><i class="icon-fi-world-cup"></i></div>
+													<div class="info_txt">World Cup</div>
+												</div>
+											</div>
+											<div class="n_btn_sev">100<i class="icon-fi-angle-right"></i></div>
+										</div>
+									</div>
+								</div>
+								<div class="content_rt">
+									<div class="odds_box big">24.00</div>
+									<div class="odds_box big">24.00</div>
+									<div class="odds_box big">24.00</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="el_header n_sticky">
+					<div class="sport_info"><i class="icon-fi-title-s2 icon"></i>Basketball</div>
+					<div class="see_all">
+						<span id="all_basketball">See All<!--<span class="sub_info">(100)</span>--></span>
+						<span class="comp_count">100</span>
+						<i class="icon-fi-arrow-up1"></i>
+					</div>
+				</div>
+				<div class="el_content_wrp">
+					<!-- Event Listing Preload Template (2/4): start -->
+					<div class="el_items" data-id="item4">
+						<div class="el_grp_header n_sticky">
+							<i class="icon-fi-arrow-up1"></i>
+							<div class="name">Italy Serie A</div>
+							<i class="icon-fi-pin"></i>
+							<span class="comp_count">6</span>
+						</div>
+						<div class="bet_type_wrp n_sticky">
+							<div class="bet_item">1</div>
+							<div class="bet_item">2</div>
+						</div>
+						<div class="el_grp_wrp">
+							<div class="event_content preload">
+								<div class="content_lf">
+									<div class="team_info">
+										<div class="name"></div>
+									</div>
+									<div class="team_info">
+										<div class="name"></div>
+									</div>
+									<div class="info_btm">
+										<div class="info_lf"></div>
+										<div class="more_icons"></div>
+									</div>
+								</div>
+								<div class="content_rt">
+									<div class="odds_box big"></div>
+									<div class="odds_box big"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Event Listing Preload Template (2/4): end -->
+					<div class="el_items" data-id="item5">
+						<div class="el_grp_header n_sticky">
+							<i class="icon-fi-arrow-up1"></i>
+							<div class="name">Italy Serie A</div>
+							<i class="icon-fi-pin"></i>
+							<span class="comp_count">2</span>
+						</div>
+						<div class="bet_type_wrp n_sticky">
+							<div class="bet_item">1</div>
+							<div class="bet_item">2</div>
+						</div>
+						<div class="el_grp_wrp">
+							<div class="event_content">
+								<!--add "iconPop" next to "content_lf" to show pop up-->
+								<div class="content_lf iconPop">
+									<div class="team_info">
+										<div class="name">Utah State Aggies</div>
+										<div class="score_grp">
+											<div class="score">2</div>
+										</div>
+									</div>
+									<div class="team_info">
+										<div class="name">Colorado State Rams</div>
+										<div class="score_grp">
+											<div class="score">0</div>
+										</div>
+									</div>
+									<div class="info_btm info_btm_top">
+										<div class="info_lf">
+											<div class="info_lf_time">Q4 11:15</div>
+										</div>
+										<div class="more_icons">
+											<div class="more_icons_wrp">
+												<div class="info_wrp info_top">
+													<div class="info_icn info_event">
+														<i class="icon-fi-pin"></i>
+													</div>
+												</div>
+												<div class="n_fav_off">
+													<i class="icon-fi-n-fav-off"></i>
+												</div>
+												<div class="info_wrp info_top">
+													<div class="info_icn"><i class="icon-fi-visualization"></i></div>
+													<div class="info_txt">Visualization</div>
+												</div>
+											</div>
+											<div class="n_btn_sev">100<i class="icon-fi-angle-right"></i></div>
+										</div>
+									</div>
+								</div>
+								<div class="content_rt">
+									<div class="odds_box big up"><i class="icon-fi-arrow-up"></i>12.00</div>
+									<div class="odds_box big down"><i class="icon-fi-arrow-down"></i>43.00</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="el_items" data-id="item6">
+						<div class="el_grp_header n_sticky">
+							<i class="icon-fi-arrow-up1"></i>
+							<div class="name">Italy Serie B</div>
+							<i class="icon-fi-pin"></i>
+							<span class="comp_count">2</span>
+						</div>
+						<div class="bet_type_wrp n_sticky">
+							<div class="bet_item">1</div>
+							<div class="bet_item">2</div>
+						</div>
+						<div class="el_grp_wrp">
+							<div class="event_content">
+								<!--add "iconPop" next to "content_lf" to show pop up-->
+								<div class="content_lf iconPop">
+									<div class="team_info">
+										<div class="name">Utah State Aggies utah State Aggies utah State Aggies</div>
+										<div class="score_grp">
+											<div class="score">100</div>
+										</div>
+									</div>
+									<div class="team_info">
+										<div class="name">Colorado State Rams</div>
+										<div class="score_grp">
+											<div class="score">200</div>
+										</div>
+									</div>
+									<div class="info_btm info_btm_top">
+										<div class="info_lf">
+											<div class="info_lf_time">21/02 06:00</div>
+										</div>
+										<div class="more_icons">
+											<div class="more_icons_wrp">
+												<div class="info_wrp info_top">
+													<div class="info_icn info_event">
+														<i class="icon-fi-pin"></i>
+													</div>
+												</div>
+												<div class="n_fav_off">
+													<i class="icon-fi-n-fav-off"></i>
+												</div>
+												<div class="info_wrp info_top">
+													<div class="info_icn"><i class="icon-fi-livestream"></i></div>
+													<div class="info_txt">Live Stream</div>
+												</div>
+											</div>
+											<div class="n_btn_sev">100<i class="icon-fi-angle-right"></i></div>
+										</div>
+									</div>
+								</div>
+								<div class="content_rt">
+									<div class="odds_box big">
+										<i class="lock_icon icon-fi-lock"></i>
+									</div>
+									<div class="odds_box big empty">--</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="el_header n_sticky">
+					<div class="sport_info"><i class="icon-fi-title-s3 icon"></i>Tennis</div>
+					<div class="see_all">
+						<span id="all_tennis">See All</span>
+						<span class="comp_count">120</span>
+						<i class="icon-fi-arrow-up1"></i>
+					</div>
+				</div>
+				<div class="el_content_wrp">
+					<div class="el_items" data-id="item7">
+						<div class="el_grp_header n_sticky">
+							<i class="icon-fi-arrow-up1"></i>
+							<div class="name">Italy Serie A</div>
+							<i class="icon-fi-pin"></i>
+							<span class="comp_count">2</span>
+						</div>
+						<div class="bet_type_wrp n_sticky">
+							<div class="bet_item">1</div>
+							<div class="bet_item">2</div>
+						</div>
+						<div class="el_grp_wrp">
+							<div class="event_content">
+								<!--add "iconPop" next to "content_lf" to show pop up-->
+								<div class="content_lf iconPop">
+									<div class="team_info">
+										<div class="team_dot on"></div>
+										<div class="name">Utah State Aggies</div>
+									</div>
+									<div class="team_info">
+										<div class="team_dot off"></div>
+										<div class="name">Colorado State Rams</div>
+									</div>
+									<div class="info_btm info_btm_top">
+										<div class="info_lf">
+											<span class="live_tag">LIVE</span>
+										</div>
+										<div class="more_icons">
+											<div class="more_icons_wrp">
+												<div class="info_wrp info_top">
+													<div class="info_icn info_event">
+														<i class="icon-fi-pin"></i>
+													</div>
+												</div>
+												<div class="n_fav_off">
+													<i class="icon-fi-n-fav-off"></i>
+												</div>
+												<div class="info_wrp info_top">
+													<div class="info_icn"><i class="icon-fi-livestream"></i></div>
+													<div class="info_txt">Live Stream</div>
+												</div>
+											</div>
+											<div class="n_btn_sev">100<i class="icon-fi-angle-right"></i></div>
+										</div>
+									</div>
+								</div>
+								<div class="content_rt">
+									<div class="odds_box big">24.00</div>
+									<div class="odds_box big">24.00</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="el_items" data-id="item8">
+						<div class="el_grp_header n_sticky">
+							<i class="icon-fi-arrow-up1"></i>
+							<div class="name">Italy Serie B</div>
+							<i class="icon-fi-pin"></i>
+							<span class="comp_count">2</span>
+						</div>
+						<div class="bet_type_wrp n_sticky">
+							<div class="bet_item">1</div>
+							<div class="bet_item">2</div>
+						</div>
+						<div class="el_grp_wrp">
+							<div class="event_content">
+								<!--add "iconPop" next to "content_lf" to show pop up-->
+								<div class="content_lf iconPop">
+									<div class="team_info">
+										<div class="team_dot on"></div>
+										<div class="name">Utah State Aggies utah State Aggies utah State Aggies</div>
+										<div class="score_grp">
+											<div class="score">2</div>
+											<div class="score no_effect">1</div>
+											<div class="score no_effect">A</div>
+										</div>
+									</div>
+									<div class="team_info">
+										<div class="team_dot off"></div>
+										<div class="name">Colorado State Rams</div>
+										<div class="score_grp">
+											<div class="score">2</div>
+											<div class="score no_effect">1</div>
+											<div class="score no_effect">40</div>
+										</div>
+									</div>
+									<div class="info_btm info_btm_top">
+										<div class="info_lf">
+											<div class="info_lf_time">Set 4 Permainan 47</div>
+										</div>
+										<div class="more_icons">
+											<div class="more_icons_wrp">
+												<div class="info_wrp info_top">
+													<div class="info_icn info_event">
+														<i class="icon-fi-pin"></i>
+													</div>
+												</div>
+												<div class="n_fav_off">
+													<i class="icon-fi-n-fav-off"></i>
+												</div>
+												<div class="info_wrp info_top">
+													<div class="info_icn"><i class="icon-fi-livestream"></i></div>
+													<div class="info_txt">Live Stream</div>
+												</div>
+											</div>
+											<div class="n_btn_sev">100<i class="icon-fi-angle-right"></i></div>
+										</div>
+									</div>
+								</div>
+								<div class="content_rt">
+									<div class="odds_box big">24.00</div>
+									<div class="odds_box big">24.00</div>
+								</div>
+							</div>
+							<div class="event_content">
+								<!--add "iconPop" next to "content_lf" to show pop up-->
+								<div class="content_lf iconPop">
+									<div class="team_info">
+										<div class="team_dot"></div>
+										<div class="name">Utah State Aggies utah State Aggies utah State Aggies</div>
+									</div>
+									<div class="team_info">
+										<div class="team_dot"></div>
+										<div class="name">Colorado State Rams</div>
+									</div>
+									<div class="info_btm info_btm_top">
+										<div class="info_lf">
+											<div class="info_lf_time">25/01 46:00</div>
+										</div>
+										<div class="more_icons">
+											<div class="more_icons_wrp">
+												<div class="info_wrp info_top">
+													<div class="info_icn info_event">
+														<i class="icon-fi-pin"></i>
+													</div>
+												</div>
+												<div class="n_fav_off">
+													<i class="icon-fi-n-fav-off"></i>
+												</div>
+												<div class="info_wrp info_top">
+													<div class="info_icn"><i class="icon-fi-livestream"></i></div>
+													<div class="info_txt">Live Stream</div>
+												</div>
+											</div>
+											<div class="n_btn_sev">100<i class="icon-fi-angle-right"></i></div>
+										</div>
+									</div>
+								</div>
+								<div class="content_rt">
+									<div class="odds_box big">24.00</div>
+									<div class="odds_box big">24.00</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!---loading area--->
+				<div class="loading_area">
+					<div class="refresh_btn" id="test1">重新加载</div>
+					<img class="icon" id="test2" style="display: none" src="../assets/public/layout/images/loading.svg" />
+				</div>
+			</div>
+		</div>
+		<div class="smallpop" style="display: none">
+			<div class="smallpop_wrp">
+				<div class="smallpop_wrp_inner">Please try again later, we are currently processing your bet</div>
+			</div>
+		</div>
+
+		<!--Switched euro view popup-->
+		<div class="smallpop" style="display: none" id="demoSwitched_Euro">
+			<div class="smallpop_wrp">
+				<div class="smallpop_wrp_inner">Switched to Euro View!</div>
+			</div>
+		</div>
+		<div class="bg_mask ob_tut_mask" style="display: none">
+			<div class="mask_button highlighted" id="obTutBtn1">Got It</div>
+		</div>
+		<!--SFCRQ-2179 tutorial used only (part 5/6): starts -->
+		<div class="bg_mask" style="display: none">
+			<div class="fav_tutor_el">
+				<div class="tutor_line">
+					<div class="tutor_line_dot"></div>
+				</div>
+				<div class="highlighted dot_box tutor_box">赛事列表也会根据首页的排序而显示哦</div>
+				<div class="mask_button highlighted" id="demoOnly_tutorbtn_fav_maineuro">知道了</div>
+			</div>
+		</div>
+		<!--SFCRQ-2179 tutorial used only (part 5/6): end -->
+		<!-- any share items-->
+		<div id="demoOnly_global_pop_item_euro"></div>
+
+		<!-- Public JS -->
+		<script src="../assets/public/lib/jquery.js"></script>
+		<script src="../assets/public/layout/js/scripts_main.js"></script>
+		<script src="../assets/public/layout/js/scripts_euro.js"></script>
+		<!-- Swiper CSS -->
+		<link rel="stylesheet" href="../assets/public/lib/swiper/swiper-bundle.min.css" />
+		<!-- Swiper JS -->
+		<script src="../assets/public/lib/swiper/swiper-bundle.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				if (localStorage.getItem('theme') == 'default1') {
+					localStorage.setItem('theme', 'default');
+					window.location.reload();
+				}
+				//  <!--SFCRQ-2179 tutorial used only (part 6/6): starts -->
+				$('#demoOnly_tutorbtn_fav_maineuro').on('click', function () {
+					popupOff();
+					$('body').removeClass('tutor');
+					$('body').removeClass('el_faveuro');
+					$('#demoOnly_tutorbtn_fav_maineuro').closest('.bg_mask').hide();
+					$('.highlighted').removeClass('highlighted');
+					$('.tutor_box').hide();
+					$('.highlighted_wrap_leftbox').hide();
+
+					fav_tutor_off();
+				});
+				//  <!--SFCRQ-2179 tutorial used only (part 6/6): end -->
+
+				//SEV_Group("_sev_content_soccer_all.html", true, "_sev_mainpage_soccer.html", "_sev_header_soccer_prematch.html", "prematch", "haveVisual");
+				SEV_Group('_sev_content_soccer_all.html', true, '_sev_mainpage_soccer.html', '_sev_header_soccer_live.html', 'live', 'haveVisual');
+				eventListing(true, 'featured', 'main');
+				featured_seeAll();
+
+				$('#demoSwitched_Euro').on('click', function () {
+					$('#demoSwitched_Euro').hide();
+				});
+				if (localStorage.getItem('isswitchedtoeuro') === 'true') {
+					$('#demoSwitched_Euro').show();
+					// localStorage.setItem("isswitchedtoeuro", "false");
+					setTimeout(function () {
+						$('#demoSwitched_Euro').hide();
+					}, 2000);
+				}
+				filterTutorial();
+				var euroPinnedSelector = '#mock_demo_pinned_competition_euro';
+				var euroPinnedReady = false;
+				var getHeight = ($el) => ($el.is(':visible') ? $el.outerHeight() || 0 : 0);
+				var getEuroPinnedWrap = () => $(euroPinnedSelector).first();
+				var getEuroPinnedList = ($pinnedWrap) => $pinnedWrap.nextAll('.el_content_wrp').first();
+
+				function updateEuroPinnedStickyStack() {
+					var $pinnedWrap = getEuroPinnedWrap();
+					if (!$pinnedWrap.length) return;
+
+					var headerHeight = $('.n_header.n_header_main').outerHeight() || $('.n_header').outerHeight() || 0,
+						topPanelHeight = getHeight($('.el_top_panel')),
+						menuHeight = getHeight($('.el_header_grp')),
+						pinnedTop = headerHeight + topPanelHeight + ($('body').hasClass('navScroll') ? 0 : menuHeight),
+						pinnedHeaderHeight = $pinnedWrap.outerHeight() || 0,
+						$pinnedList = getEuroPinnedList($pinnedWrap),
+						$pinnedSectionHeader = $pinnedWrap.nextAll('.el_header').first(),
+						pinnedSectionHeaderHeight = getHeight($pinnedSectionHeader),
+						pinnedHeaderStackHeight = 0,
+						$nextOutrightRow = $pinnedWrap.nextAll('.outright_row').first(),
+						$outsideHeaders = $('.el_header').not($pinnedSectionHeader),
+						outsideGrpHeight = $('.el_grp_header').not($pinnedList.find('.el_grp_header')).first().outerHeight() || pinnedHeaderHeight,
+						$pinnedListGrpHeaders = $pinnedList.children('[data-clone-header]').add($pinnedList.find('.el_items > .el_grp_header')),
+						$pinnedListBetTypes = $pinnedList.find('.el_items > .bet_type_wrp');
+
+					$pinnedWrap.css('top', pinnedTop);
+					$pinnedList.children('[data-clone-header]').each(function () {
+						var $this = $(this),
+							cloneId = $this.attr('data-clone-header'),
+							$contentClone = $pinnedList.children('.el_items[data-clone="' + cloneId + '"]'),
+							$betType = $contentClone.children('.bet_type_wrp').first(),
+							marginTop = parseFloat($this.css('margin-top')) || 0,
+							marginBottom = parseFloat($this.css('margin-bottom')) || 0,
+							headerTop = pinnedTop + pinnedHeaderHeight + pinnedSectionHeaderHeight + pinnedHeaderStackHeight + marginTop;
+						$this.css('top', headerTop);
+						$betType.css('top', headerTop + ($this.outerHeight() || outsideGrpHeight));
+						pinnedHeaderStackHeight += marginTop + ($this.outerHeight() || outsideGrpHeight) + marginBottom;
+					});
+					$pinnedList.find('.el_items > .el_grp_header').css('top', pinnedTop + pinnedHeaderHeight + pinnedSectionHeaderHeight);
+					$pinnedList.find('.el_items > .bet_type_wrp').not($pinnedList.children('.el_items[data-clone]').children('.bet_type_wrp')).css('top', pinnedTop + pinnedHeaderHeight + pinnedSectionHeaderHeight + outsideGrpHeight);
+					$pinnedSectionHeader.css('top', pinnedTop + pinnedHeaderHeight);
+					var nextOutrightTop = pinnedTop + pinnedHeaderHeight + pinnedSectionHeaderHeight + pinnedHeaderStackHeight,
+						outsideHeaderTop = nextOutrightTop + getHeight($nextOutrightRow),
+						outsideGrpTop = outsideHeaderTop + ($outsideHeaders.first().outerHeight() || 0);
+					$nextOutrightRow.css('top', nextOutrightTop);
+
+					$outsideHeaders.css('top', outsideHeaderTop);
+					$('.el_grp_header').not($pinnedListGrpHeaders).css('top', outsideGrpTop);
+					$('.bet_type_wrp')
+						.not($pinnedListBetTypes)
+						.css('top', outsideGrpTop + outsideGrpHeight);
+				}
+
+				function bindEuroPinnedCollapseRefresh() {
+					$(document)
+						.off('click.euroPinnedCollapseRefresh', '#mock_demo_pinned_competition_euro ~ .el_content_wrp .el_grp_header')
+						.on('click.euroPinnedCollapseRefresh', '#mock_demo_pinned_competition_euro ~ .el_content_wrp .el_grp_header', function (e) {
+							if (e.target.classList.contains('icon-fi-pin')) return;
+							setTimeout(updateEuroPinnedStickyStack, 0);
+						});
+				}
+
+				function initEuroPinnedWrapper() {
+					var $pinnedWrap = getEuroPinnedWrap();
+					if (!$pinnedWrap.length || euroPinnedReady) return false;
+					euroPinnedReady = true;
+					$(window).on('scroll.euroPinnedStickyStack resize.euroPinnedStickyStack', updateEuroPinnedStickyStack);
+					$('.n_container').on('scroll.euroPinnedStickyStack', updateEuroPinnedStickyStack);
+					$(document).on('pinClickToPinned:update', updateEuroPinnedStickyStack);
+					bindEuroPinnedCollapseRefresh();
+					pinClickToPinned('.el_items', '.n_content_wrap_wth_bcktop', euroPinnedSelector, '.el_content_wrp');
+					updateEuroPinnedStickyStack();
+					setTimeout(updateEuroPinnedStickyStack, 100);
+					setTimeout(updateEuroPinnedStickyStack, 500);
+					return true;
+				}
+
+				if (!initEuroPinnedWrapper()) {
+					setTimeout(function () {
+						if (!initEuroPinnedWrapper()) {
+							pinClick('.el_items', '.el_content_wrp');
+							pinClone('.el_items', '.n_content_wrap_wth_bcktop', '#mock_demo_pinned_competition_euro', '.el_content_wrp', true);
+						}
+					}, 500);
+				}
+
+				/*standardize popup and toolti: start*/
+				infoPop('.n_content_wrap_wth_bcktop');
+				/*standardize popup and toolti: end*/
+			});
+		</script>
+	</body>
+</html>

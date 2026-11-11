@@ -1,0 +1,99 @@
+$activeView: mAsia !default;
+@use '../../../themes/colours/config'with ($activeView: $activeView,
+    $view: asia,
+    $language: pt,
+);
+@use "../../layout/css/base"as base;
+@use '../../layout/css/fl_layout_variables'as fl;
+@use '_font';
+@use '../../layout/css/_layout_shared';
+@use '../../layout/css/_fl_layout_shared';
+@use '../../layout/css/_layout_sub_asia';
+$n_font1: 8px;
+$event_lsiting_header_minheight: 42px;
+$event_lsiting_overallcontent_minheight: 95px;
+
+// .handicap {
+//     .title { // ttl (moved)
+//         padding-right: 2px;
+//     }
+// }
+// .n_header {
+//     &.n_header_sports,
+//     &.n_header_promo {
+//         .title { // ttl (moved)
+//             font-size: $n_font1 + 4px !important;
+//         }
+//     }
+// }
+// .n_footer {
+//     font-size: $n_font1 + 3px !important;
+// }
+// .pop_tutorial {
+// 	.result_wrap {
+// 		font-size: $n_font1 + 2px;
+// 	}
+// }
+// .n_header_short {
+//     .tab_group .tab {
+//         @include base.flexbox();
+//         @include base.alignItems(center);
+//         max-width: 20%;
+//         font-size: base.$n_font4;
+//     }
+// }
+.main_nav2 {
+    .main_slider2 {
+        .menu_wrap {
+            width: unset;
+            margin: 0 12px;
+        }
+    }
+}
+
+// mr_draw_col not in used already
+// .mr_draw_col {
+//     &:not(.mr_col_id) {
+//         .col_3 & {
+//             flex-basis: 20%;
+//         }
+//     }
+//     &.mr_col_id {
+//         .col_3 & {
+//             flex-basis: 40%;
+//         }
+//     }
+// }
+// [DES-808] Soccer Player Proposition Bet Type - start
+// .sld_new { // sev (moved)
+//     right: -1px;
+//     margin-top: -20px;
+// }
+// .w_sld_new { // sev (moved)
+//     &.n_sev_slider {
+//         .item {
+//             padding: 4px 18px 4px 0;
+//         }
+//         .item_wrap:first-child .item {
+//             padding-left: 9px;
+//         }
+//     }
+// }
+// [DES-808] Soccer Player Proposition Bet Type - end
+// pb_rmb_ls_tooltip not in used already
+// .pb_rmb_ls_tooltip {
+//     width: 180px;
+//     top: -80px;
+//     left: -83px;
+//     .fl & {
+//         top: -96px;
+//         left: -72px;
+//     }
+// }
+.ob_tut {
+    &.ob_tut_2 {
+        .dot_box {
+            top: -180px;
+        }
+    }
+}

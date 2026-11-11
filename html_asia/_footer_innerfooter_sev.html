@@ -1,0 +1,57 @@
+﻿<div class="bg_mask ss_mask3 ss_mask3_footer" style="display: none"></div>
+<div class="item" id="index" onclick="window.location.href = 'index.html'">
+	<!--active class for "icon-fi-n-home" is "icon-fi-n-home-active"-->
+	<div class="icon"><i class="icon-fi-n-home"></i></div>
+	主页
+</div>
+<div class="item" id="select_competition_btn_sev">
+	<div class="icon"><i class="icon-fi-settings"></i></div>
+	筛选
+</div>
+<div class="item" id="betslips">
+	<!--active class for "icon-fi-n-betlist" is "icon-fi-n-betlist-active"-->
+	<div class="icon"><i class="icon-fi-n-betlist"></i></div>
+	<div class="noti mybet_noti_pending">1</div>
+	注单
+</div>
+<!-- <div class="item" id="">
+    <div class="icon"><i class="icon-fi-n-collapse"></i></div>
+    展开/缩小
+</div> -->
+<!-- <div class="item" id="insight">
+	<div class="new_tag">New</div>
+	<div class="icon"><i class="icon-fi-insight"></i></div>
+	AI Insights
+</div> -->
+<div class="item n_rotate" href="#" id="refresh">
+	<div class="icon">
+		<div class="n_refresh_wrap"><i class="icon-fi-refresh"></i></div>
+	</div>
+	刷新
+</div>
+<div class="item" id="ai_playbook_home">
+	<div class="new_tag">New</div>
+	<div class="icon"><i class="icon-fi-aiPB"></i></div>
+	AI Playbook
+</div>
+<!-- <div class="item" id="myfav">
+    <div class="icon"><i class="icon-fi-n-myfav"></i></div>
+    收藏 (100)
+</div> -->
+<div class="bg_mask ply_mask" style="display: none"></div>
+
+<script>
+	$(document).ready(function () {
+		syncAsiaFooterControls();
+
+		$('#myfav').click(function () {
+			checkCyberbattlePage('el-prof-favorites.html');
+		});
+		// $('#insight').on('click', function () {
+		// 	window.location.href = 'ai_insights.html';
+		// });
+	});
+</script>
+
+<script src="../assets/public/layout/js/scripts_main.js"></script>
+<script src="../assets/public/layout/js/scripts_asia.js"></script>

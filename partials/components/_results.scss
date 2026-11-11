@@ -1,0 +1,2822 @@
+@use "../../assets/themes/colours/brand"as brand;
+@use "../../assets/public/layout/css/base"as base;
+@use "../../assets/themes/colours/config"as config;
+@use "../mixin"as mix;
+@use "sass:color";
+
+// result: start
+// result: end
+.n_result_wrap {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                padding: 8px 0 4px 0;
+                margin-top: 2px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                    background: brand.t(White);
+                }
+
+                @include mix.darkTheme {
+                    @include mix.notThemeName(default1) {
+                        color: brand.t(LightGray);
+                        background: brand.t(LightBlack);
+                    }
+
+                    @include mix.themeName(default1) {
+                        color: brand.t(White);
+                        background: brand.t(MediumBlue);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.league {
+    .n_result_wrap & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    font-size: 10px;
+                    text-align: center;
+                    word-break: break-word;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.themeName(default1) {
+                        color: brand.t(LightGray);
+                    }
+                }
+            }
+        }
+    }
+
+    &.w_joystick {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    position: relative;
+                    padding: 0 25px;
+                }
+            }
+        }
+    }
+
+    .outrightresult_wrap & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    padding: 3.2px;
+                }
+            }
+        }
+    }
+
+    .outrightresult_item & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.brightTheme {
+                        color: brand.t(Black);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(White);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.n_grp_header {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.flexbox();
+                overflow: hidden;
+            }
+        }
+    }
+
+    .completed_result &:not(:first-child) {
+        @include mix.theme {
+            @include mix.mobile {
+                border-top: none;
+            }
+        }
+    }
+}
+
+.competition {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.boxSizing(border-box);
+            @include base.flexbox();
+            @include base.alignItems(center);
+
+            @include mix.mAsiaCyberbattle {
+                font-size: 11px;
+                padding: 8px;
+                width: 40px;
+                font-weight: bold;
+                word-wrap: anywhere;
+                width: 100%;
+            }
+
+            @include mix.mEuro {
+                font-size: 12px;
+                padding: 0 8px;
+                min-height: 34px;
+                max-height: none;
+                height: auto;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                    background: brand.t(White);
+                    border-bottom: 1px solid brand.t(DividerGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+
+                    @include mix.themeName(default1) {
+                        background: brand.t(Blue);
+                        border-bottom: 1px solid brand.t(Stroke);
+                    }
+
+                    @include mix.notThemeName(default1) {
+                        background: brand.t(Gray);
+                        border-bottom: 1px solid brand.t(Gray02);
+                    }
+                }
+            }
+
+            @include mix.mEuro {
+                border-bottom: 1px solid brand.t(Border_n_event_listing);
+
+                @include mix.themeNames(betway, dark1, dark2) {
+                    background: brand.t(BG_n_event_listing_left);
+                }
+
+                @include mix.themeName(green) {
+                    color: brand.t(Color_n_event_listing_left);
+                    background: brand.t(BG_n_event_listing_left);
+                }
+
+                @include mix.themeNames(bafa, blue) {
+                    color: brand.t(Color_n_event_listing_competition);
+                    background: brand.t(BG_n_event_listing_left);
+                }
+
+                @include mix.themeNames(red, brown) {
+                    color: brand.t(Color_n_event_listing_left_outright);
+                    background: brand.t(BG_n_event_listing_left_outright);
+                }
+
+                @include mix.themeName(default) {
+                    color: brand.t(Color_n_event_listing_header);
+                    background: brand.t(BG_n_event_listing_left);
+                }
+            }
+        }
+    }
+
+    .type_3vs3 &,
+    .solo & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include base.justifyContent(space-between);
+                    font-size: 10px !important;
+                    font-weight: normal !important;
+                }
+            }
+        }
+    }
+}
+
+.completedresult_item {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                padding: 10px 8px;
+            }
+
+            position: relative;
+
+            @include mix.mEuro {
+                padding: 8px 0px 8px 8px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                    background: brand.t(White);
+                    border-bottom: 1px solid brand.t(DividerGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+
+                    @include mix.themeName(default1) {
+                        background: brand.t(MediumBlue);
+                        border-bottom: 1px solid brand.t(Stroke);
+                    }
+
+                    @include mix.notThemeName(default1) {
+                        background: brand.t(LightBlack);
+                        border-bottom: 1px solid brand.t(Gray02);
+                    }
+                }
+            }
+
+            @include mix.mEuro {
+                background: brand.t(BG_completedresult_item);
+                border-bottom: 1px solid brand.t(Border_bottom_completedresult_item);
+            }
+        }
+    }
+
+    .financial_completed_result & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    .cricketRun_completed_result & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+.completedresult_item_table {
+    @include mix.layout {
+        @include mix.mobile {
+            font-size: 11px;
+            text-align: center;
+            margin-top: 16px;
+            margin-right: auto;
+            overflow: hidden;
+
+            @include mix.mAsiaCyberbattle {
+                @include base.borderRadius(4px);
+                width: 100%;
+            }
+
+            @include mix.mEuro {
+                @include base.borderRadius(2px);
+                width: calc(100% - (#{8px}));
+                border-top-left-radius: unset;
+                border-top-right-radius: unset;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                color: brand.t(Color_completedresult_item_table);
+
+                @include mix.brightTheme {
+                    border: 1px solid brand.t(DividerGray);
+                }
+
+                @include mix.darkTheme {
+                    @include mix.themeName(default1) {
+                        border: 1px solid brand.t(Stroke);
+                    }
+
+                    @include mix.notThemeName(default1) {
+                        border: 1px solid brand.t(Gray02);
+                    }
+                }
+            }
+
+            @include mix.mEuro {
+                border: 1px solid brand.t(Border_completedresult_item_table);
+                color: brand.t(Color_completedresult_item_table);
+            }
+        }
+    }
+
+    .completedresult_popup_btn+& {
+        @include mix.layout {
+            @include mix.mobile {
+                margin-top: 7px !important;
+            }
+        }
+    }
+
+    .cricketRun_completed_result & {
+        @include mix.layout {
+            @include mix.mobile {
+                width: unset;
+                overflow: hidden;
+                border-radius: 0;
+                margin-top: 0;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    border: none;
+                }
+            }
+        }
+    }
+
+    &.border_highlights {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    border: 1px solid brand.t(Color_completedresult_item_table);
+                }
+            }
+        }
+    }
+}
+
+.completedresult_item_table_Mainheader {
+    @include mix.layout {
+        @include mix.mobile {
+            text-align: left;
+
+            @include mix.mAsiaCyberbattle {
+                padding: 10px 8px;
+                font-size: 12px;
+            }
+
+            @include mix.mEuro {
+                padding: 8px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                    background: brand.t(BGGray);
+                    border-bottom: 1px solid brand.t(DividerGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+
+                    @include mix.themeName(default1) {
+                        background: brand.t(DarkBlue);
+                        border-bottom: 1px solid brand.t(Stroke);
+                    }
+
+                    @include mix.notThemeName(default1) {
+                        background: brand.t(Black);
+                        border-bottom: 1px solid brand.t(Gray02);
+                    }
+                }
+            }
+
+            @include mix.mEuro {
+                color: brand.t(Color_completedresult_item_table_Mainheader);
+                background: brand.t(Border_completedresult_item_table);
+                border-bottom: 1px solid brand.t(Border_bottom_completedresult_item);
+            }
+        }
+    }
+}
+
+.completedresult_item_table_header {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                font-size: 11px;
+                padding: 5px 8px;
+            }
+
+            @include mix.mEuro {
+                padding: 4px 8px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                    background: brand.t(BGGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+
+                    @include mix.themeName(default1) {
+                        background: brand.t(DarkBlue);
+                    }
+
+                    @include mix.notThemeName(default1) {
+                        background: brand.t(Black);
+                    }
+                }
+            }
+
+            @include mix.mEuro {
+                background: brand.t(Border_completedresult_item_table);
+                color: brand.t(Color_completedresult_item_table_header);
+            }
+        }
+    }
+
+    .cricketRun_completed_result & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    padding: 5px 0;
+                }
+            }
+        }
+    }
+
+    .remove_arrow & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+    .cp_tb_main & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.boxSizing(border-box);
+                height: 21px;
+            }
+        }
+    }
+
+    .with_nav & {
+        @include mix.layout {
+            @include mix.mobile {
+                padding: 4px 20px !important;
+            }
+        }
+    }
+
+    .remove_arrow & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.brightTheme {
+                        border-bottom: 1px solid brand.t(DividerGray);
+                    }
+
+                    @include mix.darkTheme {
+                        @include mix.themeName(default1) {
+                            border-bottom: 1px solid brand.t(Stroke);
+                        }
+
+                        @include mix.notThemeName(default1) {
+                            border-bottom: 1px solid brand.t(Gray02);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.completedresult_item_table_content_wrap {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.std_WrapSide();
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                    background: brand.t(White);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+
+                    @include mix.themeName(default1) {
+                        background: brand.t(Blue);
+                    }
+
+                    @include mix.notThemeName(default1) {
+                        background: brand.t(Gray);
+                    }
+                }
+            }
+        }
+    }
+
+    .with_nav & {
+        @include mix.layout {
+            @include mix.mobile {
+                padding: 0 20px !important;
+            }
+        }
+    }
+
+    .cp_tb_main & {
+        @include mix.layout {
+            @include mix.mobile {
+                padding: 0 !important;
+            }
+        }
+    }
+
+    .cricketRun_completed_result & {
+        @include mix.layout {
+            @include mix.mobile {
+                padding: 0;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    background: brand.t(BG_n_header);
+                }
+            }
+        }
+    }
+}
+
+.completedresult_item_table_col {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+        }
+    }
+
+    .cp_tb_main & {
+        @include mix.layout {
+            @include mix.mobile {
+                width: fit-content;
+                min-width: 100%;
+                padding: 4px 0 !important;
+            }
+        }
+    }
+
+    .completedresult_item_table_content_wrap & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    padding: 10px 0 !important;
+                    font-size: 12px;
+                }
+
+                padding: 4px 0;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    background: inherit;
+
+                    &:not(:last-child) {
+                        @include mix.brightTheme {
+                            border-bottom: 1px solid brand.t(DividerGray);
+                        }
+
+                        @include mix.darkTheme {
+                            @include mix.themeName(default1) {
+                                border-bottom: 1px solid brand.t(Stroke);
+                            }
+
+                            @include mix.notThemeName(default1) {
+                                border-bottom: 1px solid brand.t(Gray02);
+                            }
+                        }
+                    }
+                }
+
+                @include mix.mEuro {
+                    &:not(:last-child) {
+                        border-bottom: 1px solid brand.t(Border_completedresult_item_table);
+                    }
+                }
+            }
+        }
+    }
+
+    .cricketRun_completed_result & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    padding: 4px 8px;
+                }
+
+                min-height: 25px;
+                box-sizing: border-box;
+
+                >div {
+                    @include base.flexbox();
+                    @include base.alignItems(center);
+                    flex-basis: 42%;
+                    text-align: left;
+
+                    &:not(:first-child):not(:last-child) {
+                        padding-right: 4px;
+                    }
+                }
+            }
+        }
+    }
+
+    .remove_arrow .completedresult_item_table_content_wrap & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    padding: 6px 0 !important;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                border-bottom: 0 !important;
+            }
+        }
+    }
+
+    >div {
+        @include mix.layout {
+            @include mix.mobile {
+                width: 100%;
+            }
+        }
+    }
+
+    .cricketRun_completed_result .completedresult_item_table_content_wrap & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    &:not(:last-child) {
+                        border-bottom: 1px solid brand.t(Border_search_item_euro);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// [DES-1748]
+.completedresult_player {
+    @include mix.layout {
+        @include mix.mobile {
+            font-size: 10px;
+        }
+    }
+}
+
+.player_mainheader {
+    @include mix.layout {
+        @include mix.mobile {
+            margin: 9px 0;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mAsiaCyberbattle {
+            @include mix.brightTheme {
+                color: brand.t(DarkGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(LightGray);
+            }
+        }
+
+        @include mix.mEuro {
+            @include mix.themeNames(default, dark1, dark2) {
+                color: brand.t(Color_main_text_body);
+            }
+
+            @include mix.themeName(betway) {
+                color: brand.t(Color_results_score_header);
+            }
+
+            @include mix.notThemeNames(default, dark1, dark2, betway) {
+                color: brand.t(Color_main_text_lvl_secondary);
+            }
+        }
+    }
+}
+
+.player_stats_scroll {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.borderRadius(4px);
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            overflow-x: scroll;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+
+            @include mix.mEuro {
+                @include base.borderRadius(2px);
+                width: calc(100% - (#{8px}));
+                border-top-left-radius: unset;
+                border-top-right-radius: unset;
+            }
+        }
+    }
+
+    &::-webkit-scrollbar {
+        @include mix.layout {
+            @include mix.mobile {
+                display: none;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mAsiaCyberbattle {
+            @include mix.brightTheme {
+                background: brand.t(White);
+                border: 1px solid brand.t(DividerGray);
+            }
+
+            @include mix.darkTheme {
+                background: brand.t(Gray);
+                border: 1px solid brand.t(Gray02);
+
+                @include mix.themeName(default1) {
+                    background: brand.t(Blue);
+                    border: 1px solid brand.t(Stroke);
+                }
+            }
+        }
+
+        @include mix.mEuro {
+            background: brand.t(BG_completedresult_item);
+            border: 1px solid brand.t(Border_completedresult_item_table);
+        }
+    }
+}
+
+.player_stats {
+    @include mix.layout {
+        @include mix.mobile {
+            display: table;
+            min-width: 100%;
+            border-collapse: collapse;
+        }
+    }
+}
+
+.stats_header,
+.stats_row {
+    @include mix.layout {
+        @include mix.mobile {
+            display: table-row;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mAsiaCyberbattle {
+            @include mix.brightTheme {
+                border-bottom: 1px solid brand.t(DividerGray);
+            }
+
+            @include mix.darkTheme {
+                border-bottom: 1px solid brand.t(Gray02);
+
+                @include mix.themeName(default1) {
+                    border-bottom: 1px solid brand.t(Stroke);
+                }
+            }
+        }
+
+        @include mix.mEuro {
+            border-bottom: 1px solid brand.t(Border_completedresult_item_table);
+        }
+    }
+
+    &:last-child {
+        @include mix.theme {
+            @include mix.mobile {
+                border-bottom: 0;
+            }
+        }
+    }
+}
+
+.stats_header>div {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.boxSizing(border-box);
+            display: table-cell;
+            padding: 8px 4px;
+            white-space: nowrap;
+            font-size: 9px;
+            vertical-align: middle;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mAsiaCyberbattle {
+            @include mix.brightTheme {
+                color: brand.t(DarkGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(LightGray);
+            }
+        }
+
+        @include mix.mEuro {
+            @include mix.themeNames(default, dark1, dark2) {
+                color: brand.t(Color_main_text_body);
+            }
+
+            @include mix.themeName(betway) {
+                color: brand.t(Color_results_score_header);
+            }
+
+            @include mix.notThemeNames(default, dark1, dark2, betway) {
+                color: brand.t(Color_main_text_lvl_secondary);
+            }
+        }
+    }
+}
+
+.stats_row>div {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.boxSizing(border-box);
+            display: table-cell;
+            padding: 8px 4px;
+            font-size: 10px;
+            min-width: 50px;
+            vertical-align: middle;
+            text-align: center;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mAsiaCyberbattle {
+            @include mix.brightTheme {
+                color: #333;
+                border-right: 1px solid brand.t(DividerGray);
+            }
+
+            @include mix.darkTheme {
+                color: #fff;
+                border-right: 1px solid brand.t(Gray02);
+
+                @include mix.themeName(default1) {
+                    border-right: 1px solid brand.t(Stroke);
+                }
+            }
+        }
+
+        @include mix.mEuro {
+            color: brand.t(Color_completedresult_item_table);
+            border-right: 1px solid brand.t(Border_completedresult_item_table);
+        }
+    }
+
+    &:first-child,
+    &:last-child {
+        @include mix.theme {
+            @include mix.mobile {
+                border-right: 0;
+            }
+        }
+    }
+}
+
+.player_col {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.boxSizing(border-box);
+            position: sticky;
+            left: 0;
+            z-index: 2;
+            max-width: 130px;
+            min-width: 130px;
+            padding: 8px !important;
+            text-align: center;
+            overflow: hidden;
+            white-space: normal;
+            word-break: break-word;
+        }
+    }
+
+    &:first-child {
+        @include mix.theme {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    background: brand.t(White);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(Gray);
+
+                    @include mix.themeName(default1) {
+                        background: brand.t(Blue);
+                    }
+                }
+            }
+
+            @include mix.mEuro {
+                background: brand.t(BG_completedresult_item);
+            }
+        }
+    }
+}
+
+.stats_row>.player_col {
+    @include mix.layout {
+        @include mix.mobile {
+            text-align: left;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mAsiaCyberbattle {
+            @include mix.brightTheme {
+                color: brand.t(DarkGray);
+                box-shadow: inset -1px 0 0 brand.t(DividerGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(LightGray);
+                box-shadow: inset -1px 0 0 brand.t(Gray02);
+
+                @include mix.themeName(default1) {
+                    box-shadow: inset -1px 0 0 brand.t(Stroke);
+                }
+            }
+        }
+
+        @include mix.mEuro {
+            box-shadow: inset -1px 0 0 brand.t(Border_completedresult_item_table);
+            color: brand.t(Color_main_text_lvl_secondary);
+
+            @include mix.themeNames(default, dark1, dark2) {
+                color: brand.t(Color_main_text_body);
+            }
+
+            @include mix.themeName(betway) {
+                color: brand.t(Color_results_score_header);
+            }
+        }
+    }
+}
+
+.stats_header>.player_col {
+    @include mix.layout {
+        @include mix.mobile {
+            border-right: 0;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            box-shadow: none;
+        }
+    }
+}
+
+.completedresult_table_title {
+    @include mix.layout {
+        @include mix.mobile {
+            width: 50%;
+            min-width: 50%;
+            text-align: left;
+        }
+    }
+
+    .cricketRun_completed_result & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.justifyContent(center);
+                width: unset;
+                min-width: unset;
+                flex-basis: 16% !important;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.w_info_wrp {
+    @include mix.layout {
+        @include mix.mobile {
+            overflow: visible !important;
+        }
+    }
+
+    .icon-fi-title-s201 {
+        @include mix.layout {
+            @include mix.mobile {
+                height: 15px;
+            }
+        }
+    }
+}
+
+.completedresult_popup_btn {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            @include base.borderRadius(2px);
+            gap: 6px;
+            padding: 4px;
+            font-size: 10px;
+            width: fit-content;
+
+            @include mix.mEuro {
+                margin-top: 4px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                background: brand.t(White);
+                color: brand.t(Black);
+                border: 1px solid brand.t(DividerGray);
+            }
+
+            @include mix.darkTheme {
+                @include mix.mEuro {
+                    @include mix.themeName(default) {
+                        background: #24282d;
+                        border: 1px solid #ccc;
+                    }
+
+                    @include mix.notThemeName(default) {
+                        color: brand.t(LightGray);
+
+                        @include mix.themeName(default1) {
+                            background: brand.t(DarkBlue);
+                            border: 1px solid brand.t(Stroke);
+                        }
+
+                        @include mix.notThemeName(default1) {
+                            background: brand.t(DarkBlack);
+                            border: 1px solid brand.t(Gray02);
+                        }
+                    }
+                }
+
+                @include mix.mAsiaCyberbattle {
+                    color: brand.t(LightGray);
+
+                    @include mix.themeName(default1) {
+                        background: brand.t(DarkBlue);
+                        border: 1px solid brand.t(Stroke);
+                    }
+
+                    @include mix.notThemeName(default1) {
+                        background: brand.t(DarkBlack);
+                        border: 1px solid brand.t(Gray02);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.completedresult_item_wrap {
+    .completedresult_wrap & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.flexbox();
+                @include base.alignItems(stretch);
+            }
+        }
+    }
+
+    .cricketRun_completed_result & {
+        @include mix.layout {
+            @include mix.mobile {
+                padding: 8px 0 8px 8px;
+            }
+        }
+    }
+}
+
+.completedresult_item_left {
+    @include mix.layout {
+        @include mix.mobile {
+            width: 100%;
+        }
+    }
+}
+
+.completedresult_item_right {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.justifyContent(center);
+            @include base.alignItems(center);
+            width: 8%;
+            font-size: 11px;
+            flex-shrink: 0;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    border-left: 1px solid brand.t(DividerGray);
+                }
+
+                @include mix.darkTheme {
+                    @include mix.notThemeName(default1) {
+                        border-left: 1px solid brand.t(Gray02);
+                    }
+
+                    @include mix.themeName(default1) {
+                        border-left: 1px solid brand.t(Stroke);
+                    }
+                }
+            }
+
+            @include mix.mEuro {
+                border-left: 1px solid brand.t(Border_bottom_completedresult_item);
+            }
+        }
+    }
+}
+
+.teamnameWrap {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+        }
+    }
+
+    .outrightresult_wrap & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    padding: 3.2px;
+                }
+            }
+        }
+    }
+}
+
+.result_score {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                font-size: 12px;
+            }
+
+            @include mix.mEuro {
+                font-size: 13px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            color: brand.t(Color_results_result_score);
+        }
+    }
+
+    .results-header & {
+        @include mix.layout {
+            @include mix.mobile {
+                word-break: break-word;
+                font-size: 11px;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.brightTheme {
+                        color: brand.t(DarkGray);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(LightGray);
+                    }
+                }
+
+                @include mix.mEuro {
+                    @include mix.themeNames(default, dark1, dark2) {
+                        color: brand.t(Color_main_text_body);
+                    }
+
+                    @include mix.themeName(betway) {
+                        color: brand.t(Color_results_score_header);
+                    }
+
+                    @include mix.notThemeNames(default, dark1, dark2, betway) {
+                        color: brand.t(Color_main_text_lvl_secondary);
+                    }
+                }
+            }
+        }
+
+        i {
+            @include mix.layout {
+                @include mix.mobile {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .result &,
+    .results &,
+    .result3 & {
+        @include mix.layout {
+            @include mix.mobile {
+                width: 100%;
+            }
+        }
+    }
+
+    .results2 & {
+        @include mix.layout {
+            @include mix.mobile {
+                width: 50%;
+            }
+        }
+    }
+
+    &.active {
+        @include mix.layout {
+            @include mix.mobile {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .tennis_completed_result & {
+        @include mix.layout {
+            @include mix.mobile {
+                width: 50%;
+            }
+        }
+    }
+}
+
+.result {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            width: 10%;
+            text-align: center;
+        }
+    }
+}
+
+.results {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            width: 50%;
+            text-align: center;
+        }
+    }
+
+    .result_expand & {
+        @include mix.layout {
+            @include mix.mobile {
+                width: 60%;
+            }
+        }
+    }
+}
+
+.results2 {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            width: 15%;
+            text-align: center;
+        }
+    }
+}
+
+.result3 {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            width: 20%;
+            text-align: center;
+        }
+    }
+}
+
+.result4 {
+    @include mix.layout {
+        @include mix.mobile {
+            width: 25%;
+        }
+    }
+}
+
+.outrightresult_header {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.std_WrapSide();
+                @include base.flexbox();
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                    background: brand.t(BGGray);
+                    border-bottom: 1px solid brand.t(DividerGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                    background: brand.t(Black);
+                    border-bottom: 1px solid brand.t(Gray02);
+                }
+            }
+        }
+    }
+}
+
+.outrightresult_item {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.std_Wrap();
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    background: brand.t(White);
+                    border-bottom: 1px solid brand.t(DividerGray);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(LightBlack);
+                    border-bottom: 1px solid brand.t(Gray02);
+                }
+            }
+        }
+    }
+}
+
+.team_wrap {
+    .outrightresult_wrap & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include base.flexbox();
+                }
+            }
+        }
+    }
+
+    .completedresult_wrap & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(space-between);
+                padding: 4px 0;
+            }
+        }
+    }
+
+    .tutorial_item & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(space-between);
+                text-align: center;
+                padding: 18px 13.5px;
+            }
+        }
+
+        img {
+            @include mix.layout {
+                @include mix.mobile {
+                    width: 28px;
+                }
+            }
+        }
+    }
+}
+
+.fl_team_img {
+    .n_team_icon & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    width: 14px;
+                }
+            }
+        }
+    }
+}
+
+.teamInfo {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .completedresult_wrap & {
+        @include mix.layout {
+            @include mix.mobile {
+                width: 60%;
+                word-break: break-word;
+                font-size: 11px;
+
+                .teamInfo {
+                    width: auto;
+                }
+            }
+        }
+    }
+
+    .result_expand .team_wrap>& {
+        @include mix.layout {
+            @include mix.mobile {
+                width: 40%;
+            }
+        }
+    }
+
+    .outrightresult_header & {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 10px;
+                padding: 5px 0;
+                width: 50%;
+            }
+        }
+    }
+
+    .outrightresult_item & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.flexbox();
+                flex-direction: column;
+                width: 50%;
+
+                &:first-child {
+                    align-self: flex-start;
+                }
+
+                &:last-child {
+                    align-self: center;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    color: brand.t(Color_outrightresult_teamInfo);
+                }
+            }
+        }
+    }
+
+    .result_wrap & {
+        @include mix.theme {
+            @include mix.mobile {
+                color: brand.t(Color_results_result_score);
+            }
+        }
+    }
+}
+
+.teamInfo_left {
+    @include mix.layout {
+        @include mix.mobile {
+            min-width: 60px;
+            width: 60px;
+        }
+    }
+}
+
+.teamInfo_mid {
+    @include mix.layout {
+        @include mix.mobile {
+            min-width: 10px;
+            width: 10px;
+        }
+    }
+}
+
+.draw_wrap {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            width: 80% !important;
+        }
+    }
+}
+
+.result_search {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            position: relative;
+            height: 43.5px;
+            padding-top: 3.5px;
+            padding-bottom: 10px;
+            z-index: 6 !important;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    background: brand.t(White);
+                }
+
+                @include mix.darkTheme {
+                    @include mix.notThemeName(default1) {
+                        background: brand.t(DarkBlack);
+                    }
+
+                    @include mix.themeName(default1) {
+                        background: brand.t(BGDarkBlue);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.n_set_bo {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                padding: 0 4px;
+                text-align: center;
+                min-width: 70px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                color: brand.t(Color_n_timedate);
+            }
+        }
+    }
+}
+
+.completed_result_yc,
+.completed_result_cs,
+.completed_result_et {
+    @include mix.layout {
+        @include mix.mobile {
+            position: relative;
+            width: fit-content;
+            margin: 0 auto;
+        }
+    }
+}
+
+.icon-fi-1h,
+.icon-fi-2h {
+    @include mix.layout {
+        @include mix.mobile {
+            position: absolute;
+            z-index: 2;
+        }
+    }
+
+    .completed_result_et & {
+        @include mix.layout {
+            @include mix.mobile {
+                top: 7px;
+                right: 1px;
+                font-size: 8px;
+            }
+        }
+    }
+
+    .completed_result_yc &,
+    .completed_result_cs & {
+        @include mix.layout {
+            @include mix.mobile {
+                top: 6px;
+                right: -4px;
+            }
+        }
+    }
+
+    .completed_result_yc &::after,
+    .completed_result_cs &::after {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    @include mix.themeNames(blue, bafa, bob) {
+                        background: #b2b2b2;
+                    }
+
+                    @include mix.notThemeNames(blue, bafa, bob) {
+                        background: brand.t(Border_completedresult_item_table);
+                    }
+                }
+
+                @include mix.mAsiaCyberbattle {
+                    @include mix.brightTheme {
+                        background: brand.t(BGGray);
+                    }
+
+                    @include mix.darkTheme {
+                        background: brand.t(Black);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.icon-fi-1h,
+.icon-fi-2h,
+.icon-fi-remove-mid {
+
+    .completed_result_yc &,
+    .completed_result_cs &,
+    .completed_result_et & {
+        @include mix.layout {
+            @include mix.mobile {
+                position: absolute;
+                z-index: 2;
+            }
+        }
+    }
+
+    .completed_result_yc &::before,
+    .completed_result_cs &::before,
+    .completed_result_et &::before {
+        @include mix.layout {
+            @include mix.mobile {
+                position: relative;
+                z-index: 1;
+            }
+        }
+    }
+
+    .completed_result_yc &::after,
+    .completed_result_cs &::after,
+    .completed_result_et &::after {
+        @include mix.layout {
+            @include mix.mobile {
+                position: absolute;
+                content: "";
+                top: 1px;
+                left: 0;
+                right: 0;
+                bottom: 1px;
+                border-radius: 50%;
+                z-index: 0;
+            }
+        }
+    }
+}
+
+.icon-fi-1h,
+.icon-fi-2h,
+.icon-fi-et,
+.icon-fi-remove-mid {
+    .completedresult_item_table_header & {
+        @include mix.theme {
+            @include mix.mobile {
+                color: #50c042;
+
+                @include mix.mEuro {
+                    @include mix.themeNames(blue, bafa, bob) {
+                        color: color.adjust(#50c042, $lightness: -8%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.icon-fi-pk {
+    @include mix.layout {
+        @include mix.mobile {
+            font-size: 15px;
+            line-height: 13px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            color: #ff4d00;
+        }
+    }
+}
+
+.icon-fi-remove-mid {
+    .completed_result_cs & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.transform(rotate(45deg));
+                font-size: 3px;
+                right: -1px;
+                top: 1px;
+
+                &:after {
+                    content: none;
+                }
+            }
+        }
+    }
+}
+
+.icon-fi-et {
+    @include mix.layout {
+        @include mix.mobile {
+            font-size: 15px;
+            line-height: 13px;
+        }
+    }
+}
+
+.goal_timeline_icon {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            @include base.justifyContent(center);
+            @include base.borderRadius(2px);
+            min-width: 18px;
+            max-width: 18px;
+            width: 18px;
+            height: 16px;
+            margin-left: 5px;
+            font-size: 10px;
+            cursor: pointer;
+            text-align: center;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(DarkGray);
+                background: brand.t(BGGray);
+                border: 1px solid brand.t(DividerGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(LightGray);
+
+                @include mix.notThemeName(default1) {
+                    background: brand.t(DarkBlack);
+                    border: 1px solid brand.t(Gray02);
+                }
+
+                @include mix.themeName(default1) {
+                    background: brand.t(DarkBlue);
+                    border: 1px solid brand.t(Stroke);
+                }
+            }
+        }
+    }
+}
+
+.cp_cnt_inner {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.flexDirection(column);
+            min-width: 100%;
+            overflow-y: hidden;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: auto;
+
+            &::-webkit-scrollbar {
+                height: 4px;
+            }
+        }
+    }
+
+    .remove_arrow & {
+
+        &::-webkit-scrollbar,
+        &::-webkit-scrollbar-track,
+        &::-webkit-scrollbar-thumb {
+            @include mix.layout {
+                @include mix.mobile {
+                    border-radius: 6px;
+                }
+            }
+        }
+
+        &::-webkit-scrollbar-track {
+            @include mix.theme {
+                @include mix.mobile {
+                    @include mix.brightTheme {
+                        background: brand.t(Gray);
+                    }
+
+                    @include mix.darkTheme {
+                        @include mix.mEuro {
+                            @include mix.themeName(default) {
+                                background: rgba(36, 40, 44, 0.40);
+                            }
+
+                            @include mix.notThemeName(default) {
+                                background: brand.t(DarkBlack);
+                            }
+                        }
+
+                        @include mix.mAsiaCyberbattle {
+                            background: brand.t(DarkBlack);
+                        }
+                    }
+                }
+            }
+        }
+
+        &::-webkit-scrollbar-thumb {
+            @include mix.theme {
+                @include mix.mobile {
+                    @include mix.brightTheme {
+                        background: brand.t(MediumGray);
+                    }
+
+                    @include mix.darkTheme {
+                        @include mix.mEuro {
+                            @include mix.themeName(default) {
+                                background: #525C70;
+                            }
+
+                            @include mix.notThemeName(default) {
+                                background: brand.t(Gray02);
+                            }
+                        }
+
+                        @include mix.mAsiaCyberbattle {
+                            background: brand.t(Gray02);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cp_slide_inner {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.flexDirection(column);
+            @include base.hide_scrollbar();
+            overflow-x: auto;
+            overflow-y: hidden;
+            min-width: 100%;
+        }
+    }
+}
+
+.cp_nav {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mEuro {
+                @include base.flexbox();
+                @include base.justifyContent(center);
+                @include base.alignItems(center);
+                position: absolute;
+                width: 15px;
+                height: 22px;
+                top: 22px;
+                font-size: 18px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mEuro {
+                color: brand.t(Color_cp_nav);
+
+                @include mix.themeName(default) {
+                    background: brand.t(BG_asia_default_cp_nav);
+                }
+
+                @include mix.notThemeName(default) {
+                    background: brand.t(BG_cp_nav);
+                }
+            }
+        }
+    }
+
+    &.arrow_left {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    left: 0;
+                }
+            }
+        }
+    }
+
+    &.arrow_right {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+.cp_tb_main {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                width: calc(100% - 40px);
+            }
+
+            @include mix.mEuro {
+                margin: auto;
+                width: 86%;
+            }
+        }
+    }
+
+    .remove_arrow & {
+        @include mix.layout {
+            @include mix.mobile {
+                width: 100% !important;
+                position: relative;
+                overflow: hidden;
+            }
+        }
+
+        &::after {
+            @include mix.layout {
+                @include mix.mobile {
+                    content: "";
+                    position: absolute;
+                    left: 5px;
+                    right: 5px;
+                    top: var(--rahr);
+                    height: 1px;
+                    @include base.transform(scaleY(0.5));
+                    transform-origin: top;
+                    pointer-events: none;
+                    z-index: 10;
+                }
+            }
+        }
+    }
+}
+
+.teamname {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                padding-left: 8px;
+                width: 80%;
+            }
+        }
+    }
+}
+
+.result_cancel {
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.notThemeName(default1) {
+                    color: brand.t(ActiveLight);
+                }
+
+                @include mix.themeName(default1) {
+                    color: brand.t(Orange);
+                }
+            }
+
+            @include mix.mEuro {
+                color: brand.t(Color_result_cancel);
+            }
+        }
+    }
+}
+
+.has_timeline {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+        }
+    }
+}
+
+.result_row_wrap {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            @include base.justifyContent(space-between);
+            font-size: 11px;
+            padding: 7.6px;
+        }
+    }
+
+    &:not(:last-child) {
+        @include mix.theme {
+            @include mix.mobile {
+                border-bottom: 1px solid brand.t(Border_result_row_wrap);
+            }
+        }
+    }
+}
+
+.row_left {
+    @include mix.theme {
+        @include mix.mobile {
+            color: brand.t(Color_row_left_result);
+        }
+    }
+}
+
+.row_right {
+    @include mix.layout {
+        @include mix.mobile {
+            padding-left: 8px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            color: brand.t(Color_row_right_result);
+        }
+    }
+}
+
+.aband_reason_wrap {
+    @include mix.layout {
+        @include mix.mobile {
+            z-index: 2;
+        }
+    }
+}
+
+.popup_timeline_uc {
+    @include mix.layout {
+        @include mix.mobile {
+            height: 90vh;
+        }
+    }
+}
+
+.disclaimer {
+    @include mix.layout {
+        @include mix.mobile {
+            font-size: 10px;
+
+            @include mix.mAsiaCyberbattle {
+                margin: auto;
+                padding: 4px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mEuro {
+                color: brand.t(Color_filter_item_disclaimer);
+            }
+        }
+    }
+
+    &.n_sticky {
+        @include mix.layout {
+            @include mix.mobile {
+                z-index: 4;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.brightTheme {
+                        color: brand.t(DarkGray);
+                        background: brand.t(LightGray);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(LightGray);
+
+                        @include mix.themeName(default1) {
+                            background: brand.t(DarkBlue);
+                        }
+
+                        @include mix.notThemeName(default1) {
+                            background: brand.t(Black);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    >span {
+        @include mix.layout {
+            @include mix.mobile {
+                display: block;
+            }
+        }
+    }
+
+    >span:has(+ span) {
+        @include mix.layout {
+            @include mix.mobile {
+                padding-bottom: 2px;
+            }
+        }
+    }
+}
+
+.result_searchwrap {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mEuro {
+                padding: 8px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mEuro {
+                background: brand.t(BG_filter_item);
+                color: brand.t(Color_filter_item);
+
+                @include mix.brightTheme {
+                    border-bottom: 1px solid brand.t(Border_searchInput_forResultPage);
+                }
+
+                @include mix.themeName(betway) {
+                    border-bottom: 1px solid brand.t(Border_searchInput_forResultPage);
+                }
+            }
+        }
+    }
+
+    &.n_sticky {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    z-index: 4;
+                }
+            }
+        }
+    }
+}
+
+.completed_result {
+    .icon-fi-joystick {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.transform(scale(1.5));
+
+                @include mix.mAsiaCyberbattle {
+                    padding-left: 2px;
+                }
+
+                @include mix.mEuro {
+                    padding-left: 6px !important;
+                }
+            }
+        }
+    }
+}
+
+.icon {
+    .completedresult_wrap & {
+        @include mix.layout {
+            @include mix.mobile {
+                margin-left: auto;
+
+                @include mix.mAsiaCyberbattle {
+                    @include base.rotateIcon();
+                }
+            }
+        }
+    }
+
+    .completed_result & {
+        @include mix.layout {
+            @include mix.mobile {
+                margin-left: auto;
+            }
+        }
+    }
+
+    .completedresult_item_right & {
+        @include mix.theme {
+            @include mix.mobile {
+                margin-left: unset;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.brightTheme {
+                        color: brand.t(DarkGray);
+                    }
+
+                    @include mix.darkTheme {
+                        @include mix.themeName(default1) {
+                            color: brand.t(LightGray);
+                        }
+
+                        @include mix.notThemeName(default1) {
+                            color: brand.t(Gray03);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .outright .competition & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+
+    .outright .competition .comp_count+& {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    margin-left: 2px;
+                }
+            }
+        }
+    }
+}
+
+.carousel_window_wrp {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            @include base.justifyContent(center);
+            width: 72%;
+            margin: 20px auto 0;
+            position: relative;
+            height: fit-content;
+        }
+    }
+}
+
+.carousel_close {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            @include base.justifyContent(flex-end);
+            text-align: right;
+            width: 72%;
+            margin: auto;
+            padding-bottom: 6px;
+            gap: 4px;
+            position: absolute;
+            right: 0;
+            top: -20px;
+        }
+    }
+
+    span {
+        @include mix.layout {
+            @include mix.mobile {
+                cursor: pointer;
+            }
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 16px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.carousel_img_wrp {
+    @include mix.layout {
+        @include mix.mobile {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+.carousel_img_track {
+    @include mix.layout {
+        @include mix.mobile {
+            will-change: transform;
+            transition: transform 320ms ease;
+        }
+    }
+}
+
+.carousel_img_itm {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            @include base.justifyContent(center);
+            @include base.borderRadius(6px);
+            overflow: hidden;
+            width: 100%;
+            margin: auto;
+            flex-shrink: 0;
+            flex: 0 0 100%;
+            user-select: none;
+            height: 100%;
+        }
+    }
+
+    img {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.borderRadius(6px);
+                width: 100%;
+                object-fit: contain;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.carousel_pagination {
+    @include mix.layout {
+        @include mix.mobile {
+            font-size: 10px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(Black);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(LightGray);
+            }
+        }
+    }
+}
+
+.carousel_list_outer {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.borderRadius(6px);
+            margin-top: 4px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            border: 2px solid;
+
+            @include mix.brightTheme {
+                background: brand.t(White);
+                border-color: brand.t(DividerGray);
+            }
+
+            @include mix.darkTheme {
+                @include mix.themeName(default1) {
+                    background: brand.t(DarkBlue);
+                    border-color: brand.t(Stroke);
+                }
+
+                @include mix.notThemeName(default1) {
+                    background: brand.t(Black);
+                    border-color: brand.t(Gray02);
+                }
+            }
+        }
+    }
+
+    &.swiper {
+        @include mix.layout {
+            @include mix.mobile {
+                padding: 6px;
+            }
+        }
+    }
+}
+
+.carousel_list {
+    &.overflow {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.justifyContent(flex-start);
+            }
+        }
+    }
+}
+
+.carousel_list_itm {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.borderRadius(6px);
+            flex-shrink: 0;
+            position: relative;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    img {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.borderRadius(6px);
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(center);
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                visibility: hidden;
+                font-size: 16px;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                background: rgba(0, 0, 0, 0.5);
+                -webkit-text-stroke: 0.5px brand.t(ActiveLight);
+                -webkit-text-fill-color: brand.t(White);
+            }
+        }
+    }
+
+    &.swiper-slide-thumb-active i {
+        @include mix.layout {
+            @include mix.mobile {
+                top: 2px;
+                left: 2px;
+                height: calc(100% - 4px);
+                width: calc(100% - 4px);
+            }
+        }
+    }
+
+    &.swiper-slide-thumb-active::before {
+        @include mix.layout {
+            @include mix.mobile {
+                content: "";
+                position: absolute;
+                inset: 0;
+                border-radius: 6px;
+                padding: 2px;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                border: 2px solid brand.t(ActiveLight);
+            }
+        }
+    }
+
+    &.swiper-slide-thumb-active i {
+        @include mix.layout {
+            @include mix.mobile {
+                visibility: visible;
+            }
+        }
+    }
+
+    &.swiper-slide {
+        @include mix.layout {
+            @include mix.mobile {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+}
+
+.carousel_list_wrp {
+    @include mix.layout {
+        @include mix.mobile {
+            padding: 20px 5px 14px;
+        }
+    }
+}
+
+.carousel_pg_count {
+    @include mix.layout {
+        @include mix.mobile {
+            float: right;
+        }
+    }
+}
+
+.carousel_nav {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            @include base.justifyContent(center);
+            font-size: 25px;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 50%;
+            bottom: 50%;
+            cursor: pointer;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                @include mix.txtOpacity(brand.t(Black), 1);
+            }
+
+            @include mix.darkTheme {
+                @include mix.txtOpacity(brand.t(White), 1);
+            }
+        }
+    }
+
+    &.prev {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.transform(rotate(90deg));
+                left: -39px;
+            }
+        }
+    }
+
+    &.next {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.transform(rotate(-90deg));
+                right: -39px;
+            }
+        }
+    }
+
+    &.disabled {
+        @include mix.layout {
+            @include mix.mobile {
+                cursor: default;
+            }
+        }
+    }
+
+    &.disabled,
+    &.swiper-button-disabled {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.brightTheme {
+                    @include mix.txtOpacity(brand.t(Black), 0.5);
+                }
+
+                @include mix.darkTheme {
+                    @include mix.txtOpacity(brand.t(White), 0.5);
+                }
+            }
+        }
+    }
+}
+
+.carousel {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 9;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+        }
+    }
+}
+
+.carousel_wrp {
+    @include mix.layout {
+        @include mix.mobile {
+            margin: auto;
+            width: calc(100% - 10px);
+            height: fit-content;
+            border-radius: 6px;
+            position: relative;
+            align-content: center;
+
+            @media screen and (min-width: 991px) {
+                width: calc(100% - 64px);
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                background: brand.t(Gray);
+            }
+
+            @include mix.darkTheme {
+                @include mix.themeName(default1) {
+                    background: brand.t(MediumBlue);
+                }
+
+                @include mix.notThemeName(default1) {
+                    background: brand.t(LightBlack);
+                }
+            }
+        }
+    }
+}
+
+.score_active {
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mCyberbattle {
+                color: brand.t(Color_score_active);
+            }
+        }
+    }
+
+    &:not(:first-child) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mCyberbattle {
+                    padding-left: 4px;
+                }
+            }
+        }
+    }
+
+    &:not(:last-child) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mCyberbattle {
+                    padding-right: 8px;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mCyberbattle {
+                    border-right: 1px solid brand.t(Border_score_default);
+                }
+            }
+        }
+    }
+}
+
+.score_default {
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mCyberbattle {
+                color: brand.t(Color_score_default);
+            }
+        }
+    }
+
+    &:not(:first-child) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mCyberbattle {
+                    padding-left: 4px;
+                }
+            }
+        }
+    }
+
+    &:not(:last-child) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mCyberbattle {
+                    padding-right: 8px;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mCyberbattle {
+                    border-right: 1px solid brand.t(Border_score_default);
+                }
+            }
+        }
+    }
+}
+
+.score_title:not(:first-child) {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mCyberbattle {
+                padding-left: 8px;
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Narra - Sample 3(Normal Iframe)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover,user-scalable=no" />
+
+    <script src="../assets/public/lib/jquery.js"></script>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        #thisiframe{
+            border: 0px none;
+            top: 0;
+            bottom: calc(0em + env(safe-area-inset-bottom));
+            width: 100%;
+            position: fixed;
+        }
+        body,
+        html {
+            -webkit-user-select:none;
+            user-select:none;
+            width:100%;
+            height:100%;
+        }
+        body {
+            overflow-x:hidden;
+        }
+
+    </style>
+</head>
+<body id="root" class="">
+    <iframe id="thisiframe" src="index.html"></iframe>
+    <script>
+         $(document).ready(function () {
+            $("#thisiframe").css("height", ($(window).outerHeight()));
+        });
+    </script>
+</body>
+</html>

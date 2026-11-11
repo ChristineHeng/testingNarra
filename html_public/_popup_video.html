@@ -1,0 +1,24 @@
+<!-- <video autoplay playsinline allowfullscreen height="100%">
+        <source src="https://media.istockphoto.com/videos/soccer-player-makes-a-jump-video-id503630084">
+    </video> -->
+<!-- <iframe class="" src="../html_public/videoiframe_sample.html"  width=100%; height="100%" allow="autoplay"></iframe> -->
+<iframe class="samplefsvideo" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4" width="100%;" height="100%" allow="autoplay"></iframe>
+<div class="exit_fs_btn" onclick="fsExit()">
+	<i class="icon-fi-remove-thin"></i>
+</div>
+
+<script>
+	//this function for ASIA/CYBER view
+	function fsExit() {
+		$('#sample_side_oddsPanel').hide();
+		$('#rotateScreen').show();
+		$('.samplefsvideo').attr('src', '');
+		$('.footer_main ').removeClass('on-transition');
+		$('.footer_main ').removeClass('transition');
+		$('.footer_main ').removeClass('on');
+		$('#demo_footer_background').hide();
+		$('#sample_arrow_status i').toggleClass('icon-fi-arrow-down1 icon-fi-arrow-up1');
+		reset_pb_default();
+		calculateHeightSetting(true);
+	}
+</script>

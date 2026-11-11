@@ -1,0 +1,112 @@
+<div class="n_sev_view n_sticky">
+    <div class="n_visualization_wrap basketball">
+        <div class="n_header_sev">
+            <div class="n_back"><a class="n_back_link" id="close_sev_popup"><i class="icon-fi-arrow-left"></i> 返回</a></div>
+            <div class="s_title_wrp">
+                <img class="fl_s_title_img" src="../assets/public/layout/images/icon/icon_s2.png">
+                <div class="s_title">ES-NBA 2K20</div>
+                <div class="event_selection_expand">
+                    <i class="icon-fi-arrow-down1" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="n_balance">
+                (RMB)<br>
+                999,888,777.66
+            </div>
+        </div>
+        <div id="s_sev_top" class="s_sev_top">
+            <div class="n_sev_top" id="demo_sample_dashboard_scenarios">
+                <!--refer to
+                 1. _sev_scoreboard_basketball_live.html
+                 2. prematch : same with soccer
+                 3. remove na: _sev_scoreboard_basketball_prematch_removena.html-->
+            </div>
+        </div>
+    </div>
+</div>
+<div class="n_content_wrap_wth_bcktop " id="sev_content">
+    <div class="sev_content">
+        <!--load from "_sev_dashboard_innerpage_shared.html"-->
+
+        <div class="sev_inner_content" id="sev_all">
+            <div class="n_sev_item_content_wrap">
+                <!--load from "_sev_content_xxxx.html"-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // refer to
+    //  1. _sev_scoreboard_basketball_live.html
+    //  2. prematch : same with soccer
+    //  3. remove na: _sev_scoreboard_basketball_prematch_removena.html
+
+    var d1 = $.get("../html_asia/_sev_scoreboard_basketball_prematch_removena.html");
+    var d2 = $.get("../html_asia/_sev_dashboard_innerpage_shared.html");
+    var d3 = $.get("../html_asia/_sev_content_template.html");
+
+    $.when(d1, d2, d3).done(function (data1, data2, data3) {
+        $("#demo_sample_dashboard_scenarios").empty().append(data1[0]);
+        $(".sev_content").prepend(data2[0]);
+        $("#sev_all .n_sev_item_content_wrap").append(data3[0]);
+        $("#sev_all").siblings(".sev_inner_content").hide();
+
+        SEV_Group("", true);
+        $("#MockOnly_sb_compact_basketball").show();
+        $("#MockOnly_sb_compact_basketball").siblings(".sb_compact").hide();
+        const $menu = $(".n_menu_cover .n_sports_menu.slider_wrap_flexi.n_sev_slider")
+
+        $menu.children('.item_wrap').remove()
+        $menu.prepend(`
+            <div class="item_wrap">
+                <div class="item"> Popular</div>
+            </div>
+            <div class="item_wrap active">
+                <div class="item"> All Markets</div>
+            </div>
+            <div class="item_wrap">
+                <div class="item"> Full Time</div>
+            </div>
+            <div class="item_wrap">
+                <div class="item"> Halves</div>
+            </div>
+            <div class="item_wrap">
+                <div class="item"> Quarter</div>
+            </div>
+            <div class="item_wrap">
+                <div class="item"> Player
+                    <div class="sld_new">New</div>
+                </div>
+            </div>
+            <div class="item_wrap">
+                <div class="item"> Teams</div>
+            </div>
+            <div class="item_wrap">
+                <div class="item"> Specials</div>
+            </div>`);
+        
+            var sevSlider = $(".DontCopy_test_sev_filter_menu");
+            var sevSlider_Active = $(".DontCopy_test_sev_filter_menu").find('.item_wrap.active').first();
+			var sevSlider_Active_item = $(".DontCopy_test_sev_filter_menu").find(".item_wrap.active .item").first();
+            var sevSlider_position = sevSlider_Active.offset().left - sevSlider.offset().left + sevSlider.scrollLeft();
+            var pd_left = parseInt(sevSlider_Active_item.css('padding-left'));
+			var pd_right = parseInt(sevSlider_Active_item.css('padding-right'));
+			var total_padding = pd_left + pd_right;
+			var width_no_padding = sevSlider_Active.width() - total_padding;
+			$(".DontCopy_test_sev_filter_menu .slider").css("width", width_no_padding);
+			$(".DontCopy_test_sev_filter_menu .slider").css("left", sevSlider_position);
+    });
+
+
+
+    //Cyber Battle View: start
+    if (window.location.href.indexOf("cyber") > -1) {
+        $(".n_visualization_wrap").removeClass("basketball").addClass("cs2");
+        $(".s_title_wrp").find(".icon").removeClass("icon-fi-title-s2").addClass("icon-fi-title-cs2");
+        $(".s_title").text("*NBA - 季后赛");
+        detectSportsType();
+    }
+    //Cyber Battle View: end
+</script>
+

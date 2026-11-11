@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        video {
+              object-fit: fill;
+              width: 100%;
+              height: 100%;
+              position:absolute;
+              top:0;
+        }
+        video::-webkit-media-controls-start-playback-button {
+            display: none;
+        }
+    </style>
+</head>
+<body id="root" >
+    <video autoplay playsinline controls allowfullscreen>
+    <!--     <source src="http://videos.criticalcommons.org/transcoded/http/www.criticalcommons.org/Members/sammondn/clips/anchors-aweigh-1945-gene-kelly-and-jerry-mouse/video_file/webm-low/tom-and-jerry-scene-anchors_aweigh-mp4.webm" />
+     -->    <!--<source src="http://vjs.zencdn.net/v/oceans.mp4">-->
+        <source src="https://sports-web-stg-ls.inplaymatrix.com:4650/livestreaming/index?video=https%3a%2f%2fcph-p2p-msl.akamaized.net%2fhls%2flive%2f2000341%2ftest%2fmaster.m3u8">
+        <!--<source src="http://hlstx.plu.cn/lzlive/197918_900.m3u8?txSecret=5d594e86bbabf42b91e72536fe530d9c&amp;txTime=5aec0dd1" />-->
+    </video>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<section class="trend-performance-card win" data-demo-roi="1000">
+	<div class="tp_heading">
+		<div>
+			<div class="tp_title">Trend Performance</div>
+			<div class="tp_subtitle">Last 100 Bets</div>
+		</div>
+	</div>
+
+	<svg class="trend-performance-chart" id="chart" viewBox="0 0 920 440" role="img" aria-label="Trend Performance chart">
+		<defs>
+			<linearGradient id="trend-fill" x1="0" y1="0" x2="0" y2="1">
+				<stop offset="0%" class="trend-performance-fill-stop" stop-opacity=".3"></stop>
+				<stop offset="100%" class="trend-performance-fill-stop" stop-opacity="0"></stop>
+			</linearGradient>
+			<filter id="trend-glow">
+				<feGaussianBlur stdDeviation="2.5" result="blur"></feGaussianBlur>
+				<feMerge>
+					<feMergeNode in="blur"></feMergeNode>
+					<feMergeNode in="SourceGraphic"></feMergeNode>
+				</feMerge>
+			</filter>
+		</defs>
+
+		<text x="850" y="20" class="trend-performance-axis-title">ROI %</text>
+
+		<g id="grid-layer"></g>
+
+		<polygon id="area" fill="url(#trend-fill)"></polygon>
+		<polyline id="line" class="trend-performance-line"></polyline>
+
+		<line id="cursor" class="trend-performance-cursor-line" y1="60" y2="350"></line>
+
+		<g id="bet-axis-layer"></g>
+
+		<g id="tooltip" class="trend-performance-tooltip">
+			<rect width="220" height="110" rx="10"></rect>
+			<text x="18" y="29" class="trend-performance-tip-title" id="tip-title">Bet #1</text>
+			<text x="18" y="62" class="trend-performance-tip-value" id="tip-value">+0.00%</text>
+			<text x="18" y="90" class="trend-performance-tip-date" id="tip-date">Jan 1</text>
+		</g>
+
+		<!-- painted last so the dot always sits above the tooltip -->
+		<circle id="dot" class="trend-performance-active-dot" r="10"></circle>
+	</svg>
+</section>

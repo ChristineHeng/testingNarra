@@ -1,0 +1,20 @@
+{
+  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.formats": [
+    // This is Default.
+    // {
+    //   "format": "expanded",
+    //   "extensionName": ".css",
+    //   "savePath": null
+    // },
+    // You can add more
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": null
+    }
+  ],
+  // Keep this as null so shared partials outside /assets, like /partials/_partials.scss,
+  // trigger recompilation of the layout/theme entry files that @use them.
+  "liveSassCompile.settings.forceBaseDirectory": null
+}

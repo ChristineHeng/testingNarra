@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Narra - Sample 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover,user-scalable=no" />
+
+    <script src="../assets/public/lib/jquery.js"></script>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        #thisiframe{
+            position: absolute;
+            display: block;
+            border: 0px none;
+            top: 44px;
+            bottom: calc(0em + env(safe-area-inset-bottom));
+            width: 100%;
+        }
+        body,
+        html {
+            -webkit-user-select:none;
+            user-select:none;
+            width:100%;
+            height:100%
+        }
+        body {
+            overflow-x:hidden
+        }
+        :root {
+            --sat: env(safe-area-inset-top);
+            --sar: env(safe-area-inset-right);
+            --sab: env(safe-area-inset-bottom);
+            --sal: env(safe-area-inset-left);
+        }
+
+    </style>
+</head>
+<body id="root" class="">
+    <div style="height: 44px; background: rgb(248, 244, 244); width: 100%;"> test header 2 <span id="test">- test</span></div>
+    <iframe id="thisiframe" src="index.html" ></iframe>
+    <script>
+         $(document).ready(function () {
+             var temp = getComputedStyle(document.documentElement).getPropertyValue("--sat").replace(/[^-\d\.]/g, '');
+            $("#test").text(temp);
+            $("#thisiframe").css("height", ($(window).outerHeight() - 44 - temp));
+        });
+    </script>
+</body>
+</html>

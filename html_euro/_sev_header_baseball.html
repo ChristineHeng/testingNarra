@@ -1,0 +1,263 @@
+<!-- note : for all slider, dev copy please add "slider_hidden_x" and use React/JS scroll, 
+     do not use native scroll, (IOS overscroll issue)
+     mock for demo purposes only -->
+<div class="euNav_bar_wrp">
+    <ul class="nav_bar">
+        <li onClick="(function(){window.location.href = 'index.html'})();">Home<i class="icon-fi-arrow-right"
+                aria-hidden="true"></i></li>
+        <li id="sample_only_dontcopy_closeSEV">Baseball: In Play<i class="icon-fi-arrow-right" aria-hidden="true"></i>
+        </li>
+        <li>MLB<i class="icon-fi-arrow-right" aria-hidden="true"></i></li>
+        <li>Major League Baseball - Preseason</li>
+    </ul>
+    <div class="euTable_side">
+        <i class="icon-fi-arrow-down1" aria-hidden="true"></i>
+    </div>
+</div>
+<div class="period_hd">
+    <div class="eu_score mock_eu_baseball_runs" style="display: none;">
+        <div>Runs</div>
+    </div>
+    <div class="eu_score mock_eu_baseball_innings">
+        <div class="small">1</div>
+        <div class="small">2</div>
+        <div class="small">3</div>
+        <div class="small">4</div>
+        <div class="small">5</div>
+        <div class="small">6</div>
+        <div class="small">7</div>
+        <div class="small">8</div>
+        <div class="small">9</div>
+    </div>
+</div>
+<div id="dont_copy_sev_click" class="euTable mock_eu_baseball_runs" style="display: none;">
+    <div class="euTable_side">
+        <div class="live_tag">LIVE</div>
+    </div>
+    <div class="euTable_main">
+        <div class="eu_row">
+            <!-- <div class="team_dot on"></div> -->
+            <div class="eu_team">Tomateros de Culiacan</div>
+            <!--remove "eu_score" whole div if no score-->
+            <div class="eu_score">
+                <div>2</div>
+            </div>
+        </div>
+        <div class="eu_row">
+            <!-- <div class="team_dot off"></div> -->
+            <div class="eu_team">Charros</div>
+            <div class="eu_score">
+                <div>3</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="dont_copy_sev_click" class="euTable mock_eu_baseball_innings">
+    <div class="euTable_side">
+        <div>Bottom of Innings 9</div>
+    </div>
+    <div class="euTable_main">
+        <div class="eu_row">
+            <div class="team_dot on"></div>
+            <div class="eu_team">Tomateros de Culiacan</div>
+            <!--remove "eu_score" whole div if no score-->
+            <div class="eu_score">
+                <div class="small">22</div>
+                <div class="small">22</div>
+                <div class="small">0</div>
+                <div class="small">0</div>
+                <div class="small">0</div>
+                <div class="small">0</div>
+                <div class="small">0</div>
+                <div class="small">0</div>
+                <div class="euHighlight small">0</div>
+            </div>
+        </div>
+        <div class="eu_row">
+            <div class="team_dot off"></div>
+            <div class="eu_team">Charros</div>
+            <div class="eu_score">
+                <div class="small">22</div>
+                <div class="small">22</div>
+                <div class="small">0</div>
+                <div class="small">0</div>
+                <div class="small">0</div>
+                <div class="small">0</div>
+                <div class="small">0</div>
+                <div class="small">0</div>
+                <div class="euHighlight small">0</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- baseball with slider -->
+<div class="eu_snooker_board" style="display: none;">
+    <div class="board_left">
+        <div class="period_hd">
+            <div class="total_fm">Runs</div>
+        </div>
+        <div id="dont_copy_sev_click" class="euTable">
+            <div class="euTable_side">
+                <div>Innings 9</div>
+            </div>
+            <div class="euTable_main">
+                <div class="eu_row">
+                    <div class="eu_team">Tomateros de Culiacan</div>
+                    <div class="total_num euHighlight">3</div>
+                </div>
+                <div class="eu_row">
+                    <div class="eu_team">Charros</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="board_main">
+        <div class="snk_wrp DevDontCopy_euSnooker_scoreBoard">
+            <div class="snk_nav iconWrp_left snk_disable">
+                <div class="arrow_btn">
+                    <i class="icon-fi-double-angle-left"></i>
+                </div>
+            </div>
+            <div class="board_content">
+                <div class="row_score_grp">
+                    <div class="row_score_tit">
+                        <div class="period_grp">
+                            <div>1</div>
+                            <div>2</div>
+                            <div>3</div>
+                            <div>4</div>
+                            <div>5</div>
+                            <div>6</div>
+                            <div>7</div>
+                            <div>8</div>
+                            <div>9</div>
+                        </div>
+                    </div>
+                    <div class="snk_score_row">
+                        <div class="period_grp">
+                            <div>0</div>
+                            <div>10</div>
+                            <div>2</div>
+                            <div>3</div>
+                            <div>1</div>
+                            <div>0</div>
+                            <div>0</div>
+                            <div>0</div>
+                            <div class="euHighlight">1</div>
+                        </div>
+                    </div>
+                    <div class="snk_score_row">
+                        <div class="period_grp">
+                            <div>3</div>
+                            <div>0</div>
+                            <div>0</div>
+                            <div>6</div>
+                            <div>0</div>
+                            <div>0</div>
+                            <div>0</div>
+                            <div>0</div>
+                            <div class="euHighlight">0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="snk_nav iconWrp_right">
+                <div class="arrow_btn">
+                    <i class="icon-fi-double-angle-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="board_rt">
+        <div class="rt_top"></div>
+    </div>
+</div>
+<div class="eu_snooker_board" style="display: none;">
+    <div class="board_left">
+        <div class="period_hd">
+            <div class="total_fm">Runs</div>
+        </div>
+        <div class="euTable">
+            <div class="euTable_side">
+                <div>Extra Innings</div>
+            </div>
+            <div class="euTable_main">
+                <div class="eu_row">
+                    <div class="team_dot off"></div>
+                    <div class="eu_team">Adelaide Strikers SRL (N)</div>
+                    <div class="total_num euHighlight">3</div>
+                </div>
+                <div class="eu_row">
+                    <div class="team_dot on"></div>
+                    <div class="eu_team">Brisbane Heat SRL</div>
+                    <div class="total_num euHighlight">3</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="board_main">
+        <div class="snk_wrp">
+            <div class="board_content">
+                <div class="row_score_grp">
+                    <div class="row_score_tit">
+                        <div class="period_grp">
+                            <div>1</div>
+                            <div>2</div>
+                            <div>3</div>
+                        </div>
+                    </div>
+                    <div class="snk_score_row">
+                        <div class="period_grp">
+                            <div>3</div>
+                            <div>7</div>
+                            <div>3</div>
+                        </div>
+                    </div>
+                    <div class="snk_score_row">
+                        <div class="period_grp">
+                            <div>7</div>
+                            <div>0</div>
+                            <div>3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="board_rt">
+        <div class="rt_top"></div>
+    </div>
+</div>
+<div class="euTable_bottom mock_eu_baseball_innings">
+    <div class="n_table_left"></div>
+    <div class="n_table_right">
+        <div class="n_points_wrap">
+            <div class="n_game">
+                1st 5 Innings
+            </div>
+            <div class="n_cn_score">
+                (16-9)
+            </div>
+        </div>
+        <div class="n_points_wrap">
+            <div class="n_game">
+                Runs
+            </div>
+            <div class="n_cn_score euHighlight">
+                (17-9)
+            </div>
+        </div>
+        <div class="n_points_wrap">
+            <div class="n_game">
+                E.I.
+            </div>
+            <div class="n_cn_score">
+                (0-0)
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    SnkScroll(".DevDontCopy_euSnooker_scoreBoard", ".board_content", ".iconWrp_left", ".iconWrp_right");
+</script>

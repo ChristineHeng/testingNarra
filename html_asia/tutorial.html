@@ -1,0 +1,934 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Narra - html template</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover,user-scalable=no" />
+    <!-- <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#000"> -->
+    <!--Base Styles-->
+    <link rel="stylesheet" type="text/css" href="../assets/public/layout/css/basestyle.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="../merchants/merchant1/css/style_asia.css">-->
+    <link rel="stylesheet" type="text/css" href="../assets/public/languages/eng/layout_asia.min.css"
+        id="detect_language">
+    <link rel="stylesheet" type="text/css" href="#" id="design_view">
+
+    <script src="../assets/public/lib/jquery.js"></script>
+    <script src="../assets/public/layout/js/scripts_main.js"></script>
+    <script src="../assets/public/layout/js/scripts_asia.js"></script>
+</head>
+
+<body id="root" class="pagebg1">
+    <div class="n_container">
+        <!-- removed for SFCRQ-1581 : <div class="layout_wrap animated slideInUp"> -->
+        <div class="n_header n_header_sports">
+            <div class="n_back"><a class="n_back_link mock_cb_n_back_link" id="backtomain"><i
+                        class="icon-fi-arrow-left"></i>
+                    返回</a></div>
+            <div class="title">
+                <i class="icon-fi-n-tutorial"></i> 玩法教程
+            </div>
+        </div>
+        <div class="n_content_wrap_wth_bcktop pop_tutorial">
+            <div class="inner_wrap n_sticky">
+                <div class="options_grp tab_2">
+                    <div class="options">
+                        <div id="option_handicap" class="active">让球</div>
+                        <div id="option_overunder">大小球</div>
+                    </div>
+                    <div class="slider"></div>
+                </div>
+            </div>
+            <div class="tut_slider_wrp n_sticky" id="tutorial_slide_menu">
+                <div class="tut_slider slider_wrap_flexi " id="tutSlider">
+                    <div class="item" onclick="jumpto('p1');">0</div>
+                    <div class="item active" onclick="jumpto('p2');">0/0.5</div>
+                    <div class="item">0.5</div>
+                    <div class="item">0.5/1</div>
+                    <div class="item " onclick="jumpto('p5');">球1</div>
+                    <div class="item">0.2</div>
+                    <div class="item">4/1</div>
+                    <div class="item">0.3</div>
+                    <div class="item">5/1</div>
+                    <div class="slider"></div>
+                </div>
+                <div class="slider_bg"></div>
+            </div>
+            <div id="tutorial_handicap">
+                <div class="tutorial_content_wrap">
+                    <div class="tutorial_item" id="p1">
+                        <div class="header">
+                            <div class="period">0</div>
+                            <!-- <div class="title">平手盘</div> -->
+                            <div class="description"></div>
+                        </div>
+                        <div class="content">
+                            <div class="team_wrap">
+                                <div class="team_group">
+                                    <div class="team_icon"><img src="../assets/public/layout/images/fl_team_home.svg">
+                                    </div>
+                                    <div class="team_name">主队</div>
+                                </div>
+                                <div class="middle_group">
+                                    <div class="handicap_group">
+                                        <div class="handicap">1</div>
+                                        <div class="vs">VS</div>
+                                        <div class="handicap">0</div>
+                                    </div>
+                                    <!-- <div class="game_status">
+                                    </div> -->
+                                </div>
+                                <div class="team_group">
+                                    <div class="team_icon"><img src="../assets/public/layout/images/fl_team_away.svg">
+                                    </div>
+                                    <div class="team_name">客队</div>
+                                </div>
+                            </div>
+                            <div class="game_summary">
+                                主或客谁赢球即全赢获胜，打平则退回本金
+                            </div>
+                            <div class="result_wrap">
+                                <div class="result_detail">
+                                    <div class="team">投注主队</div>
+                                    <div class="up">全赢</div>
+                                </div>
+                                <div class="middle_circle">
+                                    <div>赛果</div>
+                                    <div class="score">1-0</div>
+                                </div>
+                                <div class="result_detail">
+                                    <div class="team">投注客队</div>
+                                    <div class="lose">全输</div>
+                                </div>
+                            </div>
+                            <div class="game_summary">
+                            </div>
+                            <div class="result_wrap">
+                                <div class="result_detail">
+                                    <div class="team">投注主队</div>
+                                    <div class="team_info">退回本金</div>
+                                </div>
+                                <div class="middle_circle">
+                                    <div>赛果</div>
+                                    <div class="score">0-0</div>
+                                </div>
+                                <div class="result_detail">
+                                    <div class="team">投注客队</div>
+                                    <div class="team_info">退回本金</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tutorial_item" id="p2">
+                        <div class="header">
+                            <div class="period">0/0.5</div>
+                            <!-- <div class="title">平手半球盘</div> -->
+                            <div class="description"></div>
+                        </div>
+                        <div class="content">
+                            <div class="team_wrap">
+                                <div class="team_group">
+                                    <div class="team_icon"><img src="../assets/public/layout/images/fl_team_home.svg">
+                                    </div>
+                                    <div class="team_name">主队</div>
+                                </div>
+                                <div class="middle_group">
+                                    <div class="handicap_group">
+                                        <div class="handicap">-0/0.5</div>
+                                        <div class="vs">VS</div>
+                                        <div class="handicap">+0/0.5</div>
+                                    </div>
+                                    <!-- <div class="game_status">
+                                        主队让0/0.5球
+                                    </div> -->
+                                </div>
+                                <div class="team_group">
+                                    <div class="team_icon"><img src="../assets/public/layout/images/fl_team_away.svg">
+                                    </div>
+                                    <div class="team_name">客队</div>
+                                </div>
+                            </div>
+                            <div class="game_summary">
+                                主赢1球或以上的情况下，投注主队全赢，投注客队全输
+                            </div>
+                            <div class="result_wrap">
+                                <div class="result_detail">
+                                    <div class="team">投注主队</div>
+                                    <div class="up">全赢</div>
+                                </div>
+                                <div class="middle_circle">
+                                    <div>赛果</div>
+                                    <div class="score">1-0</div>
+                                </div>
+                                <div class="result_detail">
+                                    <div class="team">投注客队</div>
+                                    <div class="lose">全输</div>
+                                </div>
+                            </div>
+                            <div class="game_summary">
+                            </div>
+                            <div class="result_wrap">
+                                <div class="result_detail">
+                                    <div class="team">投注主队</div>
+                                    <div class="up">全赢</div>
+                                </div>
+                                <div class="middle_circle">
+                                    <div>赛果</div>
+                                    <div class="score">2-1</div>
+                                </div>
+                                <div class="result_detail">
+                                    <div class="team">投注客队</div>
+                                    <div class="lose">全输</div>
+                                </div>
+                            </div>
+                            <div class="game_summary">
+                                打平的情况下，投注主队输一半，投注客队赢一半
+                            </div>
+                            <div class="result_wrap">
+                                <div class="result_detail">
+                                    <div class="team">投注主队</div>
+                                    <div class="lose">输一半</div>
+                                </div>
+                                <div class="middle_circle">
+                                    <div>赛果</div>
+                                    <div class="score">0-0</div>
+                                </div>
+                                <div class="result_detail">
+                                    <div class="team">投注客队</div>
+                                    <div class="up">赢一半</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tutorial_item">
+                        <div class="header">
+                            <div class="period">0.5</div>
+                            <!-- <div class="title">半球盘</div> -->
+                            <div class="description"></div>
+                        </div>
+                        <div class="content">
+                            <div class="team_wrap">
+                                <div class="team_group">
+                                    <div class="team_icon"><img src="../assets/public/layout/images/fl_team_home.svg">
+                                    </div>
+                                    <div class="team_name">主队</div>
+                                </div>
+                                <div class="middle_group">
+                                    <div class="handicap_group">
+                                        <div class="handicap">-0.5</div>
+                                        <div class="vs">VS</div>
+                                        <div class="handicap">+0.5</div>
+                                    </div>
+                                    <!-- <div class="game_status">
+                                        主队让0.5球
+                                    </div> -->
+                                </div>
+                                <div class="team_group">
+                                    <div class="team_icon"><img src="../assets/public/layout/images/fl_team_away.svg">
+                                    </div>
+                                    <div class="team_name">客队</div>
+                                </div>
+                            </div>
+                            <div class="game_summary">
+                                主赢1球或以上的情况下，投注主队全赢，投注客队全输
+                            </div>
+                            <div class="result_wrap">
+                                <div class="result_detail">
+                                    <div class="team">投注主队</div>
+                                    <div class="up">全赢</div>
+                                </div>
+                                <div class="middle_circle">
+                                    <div>赛果</div>
+                                    <div class="score">1-0</div>
+                                </div>
+                                <div class="result_detail">
+                                    <div class="team">投注客队</div>
+                                    <div class="lose">全输</div>
+                                </div>
+                            </div>
+                            <div class="game_summary">
+                                主队打平或输球，投注主队全输，投注客队全赢
+                            </div>
+                            <div class="result_wrap">
+                                <div class="result_detail">
+                                    <div class="team">投注主队</div>
+                                    <div class="lose">全输</div>
+                                </div>
+                                <div class="middle_circle">
+                                    <div>赛果</div>
+                                    <div class="score">0-0</div>
+                                </div>
+                                <div class="result_detail">
+                                    <div class="team">投注客队</div>
+                                    <div class="up">全赢</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tutorial_item">
+                        <div class="header">
+                            <div class="period">0.5/1</div>
+                            <!-- <div class="title">半球/一球盘</div> -->
+                            <div class="description"></div>
+                        </div>
+                        <div class="content">
+                            <div class="team_wrap">
+                                <div class="team_group">
+                                    <div class="team_icon"><img src="../assets/public/layout/images/fl_team_home.svg">
+                                    </div>
+                                    <div class="team_name">主队</div>
+                                </div>
+                                <div class="middle_group">
+                                    <div class="handicap_group">
+                                        <div class="handicap">-0.5/1</div>
+                                        <div class="vs">VS</div>
+                                        <div class="handicap">+0.5/1</div>
+                                    </div>
+                                    <!-- <div class="game_status">
+                                        主队让0.5/1球
+                                    </div> -->
+                                </div>
+                                <div class="team_group">
+                                    <div class="team_icon"><img src="../assets/public/layout/images/fl_team_away.svg">
+                                    </div>
+                                    <div class="team_name">客队</div>
+                                </div>
+                            </div>
+                            <div class="game_summary">
+                                主赢1球，投注主队赢一半，投注客队输一半
+                            </div>
+                            <div class="result_wrap">
+                                <div class="result_detail">
+                                    <div class="team">投注主队</div>
+                                    <div class="up">赢一半</div>
+                                </div>
+                                <div class="middle_circle">
+                                    <div>赛果</div>
+                                    <div class="score">1-0</div>
+                                </div>
+                                <div class="result_detail">
+                                    <div class="team">投注客队</div>
+                                    <div class="lose">输一半</div>
+                                </div>
+                            </div>
+                            <div class="game_summary">
+                                主赢2球或以上，投注主队全赢，投注客队全输
+                            </div>
+                            <div class="result_wrap">
+                                <div class="result_detail">
+                                    <div class="team">投注主队</div>
+                                    <div class="up">全赢</div>
+                                </div>
+                                <div class="middle_circle">
+                                    <div>赛果</div>
+                                    <div class="score">2-0</div>
+                                </div>
+                                <div class="result_detail">
+                                    <div class="team">投注客队</div>
+                                    <div class="lose">全输</div>
+                                </div>
+                            </div>
+                            <div class="game_summary">
+                                主队打平或输球，投注主队全输，投注客队全赢
+                            </div>
+                            <div class="result_wrap">
+                                <div class="result_detail">
+                                    <div class="team">投注主队</div>
+                                    <div class="lose">全输</div>
+                                </div>
+                                <div class="middle_circle">
+                                    <div>赛果</div>
+                                    <div class="score">0-0</div>
+                                </div>
+                                <div class="result_detail">
+                                    <div class="team">投注客队</div>
+                                    <div class="up">全赢</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tutorial_item">
+                        <div class="header">
+                            <div class="period">1</div>
+                            <!-- <div class="title">一球盘</div> -->
+                            <div class="description"></div>
+                        </div>
+                        <div class="content">
+                            <div class="team_wrap">
+                                <div class="team_group">
+                                    <div class="team_icon"><img src="../assets/public/layout/images/fl_team_home.svg">
+                                    </div>
+                                    <div class="team_name">主队</div>
+                                </div>
+                                <div class="middle_group">
+                                    <div class="handicap_group">
+                                        <div class="handicap">-1</div>
+                                        <div class="vs">VS</div>
+                                        <div class="handicap">+1</div>
+                                    </div>
+                                    <!-- <div class="game_status">
+                                        主队让1球
+                                    </div> -->
+                                </div>
+                                <div class="team_group">
+                                    <div class="team_icon"><img src="../assets/public/layout/images/fl_team_away.svg">
+                                    </div>
+                                    <div class="team_name">客队</div>
+                                </div>
+                            </div>
+                            <div class="game_summary">
+                                主赢1球，投注主客均退回本金
+                            </div>
+                            <div class="result_wrap">
+                                <div class="result_detail">
+                                    <div class="team">投注主队</div>
+                                    <div class="team_info">退回本金</div>
+                                </div>
+                                <div class="middle_circle">
+                                    <div>赛果</div>
+                                    <div class="score">1-0</div>
+                                </div>
+                                <div class="result_detail">
+                                    <div class="team">投注客队</div>
+                                    <div class="team_info">退回本金</div>
+                                </div>
+                            </div>
+                            <div class="game_summary">
+                                主赢2球或以上，投注主队全赢，投注客队全输
+                            </div>
+                            <div class="result_wrap">
+                                <div class="result_detail">
+                                    <div class="team">投注主队</div>
+                                    <div class="up">全赢</div>
+                                </div>
+                                <div class="middle_circle">
+                                    <div>赛果</div>
+                                    <div class="score">2-0</div>
+                                </div>
+                                <div class="result_detail">
+                                    <div class="team">投注客队</div>
+                                    <div class="lose">全输</div>
+                                </div>
+                            </div>
+                            <div class="game_summary">
+                                主队打平或输球，投注主队全输，投注客队全赢
+                            </div>
+                            <div class="result_wrap">
+                                <div class="result_detail">
+                                    <div class="team">投注主队</div>
+                                    <div class="lose">全输</div>
+                                </div>
+                                <div class="middle_circle">
+                                    <div>赛果</div>
+                                    <div class="score">0-0</div>
+                                </div>
+                                <div class="result_detail">
+                                    <div class="team">投注客队</div>
+                                    <div class="up">全赢</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tutorial_item">
+                        <div class="header">
+                            <div class="period">1/1.5</div>
+                            <!-- <div class="title">一球/一球半盘</div> -->
+                            <div class="description"></div>
+                        </div>
+                        <div class="content">
+                            <div class="team_wrap">
+                                <div class="team_group">
+                                    <div class="team_icon"><img src="../assets/public/layout/images/fl_team_home.svg">
+                                    </div>
+                                    <div class="team_name">主队</div>
+                                </div>
+                                <div class="middle_group">
+                                    <div class="handicap_group">
+                                        <div class="handicap">-1/1.5</div>
+                                        <div class="vs">VS</div>
+                                        <div class="handicap">+1/1.5</div>
+                                    </div>
+                                    <!-- <div class="game_status">
+                                        主队让1/1.5球
+                                    </div> -->
+                                </div>
+                                <div class="team_group">
+                                    <div class="team_icon"><img src="../assets/public/layout/images/fl_team_away.svg">
+                                    </div>
+                                    <div class="team_name">客队</div>
+                                </div>
+                            </div>
+                            <div class="game_summary">
+                                主赢1球，投注主客均退回本金
+                            </div>
+                            <div class="result_wrap">
+                                <div class="result_detail">
+                                    <div class="team">投注主队</div>
+                                    <div class="lose">输一半</div>
+                                </div>
+                                <div class="middle_circle">
+                                    <div>赛果</div>
+                                    <div class="score">1-0</div>
+                                </div>
+                                <div class="result_detail">
+                                    <div class="team">投注客队</div>
+                                    <div class="up">赢一半</div>
+                                </div>
+                            </div>
+                            <div class="game_summary">
+                                主赢2球或以上，投注主队全赢，投注客队全输
+                            </div>
+                            <div class="result_wrap">
+                                <div class="result_detail">
+                                    <div class="team">投注主队</div>
+                                    <div class="up">全赢</div>
+                                </div>
+                                <div class="middle_circle">
+                                    <div>赛果</div>
+                                    <div class="score">3-0</div>
+                                </div>
+                                <div class="result_detail">
+                                    <div class="team">投注客队</div>
+                                    <div class="lose">全输</div>
+                                </div>
+                            </div>
+                            <div class="game_summary">
+                                主队打平或输球，投注主队全输，投注客队全赢
+                            </div>
+                            <div class="result_wrap">
+                                <div class="result_detail">
+                                    <div class="team">投注主队</div>
+                                    <div class="lose">全输</div>
+                                </div>
+                                <div class="middle_circle">
+                                    <div>赛果</div>
+                                    <div class="score">0-0</div>
+                                </div>
+                                <div class="result_detail">
+                                    <div class="team">投注客队</div>
+                                    <div class="up">全赢</div>
+                                </div>
+                            </div>
+                            <div class="game_summary">
+                            </div>
+                            <div class="result_wrap">
+                                <div class="result_detail">
+                                    <div class="team">投注主队</div>
+                                    <div class="lose">全输</div>
+                                </div>
+                                <div class="middle_circle">
+                                    <div>赛果</div>
+                                    <div class="score">1-2</div>
+                                </div>
+                                <div class="result_detail">
+                                    <div class="team">投注客队</div>
+                                    <div class="up">全赢</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tutorial_item">
+                        <div class="header">
+                            <div class="period">1.5</div>
+                            <!-- <div class="title">一球半盘</div> -->
+                            <div class="description"></div>
+                        </div>
+                        <div class="content">
+                            <div class="team_wrap">
+                                <div class="team_group">
+                                    <div class="team_icon"><img src="../assets/public/layout/images/fl_team_home.svg">
+                                    </div>
+                                    <div class="team_name">主队</div>
+                                </div>
+                                <div class="middle_group">
+                                    <div class="handicap_group">
+                                        <div class="handicap">-1.5</div>
+                                        <div class="vs">VS</div>
+                                        <div class="handicap">+1.5</div>
+                                    </div>
+                                    <!-- <div class="game_status">
+                                        主队让1.5球
+                                    </div> -->
+                                </div>
+                                <div class="team_group">
+                                    <div class="team_icon"><img src="../assets/public/layout/images/fl_team_away.svg">
+                                    </div>
+                                    <div class="team_name">客队</div>
+                                </div>
+                            </div>
+                            <div class="game_summary">
+                                主赢1球，投注主客均退回本金
+                            </div>
+                            <div class="result_wrap">
+                                <div class="result_detail">
+                                    <div class="team">投注主队</div>
+                                    <div class="lose">输一半</div>
+                                </div>
+                                <div class="middle_circle">
+                                    <div>赛果</div>
+                                    <div class="score">1-0</div>
+                                </div>
+                                <div class="result_detail">
+                                    <div class="team">投注客队</div>
+                                    <div class="up">赢一半</div>
+                                </div>
+                            </div>
+                            <div class="game_summary">
+                                主赢2球或以上，投注主队全赢，投注客队全输
+                            </div>
+                            <div class="result_wrap">
+                                <div class="result_detail">
+                                    <div class="team">投注主队</div>
+                                    <div class="up">全赢</div>
+                                </div>
+                                <div class="middle_circle">
+                                    <div>赛果</div>
+                                    <div class="score">3-0</div>
+                                </div>
+                                <div class="result_detail">
+                                    <div class="team">投注客队</div>
+                                    <div class="lose">全输</div>
+                                </div>
+                            </div>
+                            <div class="game_summary">
+                                主队打平或输球，投注主队全输，投注客队全赢
+                            </div>
+                            <div class="result_wrap">
+                                <div class="result_detail">
+                                    <div class="team">投注主队</div>
+                                    <div class="lose">全输</div>
+                                </div>
+                                <div class="middle_circle">
+                                    <div>赛果</div>
+                                    <div class="score">0-0</div>
+                                </div>
+                                <div class="result_detail">
+                                    <div class="team">投注客队</div>
+                                    <div class="up">全赢</div>
+                                </div>
+                            </div>
+                            <div class="game_summary">
+                            </div>
+                            <div class="result_wrap">
+                                <div class="result_detail">
+                                    <div class="team">投注主队</div>
+                                    <div class="lose">全输</div>
+                                </div>
+                                <div class="middle_circle">
+                                    <div>赛果</div>
+                                    <div class="score">1-2</div>
+                                </div>
+                                <div class="result_detail">
+                                    <div class="team">投注客队</div>
+                                    <div class="up">全赢</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tutorial_item" id="p5">
+                        <div class="header">
+                            <div class="period">1.5/2</div>
+                            <!-- <div class="title">一球半/两球盘</div> -->
+                            <div class="description"></div>
+                        </div>
+                        <div class="content">
+                            <div class="team_wrap">
+                                <div class="team_group">
+                                    <div class="team_icon"><img src="../assets/public/layout/images/fl_team_home.svg">
+                                    </div>
+                                    <div class="team_name">主队</div>
+                                </div>
+                                <div class="middle_group">
+                                    <div class="handicap_group">
+                                        <div class="handicap">-1.5/2</div>
+                                        <div class="vs">VS</div>
+                                        <div class="handicap">+1.5/2</div>
+                                    </div>
+                                    <!-- <div class="game_status">
+                                        主队让1.5/2球
+                                    </div> -->
+                                </div>
+                                <div class="team_group">
+                                    <div class="team_icon"><img src="../assets/public/layout/images/fl_team_away.svg">
+                                    </div>
+                                    <div class="team_name">客队</div>
+                                </div>
+                            </div>
+                            <div class="game_summary">
+                                主赢1球，投注主队全输，投注客队全赢
+                            </div>
+                            <div class="result_wrap">
+                                <div class="result_detail">
+                                    <div class="team">投注主队</div>
+                                    <div class="lose">全输</div>
+                                </div>
+                                <div class="middle_circle">
+                                    <div>赛果</div>
+                                    <div class="score">1-0</div>
+                                </div>
+                                <div class="result_detail">
+                                    <div class="team">投注客队</div>
+                                    <div class="up">全赢</div>
+                                </div>
+                            </div>
+                            <div class="game_summary">
+                                主赢2球，投注主队赢一半，投注客队输一半
+                            </div>
+                            <div class="result_wrap">
+                                <div class="result_detail">
+                                    <div class="team">投注主队</div>
+                                    <div class="up">赢一半</div>
+                                </div>
+                                <div class="middle_circle">
+                                    <div>赛果</div>
+                                    <div class="score">2-0</div>
+                                </div>
+                                <div class="result_detail">
+                                    <div class="team">投注客队</div>
+                                    <div class="lose">输一半</div>
+                                </div>
+                            </div>
+                            <div class="game_summary">
+                                主赢3球或以上，投注主队全赢，投注客队全输
+                            </div>
+                            <div class="result_wrap">
+                                <div class="result_detail">
+                                    <div class="team">投注主队</div>
+                                    <div class="up">全赢</div>
+                                </div>
+                                <div class="middle_circle">
+                                    <div>赛果</div>
+                                    <div class="score">3-0</div>
+                                </div>
+                                <div class="result_detail">
+                                    <div class="team">投注客队</div>
+                                    <div class="lose">全输</div>
+                                </div>
+                            </div>
+                            <div class="game_summary">
+                                主队打平或输球，投注主队全输，投注客队全赢
+                            </div>
+                            <div class="result_wrap">
+                                <div class="result_detail">
+                                    <div class="team">投注主队</div>
+                                    <div class="up">全赢</div>
+                                </div>
+                                <div class="middle_circle">
+                                    <div>赛果</div>
+                                    <div class="score">0-0</div>
+                                </div>
+                                <div class="result_detail">
+                                    <div class="team">投注客队</div>
+                                    <div class="lose">全输</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tutorial_overunder" style="display:none;">
+                <div class="tutorial_content_wrap">
+                    <div class="tutorial_item">
+                        <div class="header fl_hd">
+                            <div class="period empty"></div>
+                            <div class="title">大小盘</div>
+                            <div class="description">全场90分钟 (包含伤停时间)
+                                两队的最终总得分结果所判定</div>
+                        </div>
+                        <div class="content fl_round">
+                            <div class="team_wrap">
+                                <div class="team_group">
+                                    <div class="team_icon"><img src="../assets/public/layout/images/fl_team_home.svg">
+                                    </div>
+                                    <div class="team_name">主队</div>
+                                </div>
+                                <div class="middle_group">
+                                    <div class="handicap_group">
+                                        <div class="handicap"></div>
+                                        <div class="vs">VS</div>
+                                        <div class="handicap"></div>
+                                    </div>
+                                    <!-- <div class="game_status">
+                                    </div> -->
+                                </div>
+                                <div class="team_group">
+                                    <div class="team_icon"><img src="../assets/public/layout/images/fl_team_away.svg">
+                                    </div>
+                                    <div class="team_name">客队</div>
+                                </div>
+                            </div>
+                            <div class="game_summary">
+                            </div>
+                            <div class="result_wrap">
+                                <div class="result_detail">
+                                    <div class="team">投注大于1.5</div>
+                                    <div class="up">全赢</div>
+                                </div>
+                                <div class="middle_circle">
+                                    <div>总进球</div>
+                                    <div class="score">2</div>
+                                </div>
+                                <div class="result_detail">
+                                    <div class="team">投注小于1.5</div>
+                                    <div class="lose">全输</div>
+                                </div>
+                            </div>
+                            <div class="game_summary">
+                            </div>
+                            <div class="result_wrap">
+                                <div class="result_detail">
+                                    <div class="team">投注大于1.5/2</div>
+                                    <div class="up">赢一半</div>
+                                </div>
+                                <div class="middle_circle">
+                                    <div>总进球</div>
+                                    <div class="score">2</div>
+                                </div>
+                                <div class="result_detail">
+                                    <div class="team">投注小于1.5/2</div>
+                                    <div class="lose">输一半</div>
+                                </div>
+                            </div>
+                            <div class="game_summary">
+                            </div>
+                            <div class="result_wrap">
+                                <div class="result_detail">
+                                    <div class="team">投注大于2/2.5</div>
+                                    <div class="up">赢一半</div>
+                                </div>
+                                <div class="middle_circle">
+                                    <div>总进球</div>
+                                    <div class="score">2</div>
+                                </div>
+                                <div class="result_detail">
+                                    <div class="team">投注小于2/2.5</div>
+                                    <div class="lose">输一半</div>
+                                </div>
+                            </div>
+                            <div class="game_summary">
+                            </div>
+                            <div class="result_wrap">
+                                <div class="result_detail">
+                                    <div class="team">投注大于3</div>
+                                    <div class="team_info">退回本金(打和)</div>
+                                </div>
+                                <div class="middle_circle">
+                                    <div>总进球</div>
+                                    <div class="score">3</div>
+                                </div>
+                                <div class="result_detail">
+                                    <div class="team">投注于小3</div>
+                                    <div class="team_info">退回本金(打和)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        var height1 = $(".n_header").outerHeight();
+        var height2 = $(".pop_tutorial .inner_wrap").outerHeight();
+        var height3 = $("#tutorial_slide_menu").outerHeight();
+        function jumpto(anchor) {
+            /*  window.location.href = "#"+anchor; */
+            $("html, body").animate({
+                scrollTop: ($("#" + anchor).offset().top - height1 - height2 - height3)
+            }, 500);
+
+            $(".demoOnly_fixposition").find(".n_container").animate({
+                scrollTop: ($("#" + anchor).offset().top - height1 - height2 - height3)
+            }, 500);
+        }
+
+
+        $(document).ready(function () {
+            $(".options").children().on("click", function () {
+                $(this).siblings().removeClass("active");
+                $(this).addClass("active");
+                var totalitem = $(this).siblings().length + 1;
+                var thisitem = $(this).index();
+                var position = (thisitem / totalitem * 100) + "%"
+                $(this).parent().parent().find(".slider").css("left", position);
+            });
+
+            $("#option_handicap").on("click", function () {
+                $("#tutorial_overunder").hide();
+                $("#tutorial_handicap").show();
+            });
+
+            $("#option_overunder").on("click", function () {
+                $("#tutorial_handicap").hide();
+                $("#tutorial_overunder").show();
+            });
+
+            $("#close_tutorial").on("click", function () {
+                $("#tutorial_wrap").hide();
+
+                $(".n_container").css("height", "");
+                popupOff();
+            });
+
+            //fix the top issue
+            height1 = $(".n_header").outerHeight();
+            height2 = $(".pop_tutorial .inner_wrap").outerHeight();
+            height3 = $("#tutorial_slide_menu").outerHeight();
+            $(".pop_tutorial .inner_wrap").css("top", height1);
+            localStorage.getItem('webcyberbattle') === "true" ? $("#tutorial_slide_menu").css("top", height1 + height2) : $("#tutorial_slide_menu").css("top", height1 + height2);
+            $(".tutorial_content").css("top", height1 + height2 + height3);
+            cyberbattleBackButton();
+
+            /*new slider menu effect*/
+            var sevSlider = $("#tutSlider");
+            var slider = sevSlider.find(".slider");
+            var $activeItem = sevSlider.find(".item.active");
+
+            function updateSlider($item) {
+                if (!$item || !$item.length) return;
+
+                var pd_left = parseInt($item.css('padding-left')) || 0;
+                var pd_right = parseInt($item.css('padding-right')) || 0;
+                var total_padding = pd_left + pd_right;
+                var itemWidth = $item.width() + total_padding;
+                var position = $item.offset().left - sevSlider.offset().left + sevSlider.scrollLeft();
+
+                slider.css({
+                    width: itemWidth,
+                    left: position
+                });
+            }
+
+            if ($activeItem.length) {
+                updateSlider($activeItem);
+            }
+
+            sevSlider.find(".item").on("click", function () {
+                $activeItem = $(this);
+                $activeItem.addClass("active").siblings().removeClass("active");
+                updateSlider($activeItem);
+            });
+
+            var resizeTimer;
+            $(window).on("resize", function () {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(function () {
+                    updateSlider($activeItem);
+                }, 10); 
+            });
+
+
+            if(localStorage.getItem('webcyberbattle') === "true"){
+                cbWebScroll("#tutSlider");
+            }
+        });
+    </script>
+</body>
+
+</html>

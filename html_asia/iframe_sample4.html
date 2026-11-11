@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Narra - Sample 3(Normal Iframe)</title>
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover,user-scalable=no" />
+
+  <script src="../assets/public/lib/jquery.js"></script>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    body,
+    html {
+      -webkit-user-select: none;
+      user-select: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    .cr_wrp_iwrp::after {
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+    }
+
+    .cr_wrp_iwrp iframe {
+      border: 6px solid rgba(255, 255, 255, 0.13);
+    }
+
+    .cr_wrp_html::after {
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+    }
+
+    .cr_wrp_html .n_container {
+      border: 6px solid rgba(255, 255, 255, 0.13);
+    }
+
+    .cr_wrp_iwrp {
+      display: block;
+      width: 90vw;
+      height: 60vh;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .cr_wrp_iwrp::after {
+      content: "";
+      width: 100vw;
+      height: 30vh;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+    }
+
+    .cr_wrp_iwrp iframe {
+      border-radius: 24px;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .cr_wrp_html {
+      height: 60vh;
+      position: relative;
+    }
+
+    .cr_wrp_html .n_container {
+      border-radius: 24px;
+      overflow: hidden;
+      position: relative;
+      width: 90vw;
+      height: 60vh;
+      margin: 0 auto;
+      z-index: -1;
+    }
+
+    .cr_wrp_html .footer_main {
+      position: absolute;
+      z-index: -1;
+      width: calc(90vw - 12px);
+      left: calc(5vw + 6px);
+      bottom: 0 !important;
+    }
+
+    .cr_wrp_html .n_footer_combo {
+      position: absolute;
+      z-index: -1;
+      padding-bottom: 50px;
+    }
+
+    .cr_wrp_html .n_footer {
+      position: absolute;
+      bottom: 0;
+    }
+
+    .cr_wrp_html::after {
+      content: "";
+      width: 100vw;
+      height: 30vh;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body id="root" class="">
+  <div class="cr_wrp_iwrp" style="display: none;">
+    <iframe id="cr_wrp_iframe_test" src="el-prof-soccer-today.html"></iframe>
+  </div>
+  <div class="cr_wrp_html" style="display: none;"></div>
+  <script>
+    $(document).ready(function () {
+      $.get("el-prof-soccer-today.html", function (data) {
+        let htmlOnly = $(data).filter(function () {
+          return this.nodeName !== "SCRIPT";
+        });
+        $(".cr_wrp_html").html(htmlOnly);
+        calculateBalWidth();
+        $.get("_global_pop_item.html", function (innerData) {
+          $(".cr_wrp_html").find("#demoOnly_global_pop_item").html(innerData);
+          $(".cr_wrp_html")
+            .find("#demoOnly_global_pop_item")
+            .find("#main_footer")
+            .load("../html_asia/_footer_eventlisting.html", function () {});
+        });
+        $(".bg_mask, .highlighted, .fl_menu_wrp").hide();
+      });
+
+      // $(".cr_wrp_btn_nx").click(function () {
+      // 	$(".cr_wrp_img, .cr_wrp_html").hide();
+      // 	$(".cr_wrp_iwrp").show();
+      // 	let iframeDoc = $("#cr_wrp_iframe_test").contents();
+      // 	iframeDoc.find(".cr_outer_wrp").hide();
+      // 	let $container = iframeDoc.find(".n_container").first();
+      // 	let $iframeHtml = iframeDoc.find("html");
+      // 	let nBalW = iframeDoc.find(".n_balance").outerWidth() + "px";
+      // 	$iframeHtml.css("--nBalW", nBalW);
+      // 	$container.css({
+      // 		"max-height": "500px",
+      // 		"overflow-y": "auto"
+      // 	  });
+      // 	$container.animate(
+      // 		{ scrollTop: $container[0].scrollHeight }, 5000
+      // 	);
+      // 	$("body").addClass("popupOn");
+      // });
+      // $(".cr_wrp_btn_prev").click(function () {
+      // 	$(".cr_wrp_img, .cr_wrp_iwrp").hide();
+      // 	$(".cr_wrp_html").show();
+      // 	$(".cr_wrp_html .n_container").animate(
+      // 		{ scrollTop: $(".cr_wrp_html .n_container")[0].scrollHeight },
+      // 		5000,
+      // 		function () {
+      // 		  $("body").removeClass("navScroll").addClass("navReset");
+      // 		}
+      // 	  );
+      // 	$("body").addClass("popupOn");
+      // });
+    });
+  </script>
+</body>
+
+</html>

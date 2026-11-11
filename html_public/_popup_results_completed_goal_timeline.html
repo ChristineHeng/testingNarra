@@ -1,0 +1,27 @@
+<div class="popup_window">
+	<div class="popup_window_center">
+		<div class="close_icon">
+			<i class="icon-fi-close-icon"></i>
+		</div>
+		<div class="popup_fullpage">
+			<iframe class="result_iframe" type="text/html" width="100%" height="100%" frameborder="0" src="https://narra-mlycdn-kube1.weicloud360.com/m-static/vs/statistics.html?widget=match.verticalTimeline&amp;brEventId=61061331&amp;lang=en&amp;timezone={2}"></iframe>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(document).ready(function () {
+		$(".popup_window_center").on('click', function (e) {
+			if (e.target !== this) {
+				return;
+			}
+		});
+		$(".popup_close.nbet").on('click', function () {
+			$(".popup_window").hide();
+		});
+		if (navigator.userAgent.match(/UCBrowser/i) == "UCBrowser") {
+			$(".popup_fullpage").css("overflow", "auto");
+			$(".popup_fullpage").addClass('popup_timeline_uc');
+		}
+	});
+</script>

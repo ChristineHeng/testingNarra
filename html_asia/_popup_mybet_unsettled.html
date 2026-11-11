@@ -1,0 +1,140 @@
+<div class="n_container">
+	<div class="n_header n_header_sports header_center n_header_short">
+		<div class="n_back"><a class="n_back_link" id="closepopup_mybet"><i class="icon-fi-arrow-left"></i> 返回</a></div>
+		<div class="tab_group">
+			<div class="tab active sample_dev_dont_copy_popup_mybet">未结算</div>
+			<div class="tab sample_dev_dont_copy_popup_betstatement">已结算</div>
+		</div>
+		<div class="n_balance">
+			(RMB)<br>
+			999,999,999.99
+		</div>
+	</div>
+
+	<div class="n_content_wrap_wth_bcktop">
+		<div class="tab_nav n_menu_slider tab_nav_3 slider_wrap n_sticky" id="sample_mock_test_stickyfilter">
+			<div class="tab_nav_item active" id="btn_mybet_pendingcancel">待定/取消</div>
+			<div class="tab_nav_item" id="btn_popup_mybet_unsettled_today">今日</div>
+			<div class="tab_nav_item" id="btn_popup_mybet_unsettled_early">早盘</div>
+			<div class="slider"></div>
+		</div>
+		<div id="mybet_pendingcancel"></div>
+		<div id="mybet_today"></div>
+		<div id="mybet_early"></div>
+	</div>
+</div>
+<!--Wager copied popup-->
+<div class="smallpop" style="display: none;">
+	<div class="smallpop_wrp">
+		<div class="smallpop_wrp_inner">
+			已复制注单号
+		</div>
+	</div>
+</div>
+<!--General Popup: Small Grey popup on TOP of screen : Refer to My Bet Wager ID-->
+<div class="smallpop_top" style="display: none;">
+	<div class="smallpop_box">
+		<i class="icon-fi-ok-sign" style="display: none;"></i>
+		已复制注单号
+	</div>
+</div>
+<!--[DES-43][Narra][Tutorial Page] Recommended Correct Scores (Open Bets): start-->
+<div class="bg_mask" id="dont_copy_tutor_openBets" style="display: none;"></div>
+<!--[DES-43][Narra][Tutorial Page] Recommended Correct Scores (Open Bets): end-->
+<div class="bet_summary" style="display: none">
+	<div class="item">
+		<span>Nº de apostas :</span>
+		<span>3</span>
+	</div>
+	<div class="item">
+		<div class="info_wrp info_top">
+			<div class="info_icn"><i class="icon-fi-info"></i></div>
+			<div class="info_txt">180 免費投注</div>
+		</div>
+		<span>Total Stake (RMB) :</span>
+		<span>5</span>
+	</div>
+	<div class="item">
+		<span>Total Est. Winnings (FARTCOINNNN) :</span>
+		<span>-5.00</span>
+	</div>
+</div>
+
+<script>
+	$(document).ready(function () {
+		//backtotop();
+		// 40: for demo only,dev side plz use dynamic value
+		var sampleTopHeaderHeight_demoOnly = 40;
+		$("#sample_mock_test_stickyfilter").css("top", sampleTopHeaderHeight_demoOnly);
+
+		$("#closepopup_mybet").click(function () {
+			$(".n_footer.padding_fix").show();
+			$('#main_footer').show();
+			$(".n_footer_combo.clone").removeClass("no_bm");
+			$(".n_footer.pb_footer").hide();
+			$(".bet_summary").hide().removeClass("w_footer");
+			$("#mybet").hide();
+			popupOff();
+			$("#toTop").removeClass("btn_backtop_popup");
+		});
+		$(".sample_dev_dont_copy_popup_betstatement").click(function () {
+			$("#mybet").load("_popup_mybet_settled.html", function () {
+				$(".bet_summary").hide();
+				$("#sample_mybet_settled_filter").css("top", sampleTopHeaderHeight_demoOnly);
+			});
+		});
+
+		$("#mybet_today").hide();
+		$("#mybet_early").hide();
+		function hide() {
+			$("#mybet_pendingcancel").hide();
+			$("#mybet_today").hide();
+			$("#mybet_early").hide();
+			$("#btn_mybet_pendingcancel").removeClass("active");
+			$("#btn_popup_mybet_unsettled_today").removeClass("active");
+			$("#btn_popup_mybet_unsettled_early").removeClass("active");
+		}
+		$("#btn_mybet_pendingcancel").click(function () {
+			hide();
+			$("#mybet_pendingcancel").show();
+			$(this).addClass("active");
+		});
+		$("#btn_popup_mybet_unsettled_today").click(function () {
+			hide();
+			$("#mybet_today").show();
+			$(this).addClass("active");
+			var sampleTopHeaderHeight_demoOnly = 40;
+			var sample_Totalheight = $("#sample_mock_test_stickyfilter").outerHeight() + sampleTopHeaderHeight_demoOnly;
+			$(".filter_Bettrade").css("top", sample_Totalheight);
+			localStorage.getItem("isCyberBattle") === "true" && $(".filter_Bettrade").hide();
+		});
+		$("#btn_popup_mybet_unsettled_early").click(function () {
+			hide();
+			$("#mybet_early").show();
+			$(this).addClass("active");
+		});
+		$("#mybet_pendingcancel").load("_popup_mybet_unsettled_pending_cancel.html", function () {
+			if (localStorage.getItem("isCyberBattle") === "true") {
+				$(".betslip_teams_icon .fl_s_title_img").attr('src', '../assets/public/layout/images/icon/icon_s54.png')
+			}
+		});
+		$("#mybet_today").load("_popup_mybet_unsettled_today.html", function () {
+			var sampleTopHeaderHeight_demoOnly = 40;
+			var sample_Totalheight = $("#sample_mock_test_stickyfilter").outerHeight() + sampleTopHeaderHeight_demoOnly;
+			$(".filter_Bettrade").css("top", sample_Totalheight);
+			localStorage.getItem("isCyberBattle") === "true" && $(".filter_Bettrade").hide();
+			infoPop(".betslip_detail");
+		});
+		$("#mybet_early").load("_popup_mybet_unsettled_early.html");
+		localStorage.getItem("isFacelift") === "true" && $(".smallpop_top").find(".icon-fi-ok-sign").show();
+
+		if (localStorage.getItem("isCyberBattle") === "true") {
+			$(".tab_nav_3").toggleClass("tab_nav_3 tab_nav_2");
+			$("#btn_popup_mybet_unsettled_early").hide();
+			$(".betslip_teams_icon .fl_s_title_img").attr('src', '../assets/public/layout/images/icon/icon_s54.png')
+		}
+		/*standardize popup and toolti: start*/
+		infoPop(".betslip_detail");
+		/*standardize popup and toolti: end*/
+	});
+</script>

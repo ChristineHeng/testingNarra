@@ -1,0 +1,973 @@
+@use "../../assets/themes/colours/brand"as brand;
+@use "../../assets/public/layout/css/base"as base;
+@use "../mixin"as mix;
+// euro
+$search_barH: 44px;
+$small_headerH: 28px;
+
+// search (moved)
+.index_search {
+    .n_header_main & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    font-size: 20px;
+                    position: absolute;
+                    left: 4px * 10;
+                    top: calc(50% - 10px);
+                }
+            }
+        }
+    }
+}
+
+.n_header_search {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            /*  padding: 0 8px; */
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+
+            @include mix.mAsiaCyberbattle {
+                padding: 0 8px;
+            }
+        }
+    }
+}
+
+.search_wrap {
+    @include mix.layout {
+        @include mix.mobile {
+            width: 100%;
+            position: relative;
+
+            @include mix.mAsiaCyberbattle {
+                margin-left: 8px;
+            }
+        }
+    }
+
+    .result_search & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.flex(1);
+                width: auto;
+            }
+        }
+    }
+
+    .select_league & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    width: 100%;
+                    margin-left: unset;
+                }
+            }
+        }
+    }
+
+    input {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.boxSizing(border-box);
+                margin: 0;
+                text-align: left;
+                padding: 4px !important;
+                width: calc(100% - 20px) !important;
+                height: 100%;
+                font-size: 12px !important;
+            }
+        }
+    }
+
+    .icon-fi-remove-thin {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 11px;
+            }
+        }
+
+        // line-height: 1.4em;
+    }
+}
+
+.search_wrap_action {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mEuro {
+                padding-left: 16px;
+                padding-right: 8px;
+                font-size: 14px;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+.search_input {
+    .result_search & {
+        @include mix.layout {
+            @include mix.mobile {
+                height: 100%;
+            }
+        }
+    }
+}
+
+.clear_icon,
+.search_icon {
+    @include mix.theme {
+        @include mix.mobile {
+            color: brand.t(Color_ui-input-text_input_placeholder);
+        }
+    }
+
+    .search_wrap & {
+        @include mix.layout {
+            @include mix.mobile {
+                position: absolute;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.brightTheme {
+                        color: brand.t(DarkGray);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(LightGray);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.clear_icon {
+    .search_wrap & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(center);
+                top: 0;
+                bottom: 0;
+                padding: 0 8px;
+                right: 0;
+            }
+        }
+    }
+}
+
+.search_icon {
+    .search_wrap & {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: base.$search_btn_size !important;
+                top: 0;
+                bottom: 0;
+                left: 8px;
+                @include base.flexbox();
+                @include base.alignItems(center);
+            }
+        }
+    }
+}
+
+.search_clear {
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.notThemeName(default1) {
+                    color: brand.t(ActiveLight);
+                }
+
+                @include mix.themeName(default1) {
+                    color: brand.t(PurpleMain);
+                }
+            }
+
+            @include mix.mEuro {
+                color: brand.t(Color_search_clear);
+            }
+        }
+    }
+}
+
+.search_results_wrap {
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+
+                // @include mix.brightTheme {
+                @include mix.brightTheme {
+                    background: brand.t(BGGray);
+                }
+
+                // @include mix.darkTheme {
+                @include mix.darkTheme {
+                    @include mix.notThemeName(default1) {
+                        background: brand.t(Black);
+                    }
+
+                    @include mix.themeName(default1) {
+                        background: brand.t(BGDarkBlue);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.search_bar {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mEuro {
+                min-height: $search_barH;
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(space-between);
+                padding: 0 8px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mEuro {
+                @include mix.themeNames(blue, brown, green, red) {
+                    background: brand.t(BG_search_bar);
+                }
+
+                @include mix.themeName(bafa) {
+                    color: brand.t(Color_n_header);
+                    background: brand.t(BG_n_header);
+                }
+            }
+        }
+    }
+
+    span {
+        @include mix.layout {
+            @include mix.mobile {
+                margin-left: 8px + 4px + base.$search_btn_size;
+
+                @include mix.mEuro {
+                    text-align: left;
+                    padding: 4px 0 !important;
+                    @include base.flexbox();
+                    @include base.alignItems(center);
+                }
+            }
+        }
+    }
+}
+
+.search_btn {
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mEuro {
+                @include mix.themeNames(blue, brown, green, red) {
+                    color: brand.t(Color_search_btn);
+                    background: brand.t(BG_search_btn);
+                }
+
+                @include mix.themeName(bafa) {
+                    background: brand.t(BG_ui-input-text);
+                    color: brand.t(Color_ui-input-text);
+                }
+
+                @include mix.themeName(betway) {
+                    color: brand.t(Color_search_btn);
+                    background: brand.t(BG_search_btn);
+                }
+
+                @include mix.themeNames(default, dark1, dark2) {
+                    background: brand.t(BG_search_btn);
+                }
+            }
+        }
+    }
+
+    .search_bar & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    @include base.flexbox();
+                    height: $small_headerH;
+                    width: 80%;
+                    @include base.borderRadius(4px);
+                    padding: 4px;
+                    box-sizing: border-box;
+                    position: relative;
+                }
+            }
+        }
+    }
+
+    i {
+        .search_bar & {
+            @include mix.layout {
+                @include mix.mobile {
+                    font-size: base.$search_btn_size;
+
+                    @include mix.mEuro {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 8px;
+                        @include base.flexbox();
+                        @include base.alignItems(center);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.search_header {
+    @include mix.layout {
+        @include mix.mobile {
+            // font-size: base.$n_font7;
+            font-size: 14px;
+
+            @include mix.mEuro {
+                @include base.limit2line();
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+
+                // @include mix.brightTheme {
+                @include mix.brightTheme {
+                    color: brand.t(DarkBlack);
+                }
+
+                // @include mix.darkTheme {
+                @include mix.darkTheme {
+                    color: brand.t(White);
+                }
+            }
+
+            @include mix.mEuro {
+                color: brand.t(Color_search_header);
+            }
+        }
+    }
+}
+
+.search_head {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mEuro {
+                padding: 8px;
+                font-size: 12px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mEuro {
+                background: brand.t(BG_search_head);
+                color: brand.t(Color_search_head);
+            }
+        }
+    }
+
+    .er_popupOnsearch & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    z-index: 4 !important;
+                }
+            }
+        }
+    }
+}
+
+.search_menu {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            @include base.justifyContent(space-between);
+            padding: 8px;
+
+            @include mix.mAsiaCyberbattle {
+                padding: 10px 8px;
+                // font-size: fl.$font14;
+                font-size: 14px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    background: brand.t(DividerGray);
+                }
+
+                @include mix.darkTheme {
+                    @include mix.notThemeName(default1) {
+                        background: brand.t(Gray);
+                    }
+
+                    @include mix.themeName(default1) {
+                        background: brand.t(DarkBlue);
+                    }
+                }
+            }
+
+            @include mix.mEuro {
+                @include mix.notThemeNames (bafa, blue, brown, deafult, red) {
+                    background: brand.t(BG_search_menu);
+                }
+
+                @include mix.themeNames(bafa, blue, brown, deafult, red) {
+                    background: brand.t(BG_search_item_euro);
+                    border-bottom: 1px solid brand.t(Border_search_item_euro);
+                }
+            }
+        }
+    }
+
+    .er_popupOnsearch & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    z-index: 3 !important;
+                }
+            }
+        }
+    }
+}
+
+.search_item {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mEuro {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                padding: 4px 8px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mEuro {
+                @include mix.notThemeNames (bafa, blue, brown, deafult, red, betway, dark1, dark2, green) {
+                    background: brand.t(BG_search_menu);
+                }
+
+                @include mix.themeNames(bafa, blue, brown, deafult, red) {
+                    background: brand.t(BG_search_item_euro);
+                    border-bottom: 1px solid brand.t(Border_search_item_euro);
+                }
+
+                @include mix.themeNames(betway, dark1, dark2) {
+                    border-bottom: 1px solid brand.t(Border_el_grp_header);
+                }
+
+                @include mix.themeName(green) {
+                    background: brand.t(BG_search_item_euro);
+                    border-bottom: 1px solid brand.t(Border_search_item_euro);
+                }
+            }
+        }
+    }
+}
+
+.recent_search_wrap {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mEuro {
+                padding: 16px 8px;
+            }
+
+            @include mix.mAsiaCyberbattle {
+                padding: 10px 8px;
+            }
+        }
+    }
+}
+
+.search_selection {
+    @include mix.layout {
+        @include mix.mobile {
+            display: inline-block;
+            @include base.borderRadius(16px);
+            padding: 8px 16px;
+            margin: 0 8px;
+
+            @include mix.mAsiaCyberbattle {
+                margin: 0 2px;
+                padding: 10px 20px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    background: brand.t(LightGray);
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+
+                    @include mix.notThemeName(default1) {
+                        background: brand.t(Gray);
+                    }
+
+                    @include mix.themeName(default1) {
+                        background: brand.t(MediumBlue);
+                    }
+                }
+            }
+
+            @include mix.mEuro {
+                background: brand.t(BG_search_selection);
+                color: brand.t(Color_search_selection);
+            }
+        }
+    }
+}
+
+.popular_search_wrap {
+    @include mix.layout {
+        @include mix.mobile {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            counter-reset: popular_ol;
+        }
+    }
+
+    li {
+        @include mix.layout {
+            @include mix.mobile {
+                white-space: nowrap;
+                counter-increment: popular_ol;
+
+                @include mix.mEuro {
+                    padding: 16px;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                color: brand.t(Color_popular_search_wrap);
+            }
+        }
+
+        &:before {
+            @include mix.layout {
+                @include mix.mobile {
+                    content: counter(popular_ol);
+                }
+            }
+
+            @include mix.theme {
+                @include mix.mobile {
+                    color: brand.t(Color_before_popular_search_wrap);
+                }
+            }
+        }
+    }
+
+    >li {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.brightTheme {
+                        color: brand.t(Black);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(White);
+                    }
+                }
+            }
+        }
+
+        &:before {
+            @include mix.theme {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        @include mix.brightTheme {
+                            color: brand.t(DarkGray);
+                        }
+
+                        @include mix.darkTheme {
+                            color: brand.t(LightGray);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    span {
+        @include mix.layout {
+            @include mix.mobile {
+                margin-left: 8px;
+                display: inline-block;
+                vertical-align: bottom;
+                white-space: nowrap;
+                max-width: calc(100% - 40px);
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                @include mix.mAsiaCyberbattle {
+                    margin-left: 10px;
+                    max-width: calc(100% - 50px);
+                }
+            }
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                // font-size: base.$n_font3;
+                font-size: 10px;
+                margin: 0 8px;
+
+                @include mix.mAsiaCyberbattle {
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.brightTheme {
+                        color: brand.t(DarkGray);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(White);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.popolar_list {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                padding: 0 10px 25px;
+            }
+        }
+    }
+
+    &:first-child {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    padding-top: 20px;
+                }
+            }
+        }
+    }
+}
+
+.search_more_btn {
+    @include mix.layout {
+        @include mix.mobile {
+            text-align: center;
+            margin: 16px auto;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                color: brand.t(ActiveLight);
+            }
+
+            @include mix.mEuro {
+                color: brand.t(Color_search_more_btn) !important;
+            }
+        }
+    }
+}
+
+// now only used in search page
+.league_title_list {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                // font-size: base.$n_font4_andhalf;
+                font-size: 11.5px;
+                @include base.flexbox();
+                @include base.alignItems(center);
+                padding: 8px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    background: brand.t(BGGray);
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+
+                    @include mix.notThemeName(default1) {
+                        background: brand.t(Gray);
+                    }
+
+                    @include mix.themeName(default1) {
+                        background: brand.t(MediumBlue);
+                    }
+                }
+            }
+        }
+    }
+
+    .search_results_wrap & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    // font-size: base.$n_font5;
+                    font-size: 12px;
+                }
+
+                @include mix.mEuro {
+                    @include base.flexbox();
+                    @include base.alignItems(center);
+                    padding: 4px;
+                    margin-top: 4px;
+                }
+            }
+        }
+    }
+
+    &.search_fbets {
+        .search_results_wrap & {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mEuro {
+                        @include base.justifyContent(space-between);
+                    }
+                }
+            }
+        }
+    }
+
+    .icon-fi-joystick {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    // font-size: base.$n_font7;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+.event_details {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                padding: 10px 8px;
+                // font-size: base.$n_font5_andhalf;
+                font-size: 12.5px;
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(space-between);
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    background: brand.t(White);
+                    color: brand.t(Black);
+                    border-bottom: 1px solid brand.t(BGGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+
+                    @include mix.notThemeName(default1) {
+                        background: brand.t(LightBlack);
+                        border-bottom: 1px solid brand.t(Black);
+                    }
+
+                    @include mix.themeName(default1) {
+                        background: brand.t(DarkBlue);
+                        border-bottom: 1px solid brand.t(BGDarkBlue);
+                    }
+                }
+            }
+        }
+    }
+
+    .search_results_wrap & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    // font-size: base.$n_font5;
+                    font-size: 12px;
+                }
+
+                @include mix.mEuro {
+                    @include base.flexbox();
+                    @include base.alignItems(center);
+                }
+            }
+        }
+    }
+
+    .item {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    padding: 2px 4px;
+                }
+            }
+        }
+
+        &:first-child {
+            @include mix.theme {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        @include mix.brightTheme {
+                            color: brand.t(DarkGray);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.event_details_list {
+    .search_results_wrap .event_details & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    width: 90%;
+                }
+
+                @include mix.mEuro {
+                    padding: 8px;
+                    width: 90%;
+                }
+            }
+        }
+    }
+}
+
+.event_details_action {
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    @include mix.notThemeName(default1) {
+                        color: brand.t(Gray03);
+                    }
+
+                    @include mix.themeName(default1) {
+                        color: brand.t(LightGray);
+                    }
+                }
+            }
+        }
+    }
+
+    .search_results_wrap & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    width: 10%;
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    .search_results_wrap .event_details & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    width: 10%;
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    .search_fbets & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.themeNames(red, brown, wellbet) {
+                        color: brand.t(Color_event_details);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.event_league_wrap {
+    .search_results_wrap .league_title_list & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    @include base.flexbox();
+                    @include base.alignItems(center);
+                }
+            }
+        }
+    }
+}
+
+.found {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.borderRadius(4px);
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            color: brand.t(ActiveLight) !important;
+        }
+    }
+}

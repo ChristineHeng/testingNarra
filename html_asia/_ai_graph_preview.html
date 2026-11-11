@@ -1,0 +1,28 @@
+<!-- contains both win and lose examples; toggle which is shown via display:none -->
+<div class="trend-performance-card win">
+	<svg class="trend-performance-chart" viewBox="20 15 880 125" preserveAspectRatio="none" style="width: 100%; height: 100%" role="img" aria-label="Trend preview (win)">
+		<defs>
+			<linearGradient id="trend-fill-preview-win" x1="0" y1="0" x2="0" y2="1">
+				<stop offset="0%" class="trend-performance-fill-stop" stop-opacity=".3"></stop>
+				<stop offset="100%" class="trend-performance-fill-stop" stop-opacity="0"></stop>
+			</linearGradient>
+		</defs>
+
+		<polygon fill="url(#trend-fill-preview-win)" points="20,140 20,127 43,122 65,125 88,116 110,108 133,112 155,104 178,109 201,100 223,91 246,96 268,101 291,93 313,86 336,79 358,83 381,90 404,82 426,73 449,65 471,69 494,61 516,66 539,58 562,49 584,54 607,47 629,39 652,44 674,36 697,41 719,32 742,26 765,30 787,22 810,27 832,19 855,23 877,15 900,18 900,140"></polygon>
+		<polyline class="trend-performance-line" points="20,127 43,122 65,125 88,116 110,108 133,112 155,104 178,109 201,100 223,91 246,96 268,101 291,93 313,86 336,79 358,83 381,90 404,82 426,73 449,65 471,69 494,61 516,66 539,58 562,49 584,54 607,47 629,39 652,44 674,36 697,41 719,32 742,26 765,30 787,22 810,27 832,19 855,23 877,15 900,18"></polyline>
+	</svg>
+</div>
+
+<div class="trend-performance-card lose" style="display: none">
+	<svg class="trend-performance-chart" viewBox="20 15 880 125" preserveAspectRatio="none" style="width: 100%; height: 100%" role="img" aria-label="Trend preview (lose)">
+		<defs>
+			<linearGradient id="trend-fill-preview-lose" x1="0" y1="0" x2="0" y2="1">
+				<stop offset="0%" class="trend-performance-fill-stop" stop-opacity=".3"></stop>
+				<stop offset="100%" class="trend-performance-fill-stop" stop-opacity="0"></stop>
+			</linearGradient>
+		</defs>
+
+		<polygon fill="url(#trend-fill-preview-lose)" points="20,140 20,18 43,15 65,23 88,19 110,27 133,22 155,30 178,26 201,32 223,41 246,36 268,44 291,39 313,47 336,54 358,49 381,58 404,66 426,61 449,69 471,65 494,73 516,82 539,90 562,83 584,79 607,86 629,93 652,101 674,96 697,91 719,100 742,109 765,104 787,112 810,108 832,116 855,125 877,122 900,127 900,140"></polygon>
+		<polyline class="trend-performance-line" points="20,18 43,15 65,23 88,19 110,27 133,22 155,30 178,26 201,32 223,41 246,36 268,44 291,39 313,47 336,54 358,49 381,58 404,66 426,61 449,69 471,65 494,73 516,82 539,90 562,83 584,79 607,86 629,93 652,101 674,96 697,91 719,100 742,109 765,104 787,112 810,108 832,116 855,125 877,122 900,127"></polyline>
+	</svg>
+</div>

@@ -1,0 +1,499 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Narra - html template</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover,user-scalable=no" />
+		<!-- <meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="theme-color" content="#000"> -->
+		<!--Base Styles-->
+		<link rel="stylesheet" type="text/css" href="../assets/public/layout/css/basestyle.min.css" />
+		<!--<link rel="stylesheet" type="text/css" href="../merchants/merchant1/css/style_asia.css">-->
+		<link rel="stylesheet" type="text/css" href="../assets/public/languages/eng/layout_asia.min.css" id="detect_language" />
+		<link rel="stylesheet" type="text/css" href="#" id="design_view" />
+
+		<script src="../assets/public/lib/jquery.js"></script>
+		<script src="../assets/public/layout/js/scripts_main.js"></script>
+		<script src="../assets/public/layout/js/scripts_asia.js"></script>
+		<!--calendar-->
+		<link rel="stylesheet" type="text/css" href="../assets/public/lib/calendar.css" />
+	</head>
+	<body id="root">
+		<div class="n_container pop_tutorial">
+			<div class="n_header n_header_sports fl_rcd">
+				<div class="n_back">
+					<a class="n_back_link mock_cb_n_back_link"><i class="icon-fi-arrow-left"></i> 返回</a>
+				</div>
+				<div class="title"><i class="icon-fi-n-record"></i>我的免费投注记录</div>
+			</div>
+			<div class="fl_prcdDsc">
+				<div class="fl_prcdDsc_info"><i class="icon-fi-bettrade"></i>120 Active Free Bet Amount</div>
+				<div class="bet_now">Bet Now</div>
+			</div>
+			<div class="new_prcdTab">
+				<div class="prcdWrp">
+					<div class="prcdItm active" id="prcdItmAvlb">有效免费投注</div>
+					<div class="prcdItm" id="prcdItmPnd">
+						已使用/已过期
+						<!--<div class="prcdLtsRed"></div>-->
+					</div>
+				</div>
+			</div>
+			<div class="prcdAvlb">
+				<div class="prcdTlAvlb">
+					<div class="prcdTlItm active" id="prcdTlLatest">最新</div>
+					<div class="prcdTlItm" id="prcdTlExpiry">即将到期</div>
+					<div class="prcdSld"></div>
+				</div>
+				<div class="prcdLts latest">
+					<div class="prcdLtsRed"></div>
+					<div class="prcdLt">
+						<div class="prcdLtTtl">免費投注</div>
+						<div class="prcdLtPrc">18</div>
+					</div>
+					<div class="prcdDtl">
+						<div class="prcdT">
+							<i class="icon-fi-n-timeleft"></i>
+							期限: 04/20/2023 17:43:55
+						</div>
+						<div class="prcdInfo">
+							<span>收起资讯</span>
+							<i class="icon-fi-arrow-up1"></i>
+						</div>
+					</div>
+					<div class="prcdMore">
+						<div class="prcdTbl">
+							<div class="prcdRw">
+								<div class="prcdClT">类型</div>
+								<div class="prcdCl">免費投注</div>
+							</div>
+							<div class="prcdRw">
+								<div class="prcdClT">存入时间</div>
+								<div class="prcdCl">04/15/2023 17:43:55</div>
+							</div>
+						</div>
+						<div class="prcdTxt">
+							<div class="prcTerm"><!--<i class="icon-fi-info-round"></i>--><i class="icon-fi-info"></i>免費投注使用规则：</div>
+							<div class="prcdLst">- 用于单项投注，最低赔率為0.10</div>
+							<div class="prcdLst">- ...</div>
+							<div class="prcdLst">- ...</div>
+							<br />
+							<div class="prcdTxtIn">请参阅活动条规及规则，或联系客服获取更多信息。</div>
+						</div>
+					</div>
+				</div>
+				<div class="prcdLts latest">
+					<div class="prcdLt">
+						<div class="prcdLtTtl">免費投注</div>
+						<div class="prcdLtPrc">28</div>
+					</div>
+					<div class="prcdDtl">
+						<div class="prcdT">
+							<i class="icon-fi-n-timeleft"></i>
+							期限: 04/20/2023 17:43:55
+						</div>
+						<div class="prcdInfo">
+							<span>收起资讯</span>
+							<i class="icon-fi-arrow-up1"></i>
+						</div>
+					</div>
+					<div class="prcdMore">
+						<div class="prcdTbl">
+							<div class="prcdRw">
+								<div class="prcdClT">类型</div>
+								<div class="prcdCl">免費投注</div>
+							</div>
+							<div class="prcdRw">
+								<div class="prcdClT">存入时间</div>
+								<div class="prcdCl">04/15/2023 17:43:55</div>
+							</div>
+						</div>
+						<div class="prcdTxt">
+							<div class="prcdLst">- 用于单项投注，最低赔率為0.10</div>
+							<div class="prcdLst">- ...</div>
+							<div class="prcdLst">- ...</div>
+							<br />
+							<div class="prcdTxtIn">请参阅活动条规及规则，或联系客服获取更多信息。</div>
+						</div>
+					</div>
+				</div>
+				<div class="prcdLts expiry">
+					<div class="prcdLtsRed"></div>
+					<div class="prcdLt">
+						<div class="prcdLtTtl">免費投注</div>
+						<div class="prcdLtPrc">18</div>
+					</div>
+					<div class="prcdDtl">
+						<div class="prcdT expiry">
+							<i class="icon-fi-n-timeleft"></i>
+							即将到期: 剩餘6個小時
+						</div>
+						<div class="prcdInfo">
+							<span>收起资讯</span>
+							<i class="icon-fi-arrow-up1"></i>
+						</div>
+					</div>
+					<div class="prcdMore">
+						<div class="prcdTbl">
+							<div class="prcdRw">
+								<div class="prcdClT">类型</div>
+								<div class="prcdCl">免費投注</div>
+							</div>
+							<div class="prcdRw">
+								<div class="prcdClT">存入时间</div>
+								<div class="prcdCl">04/15/2023 17:43:55</div>
+							</div>
+						</div>
+						<div class="prcdTxt">
+							<div class="prcdLst">- 用于单项投注，最低赔率為0.10</div>
+							<div class="prcdLst">- ...</div>
+							<div class="prcdLst">- ...</div>
+							<br />
+							<div class="prcdTxtIn">请参阅活动条规及规则，或联系客服获取更多信息。</div>
+						</div>
+					</div>
+				</div>
+				<div class="prcdLts expiry">
+					<div class="prcdLt">
+						<div class="prcdLtTtl">免費投注</div>
+						<div class="prcdLtPrc">28</div>
+					</div>
+					<div class="prcdDtl">
+						<div class="prcdT">
+							<i class="icon-fi-n-timeleft"></i>
+							即将到期: 剩餘6個小時
+						</div>
+						<div class="prcdInfo">
+							<span>收起资讯</span>
+							<i class="icon-fi-arrow-up1"></i>
+						</div>
+					</div>
+					<div class="prcdMore">
+						<div class="prcdTbl">
+							<div class="prcdRw">
+								<div class="prcdClT">类型</div>
+								<div class="prcdCl">免費投注</div>
+							</div>
+							<div class="prcdRw">
+								<div class="prcdClT">存入时间</div>
+								<div class="prcdCl">04/15/2023 17:43:55</div>
+							</div>
+						</div>
+						<div class="prcdTxt">
+							<div class="prcdLst">- 用于单项投注，最低赔率為0.10</div>
+							<div class="prcdLst">- ...</div>
+							<div class="prcdLst">- ...</div>
+							<br />
+							<div class="prcdTxtIn">请参阅活动条规及规则，或联系客服获取更多信息。</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="prcdPnd">
+				<div class="prcdTlPnd">
+					<div class="prcdTlItm active" id="prcdTlPnd">已使用</div>
+					<div class="prcdTlItm" id="prcdTlHis">已过期</div>
+					<div class="prcdSld"></div>
+				</div>
+				<div class="prcdLts" style="display: none">
+					<div class="prcdLt">
+						<div class="prcdLtTtl">免費投注</div>
+						<div class="prcdLtPrc">18</div>
+					</div>
+					<div class="prcdDtl">
+						<div class="prcdT">更新时间: 04/20/2023 17:43:55</div>
+						<div class="prcdPndBtn active">领取</div>
+					</div>
+				</div>
+				<div class="prcdLts" style="display: none">
+					<div class="prcdLt">
+						<div class="prcdLtTtl">免費投注</div>
+						<div class="prcdLtPrc">28</div>
+					</div>
+					<div class="prcdDtl">
+						<div class="prcdT">更新时间: 04/20/2023 17:43:55</div>
+						<div class="prcdPndBtn">已领取</div>
+					</div>
+				</div>
+				<div class="prcdLts doneHis pending">
+					<div class="prcdHisT">
+						<div class="prcdHisTtl fl_claimed">已领取</div>
+						<div class="prcdHisPrc">- 5.00</div>
+					</div>
+					<div class="prcdHisDtl">
+						<div class="prcdHisItm">
+							注单号：2604202342408360
+							<i class="icon-fi-copy"></i>
+						</div>
+					</div>
+					<div class="prcdHisInf">
+						<div class="prcdHisInfTm">20/04/2026 16:42:45</div>
+						<div class="prcdHisInfMr">
+							<span>收起资讯</span>
+							<i class="icon-fi-arrow-up1"></i>
+						</div>
+					</div>
+					<div class="prcdHisIB">
+						<div class="prcdHisBItm">
+							Indian Super League CHS
+							<div class="pro_date">21/04 03:00</div>
+						</div>
+						<div class="prcdHisBItm">Chennaiyin FC VS Mohammedan SC Kolkata</div>
+						<div class="prcdHisBItm">让球 | <span class="bs_hl">Chennaiyin FC-1.5</span></div>
+					</div>
+				</div>
+				<div class="prcdLts doneHis pending">
+					<div class="prcdHisT">
+						<div class="prcdHisTtl fl_claimed">已领取</div>
+						<div class="prcdHisPrc">- 5.00</div>
+					</div>
+					<div class="prcdHisDtl">
+						<div class="prcdHisItm">投注单号: 2604202342408359 <i class="icon-fi-copy"></i></div>
+					</div>
+					<div class="prcdHisInf">
+						<div class="prcdHisInfTm">20/04/2026 16:42:45</div>
+						<div class="prcdHisInfMr">
+							<span>收起资讯</span>
+							<i class="icon-fi-arrow-up1"></i>
+						</div>
+					</div>
+					<div class="prcdHisIB">
+						<div class="prcdHisBItm">
+							中国超级联赛
+							<div class="pro_date">21/04 00:00</div>
+						</div>
+						<div class="prcdHisBItm">Shenzhen Peng City VS Beijing Sinobo Guoan</div>
+						<div class="prcdHisBItm">1X2 | <span class="bs_hl">Shenzhen Peng City</span></div></div>
+					</div>
+				</div>
+				<div class="prcdLts doneHis pending">
+					<div class="prcdHisT">
+						<div class="prcdHisTtl fl_claimed">Used:</div>
+						<div class="prcdHisPrc">- 28</div>
+					</div>
+					<div class="prcdHisDtl">
+						<div class="prcdHisItm">
+							交易编号：100568
+							<i class="icon-fi-copy"></i>
+						</div>
+					</div>
+					<div class="prcdHisInf">
+						<div class="prcdHisInfTm">04/18/2023 18:40:50</div>
+						<div class="prcdHisInfMr">
+							<span>收起资讯</span>
+							<i class="icon-fi-arrow-up1"></i>
+						</div>
+					</div>
+					<div class="prcdHisIB">
+						<div class="prc_obp_header">
+							<i class="icon-fi-title-s1 sports_icon"></i>
+							<div class="prc_obp_title">Boosted Trebles</div>
+							<div class="pro_date">05/06 15:30</div>
+						</div>
+						<div class="obp_wrp">
+							<div class="obp_i">
+								<div class="obp_t_wrp">
+									<div class="obp_t">
+										<span>Both Teams To Score <span class="bs_hl">Yes</span></span>
+									</div>
+									<div class="obp_c"><div>Argentinos Juniors vs CA Rosario Central</div></div>
+								</div>
+							</div>
+							<div class="obp_i">
+								<div class="obp_t_wrp">
+									<div class="obp_t">
+										<span>Both Teams To Score <span class="bs_hl">Yes</span></span>
+									</div>
+									<div class="obp_c"><div>Club Atletico Banfield vs Gimnasia La Plata</div></div>
+								</div>
+							</div>
+							<div class="obp_i">
+								<div class="obp_t_wrp">
+									<div class="obp_t">
+										<span>Clube Atletico Mineiro Clean Sheet <span class="bs_hl">Clube Atletico Mineiro Yes</span></span>
+									</div>
+									<div class="obp_c"><div>Clube Atletico Mineiro vs Sport Club Internacional</div></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="prcdLts history">
+					<div class="prcdHisT">
+						<div class="prcdHisTtl fl_expired">已過期</div>
+						<div class="prcdHisPrc">- 18</div>
+					</div>
+					<div class="prcdHisDtl">
+						<div class="prcdHisItm">
+							交易编号：100568
+							<i class="icon-fi-copy"></i>
+						</div>
+					</div>
+					<div class="prcdHisInf">
+						<div class="prcdHisInfTm">04/18/2023 18:40:50</div>
+					</div>
+				</div>
+				<div class="prcdLts" style="display: none">
+					<div class="prcdHisT">
+						<div class="prcdHisTtl fl_expired">已完全领取</div>
+						<div class="prcdHisPrc">- 18</div>
+					</div>
+					<div class="prcdHisInfD">04/18/2023</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer_main" id="main_footer"></div>
+		<div id="demoOnly_global_pop_item"></div>
+
+		<script>
+			$(document).ready(function () {
+				//promoFooter();
+				$('#demoOnly_global_pop_item').load('_global_pop_item.html', function () {
+					$('#mybet').load('_popup_mybet_unsettled.html');
+				});
+
+				var sliderWidth = $('.prcdTlAvlb .prcdTlItm.active').width();
+				prcdWrpTab();
+				prcdItmAvlbSlider();
+				prcdItmPndSlider();
+				prcdInfoShowMore();
+				prcdHisShowMore();
+
+				// Check if entering from promo-luckydraw.html #promoHistory
+				if (sessionStorage.getItem('promoRecord') == 'history') {
+					$('.prcdItm').removeClass('active');
+					$('#prcdItmPnd').addClass('active');
+					sessionStorage.removeItem('promoRecord');
+				}
+				showPrcdItem();
+
+				function prcdWrpTab() {
+					$('.prcdItm').click(function () {
+						if (!$(this).hasClass('active')) {
+							$('.prcdItm').removeClass('active');
+							$(this).addClass('active');
+							showPrcdItem();
+							//fix the 8 issue
+							if (localStorage.getItem('webcyberbattle') === 'true') {
+								$('.prcdTlPnd')
+									.find('.prcdSld')
+									.css('left', $('.prcdTlPnd').find('.prcdTlItm.active').offset().left - $('.cb_main').offset().left);
+							} else {
+								$('.prcdTlPnd').find('.prcdSld').css('left', $('.prcdTlPnd').find('.prcdTlItm.active').offset().left);
+							}
+						}
+					});
+				}
+
+				function showPrcdItem() {
+					if ($('.prcdItm.active').attr('id') == 'prcdItmPnd') {
+						$('.prcdPnd').show();
+						$('.prcdAvlb').hide();
+					} else {
+						$('.prcdPnd').hide();
+						$('.prcdAvlb').show();
+					}
+				}
+
+				function prcdItmAvlbSlider() {
+					var slider = $('.prcdTlAvlb .prcdSld');
+					slider.css('width', sliderWidth);
+					localStorage.getItem('webcyberbattle') === 'true' ? slider.css('left', $('.prcdTlAvlb .prcdTlItm.active').offset().left - $('.cb_main').offset().left) : slider.css('left', $('.prcdTlAvlb .prcdTlItm.active').offset().left);
+					showLatestExpiry();
+					$('.prcdTlAvlb .prcdTlItm').click(function () {
+						$('.prcdTlAvlb .prcdTlItm').removeClass('active');
+						$(this).addClass('active');
+						localStorage.getItem('webcyberbattle') === 'true' ? slider.css('left', $('.prcdTlAvlb .prcdTlItm.active').offset().left - $('.cb_main').offset().left) : slider.css('left', $('.prcdTlAvlb .prcdTlItm.active').offset().left);
+						showLatestExpiry();
+					});
+				}
+
+				function showLatestExpiry() {
+					if ($('.prcdTlAvlb .prcdTlItm.active').attr('id') == 'prcdTlExpiry') {
+						$('.prcdLts.expiry').show();
+						$('.prcdLts.latest').hide();
+					} else {
+						$('.prcdLts.expiry').hide();
+						$('.prcdLts.latest').show();
+					}
+				}
+
+				function prcdItmPndSlider() {
+					var slider = $('.prcdTlPnd .prcdSld');
+					slider.css('width', sliderWidth);
+					localStorage.getItem('webcyberbattle') === 'true' ? slider.css('left', $('.prcdTlPnd .prcdTlItm.active').offset().left - $('.cb_main').offset().left) : slider.css('left', $('.prcdTlPnd .prcdTlItm.active').offset().left);
+					showPendingHistory();
+
+					$('.prcdTlPnd .prcdTlItm').click(function () {
+						$('.prcdTlPnd .prcdTlItm').removeClass('active');
+						$(this).addClass('active');
+						localStorage.getItem('webcyberbattle') === 'true' ? slider.css('left', $('.prcdTlPnd .prcdTlItm.active').offset().left - $('.cb_main').offset().left) : slider.css('left', $('.prcdTlPnd .prcdTlItm.active').offset().left);
+						showPendingHistory();
+					});
+				}
+
+				function showPendingHistory() {
+					if ($('.prcdTlPnd .prcdTlItm.active').attr('id') == 'prcdTlHis') {
+						$('.prcdLts.history').show();
+						$('.prcdLts.pending').hide();
+					} else {
+						$('.prcdLts.history').hide();
+						$('.prcdLts.pending').show();
+					}
+				}
+
+				function prcdInfoShowMore() {
+					$('.prcdInfo').click(function () {
+						var el = $(this);
+						var prcdMore = $(el).closest('.prcdLts').find('.prcdMore');
+						if (prcdMore.is(':visible')) {
+							prcdMore.slideUp(200);
+							$(el).find('span').html('更多资讯');
+						} else {
+							prcdMore.slideDown(200);
+							$(el).find('span').html('收起资讯');
+						}
+						$(el).find('i').toggleClass('fl_rotate');
+					});
+				}
+
+				function prcdHisShowMore() {
+					$('.prcdHisInfMr').click(function () {
+						var el = $(this);
+						var prcdInfMore = $(el).closest('.prcdLts').find('.prcdHisIB');
+						if (prcdInfMore.is(':visible')) {
+							prcdInfMore.slideUp(200);
+							$(el).find('span').html('更多资讯');
+						} else {
+							prcdInfMore.slideDown(200);
+							$(el).find('span').html('收起资讯');
+						}
+						$(el).find('i').toggleClass('fl_rotate');
+					});
+				}
+				cyberbattleBackButton();
+
+				$(function () {
+					let resizeTimer;
+					$(window).on('resize', function () {
+						clearTimeout(resizeTimer);
+						resizeTimer = setTimeout(function () {
+							if ($('#prcdItmPnd').hasClass('active')) {
+								sliderWidth = $('.prcdTlPnd .prcdTlItm.active').width();
+							} else {
+								sliderWidth = $('.prcdTlAvlb .prcdTlItm.active').width();
+							}
+							prcdWrpTab();
+							prcdItmAvlbSlider();
+							prcdItmPndSlider();
+							prcdInfoShowMore();
+							prcdHisShowMore();
+						}, 10); // Adjust delay as needed
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

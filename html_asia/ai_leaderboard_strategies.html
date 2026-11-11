@@ -1,0 +1,2260 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Narra - html template</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover,user-scalable=no" />
+		<!--Base Styles-->
+		<link rel="stylesheet" type="text/css" href="../assets/public/layout/css/basestyle.min.css" />
+		<!--<link rel="stylesheet" type="text/css" href="../merchants/merchant1/css/style_asia.css">-->
+		<link rel="stylesheet" type="text/css" href="../assets/public/languages/eng/layout_asia.min.css" id="detect_language" />
+		<link rel="stylesheet" type="text/css" href="#" id="font" />
+
+		<link rel="stylesheet" type="text/css" href="#" id="design_view" />
+		<!-- Public JS -->
+		<script src="../assets/public/lib/jquery.js"></script>
+		<script src="../assets/public/layout/js/scripts_main.js"></script>
+		<script src="../assets/public/layout/js/scripts_asia.js"></script>
+	</head>
+	<body id="root" class="fl">
+		<div class="n_container solid ai_playbook devDontCopy_leaderboard_strategies">
+			<div class="n_header n_header_sports">
+				<div class="n_back">
+					<a class="n_back_link" target="_self"><i class="icon-fi-arrow-left"></i> Back</a>
+				</div>
+				<div class="title">
+					<i class="icon-fi-aiPB"></i>
+					AI Playbook
+				</div>
+				<div class="n_balance bal_promo">
+					(RMB)<br />
+					999,888,777.66
+					<div class="promo_arrow moving_down">
+						<div class="double_angle_down"></div>
+					</div>
+				</div>
+			</div>
+			<div class="lb_menu_cover sticky">
+				<div class="lb_menu_itm active" id="" data-leaderboard-strategies-menu="leaderboard"><i class="icon-fi-leaderboard"></i>Leaderboard</div>
+				<div class="lb_menu_itm" id="" data-leaderboard-strategies-menu="strategies"><i class="icon-fi-strategies"></i>My Strategies</div>
+			</div>
+			<!-- add "ai_amend" class for new ai playbook amendments -->
+			<div class="n_content_wrap_wth_bcktop ai_content ai_amend">
+				<div class="lb_top_rw sticky" style="display: none">
+					<div class="fl_comp fl_comp_popular">
+						<div class="fl_comp_t active" data-leaderboard-strategies-tab="all">
+							<div class="item">All</div>
+						</div>
+						<div class="fl_comp_t" data-leaderboard-strategies-tab="old" data-leaderboard-strategies-menu="leaderboard">
+							<div class="item">Old</div>
+						</div>
+						<div class="fl_comp_t">
+							<div class="item">Conservative</div>
+						</div>
+						<div class="fl_comp_t">
+							<div class="item">Balanced</div>
+						</div>
+						<div class="fl_comp_t">
+							<div class="item">Aggressive</div>
+						</div>
+						<div class="fl_comp_t">
+							<div class="item">Followers</div>
+						</div>
+						<div class="fl_comp_t" data-leaderboard-strategies-tab="noStrategy">
+							<div class="item">No Strategies</div>
+						</div>
+						<div class="fl_comp_t" data-leaderboard-strategies-tab="pageLoading">
+							<div class="item">Page Loading</div>
+						</div>
+						<div class="fl_comp_t" data-leaderboard-strategies-tab="leaderboardTabLoading">
+							<div class="item">Tab Loading</div>
+						</div>
+						<div class="fl_comp_t" data-leaderboard-strategies-tab="active">
+							<div class="item">
+								Active
+								<span>2</span>
+							</div>
+						</div>
+						<div class="fl_comp_t" data-leaderboard-strategies-tab="inactive">
+							<div class="item">
+								Inactive
+								<span>3</span>
+							</div>
+						</div>
+						<div class="fl_comp_t" data-leaderboard-strategies-tab="oldActive" data-leaderboard-strategies-menu="strategies">
+							<div class="item">Old Active</div>
+						</div>
+						<div class="fl_comp_t" data-leaderboard-strategies-tab="oldInactive" data-leaderboard-strategies-menu="strategies">
+							<div class="item">Old Inactive</div>
+						</div>
+						<div class="fl_comp_t" data-leaderboard-strategies-tab="noActiveStrategy">
+							<div class="item">No Active Strategy</div>
+						</div>
+						<div class="fl_comp_t" data-leaderboard-strategies-tab="strategiesTabLoading">
+							<div class="item">Tab Loading</div>
+						</div>
+					</div>
+				</div>
+				<div class="lb_exp" style="display: none"><i class="icon-fi-info"></i>AI Playbook only supports Soccer sport type.</div>
+				<!-- temporarily add "remove_autoBG" next to "strat_card_grp" to remove the automatic background design for 1st to 3rd star cards -->
+				<div class="strat_card_grp remove_autoBG" style="display: none">
+					<div class="bg_mask" style="display: none"></div>
+					<div class="mask_button highlighted aiPB_mask_btn" style="display: none">Got It</div>
+					<div class="strat_no" style="display: none">
+						<i class="icon-fi-aiPB-no"></i>
+						<div class="strat_main">No Active Strategy Yet.</div>
+						<div class="strat_sub">Follow an AI strategy to get started.</div>
+						<div class="ss_tml_btn">Explore Strategies</div>
+					</div>
+					<!-- new l_tab card design -->
+					<!-- add "first" class next to "l_tab" for the top 3 star card design -->
+					<div class="strat_card_wrp l_tab l_card first">
+						<div class="strat_card">
+							<div class="strat_row">
+								<div class="ai_img"><img src="../assets/public/layout/images/ai/chatGPT.svg" /></div>
+								<div class="strat_match_info">
+									<div class="strat_bet_sel">
+										<div class="strat_bet_sel_name">GPT-5.6 Terra Goal Line Edge</div>
+									</div>
+									<div class="strat_bet_dtl">
+										<div class="strat_risk_lvl_wrp">
+											<div class="strat_risk_lvl strat_bal">
+												<div class="strat_risk_dot"></div>
+												<div class="strat_risk_dot"></div>
+												<div class="strat_risk_dot"></div>
+											</div>
+											Balanced
+										</div>
+										<div class="strat_followers">
+											<i class="icon-fi-people"></i>
+											1,500
+										</div>
+									</div>
+								</div>
+								<i class="icon-fi-arrow-right"></i>
+							</div>
+							<div class="strat_bottom">
+								<div class="strat_left">
+									<div class="strat_value win">+25.00%</div>
+									<div class="strat_label">Last 100 Bets</div>
+								</div>
+								<svg class="ai_graph_spark" width="104" height="30" viewBox="0 0 104 30" aria-hidden="true">
+									<defs>
+										<linearGradient id="ai_graph_spark_win_1" gradientUnits="userSpaceOnUse" x1="0" y1="3" x2="0" y2="25.82">
+											<stop class="ai_graph_spark_stop win" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop win" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<linearGradient id="ai_graph_spark_lose_1" gradientUnits="userSpaceOnUse" x1="0" y1="27" x2="0" y2="25.82">
+											<stop class="ai_graph_spark_stop lose" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop lose" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<clipPath id="ai_graph_spark_clip_win_1"><rect x="-3" y="-4" width="110" height="29.82"></rect></clipPath>
+										<clipPath id="ai_graph_spark_clip_lose_1"><rect x="-3" y="25.82" width="110" height="40"></rect></clipPath>
+									</defs>
+									<path class="ai_graph_spark_area" d="M0.00,25.82 L2.08,24.86 L4.16,24.40 L6.24,23.14 L8.32,23.77 L10.40,21.50 L12.48,20.86 L14.56,19.05 L16.64,19.18 L18.72,16.15 L20.80,18.68 L22.88,17.68 L24.96,15.45 L27.04,16.74 L29.12,17.28 L31.20,15.92 L33.28,16.58 L35.36,18.22 L37.44,19.37 L39.52,21.53 L41.60,20.76 L43.68,18.33 L45.76,21.05 L47.84,20.53 L49.92,19.24 L52.00,18.49 L54.08,22.42 L56.16,19.26 L58.24,17.19 L60.32,12.79 L62.40,15.57 L64.48,11.23 L66.56,10.43 L68.64,9.96 L70.72,13.22 L72.80,15.58 L74.88,13.51 L76.96,12.61 L79.04,9.99 L81.12,9.48 L83.20,8.12 L85.28,7.80 L87.36,8.94 L89.44,7.71 L91.52,4.65 L93.60,4.43 L95.68,5.48 L97.76,5.41 L99.84,7.01 L101.92,9.40 L104.00,5.71 L104,25.82 L0,25.82 Z" fill="url(#ai_graph_spark_win_1)" clip-path="url(#ai_graph_spark_clip_win_1)"></path>
+									<path class="ai_graph_spark_area" d="M0.00,25.82 L2.08,24.86 L4.16,24.40 L6.24,23.14 L8.32,23.77 L10.40,21.50 L12.48,20.86 L14.56,19.05 L16.64,19.18 L18.72,16.15 L20.80,18.68 L22.88,17.68 L24.96,15.45 L27.04,16.74 L29.12,17.28 L31.20,15.92 L33.28,16.58 L35.36,18.22 L37.44,19.37 L39.52,21.53 L41.60,20.76 L43.68,18.33 L45.76,21.05 L47.84,20.53 L49.92,19.24 L52.00,18.49 L54.08,22.42 L56.16,19.26 L58.24,17.19 L60.32,12.79 L62.40,15.57 L64.48,11.23 L66.56,10.43 L68.64,9.96 L70.72,13.22 L72.80,15.58 L74.88,13.51 L76.96,12.61 L79.04,9.99 L81.12,9.48 L83.20,8.12 L85.28,7.80 L87.36,8.94 L89.44,7.71 L91.52,4.65 L93.60,4.43 L95.68,5.48 L97.76,5.41 L99.84,7.01 L101.92,9.40 L104.00,5.71 L104,25.82 L0,25.82 Z" fill="url(#ai_graph_spark_lose_1)" clip-path="url(#ai_graph_spark_clip_lose_1)"></path>
+									<line class="ai_graph_spark_base" x1="0" x2="104" y1="25.82" y2="25.82"></line>
+									<path class="ai_graph_spark_line win" pathLength="1" d="M0.00,25.82 L2.08,24.86 L4.16,24.40 L6.24,23.14 L8.32,23.77 L10.40,21.50 L12.48,20.86 L14.56,19.05 L16.64,19.18 L18.72,16.15 L20.80,18.68 L22.88,17.68 L24.96,15.45 L27.04,16.74 L29.12,17.28 L31.20,15.92 L33.28,16.58 L35.36,18.22 L37.44,19.37 L39.52,21.53 L41.60,20.76 L43.68,18.33 L45.76,21.05 L47.84,20.53 L49.92,19.24 L52.00,18.49 L54.08,22.42 L56.16,19.26 L58.24,17.19 L60.32,12.79 L62.40,15.57 L64.48,11.23 L66.56,10.43 L68.64,9.96 L70.72,13.22 L72.80,15.58 L74.88,13.51 L76.96,12.61 L79.04,9.99 L81.12,9.48 L83.20,8.12 L85.28,7.80 L87.36,8.94 L89.44,7.71 L91.52,4.65 L93.60,4.43 L95.68,5.48 L97.76,5.41 L99.84,7.01 L101.92,9.40 L104.00,5.71" clip-path="url(#ai_graph_spark_clip_win_1)"></path>
+									<path class="ai_graph_spark_line lose" pathLength="1" d="M0.00,25.82 L2.08,24.86 L4.16,24.40 L6.24,23.14 L8.32,23.77 L10.40,21.50 L12.48,20.86 L14.56,19.05 L16.64,19.18 L18.72,16.15 L20.80,18.68 L22.88,17.68 L24.96,15.45 L27.04,16.74 L29.12,17.28 L31.20,15.92 L33.28,16.58 L35.36,18.22 L37.44,19.37 L39.52,21.53 L41.60,20.76 L43.68,18.33 L45.76,21.05 L47.84,20.53 L49.92,19.24 L52.00,18.49 L54.08,22.42 L56.16,19.26 L58.24,17.19 L60.32,12.79 L62.40,15.57 L64.48,11.23 L66.56,10.43 L68.64,9.96 L70.72,13.22 L72.80,15.58 L74.88,13.51 L76.96,12.61 L79.04,9.99 L81.12,9.48 L83.20,8.12 L85.28,7.80 L87.36,8.94 L89.44,7.71 L91.52,4.65 L93.60,4.43 L95.68,5.48 L97.76,5.41 L99.84,7.01 L101.92,9.40 L104.00,5.71" clip-path="url(#ai_graph_spark_clip_lose_1)"></path>
+								</svg>
+								<div class="ss_tml_btn done">
+									<i class="icon-fi-ok-circle-bg"></i>
+									Copied
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- add "second" class next to "l_tab" for the top 3 star card design -->
+					<div class="strat_card_wrp l_tab l_card second">
+						<div class="strat_card">
+							<div class="strat_row">
+								<div class="ai_img"><img src="../assets/public/layout/images/ai/claude.svg" /></div>
+								<div class="strat_match_info">
+									<div class="strat_bet_sel">
+										<div class="strat_bet_sel_name">Sonnet 5 Live Momentum</div>
+									</div>
+									<div class="strat_bet_dtl">
+										<div class="strat_risk_lvl_wrp">
+											<div class="strat_risk_lvl strat_agg">
+												<div class="strat_risk_dot"></div>
+												<div class="strat_risk_dot"></div>
+												<div class="strat_risk_dot"></div>
+											</div>
+											Aggressive
+										</div>
+										<div class="strat_followers">
+											<i class="icon-fi-people"></i>
+											800
+										</div>
+									</div>
+								</div>
+								<i class="icon-fi-arrow-right"></i>
+							</div>
+							<div class="strat_bottom">
+								<div class="strat_left">
+									<div class="strat_value lose">-15.75%</div>
+									<div class="strat_label">Last 100 bets</div>
+								</div>
+								<svg class="ai_graph_spark" width="104" height="30" viewBox="0 0 104 30" aria-hidden="true">
+									<defs>
+										<linearGradient id="ai_graph_spark_win_2" gradientUnits="userSpaceOnUse" x1="0" y1="3" x2="0" y2="22.88">
+											<stop class="ai_graph_spark_stop win" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop win" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<linearGradient id="ai_graph_spark_lose_2" gradientUnits="userSpaceOnUse" x1="0" y1="27" x2="0" y2="22.88">
+											<stop class="ai_graph_spark_stop lose" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop lose" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<clipPath id="ai_graph_spark_clip_win_2"><rect x="-3" y="-4" width="110" height="26.88"></rect></clipPath>
+										<clipPath id="ai_graph_spark_clip_lose_2"><rect x="-3" y="22.88" width="110" height="40"></rect></clipPath>
+									</defs>
+									<path class="ai_graph_spark_area" d="M0.00,22.88 L2.08,24.68 L4.16,23.44 L6.24,21.23 L8.32,18.50 L10.40,21.21 L12.48,19.78 L14.56,19.37 L16.64,23.31 L18.72,23.90 L20.80,24.21 L22.88,23.27 L24.96,23.71 L27.04,24.84 L29.12,24.75 L31.20,24.57 L33.28,23.24 L35.36,21.28 L37.44,21.69 L39.52,21.37 L41.60,21.57 L43.68,20.43 L45.76,16.14 L47.84,14.09 L49.92,15.99 L52.00,14.59 L54.08,12.64 L56.16,8.66 L58.24,8.55 L60.32,5.67 L62.40,3.79 L64.48,5.06 L66.56,6.98 L68.64,6.74 L70.72,6.10 L72.80,5.02 L74.88,7.63 L76.96,8.57 L79.04,8.52 L81.12,6.76 L83.20,9.36 L85.28,11.01 L87.36,9.47 L89.44,10.45 L91.52,11.08 L93.60,10.98 L95.68,13.82 L97.76,12.38 L99.84,16.65 L101.92,16.35 L104.00,13.52 L104,22.88 L0,22.88 Z" fill="url(#ai_graph_spark_win_2)" clip-path="url(#ai_graph_spark_clip_win_2)"></path>
+									<path class="ai_graph_spark_area" d="M0.00,22.88 L2.08,24.68 L4.16,23.44 L6.24,21.23 L8.32,18.50 L10.40,21.21 L12.48,19.78 L14.56,19.37 L16.64,23.31 L18.72,23.90 L20.80,24.21 L22.88,23.27 L24.96,23.71 L27.04,24.84 L29.12,24.75 L31.20,24.57 L33.28,23.24 L35.36,21.28 L37.44,21.69 L39.52,21.37 L41.60,21.57 L43.68,20.43 L45.76,16.14 L47.84,14.09 L49.92,15.99 L52.00,14.59 L54.08,12.64 L56.16,8.66 L58.24,8.55 L60.32,5.67 L62.40,3.79 L64.48,5.06 L66.56,6.98 L68.64,6.74 L70.72,6.10 L72.80,5.02 L74.88,7.63 L76.96,8.57 L79.04,8.52 L81.12,6.76 L83.20,9.36 L85.28,11.01 L87.36,9.47 L89.44,10.45 L91.52,11.08 L93.60,10.98 L95.68,13.82 L97.76,12.38 L99.84,16.65 L101.92,16.35 L104.00,13.52 L104,22.88 L0,22.88 Z" fill="url(#ai_graph_spark_lose_2)" clip-path="url(#ai_graph_spark_clip_lose_2)"></path>
+									<line class="ai_graph_spark_base" x1="0" x2="104" y1="22.88" y2="22.88"></line>
+									<path class="ai_graph_spark_line win" pathLength="1" d="M0.00,22.88 L2.08,24.68 L4.16,23.44 L6.24,21.23 L8.32,18.50 L10.40,21.21 L12.48,19.78 L14.56,19.37 L16.64,23.31 L18.72,23.90 L20.80,24.21 L22.88,23.27 L24.96,23.71 L27.04,24.84 L29.12,24.75 L31.20,24.57 L33.28,23.24 L35.36,21.28 L37.44,21.69 L39.52,21.37 L41.60,21.57 L43.68,20.43 L45.76,16.14 L47.84,14.09 L49.92,15.99 L52.00,14.59 L54.08,12.64 L56.16,8.66 L58.24,8.55 L60.32,5.67 L62.40,3.79 L64.48,5.06 L66.56,6.98 L68.64,6.74 L70.72,6.10 L72.80,5.02 L74.88,7.63 L76.96,8.57 L79.04,8.52 L81.12,6.76 L83.20,9.36 L85.28,11.01 L87.36,9.47 L89.44,10.45 L91.52,11.08 L93.60,10.98 L95.68,13.82 L97.76,12.38 L99.84,16.65 L101.92,16.35 L104.00,13.52" clip-path="url(#ai_graph_spark_clip_win_2)"></path>
+									<path class="ai_graph_spark_line lose" pathLength="1" d="M0.00,22.88 L2.08,24.68 L4.16,23.44 L6.24,21.23 L8.32,18.50 L10.40,21.21 L12.48,19.78 L14.56,19.37 L16.64,23.31 L18.72,23.90 L20.80,24.21 L22.88,23.27 L24.96,23.71 L27.04,24.84 L29.12,24.75 L31.20,24.57 L33.28,23.24 L35.36,21.28 L37.44,21.69 L39.52,21.37 L41.60,21.57 L43.68,20.43 L45.76,16.14 L47.84,14.09 L49.92,15.99 L52.00,14.59 L54.08,12.64 L56.16,8.66 L58.24,8.55 L60.32,5.67 L62.40,3.79 L64.48,5.06 L66.56,6.98 L68.64,6.74 L70.72,6.10 L72.80,5.02 L74.88,7.63 L76.96,8.57 L79.04,8.52 L81.12,6.76 L83.20,9.36 L85.28,11.01 L87.36,9.47 L89.44,10.45 L91.52,11.08 L93.60,10.98 L95.68,13.82 L97.76,12.38 L99.84,16.65 L101.92,16.35 L104.00,13.52" clip-path="url(#ai_graph_spark_clip_lose_2)"></path>
+								</svg>
+								<div class="ss_tml_btn add">
+									<div class="fl_tub_add">
+										<i class="icon-fi-remove-mid"></i>
+									</div>
+									Copy
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- add "third" class next to "l_tab" for the top 3 star card design -->
+					<div class="strat_card_wrp l_tab l_card third">
+						<div class="strat_card">
+							<div class="strat_row">
+								<div class="ai_img"><img src="../assets/public/layout/images/ai/gemini.svg" /></div>
+								<div class="strat_match_info">
+									<div class="strat_bet_sel">
+										<div class="strat_bet_sel_name">3.6 Flash Stable Value</div>
+									</div>
+									<div class="strat_bet_dtl">
+										<div class="strat_risk_lvl_wrp">
+											<div class="strat_risk_lvl strat_con">
+												<div class="strat_risk_dot"></div>
+												<div class="strat_risk_dot"></div>
+												<div class="strat_risk_dot"></div>
+											</div>
+											Conservative
+										</div>
+										<div class="strat_followers">
+											<i class="icon-fi-people"></i>
+											600
+										</div>
+									</div>
+								</div>
+								<i class="icon-fi-arrow-right"></i>
+							</div>
+							<div class="strat_bottom">
+								<div class="strat_left">
+									<div class="strat_value win">+8888.50%</div>
+									<div class="strat_label">Last 100 bets</div>
+								</div>
+								<svg class="ai_graph_spark" width="104" height="30" viewBox="0 0 104 30" aria-hidden="true">
+									<defs>
+										<linearGradient id="ai_graph_spark_win_3" gradientUnits="userSpaceOnUse" x1="0" y1="3" x2="0" y2="20.82">
+											<stop class="ai_graph_spark_stop win" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop win" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<linearGradient id="ai_graph_spark_lose_3" gradientUnits="userSpaceOnUse" x1="0" y1="27" x2="0" y2="20.82">
+											<stop class="ai_graph_spark_stop lose" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop lose" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<clipPath id="ai_graph_spark_clip_win_3"><rect x="-3" y="-4" width="110" height="24.82"></rect></clipPath>
+										<clipPath id="ai_graph_spark_clip_lose_3"><rect x="-3" y="20.82" width="110" height="40"></rect></clipPath>
+									</defs>
+									<path class="ai_graph_spark_area" d="M0.00,20.82 L2.08,19.28 L4.16,24.28 L6.24,24.60 L8.32,23.60 L10.40,23.90 L12.48,17.89 L14.56,19.24 L16.64,19.99 L18.72,21.16 L20.80,21.67 L22.88,23.00 L24.96,24.81 L27.04,23.77 L29.12,20.82 L31.20,19.22 L33.28,25.97 L35.36,23.88 L37.44,24.88 L39.52,21.16 L41.60,20.08 L43.68,17.11 L45.76,17.27 L47.84,12.33 L49.92,8.88 L52.00,7.22 L54.08,11.08 L56.16,13.15 L58.24,13.99 L60.32,11.75 L62.40,12.78 L64.48,7.89 L66.56,9.72 L68.64,13.20 L70.72,11.92 L72.80,15.46 L74.88,12.33 L76.96,18.97 L79.04,16.84 L81.12,15.59 L83.20,14.42 L85.28,16.77 L87.36,13.38 L89.44,13.72 L91.52,10.67 L93.60,11.12 L95.68,9.78 L97.76,8.99 L99.84,6.72 L101.92,3.00 L104.00,7.12 L104,20.82 L0,20.82 Z" fill="url(#ai_graph_spark_win_3)" clip-path="url(#ai_graph_spark_clip_win_3)"></path>
+									<path class="ai_graph_spark_area" d="M0.00,20.82 L2.08,19.28 L4.16,24.28 L6.24,24.60 L8.32,23.60 L10.40,23.90 L12.48,17.89 L14.56,19.24 L16.64,19.99 L18.72,21.16 L20.80,21.67 L22.88,23.00 L24.96,24.81 L27.04,23.77 L29.12,20.82 L31.20,19.22 L33.28,25.97 L35.36,23.88 L37.44,24.88 L39.52,21.16 L41.60,20.08 L43.68,17.11 L45.76,17.27 L47.84,12.33 L49.92,8.88 L52.00,7.22 L54.08,11.08 L56.16,13.15 L58.24,13.99 L60.32,11.75 L62.40,12.78 L64.48,7.89 L66.56,9.72 L68.64,13.20 L70.72,11.92 L72.80,15.46 L74.88,12.33 L76.96,18.97 L79.04,16.84 L81.12,15.59 L83.20,14.42 L85.28,16.77 L87.36,13.38 L89.44,13.72 L91.52,10.67 L93.60,11.12 L95.68,9.78 L97.76,8.99 L99.84,6.72 L101.92,3.00 L104.00,7.12 L104,20.82 L0,20.82 Z" fill="url(#ai_graph_spark_lose_3)" clip-path="url(#ai_graph_spark_clip_lose_3)"></path>
+									<line class="ai_graph_spark_base" x1="0" x2="104" y1="20.82" y2="20.82"></line>
+									<path class="ai_graph_spark_line win" pathLength="1" d="M0.00,20.82 L2.08,19.28 L4.16,24.28 L6.24,24.60 L8.32,23.60 L10.40,23.90 L12.48,17.89 L14.56,19.24 L16.64,19.99 L18.72,21.16 L20.80,21.67 L22.88,23.00 L24.96,24.81 L27.04,23.77 L29.12,20.82 L31.20,19.22 L33.28,25.97 L35.36,23.88 L37.44,24.88 L39.52,21.16 L41.60,20.08 L43.68,17.11 L45.76,17.27 L47.84,12.33 L49.92,8.88 L52.00,7.22 L54.08,11.08 L56.16,13.15 L58.24,13.99 L60.32,11.75 L62.40,12.78 L64.48,7.89 L66.56,9.72 L68.64,13.20 L70.72,11.92 L72.80,15.46 L74.88,12.33 L76.96,18.97 L79.04,16.84 L81.12,15.59 L83.20,14.42 L85.28,16.77 L87.36,13.38 L89.44,13.72 L91.52,10.67 L93.60,11.12 L95.68,9.78 L97.76,8.99 L99.84,6.72 L101.92,3.00 L104.00,7.12" clip-path="url(#ai_graph_spark_clip_win_3)"></path>
+									<path class="ai_graph_spark_line lose" pathLength="1" d="M0.00,20.82 L2.08,19.28 L4.16,24.28 L6.24,24.60 L8.32,23.60 L10.40,23.90 L12.48,17.89 L14.56,19.24 L16.64,19.99 L18.72,21.16 L20.80,21.67 L22.88,23.00 L24.96,24.81 L27.04,23.77 L29.12,20.82 L31.20,19.22 L33.28,25.97 L35.36,23.88 L37.44,24.88 L39.52,21.16 L41.60,20.08 L43.68,17.11 L45.76,17.27 L47.84,12.33 L49.92,8.88 L52.00,7.22 L54.08,11.08 L56.16,13.15 L58.24,13.99 L60.32,11.75 L62.40,12.78 L64.48,7.89 L66.56,9.72 L68.64,13.20 L70.72,11.92 L72.80,15.46 L74.88,12.33 L76.96,18.97 L79.04,16.84 L81.12,15.59 L83.20,14.42 L85.28,16.77 L87.36,13.38 L89.44,13.72 L91.52,10.67 L93.60,11.12 L95.68,9.78 L97.76,8.99 L99.84,6.72 L101.92,3.00 L104.00,7.12" clip-path="url(#ai_graph_spark_clip_lose_3)"></path>
+								</svg>
+								<div class="ss_tml_btn">
+									<i class="icon-fi-ai-refresh"></i>
+									Copy
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="strat_card_wrp l_tab l_card">
+						<div class="strat_card">
+							<div class="strat_row">
+								<div class="ai_img"><img src="../assets/public/layout/images/ai/kimi.svg" /></div>
+								<div class="strat_match_info">
+									<div class="strat_bet_sel">
+										<div class="strat_bet_sel_name">K3 Goalscorer Momentum</div>
+										<div class="new_tag">New</div>
+									</div>
+									<div class="strat_bet_dtl">
+										<div class="strat_risk_lvl_wrp">
+											<div class="strat_risk_lvl strat_con">
+												<div class="strat_risk_dot"></div>
+												<div class="strat_risk_dot"></div>
+												<div class="strat_risk_dot"></div>
+											</div>
+											Conservative
+										</div>
+										<div class="strat_followers">
+											<i class="icon-fi-people"></i>
+											200
+										</div>
+									</div>
+								</div>
+								<i class="icon-fi-arrow-right"></i>
+							</div>
+							<div class="strat_bottom">
+								<div class="strat_left">
+									<div class="strat_value lose">-20.00%</div>
+									<div class="strat_label">Last 100 bets</div>
+								</div>
+								<svg class="ai_graph_spark" width="104" height="30" viewBox="0 0 104 30" aria-hidden="true">
+									<defs>
+										<linearGradient id="ai_graph_spark_win_4" gradientUnits="userSpaceOnUse" x1="0" y1="3" x2="0" y2="7.57">
+											<stop class="ai_graph_spark_stop win" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop win" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<linearGradient id="ai_graph_spark_lose_4" gradientUnits="userSpaceOnUse" x1="0" y1="27" x2="0" y2="7.57">
+											<stop class="ai_graph_spark_stop lose" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop lose" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<clipPath id="ai_graph_spark_clip_win_4"><rect x="-3" y="-4" width="110" height="11.57"></rect></clipPath>
+										<clipPath id="ai_graph_spark_clip_lose_4"><rect x="-3" y="7.57" width="110" height="40"></rect></clipPath>
+									</defs>
+									<path class="ai_graph_spark_area" d="M0.00,7.57 L2.08,10.01 L4.16,12.35 L6.24,15.60 L8.32,11.05 L10.40,13.33 L12.48,9.04 L14.56,12.38 L16.64,12.78 L18.72,14.85 L20.80,17.41 L22.88,17.09 L24.96,15.87 L27.04,11.93 L29.12,14.97 L31.20,12.59 L33.28,17.02 L35.36,12.80 L37.44,14.33 L39.52,18.47 L41.60,16.95 L43.68,21.57 L45.76,19.70 L47.84,16.16 L49.92,17.16 L52.00,15.33 L54.08,16.78 L56.16,19.24 L58.24,26.43 L60.32,25.20 L62.40,19.47 L64.48,21.14 L66.56,21.30 L68.64,18.34 L70.72,20.54 L72.80,20.30 L74.88,25.16 L76.96,19.23 L79.04,10.91 L81.12,5.13 L83.20,3.00 L85.28,8.34 L87.36,11.70 L89.44,10.58 L91.52,10.13 L93.60,10.04 L95.68,10.11 L97.76,13.83 L99.84,9.48 L101.92,5.00 L104.00,8.17 L104,7.57 L0,7.57 Z" fill="url(#ai_graph_spark_win_4)" clip-path="url(#ai_graph_spark_clip_win_4)"></path>
+									<path class="ai_graph_spark_area" d="M0.00,7.57 L2.08,10.01 L4.16,12.35 L6.24,15.60 L8.32,11.05 L10.40,13.33 L12.48,9.04 L14.56,12.38 L16.64,12.78 L18.72,14.85 L20.80,17.41 L22.88,17.09 L24.96,15.87 L27.04,11.93 L29.12,14.97 L31.20,12.59 L33.28,17.02 L35.36,12.80 L37.44,14.33 L39.52,18.47 L41.60,16.95 L43.68,21.57 L45.76,19.70 L47.84,16.16 L49.92,17.16 L52.00,15.33 L54.08,16.78 L56.16,19.24 L58.24,26.43 L60.32,25.20 L62.40,19.47 L64.48,21.14 L66.56,21.30 L68.64,18.34 L70.72,20.54 L72.80,20.30 L74.88,25.16 L76.96,19.23 L79.04,10.91 L81.12,5.13 L83.20,3.00 L85.28,8.34 L87.36,11.70 L89.44,10.58 L91.52,10.13 L93.60,10.04 L95.68,10.11 L97.76,13.83 L99.84,9.48 L101.92,5.00 L104.00,8.17 L104,7.57 L0,7.57 Z" fill="url(#ai_graph_spark_lose_4)" clip-path="url(#ai_graph_spark_clip_lose_4)"></path>
+									<line class="ai_graph_spark_base" x1="0" x2="104" y1="7.57" y2="7.57"></line>
+									<path class="ai_graph_spark_line win" pathLength="1" d="M0.00,7.57 L2.08,10.01 L4.16,12.35 L6.24,15.60 L8.32,11.05 L10.40,13.33 L12.48,9.04 L14.56,12.38 L16.64,12.78 L18.72,14.85 L20.80,17.41 L22.88,17.09 L24.96,15.87 L27.04,11.93 L29.12,14.97 L31.20,12.59 L33.28,17.02 L35.36,12.80 L37.44,14.33 L39.52,18.47 L41.60,16.95 L43.68,21.57 L45.76,19.70 L47.84,16.16 L49.92,17.16 L52.00,15.33 L54.08,16.78 L56.16,19.24 L58.24,26.43 L60.32,25.20 L62.40,19.47 L64.48,21.14 L66.56,21.30 L68.64,18.34 L70.72,20.54 L72.80,20.30 L74.88,25.16 L76.96,19.23 L79.04,10.91 L81.12,5.13 L83.20,3.00 L85.28,8.34 L87.36,11.70 L89.44,10.58 L91.52,10.13 L93.60,10.04 L95.68,10.11 L97.76,13.83 L99.84,9.48 L101.92,5.00 L104.00,8.17" clip-path="url(#ai_graph_spark_clip_win_4)"></path>
+									<path class="ai_graph_spark_line lose" pathLength="1" d="M0.00,7.57 L2.08,10.01 L4.16,12.35 L6.24,15.60 L8.32,11.05 L10.40,13.33 L12.48,9.04 L14.56,12.38 L16.64,12.78 L18.72,14.85 L20.80,17.41 L22.88,17.09 L24.96,15.87 L27.04,11.93 L29.12,14.97 L31.20,12.59 L33.28,17.02 L35.36,12.80 L37.44,14.33 L39.52,18.47 L41.60,16.95 L43.68,21.57 L45.76,19.70 L47.84,16.16 L49.92,17.16 L52.00,15.33 L54.08,16.78 L56.16,19.24 L58.24,26.43 L60.32,25.20 L62.40,19.47 L64.48,21.14 L66.56,21.30 L68.64,18.34 L70.72,20.54 L72.80,20.30 L74.88,25.16 L76.96,19.23 L79.04,10.91 L81.12,5.13 L83.20,3.00 L85.28,8.34 L87.36,11.70 L89.44,10.58 L91.52,10.13 L93.60,10.04 L95.68,10.11 L97.76,13.83 L99.84,9.48 L101.92,5.00 L104.00,8.17" clip-path="url(#ai_graph_spark_clip_lose_4)"></path>
+								</svg>
+								<div class="ss_tml_btn">
+									<i class="icon-fi-resume"></i>
+									Resume
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="strat_card_wrp l_tab l_card">
+						<div class="strat_card">
+							<div class="strat_row">
+								<div class="ai_img"><img src="../assets/public/layout/images/ai/kimi.svg" /></div>
+								<div class="strat_match_info">
+									<div class="strat_bet_sel">
+										<div class="strat_bet_sel_name">K3 Goalscorer Momentum</div>
+									</div>
+									<div class="strat_bet_dtl">
+										<div class="strat_risk_lvl_wrp">
+											<div class="strat_risk_lvl strat_con">
+												<div class="strat_risk_dot"></div>
+												<div class="strat_risk_dot"></div>
+												<div class="strat_risk_dot"></div>
+											</div>
+											Conservative
+										</div>
+										<div class="strat_followers">
+											<i class="icon-fi-people"></i>
+											200
+										</div>
+									</div>
+								</div>
+								<i class="icon-fi-arrow-right"></i>
+							</div>
+							<div class="strat_bottom">
+								<div class="strat_left">
+									<div class="strat_value lose">-20.00%</div>
+									<div class="strat_label">Last 100 bets</div>
+								</div>
+								<svg class="ai_graph_spark" width="104" height="30" viewBox="0 0 104 30" aria-hidden="true">
+									<defs>
+										<linearGradient id="ai_graph_spark_win_5" gradientUnits="userSpaceOnUse" x1="0" y1="3" x2="0" y2="7.86">
+											<stop class="ai_graph_spark_stop win" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop win" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<linearGradient id="ai_graph_spark_lose_5" gradientUnits="userSpaceOnUse" x1="0" y1="27" x2="0" y2="7.86">
+											<stop class="ai_graph_spark_stop lose" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop lose" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<clipPath id="ai_graph_spark_clip_win_5"><rect x="-3" y="-4" width="110" height="11.86"></rect></clipPath>
+										<clipPath id="ai_graph_spark_clip_lose_5"><rect x="-3" y="7.86" width="110" height="40"></rect></clipPath>
+									</defs>
+									<path class="ai_graph_spark_area" d="M0.00,7.86 L2.08,6.06 L4.16,7.72 L6.24,6.91 L8.32,6.42 L10.40,4.97 L12.48,5.28 L14.56,10.43 L16.64,13.54 L18.72,15.95 L20.80,18.50 L22.88,21.30 L24.96,21.77 L27.04,23.54 L29.12,23.65 L31.20,20.64 L33.28,18.42 L35.36,15.99 L37.44,10.48 L39.52,11.10 L41.60,8.77 L43.68,11.78 L45.76,9.53 L47.84,12.46 L49.92,14.91 L52.00,14.11 L54.08,14.91 L56.16,10.27 L58.24,10.22 L60.32,11.54 L62.40,10.81 L64.48,13.33 L66.56,12.80 L68.64,14.44 L70.72,16.32 L72.80,14.08 L74.88,11.55 L76.96,12.09 L79.04,18.31 L81.12,22.62 L83.20,23.64 L85.28,20.90 L87.36,22.99 L89.44,21.27 L91.52,24.78 L93.60,25.62 L95.68,20.47 L97.76,17.80 L99.84,13.35 L101.92,14.11 L104.00,10.43 L104,7.86 L0,7.86 Z" fill="url(#ai_graph_spark_win_5)" clip-path="url(#ai_graph_spark_clip_win_5)"></path>
+									<path class="ai_graph_spark_area" d="M0.00,7.86 L2.08,6.06 L4.16,7.72 L6.24,6.91 L8.32,6.42 L10.40,4.97 L12.48,5.28 L14.56,10.43 L16.64,13.54 L18.72,15.95 L20.80,18.50 L22.88,21.30 L24.96,21.77 L27.04,23.54 L29.12,23.65 L31.20,20.64 L33.28,18.42 L35.36,15.99 L37.44,10.48 L39.52,11.10 L41.60,8.77 L43.68,11.78 L45.76,9.53 L47.84,12.46 L49.92,14.91 L52.00,14.11 L54.08,14.91 L56.16,10.27 L58.24,10.22 L60.32,11.54 L62.40,10.81 L64.48,13.33 L66.56,12.80 L68.64,14.44 L70.72,16.32 L72.80,14.08 L74.88,11.55 L76.96,12.09 L79.04,18.31 L81.12,22.62 L83.20,23.64 L85.28,20.90 L87.36,22.99 L89.44,21.27 L91.52,24.78 L93.60,25.62 L95.68,20.47 L97.76,17.80 L99.84,13.35 L101.92,14.11 L104.00,10.43 L104,7.86 L0,7.86 Z" fill="url(#ai_graph_spark_lose_5)" clip-path="url(#ai_graph_spark_clip_lose_5)"></path>
+									<line class="ai_graph_spark_base" x1="0" x2="104" y1="7.86" y2="7.86"></line>
+									<path class="ai_graph_spark_line win" pathLength="1" d="M0.00,7.86 L2.08,6.06 L4.16,7.72 L6.24,6.91 L8.32,6.42 L10.40,4.97 L12.48,5.28 L14.56,10.43 L16.64,13.54 L18.72,15.95 L20.80,18.50 L22.88,21.30 L24.96,21.77 L27.04,23.54 L29.12,23.65 L31.20,20.64 L33.28,18.42 L35.36,15.99 L37.44,10.48 L39.52,11.10 L41.60,8.77 L43.68,11.78 L45.76,9.53 L47.84,12.46 L49.92,14.91 L52.00,14.11 L54.08,14.91 L56.16,10.27 L58.24,10.22 L60.32,11.54 L62.40,10.81 L64.48,13.33 L66.56,12.80 L68.64,14.44 L70.72,16.32 L72.80,14.08 L74.88,11.55 L76.96,12.09 L79.04,18.31 L81.12,22.62 L83.20,23.64 L85.28,20.90 L87.36,22.99 L89.44,21.27 L91.52,24.78 L93.60,25.62 L95.68,20.47 L97.76,17.80 L99.84,13.35 L101.92,14.11 L104.00,10.43" clip-path="url(#ai_graph_spark_clip_win_5)"></path>
+									<path class="ai_graph_spark_line lose" pathLength="1" d="M0.00,7.86 L2.08,6.06 L4.16,7.72 L6.24,6.91 L8.32,6.42 L10.40,4.97 L12.48,5.28 L14.56,10.43 L16.64,13.54 L18.72,15.95 L20.80,18.50 L22.88,21.30 L24.96,21.77 L27.04,23.54 L29.12,23.65 L31.20,20.64 L33.28,18.42 L35.36,15.99 L37.44,10.48 L39.52,11.10 L41.60,8.77 L43.68,11.78 L45.76,9.53 L47.84,12.46 L49.92,14.91 L52.00,14.11 L54.08,14.91 L56.16,10.27 L58.24,10.22 L60.32,11.54 L62.40,10.81 L64.48,13.33 L66.56,12.80 L68.64,14.44 L70.72,16.32 L72.80,14.08 L74.88,11.55 L76.96,12.09 L79.04,18.31 L81.12,22.62 L83.20,23.64 L85.28,20.90 L87.36,22.99 L89.44,21.27 L91.52,24.78 L93.60,25.62 L95.68,20.47 L97.76,17.80 L99.84,13.35 L101.92,14.11 L104.00,10.43" clip-path="url(#ai_graph_spark_clip_lose_5)"></path>
+								</svg>
+								<div class="ss_tml_btn">
+									<i class="icon-fi-resume"></i>
+									Resume
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="strat_card_wrp l_tab l_card">
+						<div class="strat_card">
+							<div class="strat_row">
+								<div class="ai_img"><img src="../assets/public/layout/images/ai/kimi.svg" /></div>
+								<div class="strat_match_info">
+									<div class="strat_bet_sel">
+										<div class="strat_bet_sel_name">K3 Goalscorer Momentum</div>
+									</div>
+									<div class="strat_bet_dtl">
+										<div class="strat_risk_lvl_wrp">
+											<div class="strat_risk_lvl strat_con">
+												<div class="strat_risk_dot"></div>
+												<div class="strat_risk_dot"></div>
+												<div class="strat_risk_dot"></div>
+											</div>
+											Conservative
+										</div>
+										<div class="strat_followers">
+											<i class="icon-fi-people"></i>
+											200
+										</div>
+									</div>
+								</div>
+								<i class="icon-fi-arrow-right"></i>
+							</div>
+							<div class="strat_bottom">
+								<div class="strat_left">
+									<div class="strat_value lose">-20.00%</div>
+									<div class="strat_label">Last 100 bets</div>
+								</div>
+								<svg class="ai_graph_spark" width="104" height="30" viewBox="0 0 104 30" aria-hidden="true">
+									<defs>
+										<linearGradient id="ai_graph_spark_win_6" gradientUnits="userSpaceOnUse" x1="0" y1="3" x2="0" y2="10.16">
+											<stop class="ai_graph_spark_stop win" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop win" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<linearGradient id="ai_graph_spark_lose_6" gradientUnits="userSpaceOnUse" x1="0" y1="27" x2="0" y2="10.16">
+											<stop class="ai_graph_spark_stop lose" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop lose" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<clipPath id="ai_graph_spark_clip_win_6"><rect x="-3" y="-4" width="110" height="14.16"></rect></clipPath>
+										<clipPath id="ai_graph_spark_clip_lose_6"><rect x="-3" y="10.16" width="110" height="40"></rect></clipPath>
+									</defs>
+									<path class="ai_graph_spark_area" d="M0.00,10.16 L2.08,7.83 L4.16,6.99 L6.24,4.44 L8.32,4.17 L10.40,8.24 L12.48,11.12 L14.56,9.52 L16.64,8.13 L18.72,11.06 L20.80,10.70 L22.88,12.89 L24.96,11.98 L27.04,12.43 L29.12,10.83 L31.20,12.61 L33.28,14.96 L35.36,17.11 L37.44,16.21 L39.52,18.55 L41.60,20.05 L43.68,17.04 L45.76,18.96 L47.84,21.40 L49.92,18.35 L52.00,20.92 L54.08,22.88 L56.16,23.36 L58.24,24.68 L60.32,26.24 L62.40,26.35 L64.48,26.01 L66.56,24.28 L68.64,21.62 L70.72,25.16 L72.80,23.20 L74.88,21.34 L76.96,22.38 L79.04,20.28 L81.12,19.78 L83.20,17.92 L85.28,17.25 L87.36,15.72 L89.44,16.50 L91.52,15.84 L93.60,16.85 L95.68,13.89 L97.76,13.34 L99.84,12.98 L101.92,14.82 L104.00,11.47 L104,10.16 L0,10.16 Z" fill="url(#ai_graph_spark_win_6)" clip-path="url(#ai_graph_spark_clip_win_6)"></path>
+									<path class="ai_graph_spark_area" d="M0.00,10.16 L2.08,7.83 L4.16,6.99 L6.24,4.44 L8.32,4.17 L10.40,8.24 L12.48,11.12 L14.56,9.52 L16.64,8.13 L18.72,11.06 L20.80,10.70 L22.88,12.89 L24.96,11.98 L27.04,12.43 L29.12,10.83 L31.20,12.61 L33.28,14.96 L35.36,17.11 L37.44,16.21 L39.52,18.55 L41.60,20.05 L43.68,17.04 L45.76,18.96 L47.84,21.40 L49.92,18.35 L52.00,20.92 L54.08,22.88 L56.16,23.36 L58.24,24.68 L60.32,26.24 L62.40,26.35 L64.48,26.01 L66.56,24.28 L68.64,21.62 L70.72,25.16 L72.80,23.20 L74.88,21.34 L76.96,22.38 L79.04,20.28 L81.12,19.78 L83.20,17.92 L85.28,17.25 L87.36,15.72 L89.44,16.50 L91.52,15.84 L93.60,16.85 L95.68,13.89 L97.76,13.34 L99.84,12.98 L101.92,14.82 L104.00,11.47 L104,10.16 L0,10.16 Z" fill="url(#ai_graph_spark_lose_6)" clip-path="url(#ai_graph_spark_clip_lose_6)"></path>
+									<line class="ai_graph_spark_base" x1="0" x2="104" y1="10.16" y2="10.16"></line>
+									<path class="ai_graph_spark_line win" pathLength="1" d="M0.00,10.16 L2.08,7.83 L4.16,6.99 L6.24,4.44 L8.32,4.17 L10.40,8.24 L12.48,11.12 L14.56,9.52 L16.64,8.13 L18.72,11.06 L20.80,10.70 L22.88,12.89 L24.96,11.98 L27.04,12.43 L29.12,10.83 L31.20,12.61 L33.28,14.96 L35.36,17.11 L37.44,16.21 L39.52,18.55 L41.60,20.05 L43.68,17.04 L45.76,18.96 L47.84,21.40 L49.92,18.35 L52.00,20.92 L54.08,22.88 L56.16,23.36 L58.24,24.68 L60.32,26.24 L62.40,26.35 L64.48,26.01 L66.56,24.28 L68.64,21.62 L70.72,25.16 L72.80,23.20 L74.88,21.34 L76.96,22.38 L79.04,20.28 L81.12,19.78 L83.20,17.92 L85.28,17.25 L87.36,15.72 L89.44,16.50 L91.52,15.84 L93.60,16.85 L95.68,13.89 L97.76,13.34 L99.84,12.98 L101.92,14.82 L104.00,11.47" clip-path="url(#ai_graph_spark_clip_win_6)"></path>
+									<path class="ai_graph_spark_line lose" pathLength="1" d="M0.00,10.16 L2.08,7.83 L4.16,6.99 L6.24,4.44 L8.32,4.17 L10.40,8.24 L12.48,11.12 L14.56,9.52 L16.64,8.13 L18.72,11.06 L20.80,10.70 L22.88,12.89 L24.96,11.98 L27.04,12.43 L29.12,10.83 L31.20,12.61 L33.28,14.96 L35.36,17.11 L37.44,16.21 L39.52,18.55 L41.60,20.05 L43.68,17.04 L45.76,18.96 L47.84,21.40 L49.92,18.35 L52.00,20.92 L54.08,22.88 L56.16,23.36 L58.24,24.68 L60.32,26.24 L62.40,26.35 L64.48,26.01 L66.56,24.28 L68.64,21.62 L70.72,25.16 L72.80,23.20 L74.88,21.34 L76.96,22.38 L79.04,20.28 L81.12,19.78 L83.20,17.92 L85.28,17.25 L87.36,15.72 L89.44,16.50 L91.52,15.84 L93.60,16.85 L95.68,13.89 L97.76,13.34 L99.84,12.98 L101.92,14.82 L104.00,11.47" clip-path="url(#ai_graph_spark_clip_lose_6)"></path>
+								</svg>
+								<div class="ss_tml_btn disabled">
+									<div class="loading_lantency"></div>
+									Resume
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="strat_card_wrp l_tab l_card">
+						<div class="strat_card">
+							<div class="strat_row">
+								<div class="ai_img"><img src="../assets/public/layout/images/ai/perplexity.svg" /></div>
+								<div class="strat_match_info">
+									<div class="strat_bet_sel">
+										<div class="strat_bet_sel_name">Perplexity EUROL Moneyline</div>
+									</div>
+									<div class="strat_bet_dtl">
+										<div class="strat_risk_lvl_wrp">
+											<div class="strat_risk_lvl strat_bal">
+												<div class="strat_risk_dot"></div>
+												<div class="strat_risk_dot"></div>
+												<div class="strat_risk_dot"></div>
+											</div>
+											Balanced
+										</div>
+										<div class="strat_followers">
+											<i class="icon-fi-people"></i>
+											340
+										</div>
+									</div>
+								</div>
+								<i class="icon-fi-arrow-right"></i>
+							</div>
+							<div class="strat_bottom">
+								<div class="strat_left">
+									<div class="strat_value win">+18.25%</div>
+									<div class="strat_label">Last 100 bets &middot; every 5th bet plotted</div>
+								</div>
+								<svg class="ai_graph_spark" width="104" height="30" viewBox="0 0 104 30" aria-hidden="true">
+									<defs>
+										<linearGradient id="ai_graph_spark_win_7" gradientUnits="userSpaceOnUse" x1="0" y1="3" x2="0" y2="24.81">
+											<stop class="ai_graph_spark_stop win" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop win" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<linearGradient id="ai_graph_spark_lose_7" gradientUnits="userSpaceOnUse" x1="0" y1="27" x2="0" y2="24.81">
+											<stop class="ai_graph_spark_stop lose" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop lose" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<clipPath id="ai_graph_spark_clip_win_7"><rect x="-3" y="-4" width="110" height="28.81"></rect></clipPath>
+										<clipPath id="ai_graph_spark_clip_lose_7"><rect x="-3" y="24.81" width="110" height="40"></rect></clipPath>
+									</defs>
+									<path class="ai_graph_spark_area" d="M0.00,24.81 L2.08,25.30 L4.16,23.37 L6.24,23.72 L8.32,25.99 L10.40,25.24 L12.48,20.62 L14.56,19.03 L16.64,20.20 L18.72,21.59 L20.80,18.16 L22.88,18.17 L24.96,21.20 L27.04,19.88 L29.12,17.55 L31.20,14.01 L33.28,14.89 L35.36,16.73 L37.44,17.60 L39.52,16.97 L41.60,19.87 L43.68,20.79 L45.76,16.82 L47.84,19.63 L49.92,23.89 L52.00,22.45 L54.08,20.15 L56.16,21.47 L58.24,18.83 L60.32,19.84 L62.40,19.60 L64.48,19.71 L66.56,17.10 L68.64,18.61 L70.72,15.80 L72.80,16.08 L74.88,13.05 L76.96,15.12 L79.04,15.19 L81.12,14.76 L83.20,14.14 L85.28,12.83 L87.36,12.55 L89.44,15.10 L91.52,13.15 L93.60,12.49 L95.68,8.72 L97.76,8.81 L99.84,3.39 L101.92,3.00 L104.00,3.95 L104,24.81 L0,24.81 Z" fill="url(#ai_graph_spark_win_7)" clip-path="url(#ai_graph_spark_clip_win_7)"></path>
+									<path class="ai_graph_spark_area" d="M0.00,24.81 L2.08,25.30 L4.16,23.37 L6.24,23.72 L8.32,25.99 L10.40,25.24 L12.48,20.62 L14.56,19.03 L16.64,20.20 L18.72,21.59 L20.80,18.16 L22.88,18.17 L24.96,21.20 L27.04,19.88 L29.12,17.55 L31.20,14.01 L33.28,14.89 L35.36,16.73 L37.44,17.60 L39.52,16.97 L41.60,19.87 L43.68,20.79 L45.76,16.82 L47.84,19.63 L49.92,23.89 L52.00,22.45 L54.08,20.15 L56.16,21.47 L58.24,18.83 L60.32,19.84 L62.40,19.60 L64.48,19.71 L66.56,17.10 L68.64,18.61 L70.72,15.80 L72.80,16.08 L74.88,13.05 L76.96,15.12 L79.04,15.19 L81.12,14.76 L83.20,14.14 L85.28,12.83 L87.36,12.55 L89.44,15.10 L91.52,13.15 L93.60,12.49 L95.68,8.72 L97.76,8.81 L99.84,3.39 L101.92,3.00 L104.00,3.95 L104,24.81 L0,24.81 Z" fill="url(#ai_graph_spark_lose_7)" clip-path="url(#ai_graph_spark_clip_lose_7)"></path>
+									<line class="ai_graph_spark_base" x1="0" x2="104" y1="24.81" y2="24.81"></line>
+									<path class="ai_graph_spark_line win" pathLength="1" d="M0.00,24.81 L2.08,25.30 L4.16,23.37 L6.24,23.72 L8.32,25.99 L10.40,25.24 L12.48,20.62 L14.56,19.03 L16.64,20.20 L18.72,21.59 L20.80,18.16 L22.88,18.17 L24.96,21.20 L27.04,19.88 L29.12,17.55 L31.20,14.01 L33.28,14.89 L35.36,16.73 L37.44,17.60 L39.52,16.97 L41.60,19.87 L43.68,20.79 L45.76,16.82 L47.84,19.63 L49.92,23.89 L52.00,22.45 L54.08,20.15 L56.16,21.47 L58.24,18.83 L60.32,19.84 L62.40,19.60 L64.48,19.71 L66.56,17.10 L68.64,18.61 L70.72,15.80 L72.80,16.08 L74.88,13.05 L76.96,15.12 L79.04,15.19 L81.12,14.76 L83.20,14.14 L85.28,12.83 L87.36,12.55 L89.44,15.10 L91.52,13.15 L93.60,12.49 L95.68,8.72 L97.76,8.81 L99.84,3.39 L101.92,3.00 L104.00,3.95" clip-path="url(#ai_graph_spark_clip_win_7)"></path>
+									<path class="ai_graph_spark_line lose" pathLength="1" d="M0.00,24.81 L2.08,25.30 L4.16,23.37 L6.24,23.72 L8.32,25.99 L10.40,25.24 L12.48,20.62 L14.56,19.03 L16.64,20.20 L18.72,21.59 L20.80,18.16 L22.88,18.17 L24.96,21.20 L27.04,19.88 L29.12,17.55 L31.20,14.01 L33.28,14.89 L35.36,16.73 L37.44,17.60 L39.52,16.97 L41.60,19.87 L43.68,20.79 L45.76,16.82 L47.84,19.63 L49.92,23.89 L52.00,22.45 L54.08,20.15 L56.16,21.47 L58.24,18.83 L60.32,19.84 L62.40,19.60 L64.48,19.71 L66.56,17.10 L68.64,18.61 L70.72,15.80 L72.80,16.08 L74.88,13.05 L76.96,15.12 L79.04,15.19 L81.12,14.76 L83.20,14.14 L85.28,12.83 L87.36,12.55 L89.44,15.10 L91.52,13.15 L93.60,12.49 L95.68,8.72 L97.76,8.81 L99.84,3.39 L101.92,3.00 L104.00,3.95" clip-path="url(#ai_graph_spark_clip_lose_7)"></path>
+								</svg>
+								<div class="ss_tml_btn disabled">
+									<i class="icon-fi-resume"></i>
+									Resume
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="strat_card_wrp l_tab l_card">
+						<div class="strat_card">
+							<div class="strat_row">
+								<div class="ai_img"><img src="../assets/public/layout/images/ai/deepseek.svg" /></div>
+								<div class="strat_match_info">
+									<div class="strat_bet_sel">
+										<div class="strat_bet_sel_name">DeepSeek Half-Time Results of the Bundesliga Football League</div>
+									</div>
+									<div class="strat_bet_dtl">
+										<div class="strat_risk_lvl_wrp">
+											<div class="strat_risk_lvl strat_agg">
+												<div class="strat_risk_dot"></div>
+												<div class="strat_risk_dot"></div>
+												<div class="strat_risk_dot"></div>
+											</div>
+											Aggressive
+										</div>
+										<div class="strat_followers">
+											<i class="icon-fi-people"></i>
+											120
+										</div>
+									</div>
+								</div>
+								<i class="icon-fi-arrow-right"></i>
+							</div>
+							<div class="strat_bottom">
+								<div class="strat_left">
+									<div class="strat_value lose">-8.40%</div>
+									<div class="strat_label">Last 20 bets &middot; every 5th bet plotted</div>
+								</div>
+								<svg class="ai_graph_spark" width="104" height="30" viewBox="0 0 104 30" aria-hidden="true">
+									<defs>
+										<linearGradient id="ai_graph_spark_win_8" gradientUnits="userSpaceOnUse" x1="0" y1="3" x2="0" y2="17.94">
+											<stop class="ai_graph_spark_stop win" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop win" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<linearGradient id="ai_graph_spark_lose_8" gradientUnits="userSpaceOnUse" x1="0" y1="27" x2="0" y2="17.94">
+											<stop class="ai_graph_spark_stop lose" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop lose" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<clipPath id="ai_graph_spark_clip_win_8"><rect x="-3" y="-4" width="110" height="21.94"></rect></clipPath>
+										<clipPath id="ai_graph_spark_clip_lose_8"><rect x="-3" y="17.94" width="110" height="40"></rect></clipPath>
+									</defs>
+									<path class="ai_graph_spark_area" d="M0.00,17.94 L2.08,16.79 L4.16,22.97 L6.24,21.74 L8.32,24.49 L10.40,18.74 L12.48,19.49 L14.56,18.20 L16.64,17.92 L18.72,14.74 L20.80,13.63 L22.88,21.02 L24.96,20.16 L27.04,17.37 L29.12,19.42 L31.20,21.05 L33.28,17.76 L35.36,13.63 L37.44,11.84 L39.52,12.28 L41.60,13.28 L43.68,14.31 L45.76,16.62 L47.84,18.88 L49.92,22.90 L52.00,19.14 L54.08,21.80 L56.16,22.91 L58.24,17.30 L60.32,22.56 L62.40,27.00 L64.48,26.81 L66.56,21.66 L68.64,20.48 L70.72,17.77 L72.80,19.62 L74.88,16.02 L76.96,15.01 L79.04,7.80 L81.12,8.05 L83.20,6.88 L85.28,4.98 L87.36,9.23 L89.44,9.08 L91.52,11.64 L93.60,13.99 L95.68,19.09 L97.76,19.18 L99.84,16.76 L101.92,25.25 L104.00,18.99 L104,17.94 L0,17.94 Z" fill="url(#ai_graph_spark_win_8)" clip-path="url(#ai_graph_spark_clip_win_8)"></path>
+									<path class="ai_graph_spark_area" d="M0.00,17.94 L2.08,16.79 L4.16,22.97 L6.24,21.74 L8.32,24.49 L10.40,18.74 L12.48,19.49 L14.56,18.20 L16.64,17.92 L18.72,14.74 L20.80,13.63 L22.88,21.02 L24.96,20.16 L27.04,17.37 L29.12,19.42 L31.20,21.05 L33.28,17.76 L35.36,13.63 L37.44,11.84 L39.52,12.28 L41.60,13.28 L43.68,14.31 L45.76,16.62 L47.84,18.88 L49.92,22.90 L52.00,19.14 L54.08,21.80 L56.16,22.91 L58.24,17.30 L60.32,22.56 L62.40,27.00 L64.48,26.81 L66.56,21.66 L68.64,20.48 L70.72,17.77 L72.80,19.62 L74.88,16.02 L76.96,15.01 L79.04,7.80 L81.12,8.05 L83.20,6.88 L85.28,4.98 L87.36,9.23 L89.44,9.08 L91.52,11.64 L93.60,13.99 L95.68,19.09 L97.76,19.18 L99.84,16.76 L101.92,25.25 L104.00,18.99 L104,17.94 L0,17.94 Z" fill="url(#ai_graph_spark_lose_8)" clip-path="url(#ai_graph_spark_clip_lose_8)"></path>
+									<line class="ai_graph_spark_base" x1="0" x2="104" y1="17.94" y2="17.94"></line>
+									<path class="ai_graph_spark_line win" pathLength="1" d="M0.00,17.94 L2.08,16.79 L4.16,22.97 L6.24,21.74 L8.32,24.49 L10.40,18.74 L12.48,19.49 L14.56,18.20 L16.64,17.92 L18.72,14.74 L20.80,13.63 L22.88,21.02 L24.96,20.16 L27.04,17.37 L29.12,19.42 L31.20,21.05 L33.28,17.76 L35.36,13.63 L37.44,11.84 L39.52,12.28 L41.60,13.28 L43.68,14.31 L45.76,16.62 L47.84,18.88 L49.92,22.90 L52.00,19.14 L54.08,21.80 L56.16,22.91 L58.24,17.30 L60.32,22.56 L62.40,27.00 L64.48,26.81 L66.56,21.66 L68.64,20.48 L70.72,17.77 L72.80,19.62 L74.88,16.02 L76.96,15.01 L79.04,7.80 L81.12,8.05 L83.20,6.88 L85.28,4.98 L87.36,9.23 L89.44,9.08 L91.52,11.64 L93.60,13.99 L95.68,19.09 L97.76,19.18 L99.84,16.76 L101.92,25.25 L104.00,18.99" clip-path="url(#ai_graph_spark_clip_win_8)"></path>
+									<path class="ai_graph_spark_line lose" pathLength="1" d="M0.00,17.94 L2.08,16.79 L4.16,22.97 L6.24,21.74 L8.32,24.49 L10.40,18.74 L12.48,19.49 L14.56,18.20 L16.64,17.92 L18.72,14.74 L20.80,13.63 L22.88,21.02 L24.96,20.16 L27.04,17.37 L29.12,19.42 L31.20,21.05 L33.28,17.76 L35.36,13.63 L37.44,11.84 L39.52,12.28 L41.60,13.28 L43.68,14.31 L45.76,16.62 L47.84,18.88 L49.92,22.90 L52.00,19.14 L54.08,21.80 L56.16,22.91 L58.24,17.30 L60.32,22.56 L62.40,27.00 L64.48,26.81 L66.56,21.66 L68.64,20.48 L70.72,17.77 L72.80,19.62 L74.88,16.02 L76.96,15.01 L79.04,7.80 L81.12,8.05 L83.20,6.88 L85.28,4.98 L87.36,9.23 L89.44,9.08 L91.52,11.64 L93.60,13.99 L95.68,19.09 L97.76,19.18 L99.84,16.76 L101.92,25.25 L104.00,18.99" clip-path="url(#ai_graph_spark_clip_lose_8)"></path>
+								</svg>
+								<div class="ss_tml_btn">
+									<i class="icon-fi-topup"></i>
+									Top Up
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="strat_card_wrp l_tab l_card">
+						<div class="strat_card">
+							<div class="strat_row">
+								<div class="ai_img"><img src="../assets/public/layout/images/ai/grok.svg" /></div>
+								<div class="strat_match_info">
+									<div class="strat_bet_sel">
+										<div class="strat_bet_sel_name">Grok 4 Serie A Card Count</div>
+									</div>
+									<div class="strat_bet_dtl">
+										<div class="strat_risk_lvl_wrp">
+											<div class="strat_risk_lvl strat_bal">
+												<div class="strat_risk_dot"></div>
+												<div class="strat_risk_dot"></div>
+												<div class="strat_risk_dot"></div>
+											</div>
+											Balanced
+										</div>
+										<div class="strat_followers">
+											<i class="icon-fi-people"></i>
+											100
+										</div>
+									</div>
+								</div>
+								<i class="icon-fi-arrow-right"></i>
+							</div>
+							<div class="strat_bottom">
+								<div class="strat_left">
+									<div class="strat_value win">+25.00%</div>
+									<div class="strat_label">Last 100 bets</div>
+								</div>
+								<svg class="ai_graph_spark" width="104" height="30" viewBox="0 0 104 30" aria-hidden="true">
+									<defs>
+										<linearGradient id="ai_graph_spark_win_9" gradientUnits="userSpaceOnUse" x1="0" y1="3" x2="0" y2="26.68">
+											<stop class="ai_graph_spark_stop win" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop win" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<linearGradient id="ai_graph_spark_lose_9" gradientUnits="userSpaceOnUse" x1="0" y1="27.68" x2="0" y2="26.68">
+											<stop class="ai_graph_spark_stop lose" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop lose" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<clipPath id="ai_graph_spark_clip_win_9"><rect x="-3" y="-4" width="110" height="30.68"></rect></clipPath>
+										<clipPath id="ai_graph_spark_clip_lose_9"><rect x="-3" y="26.68" width="110" height="40"></rect></clipPath>
+									</defs>
+									<path class="ai_graph_spark_area" d="M0.00,26.68 L2.08,24.46 L4.16,22.47 L6.24,25.34 L8.32,24.50 L10.40,26.54 L12.48,25.08 L14.56,25.16 L16.64,22.94 L18.72,24.51 L20.80,26.73 L22.88,23.69 L24.96,22.24 L27.04,19.42 L29.12,15.65 L31.20,16.87 L33.28,13.57 L35.36,10.85 L37.44,6.99 L39.52,4.43 L41.60,6.21 L43.68,6.31 L45.76,7.37 L47.84,8.70 L49.92,8.40 L52.00,7.58 L54.08,5.21 L56.16,6.82 L58.24,5.35 L60.32,7.75 L62.40,10.25 L64.48,11.00 L66.56,8.20 L68.64,7.22 L70.72,4.70 L72.80,3.51 L74.88,6.39 L76.96,6.84 L79.04,5.67 L81.12,6.38 L83.20,7.66 L85.28,6.60 L87.36,5.77 L89.44,7.42 L91.52,8.25 L93.60,8.22 L95.68,11.43 L97.76,12.57 L99.84,12.31 L101.92,14.96 L104.00,16.48 L104,26.68 L0,26.68 Z" fill="url(#ai_graph_spark_win_9)" clip-path="url(#ai_graph_spark_clip_win_9)"></path>
+									<path class="ai_graph_spark_area" d="M0.00,26.68 L2.08,24.46 L4.16,22.47 L6.24,25.34 L8.32,24.50 L10.40,26.54 L12.48,25.08 L14.56,25.16 L16.64,22.94 L18.72,24.51 L20.80,26.73 L22.88,23.69 L24.96,22.24 L27.04,19.42 L29.12,15.65 L31.20,16.87 L33.28,13.57 L35.36,10.85 L37.44,6.99 L39.52,4.43 L41.60,6.21 L43.68,6.31 L45.76,7.37 L47.84,8.70 L49.92,8.40 L52.00,7.58 L54.08,5.21 L56.16,6.82 L58.24,5.35 L60.32,7.75 L62.40,10.25 L64.48,11.00 L66.56,8.20 L68.64,7.22 L70.72,4.70 L72.80,3.51 L74.88,6.39 L76.96,6.84 L79.04,5.67 L81.12,6.38 L83.20,7.66 L85.28,6.60 L87.36,5.77 L89.44,7.42 L91.52,8.25 L93.60,8.22 L95.68,11.43 L97.76,12.57 L99.84,12.31 L101.92,14.96 L104.00,16.48 L104,26.68 L0,26.68 Z" fill="url(#ai_graph_spark_lose_9)" clip-path="url(#ai_graph_spark_clip_lose_9)"></path>
+									<line class="ai_graph_spark_base" x1="0" x2="104" y1="26.68" y2="26.68"></line>
+									<path class="ai_graph_spark_line win" pathLength="1" d="M0.00,26.68 L2.08,24.46 L4.16,22.47 L6.24,25.34 L8.32,24.50 L10.40,26.54 L12.48,25.08 L14.56,25.16 L16.64,22.94 L18.72,24.51 L20.80,26.73 L22.88,23.69 L24.96,22.24 L27.04,19.42 L29.12,15.65 L31.20,16.87 L33.28,13.57 L35.36,10.85 L37.44,6.99 L39.52,4.43 L41.60,6.21 L43.68,6.31 L45.76,7.37 L47.84,8.70 L49.92,8.40 L52.00,7.58 L54.08,5.21 L56.16,6.82 L58.24,5.35 L60.32,7.75 L62.40,10.25 L64.48,11.00 L66.56,8.20 L68.64,7.22 L70.72,4.70 L72.80,3.51 L74.88,6.39 L76.96,6.84 L79.04,5.67 L81.12,6.38 L83.20,7.66 L85.28,6.60 L87.36,5.77 L89.44,7.42 L91.52,8.25 L93.60,8.22 L95.68,11.43 L97.76,12.57 L99.84,12.31 L101.92,14.96 L104.00,16.48" clip-path="url(#ai_graph_spark_clip_win_9)"></path>
+									<path class="ai_graph_spark_line lose" pathLength="1" d="M0.00,26.68 L2.08,24.46 L4.16,22.47 L6.24,25.34 L8.32,24.50 L10.40,26.54 L12.48,25.08 L14.56,25.16 L16.64,22.94 L18.72,24.51 L20.80,26.73 L22.88,23.69 L24.96,22.24 L27.04,19.42 L29.12,15.65 L31.20,16.87 L33.28,13.57 L35.36,10.85 L37.44,6.99 L39.52,4.43 L41.60,6.21 L43.68,6.31 L45.76,7.37 L47.84,8.70 L49.92,8.40 L52.00,7.58 L54.08,5.21 L56.16,6.82 L58.24,5.35 L60.32,7.75 L62.40,10.25 L64.48,11.00 L66.56,8.20 L68.64,7.22 L70.72,4.70 L72.80,3.51 L74.88,6.39 L76.96,6.84 L79.04,5.67 L81.12,6.38 L83.20,7.66 L85.28,6.60 L87.36,5.77 L89.44,7.42 L91.52,8.25 L93.60,8.22 L95.68,11.43 L97.76,12.57 L99.84,12.31 L101.92,14.96 L104.00,16.48" clip-path="url(#ai_graph_spark_clip_lose_9)"></path>
+								</svg>
+								<div class="ss_tml_btn disabled">
+									<i class="icon-fi-topup"></i>
+									Top Up
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- old l_tab card design: remove soon -->
+					<!-- add "first" class next to "l_tab" for the top 3 star card design -->
+					<div class="strat_card_wrp l_tab first">
+						<div class="strat_card">
+							<div class="strat_hdr">
+								<div class="strat_num">#<span>1</span></div>
+								<div class="strat_name strat_bal">Balanced</div>
+								<div class="strat_followers">
+									<i class="icon-fi-people"></i>
+									<span>1,500</span>Followers
+								</div>
+								<i class="icon-fi-arrow-right"></i>
+							</div>
+							<div class="strat_row">
+								<div class="ai_img"><img src="../assets/public/layout/images/ai/chatGPT.svg" /></div>
+								<div class="strat_match_info">
+									<div class="strat_bet_sel">GPT-5.6 Terra Goal Line Edge</div>
+									<div class="strat_bet_dtl">Over/Under total match goals </div>
+								</div>
+								<div class="ss_tml_btn done">
+									<i class="icon-fi-ok-circle-bg"></i>
+									Copied
+								</div>
+							</div>
+							<div class="strat_bottom">
+								<div class="strat_left">
+									<div class="strat_label">Last 100 bets</div>
+									<div class="strat_value win">+25.00%</div>
+								</div>
+								<svg class="ai_graph_spark" width="104" height="30" viewBox="0 0 104 30" aria-hidden="true">
+									<defs>
+										<linearGradient id="ai_graph_spark_win_10" gradientUnits="userSpaceOnUse" x1="0" y1="3" x2="0" y2="21.72">
+											<stop class="ai_graph_spark_stop win" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop win" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<linearGradient id="ai_graph_spark_lose_10" gradientUnits="userSpaceOnUse" x1="0" y1="27" x2="0" y2="21.72">
+											<stop class="ai_graph_spark_stop lose" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop lose" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<clipPath id="ai_graph_spark_clip_win_10"><rect x="-3" y="-4" width="110" height="25.72"></rect></clipPath>
+										<clipPath id="ai_graph_spark_clip_lose_10"><rect x="-3" y="21.72" width="110" height="40"></rect></clipPath>
+									</defs>
+									<path class="ai_graph_spark_area" d="M0.00,21.72 L2.08,20.69 L4.16,23.59 L6.24,22.96 L8.32,23.77 L10.40,22.10 L12.48,22.55 L14.56,16.08 L16.64,14.19 L18.72,15.87 L20.80,10.67 L22.88,7.85 L24.96,5.85 L27.04,5.42 L29.12,3.50 L31.20,3.00 L33.28,5.80 L35.36,9.12 L37.44,10.26 L39.52,9.71 L41.60,10.00 L43.68,7.89 L45.76,7.49 L47.84,6.57 L49.92,6.38 L52.00,12.15 L54.08,6.81 L56.16,8.68 L58.24,14.04 L60.32,11.14 L62.40,17.73 L64.48,18.62 L66.56,19.97 L68.64,21.35 L70.72,23.78 L72.80,26.17 L74.88,22.47 L76.96,19.87 L79.04,15.03 L81.12,16.47 L83.20,19.91 L85.28,17.23 L87.36,13.86 L89.44,6.66 L91.52,10.48 L93.60,10.02 L95.68,8.29 L97.76,10.35 L99.84,7.89 L101.92,7.57 L104.00,9.68 L104,21.72 L0,21.72 Z" fill="url(#ai_graph_spark_win_10)" clip-path="url(#ai_graph_spark_clip_win_10)"></path>
+									<path class="ai_graph_spark_area" d="M0.00,21.72 L2.08,20.69 L4.16,23.59 L6.24,22.96 L8.32,23.77 L10.40,22.10 L12.48,22.55 L14.56,16.08 L16.64,14.19 L18.72,15.87 L20.80,10.67 L22.88,7.85 L24.96,5.85 L27.04,5.42 L29.12,3.50 L31.20,3.00 L33.28,5.80 L35.36,9.12 L37.44,10.26 L39.52,9.71 L41.60,10.00 L43.68,7.89 L45.76,7.49 L47.84,6.57 L49.92,6.38 L52.00,12.15 L54.08,6.81 L56.16,8.68 L58.24,14.04 L60.32,11.14 L62.40,17.73 L64.48,18.62 L66.56,19.97 L68.64,21.35 L70.72,23.78 L72.80,26.17 L74.88,22.47 L76.96,19.87 L79.04,15.03 L81.12,16.47 L83.20,19.91 L85.28,17.23 L87.36,13.86 L89.44,6.66 L91.52,10.48 L93.60,10.02 L95.68,8.29 L97.76,10.35 L99.84,7.89 L101.92,7.57 L104.00,9.68 L104,21.72 L0,21.72 Z" fill="url(#ai_graph_spark_lose_10)" clip-path="url(#ai_graph_spark_clip_lose_10)"></path>
+									<line class="ai_graph_spark_base" x1="0" x2="104" y1="21.72" y2="21.72"></line>
+									<path class="ai_graph_spark_line win" pathLength="1" d="M0.00,21.72 L2.08,20.69 L4.16,23.59 L6.24,22.96 L8.32,23.77 L10.40,22.10 L12.48,22.55 L14.56,16.08 L16.64,14.19 L18.72,15.87 L20.80,10.67 L22.88,7.85 L24.96,5.85 L27.04,5.42 L29.12,3.50 L31.20,3.00 L33.28,5.80 L35.36,9.12 L37.44,10.26 L39.52,9.71 L41.60,10.00 L43.68,7.89 L45.76,7.49 L47.84,6.57 L49.92,6.38 L52.00,12.15 L54.08,6.81 L56.16,8.68 L58.24,14.04 L60.32,11.14 L62.40,17.73 L64.48,18.62 L66.56,19.97 L68.64,21.35 L70.72,23.78 L72.80,26.17 L74.88,22.47 L76.96,19.87 L79.04,15.03 L81.12,16.47 L83.20,19.91 L85.28,17.23 L87.36,13.86 L89.44,6.66 L91.52,10.48 L93.60,10.02 L95.68,8.29 L97.76,10.35 L99.84,7.89 L101.92,7.57 L104.00,9.68" clip-path="url(#ai_graph_spark_clip_win_10)"></path>
+									<path class="ai_graph_spark_line lose" pathLength="1" d="M0.00,21.72 L2.08,20.69 L4.16,23.59 L6.24,22.96 L8.32,23.77 L10.40,22.10 L12.48,22.55 L14.56,16.08 L16.64,14.19 L18.72,15.87 L20.80,10.67 L22.88,7.85 L24.96,5.85 L27.04,5.42 L29.12,3.50 L31.20,3.00 L33.28,5.80 L35.36,9.12 L37.44,10.26 L39.52,9.71 L41.60,10.00 L43.68,7.89 L45.76,7.49 L47.84,6.57 L49.92,6.38 L52.00,12.15 L54.08,6.81 L56.16,8.68 L58.24,14.04 L60.32,11.14 L62.40,17.73 L64.48,18.62 L66.56,19.97 L68.64,21.35 L70.72,23.78 L72.80,26.17 L74.88,22.47 L76.96,19.87 L79.04,15.03 L81.12,16.47 L83.20,19.91 L85.28,17.23 L87.36,13.86 L89.44,6.66 L91.52,10.48 L93.60,10.02 L95.68,8.29 L97.76,10.35 L99.84,7.89 L101.92,7.57 L104.00,9.68" clip-path="url(#ai_graph_spark_clip_lose_10)"></path>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<!-- add "second" class next to "l_tab" for the top 3 star card design -->
+					<div class="strat_card_wrp l_tab second">
+						<div class="strat_card">
+							<div class="ai_tutor highlighted aiPB_tut_step2" style="display: none">
+								<div class="dot_box highlighted ai_tutor_desc">
+									<ol start="2">
+										<li>Ready to start? Browse AI strategies in leaderboard. Tap Copy or right arrow icon to see more details.</li>
+									</ol>
+								</div>
+								<svg class="rec_arrow ai_tutor_arrow" xmlns="http://www.w3.org/2000/svg" width="55" height="50" viewBox="0 0 38.12 50">
+									<path d="M4.35355 46.4339C4.15829 46.6292 3.84171 46.6292 3.64645 46.4339L0.464466 43.252C0.269203 43.0567 0.269203 42.7401 0.464466 42.5449C0.659729 42.3496 0.976311 42.3496 1.17157 42.5449L4 45.3733L6.82843 42.5449C7.02369 42.3496 7.34027 42.3496 7.53553 42.5449C7.7308 42.7401 7.7308 43.0567 7.53553 43.252L4.35355 46.4339ZM48.4115 2.07251C41.0848 0.75534 30.1008 1.3784 20.9657 7.49584C11.8618 13.5924 4.5 25.2099 4.5 46.0804H3.5C3.5 24.9509 10.9715 12.9851 20.4093 6.66495C29.8158 0.365723 41.0819 -0.261215 48.5885 1.08828L48.4115 2.07251Z" />
+								</svg>
+							</div>
+							<div class="strat_hdr">
+								<div class="strat_num">#<span>2</span></div>
+								<div class="strat_name strat_agg">Aggressive</div>
+								<div class="strat_followers">
+									<i class="icon-fi-people"></i>
+									<span>800</span>位关注者
+								</div>
+								<i class="icon-fi-arrow-right"></i>
+							</div>
+							<div class="strat_row">
+								<div class="ai_img"><img src="../assets/public/layout/images/ai/claude.svg" /></div>
+								<div class="strat_match_info">
+									<div class="strat_bet_sel">Sonnet 5 Live Momentum</div>
+									<div class="strat_bet_dtl">Live goals and handicaps based on momentum</div>
+								</div>
+								<div class="ss_tml_btn">
+									<div class="fl_tub_add">
+										<i class="icon-fi-remove-mid"></i>
+									</div>
+									Copy
+								</div>
+							</div>
+							<div class="strat_bottom">
+								<div class="strat_left">
+									<div class="strat_label">Last 100 bets</div>
+									<div class="strat_value lose">-15.75%</div>
+								</div>
+								<svg class="ai_graph_spark" width="104" height="30" viewBox="0 0 104 30" aria-hidden="true">
+									<defs>
+										<linearGradient id="ai_graph_spark_win_11" gradientUnits="userSpaceOnUse" x1="0" y1="3" x2="0" y2="16.04">
+											<stop class="ai_graph_spark_stop win" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop win" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<linearGradient id="ai_graph_spark_lose_11" gradientUnits="userSpaceOnUse" x1="0" y1="27" x2="0" y2="16.04">
+											<stop class="ai_graph_spark_stop lose" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop lose" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<clipPath id="ai_graph_spark_clip_win_11"><rect x="-3" y="-4" width="110" height="20.04"></rect></clipPath>
+										<clipPath id="ai_graph_spark_clip_lose_11"><rect x="-3" y="16.04" width="110" height="40"></rect></clipPath>
+									</defs>
+									<path class="ai_graph_spark_area" d="M0.00,16.04 L2.08,17.33 L4.16,20.41 L6.24,21.89 L8.32,19.16 L10.40,17.54 L12.48,20.48 L14.56,20.47 L16.64,21.61 L18.72,18.78 L20.80,17.21 L22.88,17.56 L24.96,23.78 L27.04,25.17 L29.12,23.39 L31.20,22.62 L33.28,20.49 L35.36,17.44 L37.44,15.67 L39.52,18.96 L41.60,17.68 L43.68,16.51 L45.76,16.52 L47.84,15.69 L49.92,12.30 L52.00,9.16 L54.08,9.62 L56.16,10.02 L58.24,6.04 L60.32,10.85 L62.40,10.01 L64.48,9.74 L66.56,10.95 L68.64,6.06 L70.72,3.00 L72.80,8.07 L74.88,11.73 L76.96,14.82 L79.04,20.20 L81.12,20.80 L83.20,21.34 L85.28,19.08 L87.36,13.79 L89.44,11.92 L91.52,9.48 L93.60,10.91 L95.68,8.94 L97.76,9.39 L99.84,12.51 L101.92,14.98 L104.00,16.97 L104,16.04 L0,16.04 Z" fill="url(#ai_graph_spark_win_11)" clip-path="url(#ai_graph_spark_clip_win_11)"></path>
+									<path class="ai_graph_spark_area" d="M0.00,16.04 L2.08,17.33 L4.16,20.41 L6.24,21.89 L8.32,19.16 L10.40,17.54 L12.48,20.48 L14.56,20.47 L16.64,21.61 L18.72,18.78 L20.80,17.21 L22.88,17.56 L24.96,23.78 L27.04,25.17 L29.12,23.39 L31.20,22.62 L33.28,20.49 L35.36,17.44 L37.44,15.67 L39.52,18.96 L41.60,17.68 L43.68,16.51 L45.76,16.52 L47.84,15.69 L49.92,12.30 L52.00,9.16 L54.08,9.62 L56.16,10.02 L58.24,6.04 L60.32,10.85 L62.40,10.01 L64.48,9.74 L66.56,10.95 L68.64,6.06 L70.72,3.00 L72.80,8.07 L74.88,11.73 L76.96,14.82 L79.04,20.20 L81.12,20.80 L83.20,21.34 L85.28,19.08 L87.36,13.79 L89.44,11.92 L91.52,9.48 L93.60,10.91 L95.68,8.94 L97.76,9.39 L99.84,12.51 L101.92,14.98 L104.00,16.97 L104,16.04 L0,16.04 Z" fill="url(#ai_graph_spark_lose_11)" clip-path="url(#ai_graph_spark_clip_lose_11)"></path>
+									<line class="ai_graph_spark_base" x1="0" x2="104" y1="16.04" y2="16.04"></line>
+									<path class="ai_graph_spark_line win" pathLength="1" d="M0.00,16.04 L2.08,17.33 L4.16,20.41 L6.24,21.89 L8.32,19.16 L10.40,17.54 L12.48,20.48 L14.56,20.47 L16.64,21.61 L18.72,18.78 L20.80,17.21 L22.88,17.56 L24.96,23.78 L27.04,25.17 L29.12,23.39 L31.20,22.62 L33.28,20.49 L35.36,17.44 L37.44,15.67 L39.52,18.96 L41.60,17.68 L43.68,16.51 L45.76,16.52 L47.84,15.69 L49.92,12.30 L52.00,9.16 L54.08,9.62 L56.16,10.02 L58.24,6.04 L60.32,10.85 L62.40,10.01 L64.48,9.74 L66.56,10.95 L68.64,6.06 L70.72,3.00 L72.80,8.07 L74.88,11.73 L76.96,14.82 L79.04,20.20 L81.12,20.80 L83.20,21.34 L85.28,19.08 L87.36,13.79 L89.44,11.92 L91.52,9.48 L93.60,10.91 L95.68,8.94 L97.76,9.39 L99.84,12.51 L101.92,14.98 L104.00,16.97" clip-path="url(#ai_graph_spark_clip_win_11)"></path>
+									<path class="ai_graph_spark_line lose" pathLength="1" d="M0.00,16.04 L2.08,17.33 L4.16,20.41 L6.24,21.89 L8.32,19.16 L10.40,17.54 L12.48,20.48 L14.56,20.47 L16.64,21.61 L18.72,18.78 L20.80,17.21 L22.88,17.56 L24.96,23.78 L27.04,25.17 L29.12,23.39 L31.20,22.62 L33.28,20.49 L35.36,17.44 L37.44,15.67 L39.52,18.96 L41.60,17.68 L43.68,16.51 L45.76,16.52 L47.84,15.69 L49.92,12.30 L52.00,9.16 L54.08,9.62 L56.16,10.02 L58.24,6.04 L60.32,10.85 L62.40,10.01 L64.48,9.74 L66.56,10.95 L68.64,6.06 L70.72,3.00 L72.80,8.07 L74.88,11.73 L76.96,14.82 L79.04,20.20 L81.12,20.80 L83.20,21.34 L85.28,19.08 L87.36,13.79 L89.44,11.92 L91.52,9.48 L93.60,10.91 L95.68,8.94 L97.76,9.39 L99.84,12.51 L101.92,14.98 L104.00,16.97" clip-path="url(#ai_graph_spark_clip_lose_11)"></path>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<!-- add "third" class next to "l_tab" for the top 3 star card design -->
+					<div class="strat_card_wrp l_tab third">
+						<div class="strat_card">
+							<div class="strat_hdr">
+								<div class="strat_num">#<span>3</span></div>
+								<div class="strat_name strat_con">Conservative</div>
+								<div class="strat_followers">
+									<i class="icon-fi-people"></i>
+									ผู้ติดตาม<span>600</span>คน
+								</div>
+								<i class="icon-fi-arrow-right"></i>
+							</div>
+							<div class="strat_row">
+								<div class="ai_img"><img src="../assets/public/layout/images/ai/gemini.svg" /></div>
+								<div class="strat_match_info">
+									<div class="strat_bet_sel">3.6 Flash Stable Value</div>
+									<div class="strat_bet_dtl">Lower-risk goals and handicaps</div>
+								</div>
+								<div class="ss_tml_btn" data-ai-copy-again="true">
+									<i class="icon-fi-ai-refresh"></i>
+									Copy
+								</div>
+							</div>
+							<div class="strat_bottom">
+								<div class="strat_left">
+									<div class="strat_label">Last 100 bets</div>
+									<div class="strat_value win">+8888.50%</div>
+								</div>
+								<svg class="ai_graph_spark" width="104" height="30" viewBox="0 0 104 30" aria-hidden="true">
+									<defs>
+										<linearGradient id="ai_graph_spark_win_12" gradientUnits="userSpaceOnUse" x1="0" y1="3" x2="0" y2="24.81">
+											<stop class="ai_graph_spark_stop win" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop win" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<linearGradient id="ai_graph_spark_lose_12" gradientUnits="userSpaceOnUse" x1="0" y1="27" x2="0" y2="24.81">
+											<stop class="ai_graph_spark_stop lose" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop lose" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<clipPath id="ai_graph_spark_clip_win_12"><rect x="-3" y="-4" width="110" height="28.81"></rect></clipPath>
+										<clipPath id="ai_graph_spark_clip_lose_12"><rect x="-3" y="24.81" width="110" height="40"></rect></clipPath>
+									</defs>
+									<path class="ai_graph_spark_area" d="M0.00,24.81 L2.08,24.78 L4.16,24.27 L6.24,25.37 L8.32,26.28 L10.40,27.00 L12.48,22.45 L14.56,20.70 L16.64,17.58 L18.72,11.94 L20.80,12.86 L22.88,9.73 L24.96,9.80 L27.04,7.58 L29.12,10.49 L31.20,5.28 L33.28,3.00 L35.36,6.88 L37.44,7.63 L39.52,3.94 L41.60,5.96 L43.68,6.12 L45.76,8.55 L47.84,8.08 L49.92,10.00 L52.00,8.31 L54.08,6.96 L56.16,8.54 L58.24,8.02 L60.32,9.63 L62.40,4.31 L64.48,5.84 L66.56,9.79 L68.64,13.27 L70.72,13.27 L72.80,14.48 L74.88,11.32 L76.96,8.42 L79.04,10.73 L81.12,14.40 L83.20,16.14 L85.28,18.93 L87.36,18.42 L89.44,21.22 L91.52,19.43 L93.60,19.32 L95.68,21.82 L97.76,19.28 L99.84,19.69 L101.92,16.08 L104.00,12.16 L104,24.81 L0,24.81 Z" fill="url(#ai_graph_spark_win_12)" clip-path="url(#ai_graph_spark_clip_win_12)"></path>
+									<path class="ai_graph_spark_area" d="M0.00,24.81 L2.08,24.78 L4.16,24.27 L6.24,25.37 L8.32,26.28 L10.40,27.00 L12.48,22.45 L14.56,20.70 L16.64,17.58 L18.72,11.94 L20.80,12.86 L22.88,9.73 L24.96,9.80 L27.04,7.58 L29.12,10.49 L31.20,5.28 L33.28,3.00 L35.36,6.88 L37.44,7.63 L39.52,3.94 L41.60,5.96 L43.68,6.12 L45.76,8.55 L47.84,8.08 L49.92,10.00 L52.00,8.31 L54.08,6.96 L56.16,8.54 L58.24,8.02 L60.32,9.63 L62.40,4.31 L64.48,5.84 L66.56,9.79 L68.64,13.27 L70.72,13.27 L72.80,14.48 L74.88,11.32 L76.96,8.42 L79.04,10.73 L81.12,14.40 L83.20,16.14 L85.28,18.93 L87.36,18.42 L89.44,21.22 L91.52,19.43 L93.60,19.32 L95.68,21.82 L97.76,19.28 L99.84,19.69 L101.92,16.08 L104.00,12.16 L104,24.81 L0,24.81 Z" fill="url(#ai_graph_spark_lose_12)" clip-path="url(#ai_graph_spark_clip_lose_12)"></path>
+									<line class="ai_graph_spark_base" x1="0" x2="104" y1="24.81" y2="24.81"></line>
+									<path class="ai_graph_spark_line win" pathLength="1" d="M0.00,24.81 L2.08,24.78 L4.16,24.27 L6.24,25.37 L8.32,26.28 L10.40,27.00 L12.48,22.45 L14.56,20.70 L16.64,17.58 L18.72,11.94 L20.80,12.86 L22.88,9.73 L24.96,9.80 L27.04,7.58 L29.12,10.49 L31.20,5.28 L33.28,3.00 L35.36,6.88 L37.44,7.63 L39.52,3.94 L41.60,5.96 L43.68,6.12 L45.76,8.55 L47.84,8.08 L49.92,10.00 L52.00,8.31 L54.08,6.96 L56.16,8.54 L58.24,8.02 L60.32,9.63 L62.40,4.31 L64.48,5.84 L66.56,9.79 L68.64,13.27 L70.72,13.27 L72.80,14.48 L74.88,11.32 L76.96,8.42 L79.04,10.73 L81.12,14.40 L83.20,16.14 L85.28,18.93 L87.36,18.42 L89.44,21.22 L91.52,19.43 L93.60,19.32 L95.68,21.82 L97.76,19.28 L99.84,19.69 L101.92,16.08 L104.00,12.16" clip-path="url(#ai_graph_spark_clip_win_12)"></path>
+									<path class="ai_graph_spark_line lose" pathLength="1" d="M0.00,24.81 L2.08,24.78 L4.16,24.27 L6.24,25.37 L8.32,26.28 L10.40,27.00 L12.48,22.45 L14.56,20.70 L16.64,17.58 L18.72,11.94 L20.80,12.86 L22.88,9.73 L24.96,9.80 L27.04,7.58 L29.12,10.49 L31.20,5.28 L33.28,3.00 L35.36,6.88 L37.44,7.63 L39.52,3.94 L41.60,5.96 L43.68,6.12 L45.76,8.55 L47.84,8.08 L49.92,10.00 L52.00,8.31 L54.08,6.96 L56.16,8.54 L58.24,8.02 L60.32,9.63 L62.40,4.31 L64.48,5.84 L66.56,9.79 L68.64,13.27 L70.72,13.27 L72.80,14.48 L74.88,11.32 L76.96,8.42 L79.04,10.73 L81.12,14.40 L83.20,16.14 L85.28,18.93 L87.36,18.42 L89.44,21.22 L91.52,19.43 L93.60,19.32 L95.68,21.82 L97.76,19.28 L99.84,19.69 L101.92,16.08 L104.00,12.16" clip-path="url(#ai_graph_spark_clip_lose_12)"></path>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="strat_card_wrp l_tab">
+						<div class="strat_card">
+							<div class="strat_hdr">
+								<div class="strat_name strat_con">Conservative</div>
+								<div class="strat_followers">
+									<i class="icon-fi-people"></i>
+									<span>200</span>Pengikut
+								</div>
+								<div class="new_tag">New</div>
+								<i class="icon-fi-arrow-right"></i>
+							</div>
+							<div class="strat_row">
+								<div class="ai_img"><img src="../assets/public/layout/images/ai/kimi.svg" /></div>
+								<div class="strat_match_info">
+									<div class="strat_bet_sel">K3 Goalscorer Momentum</div>
+									<div class="strat_bet_dtl">In-form player goals and shots</div>
+								</div>
+								<div class="ss_tml_btn">
+									<i class="icon-fi-resume"></i>
+									Resume
+								</div>
+							</div>
+							<div class="strat_bottom">
+								<div class="strat_left">
+									<div class="strat_label">Last 100 bets</div>
+									<div class="strat_value lose">-20.00%</div>
+								</div>
+								<svg class="ai_graph_spark" width="104" height="30" viewBox="0 0 104 30" aria-hidden="true">
+									<defs>
+										<linearGradient id="ai_graph_spark_win_13" gradientUnits="userSpaceOnUse" x1="0" y1="3" x2="0" y2="13.65">
+											<stop class="ai_graph_spark_stop win" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop win" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<linearGradient id="ai_graph_spark_lose_13" gradientUnits="userSpaceOnUse" x1="0" y1="27" x2="0" y2="13.65">
+											<stop class="ai_graph_spark_stop lose" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop lose" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<clipPath id="ai_graph_spark_clip_win_13"><rect x="-3" y="-4" width="110" height="17.65"></rect></clipPath>
+										<clipPath id="ai_graph_spark_clip_lose_13"><rect x="-3" y="13.65" width="110" height="40"></rect></clipPath>
+									</defs>
+									<path class="ai_graph_spark_area" d="M0.00,13.65 L2.08,16.65 L4.16,17.87 L6.24,21.34 L8.32,19.91 L10.40,13.43 L12.48,18.44 L14.56,11.95 L16.64,7.10 L18.72,3.05 L20.80,6.96 L22.88,8.46 L24.96,7.74 L27.04,5.31 L29.12,6.40 L31.20,3.00 L33.28,7.40 L35.36,10.49 L37.44,14.51 L39.52,13.60 L41.60,9.63 L43.68,12.76 L45.76,17.39 L47.84,20.29 L49.92,23.43 L52.00,26.06 L54.08,24.46 L56.16,23.90 L58.24,19.30 L60.32,17.91 L62.40,19.16 L64.48,18.18 L66.56,17.15 L68.64,14.18 L70.72,16.20 L72.80,17.94 L74.88,13.96 L76.96,13.73 L79.04,16.07 L81.12,16.57 L83.20,18.05 L85.28,21.13 L87.36,20.10 L89.44,22.65 L91.52,21.99 L93.60,22.63 L95.68,21.02 L97.76,21.34 L99.84,15.35 L101.92,13.54 L104.00,14.97 L104,13.65 L0,13.65 Z" fill="url(#ai_graph_spark_win_13)" clip-path="url(#ai_graph_spark_clip_win_13)"></path>
+									<path class="ai_graph_spark_area" d="M0.00,13.65 L2.08,16.65 L4.16,17.87 L6.24,21.34 L8.32,19.91 L10.40,13.43 L12.48,18.44 L14.56,11.95 L16.64,7.10 L18.72,3.05 L20.80,6.96 L22.88,8.46 L24.96,7.74 L27.04,5.31 L29.12,6.40 L31.20,3.00 L33.28,7.40 L35.36,10.49 L37.44,14.51 L39.52,13.60 L41.60,9.63 L43.68,12.76 L45.76,17.39 L47.84,20.29 L49.92,23.43 L52.00,26.06 L54.08,24.46 L56.16,23.90 L58.24,19.30 L60.32,17.91 L62.40,19.16 L64.48,18.18 L66.56,17.15 L68.64,14.18 L70.72,16.20 L72.80,17.94 L74.88,13.96 L76.96,13.73 L79.04,16.07 L81.12,16.57 L83.20,18.05 L85.28,21.13 L87.36,20.10 L89.44,22.65 L91.52,21.99 L93.60,22.63 L95.68,21.02 L97.76,21.34 L99.84,15.35 L101.92,13.54 L104.00,14.97 L104,13.65 L0,13.65 Z" fill="url(#ai_graph_spark_lose_13)" clip-path="url(#ai_graph_spark_clip_lose_13)"></path>
+									<line class="ai_graph_spark_base" x1="0" x2="104" y1="13.65" y2="13.65"></line>
+									<path class="ai_graph_spark_line win" pathLength="1" d="M0.00,13.65 L2.08,16.65 L4.16,17.87 L6.24,21.34 L8.32,19.91 L10.40,13.43 L12.48,18.44 L14.56,11.95 L16.64,7.10 L18.72,3.05 L20.80,6.96 L22.88,8.46 L24.96,7.74 L27.04,5.31 L29.12,6.40 L31.20,3.00 L33.28,7.40 L35.36,10.49 L37.44,14.51 L39.52,13.60 L41.60,9.63 L43.68,12.76 L45.76,17.39 L47.84,20.29 L49.92,23.43 L52.00,26.06 L54.08,24.46 L56.16,23.90 L58.24,19.30 L60.32,17.91 L62.40,19.16 L64.48,18.18 L66.56,17.15 L68.64,14.18 L70.72,16.20 L72.80,17.94 L74.88,13.96 L76.96,13.73 L79.04,16.07 L81.12,16.57 L83.20,18.05 L85.28,21.13 L87.36,20.10 L89.44,22.65 L91.52,21.99 L93.60,22.63 L95.68,21.02 L97.76,21.34 L99.84,15.35 L101.92,13.54 L104.00,14.97" clip-path="url(#ai_graph_spark_clip_win_13)"></path>
+									<path class="ai_graph_spark_line lose" pathLength="1" d="M0.00,13.65 L2.08,16.65 L4.16,17.87 L6.24,21.34 L8.32,19.91 L10.40,13.43 L12.48,18.44 L14.56,11.95 L16.64,7.10 L18.72,3.05 L20.80,6.96 L22.88,8.46 L24.96,7.74 L27.04,5.31 L29.12,6.40 L31.20,3.00 L33.28,7.40 L35.36,10.49 L37.44,14.51 L39.52,13.60 L41.60,9.63 L43.68,12.76 L45.76,17.39 L47.84,20.29 L49.92,23.43 L52.00,26.06 L54.08,24.46 L56.16,23.90 L58.24,19.30 L60.32,17.91 L62.40,19.16 L64.48,18.18 L66.56,17.15 L68.64,14.18 L70.72,16.20 L72.80,17.94 L74.88,13.96 L76.96,13.73 L79.04,16.07 L81.12,16.57 L83.20,18.05 L85.28,21.13 L87.36,20.10 L89.44,22.65 L91.52,21.99 L93.60,22.63 L95.68,21.02 L97.76,21.34 L99.84,15.35 L101.92,13.54 L104.00,14.97" clip-path="url(#ai_graph_spark_clip_lose_13)"></path>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="strat_card_wrp l_tab">
+						<div class="strat_card">
+							<div class="strat_hdr">
+								<div class="strat_name strat_con">Conservative</div>
+								<div class="strat_followers">
+									<i class="icon-fi-people"></i>
+									<span>200</span>Người Theo Dõi
+								</div>
+								<i class="icon-fi-arrow-right"></i>
+							</div>
+							<div class="strat_row">
+								<div class="ai_img"><img src="../assets/public/layout/images/ai/kimi.svg" /></div>
+								<div class="strat_match_info">
+									<div class="strat_bet_sel">K3 Goalscorer Momentum</div>
+									<div class="strat_bet_dtl">In-form player goals and shots</div>
+								</div>
+								<div class="ss_tml_btn">
+									<i class="icon-fi-resume"></i>
+									Resume
+								</div>
+							</div>
+							<div class="strat_bottom">
+								<div class="strat_left">
+									<div class="strat_label">Last 100 bets</div>
+									<div class="strat_value lose">-20.00%</div>
+								</div>
+								<svg class="ai_graph_spark" width="104" height="30" viewBox="0 0 104 30" aria-hidden="true">
+									<defs>
+										<linearGradient id="ai_graph_spark_win_14" gradientUnits="userSpaceOnUse" x1="0" y1="3" x2="0" y2="9.03">
+											<stop class="ai_graph_spark_stop win" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop win" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<linearGradient id="ai_graph_spark_lose_14" gradientUnits="userSpaceOnUse" x1="0" y1="27" x2="0" y2="9.03">
+											<stop class="ai_graph_spark_stop lose" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop lose" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<clipPath id="ai_graph_spark_clip_win_14"><rect x="-3" y="-4" width="110" height="13.03"></rect></clipPath>
+										<clipPath id="ai_graph_spark_clip_lose_14"><rect x="-3" y="9.03" width="110" height="40"></rect></clipPath>
+									</defs>
+									<path class="ai_graph_spark_area" d="M0.00,9.03 L2.08,8.83 L4.16,9.80 L6.24,10.20 L8.32,11.78 L10.40,9.90 L12.48,11.54 L14.56,8.30 L16.64,12.20 L18.72,15.18 L20.80,13.33 L22.88,11.52 L24.96,12.29 L27.04,14.36 L29.12,13.66 L31.20,10.49 L33.28,9.87 L35.36,7.94 L37.44,6.42 L39.52,3.82 L41.60,5.65 L43.68,7.71 L45.76,5.67 L47.84,7.08 L49.92,5.50 L52.00,8.41 L54.08,12.55 L56.16,12.93 L58.24,10.50 L60.32,11.38 L62.40,15.64 L64.48,15.92 L66.56,14.85 L68.64,15.79 L70.72,17.64 L72.80,17.79 L74.88,20.98 L76.96,25.13 L79.04,25.98 L81.12,22.39 L83.20,20.39 L85.28,23.26 L87.36,22.13 L89.44,23.85 L91.52,20.92 L93.60,22.35 L95.68,17.52 L97.76,13.77 L99.84,14.21 L101.92,10.86 L104.00,13.09 L104,9.03 L0,9.03 Z" fill="url(#ai_graph_spark_win_14)" clip-path="url(#ai_graph_spark_clip_win_14)"></path>
+									<path class="ai_graph_spark_area" d="M0.00,9.03 L2.08,8.83 L4.16,9.80 L6.24,10.20 L8.32,11.78 L10.40,9.90 L12.48,11.54 L14.56,8.30 L16.64,12.20 L18.72,15.18 L20.80,13.33 L22.88,11.52 L24.96,12.29 L27.04,14.36 L29.12,13.66 L31.20,10.49 L33.28,9.87 L35.36,7.94 L37.44,6.42 L39.52,3.82 L41.60,5.65 L43.68,7.71 L45.76,5.67 L47.84,7.08 L49.92,5.50 L52.00,8.41 L54.08,12.55 L56.16,12.93 L58.24,10.50 L60.32,11.38 L62.40,15.64 L64.48,15.92 L66.56,14.85 L68.64,15.79 L70.72,17.64 L72.80,17.79 L74.88,20.98 L76.96,25.13 L79.04,25.98 L81.12,22.39 L83.20,20.39 L85.28,23.26 L87.36,22.13 L89.44,23.85 L91.52,20.92 L93.60,22.35 L95.68,17.52 L97.76,13.77 L99.84,14.21 L101.92,10.86 L104.00,13.09 L104,9.03 L0,9.03 Z" fill="url(#ai_graph_spark_lose_14)" clip-path="url(#ai_graph_spark_clip_lose_14)"></path>
+									<line class="ai_graph_spark_base" x1="0" x2="104" y1="9.03" y2="9.03"></line>
+									<path class="ai_graph_spark_line win" pathLength="1" d="M0.00,9.03 L2.08,8.83 L4.16,9.80 L6.24,10.20 L8.32,11.78 L10.40,9.90 L12.48,11.54 L14.56,8.30 L16.64,12.20 L18.72,15.18 L20.80,13.33 L22.88,11.52 L24.96,12.29 L27.04,14.36 L29.12,13.66 L31.20,10.49 L33.28,9.87 L35.36,7.94 L37.44,6.42 L39.52,3.82 L41.60,5.65 L43.68,7.71 L45.76,5.67 L47.84,7.08 L49.92,5.50 L52.00,8.41 L54.08,12.55 L56.16,12.93 L58.24,10.50 L60.32,11.38 L62.40,15.64 L64.48,15.92 L66.56,14.85 L68.64,15.79 L70.72,17.64 L72.80,17.79 L74.88,20.98 L76.96,25.13 L79.04,25.98 L81.12,22.39 L83.20,20.39 L85.28,23.26 L87.36,22.13 L89.44,23.85 L91.52,20.92 L93.60,22.35 L95.68,17.52 L97.76,13.77 L99.84,14.21 L101.92,10.86 L104.00,13.09" clip-path="url(#ai_graph_spark_clip_win_14)"></path>
+									<path class="ai_graph_spark_line lose" pathLength="1" d="M0.00,9.03 L2.08,8.83 L4.16,9.80 L6.24,10.20 L8.32,11.78 L10.40,9.90 L12.48,11.54 L14.56,8.30 L16.64,12.20 L18.72,15.18 L20.80,13.33 L22.88,11.52 L24.96,12.29 L27.04,14.36 L29.12,13.66 L31.20,10.49 L33.28,9.87 L35.36,7.94 L37.44,6.42 L39.52,3.82 L41.60,5.65 L43.68,7.71 L45.76,5.67 L47.84,7.08 L49.92,5.50 L52.00,8.41 L54.08,12.55 L56.16,12.93 L58.24,10.50 L60.32,11.38 L62.40,15.64 L64.48,15.92 L66.56,14.85 L68.64,15.79 L70.72,17.64 L72.80,17.79 L74.88,20.98 L76.96,25.13 L79.04,25.98 L81.12,22.39 L83.20,20.39 L85.28,23.26 L87.36,22.13 L89.44,23.85 L91.52,20.92 L93.60,22.35 L95.68,17.52 L97.76,13.77 L99.84,14.21 L101.92,10.86 L104.00,13.09" clip-path="url(#ai_graph_spark_clip_lose_14)"></path>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="strat_card_wrp l_tab">
+						<div class="strat_card">
+							<div class="strat_hdr">
+								<div class="strat_name strat_con">Conservative</div>
+								<div class="strat_followers">
+									<i class="icon-fi-people"></i>
+									<span>200</span>seguidores
+								</div>
+								<i class="icon-fi-arrow-right"></i>
+							</div>
+							<div class="strat_row">
+								<div class="ai_img"><img src="../assets/public/layout/images/ai/kimi.svg" /></div>
+								<div class="strat_match_info">
+									<div class="strat_bet_sel">K3 Goalscorer Momentum</div>
+									<div class="strat_bet_dtl">In-form player goals and shots</div>
+								</div>
+								<div class="ss_tml_btn disabled">
+									<div class="loading_lantency"></div>
+									Resume
+								</div>
+							</div>
+							<div class="strat_bottom">
+								<div class="strat_left">
+									<div class="strat_label">Last 100 bets</div>
+									<div class="strat_value lose">-20.00%</div>
+								</div>
+								<svg class="ai_graph_spark" width="104" height="30" viewBox="0 0 104 30" aria-hidden="true">
+									<defs>
+										<linearGradient id="ai_graph_spark_win_15" gradientUnits="userSpaceOnUse" x1="0" y1="2" x2="0" y2="3">
+											<stop class="ai_graph_spark_stop win" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop win" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<linearGradient id="ai_graph_spark_lose_15" gradientUnits="userSpaceOnUse" x1="0" y1="27" x2="0" y2="3">
+											<stop class="ai_graph_spark_stop lose" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop lose" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<clipPath id="ai_graph_spark_clip_win_15"><rect x="-3" y="-4" width="110" height="7"></rect></clipPath>
+										<clipPath id="ai_graph_spark_clip_lose_15"><rect x="-3" y="3" width="110" height="40"></rect></clipPath>
+									</defs>
+									<path class="ai_graph_spark_area" d="M0.00,3.00 L2.08,4.82 L4.16,4.05 L6.24,7.07 L8.32,11.27 L10.40,11.12 L12.48,16.02 L14.56,20.03 L16.64,18.83 L18.72,22.12 L20.80,26.09 L22.88,24.89 L24.96,25.82 L27.04,24.45 L29.12,18.88 L31.20,19.41 L33.28,18.31 L35.36,23.04 L37.44,19.70 L39.52,19.00 L41.60,18.74 L43.68,18.95 L45.76,21.54 L47.84,20.08 L49.92,17.62 L52.00,12.75 L54.08,16.61 L56.16,16.17 L58.24,20.35 L60.32,22.39 L62.40,23.23 L64.48,22.98 L66.56,27.00 L68.64,22.90 L70.72,23.82 L72.80,19.98 L74.88,15.63 L76.96,9.70 L79.04,7.23 L81.12,10.06 L83.20,8.32 L85.28,11.01 L87.36,14.82 L89.44,14.70 L91.52,12.71 L93.60,14.00 L95.68,15.66 L97.76,10.04 L99.84,8.06 L101.92,6.20 L104.00,8.91 L104,3.00 L0,3.00 Z" fill="url(#ai_graph_spark_win_15)" clip-path="url(#ai_graph_spark_clip_win_15)"></path>
+									<path class="ai_graph_spark_area" d="M0.00,3.00 L2.08,4.82 L4.16,4.05 L6.24,7.07 L8.32,11.27 L10.40,11.12 L12.48,16.02 L14.56,20.03 L16.64,18.83 L18.72,22.12 L20.80,26.09 L22.88,24.89 L24.96,25.82 L27.04,24.45 L29.12,18.88 L31.20,19.41 L33.28,18.31 L35.36,23.04 L37.44,19.70 L39.52,19.00 L41.60,18.74 L43.68,18.95 L45.76,21.54 L47.84,20.08 L49.92,17.62 L52.00,12.75 L54.08,16.61 L56.16,16.17 L58.24,20.35 L60.32,22.39 L62.40,23.23 L64.48,22.98 L66.56,27.00 L68.64,22.90 L70.72,23.82 L72.80,19.98 L74.88,15.63 L76.96,9.70 L79.04,7.23 L81.12,10.06 L83.20,8.32 L85.28,11.01 L87.36,14.82 L89.44,14.70 L91.52,12.71 L93.60,14.00 L95.68,15.66 L97.76,10.04 L99.84,8.06 L101.92,6.20 L104.00,8.91 L104,3.00 L0,3.00 Z" fill="url(#ai_graph_spark_lose_15)" clip-path="url(#ai_graph_spark_clip_lose_15)"></path>
+									<line class="ai_graph_spark_base" x1="0" x2="104" y1="3" y2="3"></line>
+									<path class="ai_graph_spark_line win" pathLength="1" d="M0.00,3.00 L2.08,4.82 L4.16,4.05 L6.24,7.07 L8.32,11.27 L10.40,11.12 L12.48,16.02 L14.56,20.03 L16.64,18.83 L18.72,22.12 L20.80,26.09 L22.88,24.89 L24.96,25.82 L27.04,24.45 L29.12,18.88 L31.20,19.41 L33.28,18.31 L35.36,23.04 L37.44,19.70 L39.52,19.00 L41.60,18.74 L43.68,18.95 L45.76,21.54 L47.84,20.08 L49.92,17.62 L52.00,12.75 L54.08,16.61 L56.16,16.17 L58.24,20.35 L60.32,22.39 L62.40,23.23 L64.48,22.98 L66.56,27.00 L68.64,22.90 L70.72,23.82 L72.80,19.98 L74.88,15.63 L76.96,9.70 L79.04,7.23 L81.12,10.06 L83.20,8.32 L85.28,11.01 L87.36,14.82 L89.44,14.70 L91.52,12.71 L93.60,14.00 L95.68,15.66 L97.76,10.04 L99.84,8.06 L101.92,6.20 L104.00,8.91" clip-path="url(#ai_graph_spark_clip_win_15)"></path>
+									<path class="ai_graph_spark_line lose" pathLength="1" d="M0.00,3.00 L2.08,4.82 L4.16,4.05 L6.24,7.07 L8.32,11.27 L10.40,11.12 L12.48,16.02 L14.56,20.03 L16.64,18.83 L18.72,22.12 L20.80,26.09 L22.88,24.89 L24.96,25.82 L27.04,24.45 L29.12,18.88 L31.20,19.41 L33.28,18.31 L35.36,23.04 L37.44,19.70 L39.52,19.00 L41.60,18.74 L43.68,18.95 L45.76,21.54 L47.84,20.08 L49.92,17.62 L52.00,12.75 L54.08,16.61 L56.16,16.17 L58.24,20.35 L60.32,22.39 L62.40,23.23 L64.48,22.98 L66.56,27.00 L68.64,22.90 L70.72,23.82 L72.80,19.98 L74.88,15.63 L76.96,9.70 L79.04,7.23 L81.12,10.06 L83.20,8.32 L85.28,11.01 L87.36,14.82 L89.44,14.70 L91.52,12.71 L93.60,14.00 L95.68,15.66 L97.76,10.04 L99.84,8.06 L101.92,6.20 L104.00,8.91" clip-path="url(#ai_graph_spark_clip_lose_15)"></path>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="strat_card_wrp l_tab">
+						<div class="strat_card">
+							<div class="strat_hdr">
+								<div class="strat_name strat_bal">Balanced</div>
+								<div class="strat_followers">
+									<i class="icon-fi-people"></i>
+									팔로워<span>340</span>명
+								</div>
+								<i class="icon-fi-arrow-right"></i>
+							</div>
+							<div class="strat_row">
+								<div class="ai_img"><img src="../assets/public/layout/images/ai/perplexity.svg" /></div>
+								<div class="strat_match_info">
+									<div class="strat_bet_sel">Perplexity EUROL Moneyline</div>
+									<div class="strat_bet_dtl">Over 2.5 Goals</div>
+								</div>
+								<div class="ss_tml_btn disabled">
+									<i class="icon-fi-resume"></i>
+									Resume
+								</div>
+							</div>
+							<div class="strat_bottom">
+								<div class="strat_left">
+									<div class="strat_label">Last 100 bets &middot; every 5th bet plotted</div>
+									<div class="strat_value win">+18.25%</div>
+								</div>
+								<svg class="ai_graph_spark" width="104" height="30" viewBox="0 0 104 30" aria-hidden="true">
+									<defs>
+										<linearGradient id="ai_graph_spark_win_16" gradientUnits="userSpaceOnUse" x1="0" y1="3" x2="0" y2="24.15">
+											<stop class="ai_graph_spark_stop win" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop win" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<linearGradient id="ai_graph_spark_lose_16" gradientUnits="userSpaceOnUse" x1="0" y1="27" x2="0" y2="24.15">
+											<stop class="ai_graph_spark_stop lose" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop lose" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<clipPath id="ai_graph_spark_clip_win_16"><rect x="-3" y="-4" width="110" height="28.15"></rect></clipPath>
+										<clipPath id="ai_graph_spark_clip_lose_16"><rect x="-3" y="24.15" width="110" height="40"></rect></clipPath>
+									</defs>
+									<path class="ai_graph_spark_area" d="M0.00,24.15 L2.08,24.73 L4.16,27.00 L6.24,24.03 L8.32,24.79 L10.40,26.92 L12.48,24.75 L14.56,21.37 L16.64,17.91 L18.72,18.30 L20.80,18.06 L22.88,15.19 L24.96,11.58 L27.04,8.50 L29.12,9.07 L31.20,6.55 L33.28,6.24 L35.36,9.80 L37.44,10.11 L39.52,9.89 L41.60,7.68 L43.68,4.28 L45.76,3.15 L47.84,3.00 L49.92,5.94 L52.00,4.53 L54.08,5.99 L56.16,7.06 L58.24,7.69 L60.32,11.95 L62.40,9.58 L64.48,6.26 L66.56,6.22 L68.64,5.49 L70.72,8.80 L72.80,8.99 L74.88,11.64 L76.96,8.97 L79.04,10.57 L81.12,10.07 L83.20,10.35 L85.28,11.25 L87.36,12.66 L89.44,11.57 L91.52,11.31 L93.60,11.40 L95.68,11.24 L97.76,11.01 L99.84,13.20 L101.92,12.95 L104.00,15.62 L104,24.15 L0,24.15 Z" fill="url(#ai_graph_spark_win_16)" clip-path="url(#ai_graph_spark_clip_win_16)"></path>
+									<path class="ai_graph_spark_area" d="M0.00,24.15 L2.08,24.73 L4.16,27.00 L6.24,24.03 L8.32,24.79 L10.40,26.92 L12.48,24.75 L14.56,21.37 L16.64,17.91 L18.72,18.30 L20.80,18.06 L22.88,15.19 L24.96,11.58 L27.04,8.50 L29.12,9.07 L31.20,6.55 L33.28,6.24 L35.36,9.80 L37.44,10.11 L39.52,9.89 L41.60,7.68 L43.68,4.28 L45.76,3.15 L47.84,3.00 L49.92,5.94 L52.00,4.53 L54.08,5.99 L56.16,7.06 L58.24,7.69 L60.32,11.95 L62.40,9.58 L64.48,6.26 L66.56,6.22 L68.64,5.49 L70.72,8.80 L72.80,8.99 L74.88,11.64 L76.96,8.97 L79.04,10.57 L81.12,10.07 L83.20,10.35 L85.28,11.25 L87.36,12.66 L89.44,11.57 L91.52,11.31 L93.60,11.40 L95.68,11.24 L97.76,11.01 L99.84,13.20 L101.92,12.95 L104.00,15.62 L104,24.15 L0,24.15 Z" fill="url(#ai_graph_spark_lose_16)" clip-path="url(#ai_graph_spark_clip_lose_16)"></path>
+									<line class="ai_graph_spark_base" x1="0" x2="104" y1="24.15" y2="24.15"></line>
+									<path class="ai_graph_spark_line win" pathLength="1" d="M0.00,24.15 L2.08,24.73 L4.16,27.00 L6.24,24.03 L8.32,24.79 L10.40,26.92 L12.48,24.75 L14.56,21.37 L16.64,17.91 L18.72,18.30 L20.80,18.06 L22.88,15.19 L24.96,11.58 L27.04,8.50 L29.12,9.07 L31.20,6.55 L33.28,6.24 L35.36,9.80 L37.44,10.11 L39.52,9.89 L41.60,7.68 L43.68,4.28 L45.76,3.15 L47.84,3.00 L49.92,5.94 L52.00,4.53 L54.08,5.99 L56.16,7.06 L58.24,7.69 L60.32,11.95 L62.40,9.58 L64.48,6.26 L66.56,6.22 L68.64,5.49 L70.72,8.80 L72.80,8.99 L74.88,11.64 L76.96,8.97 L79.04,10.57 L81.12,10.07 L83.20,10.35 L85.28,11.25 L87.36,12.66 L89.44,11.57 L91.52,11.31 L93.60,11.40 L95.68,11.24 L97.76,11.01 L99.84,13.20 L101.92,12.95 L104.00,15.62" clip-path="url(#ai_graph_spark_clip_win_16)"></path>
+									<path class="ai_graph_spark_line lose" pathLength="1" d="M0.00,24.15 L2.08,24.73 L4.16,27.00 L6.24,24.03 L8.32,24.79 L10.40,26.92 L12.48,24.75 L14.56,21.37 L16.64,17.91 L18.72,18.30 L20.80,18.06 L22.88,15.19 L24.96,11.58 L27.04,8.50 L29.12,9.07 L31.20,6.55 L33.28,6.24 L35.36,9.80 L37.44,10.11 L39.52,9.89 L41.60,7.68 L43.68,4.28 L45.76,3.15 L47.84,3.00 L49.92,5.94 L52.00,4.53 L54.08,5.99 L56.16,7.06 L58.24,7.69 L60.32,11.95 L62.40,9.58 L64.48,6.26 L66.56,6.22 L68.64,5.49 L70.72,8.80 L72.80,8.99 L74.88,11.64 L76.96,8.97 L79.04,10.57 L81.12,10.07 L83.20,10.35 L85.28,11.25 L87.36,12.66 L89.44,11.57 L91.52,11.31 L93.60,11.40 L95.68,11.24 L97.76,11.01 L99.84,13.20 L101.92,12.95 L104.00,15.62" clip-path="url(#ai_graph_spark_clip_lose_16)"></path>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="strat_card_wrp l_tab">
+						<div class="strat_card">
+							<div class="strat_hdr">
+								<div class="strat_name strat_agg">Aggressive</div>
+								<div class="strat_followers">
+									<i class="icon-fi-people"></i>
+									<span>120</span>फ़ॉलोअर्स
+								</div>
+								<i class="icon-fi-arrow-right"></i>
+							</div>
+							<div class="strat_row">
+								<div class="ai_img"><img src="../assets/public/layout/images/ai/deepseek.svg" /></div>
+								<div class="strat_match_info">
+									<div class="strat_bet_sel">DeepSeek Half-Time Results of the Bundesliga Football League</div>
+									<div class="strat_bet_dtl">First Half Draw</div>
+								</div>
+								<div class="ss_tml_btn">
+									<i class="icon-fi-topup"></i>
+									Top Up
+								</div>
+							</div>
+							<div class="strat_bottom">
+								<div class="strat_left">
+									<div class="strat_label">Last 20 bets &middot; every 5th bet plotted</div>
+									<div class="strat_value lose">-8.40%</div>
+								</div>
+								<svg class="ai_graph_spark" width="104" height="30" viewBox="0 0 104 30" aria-hidden="true">
+									<defs>
+										<linearGradient id="ai_graph_spark_win_17" gradientUnits="userSpaceOnUse" x1="0" y1="3" x2="0" y2="7.23">
+											<stop class="ai_graph_spark_stop win" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop win" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<linearGradient id="ai_graph_spark_lose_17" gradientUnits="userSpaceOnUse" x1="0" y1="27" x2="0" y2="7.23">
+											<stop class="ai_graph_spark_stop lose" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop lose" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<clipPath id="ai_graph_spark_clip_win_17"><rect x="-3" y="-4" width="110" height="11.23"></rect></clipPath>
+										<clipPath id="ai_graph_spark_clip_lose_17"><rect x="-3" y="7.23" width="110" height="40"></rect></clipPath>
+									</defs>
+									<path class="ai_graph_spark_area" d="M0.00,7.23 L2.08,5.17 L4.16,3.99 L6.24,3.00 L8.32,8.11 L10.40,5.06 L12.48,5.39 L14.56,9.54 L16.64,10.42 L18.72,12.82 L20.80,9.78 L22.88,10.89 L24.96,12.29 L27.04,14.84 L29.12,14.39 L31.20,13.63 L33.28,13.63 L35.36,11.73 L37.44,15.26 L39.52,17.89 L41.60,16.54 L43.68,15.59 L45.76,16.52 L47.84,13.92 L49.92,13.03 L52.00,9.83 L54.08,11.80 L56.16,11.71 L58.24,15.26 L60.32,12.40 L62.40,15.74 L64.48,16.00 L66.56,17.92 L68.64,17.84 L70.72,18.09 L72.80,19.18 L74.88,22.12 L76.96,21.83 L79.04,24.11 L81.12,27.00 L83.20,21.85 L85.28,23.52 L87.36,25.20 L89.44,24.15 L91.52,19.62 L93.60,15.13 L95.68,17.66 L97.76,14.63 L99.84,18.01 L101.92,14.10 L104.00,10.77 L104,7.23 L0,7.23 Z" fill="url(#ai_graph_spark_win_17)" clip-path="url(#ai_graph_spark_clip_win_17)"></path>
+									<path class="ai_graph_spark_area" d="M0.00,7.23 L2.08,5.17 L4.16,3.99 L6.24,3.00 L8.32,8.11 L10.40,5.06 L12.48,5.39 L14.56,9.54 L16.64,10.42 L18.72,12.82 L20.80,9.78 L22.88,10.89 L24.96,12.29 L27.04,14.84 L29.12,14.39 L31.20,13.63 L33.28,13.63 L35.36,11.73 L37.44,15.26 L39.52,17.89 L41.60,16.54 L43.68,15.59 L45.76,16.52 L47.84,13.92 L49.92,13.03 L52.00,9.83 L54.08,11.80 L56.16,11.71 L58.24,15.26 L60.32,12.40 L62.40,15.74 L64.48,16.00 L66.56,17.92 L68.64,17.84 L70.72,18.09 L72.80,19.18 L74.88,22.12 L76.96,21.83 L79.04,24.11 L81.12,27.00 L83.20,21.85 L85.28,23.52 L87.36,25.20 L89.44,24.15 L91.52,19.62 L93.60,15.13 L95.68,17.66 L97.76,14.63 L99.84,18.01 L101.92,14.10 L104.00,10.77 L104,7.23 L0,7.23 Z" fill="url(#ai_graph_spark_lose_17)" clip-path="url(#ai_graph_spark_clip_lose_17)"></path>
+									<line class="ai_graph_spark_base" x1="0" x2="104" y1="7.23" y2="7.23"></line>
+									<path class="ai_graph_spark_line win" pathLength="1" d="M0.00,7.23 L2.08,5.17 L4.16,3.99 L6.24,3.00 L8.32,8.11 L10.40,5.06 L12.48,5.39 L14.56,9.54 L16.64,10.42 L18.72,12.82 L20.80,9.78 L22.88,10.89 L24.96,12.29 L27.04,14.84 L29.12,14.39 L31.20,13.63 L33.28,13.63 L35.36,11.73 L37.44,15.26 L39.52,17.89 L41.60,16.54 L43.68,15.59 L45.76,16.52 L47.84,13.92 L49.92,13.03 L52.00,9.83 L54.08,11.80 L56.16,11.71 L58.24,15.26 L60.32,12.40 L62.40,15.74 L64.48,16.00 L66.56,17.92 L68.64,17.84 L70.72,18.09 L72.80,19.18 L74.88,22.12 L76.96,21.83 L79.04,24.11 L81.12,27.00 L83.20,21.85 L85.28,23.52 L87.36,25.20 L89.44,24.15 L91.52,19.62 L93.60,15.13 L95.68,17.66 L97.76,14.63 L99.84,18.01 L101.92,14.10 L104.00,10.77" clip-path="url(#ai_graph_spark_clip_win_17)"></path>
+									<path class="ai_graph_spark_line lose" pathLength="1" d="M0.00,7.23 L2.08,5.17 L4.16,3.99 L6.24,3.00 L8.32,8.11 L10.40,5.06 L12.48,5.39 L14.56,9.54 L16.64,10.42 L18.72,12.82 L20.80,9.78 L22.88,10.89 L24.96,12.29 L27.04,14.84 L29.12,14.39 L31.20,13.63 L33.28,13.63 L35.36,11.73 L37.44,15.26 L39.52,17.89 L41.60,16.54 L43.68,15.59 L45.76,16.52 L47.84,13.92 L49.92,13.03 L52.00,9.83 L54.08,11.80 L56.16,11.71 L58.24,15.26 L60.32,12.40 L62.40,15.74 L64.48,16.00 L66.56,17.92 L68.64,17.84 L70.72,18.09 L72.80,19.18 L74.88,22.12 L76.96,21.83 L79.04,24.11 L81.12,27.00 L83.20,21.85 L85.28,23.52 L87.36,25.20 L89.44,24.15 L91.52,19.62 L93.60,15.13 L95.68,17.66 L97.76,14.63 L99.84,18.01 L101.92,14.10 L104.00,10.77" clip-path="url(#ai_graph_spark_clip_lose_17)"></path>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="strat_card_wrp l_tab">
+						<div class="strat_card">
+							<div class="strat_hdr">
+								<div class="strat_name strat_bal">Balanced</div>
+								<div class="strat_followers">
+									<i class="icon-fi-people"></i>
+									<span>100</span>Seguidores
+								</div>
+								<i class="icon-fi-arrow-right"></i>
+							</div>
+							<div class="strat_row">
+								<div class="ai_img"><img src="../assets/public/layout/images/ai/grok.svg" /></div>
+								<div class="strat_match_info">
+									<div class="strat_bet_sel">Grok 4 Serie A Card Count</div>
+									<div class="strat_bet_dtl">Under 4.5 Cards </div>
+								</div>
+								<div class="ss_tml_btn disabled">
+									<i class="icon-fi-topup"></i>
+									Top Up
+								</div>
+							</div>
+							<div class="strat_bottom">
+								<div class="strat_left">
+									<div class="strat_label">Last 100 bets</div>
+									<div class="strat_value win">+25.00%</div>
+								</div>
+								<svg class="ai_graph_spark" width="104" height="30" viewBox="0 0 104 30" aria-hidden="true">
+									<defs>
+										<linearGradient id="ai_graph_spark_win_18" gradientUnits="userSpaceOnUse" x1="0" y1="3" x2="0" y2="17.2">
+											<stop class="ai_graph_spark_stop win" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop win" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<linearGradient id="ai_graph_spark_lose_18" gradientUnits="userSpaceOnUse" x1="0" y1="27" x2="0" y2="17.2">
+											<stop class="ai_graph_spark_stop lose" offset="0" stop-opacity="0.32"></stop>
+											<stop class="ai_graph_spark_stop lose" offset="1" stop-opacity="0"></stop>
+										</linearGradient>
+										<clipPath id="ai_graph_spark_clip_win_18"><rect x="-3" y="-4" width="110" height="21.2"></rect></clipPath>
+										<clipPath id="ai_graph_spark_clip_lose_18"><rect x="-3" y="17.2" width="110" height="40"></rect></clipPath>
+									</defs>
+									<path class="ai_graph_spark_area" d="M0.00,17.20 L2.08,14.07 L4.16,16.01 L6.24,14.92 L8.32,18.07 L10.40,17.29 L12.48,17.23 L14.56,14.27 L16.64,17.85 L18.72,18.24 L20.80,17.62 L22.88,22.19 L24.96,24.54 L27.04,24.30 L29.12,22.33 L31.20,17.71 L33.28,17.96 L35.36,16.52 L37.44,16.87 L39.52,19.81 L41.60,15.54 L43.68,16.12 L45.76,19.78 L47.84,17.65 L49.92,15.78 L52.00,20.28 L54.08,21.12 L56.16,22.49 L58.24,23.77 L60.32,24.21 L62.40,24.05 L64.48,20.15 L66.56,18.92 L68.64,20.83 L70.72,18.11 L72.80,16.02 L74.88,13.18 L76.96,13.84 L79.04,13.79 L81.12,13.94 L83.20,9.77 L85.28,10.47 L87.36,10.96 L89.44,8.32 L91.52,4.34 L93.60,4.59 L95.68,5.68 L97.76,6.17 L99.84,7.68 L101.92,10.54 L104.00,7.96 L104,17.20 L0,17.20 Z" fill="url(#ai_graph_spark_win_18)" clip-path="url(#ai_graph_spark_clip_win_18)"></path>
+									<path class="ai_graph_spark_area" d="M0.00,17.20 L2.08,14.07 L4.16,16.01 L6.24,14.92 L8.32,18.07 L10.40,17.29 L12.48,17.23 L14.56,14.27 L16.64,17.85 L18.72,18.24 L20.80,17.62 L22.88,22.19 L24.96,24.54 L27.04,24.30 L29.12,22.33 L31.20,17.71 L33.28,17.96 L35.36,16.52 L37.44,16.87 L39.52,19.81 L41.60,15.54 L43.68,16.12 L45.76,19.78 L47.84,17.65 L49.92,15.78 L52.00,20.28 L54.08,21.12 L56.16,22.49 L58.24,23.77 L60.32,24.21 L62.40,24.05 L64.48,20.15 L66.56,18.92 L68.64,20.83 L70.72,18.11 L72.80,16.02 L74.88,13.18 L76.96,13.84 L79.04,13.79 L81.12,13.94 L83.20,9.77 L85.28,10.47 L87.36,10.96 L89.44,8.32 L91.52,4.34 L93.60,4.59 L95.68,5.68 L97.76,6.17 L99.84,7.68 L101.92,10.54 L104.00,7.96 L104,17.20 L0,17.20 Z" fill="url(#ai_graph_spark_lose_18)" clip-path="url(#ai_graph_spark_clip_lose_18)"></path>
+									<line class="ai_graph_spark_base" x1="0" x2="104" y1="17.2" y2="17.2"></line>
+									<path class="ai_graph_spark_line win" pathLength="1" d="M0.00,17.20 L2.08,14.07 L4.16,16.01 L6.24,14.92 L8.32,18.07 L10.40,17.29 L12.48,17.23 L14.56,14.27 L16.64,17.85 L18.72,18.24 L20.80,17.62 L22.88,22.19 L24.96,24.54 L27.04,24.30 L29.12,22.33 L31.20,17.71 L33.28,17.96 L35.36,16.52 L37.44,16.87 L39.52,19.81 L41.60,15.54 L43.68,16.12 L45.76,19.78 L47.84,17.65 L49.92,15.78 L52.00,20.28 L54.08,21.12 L56.16,22.49 L58.24,23.77 L60.32,24.21 L62.40,24.05 L64.48,20.15 L66.56,18.92 L68.64,20.83 L70.72,18.11 L72.80,16.02 L74.88,13.18 L76.96,13.84 L79.04,13.79 L81.12,13.94 L83.20,9.77 L85.28,10.47 L87.36,10.96 L89.44,8.32 L91.52,4.34 L93.60,4.59 L95.68,5.68 L97.76,6.17 L99.84,7.68 L101.92,10.54 L104.00,7.96" clip-path="url(#ai_graph_spark_clip_win_18)"></path>
+									<path class="ai_graph_spark_line lose" pathLength="1" d="M0.00,17.20 L2.08,14.07 L4.16,16.01 L6.24,14.92 L8.32,18.07 L10.40,17.29 L12.48,17.23 L14.56,14.27 L16.64,17.85 L18.72,18.24 L20.80,17.62 L22.88,22.19 L24.96,24.54 L27.04,24.30 L29.12,22.33 L31.20,17.71 L33.28,17.96 L35.36,16.52 L37.44,16.87 L39.52,19.81 L41.60,15.54 L43.68,16.12 L45.76,19.78 L47.84,17.65 L49.92,15.78 L52.00,20.28 L54.08,21.12 L56.16,22.49 L58.24,23.77 L60.32,24.21 L62.40,24.05 L64.48,20.15 L66.56,18.92 L68.64,20.83 L70.72,18.11 L72.80,16.02 L74.88,13.18 L76.96,13.84 L79.04,13.79 L81.12,13.94 L83.20,9.77 L85.28,10.47 L87.36,10.96 L89.44,8.32 L91.52,4.34 L93.60,4.59 L95.68,5.68 L97.76,6.17 L99.84,7.68 L101.92,10.54 L104.00,7.96" clip-path="url(#ai_graph_spark_clip_lose_18)"></path>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<!-- new s_tab card design -->
+					<div class="strat_card_wrp s_tab s_card">
+						<div class="strat_card">
+							<div class="strat_row">
+								<div class="ai_img"><img src="../assets/public/layout/images/ai/default.svg" /></div>
+								<div class="strat_match_info">
+									<div class="strat_bet_sel">
+										<div class="strat_bet_sel_name">AI La Liga Over/Under</div>
+									</div>
+									<div class="strat_bet_dtl">
+										<div class="strat_risk_lvl_wrp">
+											<div class="strat_risk_lvl strat_con">
+												<div class="strat_risk_dot"></div>
+												<div class="strat_risk_dot"></div>
+												<div class="strat_risk_dot"></div>
+											</div>
+											Conservative
+										</div>
+									</div>
+								</div>
+								<div class="strat_dtl_right">
+									<div class="strat_value win">+25.00%</div>
+									<div class="strat_label">Profit %</div>
+								</div>
+								<i class="icon-fi-arrow-right"></i>
+							</div>
+							<div class="strat_bottom">
+								<div class="strat_left">
+									<div class="strat_label">Available Allocation</div>
+									<div class="strat_curr_value">RMB<span>4,800.00</span></div>
+									<div class="strat_curr_value">/ 5,0000.00</div>
+								</div>
+								<div class="strat_mid">
+									<div class="strat_label">Stake per Bet</div>
+									<div class="strat_curr_value">RMB<span>100.00</span></div>
+								</div>
+								<div class="strat_right">
+									<div class="strat_label">Profit</div>
+									<div class="strat_curr_value">RMB<span class="win">+7,805.20</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="strat_card_wrp s_tab s_card">
+						<div class="strat_card">
+							<div class="strat_row">
+								<div class="ai_img"><img src="../assets/public/layout/images/ai/chatGLM.svg" /></div>
+								<div class="strat_match_info">
+									<div class="strat_bet_sel">
+										<div class="strat_bet_sel_name">ChatGLM Serie A Match Results</div>
+									</div>
+									<div class="strat_bet_dtl">
+										<div class="strat_risk_lvl_wrp">
+											<div class="strat_risk_lvl strat_bal">
+												<div class="strat_risk_dot"></div>
+												<div class="strat_risk_dot"></div>
+												<div class="strat_risk_dot"></div>
+											</div>
+											Balanced
+										</div>
+									</div>
+								</div>
+								<div class="strat_dtl_right">
+									<div class="strat_value win">+10.50%</div>
+									<div class="strat_label">Profit %</div>
+								</div>
+								<i class="icon-fi-arrow-right"></i>
+							</div>
+							<div class="strat_bottom">
+								<div class="strat_left">
+									<div class="strat_label">Available Allocation</div>
+									<div class="strat_curr_value">RMB<span>8,000.00</span></div>
+									<div class="strat_curr_value">/ 9,0000.00</div>
+								</div>
+								<div class="strat_mid">
+									<div class="strat_label">Stake per Bet</div>
+									<div class="strat_curr_value">RMB<span>50.00</span></div>
+								</div>
+								<div class="strat_right">
+									<div class="strat_label">Profit</div>
+									<div class="strat_curr_value">RMB<span class="win">+562.70</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="strat_card_wrp s_tab s_card sc_alert">
+						<div class="strat_card">
+							<div class="strat_row">
+								<div class="ai_img"><img src="../assets/public/layout/images/ai/kimi.svg" /></div>
+								<div class="strat_match_info">
+									<div class="strat_bet_sel">
+										<div class="strat_bet_sel_name">K3 Goalscorer Momentum</div>
+									</div>
+									<div class="strat_bet_dtl">
+										<div class="strat_risk_lvl_wrp">
+											<div class="strat_risk_lvl strat_agg">
+												<div class="strat_risk_dot"></div>
+												<div class="strat_risk_dot"></div>
+												<div class="strat_risk_dot"></div>
+											</div>
+											Aggressive
+										</div>
+									</div>
+								</div>
+								<div class="strat_dtl_right">
+									<div class="strat_value lose">-20.00%</div>
+									<div class="strat_label">Profit %</div>
+								</div>
+								<i class="icon-fi-arrow-right"></i>
+							</div>
+							<div class="strat_bottom">
+								<div class="strat_left">
+									<div class="strat_label">Available Allocation</div>
+									<div class="strat_curr_value">RMB<span>5,500.00</span></div>
+									<div class="strat_curr_value">/ 5,0000.00</div>
+								</div>
+								<div class="strat_mid">
+									<div class="strat_label">Stake per Bet</div>
+									<div class="strat_curr_value">RMB<span>50.00</span></div>
+								</div>
+								<div class="strat_right">
+									<div class="strat_label">Profit</div>
+									<div class="strat_curr_value">RMB<span class="lose">-1,232.60</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="strat_card_msg">
+							<div class="strat_msg_info">
+								<i class="icon-fi-warning-border"></i>
+								<div class="strat_msg_grp">
+									<div class="strat_msg_main">Insufficient Account Balance</div>
+									<div class="strat_msg_sub">Top up to continue copying.</div>
+								</div>
+							</div>
+							<div class="ss_tml_btn">
+								<i class="icon-fi-resume"></i>
+								Resume
+							</div>
+						</div>
+					</div>
+					<div class="strat_card_wrp s_tab s_card sc_alert">
+						<div class="strat_card">
+							<div class="strat_row">
+								<div class="ai_img"><img src="../assets/public/layout/images/ai/perplexity.svg" /></div>
+								<div class="strat_match_info">
+									<div class="strat_bet_sel">
+										<div class="strat_bet_sel_name">Perplexity EUROL Moneyline</div>
+									</div>
+									<div class="strat_bet_dtl">
+										<div class="strat_risk_lvl_wrp">
+											<div class="strat_risk_lvl strat_agg">
+												<div class="strat_risk_dot"></div>
+												<div class="strat_risk_dot"></div>
+												<div class="strat_risk_dot"></div>
+											</div>
+											Aggressive
+										</div>
+									</div>
+								</div>
+								<div class="strat_dtl_right">
+									<div class="strat_value">--</div>
+									<div class="strat_label">Profit %</div>
+								</div>
+								<i class="icon-fi-arrow-right"></i>
+							</div>
+							<div class="strat_bottom">
+								<div class="strat_left">
+									<div class="strat_label">Available Allocation</div>
+									<div class="strat_curr_value">RMB<span>8,000.00</span></div>
+									<div class="strat_curr_value">/ 9,0000.00</div>
+								</div>
+								<div class="strat_mid">
+									<div class="strat_label">Stake per Bet</div>
+									<div class="strat_curr_value">RMB<span>50.00</span></div>
+								</div>
+								<div class="strat_right">
+									<div class="strat_label">Profit</div>
+									<div class="strat_curr_value">RMB<span>--</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="strat_card_msg">
+							<div class="strat_msg_info">
+								<i class="icon-fi-warning-border"></i>
+								<div class="strat_msg_grp">
+									<div class="strat_msg_main">Insufficient Account Balance</div>
+									<div class="strat_msg_sub">Top up to continue copying.</div>
+								</div>
+							</div>
+							<div class="ss_tml_btn disabled">
+								<i class="icon-fi-resume"></i>
+								Resume
+							</div>
+						</div>
+					</div>
+					<div class="strat_card_wrp s_tab s_card sc_inactive">
+						<div class="strat_card">
+							<div class="strat_row">
+								<div class="ai_img"><img src="../assets/public/layout/images/ai/gemini.svg" /></div>
+								<div class="strat_match_info">
+									<div class="strat_bet_sel">
+										<div class="strat_bet_sel_name">3.6 Flash Stable Value</div>
+									</div>
+									<div class="strat_bet_dtl">
+										<div class="strat_risk_lvl_wrp">
+											<div class="strat_risk_lvl strat_con">
+												<div class="strat_risk_dot"></div>
+												<div class="strat_risk_dot"></div>
+												<div class="strat_risk_dot"></div>
+											</div>
+											Conservative
+										</div>
+									</div>
+								</div>
+								<div class="strat_dtl_right">
+									<div class="strat_value win">+25.00%</div>
+									<div class="strat_label">Profit %</div>
+								</div>
+								<i class="icon-fi-arrow-right"></i>
+							</div>
+							<div class="strat_bottom">
+								<div class="strat_left">
+									<div class="strat_label">Available Allocation</div>
+									<div class="strat_curr_value">RMB<span>5,500.00</span></div>
+									<div class="strat_curr_value">/ 5,0000.00</div>
+								</div>
+								<div class="strat_mid">
+									<div class="strat_label">Stake per Bet</div>
+									<div class="strat_curr_value">RMB<span>50.00</span></div>
+								</div>
+								<div class="strat_right">
+									<div class="strat_label">Profit</div>
+									<div class="strat_curr_value">RMB<span class="win">+7,805.20</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="strat_card_msg">
+							<div class="strat_msg_info">
+								<i class="icon-fi-stopped"></i>
+								<div class="strat_msg_grp">
+									<div class="strat_msg_main">Stopped Copying</div>
+									<div class="strat_msg_sub">Copy strategy again.</div>
+								</div>
+							</div>
+							<div class="ss_tml_btn" data-ai-copy-again="true">
+								<i class="icon-fi-ai-refresh"></i>
+								Copy
+							</div>
+						</div>
+					</div>
+					<div class="strat_card_wrp s_tab s_card sc_inactive">
+						<div class="strat_card">
+							<div class="strat_row">
+								<div class="ai_img"><img src="../assets/public/layout/images/ai/mistral.svg" /></div>
+								<div class="strat_match_info">
+									<div class="strat_bet_sel">
+										<div class="strat_bet_sel_name">Mistral Live Momentum</div>
+									</div>
+									<div class="strat_bet_dtl">
+										<div class="strat_risk_lvl_wrp">
+											<div class="strat_risk_lvl strat_bal">
+												<div class="strat_risk_dot"></div>
+												<div class="strat_risk_dot"></div>
+												<div class="strat_risk_dot"></div>
+											</div>
+											Balanced
+										</div>
+									</div>
+								</div>
+								<div class="strat_dtl_right">
+									<div class="strat_value win">+10.50%</div>
+									<div class="strat_label">Profit %</div>
+								</div>
+							</div>
+							<div class="strat_bottom">
+								<div class="strat_left">
+									<div class="strat_label">Available Allocation</div>
+									<div class="strat_curr_value">RMB<span>5,500.00</span></div>
+									<div class="strat_curr_value">/ 5,0000.00</div>
+								</div>
+								<div class="strat_mid">
+									<div class="strat_label">Stake per Bet</div>
+									<div class="strat_curr_value">RMB<span>100.00</span></div>
+								</div>
+								<div class="strat_right">
+									<div class="strat_label">Profit</div>
+									<div class="strat_curr_value">RMB<span class="win">+562.70</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="strat_card_msg">
+							<div class="strat_msg_info">
+								<i class="icon-fi-warning-border"></i>
+								<div class="strat_msg_grp">
+									<div class="strat_msg_main">Strategy Unavailable</div>
+									<div class="strat_msg_sub">This strategy is no longer available for copying.</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- old s_tab card design: remove soon-->
+					<div class="strat_card_wrp s_tab">
+						<div class="strat_card">
+							<div class="strat_hdr">
+								<div class="strat_name strat_con">Conservative</div>
+								<i class="icon-fi-arrow-right"></i>
+							</div>
+							<div class="strat_row">
+								<div class="ai_img"><img src="../assets/public/layout/images/ai/default.svg" /></div>
+								<div class="strat_match_info">
+									<div class="strat_bet_sel">AI La Liga Over/Under</div>
+									<div class="strat_bet_dtl">Over 2.5 Goals</div>
+								</div>
+								<div class="strat_dtl_right">
+									<div class="strat_label">Profit %</div>
+									<div class="strat_value win">+25.00%</div>
+								</div>
+							</div>
+							<div class="strat_bottom">
+								<div class="strat_left">
+									<div class="strat_label">Allocation</div>
+									<div class="strat_curr_value">RMB<span>4,800.00</span></div>
+								</div>
+								<div class="strat_mid">
+									<div class="strat_label">Stake per Bet</div>
+									<div class="strat_curr_value">RMB<span>100.00</span></div>
+								</div>
+								<div class="strat_right">
+									<div class="strat_label">Profit</div>
+									<div class="strat_curr_value">RMB<span class="win">+7,805.20</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="strat_card_wrp s_tab">
+						<div class="strat_card">
+							<div class="strat_hdr">
+								<div class="strat_name strat_bal">Balanced</div>
+								<i class="icon-fi-arrow-right"></i>
+							</div>
+							<div class="strat_row">
+								<div class="ai_img"><img src="../assets/public/layout/images/ai/chatGLM.svg" /></div>
+								<div class="strat_match_info">
+									<div class="strat_bet_sel">ChatGLM Serie A Match Results</div>
+									<div class="strat_bet_dtl">Draw No Bet</div>
+								</div>
+								<div class="strat_dtl_right">
+									<div class="strat_label">Profit %</div>
+									<div class="strat_value win">+10.50%</div>
+								</div>
+							</div>
+							<div class="strat_bottom">
+								<div class="strat_left">
+									<div class="strat_label">Allocation</div>
+									<div class="strat_curr_value">RMB<span>8,000.00</span></div>
+								</div>
+								<div class="strat_mid">
+									<div class="strat_label">Stake per Bet</div>
+									<div class="strat_curr_value">RMB<span>50.00</span></div>
+								</div>
+								<div class="strat_right">
+									<div class="strat_label">Profit</div>
+									<div class="strat_curr_value">RMB<span class="win">+562.70</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="strat_card_wrp s_tab sc_alert">
+						<div class="strat_card">
+							<div class="strat_hdr">
+								<div class="strat_name strat_agg">Aggressive</div>
+								<i class="icon-fi-arrow-right"></i>
+							</div>
+							<div class="strat_row">
+								<div class="ai_img"><img src="../assets/public/layout/images/ai/kimi.svg" /></div>
+								<div class="strat_match_info">
+									<div class="strat_bet_sel">K3 Goalscorer Momentum</div>
+									<div class="strat_bet_dtl">In-form player goals and shots</div>
+								</div>
+								<div class="strat_dtl_right">
+									<div class="strat_label">Profit %</div>
+									<div class="strat_value lose">-20.00%</div>
+								</div>
+							</div>
+							<div class="strat_bottom">
+								<div class="strat_left">
+									<div class="strat_label">Allocation</div>
+									<div class="strat_curr_value">RMB<span>5,500.00</span></div>
+								</div>
+								<div class="strat_mid">
+									<div class="strat_label">Stake per Bet</div>
+									<div class="strat_curr_value">RMB<span>50.00</span></div>
+								</div>
+								<div class="strat_right">
+									<div class="strat_label">Profit</div>
+									<div class="strat_curr_value">RMB<span class="lose">-1,232.60</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="strat_card_msg">
+							<div class="strat_msg_info">
+								<i class="icon-fi-warning-border"></i>
+								<div class="strat_msg_grp">
+									<div class="strat_msg_main">Insufficient Account Balance</div>
+									<div class="strat_msg_sub">Top up to continue copying.</div>
+								</div>
+							</div>
+							<div class="ss_tml_btn">
+								<i class="icon-fi-resume"></i>
+								Resume
+							</div>
+						</div>
+					</div>
+					<div class="strat_card_wrp s_tab sc_alert">
+						<div class="strat_card">
+							<div class="strat_hdr">
+								<div class="strat_name strat_agg">Aggressive</div>
+								<i class="icon-fi-arrow-right"></i>
+							</div>
+							<div class="strat_row">
+								<div class="ai_img"><img src="../assets/public/layout/images/ai/perplexity.svg" /></div>
+								<div class="strat_match_info">
+									<div class="strat_bet_sel">Perplexity EUROL Moneyline</div>
+									<div class="strat_bet_dtl">Over 2.5 Goals</div>
+								</div>
+								<div class="strat_dtl_right">
+									<div class="strat_label">Profit %</div>
+									<div class="strat_value">--</div>
+								</div>
+							</div>
+							<div class="strat_bottom">
+								<div class="strat_left">
+									<div class="strat_label">Allocation</div>
+									<div class="strat_curr_value">RMB<span>8,000.00</span></div>
+								</div>
+								<div class="strat_mid">
+									<div class="strat_label">Stake per Bet</div>
+									<div class="strat_curr_value">RMB<span>50.00</span></div>
+								</div>
+								<div class="strat_right">
+									<div class="strat_label">Profit</div>
+									<div class="strat_curr_value">RMB<span>--</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="strat_card_msg">
+							<div class="strat_msg_info">
+								<i class="icon-fi-warning-border"></i>
+								<div class="strat_msg_grp">
+									<div class="strat_msg_main">Insufficient Account Balance</div>
+									<div class="strat_msg_sub">Top up to continue copying.</div>
+								</div>
+							</div>
+							<div class="ss_tml_btn disabled">
+								<i class="icon-fi-resume"></i>
+								Resume
+							</div>
+						</div>
+					</div>
+					<div class="strat_card_wrp s_tab sc_inactive">
+						<div class="strat_card">
+							<div class="strat_hdr">
+								<div class="strat_name strat_con">Conservative</div>
+							</div>
+							<div class="strat_row">
+								<div class="ai_img"><img src="../assets/public/layout/images/ai/gemini.svg" /></div>
+								<div class="strat_match_info">
+									<div class="strat_bet_sel">3.6 Flash Stable Value</div>
+									<div class="strat_bet_dtl">Lower-risk goals and handicaps</div>
+								</div>
+								<div class="strat_dtl_right">
+									<div class="strat_label">Profit %</div>
+									<div class="strat_value win">+25.00%</div>
+								</div>
+							</div>
+							<div class="strat_bottom">
+								<div class="strat_left">
+									<div class="strat_label">Allocation</div>
+									<div class="strat_curr_value">RMB<span>5,500.00</span></div>
+								</div>
+								<div class="strat_mid">
+									<div class="strat_label">Stake per Bet</div>
+									<div class="strat_curr_value">RMB<span>50.00</span></div>
+								</div>
+								<div class="strat_right">
+									<div class="strat_label">Profit</div>
+									<div class="strat_curr_value">RMB<span class="win">+7,805.20</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="strat_card_msg">
+							<div class="strat_msg_info">
+								<i class="icon-fi-warning-border"></i>
+								<div class="strat_msg_grp">
+									<div class="strat_msg_main">Stopped Copying</div>
+									<div class="strat_msg_sub">Copy strategy again.</div>
+								</div>
+							</div>
+							<div class="ss_tml_btn" data-ai-copy-again="true">
+								<i class="icon-fi-ai-refresh"></i>
+								Copy
+							</div>
+						</div>
+					</div>
+					<div class="strat_card_wrp s_tab sc_inactive">
+						<div class="strat_card">
+							<div class="strat_hdr">
+								<div class="strat_name strat_bal">Balanced</div>
+							</div>
+							<div class="strat_row">
+								<div class="ai_img"><img src="../assets/public/layout/images/ai/mistral.svg" /></div>
+								<div class="strat_match_info">
+									<div class="strat_bet_sel">Mistral Live Momentum</div>
+									<div class="strat_bet_dtl">Live goals and handicaps based on momentum</div>
+								</div>
+								<div class="strat_dtl_right">
+									<div class="strat_label">Profit %</div>
+									<div class="strat_value win">+10.50%</div>
+								</div>
+							</div>
+							<div class="strat_bottom">
+								<div class="strat_left">
+									<div class="strat_label">Allocation</div>
+									<div class="strat_curr_value">RMB<span>5,500.00</span></div>
+								</div>
+								<div class="strat_mid">
+									<div class="strat_label">Stake per Bet</div>
+									<div class="strat_curr_value">RMB<span>100.00</span></div>
+								</div>
+								<div class="strat_right">
+									<div class="strat_label">Profit</div>
+									<div class="strat_curr_value">RMB<span class="win">+562.70</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="strat_card_msg">
+							<div class="strat_msg_info">
+								<i class="icon-fi-warning-border"></i>
+								<div class="strat_msg_grp">
+									<div class="strat_msg_main">Strategy Unavailable</div>
+									<div class="strat_msg_sub">This strategy is no longer available for copying.</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="fl_loading_wrp">
+					<div class="fl_loading">
+						<div class="fl_load_ring">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+					Loading...
+				</div>
+			</div>
+			<div class="footer_main devDontCopy_aiPB_footer"></div>
+		</div>
+		<div class="fltr_popup" id="selectfilter" style="display: none"></div>
+		<div class="devDontCopy_aiPB_popup"></div>
+
+		<script>
+			$(document).ready(function () {
+				var $popup = $('.devDontCopy_leaderboard_strategies');
+				var strategiesTabValues = ['active', 'inactive', 'noActiveStrategy', 'strategiesTabLoading'];
+				var leaderboardStrategiesDemoLoadDelay = 1000;
+				var leaderboardStrategiesDemoLoadTimer;
+				var leaderboardStrategiesDemoLoading = false;
+				var delayedLeaderboardStrategiesTabs = ['all', 'active', 'inactive'];
+				var initialMenu = sessionStorage.getItem('aiPlaybookLeaderboardMenu');
+
+				loadAiPlaybookShells(document);
+				sessionStorage.removeItem('aiPlaybookLeaderboardMenu');
+
+				if (initialMenu) {
+					$popup.data('leaderboardStrategiesMenu', initialMenu);
+				}
+
+				function isStrategiesTab($tab) {
+					var tabMenu = $tab.data('leaderboard-strategies-menu');
+
+					if (tabMenu) {
+						return tabMenu === 'strategies';
+					}
+
+					return $.inArray($tab.data('leaderboard-strategies-tab'), strategiesTabValues) !== -1;
+				}
+
+				function hasCurrentMenuCardClass($card) {
+					var activeMenuValue = $popup.find('.lb_menu_itm.active').first().data('leaderboard-strategies-menu');
+					var currentCardClass = activeMenuValue === 'strategies' ? 's_card' : 'l_card';
+
+					return $card.hasClass(currentCardClass);
+				}
+
+				function isActiveStrategyCard($card) {
+					return !$card.find('.strat_card_msg').length || $card.hasClass('sc_alert');
+				}
+
+				function isInactiveStrategyCard($card) {
+					return $card.find('.strat_card_msg').length > 0 && !$card.hasClass('sc_alert');
+				}
+
+				var leaderboardStrategiesConfig = {
+					menuGroups: [
+						{
+							value: 'leaderboard',
+							showSportTypeMessage: true,
+							tabFilter: function ($tab) {
+								return !isStrategiesTab($tab);
+							},
+							cardFilter: function ($card) {
+								return $card.hasClass('l_tab');
+							},
+						},
+						{
+							value: 'strategies',
+							tabFilter: function ($tab) {
+								return isStrategiesTab($tab);
+							},
+							cardFilter: function ($card) {
+								return $card.hasClass('s_tab');
+							},
+						},
+					],
+					tabGroups: [
+						{
+							value: 'all',
+							cardFilter: function ($card) {
+								return hasCurrentMenuCardClass($card);
+							},
+						},
+						{
+							value: 'old',
+							cardFilter: function ($card) {
+								return !hasCurrentMenuCardClass($card);
+							},
+						},
+						{
+							value: 'active',
+							cardFilter: function ($card) {
+								return hasCurrentMenuCardClass($card) && isActiveStrategyCard($card);
+							},
+						},
+						{
+							value: 'inactive',
+							cardFilter: function ($card) {
+								return hasCurrentMenuCardClass($card) && isInactiveStrategyCard($card);
+							},
+						},
+						{
+							value: 'oldActive',
+							cardFilter: function ($card) {
+								return !hasCurrentMenuCardClass($card) && isActiveStrategyCard($card);
+							},
+						},
+						{
+							value: 'oldInactive',
+							cardFilter: function ($card) {
+								return !hasCurrentMenuCardClass($card) && isInactiveStrategyCard($card);
+							},
+						},
+						{
+							value: 'noStrategy',
+							emptyState: {
+								mainText: 'No Strategies Available.',
+								subText: "We're preparing strategies for you. Check back soon!",
+								showButton: false,
+							},
+							cardFilter: function () {
+								return false;
+							},
+						},
+						{
+							value: 'pageLoading',
+							loadingState: {
+								showTopRow: false,
+								showSportTypeMessage: false,
+							},
+							cardFilter: function () {
+								return false;
+							},
+						},
+						{
+							value: 'leaderboardTabLoading',
+							loadingState: {
+								showTopRow: true,
+								showSportTypeMessage: true,
+							},
+							cardFilter: function () {
+								return false;
+							},
+						},
+						{
+							value: 'noActiveStrategy',
+							emptyState: {
+								mainText: 'No Active Strategy Yet.',
+								subText: 'Follow an AI strategy to get started.',
+								buttonText: 'Explore Strategies',
+								showButton: true,
+							},
+							cardFilter: function () {
+								return false;
+							},
+						},
+						{
+							value: 'strategiesTabLoading',
+							loadingState: {
+								showTopRow: true,
+								showSportTypeMessage: false,
+							},
+							cardFilter: function () {
+								return false;
+							},
+						},
+					],
+				};
+
+				$popup
+					.find('.n_back_link')
+					.off('click.leaderboardStrategiesBack')
+					.on('click.leaderboardStrategiesBack', function (e) {
+						e.preventDefault();
+						e.stopPropagation();
+
+						if (isAiPlaybookStandalonePage($popup)) {
+							if (goBackFromAiPlaybookPage()) {
+								return;
+							}
+
+							window.location.href = 'index.html';
+							return;
+						}
+
+						var $landingFooter = $('#ai_playbook_home').closest('.footer_main');
+
+						$popup.removeClass('popupOn');
+						$popup.hide();
+						setAiPlaybookHomeIconActive(false);
+						$('#selectfilter').hide().find('.fltr_grp_wrp').removeClass('show');
+						if ($landingFooter.data('leaderboardStrategiesWasVisible') !== false) {
+							$landingFooter.show();
+						}
+						popupOff();
+					});
+
+				lbMenu();
+				if (!isLeaderboardStrategiesTutorialActive()) {
+					startLeaderboardStrategiesPageLoading();
+				}
+				aiPlaybookTabs({
+					root: $popup,
+					namespace: 'leaderboardStrategiesTabs',
+					tabSelector: '.lb_top_rw .fl_comp_t',
+					cardSelector: '.strat_card_wrp',
+					menuSelector: '.lb_menu_itm',
+					menuData: 'leaderboardStrategiesMenu',
+					tabData: 'leaderboardStrategiesTab',
+					savedMenuData: 'leaderboardStrategiesMenu',
+					savedTabTextData: 'leaderboardStrategiesTabText',
+					menuGroups: leaderboardStrategiesConfig.menuGroups,
+					tabGroups: leaderboardStrategiesConfig.tabGroups,
+					beforeTabSync: startLeaderboardStrategiesTabLoading,
+					beforeMenuSync: startLeaderboardStrategiesMenuLoading,
+					afterSync: function () {
+						if (!leaderboardStrategiesDemoLoading) {
+							syncLeaderboardStrategiesState();
+						}
+					},
+				});
+				applyAiPlaybookCopiedStrategies($popup);
+				applyAiPlaybookStoppedStrategies($popup);
+				setupAiPlaybookFooter($popup);
+				loadAiGraphTemplates($popup);
+				leaderboardStrategiesDetails();
+				leaderboardStrategiesValueCountUp();
+				setLeaderboardStrategiesSticky();
+
+				function findLeaderboardStrategiesConfig(groups, value) {
+					var matchedGroup;
+
+					$.each(groups, function (_, group) {
+						if (group.value === value) {
+							matchedGroup = group;
+							return false;
+						}
+					});
+
+					return matchedGroup || {};
+				}
+
+				function getLeaderboardStrategiesTabValue($tab) {
+					return $tab.data('leaderboard-strategies-tab') || $tab.find('.item').text().trim();
+				}
+
+				function isLeaderboardStrategiesOldTab($tab) {
+					return $.inArray(getLeaderboardStrategiesTabValue($tab), ['old', 'oldActive', 'oldInactive']) !== -1;
+				}
+
+				function syncLeaderboardStrategiesAmendClass($tab) {
+					var $content = $popup.find('.n_content_wrap_wth_bcktop').first();
+
+					$content.toggleClass('ai_amend', !isLeaderboardStrategiesOldTab($tab));
+				}
+
+				function setLeaderboardStrategiesElementVisible($element, isVisible) {
+					$element.css('display', isVisible ? '' : 'none');
+				}
+
+				function isLeaderboardStrategiesTutorialActive() {
+					return !!sessionStorage.getItem('aiPlaybookTutorial');
+				}
+
+				function clearLeaderboardStrategiesDemoLoadTimer() {
+					if (leaderboardStrategiesDemoLoadTimer) {
+						clearTimeout(leaderboardStrategiesDemoLoadTimer);
+						leaderboardStrategiesDemoLoadTimer = null;
+					}
+				}
+
+				function showLeaderboardStrategiesLoading(loadingState) {
+					var $content = $popup.find('.n_content_wrap_wth_bcktop').first();
+
+					setLeaderboardStrategiesElementVisible($content.children('.lb_top_rw'), loadingState.showTopRow !== false);
+					setLeaderboardStrategiesElementVisible($content.children('.lb_exp'), loadingState.showSportTypeMessage === true);
+					setLeaderboardStrategiesElementVisible($content.children('.strat_card_grp'), false);
+					setLeaderboardStrategiesElementVisible($content.children('.fl_loading_wrp'), true);
+					$popup.find('.strat_no').hide();
+				}
+
+				function setLeaderboardStrategiesTabEdgeSpacing($visibleTabs) {
+					var $tabs = $popup.find('.lb_top_rw .fl_comp_t');
+
+					$tabs.css('margin-left', '');
+					$visibleTabs.first().css('margin-left', 0);
+				}
+
+				function showLeaderboardStrategiesMenuTabs($menuItem) {
+					var menuValue = $menuItem.data('leaderboard-strategies-menu');
+					var menuConfig = findLeaderboardStrategiesConfig(leaderboardStrategiesConfig.menuGroups, menuValue);
+					var $tabs = $popup.find('.lb_top_rw .fl_comp_t');
+					var $visibleTabs = menuConfig.tabFilter
+						? $tabs.filter(function () {
+								return menuConfig.tabFilter($(this));
+							})
+						: $tabs;
+					var $activeTab = $visibleTabs.filter('.active').first();
+
+					$tabs.not($visibleTabs).css('display', 'none').removeClass('active');
+					$visibleTabs.css('display', '');
+					setLeaderboardStrategiesTabEdgeSpacing($visibleTabs);
+
+					if (!$activeTab.length) {
+						$activeTab = $visibleTabs.first();
+					}
+
+					$tabs.removeClass('active');
+					$activeTab.addClass('active');
+					syncLeaderboardStrategiesAmendClass($activeTab);
+				}
+
+				function finishLeaderboardStrategiesPageLoading() {
+					leaderboardStrategiesDemoLoading = false;
+					leaderboardStrategiesDemoLoadTimer = null;
+					syncLeaderboardStrategiesState();
+				}
+
+				function startLeaderboardStrategiesPageLoading() {
+					var pageLoadingConfig = findLeaderboardStrategiesConfig(leaderboardStrategiesConfig.tabGroups, 'pageLoading');
+
+					if (isLeaderboardStrategiesTutorialActive()) {
+						leaderboardStrategiesDemoLoading = false;
+						return;
+					}
+
+					clearLeaderboardStrategiesDemoLoadTimer();
+					leaderboardStrategiesDemoLoading = true;
+					showLeaderboardStrategiesLoading(pageLoadingConfig.loadingState);
+					leaderboardStrategiesDemoLoadTimer = setTimeout(finishLeaderboardStrategiesPageLoading, leaderboardStrategiesDemoLoadDelay);
+				}
+
+				function shouldDelayLeaderboardStrategiesTab($tab) {
+					return $.inArray(getLeaderboardStrategiesTabValue($tab), delayedLeaderboardStrategiesTabs) !== -1;
+				}
+
+				function getLeaderboardStrategiesTabLoadingState() {
+					var $activeMenu = $popup.find('.lb_menu_itm.active').first();
+					var activeMenuValue = $activeMenu.data('leaderboard-strategies-menu');
+					var loadingValue = activeMenuValue === 'strategies' ? 'strategiesTabLoading' : 'leaderboardTabLoading';
+					var loadingConfig = findLeaderboardStrategiesConfig(leaderboardStrategiesConfig.tabGroups, loadingValue);
+
+					return loadingConfig.loadingState;
+				}
+
+				function getLeaderboardStrategiesMenuLoadingState($menuItem) {
+					var menuValue = $menuItem.data('leaderboard-strategies-menu');
+					var loadingValue = menuValue === 'strategies' ? 'strategiesTabLoading' : 'pageLoading';
+					var loadingConfig = findLeaderboardStrategiesConfig(leaderboardStrategiesConfig.tabGroups, loadingValue);
+
+					return loadingConfig.loadingState;
+				}
+
+				function startLeaderboardStrategiesTabLoading($tab, syncTabs) {
+					if (isLeaderboardStrategiesTutorialActive()) {
+						clearLeaderboardStrategiesDemoLoadTimer();
+						leaderboardStrategiesDemoLoading = false;
+						return true;
+					}
+
+					if (!shouldDelayLeaderboardStrategiesTab($tab)) {
+						clearLeaderboardStrategiesDemoLoadTimer();
+						leaderboardStrategiesDemoLoading = false;
+						return true;
+					}
+
+					clearLeaderboardStrategiesDemoLoadTimer();
+					leaderboardStrategiesDemoLoading = true;
+					$popup.find('.lb_top_rw .fl_comp_t').removeClass('active');
+					$tab.addClass('active');
+					syncLeaderboardStrategiesAmendClass($tab);
+					setLeaderboardStrategiesTabEdgeSpacing($tab.siblings(':visible').addBack().filter(':visible'));
+					showLeaderboardStrategiesLoading(getLeaderboardStrategiesTabLoadingState());
+
+					leaderboardStrategiesDemoLoadTimer = setTimeout(function () {
+						leaderboardStrategiesDemoLoading = false;
+						leaderboardStrategiesDemoLoadTimer = null;
+						syncTabs($tab);
+					}, leaderboardStrategiesDemoLoadDelay);
+
+					return false;
+				}
+
+				function startLeaderboardStrategiesMenuLoading($menuItem, syncTabs) {
+					if (isLeaderboardStrategiesTutorialActive()) {
+						clearLeaderboardStrategiesDemoLoadTimer();
+						leaderboardStrategiesDemoLoading = false;
+						return true;
+					}
+
+					clearLeaderboardStrategiesDemoLoadTimer();
+					leaderboardStrategiesDemoLoading = true;
+					showLeaderboardStrategiesMenuTabs($menuItem);
+					showLeaderboardStrategiesLoading(getLeaderboardStrategiesMenuLoadingState($menuItem));
+
+					leaderboardStrategiesDemoLoadTimer = setTimeout(function () {
+						leaderboardStrategiesDemoLoading = false;
+						leaderboardStrategiesDemoLoadTimer = null;
+						syncTabs();
+					}, leaderboardStrategiesDemoLoadDelay);
+
+					return false;
+				}
+
+				function syncLeaderboardStrategiesState() {
+					var $activeMenu = $popup.find('.lb_menu_itm.active').first();
+					var $activeTab = $popup.find('.lb_top_rw .fl_comp_t.active').first();
+					var activeMenuValue = $activeMenu.data('leaderboard-strategies-menu');
+					var activeTabValue = getLeaderboardStrategiesTabValue($activeTab);
+					var menuConfig = findLeaderboardStrategiesConfig(leaderboardStrategiesConfig.menuGroups, activeMenuValue);
+					var tabConfig = findLeaderboardStrategiesConfig(leaderboardStrategiesConfig.tabGroups, activeTabValue);
+					var emptyState = tabConfig.emptyState;
+					var loadingState = tabConfig.loadingState;
+					var $content = $popup.find('.n_content_wrap_wth_bcktop').first();
+					var $emptyState = $popup.find('.strat_no');
+					var $emptyStateButton = $emptyState.find('.ss_tml_btn');
+					var isLoading = !!loadingState;
+
+					syncLeaderboardStrategiesAmendClass($activeTab);
+
+					if (leaderboardStrategiesDemoLoading) {
+						return;
+					}
+
+					setLeaderboardStrategiesElementVisible($content.children('.lb_top_rw'), !isLoading || loadingState.showTopRow !== false);
+					setLeaderboardStrategiesElementVisible($content.children('.strat_card_grp'), !isLoading);
+					setLeaderboardStrategiesElementVisible($content.children('.fl_loading_wrp'), isLoading);
+					$emptyState.toggle(!isLoading && !!emptyState);
+					setLeaderboardStrategiesElementVisible($content.children('.lb_exp'), isLoading ? loadingState.showSportTypeMessage === true : menuConfig.showSportTypeMessage === true && !emptyState);
+					refreshAiGraphPreviewAlignment($content);
+
+					if (isLoading) {
+						return;
+					}
+
+					if (!emptyState) {
+						return;
+					}
+
+					$emptyState.find('.strat_main').text(emptyState.mainText);
+					$emptyState.find('.strat_sub').text(emptyState.subText);
+					$emptyStateButton.toggle(emptyState.showButton === true);
+
+					if (emptyState.buttonText) {
+						$emptyStateButton.text(emptyState.buttonText);
+					}
+				}
+
+				window.refreshAiPlaybookLeaderboardStrategiesCurrentTab = function () {
+					var $activeMenu = $popup.find('.lb_menu_itm.active').first();
+					var $activeTab = $popup.find('.lb_top_rw .fl_comp_t.active').first();
+					var activeMenuValue = $activeMenu.data('leaderboard-strategies-menu');
+					var activeTabValue = getLeaderboardStrategiesTabValue($activeTab);
+					var menuConfig = findLeaderboardStrategiesConfig(leaderboardStrategiesConfig.menuGroups, activeMenuValue);
+					var tabConfig = findLeaderboardStrategiesConfig(leaderboardStrategiesConfig.tabGroups, activeTabValue);
+					var $cards = $popup.find('.strat_card_wrp');
+					var $baseCards = menuConfig.cardFilter
+						? $cards.filter(function () {
+								return menuConfig.cardFilter($(this));
+							})
+						: $cards;
+					var $visibleCards = tabConfig.cardFilter
+						? $baseCards.filter(function () {
+								return tabConfig.cardFilter($(this));
+							})
+						: $baseCards;
+
+					$cards.not($visibleCards).css('display', 'none');
+					$visibleCards.css('display', '');
+					$cards.css('margin-bottom', '');
+					$visibleCards.last().css('margin-bottom', 0);
+					syncLeaderboardStrategiesState();
+				};
+
+				function leaderboardStrategiesDetails() {
+					$popup
+						.find('.strat_card_wrp')
+						.off('click.leaderboardStrategiesDetails')
+						.on('click.leaderboardStrategiesDetails', function (e) {
+							var $card = $(this);
+							var isStrategiesEntry = $card.hasClass('s_tab');
+							var isActiveStrategy = isStrategiesEntry && !$card.find('.strat_card_msg').length;
+							var isAlertStrategy = $card.hasClass('s_tab') && $card.hasClass('sc_alert');
+							var isTopUpCard =
+								$card.find('.ss_tml_btn').filter(function () {
+									var buttonText = $.trim($(this).text()).replace(/\s+/g, ' ').toLowerCase();
+
+									return $(this).find('.icon-fi-topup').length || buttonText === 'top up';
+								}).length > 0;
+							var isDisabledTopUpCard =
+								$card.find('.ss_tml_btn.disabled').filter(function () {
+									var buttonText = $.trim($(this).text()).replace(/\s+/g, ' ').toLowerCase();
+
+									return $(this).find('.icon-fi-topup').length || buttonText === 'top up';
+								}).length > 0;
+							var isResumeCard =
+								$card.find('.ss_tml_btn').filter(function () {
+									return $.trim($(this).text()).replace(/\s+/g, ' ').toLowerCase() === 'resume';
+								}).length > 0;
+							var isDisabledResumeCard =
+								$card.find('.ss_tml_btn.disabled').filter(function () {
+									return $.trim($(this).text()).replace(/\s+/g, ' ').toLowerCase() === 'resume';
+								}).length > 0;
+							var isCopyAgainCard =
+								$card.find('.ss_tml_btn').filter(function () {
+									return $(this).attr('data-ai-copy-again') === 'true';
+								}).length > 0;
+							var isCopied = !isCopyAgainCard && (isStrategiesEntry || isTopUpCard || isResumeCard || $card.data('aiPlaybookCopied') === true || $card.find('.ss_tml_btn.done').length > 0);
+							var allocationVariant = $card.data('aiPlaybookAllocationVariant') || (isDisabledResumeCard ? 'resumeDisabled' : isResumeCard ? 'resume' : isDisabledTopUpCard ? 'alertDisabled' : isAlertStrategy || isTopUpCard ? 'alert' : 'normal');
+
+							if ($(e.target).closest('.ss_tml_btn').length) {
+								return;
+							}
+
+							if ($card.hasClass('sc_inactive') && !$card.find('.strat_card_msg .ss_tml_btn').length) {
+								return;
+							}
+
+							$popup.data('leaderboardStrategiesMenu', $popup.find('.lb_menu_itm.active').data('leaderboard-strategies-menu'));
+							$popup.data('leaderboardStrategiesTabText', $popup.find('.fl_comp_t.active:visible .item').text().trim());
+							if (isCopyAgainCard) {
+								$card.data('aiPlaybookCopyAgainEntry', true);
+							} else {
+								$card.removeData('aiPlaybookCopyAgainEntry');
+							}
+							window.aiPlaybookActiveStrategyCard = $card;
+							$(document).off('click.copyStrategySmallpop');
+							saveAiPlaybookStrategyDetailsState($card, {
+								activeTab: isCopied ? 'allocation' : 'overview',
+								allocationVariant: allocationVariant,
+								isCopied: isCopied,
+								copyAgainEntry: isCopyAgainCard,
+							});
+							if (isAiPlaybookStandalonePage($popup)) {
+								goAiPlaybookPage('strategyDetails');
+								return;
+							}
+							showAiPlaybookStrategyDetails({
+								afterShow: function () {
+									if ($.isFunction(window.syncAiPlaybookStrategyDetailsFromCard)) {
+										window.syncAiPlaybookStrategyDetailsFromCard($card);
+									}
+
+									if (isCopied && $.isFunction(window.showAiPlaybookCopiedStrategyDetails)) {
+										window.showAiPlaybookCopiedStrategyDetails({
+											activeTab: 'allocation',
+											allocationVariant: allocationVariant,
+											copyAgainEntry: isCopyAgainCard,
+										});
+										return;
+									}
+
+									if ($.isFunction(window.resetAiPlaybookStrategyDetails)) {
+										window.resetAiPlaybookStrategyDetails();
+									}
+								},
+							});
+						});
+				}
+
+				function leaderboardStrategiesValueCountUp() {
+					var countUpDuration = 400;
+					var countUpStep = 0.5;
+
+					function formatCountUpValue(value, format) {
+						var parts = Math.abs(value).toFixed(format.decimals).split('.');
+						var sign = value < 0 ? '-' : format.showPlus && value > 0 ? '+' : '';
+
+						if (format.useComma) {
+							parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+						}
+
+						return format.prefix + sign + parts.join('.') + format.suffix;
+					}
+
+					$popup
+						.find('.strat_card_wrp.l_tab .strat_value')
+						.off('click.leaderboardStrategiesCountUp')
+						.on('click.leaderboardStrategiesCountUp', function (e) {
+							var $value = $(this);
+							var format = $value.data('countUpFormat');
+							var startTime;
+
+							e.stopPropagation();
+
+							if (!format) {
+								var text = $.trim($value.text());
+								var match = text.match(/^([^\d+-]*)([+-]?)([\d,]+(?:\.\d+)?)(.*)$/);
+
+								if (!match) {
+									return;
+								}
+
+								var isLose = $value.hasClass('lose') || (!$value.hasClass('win') && match[2] === '-');
+
+								format = {
+									prefix: match[1],
+									showPlus: $value.hasClass('win') || match[2] === '+',
+									current: parseFloat(match[3].replace(/,/g, '')) * (isLose ? -1 : 1),
+									step: isLose ? -countUpStep : countUpStep,
+									decimals: Math.max((match[3].split('.')[1] || '').length, 2),
+									useComma: match[3].indexOf(',') !== -1,
+									suffix: match[4],
+								};
+								$value.data('countUpFormat', format);
+							}
+
+							cancelAnimationFrame($value.data('countUpFrame'));
+
+							var fromValue = format.current;
+							var toValue = (format.target === undefined ? fromValue : format.target) + format.step;
+
+							format.target = toValue;
+
+							function step(timestamp) {
+								if (!startTime) {
+									startTime = timestamp;
+								}
+
+								var progress = Math.min((timestamp - startTime) / countUpDuration, 1);
+								var eased = 1 - Math.pow(1 - progress, 3);
+
+								format.current = fromValue + (toValue - fromValue) * eased;
+								$value.text(formatCountUpValue(format.current, format));
+
+								if (progress < 1) {
+									$value.data('countUpFrame', requestAnimationFrame(step));
+								}
+							}
+
+							$value.data('countUpFrame', requestAnimationFrame(step));
+						});
+				}
+			});
+		</script>
+	</body>
+</html>

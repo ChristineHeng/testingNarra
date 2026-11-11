@@ -1,0 +1,276 @@
+@use "sass:color";
+@use "sass:list";
+@use "sass:meta";
+@use "../assets/themes/colours/brand"as brand;
+@use "../assets/themes/colours/config"as config;
+// all = output layout + theme
+// layout = output layout CSS only
+// theme = output theme CSS only
+$cssType: all !default;
+
+@mixin layout {
+    @if $cssType==all or $cssType==layout {
+        @content;
+    }
+}
+
+@mixin theme {
+    @if $cssType==all or $cssType==theme {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @if config.$viewMobile {
+        @content;
+    }
+}
+
+@mixin web {
+    @if config.$viewWeb {
+        @content;
+    }
+}
+
+@mixin mAsia {
+    @if config.$viewMAsia {
+        @content;
+    }
+}
+
+@mixin mEuro {
+    @if config.$viewMEuro {
+        @content;
+    }
+}
+
+@mixin mCyberbattle {
+    @if config.$viewMCyberbattle {
+        @content;
+    }
+}
+
+@mixin wAsia {
+    @if config.$viewWAsia {
+        @content;
+    }
+}
+
+@mixin mAsiaCyberbattle {
+    @if config.$viewMAsiaCyberbattle {
+        @content;
+    }
+}
+
+@mixin mAsiaEuro {
+    @if config.$viewMAsiaEuro {
+        @content;
+    }
+}
+
+// @mixin viewName($viewName) {
+//     @if config.$activeView==$viewName {
+//         @content;
+//     }
+// }
+// @mixin viewNames($viewNames...) {
+//     @if list.index($viewNames, config.$activeView) {
+//         @content;
+//     }
+// }
+// @mixin notViewName($viewName) {
+//     @if config.$activeView !=$viewName {
+//         @content;
+//     }
+// }
+// @mixin notViewNames($viewNames...) {
+//     @if not list.index($viewNames, config.$activeView) {
+//         @content;
+//     }
+// }
+@mixin languageName($languageName) {
+    @if config.$language==$languageName {
+        @content;
+    }
+}
+
+@mixin languageNames($languageNames...) {
+    @if list.index($languageNames, config.$language) {
+        @content;
+    }
+}
+
+@mixin notLanguageName($languageName) {
+    @if config.$language !=$languageName {
+        @content;
+    }
+}
+
+@mixin notLanguageNames($languageNames...) {
+    @if not list.index($languageNames, config.$language) {
+        @content;
+    }
+}
+
+@mixin darkTheme {
+    @if config.$themeType=="dark_theme" {
+        @content;
+    }
+}
+
+@mixin brightTheme {
+    @if config.$themeType=="bright_theme" {
+        @content;
+    }
+}
+
+@mixin redTheme {
+    @if config.$themeRed {
+        @content;
+    }
+}
+
+@mixin notRedTheme {
+    @if not config.$themeRed {
+        @content;
+    }
+}
+
+@mixin themeName($themeName) {
+    @if config.$theme==$themeName {
+        @content;
+    }
+}
+
+@mixin themeNames($themeNames...) {
+    @if list.index($themeNames, config.$theme) {
+        @content;
+    }
+}
+
+@mixin notThemeName($themeName) {
+    @if config.$theme !=$themeName {
+        @content;
+    }
+}
+
+@mixin notThemeNames($themeNames...) {
+    @if not list.index($themeNames, config.$theme) {
+        @content;
+    }
+}
+
+@mixin highlightColor($important: false) {
+    $imp: if(sass($important): '!important'; else: '');
+
+    @include notRedTheme {
+        @include themeName(default1) {
+            color: #{brand.t(Orange)} #{$imp};
+        }
+
+        @include notThemeName(default1) {
+            color: #{brand.t(ActiveLight)} #{$imp};
+        }
+    }
+
+    @include redTheme {
+        color: #{brand.t(PeachHDP)} #{$imp};
+    }
+}
+
+@mixin backgroundAlpha($value, $opacity, $fallback: transparent, $border-color: transparent) {
+    @if $fallback==null or meta.type-of($fallback) !="color" {
+        $fallback: transparent;
+    }
+
+    $c: $fallback;
+
+    @if $value !=null and meta.type-of($value)=="color" {
+        $c: $value;
+    }
+
+    @else {
+        $c: brand.tcolor($value, $fallback);
+    }
+
+    @if $c==null or meta.type-of($c) !="color" {
+        $c: $fallback;
+    }
+
+    background: color.change($c, $alpha: $opacity);
+
+    @if $border-color !=null {
+        border-color: $border-color;
+    }
+}
+
+@mixin lazyLoading {
+    @include layout {
+        @include mobile {
+            position: relative;
+            overflow: hidden;
+            @content;
+        }
+    }
+
+    @include theme {
+        @include mobile {
+            @include brightTheme {
+                @include backgroundAlpha(brand.t(DarkBlack), 0.05);
+            }
+
+            @include darkTheme {
+                @include backgroundAlpha(brand.t(White), 0.05);
+            }
+        }
+    }
+
+    &::before {
+        @include layout {
+            @include mobile {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 50%;
+                z-index: 1;
+                width: 500%;
+                margin-left: -250%;
+                -webkit-animation: ldAmination 0.8s linear infinite;
+                animation: ldAmination 0.8s linear infinite;
+                content: " ";
+                pointer-events: none;
+            }
+        }
+
+        @include theme {
+            @include mobile {
+                @include brightTheme {
+                    background: linear-gradient(to right, transparent 46%, rgba(255, 255, 255, 0.5) 50%, transparent 54%) 50% 50%;
+                }
+
+                @include darkTheme {
+                    background: linear-gradient(to right, transparent 46%, rgba(255, 255, 255, 0.15) 50%, transparent 54%) 50% 50%;
+                }
+            }
+        }
+    }
+
+    &::after {
+        @include theme {
+            @include mobile {
+                background: linear-gradient(to right, transparent 46%, rgba(255, 255, 255, 0.15) 50%, transparent 54%) 50% 50%;
+            }
+        }
+    }
+}
+
+@mixin txtOpacity($value, $opacity, $fallback: transparent) {
+    $c: $fallback;
+
+    @if $value !=null and meta.type-of($value)=="color" {
+        $c: $value;
+    }
+
+    color: color.change($c, $alpha: $opacity);
+}

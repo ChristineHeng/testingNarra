@@ -1,0 +1,107 @@
+$activeView: mAsia !default;
+@use '../../../themes/colours/config'with ($activeView: $activeView,
+    $view: asia,
+    $language: vn,
+);
+@use "../../layout/css/base"as base;
+@use './font';
+@use '../../layout/css/layout_shared';
+@use '../../layout/css/_fl_layout_shared';
+@use '../../layout/css/layout_sub_asia';
+$n_font1: 8px;
+
+// .n_sev_content { // sev (moved)
+//     >.single {
+//         display: block !important;
+//         .sev_content_item {
+//             width: 100% !important;
+//             &:not(:first-child) {
+//                 margin-top: 5px;
+//             }
+//         }
+//     }
+// }
+// .handicap {
+//     .title { // ttl (moved)
+//         padding-right: 2px;
+//     }
+// }
+// .n_header {
+//     &.n_header_sports,
+//     &.n_header_promo {
+//         .title { // ttl (moved)
+//             font-size: $n_font1 + 4px !important;
+//         }
+//     }
+// }
+.n_footer {
+
+    // font-size: $n_font1 + 3px !important;
+    .item:first-child:nth-last-child(5),
+    .item:first-child:nth-last-child(5)~.item {
+        width: calc(75% / 4);
+        font-size: 9px;
+
+        &:has(.icon .icon-fi-n-myfav),
+        &:has(.icon .icon-fi-n-myfav-active) {
+            width: 25%;
+        }
+
+        &:has(~ .ply_mask) {
+            width: calc(100% / 4);
+        }
+    }
+}
+
+// .pop_tutorial {
+//     .result_wrap {
+//         font-size: $n_font1 + 2px;
+//     }
+// }
+// rwd_switch_ol not in used already
+// .rwd_switch_ol {
+//     .tab_select {
+//         font-size: $n_font1 + 3px;
+//     }
+// }
+// filter bar
+// .filter_itm_wrp {
+//     margin-right: 2px;
+//     div {
+//         padding: 2px;
+//     }
+// }
+// .n_header_short {
+//     .tab_group .tab {
+//         @include base.flexbox();
+//         @include base.alignItems(center);
+//         max-width: 20%;
+//         font-size: base.$n_font4;
+//     }
+// }
+/*customization for calendar datepicker*/
+.fl .react-datepicker__day-name {
+    font-size: 11px;
+}
+
+@media screen and (max-width: 400px) {
+    .react-datepicker__day-names {
+        font-size: $n_font1 + 2px;
+    }
+}
+
+// [DES-808] Soccer Player Proposition Bet Type - start
+// .sld_new { // sev (moved)
+//     right: 0px;
+// }
+// [DES-808] Soccer Player Proposition Bet Type - end
+// pb_rmb_ls_tooltip not in used already
+// .pb_rmb_ls_tooltip {
+//     width: 180px;
+//     top: -101px;
+//     left: -82px;
+//     .fl & {
+//         top: -114px;
+//         left: -72px;
+//     }
+// }

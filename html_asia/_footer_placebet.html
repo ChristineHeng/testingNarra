@@ -1,0 +1,2365 @@
+<div class="prm_pb_mask" id="promo_pb_mask" style="display: none">
+	<div class="dot_box highlighted prm_pb_desc">如果您已完成您的每日活动而领取免费投注，您可以即将用来投注~</div>
+</div>
+<div class="n_footer_combo v2">
+	<div class="footer_add">
+		<span class="count">3</span> &nbsp; Bets Added <br />
+		<!-- [SFCRQ-10113] remove vnd's info icon and tooltip -->
+		<!-- <div class="info_wrp info_bottom">
+			<div class="info_icn"><i class="icon-fi-info"></i></div>
+			<div class="info_txt">VND 1 displayed in UI is equivalent to VND 1000 in actual value.</div>
+		</div> -->
+		<!--demo for high content, dev don't copy-->
+		<div class="betslip_popup" style="position: absolute; font-size: 9px; font-weight: normal; bottom: 4px; left: 40px">High</div>
+	</div>
+	<!--demo for short currency code + normal balance-->
+	<div class="balance_wrp">
+		<div class="ftr_bal" id="pb_status_demo_only">Balance FARTCOINNNN 100,000,000.0000</div>
+		<!-- default         : no extra class beside "free_bal" class
+		no available free bet: add "disable" class beside "free_bal" class -->
+		<div class="free_bal">180 免費投注</div>
+	</div>
+	<div class="footer_arrow"><i class="icon-fi-arrow-down1"></i></div>
+</div>
+<div class="pb_content">
+	<div class="tab_nav tab_nav_2 slider_wrap pseudo parlay_boost">
+		<div class="ob_tut ob_tut_3 highlighted" id="obTut3" style="display: none">
+			<div class="dot_box highlighted">New parlay bet tab has been added to the bet slip, allowing up to 5 selections to be added.</div>
+			<svg class="rec_arrow highlighted tutorialMockNewArrow" xmlns="http://www.w3.org/2000/svg" width="55" height="50" viewBox="0 0 38.12 50" style="display: none">
+				<path d="M4.35355 46.4339C4.15829 46.6292 3.84171 46.6292 3.64645 46.4339L0.464466 43.252C0.269203 43.0567 0.269203 42.7401 0.464466 42.5449C0.659729 42.3496 0.976311 42.3496 1.17157 42.5449L4 45.3733L6.82843 42.5449C7.02369 42.3496 7.34027 42.3496 7.53553 42.5449C7.7308 42.7401 7.7308 43.0567 7.53553 43.252L4.35355 46.4339ZM48.4115 2.07251C41.0848 0.75534 30.1008 1.3784 20.9657 7.49584C11.8618 13.5924 4.5 25.2099 4.5 46.0804H3.5C3.5 24.9509 10.9715 12.9851 20.4093 6.66495C29.8158 0.365723 41.0819 -0.261215 48.5885 1.08828L48.4115 2.07251Z" />
+			</svg>
+			<svg class="rec_arrow rec_aRT tutorialMockOldArrow" xmlns="http://www.w3.org/2000/svg" width="38.12" height="50" viewBox="0 0 38.12 50" style="display: none">
+				<path d="M.92,50C.11,49.72-.01,49.09,0,48.33,.22,32.81,10.08,19.06,24.7,13.93c2.92-1.03,5.93-1.68,9.02-1.93,.06,0,.12-.02,.28-.05-.17-.18-.28-.32-.41-.44-3.03-3.04-6.06-6.08-9.1-9.12-.96-.96-.9-1.66,.21-2.39h.68c.3,.24,.63,.46,.9,.73,3.74,3.73,7.47,7.48,11.2,11.22,.82,.82,.84,1.39,.03,2.2-3.82,3.84-7.64,7.67-11.47,11.5-.61,.61-1.32,.65-1.85,.13-.53-.52-.49-1.24,.12-1.85,2.99-3.01,5.99-6.01,8.99-9.01,.12-.12,.24-.25,.33-.48-1.02,.15-2.04,.25-3.05,.46-11.77,2.46-20.2,9.17-25.24,20.08-1.96,4.24-2.86,8.76-2.88,13.44,0,.71-.19,1.27-.86,1.59H.92Z"></path>
+			</svg>
+		</div>
+		<div class="tab_nav_item active" id="btn_single">Bet Slips</div>
+		<div class="seperator">|</div>
+		<div class="tab_nav_item" id="btn_combo">Combo Slips</div>
+		<!-- DES-905 -->
+		<!-- <div class="seperator">|</div> -->
+		<!-- <div class="tab_nav_item" id="btn_parlay">Melhoria de Aposta Combinada</div> -->
+		<!-- END DES-905 -->
+		<!-- <div class="slider"></div> -->
+	</div>
+	<div class="bet_item_wrap loading_item" id="loading">
+		<div style="display: none">
+			<div class="loading">
+				<!-- <div class="loading_icon">
+				</div> -->
+				<div class="spinner_wrapper">
+					<i class="spinner"></i>
+					<i class="spinner"></i>
+					<i class="spinner"></i>
+					<i class="spinner"></i>
+					<i class="spinner"></i>
+				</div>
+			</div>
+			<br />
+			loading
+		</div>
+		<div class="fl_loading_wrp">
+			<div class="fl_loading">
+				<div class="fl_load_ring">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div style="display: none"></div>
+				</div>
+			</div>
+			Loading...
+		</div>
+	</div>
+	<!--/* SFCRQ-2149: dynamic single wager: demo: starts*/-->
+	<div class="bet_item_wrap" id="single_short" style="display: none">
+		<div class="betlist_item">
+			<div class="icn"><img src="../assets/public/layout/images/icon/icon_s1.png" /></div>
+			<div class="bet_item_content">
+				<div class="icn remove"><i class="icon-fi-minus"></i></div>
+				<div class="details">
+					<span class="selection">
+						<span class="bs_hl">Independiente del Valle. CHS</span>
+						<span class="handi change">(-0.5/1)</span>
+						<span class="fl_at">@</span>
+						<span class="up">
+							<span class="odds">2.23</span>
+							<span class="arrow"><i class="icon-fi-arrow-up"></i></span>
+						</span> </span
+					><br />
+					<div class="live_icon smaller_icon_v2">LIVE</div>
+					让球
+					<div class="score_det b_sprt">0-0</div>
+					<span class="betslip_odds_type">(EURO)</span><br />
+					Independiente del Valle. CHS vs Sociedade Esportiva Palmeiras CHS <br />
+					英格兰超级联赛 (05/06 15:30)
+				</div>
+				<div class="pb_input_wrp">
+					<div class="pb_input_box">
+						<div class="currency">RMB</div>
+						<!-- add class "active" when key in amount-->
+						<div class="inputbox">
+							5.00 - 1000.00
+							<div class="stk_multiplier">x2</div>
+						</div>
+						<div class="close">
+							<i class="icon-fi-close"></i>
+						</div>
+					</div>
+				</div>
+				<div class="alert_msg">选择的盘口已更改</div>
+				<div class="radioGroup">
+					<div class="dot_box dot_box_color highlighted prm_rd_mask"></div>
+					<svg class="rec_arrow" xmlns="http://www.w3.org/2000/svg" width="55" height="50" viewBox="0 0 38.12 50">
+						<path d="M4.35355 46.4339C4.15829 46.6292 3.84171 46.6292 3.64645 46.4339L0.464466 43.252C0.269203 43.0567 0.269203 42.7401 0.464466 42.5449C0.659729 42.3496 0.976311 42.3496 1.17157 42.5449L4 45.3733L6.82843 42.5449C7.02369 42.3496 7.34027 42.3496 7.53553 42.5449C7.7308 42.7401 7.7308 43.0567 7.53553 43.252L4.35355 46.4339ZM48.4115 2.07251C41.0848 0.75534 30.1008 1.3784 20.9657 7.49584C11.8618 13.5924 4.5 25.2099 4.5 46.0804H3.5C3.5 24.9509 10.9715 12.9851 20.4093 6.66495C29.8158 0.365723 41.0819 -0.261215 48.5885 1.08828L48.4115 2.07251Z" />
+						<!-- <path d="M.36,.33C1.02-.22,1.62,0,2.27,.41,15.45,8.6,22.13,24.14,18.98,39.31c-.63,3.03-1.62,5.94-3,8.72-.03,.06-.04,.12-.1,.27,.24-.05,.42-.08,.59-.12,4.17-1.03,8.34-2.06,12.5-3.09,1.32-.33,1.88,.09,1.94,1.41l-.35,.58c-.36,.13-.71,.3-1.09,.39-5.13,1.27-10.26,2.54-15.39,3.81-1.13,.28-1.62,0-1.9-1.11-1.32-5.25-2.63-10.51-3.93-15.76-.21-.84,.12-1.47,.85-1.65,.72-.18,1.32,.22,1.53,1.06,1.03,4.12,2.05,8.24,3.08,12.35,.04,.17,.09,.34,.24,.53,.4-.95,.84-1.88,1.18-2.85,3.96-11.35,2.57-22.03-4.17-31.99C8.32,8.01,4.92,4.91,.92,2.47,.31,2.1-.06,1.65,0,.91L.36,.33Z" /> -->
+					</svg>
+					<div class="dot_box highlighted prm_bt_desc">您可选择用钱包余额或者免费投注余额来投注。</div>
+					<!-- default         : no extra class beside "radioItm" class
+					selected             : add "active" class beside "radioItm" class
+					no available free bet: add "disable" class beside "radioItm" class -->
+					<div class="radioItm active">
+						<div class="radioBtn"></div>
+						賬戶餘額
+					</div>
+					<div class="radioSeperator"></div>
+					<div class="radioItm" id="mock_cb_trigger_tutorial">
+						<div class="radioBtn"></div>
+						Tutorial
+					</div>
+				</div>
+				<!--New:add more fast buttons-->
+				<div class="keypad_wrap new_keypad">
+					<div class="keypad_row">
+						<div class="keypad_itm fastbet">100</div>
+						<div class="keypad_itm fastbet">200</div>
+						<div class="keypad_itm fastbet">300</div>
+						<div class="keypad_itm fastbet">500</div>
+						<div class="keypad_itm fastbet">100000</div>
+					</div>
+					<div class="keypad_row">
+						<div class="keypad_itm">1</div>
+						<div class="keypad_itm">2</div>
+						<div class="keypad_itm">3</div>
+						<div class="keypad_itm fastbet">Max</div>
+					</div>
+					<div class="keypad_row num_spe">
+						<div class="keypad_itm">4</div>
+						<div class="keypad_itm">5</div>
+						<div class="keypad_itm">6</div>
+						<div class="keypad_itm delete">
+							<div class="itm"><i class="icon-fi-back"></i></div>
+						</div>
+						<div class="keypad_itm">7</div>
+						<div class="keypad_itm">8</div>
+						<div class="keypad_itm">9</div>
+					</div>
+					<div class="keypad_row">
+						<!-- add "disabled" class for disable effect -->
+						<div class="keypad_itm disabled">.</div>
+						<div class="keypad_itm">0</div>
+						<div class="keypad_itm">00</div>
+						<div class="keypad_itm">
+							<div class="itm"><i class="icon-fi-keyboard"></i></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="betlist_item">
+			<div class="icn"><img src="../assets/public/layout/images/icon/icon_s60.png" /></div>
+			<div class="bet_item_content">
+				<div class="icn remove"><i class="icon-fi-minus"></i></div>
+				<div class="details">
+					<span class="selection">
+						<span class="bs_hl">Winner</span>
+						<span class="fl_at">@</span>
+						<span>
+							<span class="odds">1.90</span>
+							<span class="arrow hide"><i class="icon-fi-arrow-up"></i></span>
+						</span> </span
+					><br />
+					Winner H2H - Team Blue<span class="betslip_odds_type">(EURO)</span>
+					<br />
+					#570452
+					<div class="mr_seperator b_sprt"></div>
+					Mountain Classic (05/06 15:30)
+				</div>
+				<div class="pb_input_wrp">
+					<div class="pb_input_box">
+						<div class="currency">RMB</div>
+						<!-- add class "active" when key in amount-->
+						<div class="inputbox">
+							5.00 - 1000.00
+							<div class="stk_multiplier disabled">x2</div>
+						</div>
+						<div class="close">
+							<i class="icon-fi-close"></i>
+						</div>
+					</div>
+				</div>
+				<div class="radioGroup">
+					<!-- default         : no extra class beside "radioItm" class
+					selected             : add "active" class beside "radioItm" class
+					no available free bet: add "disable" class beside "radioItm" class -->
+					<div class="radioItm active">
+						<div class="radioBtn"></div>
+						賬戶餘額
+					</div>
+					<div class="radioSeperator"></div>
+					<div class="radioItm">
+						<div class="radioBtn"></div>
+						免費投注
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--multiple button start-->
+		<div class="betlist_item">
+			<div class="icn"><img src="../assets/public/layout/images/icon/icon_s60.png" /></div>
+			<div class="bet_item_content">
+				<div class="icn remove"><i class="icon-fi-minus"></i></div>
+				<div class="details">
+					<span class="selection">
+						<span class="bs_hl">Winner</span>
+						<span class="fl_at">@</span>
+						<span>
+							<span class="odds">1.90</span>
+							<span class="arrow hide"><i class="icon-fi-arrow-up"></i></span>
+						</span> </span
+					><br />
+					Winner H2H - Team Yellow<span class="betslip_odds_type">(EURO)</span>
+					<br />
+					#570452
+					<div class="mr_seperator b_sprt"></div>
+					Mountain Classic (05/06 15:30)
+				</div>
+				<div class="pb_input_wrp">
+					<div class="pb_input_box">
+						<div class="currency">RMB</div>
+						<!-- add class "active" when key in amount-->
+						<div class="inputbox">
+							5.00 - 1000.00
+							<div class="stk_multiplier disabled">x2</div>
+						</div>
+						<div class="close">
+							<i class="icon-fi-close"></i>
+						</div>
+					</div>
+				</div>
+				<div class="radioGroup">
+					<!-- default         : no extra class beside "radioItm" class
+					selected             : add "active" class beside "radioItm" class
+					no available free bet: add "disable" class beside "radioItm" class -->
+					<div class="radioItm active">
+						<div class="radioBtn"></div>
+						賬戶餘額
+					</div>
+					<div class="radioSeperator"></div>
+					<div class="radioItm">
+						<div class="radioBtn"></div>
+						免費投注
+					</div>
+				</div>
+				<!-- old fast buttons <div class="keypad_wrap">
+					<div class="keypad_row">
+						<div class="keypad_itm fastbet">最高</div>
+						<div class="keypad_itm fastbet">+1000</div>
+						<div class="keypad_itm fastbet">+500</div>
+						<div class="keypad_itm fastbet">+100</div>
+						<div class="keypad_itm">
+							<div class="itm"><i class="icon-fi-keyboard"></i></div>
+						</div>
+					</div>
+					<div class="keypad_row">
+						<div class="keypad_itm">1</div>
+						<div class="keypad_itm">2</div>
+						<div class="keypad_itm">3</div>
+						<div class="keypad_itm">4</div>
+						<div class="keypad_itm">5</div>
+						<div class="keypad_itm">6</div>
+					</div>
+					<div class="keypad_row">
+						<div class="keypad_itm">7</div>
+						<div class="keypad_itm">8</div>
+						<div class="keypad_itm">9</div>
+						<div class="keypad_itm">0</div>
+						<div class="keypad_itm">.</div>
+						<div class="keypad_itm">
+							<div class="itm"><i class="icon-fi-back"></i></div>
+						</div>
+					</div>
+				</div> -->
+				<!--New:add more fast buttons-->
+				<div class="keypad_wrap new_keypad">
+					<div class="keypad_row">
+						<div class="keypad_itm fastbet">100</div>
+						<div class="keypad_itm fastbet">200</div>
+						<div class="keypad_itm fastbet">300</div>
+					</div>
+					<div class="keypad_row">
+						<div class="keypad_itm">1</div>
+						<div class="keypad_itm">2</div>
+						<div class="keypad_itm">3</div>
+						<div class="keypad_itm fastbet">Max</div>
+					</div>
+					<div class="keypad_row num_spe">
+						<div class="keypad_itm">4</div>
+						<div class="keypad_itm">5</div>
+						<div class="keypad_itm">6</div>
+						<div class="keypad_itm delete">
+							<div class="itm"><i class="icon-fi-back"></i></div>
+						</div>
+						<div class="keypad_itm">7</div>
+						<div class="keypad_itm">8</div>
+						<div class="keypad_itm">9</div>
+					</div>
+					<div class="keypad_row">
+						<div class="keypad_itm">.</div>
+						<div class="keypad_itm">0</div>
+						<div class="keypad_itm">00</div>
+						<div class="keypad_itm">
+							<div class="itm"><i class="icon-fi-keyboard"></i></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--multiple button end-->
+		<div class="betlist_item">
+			<div class="icn"><img src="../assets/public/layout/images/icon/icon_s60.png" /></div>
+			<div class="bet_item_content">
+				<div class="icn remove"><i class="icon-fi-minus"></i></div>
+				<div class="details">
+					<span class="selection">
+						<span class="bs_hl">Winner</span>
+						<span class="fl_at">@</span>
+						<span>
+							<span class="odds">1.90</span>
+							<span class="arrow hide"><i class="icon-fi-arrow-up"></i></span>
+						</span> </span
+					><br />
+					Winner H2H - Team Red<span class="betslip_odds_type">(EURO)</span>
+					<br />
+					#570452
+					<div class="mr_seperator b_sprt"></div>
+					Mountain Classic (05/06 15:30)
+				</div>
+				<div class="pb_input_wrp">
+					<div class="pb_input_box">
+						<div class="currency">RMB</div>
+						<!-- add class "active" when key in amount-->
+						<div class="inputbox">
+							5.00 - 1000.00
+							<div class="stk_multiplier">x2</div>
+						</div>
+						<div class="close">
+							<i class="icon-fi-close"></i>
+						</div>
+					</div>
+				</div>
+				<div class="radioGroup">
+					<!-- default         : no extra class beside "radioItm" class
+					selected             : add "active" class beside "radioItm" class
+					no available free bet: add "disable" class beside "radioItm" class -->
+					<div class="radioItm active">
+						<div class="radioBtn"></div>
+						賬戶餘額
+					</div>
+					<div class="radioSeperator"></div>
+					<div class="radioItm">
+						<div class="radioBtn"></div>
+						免費投注
+					</div>
+				</div>
+				<!--New:add more fast buttons-->
+				<div class="keypad_wrap new_keypad">
+					<div class="keypad_row">
+						<div class="keypad_itm fastbet">100</div>
+						<div class="keypad_itm fastbet">500</div>
+						<div class="keypad_itm fastbet">100000</div>
+					</div>
+					<div class="keypad_row">
+						<div class="keypad_itm">1</div>
+						<div class="keypad_itm">2</div>
+						<div class="keypad_itm">3</div>
+						<div class="keypad_itm fastbet">Max</div>
+					</div>
+					<div class="keypad_row num_spe">
+						<div class="keypad_itm">4</div>
+						<div class="keypad_itm">5</div>
+						<div class="keypad_itm">6</div>
+						<div class="keypad_itm delete">
+							<div class="itm"><i class="icon-fi-back"></i></div>
+						</div>
+						<div class="keypad_itm">7</div>
+						<div class="keypad_itm">8</div>
+						<div class="keypad_itm">9</div>
+					</div>
+					<div class="keypad_row">
+						<div class="keypad_itm">.</div>
+						<div class="keypad_itm">0</div>
+						<div class="keypad_itm">00</div>
+						<div class="keypad_itm">
+							<div class="itm"><i class="icon-fi-keyboard"></i></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="betlist_item">
+			<div class="icn"><img src="../assets/public/layout/images/icon/icon_s60.png" /></div>
+			<div class="bet_item_content">
+				<div class="icn remove"><i class="icon-fi-minus"></i></div>
+				<div class="details">
+					<span class="selection">
+						<span class="bs_hl">Winner</span>
+						<span class="fl_at">@</span>
+						<span>
+							<span class="odds">1.90</span>
+							<span class="arrow hide"><i class="icon-fi-arrow-up"></i></span>
+						</span> </span
+					><br />
+					Winner Time - Over <span class="change_alert changed">70s</span><span class="betslip_odds_type">(EURO)</span>
+					<br />
+					#570452
+					<div class="mr_seperator b_sprt"></div>
+					Mountain Classic (05/06 15:30)
+				</div>
+				<div class="pb_input_wrp">
+					<div class="pb_input_box">
+						<div class="currency">RMB</div>
+						<!-- add class "active" when key in amount-->
+						<div class="inputbox">
+							5.00 - 1000.00
+							<div class="stk_multiplier disabled">x2</div>
+						</div>
+						<div class="close">
+							<i class="icon-fi-close"></i>
+						</div>
+					</div>
+				</div>
+				<div class="radioGroup">
+					<!-- default         : no extra class beside "radioItm" class
+					selected             : add "active" class beside "radioItm" class
+					no available free bet: add "disable" class beside "radioItm" class -->
+					<div class="radioItm active">
+						<div class="radioBtn"></div>
+						賬戶餘額
+					</div>
+					<div class="radioSeperator"></div>
+					<div class="radioItm">
+						<div class="radioBtn"></div>
+						免費投注
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="betlist_item">
+			<div class="icn"><img src="../assets/public/layout/images/icon/icon_s60.png" /></div>
+			<div class="bet_item_content">
+				<div class="icn remove"><i class="icon-fi-minus"></i></div>
+				<div class="details">
+					<span class="selection">
+						<span class="bs_hl">Winner</span>
+						<span class="fl_at">@</span>
+						<span>
+							<span class="odds">1.90</span>
+							<span class="arrow hide"><i class="icon-fi-arrow-up"></i></span>
+						</span> </span
+					><br />
+					Winner Time - Over <span class="change_alert">70s</span><span class="betslip_odds_type">(EURO)</span>
+					<br />
+					#570452
+					<div class="mr_seperator b_sprt"></div>
+					Mountain Classic (05/06 15:30)
+				</div>
+				<div class="pb_input_wrp">
+					<div class="pb_input_box">
+						<div class="currency">RMB</div>
+						<!-- add class "active" when key in amount-->
+						<div class="inputbox">5.00 - 1000.00</div>
+						<div class="close">
+							<i class="icon-fi-close"></i>
+						</div>
+					</div>
+				</div>
+				<div class="radioGroup">
+					<!-- default         : no extra class beside "radioItm" class
+					selected             : add "active" class beside "radioItm" class
+					no available free bet: add "disable" class beside "radioItm" class -->
+					<div class="radioItm active">
+						<div class="radioBtn"></div>
+						賬戶餘額
+					</div>
+					<div class="radioSeperator"></div>
+					<div class="radioItm">
+						<div class="radioBtn"></div>
+						免費投注
+					</div>
+				</div>
+				<!--New:add more fast buttons-->
+				<div class="keypad_wrap new_keypad">
+					<div class="keypad_row">
+						<div class="keypad_itm fastbet">100</div>
+						<div class="keypad_itm fastbet">200</div>
+						<div class="keypad_itm fastbet">300</div>
+					</div>
+					<div class="keypad_row">
+						<div class="keypad_itm">1</div>
+						<div class="keypad_itm">2</div>
+						<div class="keypad_itm">3</div>
+						<div class="keypad_itm fastbet">Max</div>
+					</div>
+					<div class="keypad_row num_spe">
+						<div class="keypad_itm">4</div>
+						<div class="keypad_itm">5</div>
+						<div class="keypad_itm">6</div>
+						<div class="keypad_itm delete">
+							<div class="itm"><i class="icon-fi-back"></i></div>
+						</div>
+						<div class="keypad_itm">7</div>
+						<div class="keypad_itm">8</div>
+						<div class="keypad_itm">9</div>
+					</div>
+					<div class="keypad_row">
+						<div class="keypad_itm">.</div>
+						<div class="keypad_itm">0</div>
+						<div class="keypad_itm">00</div>
+						<div class="keypad_itm">
+							<div class="itm"><i class="icon-fi-keyboard"></i></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="betlist_item">
+			<div class="icn"><img src="../assets/public/layout/images/icon/icon_s60.png" /></div>
+			<div class="bet_item_content">
+				<div class="icn remove"><i class="icon-fi-minus"></i></div>
+				<div class="details">
+					<span class="selection">
+						<div class="mr_icon mr10">10</div>
+						<span class="bs_hl">Eagle</span>
+						<span class="fl_at">@</span>
+						<span>
+							<span class="odds">9.50</span>
+							<span class="arrow hide"><i class="icon-fi-arrow-up"></i></span>
+						</span> </span
+					><br />
+					Winning Position - Winner<span class="betslip_odds_type">(EURO)</span>
+					<br />
+					#570452
+					<div class="mr_seperator b_sprt"></div>
+					Mountain Classic (05/06 15:30)
+				</div>
+				<div class="pb_input_wrp">
+					<div class="pb_input_box">
+						<div class="currency">RMB</div>
+						<!-- add class "active" when key in amount-->
+						<div class="inputbox">5.00 - 1000.00</div>
+						<div class="close">
+							<i class="icon-fi-close"></i>
+						</div>
+					</div>
+				</div>
+				<div class="radioGroup">
+					<!-- default         : no extra class beside "radioItm" class
+					selected             : add "active" class beside "radioItm" class
+					no available free bet: add "disable" class beside "radioItm" class -->
+					<div class="radioItm active">
+						<div class="radioBtn"></div>
+						賬戶餘額
+					</div>
+					<div class="radioSeperator"></div>
+					<div class="radioItm">
+						<div class="radioBtn"></div>
+						免費投注
+					</div>
+				</div>
+				<!--New:add more fast buttons-->
+				<div class="keypad_wrap new_keypad">
+					<div class="keypad_row">
+						<div class="keypad_itm fastbet">100</div>
+						<div class="keypad_itm fastbet">200</div>
+						<div class="keypad_itm fastbet">300</div>
+						<div class="keypad_itm fastbet">500</div>
+						<div class="keypad_itm fastbet">100000</div>
+					</div>
+					<div class="keypad_row">
+						<div class="keypad_itm">1</div>
+						<div class="keypad_itm">2</div>
+						<div class="keypad_itm">3</div>
+						<div class="keypad_itm fastbet">Max</div>
+					</div>
+					<div class="keypad_row num_spe">
+						<div class="keypad_itm">4</div>
+						<div class="keypad_itm">5</div>
+						<div class="keypad_itm">6</div>
+						<div class="keypad_itm delete">
+							<div class="itm"><i class="icon-fi-back"></i></div>
+						</div>
+						<div class="keypad_itm">7</div>
+						<div class="keypad_itm">8</div>
+						<div class="keypad_itm">9</div>
+					</div>
+					<div class="keypad_row">
+						<div class="keypad_itm">.</div>
+						<div class="keypad_itm">0</div>
+						<div class="keypad_itm">00</div>
+						<div class="keypad_itm">
+							<div class="itm"><i class="icon-fi-keyboard"></i></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="betlist_item">
+			<div class="icn"><img src="../assets/public/layout/images/icon/icon_s60.png" /></div>
+			<div class="bet_item_content">
+				<div class="icn remove"><i class="icon-fi-minus"></i></div>
+				<div class="details">
+					<span class="selection">
+						<div class="mr_sti_bal">
+							<div class="mr_icon mr1">1</div>
+							<div class="mr_icon mr5">5</div>
+						</div>
+						<span class="bs_hl">Marble 1, 5</span>
+						<span class="fl_at">@</span>
+						<span>
+							<span class="odds">35</span>
+							<span class="arrow hide"><i class="icon-fi-arrow-up"></i></span>
+						</span> </span
+					><br />
+					Lightning 2<span class="betslip_odds_type">(EURO)</span>
+					<br />
+					#570452
+					<div class="mr_seperator b_sprt"></div>
+					Mountain Classic (05/06 15:30)
+				</div>
+				<div class="pb_input_wrp">
+					<div class="pb_input_box">
+						<div class="currency">RMB</div>
+						<!-- add class "active" when key in amount-->
+						<div class="inputbox">5.00 - 1000.00</div>
+						<div class="close">
+							<i class="icon-fi-close"></i>
+						</div>
+					</div>
+				</div>
+				<div class="radioGroup">
+					<!-- default         : no extra class beside "radioItm" class
+					selected             : add "active" class beside "radioItm" class
+					no available free bet: add "disable" class beside "radioItm" class -->
+					<div class="radioItm active">
+						<div class="radioBtn"></div>
+						賬戶餘額
+					</div>
+					<div class="radioSeperator"></div>
+					<div class="radioItm">
+						<div class="radioBtn"></div>
+						免費投注
+					</div>
+				</div>
+				<!--New:add more fast buttons-->
+				<div class="keypad_wrap new_keypad">
+					<div class="keypad_row">
+						<div class="keypad_itm fastbet">100</div>
+						<div class="keypad_itm fastbet">200</div>
+						<div class="keypad_itm fastbet">300</div>
+						<div class="keypad_itm fastbet">500</div>
+						<div class="keypad_itm fastbet">100000</div>
+					</div>
+					<div class="keypad_row">
+						<div class="keypad_itm">1</div>
+						<div class="keypad_itm">2</div>
+						<div class="keypad_itm">3</div>
+						<div class="keypad_itm fastbet">Max</div>
+					</div>
+					<div class="keypad_row num_spe">
+						<div class="keypad_itm">4</div>
+						<div class="keypad_itm">5</div>
+						<div class="keypad_itm">6</div>
+						<div class="keypad_itm delete">
+							<div class="itm"><i class="icon-fi-back"></i></div>
+						</div>
+						<div class="keypad_itm">7</div>
+						<div class="keypad_itm">8</div>
+						<div class="keypad_itm">9</div>
+					</div>
+					<div class="keypad_row">
+						<div class="keypad_itm">.</div>
+						<div class="keypad_itm">0</div>
+						<div class="keypad_itm">00</div>
+						<div class="keypad_itm">
+							<div class="itm"><i class="icon-fi-keyboard"></i></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- template for odds boost bet item -->
+		<div class="betlist_item">
+			<div class="icn"></div>
+			<div class="bet_item_content">
+				<div class="icn remove"><i class="icon-fi-minus"></i></div>
+				<div class="details">
+					<span class="selection">
+						<span class="bs_hl">CFCI U23</span>
+						<span class="handi">(-1)</span>
+						<span class="fl_at">@</span>
+						<span>
+							<span class="p_odds">0.70</span><i class="icon-fi-double-angle-right"></i><span class="b_odds">0.87<i class="icon-fi-odds-boost"></i></span>
+						</span> </span
+					><br />
+					Correct Score<span class="betslip_odds_type">(EURO)</span><br />
+					CFCI U23 vs Kopana FC (05/06 15:30)
+				</div>
+				<div class="pb_input_wrp">
+					<div class="pb_input_box">
+						<div class="currency">RMB</div>
+						<!-- add class "active" when key in amount-->
+						<div class="inputbox">5.00 - 1000.00</div>
+						<div class="close">
+							<i class="icon-fi-close"></i>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="alert_msg">选择的盘口已更改</div> -->
+				<!--New:add more fast buttons-->
+				<div class="keypad_wrap new_keypad" style="display: none">
+					<div class="keypad_row">
+						<div class="keypad_itm fastbet">100</div>
+						<div class="keypad_itm fastbet">200</div>
+						<div class="keypad_itm fastbet">300</div>
+					</div>
+					<div class="keypad_row">
+						<div class="keypad_itm">1</div>
+						<div class="keypad_itm">2</div>
+						<div class="keypad_itm">3</div>
+						<div class="keypad_itm fastbet">Max</div>
+					</div>
+					<div class="keypad_row num_spe">
+						<div class="keypad_itm">4</div>
+						<div class="keypad_itm">5</div>
+						<div class="keypad_itm">6</div>
+						<div class="keypad_itm delete">
+							<div class="itm"><i class="icon-fi-back"></i></div>
+						</div>
+						<div class="keypad_itm">7</div>
+						<div class="keypad_itm">8</div>
+						<div class="keypad_itm">9</div>
+					</div>
+					<div class="keypad_row">
+						<div class="keypad_itm">.</div>
+						<div class="keypad_itm">0</div>
+						<div class="keypad_itm">00</div>
+						<div class="keypad_itm">
+							<div class="itm"><i class="icon-fi-keyboard"></i></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="betlist_item">
+			<div class="icn"></div>
+			<div class="bet_item_content">
+				<div class="icn remove"><i class="icon-fi-minus"></i></div>
+				<div class="details">
+					<span class="selection">
+						<span class="bs_hl">CoconutShake32258774/CoconutShake32258774</span>
+						<span class="handi">(-1)</span>
+						<span class="fl_at">@</span>
+						<span>
+							<span class="p_odds">0.70</span><i class="icon-fi-double-angle-right"></i>
+							<span class="b_odds up">
+								0.87
+								<span class="arrow"><i class="icon-fi-arrow-up"></i></span>
+								<i class="icon-fi-odds-boost"></i>
+							</span>
+						</span>
+					</span>
+					<br />
+					Correct Score<span class="betslip_odds_type">(EURO)</span>
+					<br />
+					CFCI U23 vs Kopana FC (05/06 15:30)
+				</div>
+				<div class="pb_input_wrp">
+					<div class="pb_input_box">
+						<div class="currency">RMB</div>
+						<!-- add class "active" when key in amount-->
+						<div class="inputbox">5.00 - 1000.00</div>
+						<div class="close">
+							<i class="icon-fi-close"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="betlist_item">
+			<div class="icn"></div>
+			<div class="bet_item_content">
+				<div class="icn remove"><i class="icon-fi-minus"></i></div>
+				<div class="details">
+					<span class="selection">
+						<span class="bs_hl">CFCI U23</span>
+						<span class="handi">(-1)</span>
+						<span class="fl_at">@</span>
+						<span>
+							<span class="p_odds">0.70</span><i class="icon-fi-double-angle-right"></i>
+							<span class="b_odds down">
+								0.87
+								<span class="arrow"><i class="icon-fi-arrow-down"></i></span>
+								<i class="icon-fi-odds-boost"></i>
+							</span>
+						</span>
+					</span>
+					<br />
+					Correct Score<span class="betslip_odds_type">(EURO)</span>
+					<br />
+					CFCI U23 vs Kopana FC (05/06 15:30)
+				</div>
+				<div class="pb_input_wrp">
+					<div class="pb_input_box">
+						<div class="currency">RMB</div>
+						<!-- add class "active" when key in amount-->
+						<div class="inputbox">5.00 - 1000.00</div>
+						<div class="close">
+							<i class="icon-fi-close"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="betlist_item">
+			<div class="icn"><img src="../assets/public/layout/images/icon/icon_s1.png" /></div>
+			<div class="bet_item_content">
+				<div class="icn remove"><i class="icon-fi-minus"></i></div>
+				<div class="details">
+					<span class="selection">
+						<span>Match Parlay</span>
+						<span class="fl_at">@</span>
+						<span>
+							<span class="p_odds">6.10</span><i class="icon-fi-double-angle-right"></i>
+							<span class="b_odds">
+								6.58
+								<i class="icon-fi-odds-boost"></i>
+							</span>
+						</span>
+					</span>
+					<br />
+					<div class="omp enhanced_tl">
+						<div class="datetime">10/03 03:45</div>
+						<div class="ob_teams_wrp">
+							<div class="ob_team">
+								<div class="team_icon">
+									<img src="../assets/public/layout/images/team_home.svg" />
+								</div>
+								<div class="team_name">Lazio</div>
+							</div>
+							<span>vs</span>
+							<div class="ob_team">
+								<div class="team_icon">
+									<img src="../assets/public/layout/images/team_home.svg" />
+								</div>
+								<div class="team_name">US Sassuolo</div>
+							</div>
+						</div>
+						<div class="comp_name">Italy Serie A</div>
+						<div class="obp_wrp">
+							<div class="obp_i">
+								<div class="obp_t_wrp">
+									<div class="obp_t">Odd/Even <span class="bs_hl">Even</span><span class="betslip_odds_type">(EURO)</span></div>
+								</div>
+							</div>
+							<div class="obp_i">
+								<div class="obp_t_wrp">
+									<div class="obp_t">Total Goal <span class="bs_hl">4 - 6</span><span class="betslip_odds_type">(EURO)</span></div>
+								</div>
+							</div>
+							<div class="obp_i">
+								<div class="obp_t_wrp">
+									<div class="obp_t">US Sassuolo Clean Sheet <span class="bs_hl">US Sassuolo No</span><span class="betslip_odds_type">(EURO)</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pb_input_wrp">
+					<div class="pb_input_box">
+						<div class="currency">RMB</div>
+						<!-- add class "active" when key in amount-->
+						<div class="inputbox">
+							5.00 - 1000.00
+							<div class="stk_multiplier disabled">x2</div>
+						</div>
+						<div class="close">
+							<i class="icon-fi-close"></i>
+						</div>
+					</div>
+				</div>
+				<div class="radioGroup">
+					<!-- default         : no extra class beside "radioItm" class
+					selected             : add "active" class beside "radioItm" class
+					no available free bet: add "disable" class beside "radioItm" class -->
+					<div class="radioItm active">
+						<div class="radioBtn"></div>
+						賬戶餘額
+					</div>
+					<div class="radioSeperator"></div>
+					<div class="radioItm">
+						<div class="radioBtn"></div>
+						免費投注
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="betlist_item" style="display: none">
+			<div class="icn"><img src="../assets/public/layout/images/icon/icon_s63.png" /></div>
+			<div class="bet_item_content">
+				<div class="icn remove"><i class="icon-fi-minus"></i></div>
+				<div class="details">
+					<span class="selection">
+						<span class="bs_hl">Team One</span>
+						<span class="handi">(-1)</span>
+						<span class="fl_at">@</span>
+						<span>
+							<span class="odds">0.96</span>
+						</span>
+					</span>
+					<br />
+					全场让局<br />
+					Team One vs Evil Geniuses Black<br />
+					2022 S12 全球总决赛
+				</div>
+				<div class="pb_input_wrp">
+					<div class="pb_input_box">
+						<div class="currency">RMB</div>
+						<!-- add class "active" when key in amount-->
+						<div class="inputbox">5.00 - 1000.00</div>
+						<div class="close">
+							<i class="icon-fi-close"></i>
+						</div>
+					</div>
+				</div>
+				<div class="alert_msg">选择的盘口已更改</div>
+				<!--New:add more fast buttons-->
+				<div class="keypad_wrap new_keypad" style="display: none">
+					<div class="keypad_row">
+						<div class="keypad_itm fastbet">100</div>
+						<div class="keypad_itm fastbet">200</div>
+						<div class="keypad_itm fastbet">300</div>
+						<div class="keypad_itm fastbet">500</div>
+						<div class="keypad_itm fastbet">100000</div>
+					</div>
+					<div class="keypad_row">
+						<div class="keypad_itm">1</div>
+						<div class="keypad_itm">2</div>
+						<div class="keypad_itm">3</div>
+						<div class="keypad_itm fastbet">Max</div>
+					</div>
+					<div class="keypad_row num_spe">
+						<div class="keypad_itm">4</div>
+						<div class="keypad_itm">5</div>
+						<div class="keypad_itm">6</div>
+						<div class="keypad_itm delete">
+							<div class="itm"><i class="icon-fi-back"></i></div>
+						</div>
+						<div class="keypad_itm">7</div>
+						<div class="keypad_itm">8</div>
+						<div class="keypad_itm">9</div>
+					</div>
+					<div class="keypad_row">
+						<div class="keypad_itm">.</div>
+						<div class="keypad_itm">0</div>
+						<div class="keypad_itm">00</div>
+						<div class="keypad_itm">
+							<div class="itm"><i class="icon-fi-keyboard"></i></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bs_parlay">
+			<div class="betlist_item">
+				<div class="icn"><img src="../assets/public/layout/images/icon/icon_s1.png" /></div>
+				<div class="bet_item_content">
+					<div class="icn remove"><i class="icon-fi-minus"></i></div>
+					<div class="details">
+						<span class="selection">
+							<span>Parlay</span>
+							<span class="fl_at">@</span>
+							<span>
+								<span class="p_odds">0.70</span><i class="icon-fi-double-angle-right"></i><span class="b_odds">0.87<i class="icon-fi-odds-boost"></i></span>
+							</span> </span
+						><br />
+						<div class="obp_wrp obp_tli enhanced_tl">
+							<div class="obp_i">
+								<div class="obp_t_wrp">
+									<div class="obp_t datetime">09/03 21:00</div>
+									<div class="obp_t">Kocaelispor Clean Sheet <span class="bs_hl">Kocaelispor Yes</span><span class="betslip_odds_type">(EURO)</span></div>
+									<div class="obp_c">
+										<div>Eyupspor vs Kocaelispor</div>
+										<div>Turkey Super League</div>
+									</div>
+								</div>
+							</div>
+							<div class="obp_i">
+								<div class="obp_t_wrp">
+									<div class="obp_t datetime">09/03 21:00</div>
+									<div class="obp_t">Lokomotiv Moscow Clean Sheet <span class="bs_hl">Lokomotiv Moscow Yes</span><span class="betslip_odds_type">(EURO)</span></div>
+									<div class="obp_c">
+										<div>Eyupspor vs Kocaelispor</div>
+										<div>Turkey Super League</div>
+									</div>
+								</div>
+							</div>
+							<div class="obp_i">
+								<div class="obp_t_wrp">
+									<div class="obp_t datetime">09/03 21:00</div>
+									<div class="obp_t">Lokomotiv Moscow Clean Sheet <span class="bs_hl">Lokomotiv Moscow Yes</span><span class="betslip_odds_type">(EURO)</span></div>
+									<div class="obp_c">
+										<div>Eyupspor vs Kocaelispor</div>
+										<div>Turkey Super League</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pb_input_wrp">
+						<div class="pb_input_box">
+							<div class="currency">RMB</div>
+							<!-- add class "active" when key in amount-->
+							<div class="inputbox">
+								5.00 - 1000.00
+								<div class="stk_multiplier disabled">x2</div>
+							</div>
+							<div class="close">
+								<i class="icon-fi-close"></i>
+							</div>
+						</div>
+					</div>
+					<div class="radioGroup">
+						<!-- default         : no extra class beside "radioItm" class
+						selected             : add "active" class beside "radioItm" class
+						no available free bet: add "disable" class beside "radioItm" class -->
+						<div class="radioItm active">
+							<div class="radioBtn"></div>
+							賬戶餘額
+						</div>
+						<div class="radioSeperator"></div>
+						<div class="radioItm">
+							<div class="radioBtn"></div>
+							免費投注
+						</div>
+					</div>
+					<!--New:add more fast buttons-->
+					<div class="keypad_wrap new_keypad" style="display: none">
+						<div class="keypad_row">
+							<div class="keypad_itm fastbet">100</div>
+							<div class="keypad_itm fastbet">200</div>
+							<div class="keypad_itm fastbet">300</div>
+							<div class="keypad_itm fastbet">500</div>
+							<div class="keypad_itm fastbet">100000</div>
+						</div>
+						<div class="keypad_row">
+							<div class="keypad_itm">1</div>
+							<div class="keypad_itm">2</div>
+							<div class="keypad_itm">3</div>
+							<div class="keypad_itm fastbet">Max</div>
+						</div>
+
+						<div class="keypad_row num_spe">
+							<div class="keypad_itm">4</div>
+							<div class="keypad_itm">5</div>
+							<div class="keypad_itm">6</div>
+							<div class="keypad_itm delete">
+								<div class="itm"><i class="icon-fi-back"></i></div>
+							</div>
+							<div class="keypad_itm">7</div>
+							<div class="keypad_itm">8</div>
+							<div class="keypad_itm">9</div>
+						</div>
+						<div class="keypad_row">
+							<div class="keypad_itm">.</div>
+							<div class="keypad_itm">0</div>
+							<div class="keypad_itm">00</div>
+							<div class="keypad_itm">
+								<div class="itm"><i class="icon-fi-keyboard"></i></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bs_parlay">
+			<div class="betlist_item">
+				<div class="icn"><img src="../assets/public/layout/images/icon/icon_s1.png" /></div>
+				<div class="bet_item_content">
+					<div class="icn remove"><i class="icon-fi-minus"></i></div>
+					<div class="details">
+						<span class="selection">
+							<span>Lucky 8</span>
+							<span class="fl_at">@</span>
+							<span>
+								<span class="p_odds">0.70</span><i class="icon-fi-double-angle-right"></i><span class="b_odds">0.87<i class="icon-fi-odds-boost"></i></span>
+							</span> </span
+						><br />
+						<div class="obp_wrp obp_tli enhanced_tl">
+							<div class="obp_i">
+								<div class="obp_t_wrp">
+									<div class="obp_t datetime">09/03 21:00</div>
+									<div class="obp_t">Both Team To Score <span class="bs_hl">Yes</span><span class="betslip_odds_type">(EURO)</span></div>
+									<div class="obp_c">
+										<div>Croatia vs North Macedonia</div>
+										<div>International Friendly</div>
+									</div>
+								</div>
+							</div>
+							<div class="obp_i">
+								<div class="obp_t_wrp">
+									<div class="obp_t datetime">09/03 21:00</div>
+									<div class="obp_t">Both Team To Score <span class="bs_hl">Yes</span><span class="betslip_odds_type">(EURO)</span></div>
+									<div class="obp_c">
+										<div>Croatia vs North Macedonia</div>
+										<div>International Friendly</div>
+									</div>
+								</div>
+							</div>
+							<div class="obp_i">
+								<div class="obp_t_wrp">
+									<div class="obp_t datetime">09/03 21:00</div>
+									<div class="obp_t">Both Team To Score <span class="bs_hl">Yes</span><span class="betslip_odds_type">(EURO)</span></div>
+									<div class="obp_c">
+										<div>Croatia vs North Macedonia</div>
+										<div>International Friendly</div>
+									</div>
+								</div>
+							</div>
+							<div class="obp_i">
+								<div class="obp_t_wrp">
+									<div class="obp_t datetime">09/03 21:00</div>
+									<div class="obp_t">Both Team To Score <span class="bs_hl">Yes</span><span class="betslip_odds_type">(EURO)</span></div>
+									<div class="obp_c">
+										<div>Croatia vs North Macedonia</div>
+										<div>International Friendly</div>
+									</div>
+								</div>
+							</div>
+							<div class="obp_i">
+								<div class="obp_t_wrp">
+									<div class="obp_t datetime">09/03 21:00</div>
+									<div class="obp_t">Both Team To Score <span class="bs_hl">Yes</span><span class="betslip_odds_type">(EURO)</span></div>
+									<div class="obp_c">
+										<div>Croatia vs North Macedonia</div>
+										<div>International Friendly</div>
+									</div>
+								</div>
+							</div>
+							<div class="obp_i">
+								<div class="obp_t_wrp">
+									<div class="obp_t datetime">09/03 21:00</div>
+									<div class="obp_t">Both Team To Score <span class="bs_hl">Yes</span><span class="betslip_odds_type">(EURO)</span></div>
+									<div class="obp_c">
+										<div>Croatia vs North Macedonia</div>
+										<div>International Friendly</div>
+									</div>
+								</div>
+							</div>
+							<div class="obp_i">
+								<div class="obp_t_wrp">
+									<div class="obp_t datetime">09/03 21:00</div>
+									<div class="obp_t">Both Team To Score <span class="bs_hl">Yes</span><span class="betslip_odds_type">(EURO)</span></div>
+									<div class="obp_c">
+										<div>Croatia vs North Macedonia</div>
+										<div>International Friendly</div>
+									</div>
+								</div>
+							</div>
+							<div class="obp_i">
+								<div class="obp_t_wrp">
+									<div class="obp_t datetime">09/03 21:00</div>
+									<div class="obp_t">Both Team To Score <span class="bs_hl">Yes</span><span class="betslip_odds_type">(EURO)</span></div>
+									<div class="obp_c">
+										<div>Croatia vs North Macedonia</div>
+										<div>International Friendly</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pb_input_wrp">
+						<div class="pb_input_box">
+							<div class="currency">RMB</div>
+							<!-- add class "active" when key in amount-->
+							<div class="inputbox">
+								5.00 - 1000.00
+								<div class="stk_multiplier disabled">x2</div>
+							</div>
+							<div class="close">
+								<i class="icon-fi-close"></i>
+							</div>
+						</div>
+					</div>
+					<div class="radioGroup">
+						<!-- default         : no extra class beside "radioItm" class
+						selected             : add "active" class beside "radioItm" class
+						no available free bet: add "disable" class beside "radioItm" class -->
+						<div class="radioItm active">
+							<div class="radioBtn"></div>
+							賬戶餘額
+						</div>
+						<div class="radioSeperator"></div>
+						<div class="radioItm">
+							<div class="radioBtn"></div>
+							免費投注
+						</div>
+					</div>
+					<!--New:add more fast buttons-->
+					<div class="keypad_wrap new_keypad" style="display: none">
+						<div class="keypad_row">
+							<div class="keypad_itm fastbet">100</div>
+							<div class="keypad_itm fastbet">200</div>
+							<div class="keypad_itm fastbet">300</div>
+							<div class="keypad_itm fastbet">500</div>
+							<div class="keypad_itm fastbet">100000</div>
+						</div>
+						<div class="keypad_row">
+							<div class="keypad_itm">1</div>
+							<div class="keypad_itm">2</div>
+							<div class="keypad_itm">3</div>
+							<div class="keypad_itm fastbet">Max</div>
+						</div>
+
+						<div class="keypad_row num_spe">
+							<div class="keypad_itm">4</div>
+							<div class="keypad_itm">5</div>
+							<div class="keypad_itm">6</div>
+							<div class="keypad_itm delete">
+								<div class="itm"><i class="icon-fi-back"></i></div>
+							</div>
+							<div class="keypad_itm">7</div>
+							<div class="keypad_itm">8</div>
+							<div class="keypad_itm">9</div>
+						</div>
+						<div class="keypad_row">
+							<div class="keypad_itm">.</div>
+							<div class="keypad_itm">0</div>
+							<div class="keypad_itm">00</div>
+							<div class="keypad_itm">
+								<div class="itm"><i class="icon-fi-keyboard"></i></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Crypto currency -->
+		<div class="betlist_item">
+			<div class="icn"><img src="../assets/public/layout/images/icon/icon_s1.png" /></div>
+			<div class="bet_item_content">
+				<div class="icn remove"><i class="icon-fi-minus"></i></div>
+				<div class="details">
+					<span class="selection">
+						<span class="bs_hl">Independiente del Valle. CHS</span>
+						<span class="handi change">(-0.5/1)</span>
+						<span class="fl_at">@</span>
+						<span class="up">
+							<span class="odds">2.23</span>
+							<span class="arrow"><i class="icon-fi-arrow-up"></i></span>
+						</span> </span
+					><br />
+					<div class="live_icon smaller_icon_v2">LIVE</div>
+					让球
+					<div class="score_det b_sprt">0-0</div>
+					<span class="betslip_odds_type">(EURO)</span><br />
+					Independiente del Valle. CHS vs Sociedade Esportiva Palmeiras CHS <br />
+					英格兰超级联赛 (05/06 15:30)
+				</div>
+				<div class="pb_input_wrp">
+					<div class="pb_input_box">
+						<div class="currency">FARTCOINNNN</div>
+						<!-- add class "active" when key in amount-->
+						<div class="inputbox">
+							5.0000 - 10.0000
+							<div class="stk_multiplier">x2</div>
+						</div>
+						<div class="close">
+							<i class="icon-fi-close"></i>
+						</div>
+					</div>
+				</div>
+				<div class="radioGroup">
+					<!-- default         : no extra class beside "radioItm" class
+					selected             : add "active" class beside "radioItm" class
+					no available free bet: add "disable" class beside "radioItm" class -->
+					<div class="radioItm active">
+						<div class="radioBtn"></div>
+						賬戶餘額
+					</div>
+					<div class="radioSeperator"></div>
+					<div class="radioItm">
+						<div class="radioBtn"></div>
+						免費投注
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="betlist_item">
+			<div class="icn"></div>
+			<div class="bet_item_content">
+				<div class="icn remove"><i class="icon-fi-minus"></i></div>
+				<div class="details">
+					<span class="selection">
+						<span class="bs_hl">CFCI U23</span>
+						<span class="handi">(-1)</span>
+						<span class="fl_at">@</span>
+						<span>
+							<span class="p_odds">0.70</span><i class="icon-fi-double-angle-right"></i><span class="b_odds">0.87<i class="icon-fi-odds-boost"></i></span>
+						</span>
+					</span>
+					<br />
+					Correct Score<span class="betslip_odds_type">(EURO)</span>
+					<br />
+					CFCI U23 vs Kopana FC (05/06 15:30)
+				</div>
+				<div class="pb_input_wrp">
+					<div class="pb_input_box">
+						<div class="currency">FARTCOINNNN</div>
+						<!-- add class "active" when key in amount-->
+						<div class="inputbox">
+							5.0000 - 10.0000
+							<div class="stk_multiplier">x2</div>
+						</div>
+						<div class="close">
+							<i class="icon-fi-close"></i>
+						</div>
+					</div>
+				</div>
+				<div class="radioGroup">
+					<!-- default         : no extra class beside "radioItm" class
+					selected             : add "active" class beside "radioItm" class
+					no available free bet: add "disable" class beside "radioItm" class -->
+					<div class="radioItm active">
+						<div class="radioBtn"></div>
+						賬戶餘額
+					</div>
+					<div class="radioSeperator"></div>
+					<div class="radioItm">
+						<div class="radioBtn"></div>
+						免費投注
+					</div>
+				</div>
+				<!-- <div class="alert_msg">选择的盘口已更改</div> -->
+				<!--New:add more fast buttons-->
+				<div class="keypad_wrap new_keypad" style="display: none">
+					<div class="keypad_row">
+						<div class="keypad_itm fastbet">100</div>
+						<div class="keypad_itm fastbet">200</div>
+						<div class="keypad_itm fastbet">300</div>
+					</div>
+					<div class="keypad_row">
+						<div class="keypad_itm">1</div>
+						<div class="keypad_itm">2</div>
+						<div class="keypad_itm">3</div>
+						<div class="keypad_itm fastbet">Max</div>
+					</div>
+					<div class="keypad_row num_spe">
+						<div class="keypad_itm">4</div>
+						<div class="keypad_itm">5</div>
+						<div class="keypad_itm">6</div>
+						<div class="keypad_itm delete">
+							<div class="itm"><i class="icon-fi-back"></i></div>
+						</div>
+						<div class="keypad_itm">7</div>
+						<div class="keypad_itm">8</div>
+						<div class="keypad_itm">9</div>
+					</div>
+					<div class="keypad_row">
+						<div class="keypad_itm">.</div>
+						<div class="keypad_itm">0</div>
+						<div class="keypad_itm">00</div>
+						<div class="keypad_itm">
+							<div class="itm"><i class="icon-fi-keyboard"></i></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="betlist_item">
+			<div class="icn"><img src="../assets/public/layout/images/icon/icon_s1.png" /></div>
+			<div class="bet_item_content">
+				<div class="icn remove"><i class="icon-fi-minus"></i></div>
+				<div class="details">
+					<span class="selection">
+						<span class="bs_hl">Over</span>
+						<span class="handi">5.5</span>
+						<span class="fl_at">@</span>
+						<span>
+							<span class="odds">0.70</span>
+						</span> </span
+					><br />
+					Anthony Black Assists and Rebounds<br />
+					Dragon Port FC U20 vs Hantharwady U20 (05/06 15:30)<br />
+					Myanmar National League U20
+				</div>
+				<div class="pb_input_wrp">
+					<div class="pb_input_box">
+						<div class="currency">RMB</div>
+						<!-- add class "active" when key in amount-->
+						<div class="inputbox">
+							5.0000 - 10.0000
+							<div class="stk_multiplier">x2</div>
+						</div>
+						<div class="close">
+							<i class="icon-fi-close"></i>
+						</div>
+					</div>
+				</div>
+				<div class="radioGroup">
+					<!-- default         : no extra class beside "radioItm" class
+					selected             : add "active" class beside "radioItm" class
+					no available free bet: add "disable" class beside "radioItm" class -->
+					<div class="radioItm active">
+						<div class="radioBtn"></div>
+						賬戶餘額
+					</div>
+					<div class="radioSeperator"></div>
+					<div class="radioItm">
+						<div class="radioBtn"></div>
+						免費投注
+					</div>
+				</div>
+				<!-- <div class="alert_msg">选择的盘口已更改</div> -->
+				<!--New:add more fast buttons-->
+				<div class="keypad_wrap new_keypad" style="display: none">
+					<div class="keypad_row">
+						<div class="keypad_itm fastbet">100</div>
+						<div class="keypad_itm fastbet">200</div>
+						<div class="keypad_itm fastbet">300</div>
+					</div>
+					<div class="keypad_row">
+						<div class="keypad_itm">1</div>
+						<div class="keypad_itm">2</div>
+						<div class="keypad_itm">3</div>
+						<div class="keypad_itm fastbet">Max</div>
+					</div>
+					<div class="keypad_row num_spe">
+						<div class="keypad_itm">4</div>
+						<div class="keypad_itm">5</div>
+						<div class="keypad_itm">6</div>
+						<div class="keypad_itm delete">
+							<div class="itm"><i class="icon-fi-back"></i></div>
+						</div>
+						<div class="keypad_itm">7</div>
+						<div class="keypad_itm">8</div>
+						<div class="keypad_itm">9</div>
+					</div>
+					<div class="keypad_row">
+						<div class="keypad_itm">.</div>
+						<div class="keypad_itm">0</div>
+						<div class="keypad_itm">00</div>
+						<div class="keypad_itm">
+							<div class="itm"><i class="icon-fi-keyboard"></i></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="betlist_item total">
+			<div class="icn">
+				<div class="icn_total"></div>
+			</div>
+			<div class="bet_item_content">
+				<span class="selection">Multiple Single Bets</span>
+				<div class="pb_input_wrp">
+					<div class="pb_input_box">
+						<div class="currency">FARTCOINNNN</div>
+						<!-- add class "active" when key in amount-->
+						<div class="inputbox">5.0000 - 10.0000</div>
+						<div class="close">
+							<i class="icon-fi-close"></i>
+						</div>
+					</div>
+					<div class="times">x2</div>
+				</div>
+				<div class="radioGroup">
+					<!-- default         : no extra class beside "radioItm" class
+					selected             : add "active" class beside "radioItm" class
+					no available free bet: add "disable" class beside "radioItm" class -->
+					<div class="radioItm active">
+						<div class="radioBtn"></div>
+						賬戶餘額
+					</div>
+					<div class="radioSeperator"></div>
+					<div class="radioItm">
+						<div class="radioBtn"></div>
+						免費投注
+					</div>
+				</div>
+				<!--New:add more fast buttons-->
+				<div class="keypad_wrap new_keypad">
+					<div class="keypad_row">
+						<div class="keypad_itm fastbet">100</div>
+						<div class="keypad_itm fastbet">200</div>
+						<div class="keypad_itm fastbet">300</div>
+						<div class="keypad_itm fastbet">500</div>
+						<div class="keypad_itm fastbet">+100000</div>
+					</div>
+					<div class="keypad_row">
+						<div class="keypad_itm">1</div>
+						<div class="keypad_itm">2</div>
+						<div class="keypad_itm">3</div>
+						<div class="keypad_itm fastbet">Max</div>
+					</div>
+					<div class="keypad_row num_spe">
+						<div class="keypad_itm">4</div>
+						<div class="keypad_itm">5</div>
+						<div class="keypad_itm">6</div>
+						<div class="keypad_itm delete">
+							<div class="itm"><i class="icon-fi-back"></i></div>
+						</div>
+						<div class="keypad_itm">7</div>
+						<div class="keypad_itm">8</div>
+						<div class="keypad_itm">9</div>
+					</div>
+					<div class="keypad_row">
+						<!-- add "disabled" class for disable effect -->
+						<div class="keypad_itm disabled">.</div>
+						<div class="keypad_itm">0</div>
+						<div class="keypad_itm">00</div>
+						<div class="keypad_itm">
+							<div class="itm"><i class="icon-fi-keyboard"></i></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--/* SFCRQ-2149: dynamic single wager: demo: ends*/-->
+	<div class="bet_item_wrap" id="single">
+		<!--[DES-43] Data copied from PROD (can remove anytime) : start-->
+		<div class="betlist_item">
+			<!-- <div class="icn"><img src="../assets/public/layout/images/icon/icon_s1.png"></div> -->
+			<!-- [DES-1440: cybersoccer icon] -->
+			<div class="icn"><img src="../assets/public/layout/images/icon/icon_s54.png" /></div>
+			<div class="bet_item_content">
+				<div class="icn remove"><i class="icon-fi-minus"></i></div>
+				<div class="details">
+					<span class="selection">
+						<span class="bs_hl">0-0</span>
+						<span class="fl_at">@</span>
+						<span class="">
+							<span class="odds">39.00</span>
+							<!--<span class="arrow"><i class="icon-fi-arrow-up"></i></span>-->
+						</span> </span
+					><br />
+					<!--[DES-43][Narra][Tutorial Page] Recommended Correct Scores (Bet Slip): start-->
+					<span class="bet_score">波胆</span>
+					<span class="rcd_bet" id="tutor_rcd_bet">
+						(波胆盘口推荐)
+						<span class="rec_float" style="display: none">
+							<svg class="rec_arrow" xmlns="http://www.w3.org/2000/svg" width="38.12" height="50" viewBox="0 0 38.12 50">
+								<path d="M.92,50C.11,49.72-.01,49.09,0,48.33,.22,32.81,10.08,19.06,24.7,13.93c2.92-1.03,5.93-1.68,9.02-1.93,.06,0,.12-.02,.28-.05-.17-.18-.28-.32-.41-.44-3.03-3.04-6.06-6.08-9.1-9.12-.96-.96-.9-1.66,.21-2.39h.68c.3,.24,.63,.46,.9,.73,3.74,3.73,7.47,7.48,11.2,11.22,.82,.82,.84,1.39,.03,2.2-3.82,3.84-7.64,7.67-11.47,11.5-.61,.61-1.32,.65-1.85,.13-.53-.52-.49-1.24,.12-1.85,2.99-3.01,5.99-6.01,8.99-9.01,.12-.12,.24-.25,.33-.48-1.02,.15-2.04,.25-3.05,.46-11.77,2.46-20.2,9.17-25.24,20.08-1.96,4.24-2.86,8.76-2.88,13.44,0,.71-.19,1.27-.86,1.59H.92Z"></path>
+							</svg>
+						</span>
+					</span>
+					<br />
+					黄金海岸骑士SC vs 布里斯班狮吼(青年) <br />
+					澳大利亚昆士兰超级联赛
+					<div class="dot_box tutor_box highlighted" style="display: none">我们会随机选择任何一个您投注的大小盘口并推荐波胆盘口。盘口旁边会显示 “(波胆盘口推荐)”</div>
+					<!--[DES-43][Narra][Tutorial Page] Recommended Correct Scores (Bet Slip): end-->
+				</div>
+				<div class="pb_input_wrp">
+					<div class="pb_input_box">
+						<div class="currency">RMB</div>
+						<!-- add class "active" when key in amount-->
+						<div class="inputbox">5.00 - 192.30</div>
+						<div class="close">
+							<i class="icon-fi-close"></i>
+						</div>
+					</div>
+				</div>
+				<!--<div class="alert_msg">选择的盘口已更改</div>-->
+				<!--New:add more fast buttons-->
+				<div class="keypad_wrap new_keypad" style="display: none">
+					<div class="keypad_row">
+						<div class="keypad_itm fastbet">100</div>
+						<div class="keypad_itm fastbet">200</div>
+						<div class="keypad_itm fastbet">300</div>
+						<div class="keypad_itm fastbet">500</div>
+						<div class="keypad_itm fastbet">100000</div>
+					</div>
+					<div class="keypad_row">
+						<div class="keypad_itm">1</div>
+						<div class="keypad_itm">2</div>
+						<div class="keypad_itm">3</div>
+						<div class="keypad_itm fastbet">Max</div>
+					</div>
+					<div class="keypad_row num_spe">
+						<div class="keypad_itm">4</div>
+						<div class="keypad_itm">5</div>
+						<div class="keypad_itm">6</div>
+						<div class="keypad_itm delete">
+							<div class="itm"><i class="icon-fi-back"></i></div>
+						</div>
+						<div class="keypad_itm">7</div>
+						<div class="keypad_itm">8</div>
+						<div class="keypad_itm">9</div>
+					</div>
+					<div class="keypad_row">
+						<div class="keypad_itm">.</div>
+						<div class="keypad_itm">0</div>
+						<div class="keypad_itm">00</div>
+						<div class="keypad_itm">
+							<div class="itm"><i class="icon-fi-keyboard"></i></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="betlist_item">
+			<div class="icn"><img src="../assets/public/layout/images/icon/icon_s1.png" /></div>
+			<div class="bet_item_content">
+				<div class="icn remove"><i class="icon-fi-minus"></i></div>
+				<div class="details">
+					<span class="selection">
+						<span class="bs_hl">Gimnastic Tarragona >1st Half</span>
+						<span class="fl_at">@</span>
+						<span class="">
+							<span class="odds">3.95</span>
+						</span> </span
+					><br />
+					Gimnastic Tarragona Highest Scoring Half<br />
+					Gimnastic Tarragona vs CA Osasuna<br />
+					Spain Cup
+				</div>
+				<div class="pb_input_wrp">
+					<div class="pb_input_box">
+						<div class="currency">RMB</div>
+						<!-- add class "active" when key in amount-->
+						<div class="inputbox">5.00 - 1000.00</div>
+						<div class="close">
+							<i class="icon-fi-close"></i>
+						</div>
+					</div>
+				</div>
+				<!--New:add more fast buttons-->
+				<div class="keypad_wrap new_keypad" style="display: none">
+					<div class="keypad_row">
+						<div class="keypad_itm fastbet">100</div>
+						<div class="keypad_itm fastbet">200</div>
+						<div class="keypad_itm fastbet">300</div>
+						<div class="keypad_itm fastbet">500</div>
+						<div class="keypad_itm fastbet">100000</div>
+					</div>
+					<div class="keypad_row">
+						<div class="keypad_itm">1</div>
+						<div class="keypad_itm">2</div>
+						<div class="keypad_itm">3</div>
+						<div class="keypad_itm fastbet">Max</div>
+					</div>
+					<div class="keypad_row num_spe">
+						<div class="keypad_itm">4</div>
+						<div class="keypad_itm">5</div>
+						<div class="keypad_itm">6</div>
+						<div class="keypad_itm delete">
+							<div class="itm"><i class="icon-fi-back"></i></div>
+						</div>
+						<div class="keypad_itm">7</div>
+						<div class="keypad_itm">8</div>
+						<div class="keypad_itm">9</div>
+					</div>
+					<div class="keypad_row">
+						<div class="keypad_itm">.</div>
+						<div class="keypad_itm">0</div>
+						<div class="keypad_itm">00</div>
+						<div class="keypad_itm">
+							<div class="itm"><i class="icon-fi-keyboard"></i></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="betlist_item disabled">
+			<div class="icn"><img src="../assets/public/layout/images/icon/icon_s54.png" /></div>
+			<div class="bet_item_content">
+				<div class="icn remove"><i class="icon-fi-minus"></i></div>
+				<div class="details">
+					<span class="selection">
+						<span class="bs_hl">VL Ankara</span>
+						<span class="handi">(-0.5/1)</span>
+						<span class="fl_at">@</span>
+						<span class="">
+							<span class="odds">0.9</span>
+						</span> </span
+					><br />
+					Handicap<br />
+					VL Ankara vs VL London<br />
+					Virtual Football League Mode (Season 20888 - Matchday 29)
+				</div>
+				<div class="pb_input_wrp">
+					<div class="pb_input_box">
+						<div class="currency">RMB</div>
+						<!-- add class "active" when key in amount-->
+						<div class="inputbox active">100</div>
+						<div class="close">
+							<i class="icon-fi-close"></i>
+						</div>
+					</div>
+				</div>
+				<div class="alert_msg">此选项已关闭</div>
+			</div>
+		</div>
+		<div class="betlist_item">
+			<div class="icn"><img src="../assets/public/layout/images/icon/icon_s1.png" /></div>
+			<div class="bet_item_content">
+				<div class="icn remove"><i class="icon-fi-minus"></i></div>
+				<div class="details">
+					<span class="selection">
+						<span>Match Parlay</span>
+						<span class="fl_at">@</span>
+						<span>
+							<span class="p_odds">6.10</span><i class="icon-fi-double-angle-right"></i><span class="b_odds">6.87<i class="icon-fi-odds-boost"></i></span>
+						</span> </span
+					><br />
+					<div class="omp enhanced_tl">
+						<div class="datetime">10/03 03:45</div>
+						<div class="ob_teams_wrp">
+							<div class="ob_team">
+								<div class="team_icon">
+									<img src="../assets/public/layout/images/team_home.svg" />
+								</div>
+								<div class="team_name">Lazio</div>
+							</div>
+							<span>vs</span>
+							<div class="ob_team">
+								<div class="team_icon">
+									<img src="../assets/public/layout/images/team_home.svg" />
+								</div>
+								<div class="team_name">US Sassuolo</div>
+							</div>
+						</div>
+						<div class="comp_name">Italy Serie A</div>
+						<div class="obp_wrp">
+							<div class="obp_i">
+								<div class="obp_t_wrp">
+									<div class="obp_t">Odd/Even <span class="bs_hl">Even</span><span class="betslip_odds_type">(EURO)</span></div>
+								</div>
+							</div>
+							<div class="obp_i">
+								<div class="obp_t_wrp">
+									<div class="obp_t">Total Goal <span class="bs_hl">4 - 6</span><span class="betslip_odds_type">(EURO)</span></div>
+								</div>
+							</div>
+							<div class="obp_i">
+								<div class="obp_t_wrp">
+									<div class="obp_t">US Sassuolo Clean Sheet <span class="bs_hl">US Sassuolo No</span><span class="betslip_odds_type">(EURO)</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pb_input_wrp">
+					<div class="pb_input_box">
+						<div class="currency">RMB</div>
+						<!-- add class "active" when key in amount-->
+						<div class="inputbox">
+							5.00 - 1000.00
+							<div class="stk_multiplier disabled">x2</div>
+						</div>
+						<div class="close">
+							<i class="icon-fi-close"></i>
+						</div>
+					</div>
+				</div>
+				<div class="radioGroup">
+					<!-- default         : no extra class beside "radioItm" class
+					selected             : add "active" class beside "radioItm" class
+					no available free bet: add "disable" class beside "radioItm" class -->
+					<div class="radioItm active">
+						<div class="radioBtn"></div>
+						賬戶餘額
+					</div>
+					<div class="radioSeperator"></div>
+					<div class="radioItm">
+						<div class="radioBtn"></div>
+						免費投注
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="betlist_item total">
+			<div class="icn">
+				<div class="icn_total"></div>
+			</div>
+			<div class="bet_item_content">
+				<span class="selection">多项单注</span>
+				<div class="pb_input_wrp">
+					<div class="pb_input_box">
+						<div class="currency">RMB</div>
+						<!-- add class "active" when key in amount-->
+						<div class="inputbox">5.00 - 197.36</div>
+						<div class="close">
+							<i class="icon-fi-close"></i>
+						</div>
+					</div>
+					<div class="times">x3</div>
+				</div>
+				<div class="radioGroup">
+					<!-- default         : no extra class beside "radioItm" class
+					selected             : add "active" class beside "radioItm" class
+					no available free bet: add "disable" class beside "radioItm" class -->
+					<div class="radioItm active">
+						<div class="radioBtn"></div>
+						賬戶餘額
+					</div>
+					<div class="radioSeperator"></div>
+					<div class="radioItm">
+						<div class="radioBtn"></div>
+						免費投注
+					</div>
+				</div>
+				<!--New:add more fast buttons-->
+				<div class="keypad_wrap new_keypad">
+					<div class="keypad_row">
+						<div class="keypad_itm fastbet">100</div>
+						<div class="keypad_itm fastbet">200</div>
+						<div class="keypad_itm fastbet">300</div>
+						<div class="keypad_itm fastbet">500</div>
+						<div class="keypad_itm fastbet">100000</div>
+					</div>
+					<div class="keypad_row">
+						<div class="keypad_itm">1</div>
+						<div class="keypad_itm">2</div>
+						<div class="keypad_itm">3</div>
+						<div class="keypad_itm fastbet">Max</div>
+					</div>
+					<div class="keypad_row num_spe">
+						<div class="keypad_itm">4</div>
+						<div class="keypad_itm">5</div>
+						<div class="keypad_itm">6</div>
+						<div class="keypad_itm delete">
+							<div class="itm"><i class="icon-fi-back"></i></div>
+						</div>
+						<div class="keypad_itm">7</div>
+						<div class="keypad_itm">8</div>
+						<div class="keypad_itm">9</div>
+					</div>
+					<div class="keypad_row">
+						<div class="keypad_itm">.</div>
+						<div class="keypad_itm">0</div>
+						<div class="keypad_itm">00</div>
+						<div class="keypad_itm">
+							<div class="itm"><i class="icon-fi-keyboard"></i></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bet_item_wrap" id="single_placebet_ing" style="display: none">
+		<!--[DES-43] Data copied from PROD (can remove anytime) : start-->
+		<div class="betlist_item">
+			<div class="icn"><img src="../assets/public/layout/images/icon/icon_s1.png" /></div>
+			<div class="bet_item_content">
+				<div class="details">
+					<span class="selection">
+						<span class="bs_hl">小</span>
+						<span class="handi">(2.5)</span>
+						<span class="fl_at">@</span>
+						<span class="">
+							<span class="odds">1.00</span>
+							<!--  <span class="arrow"><i class="icon-fi-arrow-down"></i></span> -->
+						</span> </span
+					><br />
+					<div class="live_icon smaller_icon_v2">LIVE</div>
+					大/小
+					<span class="betslip_odds_type">(EURO)</span><br />
+					彼得罗罗俱乐部 vs 奥利恩特 <br />
+					玻利维亚甲级联赛<br />
+					<span class="stake">投注金额 (RMB): <span class="balance">5.00</span></span
+					><br />
+					可赢金额 (RMB): 5.00
+				</div>
+				<div class="success">投注成功，投注编号：2208010710201807<i class="icon-fi-copy"></i></div>
+			</div>
+		</div>
+		<div class="betlist_item">
+			<div class="icn"><img src="../assets/public/layout/images/icon/icon_s1.png" /></div>
+			<div class="bet_item_content">
+				<div class="details">
+					<span class="selection">
+						<span class="bs_hl">布阿雷里杰预备队 123</span>
+						<span class="handi">(-0.5/1)</span>
+						<span class="fl_at">@</span>
+						<span class="">
+							<span class="odds">2.23</span>
+							<!--  <span class="arrow"><i class="icon-fi-arrow-down"></i></span> -->
+						</span> </span
+					><br />
+					<div class="live_icon smaller_icon_v2">LIVE</div>
+					让球
+					<div class="score_det b_sprt">0-0</div>
+					<span class="betslip_odds_type">(EURO)</span><br />
+					布阿雷里杰预备队 vs 雷利扎内预备队 <br />
+					英格兰超级联赛<br />
+					<span class="stake">投注金额 (RMB): <span class="balance">5.00</span></span
+					><br />
+					可赢金额 (RMB): 5.95
+				</div>
+				<div class="alert_msg">投注处理中...</div>
+			</div>
+			<div class="loading_wrap">
+				<div class="rotate_wrap_content">
+					<div class="rotate_wrap_content_inner">
+						<div class="loading">
+							<img class="icon" width="30" src="../assets/public/layout/images/loading2.svg" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="betlist_item">
+			<div class="icn"><img src="../assets/public/layout/images/icon/icon_s1.png" /></div>
+			<div class="bet_item_content">
+				<div class="details">
+					<span class="selection">
+						<span class="bs_hl">阿德莱得联</span>
+						<span class="fl_at">@</span>
+						<span>
+							<span class="p_odds">0.70</span><i class="icon-fi-double-angle-right"></i><span class="b_odds">0.87<i class="icon-fi-odds-boost"></i></span>
+						</span> </span
+					><br />
+					冠军<span class="betslip_odds_type">(EURO)</span><br />
+					澳大利亚职业联赛2020/2021 - 冠军<br />
+					<span class="stake">投注金额 (RMB): <span class="balance">5.00</span></span
+					><br />
+					可赢金额 (RMB): 5.95
+				</div>
+				<div class="failed">投注被拒绝，投注编号：2011171304363304<i class="icon-fi-copy"></i></div>
+			</div>
+		</div>
+		<div class="betlist_item">
+			<div class="icn"><img src="../assets/public/layout/images/icon/icon_s1.png" /></div>
+			<div class="bet_item_content">
+				<div class="details">
+					<span class="selection">
+						<span class="bs_hl">VL Ankara</span>
+						<span class="handi">(-0.5/1)</span>
+						<span class="fl_at">@</span>
+						<span class="down">
+							<span class="odds">2.23</span>
+							<span class="arrow"><i class="icon-fi-arrow-down"></i></span>
+						</span> </span
+					><br />
+					Handicap<span class="betslip_odds_type">(EURO)</span><br />
+					VL Ankara vs VL London<br />
+					Virtual Football League Mode (Season 20888 - Matchday 29)<br />
+					<span class="stake">投注金额 (RMB): <span class="balance">5.00</span></span
+					><br />
+					可赢金额 (RMB): 5.95
+				</div>
+				<div class="failed">赔率已更改</div>
+				<div class="odds_change_actions">
+					<div class="btn btn_cancel">取消</div>
+					<div class="btn btn_ok">接受</div>
+				</div>
+			</div>
+		</div>
+		<div class="bs_parlay">
+			<div class="betlist_item">
+				<div class="icn"><img src="../assets/public/layout/images/icon/icon_s1.png" /></div>
+				<div class="bet_item_content">
+					<div class="details">
+						<span class="selection">
+							<span>Match Parlay</span>
+							<span class="fl_at">@</span>
+							<span>
+								<span class="p_odds">8.10</span><i class="icon-fi-double-angle-right"></i><span class="b_odds">9.87<i class="icon-fi-odds-boost"></i></span>
+							</span> </span
+						><br />
+						<div class="omp enhanced_tl">
+							<div class="datetime">11/03 18:00</div>
+							<div class="ob_teams_wrp">
+								<div class="ob_team">
+									<div class="team_icon">
+										<img src="../assets/public/layout/images/team_home.svg" />
+									</div>
+									<div class="team_name">Vissel Kobe</div>
+								</div>
+								<span>vs</span>
+								<div class="ob_team">
+									<div class="team_icon">
+										<img src="../assets/public/layout/images/team_home.svg" />
+									</div>
+									<div class="team_name">FC Seoul</div>
+								</div>
+							</div>
+							<div class="comp_name">AFC Champions League Elite</div>
+							<div class="obp_wrp">
+								<div class="obp_i">
+									<div class="obp_t_wrp">
+										<div class="obp_t">Odd/Even <span class="bs_hl">Odd</span><span class="betslip_odds_type">(EURO)</span></div>
+									</div>
+								</div>
+								<div class="obp_i">
+									<div class="obp_t_wrp">
+										<div class="obp_t">Both Teams To Score <span class="bs_hl">Yes</span><span class="betslip_odds_type">(EURO)</span></div>
+									</div>
+								</div>
+								<div class="obp_i">
+									<div class="obp_t_wrp">
+										<div class="obp_t">1H Team To Score Goal 1 <span class="bs_hl">Vissel Kobe</span><span class="betslip_odds_type">(EURO)</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<span class="stake">投注金额 (RMB): <span class="balance">5.00</span></span
+						><br />
+						可赢金额 (RMB): 10.00
+					</div>
+					<div class="success">投注成功，投注编号：2208010710201807<i class="icon-fi-copy"></i></div>
+				</div>
+			</div>
+		</div>
+		<div class="bs_parlay">
+			<div class="betlist_item">
+				<div class="icn"><img src="../assets/public/layout/images/icon/icon_s1.png" /></div>
+				<div class="bet_item_content">
+					<div class="details">
+						<span class="selection">
+							<span>Parlay</span>
+							<span class="fl_at">@</span>
+							<span class="handi">4.48</span> </span
+						><br />
+						<div class="obp_wrp obp_tli">
+							<div class="obp_i">
+								<div class="obp_t_wrp">
+									<div class="obp_t datetime">09/03 21:00</div>
+									<div class="obp_t">Kocaelispor Clean Sheet <span class="bs_hl">Kocaelispor Yes</span><span class="betslip_odds_type">(EURO)</span></div>
+									<div class="obp_c">
+										<div>Eyupspor vs Kocaelispor</div>
+										<div>Turkey Super League</div>
+									</div>
+								</div>
+							</div>
+							<div class="obp_i">
+								<div class="obp_t_wrp">
+									<div class="obp_t datetime">09/03 21:00</div>
+									<div class="obp_t">Lokomotiv Moscow Clean Sheet <span class="bs_hl">Lokomotiv Moscow Yes</span><span class="betslip_odds_type">(EURO)</span></div>
+									<div class="obp_c">
+										<div>Eyupspor vs Kocaelispor</div>
+										<div>Turkey Super League</div>
+									</div>
+								</div>
+							</div>
+							<div class="obp_i">
+								<div class="obp_t_wrp">
+									<div class="obp_t datetime">09/03 21:00</div>
+									<div class="obp_t">Lokomotiv Moscow Clean Sheet <span class="bs_hl">Lokomotiv Moscow Yes</span><span class="betslip_odds_type">(EURO)</span></div>
+									<div class="obp_c">
+										<div>Eyupspor vs Kocaelispor</div>
+										<div>Turkey Super League</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<span class="stake">投注金额 (RMB): <span class="balance">5.00</span></span
+						><br />
+						可赢金额 (RMB): 10.00
+					</div>
+					<div class="success">投注成功，投注编号：2208010710201807<i class="icon-fi-copy"></i></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bet_item_wrap" id="combo">
+		<div class="combo_alert">
+			<!--<i class="icon-fi-info-circle" aria-hidden="true"></i>-->
+			<i class="icon-fi-info"></i>
+			Please select at least 2 selections for combo bet.
+		</div>
+		<div class="bs_parlay disabled">
+			<div class="betlist_item">
+				<div class="icn"><img src="../assets/public/layout/images/icon/icon_s1.png" /></div>
+				<div class="bet_item_content">
+					<div class="icn remove"><i class="icon-fi-minus"></i></div>
+					<div class="details">
+						<span class="selection">
+							<span>Parlay</span>
+							<span class="fl_at">@</span>
+							<span>
+								<span class="p_odds">11.70</span><i class="icon-fi-double-angle-right"></i><span class="b_odds">11.87<i class="icon-fi-odds-boost"></i></span>
+							</span> </span
+						><br />
+						<div class="obp_wrp obp_tli enhanced_tl">
+							<div class="obp_i">
+								<div class="obp_t_wrp">
+									<div class="obp_t datetime">09/03 21:00</div>
+									<div class="obp_t">Kocaelispor Clean Sheet <span class="bs_hl">Kocaelispor Yes</span><span class="betslip_odds_type">(EURO)</span></div>
+									<div class="obp_c">
+										<div>Eyupspor vs Kocaelispor</div>
+										<div>Turkey Super League</div>
+									</div>
+								</div>
+							</div>
+							<div class="obp_i">
+								<div class="obp_t_wrp">
+									<div class="obp_t datetime">09/03 21:00</div>
+									<div class="obp_t">Lokomotiv Moscow Clean Sheet <span class="bs_hl">Lokomotiv Moscow Yes</span><span class="betslip_odds_type">(EURO)</span></div>
+									<div class="obp_c">
+										<div>Eyupspor vs Kocaelispor</div>
+										<div>Turkey Super League</div>
+									</div>
+								</div>
+							</div>
+							<div class="obp_i">
+								<div class="obp_t_wrp">
+									<div class="obp_t datetime">09/03 21:00</div>
+									<div class="obp_t">Lokomotiv Moscow Clean Sheet <span class="bs_hl">Lokomotiv Moscow Yes</span><span class="betslip_odds_type">(EURO)</span></div>
+									<div class="obp_c">
+										<div>Eyupspor vs Kocaelispor</div>
+										<div>Turkey Super League</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pb_input_wrp">
+						<div class="pb_input_box">
+							<div class="currency">RMB</div>
+							<!-- add class "active" when key in amount-->
+							<div class="inputbox">
+								5.00 - 1000.00
+								<div class="stk_multiplier disabled">x2</div>
+							</div>
+							<div class="close">
+								<i class="icon-fi-close"></i>
+							</div>
+						</div>
+					</div>
+					<div class="alert_msg">Odds Boost Parlay cannot be combined for combo bets.</div>
+				</div>
+			</div>
+		</div>
+		<div class="betlist_item disabled">
+			<div class="icn"><img src="../assets/public/layout/images/icon/icon_s1.png" /></div>
+			<div class="bet_item_content">
+				<div class="icn remove"><i class="icon-fi-minus"></i></div>
+				<div class="details">
+					<span class="selection">
+						<span class="bs_hl">布阿雷里杰预备队</span>
+						<span class="handi">(-0.5/1)</span>
+						<span class="fl_at">@</span>
+						<span class="">
+							<span class="odds">2.23</span>
+						</span> </span
+					><br />
+					让球
+					<div class="score_det b_sprt">0-0</div>
+					<span class="betslip_odds_type">(HONG KONG)</span><br />
+					布阿雷里杰预备队 vs 雷利扎内预备队<br />
+					英格兰超级联赛
+				</div>
+				<div class="alert_msg">赛事暂不支持串关</div>
+			</div>
+		</div>
+		<div class="betlist_item">
+			<div class="icn">
+				<div class="icn_err"></div>
+			</div>
+			<div class="bet_item_content">
+				<div class="icn remove"><i class="icon-fi-minus"></i></div>
+				<div class="details">
+					<span class="selection">
+						<span class="bs_hl">布阿雷里杰预备队</span>
+						<span class="handi">(-0.5/1)</span>
+						<span class="fl_at">@</span>
+						<span class="odds">2.23</span> </span
+					><br />
+					让球
+					<div class="score_det b_sprt">0-0</div>
+					<span class="betslip_odds_type">(HONG KONG)</span>
+					<br />
+					布阿雷里杰预备队 vs 雷利扎内预备队<br />
+					英格兰超级联赛
+				</div>
+			</div>
+		</div>
+		<div class="betlist_item">
+			<div class="icn">
+				<div class="icn_err"></div>
+			</div>
+			<div class="bet_item_content">
+				<div class="icn remove"><i class="icon-fi-minus"></i></div>
+				<div class="details">
+					<span class="selection">
+						<span class="bs_hl">布阿雷里杰预备队</span>
+						<span class="handi">(-0.5/1)</span>
+						<span class="fl_at">@</span>
+						<span class="">
+							<span class="odds">2.23</span>
+						</span> </span
+					><br />
+					让球
+					<div class="score_det b_sprt">0-0</div>
+					<span class="betslip_odds_type">(EURO)</span><br />
+					布阿雷里杰预备队 vs 雷利扎内预备队 <br />
+					英格兰超级联赛
+				</div>
+			</div>
+		</div>
+		<div class="betlist_item">
+			<div class="icn"><img src="../assets/public/layout/images/icon/icon_s1.png" /></div>
+			<div class="bet_item_content">
+				<div class="icn remove"><i class="icon-fi-minus"></i></div>
+				<div class="details">
+					<span class="selection">
+						<span class="bs_hl">布阿雷里杰预备队</span>
+						<span class="handi">(-0.5/1)</span>
+						<span class="fl_at">@</span>
+						<span class="down">
+							<span class="odds">2.23</span>
+							<span class="arrow"><i class="icon-fi-arrow-down"></i></span>
+						</span> </span
+					><br />
+					让球
+					<div class="score_det b_sprt">0-0</div>
+					<span class="betslip_odds_type">(EURO)</span><br />
+					布阿雷里杰预备队 vs 雷利扎内预备队 <br />
+					英格兰超级联赛
+				</div>
+				<div class="alert_msg">选择的盘口已更改</div>
+			</div>
+		</div>
+		<div class="betlist_item">
+			<div class="icn"><img src="../assets/public/layout/images/icon/icon_s1.png" /></div>
+			<div class="bet_item_content">
+				<div class="icn remove"><i class="icon-fi-minus"></i></div>
+				<div class="details">
+					<span class="selection">
+						<span class="bs_hl">布阿雷里杰预备队</span>
+						<span class="handi">(-0.5/1)</span>
+						<span class="fl_at">@</span>
+						<span>
+							<span class="odds">1.22</span>
+						</span> </span
+					><br />
+					Handicap
+					<div class="score_det b_sprt">0-0</div>
+					<span class="betslip_odds_type">(EURO)</span><br />
+					布阿雷里杰预备队 vs 雷利扎内预备队<br />
+					英格兰超级联赛
+				</div>
+				<div class="alert_msg">Odds Boost selection is not supported for Doubles.</div>
+			</div>
+		</div>
+		<div class="betlist_item">
+			<div class="icn"><img src="../assets/public/layout/images/icon/icon_s1.png" /></div>
+			<div class="bet_item_content">
+				<div class="icn remove"><i class="icon-fi-minus"></i></div>
+				<div class="details">
+					<span class="selection">
+						<span class="bs_hl">Draw</span>
+						<!-- <span class="handi">(-0.5/1)</span> -->
+						<span class="fl_at">@</span>
+						<span>
+							<span class="odds">1.22</span>
+						</span> </span
+					><br />
+					<div class="live_icon smaller_icon_v2">LIVE</div>
+					Handicap
+					<div class="score_det b_sprt">0-0</div>
+					<span class="betslip_odds_type">(EURO)</span><br />
+					布阿雷里杰预备队 vs 雷利扎内预备队<br />
+					英格兰超级联赛
+				</div>
+				<div class="alert_msg">Odds Boost selection is not supported for Doubles.</div>
+			</div>
+		</div>
+		<!-- <div class="betlist_item">
+			<div class="alert_msg">
+				<div class="icn_err"></div> 所选项目中有相关类似选项故不能组为串关投注
+			</div>
+		</div> -->
+	</div>
+	<div class="bet_item_wrap" id="combo_placebet_ing" style="display: none">
+		<div class="betlist_item">
+			<div class="icn"><img src="../assets/public/layout/images/icon/icon_s1.png" /></div>
+			<div class="bet_item_content">
+				<!-- note for design: use "selection_grp" only if layout have status display on right-->
+				<div class="selection_grp">
+					<span class="selection">
+						<span class="bs_hl">布阿雷里杰预备队 123</span>
+						<span class="handi">(-0.5/1)</span>
+						<span class="fl_at">@</span>
+						<span class="">
+							<span class="odds">2.23</span>
+						</span>
+					</span>
+				</div>
+				让球
+				<div class="score_det b_sprt">0-0</div>
+				<span class="betslip_odds_type">(EURO)</span><br />
+				布阿雷里杰预备队 vs 雷利扎内预备队<br />
+				英格兰超级联赛
+				<div class="alert_msg">Bet Rejection - Selection not available for double</div>
+			</div>
+		</div>
+		<div class="betlist_item">
+			<div class="icn"><img src="../assets/public/layout/images/icon/icon_s1.png" /></div>
+			<div class="bet_item_content">
+				<!-- note for design: use "selection_grp" only if layout have status display on right-->
+				<div class="selection_grp">
+					<span class="selection">
+						<span class="bs_hl">布阿雷里杰预备队 123</span>
+						<span class="handi">(-0.5/1)</span>
+						<span class="fl_at">@</span>
+						<span class="">
+							<span class="odds">2.23</span>
+						</span>
+					</span>
+					<div class="status failed">待定</div>
+				</div>
+				让球 <br />
+				布阿雷里杰预备队 vs 雷利扎内预备队 <br />
+				英格兰超级联赛
+			</div>
+		</div>
+		<div class="betlist_item">
+			<div class="icn"><img src="../assets/public/layout/images/icon/icon_s1.png" /></div>
+			<div class="bet_item_content">
+				<!-- note for design: use "selection_grp" only if layout have status display on right-->
+				<div class="selection_grp">
+					<span class="selection">
+						<span class="bs_hl">布阿雷里杰预备队 123</span>
+						<span class="handi">(-0.5/1)</span>
+						<span class="fl_at">@</span>
+						<span class="">
+							<span class="odds">2.23</span>
+						</span>
+					</span>
+					<div class="status success">确认</div>
+				</div>
+				让球
+				<div class="score_det b_sprt">0-0</div>
+				<span class="betslip_odds_type">(EURO)</span><br />
+				布阿雷里杰预备队 vs 雷利扎内预备队<br />
+				英格兰超级联赛
+			</div>
+		</div>
+	</div>
+	<div class="bet_item_wrap bs_tab_empty" style="display: none">
+		<svg class="notavailable" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175 147" width="72" fill="#cacaca">
+			<path
+				d="M26.7 97.4c-12.1 0-21.9 9.8-21.9 21.9s9.8 21.9 21.9 21.9 21.9-9.8 21.9-21.9c-.1-12.1-9.9-21.9-21.9-21.9zm5 2.9l-5.1 2-5.1-2c3.4-.9 6.9-.9 10.2 0zm-5 13.2l5.9 4.7-1.8 7.1h-8.3l-1.8-7.1 6-4.7zm-8.3-12.1l7.1 2.8v7.3l-6.3 5-7.4-2.5-1.4-5.9c2-2.9 4.8-5.2 8-6.7zM8.8 111l.9 3.7-2.6 3.2c.1-2.4.7-4.8 1.7-6.9zm1.3 18.8c-1.7-2.6-2.7-5.6-3-8.6l4.2-5 7.3 2.4 1.9 7.5-3.6 4.8-6.8-1.1zm2 2.6l4.6.7 2.8 4.4c-2.8-1.1-5.4-2.8-7.4-5.1zm10.6 6.1l-4-6.3 3.5-4.7h8.9l3.6 4.7-3.5 6.2c-2.8.6-5.7.6-8.5.1zm11.6-1.2l2.4-4.2 4.5-.7a19.79 19.79 0 0 1-6.9 4.9zm8.9-7.5l-6.7 1.1-3.6-4.8 1.9-7.5 7.3-2.4 4.2 5c-.4 3.1-1.5 6.1-3.1 8.6zm1.3-18.8a20.71 20.71 0 0 1 1.8 6.9l-2.6-3.2.8-3.7zm-3 3.1l-7.4 2.5-6.3-5v-7.3l7.1-2.8c3.2 1.5 6 3.8 8 6.7l-1.4 5.9zm127.5 4.3V117l-.1-.6c0-.2-.1-.4-.1-.6 0-.1 0-.3-.1-.4 0-.2-.1-.4-.1-.6l-.1-.4c0-.2-.1-.4-.2-.6l-.1-.3c-.1-.2-.1-.4-.2-.6l-.1-.3c-.1-.2-.1-.4-.2-.6l-.2-.5c-.1-.1-.1-.3-.2-.4s-.1-.3-.2-.4l-.2-.4c-.8-1.7-1.9-3.3-3.1-4.7l-.5-.6-.3-.3c-4-4-9.2-6.2-14.8-6.2s-10.8 2.2-14.8 6.2l-.8.9c-1.3 1.4-2.3 3-3.1 4.7l-.2.4c-.1.2-.1.3-.2.5s-.1.3-.2.5l-.1.4c-.1.2-.1.4-.2.6l-.1.3c-.1.2-.1.4-.2.6l-.1.3c-.1.2-.1.4-.2.6l-.1.4c0 .2-.1.4-.1.6l-.1.5c0 .2-.1.3-.1.5s0 .3-.1.5v5.5a.9.9 0 0 0 .1.5v.1c0 .1 0 .3.1.4 0 .2.1.4.1.6 0 .1.1.2.1.4s.1.4.2.6l.1.3c.1.2.1.4.2.6l.1.3c.1.2.1.4.2.6l.2.4c.1.2.1.3.2.5.1.1.1.3.2.4l.2.4c.8 1.7 1.9 3.3 3.1 4.7l.5.6.3.3c3.9 4 9.2 6.2 14.8 6.2s10.8-2.2 14.8-6.2l.8-.9c1.3-1.4 2.3-3 3.1-4.7l.2-.4c.1-.1.1-.3.2-.4s.1-.3.2-.4l.2-.5c.1-.2.1-.4.2-.6l.1-.3c.1-.2.1-.4.2-.6l.1-.3c.1-.2.1-.4.2-.6l.1-.4c0-.2.1-.4.1-.6 0-.1 0-.3.1-.4 0-.2.1-.4.1-.6 0-.1 0-.3.1-.5v-3.6zm-35.6 12.3c-.2-.2-.4-.5-.6-.8l-.2-.2c-.2-.4-.5-.7-.7-1.1l-.8-1.6c-.2-.5-.4-.9-.5-1.3v-.1c-.3-.9-.6-1.9-.8-2.9v-.2c-.1-.5-.1-.9-.2-1.4v-.2c0-.5-.1-1-.1-1.5s0-.9.1-1.5v-.2c0-.5.1-.9.2-1.4v-.2c.2-1 .4-2 .8-2.9v-.1c.2-.4.3-.9.5-1.3l.8-1.6c.2-.4.4-.7.7-1.1l.2-.2c.2-.3.4-.5.6-.8.7.9 1.3 1.9 1.8 3l-.8.3c-.3.1-.5.3-.6.5-.1.3-.2.6-.1.8a1.08 1.08 0 0 0 1.4.7l1-.3c.2.5.3 1 .5 1.5l-1.2.2c-.1 0-.3.1-.4.1l-.3.3c-.1.1-.1.2-.2.4v.4c.1.6.6 1 1.2.9l1.4-.2c.1.5.1 1 .1 1.5h-1a1.11 1.11 0 0 0-1.1 1.1 1.11 1.11 0 0 0 1.1 1.1h1c0 .5-.1 1.1-.1 1.5l-1.4-.2h-.4c-.1 0-.2.1-.3.2l-.3.3c-.1.1-.1.2-.1.4 0 .3 0 .6.2.8s.4.4.7.4l1.2.2c-.1.5-.3 1-.5 1.5l-1-.3a1.08 1.08 0 0 0-1.4.7c-.1.3-.1.6.1.8.1.3.4.5.6.6l.8.3c-.6 1.2-1.2 2.2-1.9 3.1zm14.8 7.3c-5.1 0-9.8-2-13.4-5.6 1-1.2 1.8-2.5 2.5-4l1.3.4a1.08 1.08 0 0 0 1.4-.7c.1-.3.1-.6-.1-.8-.1-.3-.4-.5-.6-.6l-1.2-.4c.2-.6.4-1.3.6-1.9l1.5.2c.6.1 1.2-.3 1.2-.9 0-.3 0-.6-.2-.8s-.4-.4-.7-.4l-1.4-.2c.1-.6.1-1.2.2-1.9h1.1a1.11 1.11 0 0 0 1.1-1.1 1.11 1.11 0 0 0-1.1-1.1h-1.1c0-.6-.1-1.2-.2-1.9l1.4-.2c.6-.1 1-.6.9-1.2 0-.3-.2-.5-.4-.7s-.5-.2-.8-.2l-1.5.2c-.2-.7-.4-1.3-.6-1.9l1.2-.4a1.08 1.08 0 0 0 .7-1.4.9.9 0 0 0-.6-.6c-.3-.1-.6-.2-.8-.1l-1.3.4a24.18 24.18 0 0 0-2.5-4c3.5-3.6 8.3-5.6 13.4-5.6s9.8 2 13.4 5.6c-1 1.2-1.8 2.5-2.5 4l-1.3-.4c-.3-.1-.6-.1-.8.1-.3.1-.5.4-.6.6-.1.3-.1.6.1.8.1.3.4.5.6.5l1.2.4c-.2.6-.4 1.3-.6 1.9l-1.5-.2c-.6-.1-1.2.3-1.2.9-.1.6.3 1.2.9 1.2l1.4.2c-.1.6-.1 1.2-.2 1.9H156a1.11 1.11 0 0 0-1.1 1.1 1.11 1.11 0 0 0 1.1 1.1h1.1c0 .6.1 1.2.2 1.9l-1.4.2c-.3 0-.5.2-.7.4s-.2.5-.2.8c.1.6.6 1 1.2.9l1.5-.2c.2.7.4 1.3.6 1.9l-1.2.4c-.3.1-.5.3-.6.5-.1.3-.2.6-.1.8.2.5.7.8 1.3.7h.1l1.3-.4a24.18 24.18 0 0 0 2.5 4c-3.6 3.8-8.3 5.8-13.4 5.8zm18.6-17.2v.2c0 .5-.1.9-.2 1.4v.2c-.2 1-.4 2-.8 2.9l.4.1h-.4c-.2.4-.3.9-.5 1.3l-.8 1.6c-.2.4-.4.7-.7 1.1l-.2.2c-.2.3-.4.5-.6.8-.7-.9-1.3-1.9-1.8-3l.8-.3c.3-.1.5-.3.6-.5.1-.3.2-.6.1-.8a1.08 1.08 0 0 0-1.4-.7l-1 .3c-.2-.5-.3-1-.5-1.5l1.2-.2c.1 0 .3-.1.4-.1l.3-.3c.1-.1.1-.2.2-.4v-.4c0-.3-.2-.5-.4-.7s-.5-.2-.8-.2l-1.4.2c-.1-.5-.1-1-.1-1.5h1a1.11 1.11 0 0 0 1.1-1.1 1.11 1.11 0 0 0-1.1-1.1h-1c0-.5.1-1.1.1-1.5l1.4.2c.6.1 1.2-.3 1.2-.9v-.4a.76.76 0 0 0-.2-.4l-.3-.3c-.1-.1-.2-.1-.4-.1l-1.2-.2c.1-.5.3-1 .5-1.5l1 .3c.5.2 1.2-.1 1.4-.7.1-.3.1-.6-.1-.8-.1-.3-.4-.5-.6-.5l-.8-.3c.5-1.1 1.1-2.1 1.8-3 .2.2.4.5.6.8l.2.2c.2.4.5.7.7 1.1l.8 1.6c.2.5.4.9.5 1.3l.4-.1-.3.2c.3.9.6 1.9.8 2.9v.1c.1.5.1.9.2 1.4v.2c0 .5.1 1 .1 1.5-.2.4-.2.9-.2 1.4zm-26.4-49.2a21.5 21.5 0 1 0-43 0 21.47 21.47 0 0 0 21.5 21.5c11.8 0 21.5-9.7 21.5-21.5zm-12.2-16.9c6.2 3.4 10 9.8 10 16.9 0 .6 0 1.2-.1 1.7-1.9-6.7-4.9-12-12.2-15.9l1.2-1.5c.4-.4.7-.8 1.1-1.2zm-7.3-1.9l.3-.3c1.7.2 3.3.6 4.9 1.2-.2.3-.4.5-.7.8-3.8 4.5-6.6 7.7-7.6 16.3-1.8.6-3.8.9-5.9 1.1 1.3-9.8 4.2-13.3 9-19.1zm-6.6.1c1.4-.3 2.7-.5 4.1-.6-4.4 5.3-7.5 9.4-8.7 19.6-1.4 0-2.8-.1-4.3-.2 1.1-9.5 3.4-12.4 8.1-17.9l.8-.9zm-4.3 1.6c-3.6 4.5-5.8 8.1-6.8 16.9-1.2-.2-2.4-.4-3.6-.7.3-6.9 4.4-13.1 10.4-16.2zM99.7 73c7 1.6 13.4 1.5 18.8-.1a47.16 47.16 0 0 1 2.4 3.3c-9.5 3.8-13.8 3.4-20.6.3-.4-1.2-.6-2.4-.6-3.5zm1.5 6.3c3.2 1.3 5.8 1.9 8.5 1.9 3.3 0 7-.9 12.2-3 .8 1.5 1.5 3 2 4.5-8.7 3.4-12.7 3-20 1.1a20.67 20.67 0 0 1-2.7-4.5zm17.7 11.5c-4.3 0-8.5-1.4-11.9-4.1 2.3.5 4.1.7 5.9.7 3.4 0 6.9-.8 11.7-2.7.4 1.6.8 3.2 1 4.9-2.1.8-4.4 1.2-6.7 1.2zm8.9-2.1c-1-6.5-3.5-12.3-7.6-17.3l-.1-.1c.3-2.4.7-4.4 1.2-6.1 7.4 5.2 10.6 11.4 10.6 20.7-1.3 1-2.7 2-4.1 2.8zM122.1 63a19.26 19.26 0 0 1 2.3-3.8c8 4.2 10.7 10.2 12.5 19.1-.7 1.9-1.7 3.6-2.9 5.2-.5-8.9-4.2-15.3-11.9-20.5zm-46.4 8.7c0-5.7-2.2-11.1-6.2-15.1-8.3-8.3-21.9-8.3-30.2 0-4 4-6.2 9.4-6.2 15.1s2.2 11.1 6.2 15.1S48.7 93 54.4 93s11.1-2.2 15.1-6.2 6.2-9.4 6.2-15.1zM57 53c4 .5 7.7 2.4 10.7 5.4 3.4 3.4 5.3 7.8 5.5 12.4-2.1-3.4-5-5.8-8.5-7.1l-.9-.3c-.3-.1-.6-.2-.8-.3-.3-.1-.5-.2-.8-.2-.2-.1-.4-.1-.6-.2-1.8-.5-3.7-.8-6.6-1.1-.2 0-.4-.1-.6-.1-.1 0-.2 0-.3-.1-.1 0-.3-.1-.4-.1s-.3-.1-.4-.1-.1-.1-.2-.1l-1.2-.6c2.1-2.6 3.7-5 5.1-7.5zm-2.8-.1a68.6 68.6 0 0 1-4.1 6c-1.3-1.5-2-2.9-2.1-4.3v-.2c0-.1 0-.1-.1-.2V54c2.1-.7 4.2-1.1 6.3-1.1zm-8.8 2.2c.3 2.4 1.7 4.3 3 5.7l-1.8 2.1c-2.2-3-3.4-5.2-3.9-6a21.11 21.11 0 0 1 2.7-1.8zm-4.7 3.5c.6 1.1 1.9 3.3 4 6.1-.4.4-.8.8-1.2 1.1-1.4-1.2-3.4-2.8-5.8-3.1.8-1.4 1.8-2.9 3-4.1zm-4.1 6.7h.3l.1.1h.1c1.7.1 3.1 1.1 4.4 2.2-2.7 2.2-4.8 3.5-6 4.2 0-2.3.4-4.4 1.1-6.5zM41 85.1c-2.9-2.9-4.7-6.5-5.3-10.5 2.5-1.3 5-3 7.4-5 .4.8.9 1.9 1 2.9.2 1.4.3 2.6.5 3.6 0 .2.1.5.1.7.3 1.9.7 3.4 1.5 5.4 1.4 3.5 3.7 6.4 7 8.4-4.5-.3-8.9-2.3-12.2-5.5zm17.2 5.1l-.2-.1c-4.7-1.9-7.9-4.9-9.4-8.9-1.1-3-1.4-4.8-2-9.1-.2-1.6-.9-3.1-1.6-4.2.4-.4.8-.7 1.2-1.1 5.7 7.1 12.9 13.3 21.2 18.5-2.4 2.4-5.6 4.1-9.2 4.9zm9.1-8C57.8 76.1 51.7 69.6 48.1 65c.8-.8 1.5-1.6 2.3-2.5 1.5.9 3 1.5 4.3 1.6 1.3.2 2.4.3 3.4.5 2.1.3 3.6.7 5.7 1.5 4.1 1.5 7 4.7 8.8 9.3 0 .1.1.2.1.3-.6 2.8-1.8 5.4-3.6 7.7l-1.8-1.2zm15-37.7c2.1 1.6 4.5 4.3 4.5 8.3 0 .6.5 1.2 1.2 1.2s1.2-.5 1.2-1.2c0-4.2 3-7 5.5-8.6 7.7-2.8 12.9-10.2 12.9-18.4 0-10.8-8.8-19.5-19.5-19.5s-19.5 8.8-19.5 19.5c-.2 8.6 5.5 16.3 13.7 18.7zm5.7 3.3a9.63 9.63 0 0 0-1.6-2.5h3.3c-.7.8-1.2 1.6-1.7 2.5zm0-39.1c.6 0 1.1 0 1.6.1h.1c.5.1 1 .1 1.5.2h.1c.5.1 1 .2 1.4.4h.2c.5.1.9.3 1.4.5H94s-.1 0-.1.1c0 0-.1 0-.1.1l-.1.1s-.1 0-.1.1l-.2.2s0 .1-.1.1v.5c0 2.2 1.8 4.1 4.1 4.1.6 0 1.2-.5 1.2-1.2s-.5-1.2-1.2-1.2c-.9 0-1.7-.8-1.7-1.7 0-.1 0-.3-.1-.4 0-.1-.1-.2-.2-.3.3.2.6.3.9.5.1 0 .2.1.2.1.3.1.5.3.7.5.1 0 .1.1.2.1.3.2.6.4.8.6l.2.2c.2.2.4.4.6.5l.2.2c.3.2.5.5.8.7l.7.7c.1.1.1.2.2.2.2.3.4.5.7.8v.1c.2.3.4.5.6.8.1.1.1.2.2.3.2.3.3.5.5.8l.1.1c.2.3.3.6.5.9 0 .1.1.2.1.3.1.3.2.5.3.8 0 .1.1.1.1.2.1.3.2.7.3 1 0 .1 0 .2.1.2.1.3.2.6.2.9 0 .1 0 .2.1.3.1.4.1.7.2 1.1v.2c0 .3.1.6.1 1v3.3c0-.1-.1-.1-.1-.2l-.2-.2h-.1c-.1 0-.1-.1-.2-.1h-.4c-.5 0-.9-.2-1.2-.5s-.5-.8-.5-1.2v-.3a.76.76 0 0 0-.2-.4c-.2-.3-.5-.5-.9-.5-.3 0-.6.1-.8.3s-.4.5-.4.8c0 1.1.3 2.1 1.1 2.9.7.8 1.7 1.3 2.9 1.3.1 0 .2 0 .4-.1h.1c.1 0 .2-.1.3-.2 0 .1 0 .2-.1.3 0 .2-.1.3-.1.5-.1.3-.1.5-.2.8 0 .1-.1.3-.1.4-.1.3-.2.5-.3.8 0 .1-.1.2-.1.3-.2.4-.3.7-.5 1.1 0 .1-.1.1-.1.2-.2.3-.3.6-.5.9-.1.1-.2.2-.2.4-.1.2-.3.4-.4.7-.1.1-.2.3-.3.4-.2.2-.3.4-.5.6-.1.1-.2.2-.3.4l-.9.9c-.3.3-.6.6-.9.8l-.1.1c-.3.2-.6.5-.8.7-.1.1-.2.2-.3.2-.2.2-.4.3-.7.5-.1.1-.3.2-.4.3-.2.1-.5.3-.7.4a.76.76 0 0 1-.4.2c-.3.1-.5.3-.8.4-.1.1-.2.1-.4.2-.4.2-.8.3-1.2.5-.4.1-.7.2-1.1.3l.1.4-.2-.4-1.2.3.1.4-.2-.4c-.8.2-1.7.2-2.5.3h-.1c-.9 0-1.7 0-2.7-.1-.8-.1-1.7-.3-2.5-.5-7.3-2.1-12.5-8.9-12.5-16.5.1-9.8 7.8-17.5 17.3-17.5zm7 11.4c.6 0 1.2-.5 1.2-1.2s-.5-1.2-1.2-1.2c-.9 0-1.7-.8-1.7-1.7 0-.6-.5-1.2-1.2-1.2s-1.2.5-1.2 1.2c0 2.3 1.9 4.1 4.1 4.1zm.4 2.4c0-.6-.5-1.2-1.1-1.2-.7 0-1.2.5-1.2 1.1 0 1.1.3 2.1 1.1 2.9.7.8 1.7 1.3 2.8 1.3.6 0 1.1-.5 1.2-1.1 0-.6-.5-1.2-1.1-1.2-.5 0-.9-.2-1.2-.5-.4-.4-.5-.8-.5-1.3zm6.2-.6c.7 0 1.2-.5 1.2-1.1s-.5-1.2-1.1-1.2c-.5 0-.9-.2-1.2-.5s-.5-.8-.5-1.2c0-.6-.5-1.2-1.1-1.2s0 0 0 0c-.3 0-.6.1-.8.3s-.4.5-.4.8c0 1.1.3 2.1 1.1 2.9.7.7 1.7 1.2 2.8 1.2zM88.3 99.3c-2.6 0-5.2.5-7.6 1.4l-.7.3s-.1 0-.2.1c-.5.2-1 .5-1.5.7-.1 0-.1.1-.2.1l-.1.1c-.4.2-.8.4-1.1.7-.2.1-.4.3-.6.4-.3.2-.6.4-.9.7-.2.2-.4.3-.7.5s-.5.5-.8.7c-.2.2-.4.3-.5.5-.3.3-.5.6-.8.9l-.1.1c-.1.1-.2.3-.4.4a4.44 4.44 0 0 0-.8 1.1c-.1.1-.2.3-.3.4-.3.4-.5.8-.8 1.2l-.2.3c-.3.5-.5 1-.7 1.5l-.3.8c-1.1 2.5-1.6 5.2-1.6 8 0 11.5 9.3 20.8 20.8 20.8s20.8-9.3 20.8-20.8c.1-11.6-9.3-20.9-20.7-20.9zm-16.1 11.4l.1-.3c.2-.3.4-.7.7-1.1.1-.1.2-.2.2-.3.2-.3.4-.6.7-.9.1-.2.3-.3.4-.5.2-.2.4-.4.6-.7l1-1c.2-.2.5-.4.7-.6s.4-.3.6-.5l.1-.1c.1-.1.2-.2.4-.3.3-.2.6-.4 1-.6a.76.76 0 0 1 .4-.2 4.67 4.67 0 0 1 1-.5c2 1.6 4.8 2.4 8 2.2 4.8.2 8.6 2.9 10.4 7.2 1.5 3.7.9 8.2-1.7 11.8-.9 1.2-1.9 2.4-3 3.4-1.8 1.7-3.9 2.7-6 3.1-3.5.6-7-.3-9.8-2.5-.3-.3-.6-.5-.9-.8-2-2-3.2-4.8-3.4-7.8v-2.4c0-.2 0-.3-.1-.5 0-.2-.1-.4-.1-.7 0-.1-.1-.2-.1-.4s-.1-.5-.2-.7c0-.1-.1-.2-.1-.3-.1-.2-.1-.4-.2-.6 0-.1-.1-.2-.2-.4l-.3-.6c-.1-.2-.2-.3-.3-.5-.1-.1-.1-.3-.2-.4-.2-.3-.4-.5-.6-.8.6-.1.8-.4.9-.7zm-2.5.9zm18.6 27.1c-10.3 0-18.6-8.3-18.6-18.6 0-2 .3-4.1 1-6 .9 1.5 1.2 3.5 1.1 5.6v.1c.2 4.2 2 7.8 5.1 10.3 3.2 2.5 7.4 3.6 11.5 2.9 2.5-.4 4.9-1.7 7-3.6 1.2-1.1 2.4-2.4 3.3-3.7 3-4.1 3.8-9.5 2-13.9-2.1-5.1-6.7-8.3-12.4-8.6h-.1c-2.1.1-4-.2-5.5-1 1.8-.6 3.6-.8 5.5-.8 10.3 0 18.6 8.3 18.6 18.6.1 10.3-8.3 18.7-18.5 18.7z"
+			></path>
+		</svg>
+		<br />Your bet slip is empty, add selections to start placing your bets.
+	</div>
+</div>
+<!--[DES-43][Narra][Tutorial Page] Recommended Correct Scores (Bet Slip): start-->
+<div class="bg_mask" id="dont_copy_tutor_betslip" style="display: none"></div>
+<div class="bg_mask ob_tut_mask" id="obTutMsk3" style="display: none"></div>
+<!--[DES-43][Narra][Tutorial Page] Recommended Correct Scores (Bet Slip): end-->
+<script src="../assets/public/layout/js/scripts_asia_pb.js"></script>

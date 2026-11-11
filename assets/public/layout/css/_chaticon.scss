@@ -1,0 +1,59 @@
+@use "sass:math";
+$font_version: "?v="+math.random(100000);
+
+@font-face {
+    font-family: "chaticon";
+    src: url("../../layout/fonts/chaticon.woff2#{$font_version}") format("woff2"),
+    url("../../layout/fonts/chaticon.woff#{$font_version}") format("woff"),
+    url("../../layout/fonts/chaticon.ttf#{$font_version}") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+.uncle_boris [class^="icon-chat-"],
+.uncle_boris [class*=" icon-chat-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'chaticon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chat-question:before {
+    content: "\e900";
+}
+
+.icon-chat-level-arrow:before {
+    content: "\e901";
+}
+
+.icon-chat-close:before {
+    content: "\e902";
+}
+
+.icon-chat-send:before {
+    content: "\e903";
+}
+
+.icon-chat-close-bg:before {
+    content: "\e904";
+}
+
+.icon-chat-send-active:before {
+    content: "\e905";
+}
+
+.icon-chat-scroll:before {
+    content: "\e906";
+}
+
+.icon-chat-read-more:before {
+    content: "\e907";
+}

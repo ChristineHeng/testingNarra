@@ -1,0 +1,492 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Narra - html template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover,user-scalable=no" />
+    <!-- <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#000"> -->
+    <!--Base Styles-->
+    <link rel="stylesheet" type="text/css" href="../assets/public/layout/css/basestyle.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="../merchants/merchant1/css/style_asia.css">-->
+    <link rel="stylesheet" type="text/css" href="../assets/public/languages/eng/layout_asia.min.css" id="detect_language">
+    <link rel="stylesheet" type="text/css" href="#" id="design_view">
+
+    <script src="../assets/public/lib/jquery.js"></script>
+    <script src="../assets/public/layout/js/scripts_main.js"></script>
+    <script src="../assets/public/layout/js/scripts_asia.js"></script>
+
+</head>
+<body id="root">
+    <div class="n_container">
+        <div class="n_header n_header_search">
+            <div class="n_back"><a class="n_back_link mock_cb_n_back_link" id="backtomain"><i class="icon-fi-arrow-left"></i></a></div>
+            <div class="search_wrap">
+                <div class="search_input">
+                    <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset">
+                        <input class="search_box_selectLeague league-search" placeholder="Search Keyword" type="text">
+                        <div class="clear_icon">
+                            <i class="icon-fi-remove-thin"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="search_icon">
+                    <i class="icon-fi-n-search"></i>
+                </div>
+            </div>
+            <!--<div class="search_wrap_action"><a href="javascript:history.back()">Cancel</a></div>-->
+        </div>
+        <!--use "n_content_wrap_wth_bcktop" if include back to top feature, else , use "n_content_wrap"-->
+        <div class="search_results_wrap n_content_wrap_wth_bcktop">
+            <div class="search_menu n_sticky">
+                <div class="search_header">
+                    近期搜索
+                </div>
+                <div class="search_clear">
+                    清除全部
+                </div>
+            </div>
+            <div class="recent_search_wrap slider_wrap_flexi">
+                <div class="search_selection" id="btn_sample_demo_noresult">
+                    米 (no result)
+                </div>
+                <div class="search_selection" id="btn_sample_demo_loading">
+                    天津 (loading)
+                </div>
+                <div class="search_selection">
+                    澳大利亚
+                </div>
+                <div class="search_selection">
+                    意大利
+                </div>
+                <div class="search_selection">
+                    英国超级联赛
+                </div>
+            </div>
+            <div class="search_menu n_sticky">
+                <div class="search_header">
+                    热门搜索
+                </div>
+            </div>
+            <ol class="popular_search_wrap">
+                <li class="popolar_list">
+                    <span>美洲杯2021</span>
+                    <i class="icon-fi-arrow-right"></i>
+                </li>
+                <li class="popolar_list">
+                    <span>FIFA电子竞技</span>
+                    <i class="icon-fi-arrow-right"></i>
+                </li>
+                <li class="popolar_list">
+                    <span>*德国甲级联赛</span>
+                    <i class="icon-fi-arrow-right"></i>
+                </li>
+                <li class="popolar_list">
+                    <span>*西班牙甲级联赛</span>
+                    <i class="icon-fi-arrow-right"></i>
+                </li>
+                <li class="popolar_list">
+                    <span>*美洲杯2019(在巴西) - 哪一队可晋级下一轮*美洲杯2021*美洲杯2019(在巴西) - 哪一队可晋级下一轮*美洲杯2021</span>
+                    <i class="icon-fi-arrow-right"></i>
+                </li>
+                <li class="popolar_list">
+                    <span>阿尔巴尼亚</span>
+                    <i class="icon-fi-arrow-right"></i>
+                </li>
+                <li class="popolar_list">
+                    <span>阿尔巴尼亚</span>
+                    <i class="icon-fi-arrow-right"></i>
+                </li>
+                <li class="popolar_list">
+                    <span>阿尔巴尼亚</span>
+                    <i class="icon-fi-arrow-right"></i>
+                </li>
+                <li class="popolar_list">
+                    <span>阿尔巴尼亚</span>
+                    <i class="icon-fi-arrow-right"></i>
+                </li>
+                <li class="popolar_list">
+                    <span>阿尔巴尼亚</span>
+                    <i class="icon-fi-arrow-right"></i>
+                </li>
+            </ol>
+            <div class="search_more_btn">
+                查看更多热门赛事
+            </div>
+            <!--  <a href="#" class="search_more_btn">
+                查看更多热门赛事
+            </a> -->
+            <div id="sample_dont_copy_search_input_content" class=" ">
+                <div id="sample_dont_copy_search_input_header" class="n_filter_menu n_sticky">
+                    <div id="menu_scroll" class="n_sports_menu slider_wrap_flexi">
+                        <div class="item_wrap active">
+                            <div class="item">足球</div>
+                        </div>
+                        <div class="item_wrap">
+                            <div class="item">网球</div>
+                        </div>
+                        <div class="item_wrap">
+                            <div class="item">高尔夫</div>
+                        </div>
+                        <div class="item_wrap">
+                            <div class="item">冰上曲棍球</div>
+                        </div>
+                        <div class="item_wrap">
+                            <div class="item">虚拟足球</div>
+                        </div>
+                        <div class="item_wrap">
+                            <div class="item">羽毛球</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="league_title_list search_fbets sticky">
+                    <div class="event_league_wrap">
+                        <div><i class="icon-fi-title-s51 sports_icon"></i></div>
+                        <div class="league">26/08/2020深圳综指指数(半天)上午9:00 – 下午12:00</div>
+                    </div>
+                    <div class="event_details_action">
+                        <i class="icon-fi-arrow-right"></i>
+                    </div>
+                </div> -->
+                <!--note: add extra div to group by section for: SFSSR-6473 >> Css sticky header, pushing instead of overlaps :  -->
+                <div>
+                    <div class="league_title_list sticky">
+                        <div>
+                            <i class="icon-fi-title-s1 sports_icon"></i>
+                            <img class="fl_s_title_img" src="../assets/public/layout/images/icon/icon_s1.png" style="display: none;">
+                        </div>
+                        <div class="league" data-original="AFC Champions League">AFC Champions League</div>
+                        <i class="icon-fi-joystick"></i>
+                    </div>
+                    <div class="event_details">
+                        <div class="n_fav_on">
+                            <i class="icon-fi-n-fav-on"></i>
+                        </div>
+                        <div class="event_details_list">
+                            <div class="item"><div class="live_icon smaller_icon_v2">滚球中</div> </div>
+                            <div class="item">FC Astra Giurgiu <span class="vs">vs</span> Steaua Bucuresti</div>
+                        </div>
+                        <div class="event_details_action">
+                            <i class="icon-fi-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="event_details">
+                        <div class="n_fav_off">
+                            <i class="icon-fi-n-fav-off"></i>
+                        </div>
+                        <div class="event_details_list">
+                            <div class="item">10/7  8:00pm</div>
+                            <div class="item">CD Leganes <span class="vs">vs</span> Real Betis</div>
+                        </div>
+                        <div class="event_details_action">
+                            <i class="icon-fi-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="event_details">
+                        <div class="n_fav_off">
+                            <i class="icon-fi-n-fav-off"></i>
+                        </div>
+                        <div class="event_details_list">
+                            <div class="item">10/7  8:00pm</div>
+                            <div class="item">CD Leganes <span class="vs">vs</span> Real Betis</div>
+                        </div>
+                        <div class="event_details_action">
+                            <i class="icon-fi-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <!--note: add extra div to group by section for: SFSSR-6473 >> Css sticky header, pushing instead of overlaps :  -->
+                <div>
+                    <div class="league_title_list sticky">
+                        <div>
+                            <i class="icon-fi-title-s1 sports_icon"></i>
+                            <img class="fl_s_title_img" src="../assets/public/layout/images/icon/icon_s1.png" style="display: none;">
+                        </div>
+                        <div class="league" data-original="AFC Champions League">AFC Champions League</div>
+                        <i class="icon-fi-joystick"></i>
+                    </div>
+                    <div class="event_details">
+                        <div class="n_fav_off">
+                            <i class="icon-fi-n-fav-off"></i>
+                        </div>
+                        <div class="event_details_list">
+                            <div class="item">10/7  8:00pm</div>
+                            <div class="item">FC Astra Giurgiu <span class="vs">vs</span> Steaua Bucuresti</div>
+                        </div>
+                        <div class="event_details_action">
+                            <i class="icon-fi-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="league_title_list sticky">
+                        <div>
+                            <i class="icon-fi-title-s1 sports_icon"></i>
+                            <img class="fl_s_title_img" src="../assets/public/layout/images/icon/icon_s54.png" style="display: none;">
+                            <!-- <img class="fl_s_title_img" src="../assets/public/layout/images/icon/icon_s55.png" style="display: none;"> -->
+                            <!-- <img class="fl_s_title_img" src="../assets/public/layout/images/icon/icon_s59.png" style="display: none;"> -->
+                            <!-- <img class="fl_s_title_img" src="../assets/public/layout/images/icon/icon_s67.png" style="display: none;"> -->
+                        </div>
+                        <div class="league" data-original="Cyberbattle FIFA 22 China Super League">Cyberbattle FIFA 22 China Super League</div>
+                    </div>
+                    <div class="event_details">
+                        <div class="n_fav_off">
+                            <i class="icon-fi-n-fav-off"></i>
+                        </div>
+                        <div class="event_details_list">
+                            <div class="item">10/7  8:00pm</div>
+                            <div class="item">FC Astra Giurgiu <span class="vs">vs</span> Steaua Bucuresti</div>
+                        </div>
+                        <div class="event_details_action">
+                            <i class="icon-fi-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="league_title_list sticky">
+                        <div>
+                            <i class="icon-fi-title-s2 sports_icon"></i>
+                            <img class="fl_s_title_img" src="../assets/public/layout/images/icon/icon_s2.png" style="display: none;">
+                        </div>
+                        <div class="league" data-original="France Pro A League">France Pro A League</div>
+                    </div>
+                    <div class="event_details">
+                        <div class="n_fav_off">
+                            <i class="icon-fi-n-fav-off"></i>
+                        </div>
+                        <div class="event_details_list">
+                            <div class="item">10/7  8:00pm</div>
+                            <div class="item">Champagne Chalons Reims vs  <span class="vs">vs</span> Elan Bearnais Pau-Orthez</div>
+                        </div>
+                        <div class="event_details_action">
+                            <i class="icon-fi-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="event_details">
+                        <div class="n_fav_off">
+                            <i class="icon-fi-n-fav-off"></i>
+                        </div>
+                        <div class="event_details_list">
+                            <div class="item">10/7  8:00pm</div>
+                            <div class="item">Champagne Chalons Reims vs  <span class="vs">vs</span> Elan Bearnais Pau-Orthez</div>
+                        </div>
+                        <div class="event_details_action">
+                            <i class="icon-fi-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="event_details">
+                        <div class="n_fav_off">
+                            <i class="icon-fi-n-fav-off"></i>
+                        </div>
+                        <div class="event_details_list">
+                            <div class="item">10/7  8:00pm</div>
+                            <div class="item">Champagne Chalons Reims vs  <span class="vs">vs</span> Elan Bearnais Pau-Orthez</div>
+                        </div>
+                        <div class="event_details_action">
+                            <i class="icon-fi-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="event_details">
+                        <div class="n_fav_off">
+                            <i class="icon-fi-n-fav-off"></i>
+                        </div>
+                        <div class="event_details_list">
+                            <div class="item">10/7  8:00pm</div>
+                            <div class="item">Champagne Chalons Reims vs  <span class="vs">vs</span> Elan Bearnais Pau-Orthez</div>
+                        </div>
+                        <div class="event_details_action">
+                            <i class="icon-fi-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="event_details">
+                        <div class="n_fav_off">
+                            <i class="icon-fi-n-fav-off"></i>
+                        </div>
+                        <div class="event_details_list">
+                            <div class="item">10/7  8:00pm</div>
+                            <div class="item">Champagne Chalons Reims vs  <span class="vs">vs</span> Elan Bearnais Pau-Orthez</div>
+                        </div>
+                        <div class="event_details_action">
+                            <i class="icon-fi-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sample_demo_noresult" class="msg_wrap" style="display: none;">
+                <svg class="notavailable" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175 147" width="72" fill="#cacaca" style="display: none;">
+                    <path d="M26.7 97.4c-12.1 0-21.9 9.8-21.9 21.9s9.8 21.9 21.9 21.9 21.9-9.8 21.9-21.9c-.1-12.1-9.9-21.9-21.9-21.9zm5 2.9l-5.1 2-5.1-2c3.4-.9 6.9-.9 10.2 0zm-5 13.2l5.9 4.7-1.8 7.1h-8.3l-1.8-7.1 6-4.7zm-8.3-12.1l7.1 2.8v7.3l-6.3 5-7.4-2.5-1.4-5.9c2-2.9 4.8-5.2 8-6.7zM8.8 111l.9 3.7-2.6 3.2c.1-2.4.7-4.8 1.7-6.9zm1.3 18.8c-1.7-2.6-2.7-5.6-3-8.6l4.2-5 7.3 2.4 1.9 7.5-3.6 4.8-6.8-1.1zm2 2.6l4.6.7 2.8 4.4c-2.8-1.1-5.4-2.8-7.4-5.1zm10.6 6.1l-4-6.3 3.5-4.7h8.9l3.6 4.7-3.5 6.2c-2.8.6-5.7.6-8.5.1zm11.6-1.2l2.4-4.2 4.5-.7a19.79 19.79 0 0 1-6.9 4.9zm8.9-7.5l-6.7 1.1-3.6-4.8 1.9-7.5 7.3-2.4 4.2 5c-.4 3.1-1.5 6.1-3.1 8.6zm1.3-18.8a20.71 20.71 0 0 1 1.8 6.9l-2.6-3.2.8-3.7zm-3 3.1l-7.4 2.5-6.3-5v-7.3l7.1-2.8c3.2 1.5 6 3.8 8 6.7l-1.4 5.9zm127.5 4.3V117l-.1-.6c0-.2-.1-.4-.1-.6 0-.1 0-.3-.1-.4 0-.2-.1-.4-.1-.6l-.1-.4c0-.2-.1-.4-.2-.6l-.1-.3c-.1-.2-.1-.4-.2-.6l-.1-.3c-.1-.2-.1-.4-.2-.6l-.2-.5c-.1-.1-.1-.3-.2-.4s-.1-.3-.2-.4l-.2-.4c-.8-1.7-1.9-3.3-3.1-4.7l-.5-.6-.3-.3c-4-4-9.2-6.2-14.8-6.2s-10.8 2.2-14.8 6.2l-.8.9c-1.3 1.4-2.3 3-3.1 4.7l-.2.4c-.1.2-.1.3-.2.5s-.1.3-.2.5l-.1.4c-.1.2-.1.4-.2.6l-.1.3c-.1.2-.1.4-.2.6l-.1.3c-.1.2-.1.4-.2.6l-.1.4c0 .2-.1.4-.1.6l-.1.5c0 .2-.1.3-.1.5s0 .3-.1.5v5.5a.9.9 0 0 0 .1.5v.1c0 .1 0 .3.1.4 0 .2.1.4.1.6 0 .1.1.2.1.4s.1.4.2.6l.1.3c.1.2.1.4.2.6l.1.3c.1.2.1.4.2.6l.2.4c.1.2.1.3.2.5.1.1.1.3.2.4l.2.4c.8 1.7 1.9 3.3 3.1 4.7l.5.6.3.3c3.9 4 9.2 6.2 14.8 6.2s10.8-2.2 14.8-6.2l.8-.9c1.3-1.4 2.3-3 3.1-4.7l.2-.4c.1-.1.1-.3.2-.4s.1-.3.2-.4l.2-.5c.1-.2.1-.4.2-.6l.1-.3c.1-.2.1-.4.2-.6l.1-.3c.1-.2.1-.4.2-.6l.1-.4c0-.2.1-.4.1-.6 0-.1 0-.3.1-.4 0-.2.1-.4.1-.6 0-.1 0-.3.1-.5v-3.6zm-35.6 12.3c-.2-.2-.4-.5-.6-.8l-.2-.2c-.2-.4-.5-.7-.7-1.1l-.8-1.6c-.2-.5-.4-.9-.5-1.3v-.1c-.3-.9-.6-1.9-.8-2.9v-.2c-.1-.5-.1-.9-.2-1.4v-.2c0-.5-.1-1-.1-1.5s0-.9.1-1.5v-.2c0-.5.1-.9.2-1.4v-.2c.2-1 .4-2 .8-2.9v-.1c.2-.4.3-.9.5-1.3l.8-1.6c.2-.4.4-.7.7-1.1l.2-.2c.2-.3.4-.5.6-.8.7.9 1.3 1.9 1.8 3l-.8.3c-.3.1-.5.3-.6.5-.1.3-.2.6-.1.8a1.08 1.08 0 0 0 1.4.7l1-.3c.2.5.3 1 .5 1.5l-1.2.2c-.1 0-.3.1-.4.1l-.3.3c-.1.1-.1.2-.2.4v.4c.1.6.6 1 1.2.9l1.4-.2c.1.5.1 1 .1 1.5h-1a1.11 1.11 0 0 0-1.1 1.1 1.11 1.11 0 0 0 1.1 1.1h1c0 .5-.1 1.1-.1 1.5l-1.4-.2h-.4c-.1 0-.2.1-.3.2l-.3.3c-.1.1-.1.2-.1.4 0 .3 0 .6.2.8s.4.4.7.4l1.2.2c-.1.5-.3 1-.5 1.5l-1-.3a1.08 1.08 0 0 0-1.4.7c-.1.3-.1.6.1.8.1.3.4.5.6.6l.8.3c-.6 1.2-1.2 2.2-1.9 3.1zm14.8 7.3c-5.1 0-9.8-2-13.4-5.6 1-1.2 1.8-2.5 2.5-4l1.3.4a1.08 1.08 0 0 0 1.4-.7c.1-.3.1-.6-.1-.8-.1-.3-.4-.5-.6-.6l-1.2-.4c.2-.6.4-1.3.6-1.9l1.5.2c.6.1 1.2-.3 1.2-.9 0-.3 0-.6-.2-.8s-.4-.4-.7-.4l-1.4-.2c.1-.6.1-1.2.2-1.9h1.1a1.11 1.11 0 0 0 1.1-1.1 1.11 1.11 0 0 0-1.1-1.1h-1.1c0-.6-.1-1.2-.2-1.9l1.4-.2c.6-.1 1-.6.9-1.2 0-.3-.2-.5-.4-.7s-.5-.2-.8-.2l-1.5.2c-.2-.7-.4-1.3-.6-1.9l1.2-.4a1.08 1.08 0 0 0 .7-1.4.9.9 0 0 0-.6-.6c-.3-.1-.6-.2-.8-.1l-1.3.4a24.18 24.18 0 0 0-2.5-4c3.5-3.6 8.3-5.6 13.4-5.6s9.8 2 13.4 5.6c-1 1.2-1.8 2.5-2.5 4l-1.3-.4c-.3-.1-.6-.1-.8.1-.3.1-.5.4-.6.6-.1.3-.1.6.1.8.1.3.4.5.6.5l1.2.4c-.2.6-.4 1.3-.6 1.9l-1.5-.2c-.6-.1-1.2.3-1.2.9-.1.6.3 1.2.9 1.2l1.4.2c-.1.6-.1 1.2-.2 1.9H156a1.11 1.11 0 0 0-1.1 1.1 1.11 1.11 0 0 0 1.1 1.1h1.1c0 .6.1 1.2.2 1.9l-1.4.2c-.3 0-.5.2-.7.4s-.2.5-.2.8c.1.6.6 1 1.2.9l1.5-.2c.2.7.4 1.3.6 1.9l-1.2.4c-.3.1-.5.3-.6.5-.1.3-.2.6-.1.8.2.5.7.8 1.3.7h.1l1.3-.4a24.18 24.18 0 0 0 2.5 4c-3.6 3.8-8.3 5.8-13.4 5.8zm18.6-17.2v.2c0 .5-.1.9-.2 1.4v.2c-.2 1-.4 2-.8 2.9l.4.1h-.4c-.2.4-.3.9-.5 1.3l-.8 1.6c-.2.4-.4.7-.7 1.1l-.2.2c-.2.3-.4.5-.6.8-.7-.9-1.3-1.9-1.8-3l.8-.3c.3-.1.5-.3.6-.5.1-.3.2-.6.1-.8a1.08 1.08 0 0 0-1.4-.7l-1 .3c-.2-.5-.3-1-.5-1.5l1.2-.2c.1 0 .3-.1.4-.1l.3-.3c.1-.1.1-.2.2-.4v-.4c0-.3-.2-.5-.4-.7s-.5-.2-.8-.2l-1.4.2c-.1-.5-.1-1-.1-1.5h1a1.11 1.11 0 0 0 1.1-1.1 1.11 1.11 0 0 0-1.1-1.1h-1c0-.5.1-1.1.1-1.5l1.4.2c.6.1 1.2-.3 1.2-.9v-.4a.76.76 0 0 0-.2-.4l-.3-.3c-.1-.1-.2-.1-.4-.1l-1.2-.2c.1-.5.3-1 .5-1.5l1 .3c.5.2 1.2-.1 1.4-.7.1-.3.1-.6-.1-.8-.1-.3-.4-.5-.6-.5l-.8-.3c.5-1.1 1.1-2.1 1.8-3 .2.2.4.5.6.8l.2.2c.2.4.5.7.7 1.1l.8 1.6c.2.5.4.9.5 1.3l.4-.1-.3.2c.3.9.6 1.9.8 2.9v.1c.1.5.1.9.2 1.4v.2c0 .5.1 1 .1 1.5-.2.4-.2.9-.2 1.4zm-26.4-49.2a21.5 21.5 0 1 0-43 0 21.47 21.47 0 0 0 21.5 21.5c11.8 0 21.5-9.7 21.5-21.5zm-12.2-16.9c6.2 3.4 10 9.8 10 16.9 0 .6 0 1.2-.1 1.7-1.9-6.7-4.9-12-12.2-15.9l1.2-1.5c.4-.4.7-.8 1.1-1.2zm-7.3-1.9l.3-.3c1.7.2 3.3.6 4.9 1.2-.2.3-.4.5-.7.8-3.8 4.5-6.6 7.7-7.6 16.3-1.8.6-3.8.9-5.9 1.1 1.3-9.8 4.2-13.3 9-19.1zm-6.6.1c1.4-.3 2.7-.5 4.1-.6-4.4 5.3-7.5 9.4-8.7 19.6-1.4 0-2.8-.1-4.3-.2 1.1-9.5 3.4-12.4 8.1-17.9l.8-.9zm-4.3 1.6c-3.6 4.5-5.8 8.1-6.8 16.9-1.2-.2-2.4-.4-3.6-.7.3-6.9 4.4-13.1 10.4-16.2zM99.7 73c7 1.6 13.4 1.5 18.8-.1a47.16 47.16 0 0 1 2.4 3.3c-9.5 3.8-13.8 3.4-20.6.3-.4-1.2-.6-2.4-.6-3.5zm1.5 6.3c3.2 1.3 5.8 1.9 8.5 1.9 3.3 0 7-.9 12.2-3 .8 1.5 1.5 3 2 4.5-8.7 3.4-12.7 3-20 1.1a20.67 20.67 0 0 1-2.7-4.5zm17.7 11.5c-4.3 0-8.5-1.4-11.9-4.1 2.3.5 4.1.7 5.9.7 3.4 0 6.9-.8 11.7-2.7.4 1.6.8 3.2 1 4.9-2.1.8-4.4 1.2-6.7 1.2zm8.9-2.1c-1-6.5-3.5-12.3-7.6-17.3l-.1-.1c.3-2.4.7-4.4 1.2-6.1 7.4 5.2 10.6 11.4 10.6 20.7-1.3 1-2.7 2-4.1 2.8zM122.1 63a19.26 19.26 0 0 1 2.3-3.8c8 4.2 10.7 10.2 12.5 19.1-.7 1.9-1.7 3.6-2.9 5.2-.5-8.9-4.2-15.3-11.9-20.5zm-46.4 8.7c0-5.7-2.2-11.1-6.2-15.1-8.3-8.3-21.9-8.3-30.2 0-4 4-6.2 9.4-6.2 15.1s2.2 11.1 6.2 15.1S48.7 93 54.4 93s11.1-2.2 15.1-6.2 6.2-9.4 6.2-15.1zM57 53c4 .5 7.7 2.4 10.7 5.4 3.4 3.4 5.3 7.8 5.5 12.4-2.1-3.4-5-5.8-8.5-7.1l-.9-.3c-.3-.1-.6-.2-.8-.3-.3-.1-.5-.2-.8-.2-.2-.1-.4-.1-.6-.2-1.8-.5-3.7-.8-6.6-1.1-.2 0-.4-.1-.6-.1-.1 0-.2 0-.3-.1-.1 0-.3-.1-.4-.1s-.3-.1-.4-.1-.1-.1-.2-.1l-1.2-.6c2.1-2.6 3.7-5 5.1-7.5zm-2.8-.1a68.6 68.6 0 0 1-4.1 6c-1.3-1.5-2-2.9-2.1-4.3v-.2c0-.1 0-.1-.1-.2V54c2.1-.7 4.2-1.1 6.3-1.1zm-8.8 2.2c.3 2.4 1.7 4.3 3 5.7l-1.8 2.1c-2.2-3-3.4-5.2-3.9-6a21.11 21.11 0 0 1 2.7-1.8zm-4.7 3.5c.6 1.1 1.9 3.3 4 6.1-.4.4-.8.8-1.2 1.1-1.4-1.2-3.4-2.8-5.8-3.1.8-1.4 1.8-2.9 3-4.1zm-4.1 6.7h.3l.1.1h.1c1.7.1 3.1 1.1 4.4 2.2-2.7 2.2-4.8 3.5-6 4.2 0-2.3.4-4.4 1.1-6.5zM41 85.1c-2.9-2.9-4.7-6.5-5.3-10.5 2.5-1.3 5-3 7.4-5 .4.8.9 1.9 1 2.9.2 1.4.3 2.6.5 3.6 0 .2.1.5.1.7.3 1.9.7 3.4 1.5 5.4 1.4 3.5 3.7 6.4 7 8.4-4.5-.3-8.9-2.3-12.2-5.5zm17.2 5.1l-.2-.1c-4.7-1.9-7.9-4.9-9.4-8.9-1.1-3-1.4-4.8-2-9.1-.2-1.6-.9-3.1-1.6-4.2.4-.4.8-.7 1.2-1.1 5.7 7.1 12.9 13.3 21.2 18.5-2.4 2.4-5.6 4.1-9.2 4.9zm9.1-8C57.8 76.1 51.7 69.6 48.1 65c.8-.8 1.5-1.6 2.3-2.5 1.5.9 3 1.5 4.3 1.6 1.3.2 2.4.3 3.4.5 2.1.3 3.6.7 5.7 1.5 4.1 1.5 7 4.7 8.8 9.3 0 .1.1.2.1.3-.6 2.8-1.8 5.4-3.6 7.7l-1.8-1.2zm15-37.7c2.1 1.6 4.5 4.3 4.5 8.3 0 .6.5 1.2 1.2 1.2s1.2-.5 1.2-1.2c0-4.2 3-7 5.5-8.6 7.7-2.8 12.9-10.2 12.9-18.4 0-10.8-8.8-19.5-19.5-19.5s-19.5 8.8-19.5 19.5c-.2 8.6 5.5 16.3 13.7 18.7zm5.7 3.3a9.63 9.63 0 0 0-1.6-2.5h3.3c-.7.8-1.2 1.6-1.7 2.5zm0-39.1c.6 0 1.1 0 1.6.1h.1c.5.1 1 .1 1.5.2h.1c.5.1 1 .2 1.4.4h.2c.5.1.9.3 1.4.5H94s-.1 0-.1.1c0 0-.1 0-.1.1l-.1.1s-.1 0-.1.1l-.2.2s0 .1-.1.1v.5c0 2.2 1.8 4.1 4.1 4.1.6 0 1.2-.5 1.2-1.2s-.5-1.2-1.2-1.2c-.9 0-1.7-.8-1.7-1.7 0-.1 0-.3-.1-.4 0-.1-.1-.2-.2-.3.3.2.6.3.9.5.1 0 .2.1.2.1.3.1.5.3.7.5.1 0 .1.1.2.1.3.2.6.4.8.6l.2.2c.2.2.4.4.6.5l.2.2c.3.2.5.5.8.7l.7.7c.1.1.1.2.2.2.2.3.4.5.7.8v.1c.2.3.4.5.6.8.1.1.1.2.2.3.2.3.3.5.5.8l.1.1c.2.3.3.6.5.9 0 .1.1.2.1.3.1.3.2.5.3.8 0 .1.1.1.1.2.1.3.2.7.3 1 0 .1 0 .2.1.2.1.3.2.6.2.9 0 .1 0 .2.1.3.1.4.1.7.2 1.1v.2c0 .3.1.6.1 1v3.3c0-.1-.1-.1-.1-.2l-.2-.2h-.1c-.1 0-.1-.1-.2-.1h-.4c-.5 0-.9-.2-1.2-.5s-.5-.8-.5-1.2v-.3a.76.76 0 0 0-.2-.4c-.2-.3-.5-.5-.9-.5-.3 0-.6.1-.8.3s-.4.5-.4.8c0 1.1.3 2.1 1.1 2.9.7.8 1.7 1.3 2.9 1.3.1 0 .2 0 .4-.1h.1c.1 0 .2-.1.3-.2 0 .1 0 .2-.1.3 0 .2-.1.3-.1.5-.1.3-.1.5-.2.8 0 .1-.1.3-.1.4-.1.3-.2.5-.3.8 0 .1-.1.2-.1.3-.2.4-.3.7-.5 1.1 0 .1-.1.1-.1.2-.2.3-.3.6-.5.9-.1.1-.2.2-.2.4-.1.2-.3.4-.4.7-.1.1-.2.3-.3.4-.2.2-.3.4-.5.6-.1.1-.2.2-.3.4l-.9.9c-.3.3-.6.6-.9.8l-.1.1c-.3.2-.6.5-.8.7-.1.1-.2.2-.3.2-.2.2-.4.3-.7.5-.1.1-.3.2-.4.3-.2.1-.5.3-.7.4a.76.76 0 0 1-.4.2c-.3.1-.5.3-.8.4-.1.1-.2.1-.4.2-.4.2-.8.3-1.2.5-.4.1-.7.2-1.1.3l.1.4-.2-.4-1.2.3.1.4-.2-.4c-.8.2-1.7.2-2.5.3h-.1c-.9 0-1.7 0-2.7-.1-.8-.1-1.7-.3-2.5-.5-7.3-2.1-12.5-8.9-12.5-16.5.1-9.8 7.8-17.5 17.3-17.5zm7 11.4c.6 0 1.2-.5 1.2-1.2s-.5-1.2-1.2-1.2c-.9 0-1.7-.8-1.7-1.7 0-.6-.5-1.2-1.2-1.2s-1.2.5-1.2 1.2c0 2.3 1.9 4.1 4.1 4.1zm.4 2.4c0-.6-.5-1.2-1.1-1.2-.7 0-1.2.5-1.2 1.1 0 1.1.3 2.1 1.1 2.9.7.8 1.7 1.3 2.8 1.3.6 0 1.1-.5 1.2-1.1 0-.6-.5-1.2-1.1-1.2-.5 0-.9-.2-1.2-.5-.4-.4-.5-.8-.5-1.3zm6.2-.6c.7 0 1.2-.5 1.2-1.1s-.5-1.2-1.1-1.2c-.5 0-.9-.2-1.2-.5s-.5-.8-.5-1.2c0-.6-.5-1.2-1.1-1.2s0 0 0 0c-.3 0-.6.1-.8.3s-.4.5-.4.8c0 1.1.3 2.1 1.1 2.9.7.7 1.7 1.2 2.8 1.2zM88.3 99.3c-2.6 0-5.2.5-7.6 1.4l-.7.3s-.1 0-.2.1c-.5.2-1 .5-1.5.7-.1 0-.1.1-.2.1l-.1.1c-.4.2-.8.4-1.1.7-.2.1-.4.3-.6.4-.3.2-.6.4-.9.7-.2.2-.4.3-.7.5s-.5.5-.8.7c-.2.2-.4.3-.5.5-.3.3-.5.6-.8.9l-.1.1c-.1.1-.2.3-.4.4a4.44 4.44 0 0 0-.8 1.1c-.1.1-.2.3-.3.4-.3.4-.5.8-.8 1.2l-.2.3c-.3.5-.5 1-.7 1.5l-.3.8c-1.1 2.5-1.6 5.2-1.6 8 0 11.5 9.3 20.8 20.8 20.8s20.8-9.3 20.8-20.8c.1-11.6-9.3-20.9-20.7-20.9zm-16.1 11.4l.1-.3c.2-.3.4-.7.7-1.1.1-.1.2-.2.2-.3.2-.3.4-.6.7-.9.1-.2.3-.3.4-.5.2-.2.4-.4.6-.7l1-1c.2-.2.5-.4.7-.6s.4-.3.6-.5l.1-.1c.1-.1.2-.2.4-.3.3-.2.6-.4 1-.6a.76.76 0 0 1 .4-.2 4.67 4.67 0 0 1 1-.5c2 1.6 4.8 2.4 8 2.2 4.8.2 8.6 2.9 10.4 7.2 1.5 3.7.9 8.2-1.7 11.8-.9 1.2-1.9 2.4-3 3.4-1.8 1.7-3.9 2.7-6 3.1-3.5.6-7-.3-9.8-2.5-.3-.3-.6-.5-.9-.8-2-2-3.2-4.8-3.4-7.8v-2.4c0-.2 0-.3-.1-.5 0-.2-.1-.4-.1-.7 0-.1-.1-.2-.1-.4s-.1-.5-.2-.7c0-.1-.1-.2-.1-.3-.1-.2-.1-.4-.2-.6 0-.1-.1-.2-.2-.4l-.3-.6c-.1-.2-.2-.3-.3-.5-.1-.1-.1-.3-.2-.4-.2-.3-.4-.5-.6-.8.6-.1.8-.4.9-.7zm-2.5.9zm18.6 27.1c-10.3 0-18.6-8.3-18.6-18.6 0-2 .3-4.1 1-6 .9 1.5 1.2 3.5 1.1 5.6v.1c.2 4.2 2 7.8 5.1 10.3 3.2 2.5 7.4 3.6 11.5 2.9 2.5-.4 4.9-1.7 7-3.6 1.2-1.1 2.4-2.4 3.3-3.7 3-4.1 3.8-9.5 2-13.9-2.1-5.1-6.7-8.3-12.4-8.6h-.1c-2.1.1-4-.2-5.5-1 1.8-.6 3.6-.8 5.5-.8 10.3 0 18.6 8.3 18.6 18.6.1 10.3-8.3 18.7-18.5 18.7z">
+                    </path>
+                </svg>
+                <img src="../assets/public/layout/images/cb_noresult.svg" class="notavailable" style="display: none;"></img>
+                抱歉，暂无搜索结果
+            </div>
+            <div id="sample_demo_loading" style="display: none;">
+                <div class="general_wrap n_inner_loading">
+                    <div class="rotate_wrap_content">
+                        <div class="rotate_wrap_content_inner">
+                            <div class="loading">
+                                <!-- <div class="loading_icon">
+                                </div> -->
+                                <div class="spinner_wrapper">
+                                    <i class="spinner"></i>
+                                    <i class="spinner"></i>
+                                    <i class="spinner"></i>
+                                    <i class="spinner"></i>
+                                    <i class="spinner"></i>
+                                </div>
+                            </div>
+                            <br>
+                            loading
+                        </div>
+                    </div>
+                    <div class="fl_loading_wrp" style="display: none;">
+                        <div class="fl_loading">
+                            <div class="fl_load_ring">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div style="display: none;"></div>
+                            </div>
+                        </div>
+                        Loading...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Hidden Scenario: Loading: on top of everything : Sample Refer to My Fav-->
+    <!--      <div id="sample_loading" class="loading_wrap_outer" style="display: none;">
+            <div class="loading_wrap">
+                <div class="rotate_wrap_content">
+                    <div class="rotate_wrap_content_inner">
+                        <div class="loading">
+                            <div class="loading_icon">
+                            </div>
+                        </div>
+                        <br />
+                        loading
+                    </div>
+
+                </div>
+            </div>
+        </div> -->
+
+    <script>
+        $(document).ready(function () {
+            recent_search();
+            scrollable_menu();
+            // no longer in used: start
+            // var header_height = $(".n_header").outerHeight();
+            // var marketheader_height = $(".n_event_listing_header").outerHeight();
+            // var all_menu_height = submenu_height;
+            // $(".n_event_listing_header").css("top", header_height + submenu_height);
+            // no longer in used: end
+
+            $("#btn_sample_demo_noresult").click(function () {
+                $(".search_results_wrap > div").hide();
+                $(".popular_search_wrap").hide();
+                $("#sample_demo_noresult").show();
+
+                if(localStorage.getItem("isFacelift") === "true") {
+                    if(localStorage.getItem("isCyberBattle") === "true") {
+                        $(".msg_wrap svg").hide()
+                        $(".msg_wrap img").show()                        
+                    } else {
+                        $("#sample_demo_noresult svg").show()
+                    }
+                }
+            });
+
+            localStorage.getItem("isCyberBattle") === "true" && $("#backtomain").html(`<i class="icon-fi-arrow-left"></i> Back`)
+
+            $("#btn_sample_demo_loading").click(function () {
+                $(".search_results_wrap > div").hide();
+                $(".popular_search_wrap").hide();
+                $("#sample_demo_loading").show();
+
+                if(localStorage.getItem("isFacelift") === "true") {
+                    $("#sample_demo_loading .fl_loading_wrp").show()
+                    $("#sample_demo_loading .rotate_wrap_content").hide()
+                }
+            });
+
+            if(localStorage.getItem("isFacelift") === "true") {
+                $(".league_title_list > div:first-child").find("i, img").toggle()
+            }
+
+            if(localStorage.getItem("isCyberBattle")==="true") {
+                $(".league_title_list:first-child > div:first-child").find("img").attr('src', '../assets/public/layout/images/icon/icon_s54.png')
+
+                if(localStorage.getItem("theme") === "default1") {
+                    $(".fl_loading_wrp").addClass("cb_gradient_load_ring").find($(".fl_load_ring > div:last-child")).show();
+                }
+            }
+
+            function stopScroll() {
+            }
+
+            function disableScrolling(elem) {
+                document.addEventListener("touchend", stopScroll);
+            }
+
+            function enableScrolling() {
+                document.removeEventListener("touchend", stopScroll);
+            }
+
+            $(".search_box_selectLeague").focus(function () {
+                $("body").bind("touchmove", function (event) {
+                });
+            });
+            cyberbattleBackButton();
+            cbWebScroll(".recent_search_wrap");
+        });
+
+        $(function () {
+            var targetSelector = '.league, .event_details_list .item';
+
+            $(targetSelector).each(function () {
+                var $el = $(this);
+
+                if (!$el.data('original')) {
+                    $el.data('original', $.trim($el.text()));
+                }
+            });
+
+            function escapeRegExp(str) {
+                return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            }
+
+            function highlight(text, keyword) {
+                if (!keyword) return text;
+
+                var safeKeyword = escapeRegExp(keyword);
+                var regex = new RegExp('(' + safeKeyword + ')', 'gi');
+
+                return text.replace(regex, '<span class="found">$1</span>');
+            }
+
+            $(document).on('input', '.league-search', function () {
+                var keyword = $.trim($(this).val()).toLowerCase();
+
+                $(targetSelector).each(function () {
+                    var $el = $(this);
+                    var original = $el.data('original');
+
+                    // reset
+                    $el.html(original);
+
+                    if (!keyword) return;
+
+                    if (original.toLowerCase().indexOf(keyword) > -1) {
+                        $el.html(highlight(original, keyword));
+                    }
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>

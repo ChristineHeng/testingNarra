@@ -1,0 +1,30 @@
+﻿
+<!--for statistics-->
+<iframe id="iframe_statistics" scrolling="yes" style="display: none; background-position: center center; background-repeat: no-repeat;" width="100%" frameborder="no" src="../html_public/sev_stats_sample.html" ></iframe>
+  
+<div class="n_sev_item_content_wrap">
+
+    <div id="sample_sev_main"></div>
+
+</div>
+
+<div id="sample_short_content" class="msg_wrap">抱歉，暂无搜索结果</div>
+
+
+<script>
+    $(document).ready(function () {
+        $("#sample_sev_main").load("_sev_content_template.html", function() {  
+        });
+    });
+</script>
+<script>
+    function hideAllTabs() {
+        $("#sample_sev_main").hide();
+        $("#sample_short_content").hide();
+    }
+    $("#tabSoccerTestingShortContent").click(function () {
+        hideAllTabs();
+        $("#sample_short_content").show();
+        //$("#sample_short_content").unwrap();
+    });
+</script>

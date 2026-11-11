@@ -1,0 +1,2171 @@
+@use "sass:color";
+@use "../../assets/themes/colours/brand"as brand;
+@use "../../assets/public/layout/css/base"as base;
+@use "../mixin"as mix;
+
+.trend-performance-card {
+    &.win {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    --trend-color: #{brand.t(Green)};
+                }
+            }
+        }
+    }
+
+    &.lose {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    --trend-color: #{brand.t(Red)};
+                }
+            }
+        }
+    }
+
+    .ai_graph_preview & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+.tp_heading {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(flex-start);
+                @include base.justifyContent(space-between);
+                gap: 24px;
+                padding: 0 8px;
+            }
+        }
+    }
+}
+
+.tp_title {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                font-size: 14px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+                }
+            }
+        }
+    }
+}
+
+.tp_subtitle {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                padding-top: 6px;
+                font-size: 10px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+}
+
+.trend-performance-chart {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                display: block;
+                width: 100%;
+                height: auto;
+                overflow: visible;
+                touch-action: none;
+                cursor: crosshair;
+            }
+        }
+    }
+}
+
+.trend-performance-grid-line {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                stroke-width: 1;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    stroke: brand.t(LightGray);
+                }
+
+                @include mix.darkTheme {
+                    stroke: brand.t(LightBlack);
+                }
+            }
+        }
+    }
+
+    &.zero {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        stroke: brand.t(DarkGray);
+                    }
+
+                    @include mix.darkTheme {
+                        stroke: brand.t(LightGray);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.trend-performance-fill-stop {
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                stop-color: var(--trend-color);
+            }
+        }
+    }
+}
+
+.trend-performance-axis-label,
+.trend-performance-axis-title,
+.trend-performance-bet-label {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                font-size: 22px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    fill: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    fill: brand.t(LightGray);
+                }
+            }
+        }
+    }
+}
+
+.trend-performance-axis-title {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.trend-performance-line {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                fill: none;
+                stroke-width: 3.8;
+                stroke-linecap: square;
+                stroke-linejoin: miter;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                stroke: var(--trend-color);
+            }
+        }
+    }
+}
+
+.trend-performance-cursor-line {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                stroke-width: 1;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    stroke: brand.t(DividerGray);
+                }
+
+                @include mix.darkTheme {
+                    stroke: brand.t(Gray03);
+                }
+            }
+        }
+    }
+}
+
+.trend-performance-active-dot {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                stroke-width: 4;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                fill: var(--trend-color);
+                filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.25));
+
+                @include mix.brightTheme {
+                    stroke: brand.t(DividerGray);
+                }
+
+                @include mix.darkTheme {
+                    stroke: brand.t(Gray02);
+                }
+            }
+        }
+    }
+}
+
+.trend-performance-tooltip {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                font-size: 22px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    fill: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    fill: brand.t(LightGray);
+                }
+            }
+        }
+    }
+
+    rect {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    stroke-width: 2;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        fill: brand.t(White);
+                        stroke: brand.t(DividerGray);
+                    }
+
+                    @include mix.darkTheme {
+                        fill: brand.t(Gray);
+                        stroke: brand.t(Gray02);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.trend-performance-tip-value {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                font-size: 24px;
+                font-weight: 800;
+            }
+        }
+    }
+
+    &.win {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    fill: #{brand.t(Green)};
+                }
+            }
+        }
+    }
+
+    &.lose {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    fill: #{brand.t(Red)};
+                }
+            }
+        }
+    }
+}
+
+.trend-performance-date-label {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                font-size: 20px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    fill: brand.t(MediumGray);
+                }
+
+                @include mix.darkTheme {
+                    fill: brand.t(Gray03);
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_wl {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.borderRadius(4px);
+                padding: 10px 0;
+                user-select: none;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    background: brand.t(White);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(DarkBlack);
+                }
+            }
+        }
+    }
+
+    &.pinned {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include base.borderRadius(0);
+                    position: sticky;
+                    top: 0;
+                    z-index: 5;
+                    padding: 10px 8px;
+                    margin: 0 -8px;
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_wl_hdr,
+.ai_graph_wl_sub {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(space-between);
+                gap: 8px;
+            }
+        }
+    }
+}
+
+.ai_graph_wl_hdr {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                min-height: 24px;
+            }
+        }
+    }
+}
+
+.ai_graph_wl_sub {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                margin-top: 4px;
+            }
+        }
+    }
+}
+
+.ai_graph_wl_ttl {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 12px;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_wl_pin,
+.ai_graph_wl_info {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(center);
+                @include base.borderRadius(12px);
+                padding: 0;
+                border: 0;
+                background: transparent;
+                cursor: pointer;
+            }
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    color: brand.t(Gray03);
+                }
+            }
+        }
+    }
+
+    &.active i {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        color: brand.t(BlueTheme);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(TurquoiseTheme);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_wl_info {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                margin-left: 6px;
+            }
+        }
+    }
+}
+
+.ai_graph_wl_pin {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                width: 24px;
+                height: 24px;
+                margin-left: 2px;
+            }
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include base.transform(rotate(0deg));
+                    transition: transform 0.15s;
+                }
+            }
+        }
+    }
+
+    &.active {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        @include base.bgOpacity(brand.t(BlueTheme), 0.14);
+                    }
+
+                    @include mix.darkTheme {
+                        @include base.bgOpacity(brand.t(TurquoiseTheme), 0.14);
+                    }
+                }
+            }
+        }
+    }
+
+    &.active i {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include base.transform(rotate(-45deg));
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_wl_info_tip {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.borderRadius(4px);
+                position: absolute;
+                left: 10px;
+                right: 10px;
+                z-index: 30;
+                display: none;
+                box-sizing: border-box;
+                padding: 12px;
+                border: 1px solid transparent;
+                font-size: 11px;
+                line-height: 16px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    background: brand.t(White);
+                    border-color: brand.t(DividerGray);
+                    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(Gray01);
+                    border-color: brand.t(Gray02);
+                    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+
+    &.active {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_wl_info_arrow {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.transform(rotate(45deg));
+                position: absolute;
+                top: -5px;
+                left: 0;
+                width: 8px;
+                height: 8px;
+                border-style: solid;
+                border-width: 1px 0 0 1px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    background: brand.t(White);
+                    border-color: brand.t(DividerGray);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(Gray01);
+                    border-color: brand.t(Gray02);
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_wl_info_ttl,
+.ai_graph_wl_info_desc {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.ai_graph_wl_info_ttl {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                font-weight: 700;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_wl_info_desc {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                margin-top: 6px;
+            }
+        }
+    }
+}
+
+.ai_graph_wl_val {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 18px;
+                font-variant-numeric: tabular-nums;
+                white-space: nowrap;
+                margin-right: 2px;
+            }
+        }
+    }
+
+    &.win {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    color: brand.t(Green);
+                }
+            }
+        }
+    }
+
+    &.lose {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    color: brand.t(Red);
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_wl_desc,
+.ai_graph_wl_range,
+.ai_graph_wl_bets span {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                font-size: 10px;
+                line-height: 10px;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                color: brand.t(Gray03);
+            }
+        }
+    }
+}
+
+.ai_graph_wl_desc {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+}
+
+.ai_graph_wl_range {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                margin-right: 2px;
+            }
+        }
+    }
+}
+
+.ai_graph_wl_body {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                gap: 1px;
+                margin-top: 11px;
+            }
+        }
+    }
+}
+
+.ai_graph_wl_plot {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flex(1);
+                min-width: 0;
+            }
+        }
+    }
+}
+
+.ai_graph_wl_days,
+.ai_graph_wl_bands {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+            }
+        }
+    }
+}
+
+.ai_graph_wl_days {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                height: 16px;
+                margin-bottom: 2px;
+            }
+        }
+    }
+}
+
+.ai_graph_wl_day {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(center);
+                flex-shrink: 0;
+                gap: 3px;
+                box-sizing: border-box;
+                min-width: 0;
+                height: 16px;
+                padding: 0 0 1px;
+                border: 0;
+                border-left: 1px solid transparent;
+                border-bottom: 2px solid transparent;
+                background: transparent;
+                font-size: 8px;
+                line-height: 8px;
+                white-space: nowrap;
+                overflow: hidden;
+                cursor: pointer;
+            }
+        }
+    }
+
+    span {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    color: brand.t(Gray03);
+                }
+            }
+        }
+    }
+
+    b {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        color: brand.t(Black);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(White);
+                    }
+                }
+            }
+        }
+    }
+
+    &.active {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        border-bottom-color: brand.t(BlueTheme);
+                    }
+
+                    @include mix.darkTheme {
+                        border-bottom-color: brand.t(TurquoiseTheme);
+                    }
+                }
+            }
+        }
+    }
+
+    &.active span,
+    &.active b {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        color: brand.t(BlueTheme);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(TurquoiseTheme);
+                    }
+                }
+            }
+        }
+    }
+
+    &.narrow span {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_wl_chart {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                position: relative;
+                height: 128px;
+                cursor: pointer;
+                touch-action: pan-y;
+            }
+        }
+    }
+}
+
+.ai_graph_wl_bands {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                position: absolute;
+                inset: 0;
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+.ai_graph_wl_band {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                flex-grow: 0;
+                flex-shrink: 0;
+            }
+        }
+    }
+
+    &:nth-child(odd) {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        @include base.bgOpacity(brand.t(Black), 0.035);
+                    }
+
+                    @include mix.darkTheme {
+                        @include base.bgOpacity(brand.t(White), 0.035);
+                    }
+                }
+            }
+        }
+    }
+
+    &.active {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        @include base.bgOpacity(brand.t(Black), 0.06);
+                    }
+
+                    @include mix.darkTheme {
+                        @include base.bgOpacity(brand.t(White), 0.08);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_wl_svg {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 128px;
+                overflow: visible;
+            }
+        }
+    }
+}
+
+.ai_graph_wl_base {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                vector-effect: non-scaling-stroke;
+                stroke-width: 1;
+                stroke-dasharray: 3 3;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                stroke: brand.t(Gray03);
+            }
+        }
+    }
+}
+
+.ai_graph_wl_area {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                animation: aiGraphSparkFade 0.6s 0.4s ease both;
+
+                @media (prefers-reduced-motion: reduce) {
+                    animation: none;
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_wl_line {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                fill: none;
+                stroke-width: 1.8;
+                stroke-linejoin: round;
+                stroke-linecap: round;
+                stroke-dasharray: 1;
+                stroke-dashoffset: 0;
+                animation: aiGraphSparkDraw 0.9s cubic-bezier(0.22, 0.7, 0.2, 1) backwards;
+
+                @media (prefers-reduced-motion: reduce) {
+                    animation: none;
+                }
+            }
+        }
+    }
+
+    &.win {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    stroke: brand.t(Green);
+                }
+            }
+        }
+    }
+
+    &.lose {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    stroke: brand.t(Red);
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_wl_bets {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                position: relative;
+                height: 10px;
+                margin-top: 8px;
+            }
+        }
+    }
+
+    span {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    position: absolute;
+                    top: 0;
+                }
+            }
+        }
+
+        &:nth-child(1) {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsia {
+                        left: 0;
+                    }
+                }
+            }
+        }
+
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsia {
+                        @include base.transform(translateX(-50%));
+                    }
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsia {
+                        left: 25%;
+                    }
+                }
+            }
+        }
+
+        &:nth-child(3) {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsia {
+                        left: 50%;
+                    }
+                }
+            }
+        }
+
+        &:nth-child(4) {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsia {
+                        left: 75%;
+                    }
+                }
+            }
+        }
+
+        &:nth-child(5) {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsia {
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_wl_yaxis {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                position: relative;
+                flex: 0 0 26px;
+                height: 128px;
+                margin-top: 18px;
+            }
+        }
+    }
+
+    span {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include base.transform(translateY(-50%));
+                    position: absolute;
+                    right: 0;
+                    font-size: 10px;
+                    line-height: 14px;
+                    white-space: nowrap;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        color: brand.t(Gray03);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(LightGray);
+                    }
+                }
+            }
+        }
+
+        &:nth-child(1) {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsia {
+                        top: 0;
+                    }
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsia {
+                        top: 25%;
+                    }
+                }
+            }
+        }
+
+        &:nth-child(3) {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsia {
+                        top: 50%;
+                    }
+                }
+            }
+        }
+
+        &:nth-child(4) {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsia {
+                        top: 75%;
+                    }
+                }
+            }
+        }
+
+        &:nth-child(5) {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsia {
+                        top: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_wl_guide {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                top: 0;
+                z-index: 1;
+                width: 1px;
+                height: 128px;
+                position: absolute;
+                display: none;
+                pointer-events: none;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                background: repeating-linear-gradient(to bottom, brand.t(Gray03) 0, brand.t(Gray03) 2px, transparent 2px, transparent 5px);
+            }
+        }
+    }
+
+    .ai_graph_wl.active & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_wl_dot {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.borderRadius(50%);
+                @include base.transform(translate(-50%, -50%));
+                z-index: 2;
+                box-sizing: border-box;
+                width: 10px;
+                height: 10px;
+                border: 2px solid transparent;
+                position: absolute;
+                display: none;
+                pointer-events: none;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    border-color: brand.t(White);
+                }
+
+                @include mix.darkTheme {
+                    border-color: brand.t(DarkBlack);
+                }
+            }
+        }
+    }
+
+    &.win {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    background: brand.t(Green);
+                }
+            }
+        }
+    }
+
+    .ai_graph_range & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.darkTheme {
+                        border-color: brand.t(LightBlack);
+                    }
+                }
+            }
+        }
+    }
+
+    &.lose {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    background: brand.t(Red);
+                }
+            }
+        }
+    }
+
+    .ai_graph_wl.active & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_wl_tip {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexDirection(column);
+                @include base.borderRadius(6px);
+                @include base.transform(translateY(-50%));
+                z-index: 3;
+                box-sizing: border-box;
+                width: 104px;
+                padding: 6px 8px;
+                gap: 6px;
+                position: absolute;
+                display: none;
+                pointer-events: none;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    background: brand.t(White);
+                    border: 1px solid brand.t(DividerGray);
+                    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(Gray01);
+                    border: 1px solid brand.t(Gray02);
+                    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+                }
+            }
+        }
+    }
+
+    .ai_graph_wl.active & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include base.flexbox();
+                }
+            }
+        }
+    }
+
+    &:after {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include base.transform(rotate(45deg));
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: -4px;
+                    width: 6px;
+                    height: 6px;
+                    margin-top: -4px;
+                    border-style: solid;
+                    border-width: 1px 1px 0 0;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        background: brand.t(White);
+                        border-color: brand.t(DividerGray);
+                    }
+
+                    @include mix.darkTheme {
+                        background: brand.t(Gray01);
+                        border-color: brand.t(Gray02);
+                    }
+                }
+            }
+        }
+    }
+
+    &.right:after {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include base.transform(rotate(225deg));
+                    right: auto;
+                    left: -4px;
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_wl_tip_top {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(space-between);
+            }
+        }
+    }
+}
+
+.ai_graph_wl_tip_val {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 12px;
+                font-variant-numeric: tabular-nums;
+            }
+        }
+    }
+
+    &.win {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    color: brand.t(Green);
+                }
+            }
+        }
+    }
+
+    &.lose {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    color: brand.t(Red);
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_wl_tip_tag {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.inlineFlex();
+                @include base.alignItems(center);
+                @include base.borderRadius(4px);
+                box-sizing: border-box;
+                height: 13px;
+                padding: 0 4px;
+                font-size: 8px;
+                font-weight: 700;
+                line-height: 8px;
+            }
+        }
+    }
+
+    &.win {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include base.bgOpacity(brand.t(Green), 0.12);
+                    color: brand.t(Green);
+                }
+            }
+        }
+    }
+
+    &.lose {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include base.bgOpacity(brand.t(Red), 0.12);
+                    color: brand.t(Red);
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_wl_tip_info {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                font-size: 8px;
+                line-height: 8px;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                color: brand.t(Gray03);
+            }
+        }
+    }
+}
+
+.ai_graph_wl_copy {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                position: absolute;
+                top: 0;
+                z-index: 1;
+                display: none;
+                width: 1px;
+                height: 128px;
+                pointer-events: none;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    background: repeating-linear-gradient(to bottom, color.change(brand.t(BlueTheme), $alpha: 0.8) 0, color.change(brand.t(BlueTheme), $alpha: 0.8) 3px, transparent 3px, transparent 6px);
+                }
+
+                @include mix.darkTheme {
+                    background: repeating-linear-gradient(to bottom, color.change(brand.t(TurquoiseTheme), $alpha: 0.8) 0, color.change(brand.t(TurquoiseTheme), $alpha: 0.8) 3px, transparent 3px, transparent 6px);
+                }
+            }
+        }
+    }
+
+    &.before {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    background: none;
+                }
+            }
+        }
+    }
+
+    .ai_graph_wl.copied & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_wl_copy_lbl {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.borderRadius(8px);
+                position: absolute;
+                top: 3px;
+                left: 4px;
+                box-sizing: border-box;
+                height: 16px;
+                padding: 0 6px;
+                border: 1px solid transparent;
+                font-size: 8px;
+                font-weight: 700;
+                line-height: 8px;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    @include base.bgOpacity(brand.t(White), 0.85);
+                    border-color: color.change(brand.t(BlueTheme), $alpha: 0.35);
+                    color: brand.t(BlueTheme);
+                }
+
+                @include mix.darkTheme {
+                    @include base.bgOpacity(brand.t(DarkBlack), 0.85);
+                    border-color: color.change(brand.t(TurquoiseTheme), $alpha: 0.35);
+                    color: brand.t(TurquoiseTheme);
+                }
+            }
+        }
+    }
+
+    &.left {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    right: 4px;
+                    left: auto;
+                }
+            }
+        }
+    }
+
+    .ai_graph_wl_copy.before & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    left: 2px;
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_wl_all {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                transition: opacity 0.2s ease;
+            }
+        }
+    }
+
+    .ai_graph_wl.day_active & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    opacity: 0.3;
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_wl_day_hl {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                display: none;
+            }
+        }
+    }
+
+    .ai_graph_wl.day_active & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    display: inline;
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_wl_day_line {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                fill: none;
+                stroke-width: 1.8;
+                stroke-linejoin: round;
+            }
+        }
+    }
+
+    &.win {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    stroke: brand.t(Green);
+                }
+            }
+        }
+    }
+
+    &.lose {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    stroke: brand.t(Red);
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_wl_day_edge,
+.ai_graph_wl_day_dot {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                position: absolute;
+                display: none;
+                pointer-events: none;
+            }
+        }
+    }
+
+    .ai_graph_wl.day_active & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_wl_day_edge {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                top: 0;
+                z-index: 1;
+                width: 1px;
+                height: 128px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                background: repeating-linear-gradient(to bottom, brand.t(Gray03) 0, brand.t(Gray03) 2px, transparent 2px, transparent 5px);
+            }
+        }
+    }
+}
+
+.ai_graph_wl_day_dot {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.borderRadius(50%);
+                @include base.transform(translate(-50%, -50%));
+                z-index: 2;
+                box-sizing: border-box;
+                width: 7px;
+                height: 7px;
+                border: 1.5px solid transparent;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    background: brand.t(White);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(DarkBlack);
+                }
+            }
+        }
+    }
+
+    &.win {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    border-color: brand.t(Green);
+                }
+            }
+        }
+    }
+
+    .ai_graph_range & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.darkTheme {
+                        background: brand.t(LightBlack);
+                    }
+                }
+            }
+        }
+    }
+
+    &.lose {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    border-color: brand.t(Red);
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_wl_card {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.alignItems(center);
+                @include base.borderRadius(6px);
+                display: none;
+                gap: 14px;
+                box-sizing: border-box;
+                height: 54px;
+                padding: 0 12px;
+                margin-top: 8px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    background: brand.t(LightGray);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(LightBlack);
+                }
+            }
+        }
+    }
+
+    .ai_graph_range & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.darkTheme {
+                        background: brand.t(Gray01);
+                    }
+                }
+            }
+        }
+    }
+
+    .ai_graph_wl.day_active & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include base.flexbox();
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_wl_card_info {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.flexDirection(column);
+                flex: 1 1 auto;
+                gap: 8px;
+                min-width: 0;
+            }
+        }
+    }
+}
+
+.ai_graph_wl_card_ttl {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(baseline);
+                gap: 6px;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+.ai_graph_wl_card_date,
+.ai_graph_wl_card_total {
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_wl_card_date {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                font-size: 12px;
+                line-height: 12px;
+            }
+        }
+    }
+}
+
+.ai_graph_wl_card_sub {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                font-size: 10px;
+                line-height: 10px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                color: brand.t(Gray03);
+            }
+        }
+    }
+}
+
+.ai_graph_wl_card_count {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                font-size: 10px;
+                line-height: 10px;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_wl_card_won {
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                color: brand.t(Green);
+            }
+        }
+    }
+}
+
+.ai_graph_wl_card_lost {
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                color: brand.t(Red);
+            }
+        }
+    }
+}
+
+.ai_graph_wl_card_res {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.flexDirection(column);
+                @include base.alignItems(flex-end);
+                flex: 0 0 auto;
+                gap: 8px;
+            }
+        }
+    }
+}
+
+.ai_graph_wl_card_val {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                font-size: 16px;
+                line-height: 16px;
+                font-variant-numeric: tabular-nums;
+            }
+        }
+    }
+
+    &.win {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    color: brand.t(Green);
+                }
+            }
+        }
+    }
+
+    &.lose {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    color: brand.t(Red);
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_wl_card_arrow {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(center);
+                @include base.borderRadius(14px);
+                flex: 0 0 auto;
+                width: 28px;
+                height: 28px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    @include base.bgOpacity(brand.t(Black), 0.06);
+                }
+
+                @include mix.darkTheme {
+                    @include base.bgOpacity(brand.t(White), 0.08);
+                }
+            }
+        }
+    }
+
+    path {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    fill: none;
+                    stroke-width: 1.6;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        stroke: brand.t(Gray03);
+                    }
+
+                    @include mix.darkTheme {
+                        stroke: brand.t(LightGray);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ai_graph_range {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                position: relative;
+                padding: 10px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.darkTheme {
+                    background: brand.t(LightBlack);
+                }
+            }
+        }
+    }
+}

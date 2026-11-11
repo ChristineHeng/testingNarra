@@ -1,0 +1,12 @@
+$activeView: mEuro !default;
+
+@use '../config' with (
+    $activeView: $activeView,
+  $theme: brown,
+  $view:  euro
+);
+
+@use '../brand';
+@use '../themes_shared';
+@use '../themes_euro';
+@use '../fl_bright_variables.scss';

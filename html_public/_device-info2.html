@@ -1,0 +1,103 @@
+﻿<div class="dv_top_info">
+	<!--<i class="icon-fi-info-round"></i>-->
+	<i class="icon-fi-info"></i>
+	<div class="dv_msg">对此页面进行截图且将载屏图片发送给客服人员，即可询问并解决此故障问题。</div>
+</div>
+<div class="deviceInfo_wrap">
+	<div class="deviceInfo_inner">
+		<div class="deviceInfo_item">
+			<div class="info_icon">
+				<i class="icon-fi-n-mine-active"></i>
+			</div>
+			<div class="details">
+				<div class="item_title">
+					Member Code:
+				</div>
+				<div class="info">
+					325252
+				</div>
+			</div>
+		</div>
+		<div class="deviceInfo_item">
+			<div class="info_icon">
+				<i class="icon-fi-n-country"></i>
+			</div>
+			<div class="details">
+				<div class="item_title">
+					Country:
+				</div>
+				<div class="info">
+					China
+				</div>
+			</div>
+		</div>
+		<div class="deviceInfo_item">
+			<div class="info_icon">
+				<i class="icon-fi-n-operat-system"></i>
+			</div>
+			<div class="details">
+				<div class="item_title">
+					Operating System:
+				</div>
+				<div class="info">
+					Android 10
+				</div>
+			</div>
+		</div>
+		<div class="deviceInfo_item">
+			<div class="info_icon">
+				<i class="icon-fi-n-browser"></i>
+			</div>
+			<div class="details">
+				<div class="item_title">
+					Browser:
+				</div>
+				<div class="info">
+					Google Chrome, Version 77.0.3865.103
+				</div>
+			</div>
+		</div>
+		<div class="deviceInfo_item lastitem">
+			<div class="left_lantency">
+				<div class="info_icon">
+					<i class="icon-fi-n-timeleft"></i>
+				</div>
+				<div class="details">
+					<div class="item_title">
+						Latency:
+					</div>
+					<div class="info">
+						<span class="time">(300ms), (100ms)</span>
+					</div>
+				</div>
+			</div>
+			<a href="#" class="right_lantency">
+				<div class="loading_lantency" style="display:none"></div>
+				<span class="test">Refresh</span>
+			</a>
+		</div>
+		<!--         <div class="deviceInfo_item">
+					<div class="info_icon">
+						<i class="icon-fi-id"></i>
+					</div>
+					<div class="details">
+						<div class="item_title">
+							Trace ID:
+						</div>
+						<div class="info">
+							<span class="time">8011276a-0033-2323-09911</span>
+						</div>
+					</div>
+				</div> -->
+	</div>
+</div>
+
+<script>
+	$(document).ready(function () {
+		$('.right_lantency .loading_lantency').hide();
+		$(".right_lantency").click(function () {
+			$('.test').toggle();
+			$(this).find('.loading_lantency').toggle();
+		});
+	});
+</script>

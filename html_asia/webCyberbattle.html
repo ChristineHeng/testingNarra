@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Narra - html template</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover,user-scalable=no" />
+		<!--Base Styles-->
+		<link rel="stylesheet" type="text/css" href="../assets/public/layout/css/basestyle.min.css" />
+		<!--<link rel="stylesheet" type="text/css" href="../merchants/merchant1/css/style_asia.css">-->
+		<link rel="stylesheet" type="text/css" href="../assets/public/languages/eng/layout_asia.min.css" id="detect_language" />
+		<link rel="stylesheet" type="text/css" href="#" id="design_view" />
+
+		<script src="../assets/public/lib/jquery.js"></script>
+		<script src="../assets/public/layout/js/scripts_main.js"></script>
+		<script src="../assets/public/layout/js/scripts_asia.js"></script>
+	</head>
+
+	<body id="root" class="cb_web">
+		<div class="cb_left"></div>
+		<div class="cb_main"></div>
+		<div class="cb_right"></div>
+		<script>
+			if (localStorage.getItem('iscurrentsimpleview') == 'true') {
+				cyberbattleWebLoadPage('el-begin-soccer-todayCyberbattle.html');
+			} else {
+				cyberbattleWebLoadPage('el-prof-soccer-todaycyberbattle.html');
+			}
+		</script>
+	</body>
+</html>

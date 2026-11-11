@@ -1,0 +1,66 @@
+﻿/* Scss Document */
+@mixin gradient($color1, $color2) {
+	background: $color1; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	/*background: url($svg);*/
+	*background: $color1;
+	background: -moz-linear-gradient(top, $color1 0%, $color2 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color1), color-stop(100%,$color2)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, $color1 0%,$color2 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, $color1 0%,$color2 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, $color1 0%,$color2 100%); /* IE10+ */
+	background: linear-gradient(to bottom, $color1 0%,$color2 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$color1}', endColorstr='#{$color2}',GradientType=0 ); /* IE6-8 */
+}
+
+@mixin shadows($value) {
+	-webkit-box-shadow: $value;
+	-moz-box-shadow: $value;
+	box-shadow: $value;
+}
+
+@mixin textShadow($value) {
+	-webkit-text-shadow: $value;
+	-moz-text-shadow: $value;
+	text-shadow: $value;
+}
+
+@mixin gradientDegree($direction, $list) {
+	background: -moz-linear-gradient($direction, $list);
+	background: -webkit-gradient($direction, $list);
+	background: -webkit-linear-gradient($direction, $list);
+	background: -o-linear-gradient($direction, $list);
+	background: -ms-linear-gradient($direction, $list);
+	background: linear-gradient($direction, $list);
+}
+
+@mixin dashedBox($color) {
+	background-image: repeating-linear-gradient(0deg, $color, $color 4px, transparent 4px, transparent 8px, $color 8px), // left
+	repeating-linear-gradient(90deg, $color, $color 4px, transparent 4px, transparent 8px, $color 8px), // top
+	repeating-linear-gradient(180deg, $color, $color 4px, transparent 4px, transparent 8px, $color 8px), // right
+	repeating-linear-gradient(270deg, $color, $color 4px, transparent 4px, transparent 8px, $color 8px); // bottom
+	background-size: 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+	background-position: 0 0, 0 0, 100% 0, 0 100%;
+	background-repeat: no-repeat;
+}
+
+@mixin dashedTB($color) {
+	background-image: repeating-linear-gradient(0deg, transparent, transparent 4px, transparent 4px, transparent 8px, transparent 8px), // left
+	repeating-linear-gradient(90deg, $color, $color 4px, transparent 4px, transparent 8px, $color 8px), // top
+	repeating-linear-gradient(180deg, transparent, transparent 4px, transparent 4px, transparent 8px, transparent 8px), // right
+	repeating-linear-gradient(270deg, $color, $color 4px, transparent 4px, transparent 8px, $color 8px); // bottom
+	background-size: 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+	background-position: 0 0, 0 0, 100% 0, 0 100%;
+	background-repeat: no-repeat;
+}
+
+@mixin icons($imageBG) {
+	background: url("#{$themeImgFolder}#{$imageBG}#{$img_version}");
+}
+// @mixin tutorMask($target) {
+//     .#{$target} {
+//         &:before {
+//             background: $BG_bg_mask;
+//         }
+//     }
+// }

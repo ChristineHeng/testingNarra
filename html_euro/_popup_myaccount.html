@@ -1,0 +1,279 @@
+<style>
+	/* for demo only, please ignore inline cSS*/
+	.sample_for_demo_only_dev_dont_copy {
+		background: rgba(0, 0, 0, 0.1);
+		overflow: hidden;
+		border-radius: 4px !important;
+	}
+
+	.sample_for_demo_only_dev_dont_copy .list {
+		padding: 10px 20px;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+		margin-top: 0px !important;
+		border-radius: 0px !important;
+	}
+
+	.demo_block {
+		width: 10px;
+		height: 10px;
+		display: inline-block;
+		margin: 0 5px;
+	}
+</style>
+<div class="n_container">
+	<div class="n_header n_header_sports tall">
+		<div class="n_back">
+			<div class="n_back_link"><i class="icon-fi-arrow-left"></i></div>
+		</div>
+		<div class="title">My Profile</div>
+	</div>
+
+	<div class="n_content_wrap myacct_wrap">
+		<div class="account_icon_wrap_euro">
+			<div>
+				<i class="account_icon icon-fi-n-mine-active"></i>
+			</div>
+			<div class="account_info">
+				<div class="username">Hi, Username123</div>
+				<div class="balance">
+					Balance <span class="balance_amt"> RMB 196.30</span>
+					<!-- [SFCRQ-10113] remove vnd's info icon and tooltip -->
+					<!-- <div class="info_wrp info_bottom">
+						<div class="info_icn"><i class="icon-fi-info"></i></div>
+						<div class="info_txt">VND 1 displayed in UI is equivalent to VND 1000 in actual value.</div>
+					</div> -->
+				</div>
+			</div>
+		</div>
+		<div class="account_listmenu_wrap">
+			<div class="list demoOnlyDontCopt_betslip demoOnlyDontCopt_betslipPanel">
+				<div><i class="icon-fi-n-betlist"></i> My Bets</div>
+				<i class="icon-fi-arrow-right"></i>
+			</div>
+			<div class="list highlighted sample_dontcopy_mock_link_annouce" href="#">
+				<div><i class="icon-fi-announcements"></i> Inbox</div>
+				<i class="icon-fi-arrow-right"></i>
+				<div class="red_dot"></div>
+				<!-- <div class="highlighted_wrap">
+					<div class="mask_pointer">
+						<svg height="56" viewBox="0 0 56 56" width="56" xmlns="http://www.w3.org/2000/svg">
+							<g fill="none" fill-rule="evenodd">
+								<path class="pointer_finger" d="m22.3245934 9c2.6553363 0 4.0777578 1.3672809 4.1615268 3.706402l.0039283.2221277-.0000485 6.8194703.24607-.0596557c.7089778-.1602228 1.5328536-.2531204 2.4718351-.2531204 1.8471855 0 3.0208792.8804499 3.6349905 2.4235656l-.1726919.0648585c.7427101-.2989636 1.648751-.4374444 2.710135-.3363471 2.0700534.1971719 3.1308643 1.3450039 3.4817968 3.4491624 3.1575922-.2671445 4.6501888 1.5604039 4.8746032 5.1261573l.0610865.9993899.0737883 1.3455012.054516 1.2373708.0268248.807158.0200407.822575.0139692.863382.0111282 1.4271267.0019076 1.0764808c0 4.1717476-.9795627 7.8840799-2.6129178 11.0896374-.5730544 1.1246538-1.1880363 2.1068506-1.8048676 2.9417225l-.2379462.3149446-.2121253.2679168-.1836892.220566-.1526381.1728926-.0638577.0684677-1.0493079-1.0069267.1253185-.1383101.1664193-.1973609.2038217-.2558671.2375256-.3138285c.5706749-.7724 1.1431992-1.6867872 1.6784839-2.7373156 1.5333281-3.0092485 2.4537754-6.4975458 2.4537754-10.4265387l-.0043516-1.5592902-.0146595-1.3533136-.0166884-.8300933-.0371889-1.2004397-.033937-.8075193-.0420846-.842921-.0509456-.9037123-.0605198-.9898929c-.1766156-2.8062715-1.0576552-3.9577213-3.2960751-3.7673568.0015302.0391931.0024188.0791219.0031461.1192909l.0024759.2779566v6.2643742h-1.4520055v-6.2643742c0-2.6274208-.6033729-3.6849593-2.3020556-3.8467583-.8208668-.0781879-1.4911624.0227774-2.020597.2334523.0866247.5093731.1335332 1.0637926.1441275 1.6579267l.0023251.2637281v5.807209h-1.4520054v-5.807209c0-2.8524907-.8111084-4.300663-2.7090501-4.300663-.9474511 0-1.7457934.1049735-2.3983164.2776564l-.1507554.0416921-.1688333.0526523.0000485 9.0882399h-1.4520054v-17.4237102c0-1.6748876-.7821076-2.4717544-2.7134497-2.4717544-1.8623677 0-2.6561259.7409666-2.7104475 2.2956585l-.0030095.1760959v25.813068h-1.4520054l-.000131-10.1475977-.2094248-.0316137-.3121956-.036051-.3473496-.0305498c-.0596095-.0045023-.1197749-.0086771-.1800421-.0124753l-.3591879-.0178779c-.1177127-.0041912-.2321971-.0064832-.3398183-.0064832-1.305202 0-2.2652047 1.0295816-2.5350526 2.9493991l-.0901038.7443765-.0557343.5282864-.0545975.5809418c-.0089378.1010235-.0177778.2040999-.0264951.3091586-.1016142 1.224637-.1707042 2.5232055-.1923565 3.8533568-.0628722 3.8624267.4839738 5.6949269 2.2811483 8.2988766.2377758.3445178.5101355.7047973.8145698 1.0789225.5947946.7309547 1.302792 1.5038072 2.0999261 2.3031239.9128486.915348 1.892938 1.8168019 2.8731935 2.664187l.4951475.4232348c.0790907.0668185.1563777.1317255.2317311.1946439l.5740946.4709425-.9019914 1.1416005-.3741642-.3045906-.4645081-.3879117c-.162444-.1372355-.3321533-.2822023-.5080998-.4342998-1.0055534-.8692538-2.011273-1.7942817-2.9518461-2.7374301-.8294747-.8317458-1.5697125-1.639792-2.1982572-2.4122228-.3275999-.4025939-.6228766-.7931883-.8835503-1.1708832-1.9710372-2.8558617-2.6070027-4.9870046-2.5392056-9.1519816.0222113-1.3644915.0930027-2.6950389.1971682-3.9504235l.0833875-.9151449.1137859-1.0196053.0064427-.0482421c.2932663-2.7304595 1.8260948-4.4650906 4.0053673-4.4650906l.2130119.0022247.4482877.016948c.377069.0204125.7620039.0559456 1.0878724.1008549l-.0010227-14.1936717c0-2.4744569 1.4271457-3.9285297 4.1654624-3.9285297z" fill-rule="nonzero"/>
+								<path class="pointer_tip" d="m22 2c5.4242292 0 9.8397684 4.31868071 9.9957366 9.705153l.0042634.294847h-1.6763799c0-4.59700988-3.7266079-8.32362011-8.3236201-8.32362011-4.5050697 0-8.1742075 3.5790342-8.319171 8.04886671l-.0044491.2747534h-1.6763799c0-5.52285152 4.4771513-10 10-10z" fill-rule="nonzero"/>
+								<path d="m0 0h56v56h-56z"/>
+							</g>
+						</svg>
+					</div>
+					<div class="mask_text">新功能-个人信箱</div>
+					<div class="mask_button">知道了</div>
+				</div> -->
+			</div>
+			<!-- <a class="list" href="search.html">
+				<div><i class="icon-fi-n-search"></i> Search</div>
+				<i class="icon-fi-arrow-right"></i>
+			</a> -->
+			<!-- <a class="list highlighted" href="annoucements.html">
+				<div><i class="icon-fi-announcements"></i> Inbox</div>
+				<i class="icon-fi-arrow-right"></i>
+				<div class="red_dot"></div>
+			</a> -->
+			<div class="list" id="demobtn_pref">
+				<div><i class="icon-fi-preferences"></i> My Preference</div>
+				<i class="icon-fi-arrow-right"></i>
+			</div>
+			<div class="list" id="demobtn_faq">
+				<div><i class="icon-fi-faq"></i> Betting Rules</div>
+				<i class="icon-fi-arrow-right"></i>
+			</div>
+			<div class="list" id="demobtn_deviceinfo">
+				<div><i class="icon-fi-device-info"></i> Device Info</div>
+				<i class="icon-fi-arrow-right"></i>
+			</div>
+			<div class="list" onClick="(function(){localStorage.setItem('isswitchedtoasia', 'true'); window.location.href = '../html_asia/index.html?from=euro'})();">
+				<div><i class="icon-fi-switch-as"></i> Switch to Asian View</div>
+				<i class="icon-fi-arrow-right"></i>
+			</div>
+			<div class="list sample_for_demo_only_dev_dont_copy sample_themes">
+				<div>Themes (Demo purposes only)</div>
+				<i class="icon-fi-arrow-right"></i>
+			</div>
+			<div class="sample_for_demo_only_dev_dont_copy sample_themes_content">
+				<div class="list theme_default">
+					<div>
+						<i class="icon-fi-angle-right"></i>
+						<div class="demo_block" style="background: #3d4655"></div>
+						Default
+					</div>
+				</div>
+				<div class="list theme_red">
+					<div>
+						<i class="icon-fi-angle-right"></i>
+						<div class="demo_block" style="background: #a92128"></div>
+						Red
+					</div>
+				</div>
+				<div class="list theme_blue">
+					<div>
+						<i class="icon-fi-angle-right"></i>
+						<div class="demo_block" style="background: #26739d"></div>
+						Blue
+					</div>
+				</div>
+				<div class="list theme_green">
+					<div>
+						<i class="icon-fi-angle-right"></i>
+						<div class="demo_block" style="background: #009d73"></div>
+						Green
+					</div>
+				</div>
+				<div class="list theme_brown">
+					<div>
+						<i class="icon-fi-angle-right"></i>
+						<div class="demo_block" style="background: #9c7656"></div>
+						Brown
+					</div>
+				</div>
+				<div class="list theme_bafa">
+					<div>
+						<i class="icon-fi-angle-right"></i>
+						<div class="demo_block" style="background: #0badff"></div>
+						Bafa
+					</div>
+				</div>
+				<div class="list theme_betway">
+					<div>
+						<i class="icon-fi-angle-right"></i>
+						<div class="demo_block" style="background: #acc540"></div>
+						Betway
+					</div>
+				</div>
+				<div class="list theme_xinli">
+					<div>
+						<i class="icon-fi-angle-right"></i>
+						<div class="demo_block" style="background: #a92128"></div>
+						Xinli
+					</div>
+				</div>
+				<div class="list theme_dark1">
+					<div>
+						<i class="icon-fi-angle-right"></i>
+						<div class="demo_block" style="background: #2495e9"></div>
+						Dark 1
+					</div>
+				</div>
+				<div class="list theme_dark2">
+					<div>
+						<i class="icon-fi-angle-right"></i>
+						<div class="demo_block" style="background: #d13e3e"></div>
+						Dark 2
+					</div>
+				</div>
+			</div>
+			<div class="list sample_for_demo_only_dev_dont_copy sample_languages">
+				<div>Languages (Demo purposes only)</div>
+				<i class="icon-fi-arrow-right"></i>
+			</div>
+			<div class="sample_for_demo_only_dev_dont_copy sample_languages_content">
+				<div class="list langEng">
+					<div>
+						<i class="icon-fi-angle-right"></i>
+						English
+					</div>
+				</div>
+				<div class="list langChs">
+					<div>
+						<i class="icon-fi-angle-right"></i>
+						Chinese
+					</div>
+				</div>
+				<div class="list langHi">
+					<div>
+						<i class="icon-fi-angle-right"></i>
+						Hindi
+					</div>
+				</div>
+				<div class="list langId">
+					<div>
+						<i class="icon-fi-angle-right"></i>
+						Indonesian
+					</div>
+				</div>
+				<div class="list langKor">
+					<div>
+						<i class="icon-fi-angle-right"></i>
+						Korean
+					</div>
+				</div>
+				<div class="list langPt">
+					<div>
+						<i class="icon-fi-angle-right"></i>
+						Portuguese
+					</div>
+				</div>
+				<div class="list langTh">
+					<div>
+						<i class="icon-fi-angle-right"></i>
+						Thai
+					</div>
+				</div>
+				<div class="list langVn">
+					<div>
+						<i class="icon-fi-angle-right"></i>
+						Vietnamese
+					</div>
+				</div>
+				<div class="list langEs">
+					<div>
+						<i class="icon-fi-angle-right"></i>
+						Spanish
+					</div>
+				</div>
+				<div class="list langTr">
+					<div>
+						<i class="icon-fi-angle-right"></i>
+						Turkish
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- <div class="bg_mask"></div> -->
+
+<script>
+	$(document).ready(function () {
+		switchThemes('euro');
+		languages('euro');
+		$('.sample_themes_content').hide();
+		$('.sample_languages_content').hide();
+
+		$('.sample_dontcopy_mock_link_annouce').on('click', function () {
+			$('#myannouce').css('display', '');
+			popupOn(true);
+			$('.btn_backtop').removeClass('btn_backtop_popup');
+			$('.footer_main').show();
+		});
+		$('#myacctpage .n_back_link').on('click', function () {
+			$('#myacctpage').css('display', 'none');
+			//$("body").removeClass("popupOn");
+			popupOff();
+			$('.footer_main').show();
+		});
+
+		$('.sample_themes').click(function () {
+			$(this).next().slideToggle();
+			$(this).find('i').toggleClass('icon-fi-arrow-right icon-fi-arrow-down1');
+		});
+
+		$('.sample_languages').click(function () {
+			$('.sample_languages_content').slideToggle();
+			$(this).find('i').toggleClass('icon-fi-arrow-right icon-fi-arrow-down1');
+		});
+
+		allfrom_global_pop_item();
+
+		/*standardize popup and toolti: start*/
+		infoPop('.account_icon_wrap_euro');
+		/*standardize popup and toolti: end*/
+	});
+</script>

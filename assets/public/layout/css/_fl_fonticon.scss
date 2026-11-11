@@ -1,0 +1,195 @@
+@use "sass:math";
+
+$font_version: "?v=" + math.random(100000);
+
+@font-face {
+  font-family: "fl_fontico";
+  src: url("../fonts/fl_fontico.woff2#{$font_version}") format("woff2"),
+  url("../fonts/fl_fontico.woff#{$font_version}") format("woff"),
+  url("../fonts/fl_fontico.ttf#{$font_version}") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.fl [class*="icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "fl_fontico", "fontico" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fl {
+  .icon-fi-drag:before {
+    content: "\f900";
+  }
+
+  .icon-fi-cb-preferences:before {
+    content: "\f901";
+  }
+
+  .icon-fi-cb-device-info:before {
+    content: "\f902";
+  }
+
+  .icon-fi-cb-tutorial:before {
+    content: "\f903";
+  }
+
+  .icon-fi-cb-results:before {
+    content: "\f904";
+  }
+
+  .icon-fi-cb-faq:before {
+    content: "\f905";
+  }
+
+  .icon-fi-cb-announcements:before {
+    content: "\f906";
+  }
+
+  .icon-fi-cb-record:before {
+    content: "\f907";
+  }
+
+  .icon-fi-n-switchview:before {
+    content: "\f908";
+  }
+
+  .icon-fi-dustbin:before {
+    content: "\f90d";
+  }
+
+  .icon-fi-n-timeleft:before {
+    content: "\f90e";
+  }
+
+  .icon-fi-n-browser:before {
+    content: "\f90f";
+  }
+
+  .icon-fi-n-operat-system:before {
+    content: "\f910";
+  }
+
+  .icon-fi-n-country:before {
+    content: "\f911";
+  }
+
+  .icon-fi-n-collapse:before {
+    content: "\f912";
+  }
+
+  .icon-fi-announcements:before {
+    content: "\f913";
+  }
+
+  .icon-fi-minus:before {
+    content: "\f914";
+  }
+
+  .icon-fi-keyboard:before {
+    content: "\f915";
+  }
+
+  .icon-fi-n-device-info:before {
+    content: "\f916";
+  }
+
+  .icon-fi-n-tutorial:before {
+    content: "\f917";
+  }
+
+  .icon-fi-n-results2:before {
+    content: "\f918";
+  }
+
+  .icon-fi-n-faq:before {
+    content: "\f919";
+  }
+
+  .icon-fi-n-announcements:before {
+    content: "\f91a";
+  }
+
+  .icon-fi-n-record:before {
+    content: "\f91b";
+  }
+
+  .icon-fi-arrow-down:before {
+    content: "\f91c";
+  }
+
+  .icon-fi-arrow-up:before {
+    content: "\f91d";
+  }
+
+  .icon-fi-n-betlist:before {
+    content: "\f91e";
+  }
+
+  .icon-fi-n-home:before {
+    content: "\f91f";
+  }
+
+  .icon-fi-n-home-active:before {
+    content: "\f920";
+  }
+
+  .icon-fi-n-mine-active:before {
+    content: "\f921";
+  }
+
+  .icon-fi-n-myfav:before {
+    content: "\f922";
+  }
+
+  .icon-fi-n-promo:before {
+    content: "\f923";
+  }
+
+  .icon-fi-n-promo-active:before {
+    content: "\f924";
+  }
+
+  .icon-fi-n-search:before {
+    content: "\f925";
+  }
+
+  .icon-fi-n-trophy:before {
+    content: "\f926";
+  }
+
+  .icon-fi-refresh:before {
+    content: "\f927";
+  }
+
+  .icon-fi-settings:before {
+    content: "\f928";
+  }
+
+  .icon-fi-winner-time:before {
+    content: "\f929";
+  }
+
+  .icon-fi-win-position:before {
+    content: "\f92a";
+  }
+
+  .icon-fi-big-small:before {
+    content: "\f92b";
+  }
+
+  .icon-fi-odd-even:before {
+    content: "\f92c";
+  }
+
+}

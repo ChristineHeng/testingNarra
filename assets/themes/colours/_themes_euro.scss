@@ -1,0 +1,1785 @@
+//SCSS: Euro only: starts/*************************************************/
+@use "sass:map";
+@use "sass:color";
+@use 'brand'as brand;
+@use 'config'as config;
+@use '../../public/layout/css/base'as base;
+
+@if config.$view==euro {
+
+    //SEV:starts*****************************/
+    // .euSev_header { // sev (moved)
+    //     background: brand.t(BG_euSev_header);
+    //     color: brand.t(Color_euSev_header);
+    // }
+    // .nav_bar { // sev (moved)
+    //     li {
+    //         &:last-child {
+    //             color: brand.t(Main_Active_Color);
+    //         }
+    //         i {
+    //             color: brand.t(Color_nav_bar_arrow);
+    //         }
+    //     }
+    //     .euSev_header & {
+    //         border-bottom: 1px solid brand.t(Border_sev);
+    //     }
+    //     .sevEnh.euSev_header & {
+    //         border-bottom: 1px solid brand.t(Border_euNav_bar_wrp);
+    //     }
+    // }
+    // .drpDown { // sev (moved)
+    //     background: brand.t(BG_drpDown);
+    //     box-shadow: 0 4px 4px 0 brand.t(Shadow_drpDown);
+    //     li {
+    //         border-bottom: 1px solid brand.t(Border_drpDown);
+    //         color: brand.t(Border_drpDown);
+    //     }
+    // }
+    // .euGrp { // sev (moved)
+    //     .drpDown & {
+    //         color: brand.t(Color_drpDown_list);
+    //     }
+    // }
+    // .euTitle { // sev (moved)
+    //     .eu_selected & {
+    //         color: brand.t(Color_eu_selected);
+    //     }
+    // }
+    // sev period dislay start
+    // .sevEnh { // sev (moved)
+    //     .period_hd {
+    //         background: brand.t(BG_period_hd);
+    //     }
+    // }
+    // .euNav_bar_wrp { // sev (moved)
+    //     background: brand.t(BG_euNav_bar_wrp);
+    // }
+    // .euTable_side { // sev (moved)
+    //     .sevEnh .euNav_bar_wrp & {
+    //         background: brand.t(BG_euTable_side_rtBtn);
+    //         border-bottom: 1px solid brand.t(Border_euNav_bar_wrp);
+    //     }
+    // }
+    // .period_hd { // sev (moved)
+    //     color: brand.t(Color_period_hd);
+    //     .eu_score {
+    //         color: brand.t(Color_period_hd);
+    //     }
+    // }
+    // .sevEnh {
+    // .euTable .euTable_side { // sev (moved)
+    //     border-right: 1px solid brand.t(Border_Rt_euTable_side);
+    // }
+    // .euTable_main { // sev (moved)
+    //     .eu_row+.eu_row {
+    //         border-top: 1px solid brand.t(Border_Rt_euTable_side);
+    //     }
+    // }
+    // }
+    // .board_rt { // sev (moved)
+    //     background: brand.t(BG_board_rt);
+    //     .rt_top {
+    //         background: brand.t(BG_rt_top);
+    //     }
+    // }
+    // .row_score_tit { // sev (moved)
+    //     background: brand.t(BG_row_score_tit);
+    //     color: brand.t(Color_period_hd);
+    // }
+    // .snk_score_row { // sev (moved)
+    //     color: brand.t(Color_snk_score_row);
+    //     background: brand.t(BG_snk_score_row);
+    //     &+& {
+    //         border-top: 1px solid brand.t(Border_snk_score_row);
+    //     }
+    // }
+    // .snk_nav { // sev (moved)
+    //     .arrow_btn {
+    //         color: brand.t(Color_eu_arrow_btn);
+    //     }
+    //     @if config.$theme==default {
+    //         &.snk_disable {
+    //             opacity: 0.25;
+    //         }
+    //     }
+    // }
+    // sev period dislay end
+    // .euTable { // sev (moved)
+    //     .euGrp & {
+    //         background: brand.t(BG_euGrp_euTable);
+    //         color: brand.t(Color_euGrp_euTable);
+    //     }
+    //     .eu_selected & {
+    //         background: brand.t(BG_selected_euGrp_euTable);
+    //     }
+    // }
+    // .euTable_side { // sev (moved)
+    // sev (moved): start
+    // border-right: 1px solid brand.t(Border_euTable);
+    // sev (moved): end
+    // sev (moved): start
+    // .euTable_main+& {
+    //     border-left: 1px solid brand.t(Border_euTable);
+    // }
+    // sev (moved): end
+    // sev (moved): start
+    // .euNav_bar_wrp & {
+    //     border-bottom: 1px solid brand.t(Border_sev);
+    //     @if config.$themeType=="dark_theme" {
+    //         background-color: rgba(255, 255, 255, 0.085);
+    //     }
+    //     @else {
+    //         background-color: rgba(0, 0, 0, 0.045);
+    //     }
+    // }
+    // sev (moved): end
+    // } 
+    // .euTable_main { // sev (moved)
+    //     .eu_row {
+    //         &:not(:last-child) {
+    //             border-bottom: 1px solid brand.t(Border_euTable);
+    //         }
+    //     }
+    // }
+    // .euTable_bottom { // sev (moved)
+    //     border-top: 1px solid brand.t(Border_euTable);
+    // }
+    // .eu_score { // sev (moved)
+    //     color: brand.t(Color_eu_score);
+    // }
+    // .euHighlight { // sev (moved)
+    //     color: brand.t(Main_Active_Color);
+    // }
+    // .euRadio { // sev (moved)
+    //     border: 1px solid brand.t(Border_euRadio);
+    //     .eu_selected & {
+    //         &:before {
+    //             background: brand.t(Main_Active_Color);
+    //         }
+    //     }
+    // }
+    // .n_sev_top { // sev (moved)
+    //     color: #fff;
+    // }
+    // .eu_redCard { // sev (moved)
+    // sev (moved): start
+    // background: #a50002;
+    // color: #fff;
+    // sev (moved): end
+    /*  @if $themeType == "dark_theme" {
+            &:before {
+                background: brand.t(BG_eu_redCard);
+            }
+        }
+        @else {
+            color: brand.t(Color_eu_redCard);
+
+            &:before {
+                background: brand.t(BG_eu_redCard);
+            }
+        } */
+    // } 
+    // sev (moved): start
+    // .n_tab_nav_withBG {
+    //     .tab_nav_item {
+    //         &.active {
+    //             color: brand.t(Color_tab_nav_withBG_active);
+    //             background: brand.t(BG_tab_nav_withBG_active);
+    //             @if config.$theme==default {
+    //                 .eu_h2h & {
+    //                     background: #39414e;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+    // sev (moved): end
+    /*sev's match template: start*/
+    //*remove after [SFCRQ-3166] live: start*//commented on 29 July 22- YS
+    // .n_sev_item {
+    //     background: brand.t(BG_n_sev_item_euro);
+    // }
+    /*remove after [SFCRQ-3166] live: end*/
+    //*remove after [SFCRQ-3166] live: start*//commented on 29 July 22- YS
+    // .n_sev_content {
+    //     border-top: 1px solid brand.t(Border_n_sev_content_euro);
+    // }
+    /*remove after [SFCRQ-3166] live: end*/
+    // .n_sev_header {
+    // &:not(:first-child) { // sev (moved)
+    //     border-top: 1px solid brand.t(Border_n_sev_content_euro);
+    // }
+    // .n_sev_special_subheader+& { // sev (moved)
+    //     border-top: 1px solid brand.t(Border_n_sev_content_euro);
+    // }
+    // .n_sev_score, // sev (moved), .n_sev_score
+    // .icon-fi-cashout { // sev (moved)
+    //     @if config.$theme==default or config.$theme==dark1 or config.$theme==dark2 {
+    //         color: brand.t(LightGray);
+    //     }
+    //     @else if config.$theme==blue or config.$theme==bafa {
+    //         color: brand.t(Color_main_text_body);
+    //     }
+    //     @else {
+    //         color: brand.t(Color_n_sev_header);
+    //     }
+    // }
+    // .icon-fi-title-s201 { // sev (moved)
+    //     @if config.$theme==blue or config.$theme==bafa {
+    //         color: brand.t(Color_main_text_body);
+    //     }
+    // }
+    // }
+    // .n_sev_special_subheader { // sev (moved)
+    //     &:not(:first-child) {
+    //         border-top: 1px solid brand.t(Border_n_sev_content_euro);
+    //     }
+    // }
+    // .eu_subHeader { // sev (moved)
+    //     border-top: 1px solid brand.t(Border_n_sev_content_euro);
+    // }
+    //*remove after [SFCRQ-3166] live: start*//commented on 29 July 22- YS
+    // .eu_moreTab {
+    //     background: brand.t(BG_eu_moreTab);
+    //     color: brand.t(Color_eu_moreTab);
+    // }
+    /*remove after [SFCRQ-3166] live: end*/
+    /*sev's match template: end*/
+    //SEV:end*****************************/
+    //* Global popup: starts*/
+    .n_popup_container {
+        background: brand.t(BG_n_popup_container);
+
+        &.pref {
+            background: brand.t(BG_n_popup_container_pref);
+            border: brand.t(BG_n_popup_container_pref_border);
+
+            .pb_input_box.focus {
+                @if config.$theme==red {
+                    border: 1px solid brand.t(Main_Odds_add);
+                }
+
+                @else {
+                    border: 1px solid brand.t(Main_Active_Color);
+                }
+            }
+        }
+
+        .n_popup_head {
+            border-bottom: brand.t(Border_n_popup_container);
+        }
+    }
+
+    // .btn_cancel {// btn (moved)
+    //     background: brand.t(BG_btn_cancel);
+    //     color: brand.t(Color_btn_cancel);
+    // }
+    .dialog_bubble {
+        background: brand.t(BG_dialog_bubble);
+        color: brand.t(Color_dialog_bubble);
+
+        &::before {
+            border-bottom: 6px solid brand.t(BG_dialog_bubble);
+        }
+    }
+
+    .n_popup_head {
+        @if config.$theme==default {
+            color: brand.t(Color_main_text_title);
+        }
+
+        @else {
+            color: brand.t(Color_main_text_body);
+        }
+    }
+
+    //* Global popup: end*/
+    /*Event listing start*/
+    // .heder_rt {
+    //     i {
+    //         &.active {
+    //             color: brand.t(Main_Active_Color);
+    //         }
+    //     }
+    // }
+    .v_split {
+        @if config.$theme==dark1 or config.$theme==dark2 {
+            border-left: 1px solid brand.t(Border_v_split_dk);
+        }
+
+        @else {
+            border-left: 1px solid brand.t(Border_v_split);
+        }
+    }
+
+    .er_main_menu {
+
+        // background: brand.t(BG_er_main_menu);
+        // border-top: 1px solid brand.t(Border_er_main_menu);
+        .m_tab {
+
+            // @if config.$theme==dark1 or config.$theme==dark2 {
+            //     color: brand.t(Color_main_text_title);
+            // }
+            // @else {
+            //     color: brand.t(Color_m_tab);
+            // }
+            sup {
+                @if config.$theme==dark1 or config.$theme==dark2 {
+                    color: brand.t(Color_main_text_title);
+                }
+
+                @else {
+                    color: brand.t(Color_m_tab);
+                }
+            }
+
+            &.active {
+                @if config.$theme==betway {
+
+                    // color: brand.t(Main_Active_Color2) !important;
+                    i {
+                        color: brand.t(Main_Active_Color2) !important;
+                    }
+                }
+
+                @else if config.$theme==dark1 or config.$theme==dark2 {
+
+                    // color: brand.t(Color_m_tab_active) !important;
+                    i {
+                        color: brand.t(Color_m_tab_active) !important;
+                    }
+                }
+
+                @else {
+
+                    // color: brand.t(Main_Active_Color) !important;
+                    i {
+                        color: brand.t(Main_Active_Color) !important;
+                    }
+                }
+
+                // &.olympics {
+                //     color: #000 !important;
+                // }
+            }
+        }
+
+        .icon {
+            color: brand.t(Color_er_main_menu_icon);
+        }
+    }
+
+    // .selected_nav {
+    //     color: brand.t(Color_selected_nav);
+    //     background: brand.t(BG_selected_nav);
+    // }
+    // .el_header,
+    // .el_top_row {
+    //     @if config.$themeType=="dark_theme" {
+    //         color: brand.t(Color_el_header);
+    //     }
+    // }
+    // .el_header {
+    //     background: brand.t(BG_el_header);
+    //     border-top: 1px solid brand.t(Border_el_header);
+    //     @if config.$themeType=="bright_theme" {
+    //         color: brand.t(Color_el_header);
+    //     }
+    // }
+    .odds_box {
+        border: 1px solid transparent;
+
+        @if config.$theme==dark1 or config.$theme==dark2 {
+            background: brand.t(BG_odds_box_el_dk);
+            color: brand.t(Color_er_odds_box_dk);
+        }
+
+        @else {
+            background: brand.t(BG_odds_box);
+            color: brand.t(Color_odds_box);
+        }
+
+        //*remove after [SFCRQ-3166] live: start*//commented on 29 July 22- YS
+        // .sev_content_item & {
+        //     background: brand.t(BG_odds_box_sev);
+        //     border: 1px solid transparent;
+        // }
+        /*remove after [SFCRQ-3166] live: end*/
+        &.add {
+            border: 1px solid brand.t(Main_Odds_add) !important;
+        }
+
+        label {
+            color: brand.t(Color_main_text_body);
+        }
+    }
+
+    //DES-40 Recommended correct score: start
+    // .rcd_bet {
+    //     color: brand.t(Color_odds_box);
+    // }
+    //DES-40 Recommended correct score: end
+    // .live_tag {
+    //     color: brand.t(Color_live_tag) !important;
+    // }
+    // .see_all {
+    // color: brand.t(Color_see_all);
+    //     .sub_info {
+    //         color: brand.t(Color_sub_info);
+    //     }
+    // }
+    .el_grp_header {
+
+        // color: brand.t(Color_el_grp_header);
+        // background: brand.t(BG_el_grp_header);
+        // border-bottom: 0.5px solid brand.t(Border_el_grp_header);
+        i {
+            color: brand.t(Color_el_grp_header);
+        }
+    }
+
+    // @if config.$theme==blue or config.$theme==brown or config.$theme==green or config.$theme==red {
+    //     .heder_lf {
+    //         .v_split {
+    //             opacity: 0.2;
+    //         }
+    //     }
+    // }
+    // .euro {
+    // .lock_icon,// lock (moved)
+    // .empty { // el (moved)
+    //     @if config.$theme==default {
+    // .sport_info { //  leftmenu (moved)
+    //     color: brand.t(Color_sport_info);
+    // }
+    // }
+    // @else {
+    //     color: brand.t(Main_Odds_lock_and_empty_euro) !important;
+    // }
+    // }
+    // }
+    // .el_top_row {
+    //     @if config.$theme==default {
+    //         background: brand.t(BG_el_top_row);
+    //         &.b_line {
+    //             border-bottom: 0.5px solid brand.t(Border_b_line);
+    //         }
+    //     }
+    //     @else {
+    //         color: brand.t(Color_el_grp_header);
+    //         background: brand.t(BG_el_grp_header);
+    //         &.b_line {
+    //             border-bottom: 0.5px solid brand.t(Border_el_grp_header);
+    //         }
+    //     }
+    // }
+    // .score_grp,
+    .search_item {
+        .score {
+            color: brand.t(Color_score);
+
+            &.no_effect {
+                color: brand.t(Color_score_no_effect);
+            }
+        }
+    }
+
+    // .gitc_st {
+    //     @if config.$theme==blue or config.$theme==green or config.$theme==bafa {
+    //         color: brand.t(Color_main_text_body);
+    //     }
+    //     @else {
+    //         color: brand.t(Color_tab_nav);
+    //     }
+    // }
+    // .bet_type_wrp {
+    //     color: brand.t(Color_bet_type_wrp);
+    //     background: brand.t(BG_bet_type_wrp);
+    // }
+    // .el_items {
+    //     background: brand.t(BG_el_items);
+    // }
+    // .info_lf {
+    //     color: brand.t(Color_info_lf);
+    // }
+    // .event_content {
+    //     &:not(:last-child) {
+    //         border-bottom: 0.5px solid brand.t(Border_eu_eventlisting);
+    //     }
+    // }
+    // .grp_info {
+    //     background: brand.t(BG_grp_info);
+    //     color: brand.t(Color_grp_info);
+    // }
+    // .outright_row {
+    //     background: brand.t(BG_outright_row);
+    //     &+.outright_row {
+    //         border-top: 0.5px solid brand.t(Border_outright_row);
+    //     }
+    // }
+    // .el_content_wrp+.outright_row {
+    //     border-top: 0.5px solid brand.t(Border_outright_row);
+    // }
+    // .match_name {
+    // color: brand.t(Color_match_name);
+    //     &.pinned {
+    //         @if config.$themeType=="bright_theme" {
+    //             color: brand.t(BG_darker_main_odds_boost);
+    //         }
+    //         @if config.$themeType=="dark_theme" {
+    //             color: brand.t(BG_main_odds_boost);
+    //         }
+    //     }
+    //     &.featured {
+    //         color: brand.t(Main_Active_Color);
+    //     }
+    // }
+    // .outrt_num {
+    //     color: brand.t(Color_outrt_num);
+    // }
+    // .el_info_row {
+    //     @if config.$theme==brown {
+    //         background: brand.t(BG_n_body);
+    //         color: brand.t(Color_main_text_body);
+    //         border: 1px solid brand.t(Border_el_info_row);
+    //     }
+    //     @else {
+    //         background: brand.t(BG_n_body);
+    //         color: brand.t(Color_main_text_body);
+    //     }
+    // }
+    .sub_menu_panel {
+
+        // background: brand.t(BG_sub_menu_panel);
+        .n_sports_menu {
+            .item {
+                @if config.$theme==default {
+                    color: brand.t(Color_main_text_title);
+                }
+
+                @else {
+                    color: brand.t(Color_main_text_body);
+                }
+            }
+        }
+
+        &.inplay {
+            background: brand.t(BG_er_main_menu);
+
+            @if config.$theme==dark1 or config.$theme==dark2 {
+                border-top: 1px solid brand.t(Border_v_split_dk);
+            }
+
+            @else {
+                border-top: 1px solid brand.t(Border_v_split);
+            }
+        }
+    }
+
+    .leagues_list_grp {
+        background: brand.t(BG_leagues_list_grp);
+
+        @if config.$themeType=="bright_theme" {
+            .odds_box {
+                &.league_item {
+                    background: brand.t(BG_league_item);
+
+                    .odds_value {
+                        color: brand.t(Color_odds_box);
+                    }
+
+                    // .title { // ttl (moved)
+                    //     color: brand.t(Color_league_item);
+                    // }
+                }
+            }
+        }
+
+        @else {
+            .odds_box {
+                &.league_item {
+                    background: brand.t(BG_outright_row);
+
+                    .odds_value {
+                        color: brand.t(Color_odds_box);
+                    }
+
+                    // .title { // ttl (moved)
+                    //     color: brand.t(Color_league_item);
+                    // }
+                }
+            }
+        }
+    }
+
+    //*event listing: end*/
+    /**left menu: starts:*/
+    .leftmenu_wrp {
+        @if config.$theme==betway or config.$theme==blue or config.$theme==bafa or config.$theme==blue or config.$theme==brown or config.$theme==green or config.$theme==red or config.$theme==dark1 or config.$theme==dark2 {
+
+            // leftmenu (moved): start
+            // background: brand.t(BG_leftmenu_wrp);
+            // leftmenu (moved): end
+            .dot {
+                background: brand.t(Color_main_text_body);
+            }
+
+            .selected {
+                color: brand.t(Color_menun_selected);
+                background: brand.t(left_menun_selected);
+
+                .dot {
+                    background: brand.t(Color_menun_selected);
+                }
+            }
+        }
+
+        @else if config.$theme==default {
+
+            // leftmenu (moved): start
+            // background: brand.t(BG_leftmenu_wrp);
+            // .all_type {
+            //     color: brand.t(Color_select_type_title);
+            // }
+            // leftmenu (moved): end
+            .dot {
+                background: brand.t(BG_select_type_dot);
+            }
+
+            .selected {
+                background: rgba(0, 0, 0, 0.08);
+                color: brand.t(Color_select_type_title);
+            }
+
+            // .tab_nav { // leftmenu (moved)
+            //     background: brand.t(BG_leftmenu_tab_nav);
+            //     color: brand.t(Color_leftmenu_tab_nav);
+            //     .slider {
+            //         background-color: brand.t(Main_Active_Color);
+            //     }
+            // }
+            // .tab_nav_item { // tn (moved)
+            //     &.active {
+            //         color: brand.t(left_menu_tab_nav_active);
+            //     }
+            // }
+        }
+    }
+
+    // .e_num { // leftmenu (moved)
+    //     color: brand.t(Color_e_num);
+    // }
+    // .search_bar {
+    // .close { // close (moved)
+    //     color: brand.t(Color_search_bar);
+    // }
+    // search (moved): start
+    // @if config.$theme==blue or config.$theme==brown or config.$theme==green or config.$theme==red {
+    //     background: brand.t(BG_search_bar);
+    //     .search_btn {
+    //         color: brand.t(Color_search_btn);
+    //         background: brand.t(BG_search_btn);
+    //     }
+    // }
+    // @else if config.$theme==bafa {
+    //     color: brand.t(Color_n_header);
+    //     background: brand.t(BG_n_header);
+    //     .search_btn {
+    //         background: brand.t(BG_ui-input-text);
+    //         color: brand.t(Color_ui-input-text);
+    //     }
+    // }
+    // @else if config.$theme==betway {
+    //     .search_btn {
+    //         color: brand.t(Color_search_btn);
+    //         background: brand.t(BG_search_btn);
+    //     }
+    // }
+    // @else if config.$theme==default or config.$theme==dark1 or config.$theme==dark2 {
+    //     .search_btn {
+    //         background: brand.t(BG_search_btn);
+    //     }
+    // }
+    // search (moved): end
+    // }
+    @if config.$theme==bafa or config.$theme==red {
+        .select_panel {
+            color: brand.t(Color_select_panel);
+        }
+    }
+
+    @if config.$theme==bafa or config.$theme==blue or config.$theme==default or config.$theme==red or config.$theme==dark1 or config.$theme==dark2 {
+        .leftmenu_select_nav {
+            color: brand.t(Color_select_panel);
+
+            @if config.$theme==dark1 or config.$theme==dark2 {
+                border-bottom: 0.5px solid brand.t(Border_select_nav_dk);
+            }
+
+            @else {
+                border-bottom: 0.5px solid brand.t(Border_select_nav);
+            }
+
+            .dot {
+                background: brand.t(BG_select_panel_dot);
+            }
+        }
+    }
+
+    /**left menu: end:*/
+    /*Virtual sports: start********************/
+    .more_icons {
+        @if config.$theme==default {
+            // no declare
+        }
+
+        @else {
+            // color: brand.t(Color_more_icons);
+            // .n_fav_off { // nfo (moved)
+            //     color: brand.t(Color_more_icons) !important;
+            // }
+        }
+    }
+
+    // .virtual_wrp { // tn (moved)
+    //     .tab_nav {
+    //         background: brand.t(BG_n_body);
+    //         color: brand.t(Color_virtual_tab_nav);
+    //     }
+    // }
+    /*Virtual sports: end********************/
+    //my bet
+    .betlist_input {
+
+        //wh: recheck bafa if can merge
+        @if config.$theme==bafa {
+            background: brand.t(Color_main_text_title);
+            color: brand.t(Color_betlist_input);
+            border: 1px solid brand.t(Border_betlist_input);
+
+            &.active {
+                color: brand.t(Color_main_text_body);
+            }
+        }
+
+        @else if config.$theme==red or config.$theme==blue or config.$theme==brown or config.$theme==green {
+            background: brand.t(BG_betlist_input);
+            color: brand.t(Color_betlist_input);
+            border: 1px solid brand.t(Border_betlist_input);
+
+            &.active {
+                color: brand.t(Color_main_text_body);
+            }
+        }
+
+        @else if config.$theme==default or config.$theme==betway or config.$theme==dark1 or config.$theme==dark2 {
+            background: brand.t(BG_betlist_input);
+            color: brand.t(Color_betlist_input);
+            border: 1px solid brand.t(Border_betlist_input);
+
+            &.active {
+                color: brand.t(Color_main_text_title);
+            }
+        }
+
+        &.focus {
+            @if config.$theme==red {
+                border: 1px solid brand.t(Main_Odds_add);
+            }
+
+            @else {
+                border: 1px solid brand.t(Main_Active_Color);
+            }
+        }
+
+        &.err {
+            border: 1px solid brand.t(Color_pb_err);
+        }
+    }
+
+    //* My Acct: starts ================================================*/
+    // .account_icon_wrap_euro {
+    //     background: brand.t(BG_account_icon_wrap_euro);
+    // }
+    // .account_info {
+    //     .username {
+    //         color: brand.t(Color_account_info);
+    //     }
+    // }
+    // .balance_amt {
+    //     color: brand.t(Color_balance);
+    // }
+    // .balance {
+    //     color: brand.t(Color_balance_euro_title);
+    //     .balance_amt {
+    //         color: brand.t(Color_balance_euro_amt);
+    //     }
+    // }
+    //* Completed Results: starts ================================================*/
+    //result_head not in used already
+    // .euro .el_header.result_head {
+    //     background: brand.t(BG_result_head);
+    //     color: brand.t(Color_result_head);
+    // }
+    // result: start
+    // .completed_result {
+    //     .competition {
+    //         border-bottom: 1px solid brand.t(Border_n_event_listing);
+    //         @if config.$theme==betway or config.$theme==dark1 or config.$theme==dark2 {
+    //             background: brand.t(BG_n_event_listing_left);
+    //         }
+    //         @else if config.$theme==green {
+    //             color: brand.t(Color_n_event_listing_left);
+    //             background: brand.t(BG_n_event_listing_left);
+    //         }
+    //         @else if config.$theme==bafa or config.$theme==blue {
+    //             color: brand.t(Color_n_event_listing_competition);
+    //             background: brand.t(BG_n_event_listing_left);
+    //         }
+    //         @else if config.$theme==red or config.$theme==brown {
+    //             color: brand.t(Color_n_event_listing_left_outright);
+    //             background: brand.t(BG_n_event_listing_left_outright);
+    //         }
+    //         @else if config.$theme==default {
+    //             color: brand.t(Color_n_event_listing_header);
+    //             background: brand.t(BG_n_event_listing_left);
+    //         }
+    //     }
+    // }
+    // result: end
+    .result_searchwrap {
+
+        // background: brand.t(BG_filter_item);
+        // color: brand.t(Color_filter_item);
+        @if config.$themeType=="bright_theme"or config.$theme==betway {
+
+            // border-bottom: 1px solid brand.t(Border_searchInput_forResultPage);
+            @if config.$theme==red or config.$theme==brown {
+                .ui-input-text {
+                    border: 1px solid brand.t(Border_searchInput_forResultPage);
+                }
+            }
+        }
+
+        // .disclaimer {
+        //     color: brand.t(Color_filter_item_disclaimer);
+        // }
+    }
+
+    //* Pref Settings: starts ================================================*/
+    // .form_item_label_icon {
+    // color: brand.t(Main_Active_Color);
+    //     .dialog_bubble & {
+    //         @if config.$theme==red {
+    //             color: brand.t(Main_Active_Color_lt10);
+    //         }
+    //     }
+    // }
+    .label_head {
+        color: brand.t(Color_pref_label_euro);
+    }
+
+    // .form_grp_item {
+    //     .form_item_label {
+    //         color: brand.t(Color_pref_label_euro);
+    //     }
+    // }
+    // .fastbet_wrap {
+    //     .fastbet_item {
+    //         background: brand.t(BG_pref_fastbet_item_euro);
+    //         color: brand.t(Color_pref_fastbet_item_euro) !important;
+    //     }
+    // }
+    //* Search: Starts =======================================================*/
+    // .search_head { // search (moved)
+    //     background: brand.t(BG_search_head);
+    //     color: brand.t(Color_search_head);
+    // }
+    @if config.$theme==bafa or config.$theme==blue or config.$theme==brown or config.$theme==default or config.$theme==red {
+        // .search_item,
+        // .search_menu { // search (moved)
+        //     background: brand.t(BG_search_item_euro);
+        //     border-bottom: 1px solid brand.t(Border_search_item_euro);
+        // }
+    }
+
+    @else if config.$theme==betway or config.$theme==dark1 or config.$theme==dark2 {
+        // .search_item {// search (moved)
+        //     border-bottom: 1px solid brand.t(Border_el_grp_header);
+        // }
+    }
+
+    @else if config.$theme==green {
+        // .search_item {// search (moved)
+        //     background: brand.t(BG_search_item_euro);
+        //     border-bottom: 1px solid brand.t(Border_search_item_euro);
+        // }
+    }
+
+    // .found { // search (moved)
+    //     color: brand.t(ActiveLight) !important;
+    // }
+    //* Bet placement: Starts =======================================================*/
+    // .combo_details {
+    //     .pb_footer_details {
+    //         &:not(:first-child) {
+    //             @if config.$theme==bafa {
+    //                 border-top: 1px solid brand.t(BG_pb_wrap);
+    //             }
+    //             @else {
+    //                 border-top: 1px solid brand.t(Border_pb_wrap);
+    //             }
+    //         }
+    //     }
+    // }
+    .footer_main.v2 {
+        @if config.$theme==betway {
+            background: brand.t(Color_main_text_title) !important;
+        }
+
+        @else {
+            background: brand.t(BG2_pb_wrap_footer) !important;
+        }
+    }
+
+    //wh: check again if can combine
+    .n_footer_combo {
+        @if config.$theme==blue or config.$theme==brown or config.$theme==bafa or config.$theme==green or config.$theme==red or config.$theme==betway or config.$theme==dark1 or config.$theme==dark2 {
+
+            // @if config.$theme==red {
+            //     background: brand.t(BG_n_footer_combo_eu);
+            //     color: brand.t(Color_main_text_title);
+            // }
+            &.sub {
+                background: brand.t(BG_n_footer_combo_sub);
+                border-top: 1px solid brand.t(Border_combo_details);
+                color: brand.t(Color_main_text_body);
+            }
+
+            .icon-fi-arrow-up1,
+            .icon-fi-arrow-down1 {
+                color: brand.t(Color_main_text_title);
+            }
+
+            // .nav_tab {
+            //     color: brand.t(Color_nav_tab);
+            //     &.active {
+            //         color: brand.t(Color_main_text_title);
+            //     }
+            // }
+        }
+
+        @else if config.$theme==default {
+            &.sub {
+                background: brand.t(BG_n_footer_combo_sub);
+                border-top: 1px solid brand.t(Border_combo_details);
+                color: brand.t(Color_main_text_title);
+            }
+
+            .icon-fi-arrow-up1,
+            .icon-fi-arrow-down1 {
+                color: brand.t(Color_main_text_lvl_secondary);
+            }
+
+            // .nav_tab {
+            //     color: brand.t(Color_nav_tab);
+            //     &.active {
+            //         color: brand.t(Color_nav_tab_active);
+            //     }
+            // }
+        }
+
+        .v_split {
+            border-left: 1px solid brand.t(Border_v_split_eu);
+        }
+    }
+
+    // .nav_mybet {
+    //     color: brand.t(Main_Active_Color);
+    // }
+    // .pb_button_btm {
+    //     color: brand.t(Color_pb_button_btm);
+    // }
+    .pb_footer {
+        @if config.$theme==betway {
+            background: brand.t(Color_main_text_title);
+        }
+
+        @else {
+            background: brand.t(BG2_pb_wrap_footer);
+        }
+    }
+
+    // .pb_footer_total_est {
+    //     border-top: 1px solid brand.t(Border_combo_details);
+    // }
+    // .pb_footer_alert_msg {
+    //     color: brand.t(Color_pb_err);
+    // }
+    @if config.$theme==default {
+
+        // .pb_footer_info,
+        .pb_times {
+            color: brand.t(Color_main_text_body);
+        }
+
+        // .pb_footer_details,
+        .price,
+        .total_est {
+            color: brand.t(Color_main_text_title);
+        }
+    }
+
+    @else {
+
+        // .pb_footer_details,
+        // .pb_footer_info,
+        .pb_times,
+        .price,
+        .total_est {
+            color: brand.t(Color_main_text_body);
+        }
+    }
+
+    // .pb_footer_actions {
+    //     @if config.$theme==blue or config.$theme==brown or config.$theme==red or config.$theme==bafa or config.$theme==green {
+    //         background: brand.t(BG2_pb_wrap_footer_lt5);
+    //         color: brand.t(Color_main_text_body);
+    //     }
+    //     @else if config.$theme==default or config.$theme==dark1 or config.$theme==dark2 {
+    //         background: brand.t(BG_pb_wrap_footer);
+    //         color: brand.t(Color_main_text_title);
+    //     }
+    //     @else if config.$theme==betway {
+    //         background: brand.t(Color_main_text_title_lt5);
+    //         color: brand.t(Color_main_text_body);
+    //     }
+    // }
+    //placebet inner content
+    .conflict {
+        &:before {
+            border-left: 2px solid brand.t(Color_pb_err);
+            // .odds_reversed & { // odds color interchange (removed)
+            //     border-left-color: brand.t(Color_pb_ok);
+            // }
+        }
+    }
+
+    // .rb_score {
+    //     color: brand.t(Color_pb_err);
+    // }
+    // .showmore {
+    //     span {
+    //         color: brand.t(Main_Active_Color);
+    //     }
+    // }
+    // .betlist_odds {
+    //     @if config.$theme==red or config.$theme==green {
+    //         color: brand.t(Main_Odds_add);
+    //     }
+    //     @else {
+    //         color: brand.t(Main_Active_Color);
+    //     }
+    // }
+    .betlist_item {
+        &:not(:first-child) {
+            @if config.$theme==dark1 or config.$theme==dark2 {
+                border-top: 0.5px solid brand.t(Border_er_pb_wrap_dk);
+            }
+
+            @else {
+                border-top: 0.5px solid brand.t(Border_pb_wrap);
+            }
+        }
+
+        &.disabled {
+            .details {
+                color: brand.t(Color_details_disabled);
+
+                .betslip_odds_type {
+                    color: brand.t(Color_details_disabled);
+                }
+            }
+
+            .selection {
+                color: brand.t(Color_selection_disabled);
+
+                >span {
+                    opacity: 0.4;
+                }
+            }
+
+            .betlist_odds {
+                color: brand.t(Color_betlist_odds_disabled);
+            }
+
+            .ob_teams_wrp {
+
+                .team_name,
+                span {
+                    color: brand.t(Color_details_disabled);
+                }
+
+                // .team_icon img { // sev (moved)
+                //     opacity: 0.4;
+                // }
+            }
+
+            // .obp_wrp { // odds boost (moved)
+            //     opacity: 0.7;
+            // }
+            .remove {
+                @if config.$theme==default {
+                    color: brand.t(Color_main_text_title);
+                }
+
+                @else {
+                    color: brand.t(Color_main_text_body);
+                }
+            }
+
+            // .obp_i::before,
+            // .obp_i::after { // odds boost (moved)
+            //     border-color: brand.t(Color_selection_disabled);
+            // }
+        }
+    }
+
+    .bet_item_wrap {
+        .bs_parlay_eu:not(:first-child) {
+            @if config.$theme==dark1 or config.$theme==dark2 {
+                border-top: 0.5px solid brand.t(Border_er_pb_wrap_dk);
+            }
+
+            @else {
+                border-top: 0.5px solid brand.t(Border_pb_wrap);
+            }
+        }
+
+        .combo_alert+.bs_parlay_eu,
+        .combo_alert+.betlist_item {
+            border-top: none;
+        }
+    }
+
+    // .betlist_wrap {
+    //     &.conflict {
+    //         @if config.$theme==betway {
+    //             background: brand.t(Color_main_text_title);
+    //         }
+    //         @else {
+    //             background: brand.t(BG2_pb_wrap_footer);
+    //         }
+    //     }
+    // }
+    // .conflict_title {
+    //     background: brand.t(Color_pb_err);
+    //     @if config.$theme==betway {
+    //         color: brand.t(Color_main_text_body);
+    //     }
+    //     @else {
+    //         color: brand.t(Color_main_text_title);
+    //     }
+    // .odds_reversed & { // odds color interchange (removed)
+    //     background: brand.t(Color_pb_ok);
+    // }
+    // }
+    .details_header {
+        .icon-fi-match-live {
+            color: brand.t(Color_pb_err);
+            // .odds_reversed & { // odds color interchange (removed)
+            //     color: brand.t(Color_pb_ok);
+            // }
+        }
+
+        .icon-fi-match-startsoon {
+            color: brand.t(Color_pb_nostart);
+        }
+    }
+
+    .pb_content {
+        @if config.$theme==betway {
+            background: brand.t(Color_main_text_title);
+        }
+
+        @else {
+            background: brand.t(BG2_pb_wrap_footer);
+        }
+
+        .bet_item_wrap {
+            background: brand.t(BG_pb_wrap);
+        }
+    }
+
+    .bs_parlay_eu_for_ing {
+        .betlist_item {
+            .selection {
+
+                // .odds { // wq can remove
+                // 	color: brand.t(Main_Active_Color);
+                // }
+                .date_index {
+                    color: brand.t(Color_main_text_body);
+                }
+            }
+        }
+    }
+
+    //My Bets
+    // .betslip_bet_amount {
+    //     @if config.$theme==default {
+    //         color: brand.t(Color_main_text_title);
+    //     }
+    //     @else {
+    //         color: brand.t(Color_main_text_body);
+    //     }
+    // }
+    // .condition_per_bet {
+    //     @if config.$theme==betway {
+    //         color: brand.t(Color_main_text_lvl_secondary);
+    //     }
+    //     @else {
+    //         color: brand.t(Color_condition_per_bet);
+    //     }
+    // }
+    // match_sold not in used already
+    // .match_sold {
+    //     @if config.$themeType=="bright_theme" {
+    //         border: 1px solid brand.t(Color_pb_nostart);
+    //     }
+    //     @else {
+    //         @if config.$theme==betway {
+    //             background: brand.t(Color_main_text_body);
+    //             border: 1px solid brand.t(Color_main_text_body);
+    //         }
+    //         @else if config.$theme==default or config.$theme==dark1 or config.$theme==dark2 {
+    //             background: brand.t(Color_main_text_title);
+    //             border: 1px solid brand.t(Color_main_text_title);
+    //         }
+    //     }
+    // }
+    // .betslip_bottom_button {
+    // @if config.$theme==bafa or config.$theme==blue or config.$theme==red {
+    // color: brand.t(Color_main_text_title);
+    // &.in_progress {
+    //     background: brand.t(Main_Active_Color);
+    // }
+    //     &.sold {
+    //         background: brand.t(BG_sold_bettrade);
+    //     }
+    // }
+    // @else if config.$theme==default {
+    // color: brand.t(Color_main_text_lvl_secondary);
+    // &.in_progress {
+    //     background: brand.t(BG_betslip_button_confirm);
+    //     color: brand.t(Color_main_text_title);
+    // }
+    //     &.sold {
+    //         background: brand.t(BG_sold_bettrade);
+    //         color: brand.t(Color_main_text_body);
+    //     }
+    // }
+    // @else if config.$theme==brown or config.$theme==green {
+    // color: brand.t(Color_main_text_title);
+    // &.in_progress {
+    //     background: brand.t(BG_betslip_button_confirm);
+    // }
+    //     &.sold {
+    //         background: brand.t(BG_sold_bettrade);
+    //     }
+    // }
+    // @else if config.$theme==betway {
+    // color: brand.t(Color_main_text_body);
+    // &.in_progress {
+    //     background: brand.t(BG_betslip_button_confirm);
+    // }
+    //     &.sold {
+    //         background: brand.t(BG_sold_bettrade);
+    //     }
+    // }
+    // }
+    // .betslip_id_wrap {
+    //     background: brand.t(BG_betslip_border);
+    //     color: brand.t(Main_Active_Color);
+    // }
+    //note: score_index to be remove after Winning Selection CRQ
+    .score_index // .bslp_score 
+
+        {
+        color: brand.t(Main_Active_Color);
+    }
+
+    // match_lose not in used already
+    // .match_lose {
+    //     background: brand.t(Color_pb_err);
+    //     border: 1px solid brand.t(Color_pb_err);
+    //     // .odds_reversed & { // odds color interchange (removed)
+    //     //     background: brand.t(Color_pb_ok);
+    //     //     border: 1px solid brand.t(Color_pb_ok);
+    //     // }
+    // }
+    // match_win not in used already
+    // .match_win {
+    //     background: brand.t(Color_pb_ok);
+    //     border: 1px solid brand.t(Color_pb_ok);
+    //     // .odds_reversed & { // odds color interchange (removed)
+    //     //     background: brand.t(Color_pb_err);
+    //     //     border: 1px solid brand.t(Color_pb_err);
+    //     // }
+    // }
+    // match_nostart not in used already
+    // .match_nostart {
+    //     background: brand.t(Color_pb_nostart);
+    //     border: 1px solid brand.t(Color_pb_nostart);
+    // }
+    //popup_bettrade_window
+    .bettrade_button,
+    .betslip_bottom_button {
+
+        // for certain themes only
+        .up {
+            @if config.$theme==blue or config.$theme==green {
+                color: brand.t(Main_Odds_up_lt20) !important;
+            }
+
+            @else if config.$theme==bafa {
+                color: brand.t(Main_Odds_up_lt15) !important;
+            }
+
+            .odds_reversed & {
+                color: brand.t(Main_Odds_down) !important;
+            }
+        }
+
+        .down {
+            .odds_reversed & {
+                @if config.$theme==blue or config.$theme==green {
+                    color: brand.t(Main_Odds_up_lt20) !important;
+                }
+
+                @else if config.$theme==bafa {
+                    color: brand.t(Main_Odds_up_lt15) !important;
+                }
+            }
+        }
+
+        @if config.$theme==red {
+            .down {
+                color: brand.t(Main_Odds_down_lt30) !important;
+
+                .odds_reversed & {
+                    color: brand.t(Main_Odds_up_lt15) !important;
+                }
+            }
+
+            .up {
+                color: brand.t(Main_Odds_up_lt15) !important;
+
+                .odds_reversed & {
+                    color: brand.t(Main_Odds_down_lt30) !important;
+                }
+            }
+        }
+    }
+
+    // .popup_bettrade_content {
+    //     color: brand.t(Color_main_text_body);
+    // }
+    // .popup_bettrade_title {
+    //     @if config.$theme==default {
+    //         color: brand.t(Color_main_text_title);
+    //     }
+    //     @else {
+    //         color: brand.t(Color_main_text_body);
+    //     }
+    // }
+    // .popup_bettrade_wrap {
+    //     background: brand.t(BG_smallpop_top);
+    // }
+    // .popup_bettrade_box {
+    // @if config.$themeType=="dark_theme" {
+    //     background: brand.t(BG_betslip_detail);
+    // }
+    // @else {
+    //     background: brand.t(Color_main_text_title);
+    // }
+    // &.confirm {
+    //     border: 1px solid brand.t(Main_Active_Color);
+    // }
+    // &.failed {
+    //     border: 1px solid brand.t(Color_pb_err);
+    // .odds_reversed & { // odds color interchange (removed)
+    //     border: 1px solid brand.t(Color_pb_ok);
+    // }
+    // }
+    // &.success {
+    //     border: 1px solid brand.t(Color_pb_ok);
+    // .odds_reversed & {// odds color interchange (removed)
+    //     border: 1px solid brand.t(Color_pb_err);
+    // }
+    // }
+    // }
+    .bettrade_button {
+        @if config.$theme==brown or config.$theme==green {
+            color: brand.t(Color_main_text_title);
+
+            &.confirm,
+            &.in_progress {
+                background: brand.t(BG_betslip_button_confirm);
+            }
+
+            &.in_progress {
+                color: brand.t(Color_main_text_body);
+            }
+        }
+
+        @else if config.$theme==bafa or config.$theme==red or config.$theme==blue {
+            color: brand.t(Color_main_text_title);
+
+            &.confirm,
+            &.in_progress {
+                background: brand.t(Main_Active_Color);
+            }
+        }
+
+        @else if config.$theme==default {
+            color: brand.t(Color_main_text_lvl_secondary);
+
+            &.confirm,
+            &.in_progress {
+                background: brand.t(BG_betslip_button_confirm);
+            }
+
+            &.in_progress {
+                color: brand.t(Color_main_text_title);
+            }
+        }
+
+        @else if config.$theme==betway or config.$theme==dark1 or config.$theme==dark2 {
+            color: brand.t(Color_main_text_body);
+
+            &.confirm,
+            &.in_progress {
+                background: brand.t(BG_betslip_button_confirm);
+            }
+        }
+
+        &.failed {
+            @if config.$theme==brown or config.$theme==green or config.$theme==bafa or config.$theme==red or config.$theme==blue {
+                color: brand.t(Color_main_text_title);
+            }
+
+            @else if config.$theme==betway or config.$theme==dark1 or config.$theme==dark2 {
+                color: brand.t(Color_main_text_body);
+            }
+
+            @else if config.$theme==default {
+                color: brand.t(Color_main_text_lvl_secondary);
+            }
+
+            background: brand.t(Color_pb_err);
+            // .odds_reversed & { // odds color interchange (removed)
+            //     background: brand.t(Color_pb_ok);
+            // }
+        }
+
+        &.sold {
+            background: brand.t(Color_pb_ok);
+            // .odds_reversed & {// odds color interchange (removed)
+            //     background: brand.t(Color_pb_err);
+            // }
+        }
+    }
+
+    //popup wager id copied
+    // .n_visualization_btn { // sev (moved)
+    //     background: brand.t(BG_n_live_button_wrap);
+    //     color: brand.t(Color_n_live_button_wrap);
+    //     &.info,
+    //     &.pin,
+    //     &.active,
+    //     &.volume {
+    //         background: brand.t(Active_button_wrap);
+    //         color: brand.t(Color_n_live_button_wrap);
+    //     }
+    // }
+    // .chan_indi { // sev (moved)
+    //     background: brand.t(BG_n_live_button_wrap);
+    //     color: brand.t(Color_n_live_button_wrap);
+    //     div {
+    //         border: 1px solid brand.t(Border_n_live_button_wrap);
+    //     }
+    // }
+    //     .chan_btn.active {
+    //         // sev (moved): start
+    //         color: brand.t(Color_n_live_button_wrap);
+    //         background: brand.t(BG_n_live_button_wrap);
+    // // sev (moved): end
+    //         .chan_popup & { // sev (moved)
+    //             border: 1px solid brand.t(Border_n_live_button_wrap);
+    //         }
+    //     }
+    //Racing========================================================:start//
+    // .bet_item_left_wrp {
+    //     .n_btn_sev {
+    //         background: brand.t(BG_odds_wrap_odds_add);
+    //         color: brand.t(Color_odds_wrap_odds_add);
+    //     }
+    // }
+    // .euHighlight { // sev (removed), redundant
+    //     color: brand.t(Color_score);
+    // }
+    //Racing========================================================:end//
+    //DES-389 Add in Event Filter by Amount of Time (Today) - start
+    .fltr_grp.active {
+        @if (config.$theme==blue or config.$theme==bafa) {
+            color: brand.t(Color_betslip_bet_amount);
+        }
+
+        @else if (config.$theme==red or config.$theme==xinli) {
+            color: brand.t(Main_Active_Color2);
+        }
+
+        @else {
+            color: brand.t(Main_Active_Color);
+        }
+    }
+
+    .fltr_dd {
+        @include base.shadows(brand.t(Shadow_cls_tooltips));
+        background: brand.t(BG_leftmenu_tab_nav);
+        color: brand.t(Color_leftmenu_tab_nav);
+
+        &:after {
+            border-bottom-color: brand.t(BG_leftmenu_tab_nav);
+        }
+    }
+
+    .fltr_dd_itm {
+        &:not(:last-child) {
+            @if (config.$theme==red or config.$theme==xinli) {
+                border-bottom: 1px solid brand.t(Border_v_split);
+            }
+
+            @else {
+                border-bottom: 1px solid brand.t(BG_odds_box);
+            }
+        }
+
+        &.active {
+            color: brand.t(Main_Active_Color);
+        }
+    }
+
+    //DES-389 Add in Event Filter by Amount of Time (Today) - end
+    //DES-522 Cyber PES
+    // sev_inner_world_cup_stat no longer in used
+    // .sev_inner_world_cup_stat {
+    //     .schedule_team_wrp {
+    //         color: brand.t(Color_sport_info);
+    //         @if (config.$theme==green or config.$theme==brown) {
+    //             background: brand.t(BG_n_sev_item_euro);
+    //         }
+    //         @else {
+    //             background: brand.t(BG_leftmenu_wrp);
+    //         }
+    //     }
+    //     .grp_stage_wrp {
+    //         color: brand.t(Color_sport_info);
+    //         @if (config.$theme==green or config.$theme==brown) {
+    //             background: brand.t(BG_n_sev_item_euro);
+    //         }
+    //         @else {
+    //             background: brand.t(BG_leftmenu_wrp);
+    //         }
+    //         .sb_table {
+    //             // .n_table_header { 
+    //             //     // sev (moved): start
+    //             //     color: brand.t(Color_sport_info);
+    //             //     @if (config.$theme==red or config.$theme==blue) {
+    //             //         background: brand.t(BG_el_grp_header);
+    //             //     }
+    //             //     @else {
+    //             //         background: brand.t(BG_er_main_menu);
+    //             //     }
+    //             //     // sev (moved): end
+    //             //     // sev (moved): start
+    //             //     .n_game {
+    //             //         color: brand.t(Color_sport_info);
+    //             //     }
+    //             //     // sev (moved): end
+    //             // }
+    //             // .n_table_content { // sev (moved)
+    //             //     color: brand.t(Color_sport_info);
+    //             //     @if (config.$theme==brown) {
+    //             //         background: brand.t(BG_odds_box_sev);
+    //             //     }
+    //             //     @else {
+    //             //         background: brand.t(BG_euSev_header);
+    //             //     }
+    //             // }
+    //             // .n_num { // sev (moved)
+    //             //     color: brand.t(Color_sport_info);
+    //             // }
+    //         }
+    //     }
+    //     .knockout_wrp {
+    //         .nav_prev,
+    //         .nav_next {
+    //             background: brand.t(BG_account_icon_wrap_euro);
+    //             color: brand.t(Color_balance_euro_amt);
+    //         }
+    //         .stage_name {
+    //             color: brand.t(Color_sport_info);
+    //             @if (config.$theme==green or config.$theme==brown) {
+    //                 background: brand.t(BG_n_sev_item_euro);
+    //             }
+    //             @else {
+    //                 background: brand.t(BG_leftmenu_wrp);
+    //             }
+    //         }
+    //         .stage_container {
+    //             .stage_content {
+    //                 .team_wrp {
+    //                     @if (config.$theme==green or config.$theme==brown) {
+    //                         background: brand.t(BG_pagebg1);
+    //                     }
+    //                     @else {
+    //                         background: brand.t(BG_euSev_header);
+    //                     }
+    //                     &:before {
+    //                         border-top: 1px solid brand.t(Border_odds_btn_cls_LOCK);
+    //                     }
+    //                     &:after {
+    //                         border-color: brand.t(Border_odds_btn_cls_LOCK);
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    //     .team_header {
+    //         color: brand.t(Color_sport_info);
+    //         @if (config.$theme==red or config.$theme==blue or config.$theme==green or config.$theme==brown) {
+    //             background: brand.t(BG_n_sev_item_euro);
+    //         }
+    //         @else {
+    //             background: brand.t(BG_leftmenu_wrp);
+    //         }
+    //     }
+    //     .h_header {
+    //         color: brand.t(Color_sport_info);
+    //         @if (config.$theme==green or config.$theme==brown) {
+    //             background: brand.t(BG_n_sev_item_euro);
+    //         }
+    //         @else {
+    //             background: brand.t(BG_leftmenu_wrp);
+    //         }
+    //     }
+    // }
+    //snooker
+    // .el_score_row {
+    //     color: brand.t(Color_bet_type_wrp);
+    //     background: brand.t(BG_bet_type_wrp);
+    // }
+    // .el_items:has(.scrol_tab),
+    // .el_items:has(.no_scrol_tab) {
+    //     &+.el_items {
+    //         @if (config.$theme==red or config.$theme==blue or config.$theme==green or config.$theme==brown) {
+    //             border-top: 0.5px solid #b5b5b5;
+    //         }
+    //         @else if (config.$theme==default or config.$theme==betway or config.$theme==dark1 or config.$theme==dark2) {
+    //             border-top: 0.5px solid rgba(255, 255, 255, 0.25);
+    //         }
+    //     }
+    // }
+    // [DES-791, DES-792] day night mode setting, left panel enhancement - start
+    // .leftmenu_wrp.lm2_euro {
+    // .lm2_header { // settings (moved)
+    //     background: brand.t(BG_lm2_header);
+    //     color: brand.t(Color_lm2_header);
+    // }
+    // .lm2_theme { // settings (moved)
+    //     background: brand.t(BG_lm2_euro_theme);
+    // }
+    // .eu_lm2_sh { // leftmenu (moved)
+    //     background: brand.t(BG_lm2_euro_sh);
+    // }
+    // .tab_nav { // leftmenu (moved)
+    //     background: brand.t(BG_lm2_tab_nav);
+    //     color: brand.t(Color_lm2_tab_nav);
+    // }
+    // }
+    // [DES-791, DES-792] day night mode setting, left panel enhancement - end
+    .esports_desc {
+        background: rgba(0, 0, 0, 0.5);
+        color: brand.t(BG_draw_dot1);
+    }
+
+    // .esports_tut1 {
+    //     &.m_tab {
+    //         background: brand.t(BG_er_main_menu);
+    //     }
+    // }
+    .esports_tut2 {
+        &.n_sports_menu_es {
+            background: brand.t(BG_sub_menu_panel);
+        }
+    }
+
+    //[SFQAT-18148][Narra][EuroView][SEV] There is additional white line in SEV in green colour theme
+    // .eu_sevSlider { // sev (moved)
+    //     @if config.$theme==green {
+    //         background: brand.t(BG_n_menu_cover);
+    //         color: brand.t(Color_n_menu_cover_color);
+    //         border-top: 1px solid brand.t(BG_n_menu_cover);
+    //     }
+    //     @else {
+    //         background: brand.t(BG_n_fix_top_home_color);
+    //         color: brand.t(Color_main_text_body);
+    //         border-top: 1px solid brand.t(BG_n_fix_top_home_color_dk5);
+    //     }
+    //     +.cover_btn {
+    //         &:before {
+    //             @if config.$theme==green {
+    //                 background: brand.t(BG_n_menu_cover);
+    //             }
+    //         }
+    //     }
+    // }
+    // .winner_time {
+    //     @if config.$theme==default or config.$theme==dark1 or config.$theme==dark2 {
+    //         color: brand.t(Color_main_text_title);
+    //     }
+    //     @else {
+    //         color: brand.t(Color_main_text_body);
+    //     }
+    // }
+    .n_sports_menu_wrap .fltr_grp {
+        background: brand.t(BG_sub_menu_panel);
+    }
+
+    // injury_t: start
+    // .injury_t {
+    //     color: brand.t(Main_Active_Color);
+    // }
+    // injury_t: end
+    // .n_points_wrap .n_game {// sev (moved)
+    //     color: brand.t(Color_period_hd);
+    // }
+    .eu_combo_info {
+        font-weight: bold;
+    }
+
+    // .ob_itm_grp { // odds boost (removed)
+    //     &:has(+ .ob_hdr_sec) {
+    //         &::after {
+    //             background: #586478;
+    //             @if config.$theme==red or config.$theme==blue or config.$theme==green or config.$theme==brown or config.$theme==bafa {
+    //                 background: #E0E0E0;
+    //             }
+    //         }
+    //     }
+    // }
+}

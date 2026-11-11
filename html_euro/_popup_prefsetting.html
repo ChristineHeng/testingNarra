@@ -1,0 +1,52 @@
+<div class="n_container">
+    <div class="n_header n_header_sports tall">
+        <div class="n_back"><div class="n_back_link" target="_self"><i class="icon-fi-arrow-left"></i> </div></div>
+        <div class="title">My Preference</div>
+    </div>
+
+    <div class="n_content_wrap_wth_bcktop" id="demoOnly_pref_wrap"></div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#demoOnly_pref_wrap").load("../html_public/_pref.html", function(){
+        $("#demoprefsetting .n_back_link").on("click", function () {
+            $("#demoprefsetting").css("display", "none");
+            //$("body").removeClass("popupOn");
+            popupOff();
+        });
+
+                    //wizard box
+                    $("#view_tutorial").find(".form_item_label").find("label").click(function () {
+                    if (!$(this).hasClass("highlighted")) {
+                        $("#fb_mask").show();
+                        $("#root").addClass("pref_tutor");
+                        $(this).addClass("highlighted");
+                        $("#view_tutorial").find(".dot_box").show();
+                        $("#view_tutorial").find(".rec_arrow").show();
+                        $("#view_tutorial").next().find(".dot_box").show();
+                        $("#view_tutorial").find(".tohighlight .fastbet_item").addClass("highlighted");
+                        $(".tut_area .form_item_label").addClass("highlighted");
+                        $("#view_tutorial").next().find(".tohighlight .fastbet_item").addClass("highlighted");
+                    } else {
+                        $("#fb_mask").hide();
+                        $("#root").removeClass("pref_tutor");
+                        $(this).removeClass("highlighted");
+                        $("#view_tutorial").find(".dot_box").hide();
+                        $("#view_tutorial").find(".rec_arrow").hide();
+                        $("#view_tutorial").next().find(".dot_box").hide();
+                        $("#view_tutorial").find(".tohighlight .fastbet_item").removeClass("highlighted");
+                        $(".tut_area .form_item_label").removeClass("highlighted");
+                        $("#view_tutorial").next().find(".tohighlight .fastbet_item").removeClass("highlighted");
+                    }
+                });
+                $("#pref_btn").click(function () {
+                    $("#view_tutorial").find(".form_item_label").find("label").trigger("click");
+                });
+                $("#view_tutorial").find(".form_item_label").find("label").addClass("highlighted");
+                $("#view_tutorial").find(".form_item_label").find("label").trigger("click");
+     
+    });
+    });
+
+</script>

@@ -1,0 +1,660 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Narra - html template</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover,user-scalable=no" />
+		<!-- <meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="theme-color" content="#000"> -->
+		<!--Base Styles-->
+		<link rel="stylesheet" type="text/css" href="../assets/public/layout/css/basestyle.min.css" />
+		<!--<link rel="stylesheet" type="text/css" href="../merchants/merchant1/css/style_asia.css">-->
+		<link rel="stylesheet" type="text/css" href="../assets/public/languages/eng/layout_asia.min.css" id="detect_language" />
+		<link rel="stylesheet" type="text/css" href="#" id="design_view" />
+
+		<script src="../assets/public/lib/jquery.js"></script>
+		<script src="../assets/public/layout/js/scripts_main.js"></script>
+		<script src="../assets/public/layout/js/scripts_asia.js"></script>
+	</head>
+
+	<body id="root">
+		<div class="n_container">
+			<div class="n_header n_header_sports header_center" id="demoonly_sample1">
+				<div class="n_back">
+					<a class="n_back_link mock_cb_n_back_link"><i class="icon-fi-arrow-left"></i> 返回</a>
+				</div>
+				<div class="tab_group">
+					<div class="tab mock_result_live_trigger">滚球</div>
+					<div class="tab active mock_result_completed_trigger">完成</div>
+					<div class="tab demo_mock_result_outright" onclick="window.location.href = 'result-outright.html'">冠军</div>
+				</div>
+				<div class="n_balance">
+					(RMB)<br />
+					999,999,999.99
+				</div>
+			</div>
+			<div class="n_content_wrap">
+				<div class="result_search n_sticky">
+					<div class="search_wrap">
+						<div class="search_input">
+							<div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset">
+								<input class="search_box_selectLeague league-search" placeholder="Event Keyword Search" type="text" />
+								<div class="clear_icon">
+									<i class="icon-fi-remove-thin"></i>
+								</div>
+							</div>
+						</div>
+						<div class="search_icon">
+							<i class="icon-fi-n-search"></i>
+						</div>
+					</div>
+					<div class="ob_sort_wrp">
+						<div class="ob_sort">
+							<i class="icon-fi-sort-part"></i>
+							<i class="icon-fi-sort-alphabetical"></i>
+						</div>
+						<div class="ob_st_popup ob_sp_v2" style="display: none">
+							<div class="ob_st_content">
+								<div class="ob_st_rw active"><i class="icon-fi-sort-alphabetical"></i><span>By Alphabetical Order</span><i class="icon-fi-tick"></i></div>
+								<div class="ob_st_rw"><i class="icon-fi-sort-popularity"></i><span>By popularity</span><i class="icon-fi-tick"></i></div>
+								<div class="ob_st_rw"><i class="icon-fi-sort-time"></i><span>By time</span><i class="icon-fi-tick"></i></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="filter_group n_sticky" id="result_completed_filter">
+					<div class="filter_item selectbox_grp">
+						<!-- add "disabled" next to "selectbox_title" for disabled effect -->
+						<div class="selectbox_title">
+							<div class="selectbox_titlerow">足球</div>
+							<div class="betslip_arrow">
+								<i class="icon-fi-angle-down" aria-hidden="true"></i>
+							</div>
+							<div class="ob_st_popup" style="display: none">
+								<div class="ob_st_content">
+									<div class="ob_st_rw active">足球</div>
+									<div class="ob_st_rw">足球足球</div>
+									<div class="ob_st_rw">足球足球足球足球足球</div>
+									<div class="ob_st_rw demoOnlyDropdownDisabled">Disabled</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="filter_item selectbox_grp fullW_filter">
+						<!-- add "disabled" next to "selectbox_title" for disabled effect -->
+						<div class="selectbox_title">
+							<div class="selectbox_titlerow" data-default-text="All Leagues">All Leagues</div>
+							<div class="betslip_arrow">
+								<i class="icon-fi-angle-down" aria-hidden="true"></i>
+							</div>
+							<!--<div class="ob_st_popup" style="display: none">
+							<div class="ob_st_content">
+								<div class="ob_st_rw active">所有联赛</div>
+								<div class="ob_st_rw">T所有联赛所有联赛</div>
+								<div class="ob_st_rw">所有联赛所有联赛所有联赛</div>
+								<div class="ob_st_rw demoOnlyDropdownDisabled">Disabled</div>
+							</div>
+						</div>-->
+							<div class="ob_st_popup" style="display: none">
+								<div class="ob_st_content">
+									<div class="ob_st_rw">
+										<div class="checkbox custom_check">
+											<label class="container">
+												All Leagues
+												<input type="checkbox" checked />
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="ob_st_rw">
+										<div class="checkbox custom_check">
+											<label class="container">
+												<div class="league_name">*England Premier League</div>
+												<input type="checkbox" />
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="ob_st_rw">
+										<div class="checkbox custom_check">
+											<label class="container">
+												<div class="league_name">*Italy Serie A</div>
+												<input type="checkbox" />
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="ob_st_rw">
+										<div class="checkbox custom_check">
+											<label class="container">
+												<div class="league_name">*Spain La Liga</div>
+												<input type="checkbox" />
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="ob_st_rw">
+										<div class="checkbox custom_check">
+											<label class="container">
+												<div class="league_name">Argentina Liga Profesional</div>
+												<input type="checkbox" />
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="ob_st_rw">
+										<div class="checkbox custom_check">
+											<label class="container">
+												<div class="league_name">Argentina Primera B Nacional</div>
+												<input type="checkbox" />
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="ob_st_rw">
+										<div class="checkbox custom_check">
+											<label class="container">
+												<div class="league_name">Argentina Primera C</div>
+												<input type="checkbox" />
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="ob_st_rw">
+										<div class="checkbox custom_check">
+											<label class="container">
+												<div class="league_name">Australia A-League</div>
+												<input type="checkbox" />
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="ob_st_rw">
+										<div class="checkbox custom_check">
+											<label class="container">
+												<div class="league_name">Brazil Campeonato Amapaense Division 1 Brazil Campeonato Amapaense Division 1 Brazil Campeonato Amapaense Division 1 Brazil Campeonato Amapaense Division 1</div>
+												<input type="checkbox" />
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="ob_st_rw">
+										<div class="checkbox custom_check">
+											<label class="container">
+												<div class="league_name">Brazil Campeonato Women Serie A1</div>
+												<input type="checkbox" />
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="ob_st_rw">
+										<div class="checkbox custom_check">
+											<label class="container">
+												<div class="league_name">Brazil Serie A</div>
+												<input type="checkbox" />
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="ob_st_rw">
+										<div class="checkbox custom_check">
+											<label class="container">
+												<div class="league_name">Bulgaria First Professional Football League</div>
+												<input type="checkbox" />
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="ob_st_rw">
+										<div class="checkbox custom_check">
+											<label class="container">
+												<div class="league_name">Burkina Faso League 2</div>
+												<input type="checkbox" />
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="ob_st_rw">
+										<div class="checkbox custom_check">
+											<label class="container">
+												<div class="league_name">Chile Primera B Division</div>
+												<input type="checkbox" />
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="ob_st_rw">
+										<div class="checkbox custom_check">
+											<label class="container">
+												<div class="league_name">Chile Primera Division</div>
+												<input type="checkbox" />
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="ob_st_rw">
+										<div class="checkbox custom_check">
+											<label class="container">
+												<div class="league_name">Chile Women Primera Division</div>
+												<input type="checkbox" />
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="ob_st_rw">
+										<div class="checkbox custom_check">
+											<label class="container">
+												<div class="league_name">Colombia Primera B</div>
+												<input type="checkbox" />
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="ob_st_rw">
+										<div class="checkbox custom_check">
+											<label class="container">
+												<div class="league_name">Colombia Women League</div>
+												<input type="checkbox" />
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="ob_st_rw">
+										<div class="checkbox custom_check">
+											<label class="container">
+												<div class="league_name">Costa Rica Liga De Ascenso</div>
+												<input type="checkbox" />
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="ob_st_rw">
+										<div class="checkbox custom_check">
+											<label class="container">
+												<div class="league_name">Cyberbattle FIFA 22 China Super League</div>
+												<input type="checkbox" />
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="ob_st_rw">
+										<div class="checkbox custom_check">
+											<label class="container">
+												<div class="league_name">Cyberbattle FIFA 22 England Premier League</div>
+												<input type="checkbox" />
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="ob_st_rw">
+										<div class="checkbox custom_check">
+											<label class="container">
+												<div class="league_name">Cyberbattle FIFA 22 Germany Bundesliga 1</div>
+												<input type="checkbox" />
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="ob_st_rw">
+										<div class="checkbox custom_check">
+											<label class="container">
+												<div class="league_name">Cyberbattle FIFA 22 Italy Serie A</div>
+												<input type="checkbox" />
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="ob_st_rw">
+										<div class="checkbox custom_check">
+											<label class="container">
+												<div class="league_name">Cyberbattle FIFA 22 Spain La Liga</div>
+												<input type="checkbox" />
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="ob_st_rw">
+										<div class="checkbox custom_check">
+											<label class="container">
+												<div class="league_name">Cyberbattle PES21 Americas Friendly</div>
+												<input type="checkbox" />
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="ob_st_rw">
+										<div class="checkbox custom_check">
+											<label class="container">
+												<div class="league_name">Ireland Leinster Senior League Senior Division</div>
+												<input type="checkbox" />
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+									<div class="ob_st_rw">
+										<div class="checkbox custom_check">
+											<label class="container">
+												<div class="league_name">Northern Ireland U20 Premiership Development League</div>
+												<input type="checkbox" />
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="betslip_border"></div>
+								<div class="betslip_detail_bottom">
+									<div class="n_popup_button_wrap">
+										<div class="betslip_bottom_button normal_btn">Clear All</div>
+										<div class="betslip_bottom_button confirm">Filter</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="filter_item selectbox_grp">
+						<div class="selectbox_title">
+							<div class="selectbox_titlerow">22/10/2019</div>
+							<div class="betslip_arrow">
+								<i class="icon-fi-angle-down" aria-hidden="true"></i>
+							</div>
+							<div class="ob_st_popup" style="display: none">
+								<div class="ob_st_content">
+									<div class="ob_st_rw active">22/10/2019</div>
+									<div class="ob_st_rw">22/10/2019</div>
+									<div class="ob_st_rw">22/10/2019</div>
+									<div class="ob_st_rw demoOnlyDropdownDisabled">Disabled</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="disclaimer n_sticky" id="demoonly_sample3">
+					<!--   * 请注意显示时区为GMT-4以及所有赛果都包含加时<br> -->
+					<span>C：赛事已取消</span>
+					<span
+						>Check Cyber events results - <u><a href="https://cyberbattle-dev.freyadev.cc/en" target="_blank">https://cyberbattle-dev.freyadev.cc/en</a></u></span
+					>
+				</div>
+				<!--sample: starts-->
+				<div id="demoOnly_devdontcopy_results">
+					<!--shared file from ../html_public/_result-completed.html-->
+				</div>
+				<!--sample: ends-->
+			</div>
+		</div>
+
+		<div class="eventListingRefresh btn_backtop" id="toTop">
+			<i class="icon-fi-backtotop-euro"></i>
+		</div>
+		<div class="popup_overWrap solid" id="mybet"></div>
+		<div class="link_to_goal_timeline"></div>
+		<!--DES-40 Recommended correct score-->
+		<div class="popup_window" style="display: none">
+			<div class="popup_top_wrp">
+				<div class="popup_box_top">投注单几乎已满。点击波胆盘口推荐图标之前请先移除部分注单。</div>
+				<div class="popup_box_bottom">
+					<div class="btn_ok">确定</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="demoOnly_global_pop_item"></div>
+		<!-- <div id="demoOnly_results_pop_carousel"></div> -->
+		<div id="demoOnly_results_carousel_pop"></div>
+		<!-- Swiper CSS -->
+		<link rel="stylesheet" href="../assets/public/lib/swiper/swiper-bundle.min.css" />
+		<!-- Swiper JS -->
+		<script src="../assets/public/lib/swiper/swiper-bundle.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				var ifPopupOpen = false;
+				$('#demoOnly_devdontcopy_results').load('../html_public/_result-completed.html', function () {
+					// Completed Result : popup goal timeline ============================*/
+					CompletedRessule_opentimeline();
+					var headerHeight = $('.n_header').outerHeight();
+					var resultSearchHeight = $('.result_search.n_sticky').outerHeight();
+					var filterGroupHeight = $('.filter_group.n_sticky').outerHeight();
+
+					$('.result_search.n_sticky').css('top', headerHeight);
+					$('.filter_group.n_sticky').css('top', headerHeight + resultSearchHeight);
+					$('.n_grp_header.n_sticky').css('top', headerHeight + resultSearchHeight + filterGroupHeight);
+
+					//detect dropdownbox
+					$('#slct3').focus(function () {
+						ifPopupOpen = true;
+					});
+
+					$(window).on('touchmove', function (e) {
+						if (ifPopupOpen) {
+							touchHandler();
+						}
+					});
+				});
+				function touchHandler(event) {
+					ifPopupOpen = false;
+					$('#slct3').blur();
+				}
+				$('#mybet').load('_popup_mybet_unsettled.html');
+				$('#mybet').hide();
+
+				$('.n_grp_header').click(function () {
+					$(this).parent().find('.completedresult_wrap').toggle();
+				});
+				//DES-40 Recommended correct score: start
+				$('.popup_box_bottom .btn_ok').click(function () {
+					$('.countdown_icn circle').removeClass('animated');
+					$('.countdown_icn').hide();
+					$('.popup_top_wrp')
+						.removeClass('slideOut')
+						.addClass('slideIn')
+						.delay(300)
+						.queue(function (next) {
+							$('#sample_dont_copy_popup_rmd_bet').hide();
+							$('.popup_top_wrp').removeClass('slideIn');
+							next();
+						});
+				});
+				//DES-40 Recommended correct score: end
+
+				$('#demoOnly_global_pop_item').load('_global_pop_item.html', function () {});
+				if (localStorage.getItem('isFacelift') === 'true') {
+					$('#result_completed_filter .filter_item').click(function (e) {
+						e.stopPropagation();
+						var $this = $(this);
+						// Close other open popups
+						$('#result_completed_filter .filter_item').not($this).find('.ob_st_popup').hide();
+						$('#result_completed_filter .filter_item').not($this).find('.betslip_arrow').removeClass('fl_rotate');
+						$this.find('.ob_st_popup').toggle();
+						$this.find('.betslip_arrow').toggleClass('fl_rotate');
+
+						if ($this.hasClass('fullW_filter') && $this.find('.ob_st_popup').is(':visible')) {
+							var $popup = $this.find('.ob_st_popup');
+							$popup.find('input[type="checkbox"]').prop('checked', true);
+							$this.find('.betslip_bottom_button.confirm').removeClass('disabled');
+						}
+					});
+					// Close popup when clicking outside
+					$(document).click(function () {
+						$('#result_completed_filter .filter_item').find('.ob_st_popup').hide();
+						$('#result_completed_filter .filter_item').find('.betslip_arrow').removeClass('fl_rotate');
+					});
+
+					// Prevent clicks inside ob_st_popup from closing it
+					$('#result_completed_filter .ob_st_popup').click(function (e) {
+						e.stopPropagation();
+					});
+
+					// Filter button - update selectbox_titlerow with checked items
+					$('#result_completed_filter .betslip_detail_bottom .confirm').click(function (e) {
+						e.stopPropagation();
+						if ($(this).hasClass('disabled')) {
+							return;
+						}
+						var $popup = $(this).closest('.ob_st_popup');
+						var $filterItem = $(this).closest('.filter_item');
+						var $titleRow = $filterItem.find('.selectbox_titlerow');
+						var defaultText = $titleRow.data('default-text') || 'All Leagues';
+						var $allCheckbox = $popup.find('.ob_st_rw:first input[type="checkbox"]');
+						if ($allCheckbox.is(':checked')) {
+							$titleRow.text(defaultText);
+						} else {
+							var checked = [];
+							$popup.find('.ob_st_rw:not(:first) input[type="checkbox"]:checked').each(function () {
+								checked.push($(this).closest('label').text().trim());
+							});
+							$titleRow.text(checked.length > 0 ? checked.join(', ') : defaultText);
+						}
+						$popup.hide();
+						$filterItem.find('.betslip_arrow').removeClass('fl_rotate');
+					});
+
+					// Clear All button - uncheck all checkboxes, keep popup open
+					$('#result_completed_filter .betslip_detail_bottom .normal_btn').click(function (e) {
+						e.stopPropagation();
+						var $popup = $(this).closest('.ob_st_popup');
+						$popup.find('input[type="checkbox"]').prop('checked', false);
+						$(this).closest('.betslip_detail_bottom').find('.betslip_bottom_button.confirm').addClass('disabled');
+					});
+
+					// "All" checkbox UX: clicking "All" checks all others; clicking others unchecks "All"
+					$('#result_completed_filter .ob_st_popup').on('change', 'input[type="checkbox"]', function () {
+						var $popup = $(this).closest('.ob_st_popup');
+						var $allCheckbox = $popup.find('.ob_st_rw:first input[type="checkbox"]');
+						var $otherCheckboxes = $popup.find('.ob_st_rw:not(:first) input[type="checkbox"]');
+						var isAllCheckbox = $(this).is($allCheckbox);
+
+						if (isAllCheckbox) {
+							// Toggling "All Leagues" toggles every league checkbox to match
+							$otherCheckboxes.prop('checked', $allCheckbox.is(':checked'));
+						} else {
+							// Any interaction with a specific league unchecks "All Leagues"
+							$allCheckbox.prop('checked', false);
+						}
+
+						var $confirmBtn = $popup.closest('.filter_item').find('.betslip_bottom_button.confirm');
+						var anyChecked = $popup.find('input[type="checkbox"]:checked').length > 0;
+						$confirmBtn.toggleClass('disabled', !anyChecked);
+
+						$popup.find('.ob_st_rw').removeClass('active');
+					});
+
+					// Clear icon - clear the input value
+					$('.result_search .clear_icon').click(function () {
+						$(this).siblings('input').val('');
+					});
+				} else {
+					$('#result_completed_filter .filter_item').find('.select').show();
+				}
+
+				if (sessionStorage.getItem('enterCyberBattle') === 'true') {
+					document.querySelector('.demo_mock_result_outright')?.remove();
+				}
+
+				$('.mock_result_live_trigger').click(function () {
+					checkCyberbattlePage('result-live.html');
+				});
+				$('.mock_result_completed_trigger').click(function () {
+					checkCyberbattlePage('result-completed.html');
+				});
+				cyberbattleBackButton();
+
+				$('.demoOnlyDropdownDisabled').click(function () {
+					$(this).parent().parent().parent().addClass('disabled');
+				});
+
+				// Scoped sort button handler for result search
+				$('.result_search .ob_sort_wrp').click(function () {
+					$(this).toggleClass('active');
+					$(this).find('.ob_st_popup').toggle();
+				});
+
+				// Close sort popup when clicking outside of it
+				$(document).click(function (e) {
+					if (!$(e.target).closest('.ob_sort_wrp').length) {
+						$('.ob_sort_wrp').removeClass('active').find('.ob_st_popup').hide();
+					}
+				});
+
+				$('.ob_st_content .ob_st_rw')
+					.not(':has(.checkbox)')
+					.click(function () {
+						$(this).parent().children().removeClass('active');
+						$(this).addClass('active');
+
+						var sortText = $(this).text().trim();
+						var $popup = $(this).closest('.ob_st_popup');
+						var $sortWrp = $popup.parent('.ob_sort_wrp');
+						var $icon = $sortWrp.find('.ob_sort').find('i').last();
+
+						var sortIconMap = {
+							'By Alphabetical Order': 'icon-fi-sort-alphabetical',
+							'By popularity': 'icon-fi-sort-popularity',
+							'By time': 'icon-fi-sort-time',
+						};
+
+						$icon.removeClass(Object.values(sortIconMap).join(' '));
+						if (sortIconMap[sortText]) {
+							$icon.addClass(sortIconMap[sortText]);
+						}
+
+						$popup.hide();
+						$sortWrp.removeClass('active');
+					});
+
+				/*completed result: competition dropdown (start)*/
+				$('.ob_st_rw')
+					.has('.checkbox')
+					.click(function () {
+						$(this).removeClass('active');
+					});
+				/*completed result: competition dropdown (end)*/
+			});
+
+			// DES-1715 add highlight for search keyword in league name
+			$(function () {
+				var targetSelector = '.league_name';
+
+				$(targetSelector).each(function () {
+					var $el = $(this);
+
+					if (!$el.data('original')) {
+						$el.data('original', $.trim($el.text()));
+					}
+				});
+
+				function escapeRegExp(str) {
+					return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+				}
+
+				function highlight(text, keyword) {
+					if (!keyword) return text;
+
+					var safeKeyword = escapeRegExp(keyword);
+					var regex = new RegExp('(' + safeKeyword + ')', 'gi');
+
+					return text.replace(regex, '<span class="found">$1</span>');
+				}
+
+				$(document).on('input', '.league-search', function () {
+					var keyword = $.trim($(this).val()).toLowerCase();
+
+					$(targetSelector).each(function () {
+						var $el = $(this);
+						var original = $el.data('original');
+
+						// reset
+						$el.html(original);
+
+						if (!keyword) return;
+
+						if (original.toLowerCase().indexOf(keyword) > -1) {
+							$el.html(highlight(original, keyword));
+						}
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

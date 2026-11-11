@@ -1,0 +1,1394 @@
+@use "sass:string";
+@use "sass:list";
+@use "../../assets/themes/colours/brand"as brand;
+@use "../../assets/themes/colours/config"as config;
+@use "../../assets/public/layout/css/base"as base;
+@use "../mixin"as mix;
+// promo (moved)
+// promo (moved): start
+// promo (moved): end
+// promo (removed)
+$Color_promo: #8827ef;
+$cb_web_width: 480px;
+
+@keyframes prmTimerAnimation {
+    100% {
+        clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+    }
+
+    75% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+    }
+
+    50% {
+        clip-path: polygon(50% 50%,
+                0 0,
+                100% 0,
+                100% 100%,
+                100% 100%,
+                100% 100%);
+    }
+
+    25% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+    }
+
+    0% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+    }
+}
+
+.prmRcd_arrow {
+    @include mix.layout {
+        @include mix.mobile {
+            // margin-left: 4px * 1.5;
+            margin-left: 6px;
+            // font-size: base.$n_font1;
+            font-size: 8px;
+        }
+    }
+}
+
+.prmRcd_item {
+    @include mix.layout {
+        @include mix.mobile {
+            position: relative;
+            // padding: 8px 8px * 3;
+            padding: 8 24px;
+            text-align: center;
+        }
+    }
+}
+
+.prmRcd {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            // font-size: base.$n_font4;
+            font-size: 11px;
+        }
+    }
+
+    &.n_record {
+        .n_header.n_header_sports & {
+            @include mix.layout {
+                @include mix.mobile {
+                    max-width: 25%;
+                    // font-size: base.$n_font4;
+                    font-size: 11px;
+                    word-break: break-word;
+
+                    @include mix.languageName(chs) {
+                        @media screen and (max-width: 407px) {
+                            max-width: 68px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.prmRcd_drpd {
+    @include mix.layout {
+        @include mix.mobile {
+            position: absolute;
+            white-space: nowrap;
+            right: -(4px);
+            top: 29px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            color: brand.t(Color_n_header);
+            background: brand.t(BG_n_header);
+        }
+    }
+}
+
+.promo_left {
+    @include mix.layout {
+        @include mix.mobile {
+            z-index: 5;
+            padding: 6px 7px;
+            // left: 8px * 0.4;
+            left: 3.2px;
+            @include base.flexbox();
+            @include base.alignItems(center);
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            background: brand.t(Red);
+            color: brand.t(White);
+        }
+    }
+}
+
+.promo_right_btm {
+    @include mix.layout {
+        @include mix.mobile {
+            // right: 8px * 0.8;
+            right: 6.4px;
+            width: 93px;
+            height: 136px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            background: #6822b5;
+        }
+    }
+
+    .latest & {
+        @include mix.layout {
+            @include mix.mobile {
+                height: 143px;
+            }
+        }
+    }
+}
+
+.promo_right_top {
+    @include mix.layout {
+        @include mix.mobile {
+            // right: 8px * 0.8;
+            right: 6.4px;
+            width: 40px;
+            z-index: 5;
+            overflow: hidden;
+        }
+    }
+
+    .latest & {
+        @include mix.layout {
+            @include mix.mobile {
+                width: 39px;
+            }
+        }
+    }
+}
+
+.promo_right_inner {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.transform(skew(-10deg, 0deg));
+            @include base.borderRadius(4px);
+            width: 32px;
+            height: 136px;
+            // margin-left: 8px * 0.8;
+            margin-left: 6.4px;
+            transform-origin: bottom left;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include base.shadows(-4px 0 4px 0 rgba(0, 0, 0, 0.2));
+            background: #7921d6;
+        }
+    }
+
+    .latest & {
+        @include mix.layout {
+            @include mix.mobile {
+                height: 143px;
+            }
+        }
+    }
+}
+
+.promo_right_btm,
+.promo_right_top,
+.promo_left {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.borderRadius(4px);
+            position: absolute;
+            // top: -(8px) * 0.4;
+            top: -3.2px;
+        }
+    }
+}
+
+.promo_right_btm,
+.promo_right_top {
+    @include mix.layout {
+        @include mix.mobile {
+            display: none;
+        }
+    }
+}
+
+.promo_box {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.borderRadius(4px);
+            height: 133px;
+            position: relative;
+            // margin: 8px * 1.2 8px * 0.8;
+            margin: 9.6px 6.4px;
+            z-index: 2;
+        }
+    }
+
+    // @include mix.theme {
+    //     @include mix.mobile {
+    //         background: #e9eaea;
+    //         background: transparent;
+    //     }
+    // }
+    .latest & {
+        @include mix.layout {
+            @include mix.mobile {
+                height: 136px;
+            }
+        }
+    }
+}
+
+.promo_corner {
+    @include mix.layout {
+        @include mix.mobile {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            // margin: 8px * 2.4;
+            margin: 19.2px;
+            z-index: 2;
+        }
+    }
+
+    &:before,
+    &:after {
+        @include mix.layout {
+            @include mix.mobile {
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                bottom: 0;
+                border-color: $Color_promo;
+                border-style: solid;
+                content: "";
+            }
+        }
+    }
+
+    &:before {
+        @include mix.layout {
+            @include mix.mobile {
+                right: 0;
+                border-width: 0 1px 1px 0;
+            }
+        }
+    }
+
+    &:after {
+        @include mix.layout {
+            @include mix.mobile {
+                left: 0;
+                border-width: 0 0 1px 1px;
+            }
+        }
+    }
+}
+
+$promo_bg1: #6822b5,
+#538ac3,
+#0d454e,
+#ab5c88,
+#d1b04e,
+#5a150c;
+$promo_bg2: #7921d6,
+#5484c0,
+#2f6a77,
+#a55e89,
+#d9b253,
+#913422;
+
+.promo_banner {
+    @include mix.layout {
+        @include mix.mobile {
+            position: relative;
+            cursor: pointer;
+        }
+    }
+
+    &.latest {
+        @include mix.layout {
+            @include mix.mobile {
+                margin-bottom: 20px;
+            }
+        }
+
+        @for $i from 1 through list.length($promo_bg1) {
+            &:nth-child(#{list.length($promo_bg1)}n + #{$i} of .promo_banner) {
+                .promo_right_btm {
+                    @include mix.theme {
+                        @include mix.mobile {
+                            background: list.nth($promo_bg1, $i);
+                        }
+                    }
+                }
+            }
+        }
+
+        @for $i from 1 through list.length($promo_bg2) {
+            &:nth-child(#{list.length($promo_bg2)}n + #{$i} of .promo_banner) {
+                .promo_right_inner {
+                    @include mix.theme {
+                        @include mix.mobile {
+                            background: list.nth($promo_bg2, $i);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.promo_banner_lg {
+    @include mix.layout {
+        @include mix.mobile {
+            padding-top: 0;
+            z-index: 4;
+            position: relative;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                background: brand.t(BGGray);
+            }
+
+            @include mix.darkTheme {
+                @include mix.notThemeName(default1) {
+                    background: brand.t(Black);
+                }
+
+                @include mix.themeName(default1) {
+                    background: brand.t(BGDarkBlue);
+                }
+            }
+        }
+    }
+}
+
+.promo_float {
+    .promo_banner & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(center);
+                @include base.borderRadius(4px);
+                position: absolute;
+                top: 0;
+                right: 3%;
+                background: none;
+                width: calc(100% - 8px * 1.6);
+                height: 100%;
+                top: 0;
+                // left: 8px * 0.8;
+                left: 6.4px;
+                overflow: hidden;
+                z-index: 4;
+            }
+        }
+    }
+
+    .promo_banner_lg & {
+        @include mix.layout {
+            @include mix.mobile {
+                position: absolute;
+                width: 230px;
+                height: 145px;
+                left: 0;
+                right: 0;
+                top: 50px;
+                margin: auto;
+
+                @media screen and (min-width: 500px) {
+                    @include base.transform(scale(1.2));
+                }
+            }
+        }
+    }
+
+    img {
+        .promo_banner & {
+            @include mix.layout {
+                @include mix.mobile {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.promo_text {
+    @include mix.layout {
+        @include mix.mobile {
+            position: absolute;
+            z-index: 5;
+        }
+    }
+
+    .promo_banner & {
+        @include mix.layout {
+            @include mix.mobile {
+                width: calc(100% - 230px);
+                top: 50%;
+                left: 25px;
+                @include base.transform(translateY(-46%));
+            }
+        }
+    }
+
+    .promo_banner_lg & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.flexbox();
+                @include base.justifyContent(center);
+                @include base.alignItems(center);
+                @include base.flexDirection(column);
+                width: 100%;
+                height: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.prmBanner {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.justifyContent(center);
+            @include base.alignItems(center);
+            text-align: center;
+            overflow: hidden;
+            height: base.$Height_promo_banner;
+            border-radius: 0;
+        }
+    }
+
+    img {
+        @include mix.layout {
+            @include mix.mobile {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.prmText {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.justifyContent(center);
+            @include base.alignItems(center);
+            @include base.flexDirection(column);
+            width: 100%;
+            text-align: center;
+            margin: 8px 0;
+        }
+    }
+}
+
+.prmHl {
+    @include mix.layout {
+        @include mix.mobile {
+            padding-bottom: 8px;
+            font-size: 14px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(Black);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(White);
+            }
+        }
+    }
+}
+
+.prmSplit {
+    @include mix.layout {
+        @include mix.mobile {
+            width: 60%;
+            border: 0.5px solid;
+            border-image-slice: 1;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                border-image-source: linear-gradient(to right, rgba(163, 151, 132, 0), brand.t(Main_Active_Color), rgba(163, 151, 132, 0));
+            }
+
+            @include mix.darkTheme {
+                border-image-source: linear-gradient(to right, rgba(163, 151, 132, 0), rgba(163, 151, 132, 1), rgba(163, 151, 132, 0));
+            }
+        }
+    }
+}
+
+.prmTagline {
+    @include mix.layout {
+        @include mix.mobile {
+            // font-size: base.$n_font7;
+            font-size: 14px;
+            // line-height: base.$n_font5;
+            line-height: 12px;
+            margin: 8px 0;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(DarkYellow);
+            }
+
+            @include mix.darkTheme {
+                color: #f4daa9;
+            }
+        }
+    }
+}
+
+.prmDtlWrap {
+    @include mix.layout {
+        @include mix.mobile {
+            margin: 16px;
+        }
+    }
+}
+
+.prmDtlItm {
+    @include mix.layout {
+        @include mix.mobile {
+            /*margin: 8px 0;*/
+            @include base.flexbox();
+        }
+    }
+
+    &:not(:first-child) {
+        @include mix.layout {
+            @include mix.mobile {
+                padding-top: 8px;
+            }
+        }
+    }
+
+    label {
+        @include mix.layout {
+            @include mix.mobile {
+                white-space: nowrap;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+}
+
+.prmDtl {
+    @include mix.layout {
+        @include mix.mobile {
+            padding-left: 4px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            color: brand.t(ActiveLight);
+        }
+    }
+}
+
+.prmNtAv {
+    @include mix.layout {
+        @include mix.mobile {
+            text-align: center;
+            margin: 0 auto;
+            padding: 8px 0;
+            width: 90%;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+
+            @include mix.brightTheme {
+                color: brand.t(Black);
+                border-top-color: brand.t(DividerGray);
+                border-bottom-color: brand.t(DividerGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(White);
+
+                @include mix.notThemeName(default1) {
+                    border-top-color: brand.t(Gray02);
+                    border-bottom-color: brand.t(Gray02);
+                }
+
+                @include mix.themeName(default1) {
+                    border-top-color: brand.t(Stroke);
+                    border-bottom-color: brand.t(Stroke);
+                }
+            }
+        }
+    }
+}
+
+.prmTitle {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.borderRadius(3px);
+            text-align: center;
+            margin: 8px auto;
+            padding: 8px 16px;
+            min-width: 50%;
+            max-width: fit-content;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                background: brand.t(LightGray);
+                color: brand.t(DarkBlack);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(White);
+
+                @include mix.notThemeName(default1) {
+                    background: brand.t(Gray);
+                }
+
+                @include mix.themeName(default1) {
+                    background: brand.t(MediumBlue);
+                }
+            }
+        }
+    }
+}
+
+.prmTime {
+    @include mix.layout {
+        @include mix.mobile {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            // font-size: fl.$font20;
+            font-size: 20px;
+            font-weight: 700;
+            top: 14px;
+        }
+    }
+}
+
+.prmTimeWrp.min.done .prmTimeAn::before,
+.prmTimeWrp.sec.done .prmTimeAn::before {
+    @include mix.layout {
+        @include mix.mobile {
+            animation-iteration-count: 1;
+            animation-duration: 1ms;
+            animation-fill-mode: forwards;
+        }
+    }
+}
+
+.prmTimeAn {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.transform(rotate(45deg));
+            @include base.borderRadius(50%);
+            position: relative;
+            box-sizing: border-box;
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                border: 4px solid brand.t(MediumGray);
+            }
+
+            @include mix.darkTheme {
+                @include mix.notThemeName(default1) {
+                    border: 4px solid brand.t(Gray02);
+                }
+
+                @include mix.themeName(default1) {
+                    border: 4px solid brand.t(Stroke);
+                }
+            }
+        }
+    }
+
+    &::before {
+        @include mix.layout {
+            @include mix.mobile {
+                content: "";
+                position: absolute;
+                box-sizing: border-box;
+                // inset: -2px;
+                @include base.borderRadius(50%);
+                animation-iteration-count: infinite;
+                animation-name: prmTimerAnimation;
+                animation-timing-function: linear;
+                inset: -4px;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.notThemeName(default1) {
+                    border: 4px solid brand.t(ActiveLight);
+                }
+
+                @include mix.themeName(default1) {
+                    border: 4px solid brand.t(Orange);
+                }
+            }
+        }
+
+        .min & {
+            @include mix.layout {
+                @include mix.mobile {
+                    animation-duration: 3600s;
+                    animation-delay: calc((var(--timeMin)) - (var(--timeSec)) - 3600s);
+                }
+            }
+        }
+
+        .sec & {
+            @include mix.layout {
+                @include mix.mobile {
+                    animation-duration: 60s;
+                    animation-delay: calc((var(--timeSec)) - (60s));
+                }
+            }
+        }
+    }
+}
+
+.prmDlyMs {
+    @include mix.layout {
+        @include mix.mobile {
+            text-align: center;
+            margin-top: 16px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(Black);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(White);
+            }
+        }
+    }
+}
+
+.prmTimeCtn {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.justifyContent(center);
+            // gap: 8px;
+            padding-top: 8px;
+            gap: 30px;
+        }
+    }
+}
+
+.prmTimeWrp {
+    @include mix.layout {
+        @include mix.mobile {
+            position: relative;
+            width: 50px;
+        }
+    }
+}
+
+.prmTimeT {
+    @include mix.layout {
+        @include mix.mobile {
+            width: 100%;
+            text-align: center;
+            padding-top: 8px;
+        }
+    }
+}
+
+.prmCtntWrp {
+    @include mix.layout {
+        @include mix.mobile {
+            margin: 0;
+            padding: 10px;
+        }
+    }
+}
+
+.prmTitle {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.borderRadius(4px 4px 0 0);
+            margin: 0;
+            min-width: unset;
+            width: 100%;
+            text-align: left;
+            font-weight: 700;
+            max-width: unset;
+            padding: 8px;
+        }
+    }
+}
+
+.prmTable {
+    @include mix.layout {
+        @include mix.mobile {
+            margin: 0;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            border: none;
+
+            @include mix.brightTheme {
+                background: brand.t(White);
+                color: brand.t(Black);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(White);
+
+                @include mix.notThemeName(default1) {
+                    background: brand.t(LightBlack);
+                }
+
+                @include mix.themeName(default1) {
+                    background: brand.t(DarkBlue);
+                }
+            }
+        }
+    }
+}
+
+.prmRule {
+    @include mix.layout {
+        @include mix.mobile {
+            margin: 0;
+            padding: 10px 8px;
+            position: relative;
+        }
+    }
+}
+
+.prmRow {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.justifyContent(space-around);
+            @include base.alignItems(stretch);
+            position: relative;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            border-bottom: 2px solid;
+
+            @include mix.brightTheme {
+                border-bottom-color: brand.t(BGGray);
+            }
+
+            @include mix.darkTheme {
+                @include mix.notThemeName(default1) {
+                    border-bottom-color: brand.t(Black);
+                }
+
+                @include mix.themeName(default1) {
+                    border-bottom-color: brand.t(Stroke);
+                }
+            }
+        }
+    }
+
+    &:first-child {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.brightTheme {
+                    background: brand.t(DividerGray);
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+
+    // &:not(:last-child) {
+    //     @include mix.theme {
+    //         @include mix.mobile {
+    //             border-bottom: 1px solid brand.t(Color_main_text_lvl_secondary);
+    //         }
+    //     }
+    // }
+}
+
+.prmCol {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.justifyContent(center);
+            @include base.alignItems(center);
+            flex-direction: row;
+            word-break: break-word;
+            width: 100%;
+            padding: 8px;
+        }
+    }
+
+    &:nth-child(2) {
+        .prmRow:not(:first-child) & {
+            @include mix.layout {
+                @include mix.mobile {
+                    font-weight: 700;
+                }
+            }
+
+            @include mix.theme {
+                @include mix.mobile {
+                    @include mix.brightTheme {
+                        color: brand.t(DarkYellow);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(Yellow);
+                    }
+                }
+            }
+        }
+
+        .prmRow.prmPendng & {
+            @include mix.theme {
+                @include mix.mobile {
+                    color: brand.t(Green);
+                }
+            }
+        }
+
+        .prmOut & {
+            @include mix.layout {
+                @include mix.mobile {
+                    z-index: 1;
+                }
+            }
+        }
+    }
+}
+
+.prmBtn {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.borderRadius(5px);
+            width: 80%;
+            text-align: center;
+            padding: 4px 0;
+            position: relative;
+            overflow: hidden;
+        }
+    }
+
+    .prmOngoing & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                    border: 1px solid brand.t(ActiveLight);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+
+                    @include mix.notThemeName(default1) {
+                        border: 1px solid brand.t(ActiveLight);
+                    }
+
+                    @include mix.themeName(default1) {
+                        border: 1px solid brand.t(PurpleMain);
+                    }
+                }
+            }
+        }
+    }
+
+    .prmReceive & {
+        @include mix.theme {
+            @include mix.mobile {
+                background: brand.t(ActiveLight);
+
+                @include mix.notThemeName(default) {
+                    color: brand.t(White);
+                }
+
+                @include mix.themeName(default) {
+                    color: brand.t(Black);
+                }
+            }
+        }
+    }
+
+    .prmDone & {
+        @include mix.theme {
+            @include mix.mobile {
+                background: brand.t(DarkBlack);
+                color: brand.t(White);
+            }
+        }
+    }
+
+    .prmOut & {
+        @include mix.theme {
+            @include mix.mobile {
+                border: 1px solid;
+
+                @include mix.brightTheme {
+                    border-color: brand.t(DividerGray);
+                }
+
+                @include mix.darkTheme {
+                    @include mix.notThemeName(default1) {
+                        border-color: brand.t(LightGray);
+                    }
+
+                    @include mix.themeName(default1) {
+                        border-color: brand.t(LightBlue);
+                    }
+                }
+            }
+        }
+    }
+
+    // prmPending not in used already
+    // .prmPending & {
+    //     @include mix.theme {
+    //         @include mix.mobile {
+    //             @include mix.themeNames(default, dark1, dark2) {
+    //                 color: brand.t(Color_main_text_title);
+    //                 border: 1px solid brand.t(Color_main_text_title);
+    //             }
+    //             @include mix.notThemeNames(default, dark1, dark2) {
+    //                 color: brand.t(Color_main_text_body);
+    //                 border: 1px solid brand.t(Color_main_text_body);
+    //             }
+    //         }
+    //     }
+    // }
+    span {
+        .prmOngoing & {
+            @include mix.layout {
+                @include mix.mobile {
+                    z-index: 1;
+                    position: relative;
+                }
+            }
+        }
+    }
+}
+
+.prmDone {
+    @include mix.theme {
+        @include mix.mobile {
+            color: brand.t(Color_main_text_body);
+        }
+    }
+}
+
+.prmPrgs {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.transition(width 0.3s ease-in-out);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            background: brand.t(Main_Active_Color);
+        }
+    }
+
+    .prmOngoing & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.notThemeName(default1) {
+                    background: brand.t(ActiveLight);
+                }
+
+                @include mix.themeName(default1) {
+                    background: brand.t(PurpleMain);
+                }
+            }
+        }
+    }
+}
+
+.prmGryOut {
+    @include mix.layout {
+        @include mix.mobile {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                @include base.bgOpacity(brand.t(Black), 0.6);
+            }
+
+            @include mix.darkTheme {
+                @include mix.notThemeName(default1) {
+                    @include base.bgOpacity(brand.t(DarkBlack), 0.6);
+                }
+
+                @include mix.themeName(default1) {
+                    @include base.bgOpacity(brand.t(BlackOverlay), 0.6);
+                }
+            }
+        }
+    }
+}
+
+.promo_none {
+    @include mix.layout {
+        @include mix.mobile {
+            padding: 10px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(DarkGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(LightGray);
+            }
+        }
+    }
+}
+
+.bal_promo {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(flex-end);
+            }
+        }
+    }
+}
+
+.promo_arrow {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                margin-left: 16px;
+            }
+        }
+    }
+
+    .n_header_main.prm_header_msk & {
+        @include mix.layout {
+            @include mix.mobile {
+                z-index: 1;
+            }
+        }
+    }
+}
+
+.promo_drpd {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                top: 40px;
+                display: none;
+                position: fixed;
+                white-space: nowrap;
+                right: -(4px);
+                padding: 8px;
+                z-index: 1000003;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+                    color: brand.t(Black);
+                    background: brand.t(MediumGray);
+                }
+
+                @include mix.darkTheme {
+                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                    color: brand.t(White);
+
+                    @include mix.themeName(default1) {
+                        background: brand.t(LightBlue);
+                    }
+
+                    @include mix.notThemeName(default1) {
+                        background: brand.t(Gray02);
+                    }
+                }
+            }
+        }
+    }
+
+    .n_header_main.prm_header_msk & {
+        @include mix.layout {
+            @include mix.mobile {
+                display: block;
+            }
+        }
+    }
+
+    .n_header_main & {
+        @include mix.layout {
+            @include mix.mobile {
+                display: none;
+            }
+        }
+    }
+
+    .cb_web & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mCyberbattle {
+                    right: calc(50vw - ($cb_web_width*0.5));
+                }
+            }
+        }
+    }
+}
+
+.promo_drpd_tt {
+    @include mix.layout {
+        @include mix.mobile {
+            position: absolute;
+            padding: 4px;
+            right: 10%;
+            width: 117%;
+            top: 100%;
+            white-space: break-spaces;
+            text-align: center;
+
+            @include mix.mAsiaCyberbattle {
+                z-index: 1000003;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                background: brand.t(Color_header_main);
+                color: brand.t(BG_header_main);
+            }
+        }
+    }
+}
+
+.promo_drpd_itm {
+    @include mix.layout {
+        @include mix.mobile {
+            // padding-top: 4px * 1.5;
+            padding-top: 6px;
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                // padding-right: 4px * 0.5;
+                padding-right: 2px;
+            }
+        }
+    }
+}
+
+.n_record {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                flex: 1;
+                font-size: 14px;
+                word-break: keep-all;
+            }
+        }
+    }
+
+    .n_header_sports & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    position: absolute;
+                    right: 4px;
+                    max-width: 33.33%;
+                    text-align: right;
+                }
+            }
+        }
+    }
+}

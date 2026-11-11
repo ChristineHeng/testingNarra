@@ -1,0 +1,21 @@
+﻿// font (moved): start
+// @font-face {
+//     font-family: "Nimbus Sans";
+//     src: url(../../layout/fonts/NimbusSanL-Reg.eot?);
+//     src: url(../../layout/fonts/NimbusSanL-Reg.eot?#iefix) format("embedded-opentype"),
+//         url(../../layout/fonts/NimbusSanL-Reg.woff2) format("woff2"),
+//         url(../../layout/fonts/NimbusSanL-Reg.woff) format("woff"),
+//         url(../../layout/fonts/NimbusSanL-Reg.ttf) format("truetype"),
+//         url(../../layout/fonts/NimbusSanL-Reg.svg#padauk-regular) format("svg");
+//     font-weight: 400;
+//     font-style: normal
+// }
+// font (moved): end
+// body (moved): start
+// body {
+//     font-family: "Nimbus Sans", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", STXihei, "华文细黑", sans-serif;
+// }
+// body (moved): end
+// .title::first-letter { // ttl (moved)
+// 	text-transform: uppercase;
+// }

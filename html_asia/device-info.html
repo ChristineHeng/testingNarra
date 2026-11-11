@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Narra - html template</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover,user-scalable=no" />
+    <!-- <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#000"> -->
+    <!--Base Styles-->
+    <link rel="stylesheet" type="text/css" href="../assets/public/layout/css/basestyle.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="../merchants/merchant1/css/style_asia.css">-->
+    <link rel="stylesheet" type="text/css" href="../assets/public/languages/eng/layout_asia.min.css" id="detect_language">
+    <link rel="stylesheet" type="text/css" href="#" id="design_view">
+
+    <script src="../assets/public/lib/jquery.js"></script>
+    <script src="../assets/public/layout/js/scripts_main.js"></script>
+    <script src="../assets/public/layout/js/scripts_asia.js"></script>
+
+</head>
+
+<body id="root">
+    <div class="n_container">
+        <div class="n_header n_header_sports">
+            <div class="n_back"><a class="n_back_link mock_cb_n_back_link"><i class="icon-fi-arrow-left"></i> 返回</a></div>
+            <div class="title"><i class="icon-fi-n-device-info"></i> 设备信息</div>
+        </div>
+        <div id="sample_mock_deviceInfo">
+                <!--shared file from ../html_public/_device-info.html-->
+        </div>        
+       
+    </div>
+
+    <script>
+        $("#sample_mock_deviceInfo").load("../html_public/_device-info2.html");
+        cyberbattleBackButton();
+    </script>
+</body>
+</html>

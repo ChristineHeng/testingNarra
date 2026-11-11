@@ -1,0 +1,1433 @@
+﻿/* Scss Document */
+@use "sass:color";
+@use "sass:math";
+@use "sass:meta";
+@use "../../../themes/colours/config"as config;
+$fontFolder: "../../fonts";
+// layout shared
+// $font_std: Helvetica,
+// Arial,
+// "Microsoft Yahei",
+// "微软雅黑",
+// STXihei,
+// "华文细黑",
+// sans-serif;
+$font_number: Helvetica,
+Arial,
+sans-serif;
+$sharedImgFolder: "../../layout/images/";
+$imgFolderFromComponent: "../../../public/layout/images/";
+$img_version: "?v="+(math.random(100000));
+$padding_4: 4px;
+$padding_8: 8px;
+$padding_10: 10px;
+$padding_16: 16px;
+$std_padding_big: 16px;
+$std_padding: 8px;
+$std_padding_small: 4px;
+$std_padding_xs: 2px;
+$width_sev_1: 100%;
+$width_sev_2: 49%;
+$width_sev_3: 32%;
+$n_font1: 8px;
+$n_font2: $n_font1+1; //9px
+$n_font2_andhalf: $n_font2+0.5; //9.5px
+$n_font3: $n_font2+1; //10px
+$n_font3_andhalf: $n_font3+0.5; //10.5px
+$n_font4: $n_font3+1; //11px
+$n_font4_andhalf: $n_font4+0.5; //11.5px
+$n_font5: $n_font4+1; //12px
+$n_font5_andhalf: $n_font5+0.5; //12.5px
+$n_font6: $n_font5+1; //13px
+$n_font6_andhalf: $n_font6+0.5; //13.5px
+$n_font7: $n_font6+1; //14px
+$n_font7_andhalf: $n_font7+0.5; //14.5px
+$n_font8: $n_font7+1; //15px
+$n_font8_andhalf: $n_font8+0.5; //15.5px
+$n_font9: $n_font8+1; //16px
+$n_font9_andhalf: $n_font9+0.5; //16.5px
+$n_font10: $n_font9+1; //17px
+$n_font10_andhalf: $n_font10+0.5; //17.5px
+$n_font11: $n_font10+1; //18px
+$n_font11_andhalf: $n_font11+0.5; //18.5px
+$n_font12: $n_font11+1; //19px
+$n_font12_andhalf: $n_font12+0.5; //19.5px
+$n_font13: $n_font12+1; //20px
+$n_font13_andhalf: $n_font13+0.5; //20.5px
+$icon_ban: 45px;
+$footerHeight: 55px;
+$teamlogo_width: $n_font8; //15px
+//found in Asia only
+$min_header_height_asia: 40px; //found in Asia only
+$backToTopSize_new: 38px;
+$search_btn_size: $n_font7;
+$cls_head_height: 44px;
+$btH_asia: 33.5px;
+$btH_euro: 34px;
+$arrow_wdith: 6px;
+$odds_box_asiaPTB: 3px;
+$odds_box_asiaPLR: 7.15px;
+// $fbets_rowP: 8px * 0.8;
+$currentP: 8px * 1.6;
+$odds_btnM: 10px;
+$chan_btnF: $n_font5;
+$cls_main_menuH: 64px;
+$event_contentPLF: 8px * 1.5;
+$sports_pro_logoH: 15px; //sharing by Asia & Cyber & Euro
+$settlementMsgP: $n_font11 * 0.5;
+$deliveriesRowH: 36px;
+$Padding_popular_itm: 8px;
+$Padding_n_sports_menu: 4px;
+$PaddingLR_n_sports_menu: 8px;
+//Asia & Cyber
+$min_header_height_asia: 40px;
+$min_footer_height_asia: 50px;
+$n_event_listing_headerH: 27px;
+$el_cs_title_wrpH: 22px;
+$bt_subHeader_oungH: 30px;
+$n_num_large: 70px;
+$betslip_selectionF: $n_font6_andhalf;
+$mr_ltn_boxH: 60px;
+$mr_ltn_boxM: 4px * 1.5;
+// $Height_mr_tracks_slider: 34px;
+$Height_tracks_tab: 24px;
+$Margin_fl_comp_h_r: 6px;
+//Euro
+$euroview_header_height: 40px;
+$euroview_header_height_tall: 44px;
+$betslip_headerH: 33px;
+$betslip_id_wrapWH: 16px * 2;
+$footer_main_onH: 70px;
+$Height_promo_banner: 132px;
+$visulizationfooterSpace: 32px;
+$Width_cover_btn: 34px;
+
+@mixin std_Wrap() {
+    padding: 8px;
+    margin: auto;
+}
+
+@mixin std_WrapSide() {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+@mixin loadingAmation() {
+    @-webkit-keyframes ldAmination {
+        0% {
+            transform: translate3d(-30%, 0, 0);
+        }
+
+        100% {
+            transform: translate3d(30%, 0, 0);
+        }
+    }
+
+    @keyframes ldAmination {
+        0% {
+            transform: translate3d(-30%, 0, 0);
+        }
+
+        100% {
+            transform: translate3d(30%, 0, 0);
+        }
+    }
+}
+
+/*======z-index : STARTS==========*/
+@mixin ZIndex() {
+
+    //olympics not in used already
+    // .m_tab.olympics {
+    //     .icon,
+    //     .new_tag,
+    //     .olympics_tx,
+    //     img.olympics {
+    //         z-index: 1;
+    //     }
+    // }
+    // .betlist_item {
+    //     .loading_wrap {
+    //         z-index: 1;
+    //         @if config.$view==euro {
+    //             .bs_parlay_eu_for_ing & {
+    //                 z-index: 2;
+    //             }
+    //         }
+    //     }
+    // }
+    // .bet_item_wrap {
+    // &.loading_item { // ld (moved)
+    //     z-index: 1;
+    // }
+    // }
+    // .mr_ev_mask {
+    //     z-index: 1;
+    // }
+    .ob_toggle {
+        z-index: 1;
+    }
+
+    // mr_recent_wrp not in used already
+    // .mr_recent_wrp {
+    //     z-index: 1000002;
+    // }
+    // .chan_popup { // sev (moved)
+    //     z-index: 2;
+    // }
+    // .completedresult_wrap {
+    //     .aband_reason_wrap {
+    //         z-index: 2;
+    //     }
+    // }
+    // rc_arrow not in used already
+    // .rc_arrow {
+    //     z-index: 2;
+    // }
+    .indicator_pop {
+        z-index: 3;
+
+        .fl_e_indicator & {
+            z-index: 2;
+        }
+
+        //SFSSR-14995
+    }
+
+    // 1. sticky header
+    .sticky,
+    .fix_top,
+    .n_sticky {
+        z-index: 3;
+        // @if config.$view==euro {
+        //     &.fltr_grp_popup {
+        //         z-index: 9;
+        //     }
+        // }
+    }
+
+    // for completed result page & my bet
+    // .filter_group.n_sticky,
+    // .result_searchwrap.n_sticky,
+    // .disclaimer.n_sticky {
+    //     z-index: 4;
+    // }
+    // .slider_wrap_flexi .slider, // sld (moved)
+    // .tab_nav.slider_wrap .tab_nav_item, // tn (moved)
+    // .n_event_listing_header,
+    .ob_listing_hdr {
+        z-index: 5;
+    }
+
+    .ob_new .ob_listing_hdr {
+        z-index: 4;
+    }
+
+    //result_toggle not in used already
+    // .result_toggle.n_sticky {
+    //     z-index: 4;
+    // }
+    /*class "not_live_yet_wrap" remove soon for [SFCRQ-2719][SFCRQ-2720]*/
+    // not_live_yet_wrap not in used already
+    // .not_live_yet_wrap {
+    //     z-index: 5;
+    // }
+    /*class "chan_error_wrp" remove soon for [SFCRQ-2719][SFCRQ-2720]*/
+    // .chan_error_wrp { // sev (moved)
+    //     z-index: 6;
+    // }
+    // .n_header, // nhdr (moved)
+    .n_header_sports,
+    .bg_mask {
+        z-index: 8; //horse racing tutorial
+    }
+
+    .virtual_sports_header,
+    // .vr_timer,
+    .highlighted {
+        z-index: 9; //horse racing tutorial
+    }
+
+    // @if config.$view==euro {
+    //     .vr_timer {
+    //         z-index: 5 !important;
+    //     }
+    // }
+    .tut_ply {
+        z-index: 9;
+
+        // &.slider { // sld (moved)
+        //     z-index: 9;
+        // }
+        &.w_sld_new {
+            z-index: 9;
+        }
+    }
+
+    // .carousel {
+    //     z-index: 9;
+    // }
+    // .eventListingRefresh {
+    //     z-index: 98;
+    // }
+    //wh note: test ios 15
+    .footer_main,
+    footer {
+        z-index: 1000001; //changed from 100 for SFCRQ-4051 & SFCRQ-4056 (4.4)
+
+        &.footer_euro {
+            z-index: 1000004;
+        }
+
+        //SFSSR-7623
+        .pb_wrap {
+            z-index: 1000002; //changed from 101 for SFCRQ-4051 & SFCRQ-4056 (4.4)
+            //changed from 100002 for SFUAT-7182
+        }
+
+        // for combo bet placement
+        .n_footer {
+            z-index: 1000003; //changed from 102 for SFCRQ-4051 & SFCRQ-4056 (4.4)
+            //changed from 100003 for SFUAT-7182
+        }
+
+        .n_footer_combo.clone {
+            z-index: 1000000; //changed from 99 for SFCRQ-4051 & SFCRQ-4056 (4.4)
+            //changed from 100000 for SFUAT-7182
+        }
+    }
+
+    // .bet_summary {
+    //     @if config.$view==euro {
+    //         z-index: 1000003;
+    //     }
+    // }
+    // 4. Popup
+    // .event_selection_bg, // sev (moved), event_selection_bg
+    // .event_selection_wrap { // sev (moved)
+    //     z-index: 1000002; //changed from 101 for SFCRQ-4051 & SFCRQ-4056 (4.4)
+    //     //changed from 100002 for SFUAT-7182
+    // }
+    // 5. Popup - Overlay on top - betlist, sev
+    .popup_overWrap.fpt,
+    .popup_index {
+        z-index: 1000000;
+        //changed from 100000 for SFUAT-7182
+    }
+
+    .pop_wrap,
+    .popup_overWrap {
+        z-index: 1000002; //changed from 100000 for SFCRQ-4051 & SFCRQ-4056 (4.4)
+
+        //changed from 100002 for SFUAT-7182
+        &.hide_eventswtch {
+            z-index: 1000006;
+        }
+    }
+
+    //YS note: not found in html on Dec 22
+    // .popup_backtop {
+    //     z-index: 999999;
+    // }
+    //6. back to top on top of popup, but lower than pop windows
+    // .btn_backtop_popup { // btn (moved)
+    //     z-index: 1000003;
+    //     //changed from 1000001 for SFUAT-7182
+    // }
+    // popup_cls_pb not in used already
+    // .popup_cls_pb {
+    //     z-index: 1000002;
+    // &.fs_footer {
+    //     z-index: 1000005;
+    // }
+    // }
+    //8. error popup - always on top of everything, except loading
+    // .popup_window { // pw (moved)
+    //     z-index: 1000005; //changed from 1000003 for SFCRQ-4051 & SFCRQ-4056 (4.4)
+    //     &.footer_bg {
+    //         @if config.$view==euro {
+    //             z-index: 1000003;
+    //         }
+    //         @else {
+    //             z-index: 99;
+    //         }
+    //         &.rec_zIndex {
+    //             z-index: 1000000;
+    //         }
+    //     }
+    //     @if config.$view==euro {
+    //         .drpWrp & {
+    //             z-index: 1000006;
+    //         }
+    //     }
+    // }
+    //DES-45 Standalone Odds Panel & Popup Bet Slip
+    .popup_side_wrp {
+        z-index: 1000003;
+    }
+
+    // .footer_main {
+    // &.fs_footer {
+    //     z-index: 1000004;
+    // }
+    // }
+    // tutorial for recommended correct score
+    .rec_zIndex {
+        z-index: 1000006; //changed from 1000004 for SFCRQ-4051 & SFCRQ-4056 (4.4)
+
+        .bg_mask {
+            z-index: 1000006; //changed from 1000004 for SFCRQ-4051 & SFCRQ-4056 (4.4)
+        }
+
+        .highlighted {
+            z-index: 1000007; //changed from 1000005 for SFCRQ-4051 & SFCRQ-4056 (4.4)
+        }
+    }
+
+    //9. menu+ search
+    .leftmenu_wrp {
+        z-index: 1000006; //changed from 1000003 for SFCRQ-4051 & SFCRQ-4056 (4.4)
+
+        @if config.$view==euro {
+            .drpWrp & {
+                z-index: 1000007;
+            }
+        }
+    }
+
+    .blockScroll {
+        z-index: 1000006;
+    }
+
+    .mask_btnBR {
+        z-index: 1000007;
+    }
+
+    //overwrite popup z-index for search in euroview
+    .er_popupOnsearch {
+        .popup_overWrap {
+            z-index: 1000007; //changed from 1000005 for SFCRQ-4051 & SFCRQ-4056 (4.4)
+        }
+
+        // .btn_backtop, // btn (moved)
+        .footer_bg {
+            z-index: 1000008; //changed from 1000006 for SFCRQ-4051 & SFCRQ-4056 (4.4)
+        }
+
+        //wh note: test ios 15
+        .footer_main,
+        footer {
+            z-index: 1000009; //changed from 1000007 for SFCRQ-4051 & SFCRQ-4056 (4.4)
+        }
+    }
+
+    // .popup_window.session_out { // pw (moved)
+    //     z-index: 1000010;
+    // }
+    //NOT FOUND in mock Sept 21, to recheck .search
+    // .popup_window.search, // pw (moved)
+    .smallpop_top.search {
+        z-index: 1000010; //changed from 1000008 for SFCRQ-4051 & SFCRQ-4056 (4.4)
+    }
+
+    //9. loading - always on top of everything
+    // .loading_wrap,
+    // .loading_wrap_outer, // ld (moved)
+    .network_error_wrap,
+    .smallpop,
+    .smallpop_top,
+    .rotate_wrap_outer {
+        z-index: 1000011; //changed from 1000009 for SFCRQ-4051 & SFCRQ-4056 (4.4)
+    }
+
+    /*======z-index : END==========*/
+}
+
+@mixin tab_nav_slider($nooftab) {
+    $width: math.div(100%, $nooftab);
+
+    @if $nooftab==2 {
+        .slider {
+            width: $width;
+        }
+
+        .tab_nav_item {
+            width: $width;
+
+            &:first-child.active~.slider {
+                left: 0;
+            }
+
+            &:nth-child(2).active~.slider {
+                left: $width;
+            }
+        }
+    }
+
+    @else if $nooftab==3 {
+        .slider {
+            width: $width;
+        }
+
+        .tab_nav_item {
+            width: $width;
+
+            &:first-child.active~.slider {
+                left: 0;
+            }
+
+            &:nth-child(2).active~.slider {
+                left: $width;
+            }
+
+            &:nth-child(3).active~.slider {
+                left: $width * 2;
+            }
+        }
+    }
+
+    @else if $nooftab==4 {
+        .slider {
+            width: $width;
+        }
+
+        .tab_nav_item {
+            width: $width;
+
+            &:first-child.active~.slider {
+                left: 0;
+            }
+
+            &:nth-child(2).active~.slider {
+                left: $width;
+            }
+
+            &:nth-child(3).active~.slider {
+                left: $width * 2;
+            }
+
+            &:nth-child(4).active~.slider {
+                left: $width * 3;
+            }
+        }
+    }
+
+    @else if $nooftab==5 {
+        .slider {
+            width: $width;
+        }
+
+        .tab_nav_item {
+            width: $width;
+
+            &:first-child.active~.slider {
+                left: 0;
+            }
+
+            &:nth-child(2).active~.slider {
+                left: $width;
+            }
+
+            &:nth-child(3).active~.slider {
+                left: $width * 2;
+            }
+
+            &:nth-child(4).active~.slider {
+                left: $width * 3;
+            }
+
+            &:nth-child(5).active~.slider {
+                left: $width * 4;
+            }
+        }
+    }
+
+    @else if $nooftab==8 {
+        .slider {
+            width: $width;
+        }
+
+        .tab_nav_item {
+            width: $width;
+
+            &:first-child.active~.slider {
+                left: 0;
+            }
+
+            &:nth-child(2).active~.slider {
+                left: $width;
+            }
+
+            &:nth-child(3).active~.slider {
+                left: $width * 2;
+            }
+
+            &:nth-child(4).active~.slider {
+                left: $width * 3;
+            }
+
+            &:nth-child(5).active~.slider {
+                left: $width * 4;
+            }
+
+            &:nth-child(6).active~.slider {
+                left: $width * 5;
+            }
+
+            &:nth-child(7).active~.slider {
+                left: $width * 6;
+            }
+
+            &:nth-child(8).active~.slider {
+                left: $width * 7;
+            }
+        }
+    }
+}
+
+@mixin preload() {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 50%;
+        z-index: 1;
+        width: 500%;
+        margin-left: -250%;
+        -webkit-animation: ldAmination 0.8s linear infinite;
+        animation: ldAmination 0.8s linear infinite;
+        content: " ";
+        pointer-events: none;
+    }
+}
+
+@mixin bt_line() {
+    .bt_line1 & {
+        @include limit1line();
+    }
+
+    .bt_line2 & {
+        @include limit2line();
+    }
+
+    .bt_line3 & {
+        @include limit3line();
+    }
+}
+
+@mixin sev_child() {
+
+    /* one item */
+    &:first-child:nth-last-child(1) {
+        width: 100%;
+    }
+
+    /* two items */
+    &:first-child:nth-last-child(2),
+    &:first-child:nth-last-child(2)~div {
+        width: calc(100% / 2);
+    }
+
+    /* three items */
+    &:first-child:nth-last-child(3),
+    &:first-child:nth-last-child(3)~div {
+        width: calc(100% / 3);
+    }
+}
+
+@mixin msgPop() {
+    font-size: $n_font7;
+    @include borderRadius(4px);
+    padding: 16px;
+}
+
+@mixin msgPopA() {
+    max-width: 60%;
+    /*@include animation(fadeIn 0.3s);*/
+    //due to SFSSR-7272
+}
+
+@mixin msgPopB() {
+    @include borderRadius(22px);
+    padding: 16px;
+}
+
+@mixin arrow_up_down() {
+    @include flexbox();
+    @include justifyContent(center);
+    position: absolute;
+    font-size: $n_font1;
+    width: $arrow_wdith;
+    text-align: right;
+}
+
+@mixin hot_tag() {
+    @include preload();
+    position: absolute;
+
+    &:after {
+        border: none;
+    }
+
+    &:before {
+        background: linear-gradient(110deg, transparent 45%, rgba(255, 255, 255, 0.3) 47%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.3) 53%, transparent 55%);
+    }
+}
+
+// base original mixin
+@mixin flexbox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+@mixin flex($value) {
+    -webkit-box-flex: $value;
+    -moz-box-flex: $value;
+    flex: $value;
+}
+
+@mixin inlineFlex() {
+    display: -webkit-inline-box;
+    display: -moz-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+
+@mixin flexDirection($direction: row) {
+    @if $direction==row-reverse {
+        -webkit-box-direction: reverse;
+        -webkit-box-orient: horizontal;
+        -moz-box-direction: reverse;
+        -moz-box-orient: horizontal;
+    }
+
+    @else if $direction==column {
+        -webkit-box-direction: normal;
+        -webkit-box-orient: vertical;
+        -moz-box-direction: normal;
+        -moz-box-orient: vertical;
+    }
+
+    @else if $direction==column-reverse {
+        -webkit-box-direction: reverse;
+        -webkit-box-orient: vertical;
+        -moz-box-direction: reverse;
+        -moz-box-orient: vertical;
+    }
+
+    @else {
+        -webkit-box-direction: normal;
+        -webkit-box-orient: horizontal;
+        -moz-box-direction: normal;
+        -moz-box-orient: horizontal;
+    }
+
+    -webkit-flex-direction: $direction;
+    -ms-flex-direction: $direction;
+    flex-direction: $direction;
+}
+
+@mixin flexWrap($value: nowrap) {
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-flex-wrap: $value;
+
+    @if $value==nowrap {
+        -ms-flex-wrap: none;
+    }
+
+    @else {
+        -ms-flex-wrap: $value;
+    }
+
+    flex-wrap: $value;
+}
+
+@mixin justifyContent($value: flex-start) {
+    @if $value==flex-start {
+        -webkit-box-pack: start;
+        -moz-box-pack: start;
+        -ms-flex-pack: start;
+    }
+
+    @else if $value==flex-end {
+        -webkit-box-pack: end;
+        -moz-box-pack: end;
+        -ms-flex-pack: end;
+    }
+
+    @else if $value==space-between {
+        -webkit-box-pack: justify;
+        -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+    }
+
+    @else if $value==space-around {
+        -ms-flex-pack: distribute;
+    }
+
+    @else {
+        -webkit-box-pack: $value;
+        -moz-box-pack: $value;
+        -ms-flex-pack: $value;
+    }
+
+    -webkit-justify-content: $value;
+    justify-content: $value;
+}
+
+@mixin alignItems($value: stretch) {
+    @if $value==flex-start {
+        -webkit-box-align: start;
+        -moz-box-align: start;
+        -ms-flex-align: start;
+    }
+
+    @else if $value==flex-end {
+        -webkit-box-align: end;
+        -moz-box-align: end;
+        -ms-flex-align: end;
+    }
+
+    @else {
+        -webkit-box-align: $value;
+        -moz-box-align: $value;
+        -ms-flex-align: $value;
+    }
+
+    -webkit-align-items: $value;
+    align-items: $value;
+}
+
+@mixin alignContent($value: stretch) {
+    -webkit-align-content: $value;
+
+    @if $value==flex-start {
+        -ms-flex-line-pack: start;
+    }
+
+    @else if $value==flex-end {
+        -ms-flex-line-pack: end;
+    }
+
+    @else {
+        -ms-flex-line-pack: $value;
+    }
+
+    align-content: $value;
+}
+
+@mixin calHeight($percentage, $px) {
+    height: -moz-calc(#{$percentage} - #{$px});
+    height: -webkit-calc(#{$percentage} - #{$px});
+    height: -o-calc(#{$percentage} - #{$px});
+    height: calc(#{$percentage} - #{$px});
+}
+
+@mixin calWidth($percentage, $px) {
+    width: -moz-calc(#{$percentage} - #{$px});
+    width: -webkit-calc(#{$percentage} - #{$px});
+    width: -o-calc(#{$percentage} - #{$px});
+    width: calc(#{$percentage} - #{$px});
+}
+
+@mixin transform($transforms) {
+    -webkit-transform: $transforms;
+    -moz-transform: $transforms;
+    -ms-transform: $transforms;
+    -o-transform: $transforms;
+    transform: $transforms;
+}
+
+@mixin translateZ($z) {
+    @include transform(translateZ($z));
+}
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin transform($transforms) {
+    -webkit-transform: $transforms;
+    -moz-transform: $transforms;
+    -ms-transform: $transforms;
+    -o-transform: $transforms;
+    transform: $transforms;
+}
+
+@mixin scale($ratio) {
+    -webkit-transform: scale($ratio);
+    -ms-transform: scale($ratio);
+    -o-transform: scale($ratio);
+    transform: scale($ratio);
+}
+
+@mixin transformOrigin($origin) {
+    -webkit-transform-origin: $origin;
+    -moz-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+    transform-origin: $origin;
+}
+
+@mixin rotate($degrees) {
+    -webkit-transform: rotate($degrees);
+    -ms-transform: rotate($degrees);
+    -o-transform: rotate($degrees);
+    transform: rotate($degrees);
+}
+
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+@mixin backfaceVisibility($visibility) {
+    -webkit-backface-visibility: $visibility;
+    -moz-backface-visibility: $visibility;
+    backface-visibility: $visibility;
+}
+
+@mixin animation($animation) {
+    -webkit-animation: $animation;
+    -o-animation: $animation;
+    animation: $animation;
+}
+
+@mixin borderRadius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+    background-clip: padding-box;
+}
+
+@mixin opacity($opacity) {
+    $IEValue: $opacity * 100;
+    opacity: $opacity;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+ $IEValue + ")";
+    filter: alpha(opacity=$IEValue);
+}
+
+@mixin shadows($shadow) {
+    box-shadow: $shadow;
+}
+
+@mixin blur($value) {
+    -webkit-filter: blur($value);
+    -moz-filter: blur($value);
+    -o-filter: blur($value);
+    -ms-filter: blur($value);
+    filter: blur($value);
+}
+
+@mixin boxSizing($boxmodel) {
+    -webkit-box-sizing: $boxmodel;
+    -moz-box-sizing: $boxmodel;
+    box-sizing: $boxmodel;
+}
+
+@mixin limit1line() {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
+
+@mixin limit2line() {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
+
+@mixin limit3line() {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
+
+@mixin hide_scrollbar() {
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scrollbar-height: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+        width: 0px;
+        background: transparent;
+    }
+}
+
+/* Sliding Groove */
+// mixin not called
+// @mixin toggleSwitch($width, $height) {
+//     .lbl {
+//         position: relative;
+//         display: block;
+//         cursor: pointer;
+//         width: $width;
+//         min-height: 24px;
+//         margin-right: 4px;
+//         label {
+//             @include flexbox();
+//             @include alignItems(center);
+//             //@include justifyContent(flex-start);
+//             @include justifyContent(center);
+//             height: 100%;
+//             padding-right: calc(($height - 6px) + 4px);
+//             padding-left: 0;
+//             margin-right: 0;
+//             width: auto;
+//             &.text_end {
+//                 //@include justifyContent(flex-end);
+//                 padding-left: calc(($height - 6px) + 4px);
+//                 padding-right: 0;
+//                 /*span {
+//                     padding: 0 (8px + 2) 0 (4px + 2);
+//                 }*/
+//             }
+//             span {
+//                 @include animation(fadeIn 0.3s);
+//                 //padding: 0 (4px + 2);
+//                 //font-weight: 600;
+//                 padding: 0 4px;
+//                 white-space: nowrap;
+//             }
+//         }
+//         input {
+//             display: none;
+//         }
+//         input:checked+.sldGroove:after {
+//             //left: calc(($width * 0.5) + 6px );
+//             left: calc(100% - (($height - 6px) + 4px));
+//             background-size: 23px;
+//             background-position: center;
+//             background-repeat: no-repeat;
+//         }
+//     }
+//     .sldGroove {
+//         position: absolute;
+//         top: 0;
+//         right: 0;
+//         bottom: 0;
+//         left: 0;
+//         transition: all 0.3s ease;
+//         border-radius: $height;
+//         background-clip: padding-box;
+//     }
+//     .sldGroove:after {
+//         position: absolute;
+//         content: "";
+//         border-radius: 50%;
+//         //top: 2px;
+//         //left: 4px;
+//         top: 0;
+//         bottom: 0;
+//         margin: auto 0;
+//         left: 4px;
+//         transition: left 0.3s ease-in-out;
+//         width: $height - 6px;
+//         height: $height - 6px;
+//         background-size: cover;
+//         background-repeat: no-repeat;
+//         background-size: 18px;
+//         background-position: center;
+//     }
+// }
+@mixin rotateIcon() {
+    @include transition(transform 0.3s ease-in-out);
+
+    &.fl_rotate {
+        @include rotate(180deg);
+    }
+}
+
+.clear {
+    clear: both;
+}
+
+.hide {
+    display: none !important;
+    pointer-events: none !important;
+}
+
+.arrow-up {
+    border-bottom: 5px solid #2f2f2f;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    height: 0;
+    width: 0;
+}
+
+.arrow-down {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #2f2f2f;
+    height: 0;
+    width: 0;
+}
+
+.arrow-right {
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #2f2f2f;
+    border-top: 5px solid transparent;
+    height: 0;
+    width: 0;
+}
+
+.arrow-left {
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid #2f2f2f;
+    border-top: 5px solid transparent;
+    height: 0;
+    width: 0;
+}
+
+/*overwrite*/
+// noBorder not in used already
+// .noBorder {
+//     border-right: none !important;
+//     border-bottom: none !important;
+//     border-top: none !important;
+//     border-left: none !important;
+// }
+.noMargin {
+    margin: 0 !important;
+}
+
+.noPadding_top {
+    padding-top: 0 !important;
+}
+
+.autoMargin {
+    margin: auto;
+}
+
+a,
+a:hover,
+a:focus {
+    text-decoration: none !important;
+}
+
+a,
+a:visited,
+a:not(.btn) {
+    color: inherit;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+@function decimal-round ($number, $digits: 0, $mode: round) {
+    $n: 1;
+
+    // $number must be a number
+    @if type-of($number) !=number {
+        @warn '#{ $number } is not a number.';
+        @return $number;
+    }
+
+    // $digits must be a unitless number
+    @if type-of($digits) !=number {
+        @warn '#{ $digits } is not a number.';
+        @return $number;
+    }
+
+    @else if not unitless($digits) {
+        @warn '#{ $digits } has a unit.';
+        @return $number;
+    }
+
+    @for $i from 1 through $digits {
+        $n: $n * 10;
+    }
+
+    @if $mode==round {
+        @return math.div(round($number * $n), $n);
+    }
+
+    @else if $mode==ceil {
+        @return math.div(ceil($number * $n), $n);
+    }
+
+    @else if $mode==floor {
+        @return math.div(floor($number * $n), $n);
+    }
+
+    @else {
+        @warn '#{ $mode } is undefined keyword.';
+        @return $number;
+    }
+}
+
+@function decimal-ceil ($number, $digits: 0) {
+    @return decimal-round($number, $digits, ceil);
+}
+
+@function decimal-floor ($number, $digits: 0) {
+    @return decimal-round($number, $digits, floor);
+}
+
+:root {
+    --sat: env(safe-area-inset-top);
+    --sar: env(safe-area-inset-right);
+    --sab: env(safe-area-inset-bottom);
+    --sal: env(safe-area-inset-left);
+}
+
+@mixin circularG_loader() {
+
+    //loading icon for pending: start//
+    #circularG {
+        position: relative;
+        width: 18px;
+        height: 18px;
+        margin: auto;
+    }
+
+    .circularG {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border-radius: 3px;
+        -o-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        animation-name: bounce_circularG;
+        -o-animation-name: bounce_circularG;
+        -ms-animation-name: bounce_circularG;
+        -webkit-animation-name: bounce_circularG;
+        -moz-animation-name: bounce_circularG;
+        animation-duration: 0.868s;
+        -o-animation-duration: 0.868s;
+        -ms-animation-duration: 0.868s;
+        -webkit-animation-duration: 0.868s;
+        -moz-animation-duration: 0.868s;
+        animation-iteration-count: infinite;
+        -o-animation-iteration-count: infinite;
+        -ms-animation-iteration-count: infinite;
+        -webkit-animation-iteration-count: infinite;
+        -moz-animation-iteration-count: infinite;
+        animation-direction: normal;
+        -o-animation-direction: normal;
+        -ms-animation-direction: normal;
+        -webkit-animation-direction: normal;
+        -moz-animation-direction: normal;
+    }
+
+    #circularG_1 {
+        left: 0;
+        top: 7px;
+        animation-delay: 0.328s;
+        -o-animation-delay: 0.328s;
+        -ms-animation-delay: 0.328s;
+        -webkit-animation-delay: 0.328s;
+        -moz-animation-delay: 0.328s;
+    }
+
+    #circularG_2 {
+        left: 2px;
+        top: 2px;
+        animation-delay: 0.434s;
+        -o-animation-delay: 0.434s;
+        -ms-animation-delay: 0.434s;
+        -webkit-animation-delay: 0.434s;
+        -moz-animation-delay: 0.434s;
+    }
+
+    #circularG_3 {
+        top: 0;
+        left: 7px;
+        animation-delay: 0.54s;
+        -o-animation-delay: 0.54s;
+        -ms-animation-delay: 0.54s;
+        -webkit-animation-delay: 0.54s;
+        -moz-animation-delay: 0.54s;
+    }
+
+    #circularG_4 {
+        right: 2px;
+        top: 2px;
+        animation-delay: 0.646s;
+        -o-animation-delay: 0.646s;
+        -ms-animation-delay: 0.646s;
+        -webkit-animation-delay: 0.646s;
+        -moz-animation-delay: 0.646s;
+    }
+
+    #circularG_5 {
+        right: 0;
+        top: 7px;
+        animation-delay: 0.752s;
+        -o-animation-delay: 0.752s;
+        -ms-animation-delay: 0.752s;
+        -webkit-animation-delay: 0.752s;
+        -moz-animation-delay: 0.752s;
+    }
+
+    #circularG_6 {
+        right: 2px;
+        bottom: 2px;
+        animation-delay: 0.868s;
+        -o-animation-delay: 0.868s;
+        -ms-animation-delay: 0.868s;
+        -webkit-animation-delay: 0.868s;
+        -moz-animation-delay: 0.868s;
+    }
+
+    #circularG_7 {
+        left: 7px;
+        bottom: 0;
+        animation-delay: 0.974s;
+        -o-animation-delay: 0.974s;
+        -ms-animation-delay: 0.974s;
+        -webkit-animation-delay: 0.974s;
+        -moz-animation-delay: 0.974s;
+    }
+
+    #circularG_8 {
+        left: 2px;
+        bottom: 2px;
+        animation-delay: 1.08s;
+        -o-animation-delay: 1.08s;
+        -ms-animation-delay: 1.08s;
+        -webkit-animation-delay: 1.08s;
+        -moz-animation-delay: 1.08s;
+    }
+
+    @keyframes bounce_circularG {
+        0% {
+            transform: scale(1);
+        }
+
+        100% {
+            transform: scale(.3);
+        }
+    }
+
+    @-o-keyframes bounce_circularG {
+        0% {
+            -o-transform: scale(1);
+        }
+
+        100% {
+            -o-transform: scale(.3);
+        }
+    }
+
+    @-ms-keyframes bounce_circularG {
+        0% {
+            -ms-transform: scale(1);
+        }
+
+        100% {
+            -ms-transform: scale(.3);
+        }
+    }
+
+    @-webkit-keyframes bounce_circularG {
+        0% {
+            -webkit-transform: scale(1);
+        }
+
+        100% {
+            -webkit-transform: scale(.3);
+        }
+    }
+
+    @-moz-keyframes bounce_circularG {
+        0% {
+            -moz-transform: scale(1);
+        }
+
+        100% {
+            -moz-transform: scale(.3);
+        }
+    }
+
+    //loading icon for pending: end//
+}
+
+@mixin flyingText($padding-left: 100%) {
+    @include limit1line();
+    word-break: break-all;
+
+    &.flying_txt {
+        @include animation(flyingText 3s linear infinite);
+        padding-left: $padding-left;
+    }
+}
+
+@mixin gradientFade($gradient_width) {
+    position: sticky;
+    width: $gradient_width;
+    z-index: 1;
+    flex-shrink: 0;
+    height: 100%;
+    margin-right: -$gradient_width;
+}
+
+@keyframes flyingText {
+    0% {
+        margin-left: -70%;
+    }
+
+    100% {
+        margin-left: -210%;
+    }
+}
+
+@mixin bgOpacity($color, $opacity) {
+    @if meta.type-of($color)=="color" {
+        background: rgba(color.channel($color, "red", $space: rgb), color.channel($color, "green", $space: rgb), color.channel($color, "blue", $space: rgb), $opacity);
+    }
+
+    @else {
+        @warn "⚠️ bgOpacity(): #{$color} 不是有效的顏色，請確認 brand.t() 是否有回傳色值。";
+    }
+}

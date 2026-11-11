@@ -1,0 +1,208 @@
+@use "../../assets/themes/colours/brand"as brand;
+@use "../../assets/themes/colours/config"as config;
+@use "../../assets/public/layout/css/base"as base;
+@use "../mixin"as mix;
+
+// leftmenu (moved)
+.leftmenu_wrp {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mEuro {
+                width: 320px;
+                left: -320px;
+                height: 100%;
+                position: fixed;
+                top: 0;
+                overflow: auto;
+                -webkit-transition: left .3s;
+                transition: left .3s;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mEuro {
+                @include mix.themeName(default) {
+                    background: brand.t(BG_leftmenu_wrp);
+                }
+
+                @include mix.themeNames(betway, blue, bafa, brown, green, red, dark1, dark2) {
+                    background: brand.t(BG_leftmenu_wrp);
+                }
+            }
+        }
+    }
+
+    &.active {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    left: 0 !important;
+                }
+            }
+        }
+    }
+
+    &.tutor {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    overflow: visible !important;
+                    left: 0 !important;
+                }
+            }
+        }
+    }
+}
+
+.lm2_header {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mEuro {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                height: 40px;
+                font-weight: bold;
+                // font-size: base.$n_font5;
+                font-size: 12px;
+                padding: 0 4px * 2;
+                height: 30px;
+            }
+        }
+    }
+
+    .leftmenu_wrp.lm2_euro & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    background: brand.t(BG_lm2_header);
+                    color: brand.t(Color_lm2_header);
+                }
+            }
+        }
+    }
+}
+
+.eu_lm2_sh {
+    .leftmenu_wrp.lm2_euro & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    padding: 8px 16px;
+                    // font-size: base.$n_font5;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    background: brand.t(BG_lm2_euro_sh);
+                }
+            }
+        }
+    }
+}
+
+.eu_lm2_h {
+    .leftmenu_wrp.lm2_euro & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    padding: 8px 16px;
+                    // font-size: base.$n_font7;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+.all_type {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mEuro {
+                position: relative;
+                min-height: 70%;
+            }
+        }
+    }
+
+    .leftmenu_wrp & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    @include mix.themeName(default) {
+                        color: brand.t(Color_select_type_title);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sports_item {
+    .all_type & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    min-height: 8px * 5.75;
+                    padding: 0 8px * 2;
+                    @include base.flexbox();
+                    @include base.justifyContent(space-between);
+                    @include base.alignItems(center);
+                }
+            }
+        }
+    }
+}
+
+.sport_info {
+
+    .euro .lock_icon &,
+    .euro .empty & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    @include mix.themeName(default) {
+                        color: brand.t(Color_sport_info);
+                    }
+                }
+            }
+        }
+    }
+
+    i {
+        .all_type .sports_item & {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mEuro {
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.e_num {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mEuro {
+                // font-size: base.$n_font5;
+                font-size: 12px;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mEuro {
+                color: brand.t(Color_e_num);
+            }
+        }
+    }
+}

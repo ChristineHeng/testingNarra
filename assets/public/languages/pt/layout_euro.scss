@@ -1,0 +1,36 @@
+$activeView: mEuro !default;
+@use '../../../themes/colours/config'with ($activeView: $activeView,
+    $view: euro,
+    $language: pt,
+);
+@use '../../layout/css/_layout_shared';
+@use '../../layout/css/_layout_sub_euro';
+@use '_font';
+$n_font1: 8px;
+
+// [DES-808] Soccer Player Proposition Bet Type - start
+// .sld_new {                //sev (moved)
+//     right: -4px;
+// }
+// [DES-808] Soccer Player Proposition Bet Type - end
+.esports_mask {
+    .esports_desc {
+        width: 150px;
+    }
+}
+
+// pb_rmb_ls_tooltip not in used already
+// .pb_rmb_ls_tooltip {
+//     width: 180px;
+//     top: -80px;
+//     left: -83px;
+// }
+// .er_main_menu .m_tab .new_tag.hot_tag {
+//     padding: 0 4px;
+// }
+// .sld_new {//sev (moved)
+//     padding: 1px 1.5px 1.5px;
+// }
+// .m_tab:has(.hot_tag) {
+//     min-width: 82px;
+// }

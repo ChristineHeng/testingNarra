@@ -1,0 +1,184 @@
+﻿@use "./base"as base;
+
+// @mixin sportsImg($sports_id, $img_width, $img_height, $img_top, $img_left) {
+//     background-image: url("#{base.$sharedImgFolder}sports/banner_title_s#{$sports_id}.png#{base.$img_version}") !important;
+//     background-size: cover !important;
+
+//     .img_float {
+//         background: url("#{base.$sharedImgFolder}sports/float_title_s#{$sports_id}.png#{base.$img_version}") no-repeat;
+//         background-size: cover;
+//         position: absolute;
+//         width: $img_width;
+//         height: $img_height;
+//         top: $img_top;
+//         left: $img_left;
+//     }
+// }
+
+// @mixin flSportsImg($sports_id, $sport_type: none) {
+//     @if $sport_type=="cyber" {
+//         background-image: url("#{base.$sharedImgFolder}fl_sports/banner_title_cs#{$sports_id}.png#{base.$img_version}") !important;
+//     }
+//     @else {
+//         background-image: url("#{base.$sharedImgFolder}fl_sports/banner_title_s#{$sports_id}.png#{base.$img_version}") !important;
+//     }
+//     background-size: cover !important;
+//     background-position-x: left;
+//     .img_float {
+//         display: none;
+//     }
+// }
+/*sports icon- starts*/
+// .n_home_sports { // landing (moved)
+// .item {
+//     // $sports_id, $img_width, $img_height, $img_top, $img_bottom, $img_left, &bg_posx
+//     //euro banner - starts (39, 43, 44, 46, 47, 49, 52, 53)
+//     &.s39 {
+//         //Virtual Soccer
+//         @include sportsImg(39, 105px, 86px, -5px, 5%);
+//     }
+//     &.s43 {
+//         //Virtual Basketball
+//         @include sportsImg(43, 100px, 82px, -4px, 5%);
+//     }
+//     &.s44 {
+//         //Virtual World Cup
+//         @include sportsImg(44, 115px, 82px, -4px, 0);
+//     }
+//     &.s46 {
+//         //Virtual Nations Cup
+//         @include sportsImg(46, 110px, 82px, -4px, 5%);
+//     }
+//     &.s47 {
+//         //Virtual Soccer England League
+//         @include sportsImg(47, 130px, 82px, -4px, 0);
+//         background-size: 100% 100% !important;
+//     }
+//     &.s49 {
+//         //Virtual Soccer Spanish Friendly
+//         @include sportsImg(49, 130px, 82px, -4px, 0);
+//         background-size: 100% 100% !important;
+//     }
+//     &.s52 {
+//         //Virtual Soccer Spain League
+//         @include sportsImg(52, 130px, 82px, -4px, 0);
+//         background-size: 100% 100% !important;
+//     }
+//     &.s53 {
+//         //Virtual Soccer Italy League
+//         @include sportsImg(53, 130px, 82px, -4px, 0);
+//         background-size: 100% 100% !important;
+//     }
+//     //euro banner - ends
+//     &.p181,
+//     &.p323,
+//     &.p1873 {
+//         // not in mock index.html
+//         //FIFA
+//         @include sportsImg(fifa, 157px, 73px, 0, 0);
+//     }
+//     &.p199,
+//     &.p325,
+//     &.p1874 {
+//         // not in mock index.html
+//         //PES
+//         @include sportsImg(pes, 157px, 73px, 0, 0);
+//     }
+//     &.p197,
+//     &.p324,
+//     &.p1876 {
+//         // not in mock index.html
+//         //NBA2K
+//         @include sportsImg(nba2k, 157px, 73px, 0, 0);
+//     }
+//     &.p201,
+//     &.p322,
+//     &.p1875 {
+//         // not in mock index.html
+//         //CBA2K
+//         @include sportsImg(cba2k, 157px, 73px, 0, 0);
+//     }
+// }
+// $code_wrap: 1,
+// 2,
+// 3,
+// 6,
+// 7,
+// 8,
+// 9,
+// 11,
+// 13,
+// 14,
+// 15,
+// 18,
+// 19,
+// 21,
+// 23,
+// 25,
+// 29,
+// 31,
+// 32,
+// 34,
+// 36,
+// 39,
+// 40,
+// 41,
+// 43,
+// 44,
+// 45,
+// 46,
+// 47,
+// 49,
+// 51,
+// 52,
+// 53,
+// 54,
+// 55,
+// 56,
+// 59,
+// 60,
+// 63,
+// 64,
+// 65,
+// 66,
+// 67,
+// 102,
+// 130,
+// 191,
+// 201,
+// 252,
+// 255,
+// 271,
+// 571,
+// 1001,
+// 1002,
+// 3277,
+// 4528,
+// 34055,
+// 58652,
+// 59175,
+// 59237,
+// "wildrift",
+// "kabaddi",
+// "cb";
+// $code_wrap_cyber: 1,
+// 2,
+// 3,
+// 13,
+// 1002;
+// .fl & {
+//     .item {
+//         @each $code in $code_wrap {
+//             &.s#{$code} {
+//                 @include flSportsImg($code);
+//             }
+//         }
+//         @each $code in $code_wrap_cyber {
+//             &.cs#{$code} {
+//                 @include flSportsImg($code, "cyber");
+//             }
+//         }
+//     }
+// }
+// }
+/*sports icon- end*/

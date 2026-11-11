@@ -1,0 +1,2536 @@
+@use "../../assets/themes/colours/brand"as brand;
+@use "../../assets/public/layout/css/base"as base;
+@use "../../assets/themes/colours/config"as config;
+@use "../mixin"as mix;
+
+// Remarks:
+// large bet: start
+// large bet: end
+// large bet (remove): start
+// large bet (remove): end
+.icon-fi-insight {
+    .n_header_sports & {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 14px !important;
+            }
+        }
+    }
+
+    .m_tab & {
+        @include mix.layout {
+            @include mix.mEuro {
+                font-size: 16px !important;
+                line-height: 20px;
+            }
+        }
+    }
+}
+
+.lb_container {
+    @include mix.layout {
+        @include mix.mobile {
+            height: calc(100vh - var(--lb_container_h));
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                background: brand.t(BGGray);
+            }
+
+            @include mix.mEuro {
+                @include mix.themeName(default) {
+                    background: brand.t(Black);
+                }
+            }
+        }
+    }
+}
+
+.lb_header,
+.lb_top_rw {
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    background: brand.t(BGGray);
+                }
+
+                @include mix.darkTheme {
+                    @include mix.notThemeName(default1) {
+                        background: brand.t(DarkBlack);
+                    }
+
+                    @include mix.themeName(default1) {
+                        background: brand.t(BGDarkBlue);
+                    }
+                }
+            }
+
+            @include mix.mEuro {
+                @include mix.brightTheme {
+                    background: brand.t(BGGray);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(Black);
+                }
+            }
+        }
+    }
+}
+
+.lb_header {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                padding-bottom: 0 !important;
+                padding-top: 8px !important;
+                z-index: 8 !important;
+            }
+
+            @include mix.mEuro {
+                z-index: 4 !important;
+            }
+        }
+    }
+}
+
+.lb_top_rw {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            padding: 14px 0;
+        }
+    }
+
+    .lb_container & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    padding-top: 4px;
+                }
+            }
+        }
+    }
+}
+
+.lb_wrp {
+    @include mix.layout {
+        @include mix.mobile {
+            overflow: scroll;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                background: brand.t(BGGray);
+            }
+
+            @include mix.mEuro {
+                @include mix.themeName(default) {
+                    background: brand.t(Black);
+                }
+            }
+        }
+    }
+}
+
+.lb_c {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.borderRadius(4px);
+            padding: 10px;
+            margin: 0 8px 6px;
+            position: relative;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                background: brand.t(White);
+            }
+
+            @if not (config.$view==euro and config.$theme==default) {
+                @include mix.darkTheme {
+                    background: brand.t(LightBlack);
+                }
+            }
+
+            @include mix.mEuro {
+                @include mix.themeName(default) {
+                    background: #2D333C;
+                }
+            }
+        }
+    }
+
+    .sd_cont & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin: 0;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        background: brand.t(White);
+                    }
+
+                    @include mix.darkTheme {
+                        background: brand.t(Gray);
+                    }
+                }
+            }
+        }
+
+        &:not(:last-child) {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsia {
+                        margin-bottom: 6px;
+                    }
+                }
+            }
+        }
+    }
+
+    &.lb_combo {
+        @include mix.layout {
+            @include mix.mobile {
+                padding: 0;
+            }
+        }
+    }
+}
+
+.lb_c_t {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            @include base.justifyContent(space-between);
+            font-size: 10px;
+        }
+    }
+
+    .lb_combo & {
+        @include mix.layout {
+            @include mix.mobile {
+                position: relative;
+                padding: 10px 10px 4px;
+                border-bottom: 1px solid;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.brightTheme {
+                        border-color: brand.t(DividerGray);
+                    }
+
+                    @include mix.darkTheme {
+                        border-color: brand.t(Gray02);
+                    }
+                }
+
+                @include mix.mEuro {
+                    @include mix.brightTheme {
+                        border-color: brand.t(DividerGray);
+                    }
+
+                    @include mix.darkTheme {
+                        border-color: #525E73;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.lb_c_tl {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            font-weight: 700;
+        }
+    }
+
+    img {
+        @include mix.layout {
+            @include mix.mobile {
+                margin-right: 6px;
+            }
+        }
+    }
+}
+
+.lb_c_tlp {
+    @include mix.layout {
+        @include mix.mobile {
+            font-size: 12px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(DarkGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(White);
+            }
+        }
+    }
+
+    .tips_wrp & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+    .sd_cont & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    font-size: 10px;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+
+    .lb_c_ptm & {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 10px;
+            }
+        }
+    }
+
+    .preload & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include base.flexbox();
+                    @include base.alignItems(center);
+                }
+            }
+        }
+    }
+}
+
+.lb_c_tlp_img {
+    .sd_cont & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    width: 12px;
+                    vertical-align: text-top;
+                }
+            }
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .preload & {
+        @include mix.lazyLoading {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsia {
+                        @include base.borderRadius(50%);
+                        min-width: 12px;
+                        height: 12px;
+                        min-height: 12px;
+                        margin-right: 6px;
+                    }
+                }
+            }
+        }
+
+        &+div {
+            @include mix.lazyLoading {
+                @include mix.layout {
+                    @include mix.mobile {
+                        @include mix.mAsia {
+                            min-width: 100px;
+                            min-height: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.lb_c_tlpn {
+    @include mix.layout {
+        @include mix.mobile {
+            font-weight: 400;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.darkTheme {
+                color: brand.t(LightGray);
+            }
+        }
+    }
+}
+
+.lb_c_time {
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(DarkGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(LightGray);
+            }
+        }
+    }
+
+    .preload & {
+        @include mix.lazyLoading {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsia {
+                        min-height: 12px;
+                        width: 20%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.lb_cm {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            padding-top: 10px;
+            padding-bottom: 4px;
+            font-size: 10px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(DarkGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(LightGray);
+            }
+        }
+    }
+
+    .lb_c_ptm & {
+        @include mix.layout {
+            @include mix.mobile {
+                padding-top: unset;
+            }
+        }
+    }
+}
+
+.odds_type {
+    @include mix.layout {
+        @include mix.mobile {
+            margin-left: 2px;
+        }
+    }
+}
+
+.lb_cs {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            @include base.justifyContent(space-between);
+        }
+    }
+
+    .lb_c_t+& {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding-top: 10px;
+                }
+            }
+        }
+
+        .lb_c_ptm & {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mEuro {
+                        padding-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .lb_combo & {
+        @include mix.layout {
+            @include mix.mobile {
+                padding: 6px 10px;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                border-bottom: 1px solid;
+
+                @include mix.mAsiaCyberbattle {
+                    @include mix.brightTheme {
+                        border-color: brand.t(DividerGray);
+                    }
+
+                    @include mix.darkTheme {
+                        border-color: brand.t(Gray02);
+                    }
+                }
+
+                @include mix.mEuro {
+                    @include mix.brightTheme {
+                        border-color: brand.t(DividerGray);
+                    }
+
+                    @include mix.darkTheme {
+                        border-color: #525E73;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.lb_csl {
+    @include mix.layout {
+        @include mix.mobile {
+            padding-right: 4px;
+        }
+    }
+
+    .lb_combo & {
+        @include mix.layout {
+            @include mix.mobile {
+                position: relative;
+                padding: 0 12px;
+            }
+        }
+
+        &:first-child {
+            @include mix.layout {
+                @include mix.mobile {
+                    padding-left: 0;
+                }
+            }
+        }
+
+        &:not(:first-child) {
+            &:before {
+                @include mix.layout {
+                    @include mix.mobile {
+                        content: "";
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        bottom: 0;
+                        margin: auto;
+                        height: 65%;
+                    }
+                }
+
+                @include mix.theme {
+                    @include mix.mobile {
+                        border-left: 1px solid;
+
+                        @include mix.brightTheme {
+                            border-color: brand.t(DividerGray);
+                        }
+
+                        @include mix.darkTheme {
+                            border-color: brand.t(Gray02);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.lb_cslt {
+    @include mix.layout {
+        @include mix.mobile {
+            font-weight: 700;
+            padding-bottom: 4px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.highlightColor();
+        }
+    }
+
+    .sd_cont & {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .lb_c_ptm & {
+        @include mix.layout {
+            @include mix.mobile {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    .preload & {
+        @include mix.lazyLoading {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsia {
+                        width: 200px;
+                        height: 16px;
+                        padding-bottom: 0;
+                        margin-bottom: 4px;
+                    }
+                }
+            }
+        }
+    }
+
+    .chat_wrap & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    font-size: 12px;
+                    padding-top: 2px;
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .lb_combo & {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .lb_combo .lb_cs & {
+        @include mix.layout {
+            @include mix.mobile {
+                padding-top: 6px;
+            }
+        }
+    }
+
+    .lb_combo_info & {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .lb_t_wrp & {
+        span:not(.fl_at) {
+            &:first-child {
+                @include mix.layout {
+                    @include mix.mobile {
+                        padding-left: 0px;
+                    }
+                }
+            }
+
+            &:not(:first-child) {
+                @include mix.layout {
+                    @include mix.mobile {
+                        position: relative;
+                        padding-left: 6px;
+                        padding-right: 6px;
+                    }
+                }
+
+                &:before {
+                    @include mix.layout {
+                        @include mix.mobile {
+                            content: "";
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                            bottom: 0;
+                            margin: auto;
+                            height: 75%;
+                        }
+                    }
+
+                    @include mix.theme {
+                        @include mix.mobile {
+                            border-left: 1px solid;
+                            border-color: brand.t(Gray02);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .chat_tr_card & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include base.flexbox();
+                    padding-top: 4px;
+                    padding-bottom: 0;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+.lb_label {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                display: inline-flex;
+                @include base.alignItems(center);
+                @include base.borderRadius(2px);
+                vertical-align: middle;
+                padding: 0 4px;
+                min-height: 16px;
+                font-size: 10px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                color: brand.t(White);
+
+                @include mix.brightTheme {
+                    background: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(Gray02);
+                }
+            }
+        }
+    }
+}
+
+.lb_cscn {
+    @include mix.layout {
+        @include mix.mobile {
+            font-size: 10px;
+            padding-bottom: 4px;
+            font-weight: 700;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(DarkGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(LightGray);
+            }
+        }
+    }
+
+    .lb_c_ptm & {
+        @include mix.layout {
+            @include mix.mobile {
+                font-weight: 400;
+            }
+        }
+    }
+
+    .lb_combo .lb_cs & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.flexbox();
+                @include base.alignItems(flex-end);
+                padding-bottom: 0px;
+            }
+        }
+    }
+
+    .lb_combo_info .lb_i:not(:first-child) & {
+        @include mix.layout {
+            @include mix.mobile {
+                margin-top: 6px;
+            }
+        }
+    }
+
+    .lb_cslt_wrp & {
+        @include mix.layout {
+            @include mix.mobile {
+                width: 100%;
+                @include base.flexbox();
+                @include base.alignItems(center);
+            }
+        }
+    }
+}
+
+.lb_csld {
+    @include mix.layout {
+        @include mix.mobile {
+            font-size: 10px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(DarkGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(LightGray);
+            }
+        }
+    }
+
+    .lb_c_ptm & {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 12px;
+                font-weight: 700;
+                padding-bottom: 6px;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White)
+                }
+            }
+        }
+    }
+
+    .sd_grp & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .preload & {
+        @include mix.lazyLoading {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsia {
+                        min-height: 14px;
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+
+    .lb_combo_info & {
+        @include mix.layout {
+            @include mix.mobile {
+                padding-bottom: 4px;
+            }
+        }
+    }
+}
+
+.lb_b {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            @include base.justifyContent(space-between);
+            padding-top: 8px;
+            font-size: 10px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(DarkGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(LightGray);
+            }
+        }
+    }
+}
+
+.lb_bl {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+        }
+    }
+}
+
+.icon-fi-coins {
+    @include mix.layout {
+        @include mix.mobile {
+            font-size: 16px;
+            margin-right: 4px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(DarkGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(Gray03);
+            }
+        }
+    }
+
+    .lb_combo & {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.lb_blt {
+    @include mix.layout {
+        @include mix.mobile {
+            font-weight: 700;
+        }
+    }
+
+    img {
+        @include mix.layout {
+            @include mix.mobile {
+                margin-left: 4px;
+                margin-bottom: -2px;
+            }
+        }
+    }
+}
+
+.lb_blt_cur,
+.lb_blt_stake {
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.highlightColor();
+        }
+    }
+}
+
+.lb_blt_cur {
+    .lb_combo & {
+        @include mix.layout {
+            @include mix.mobile {
+                padding-right: 2px;
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+.lb_blt_stake {
+    @include mix.layout {
+        @include mix.mobile {
+            font-size: 12px;
+        }
+    }
+
+    .lb_combo & {
+        @include mix.layout {
+            @include mix.mobile {
+                padding-right: 2px;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.lb_p {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(flex-end);
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                padding-right: 2px;
+            }
+        }
+    }
+
+    .chat_bet_grp & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    font-size: 10px;
+                    padding-top: 6px;
+                    padding-bottom: 10px;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    color: #CCC;
+                }
+            }
+        }
+    }
+
+    .chat_bet_grp & {
+
+        &:has(+.tips_t),
+        &:has(+.chat_ml_ul) {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsia {
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .fl_tub_b &,
+    .ss_tml_b & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    font-size: 10px;
+                    padding-top: 6px;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        color: brand.t(DarkGray);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(LightGray);
+                    }
+                }
+            }
+        }
+    }
+
+    .ss_tml_b & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding-bottom: 8px;
+                }
+            }
+        }
+    }
+
+    .lb_combo & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.justifyContent(flex-end);
+                @include base.alignItems(center);
+                padding-top: 4px;
+                font-size: 10px;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+.icon-fi-people {
+    @include mix.layout {
+        @include mix.mobile {
+            font-size: 14px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(DarkGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(Gray03);
+            }
+        }
+    }
+
+    .chat_bet_grp & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+
+    .fl_tub_b &,
+    .ss_tml_b & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        color: brand.t(DarkGray);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(LightGray);
+                    }
+                }
+            }
+        }
+    }
+
+    .l_card & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        color: brand.t(MediumGray);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(Gray03);
+                    }
+                }
+            }
+        }
+    }
+
+    .lb_combo & {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+.lb_pc {
+    @include mix.layout {
+        @include mix.mobile {
+            font-weight: 700;
+            padding: 0 2px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            color: brand.t(Green);
+        }
+    }
+
+    .lb_combo & {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.lb_xwrp {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            @include base.justifyContent(center);
+            @include base.flexDirection(column);
+            height: 65vh;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(DarkGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(LightGray);
+            }
+        }
+    }
+}
+
+.lb_xwrp_t {
+    @include mix.layout {
+        @include mix.mobile {
+            font-size: 14px;
+            font-weight: 700;
+            padding-top: 20px;
+            padding-bottom: 6px;
+        }
+    }
+}
+
+// tutorial: start
+.lb_item {
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    background: brand.t(LightGray);
+                }
+            }
+        }
+    }
+
+    .lb_footer_mask & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    z-index: 1;
+                    padding-top: 4px !important;
+                    margin-top: -4px;
+                }
+            }
+        }
+    }
+}
+
+.lb_mask {
+    &.lb_wrp {
+        @include mix.layout {
+            @include mix.mobile {
+                z-index: 4;
+                position: relative;
+                overflow: visible;
+            }
+        }
+    }
+
+    &.lb_c {
+        @include mix.layout {
+            @include mix.mobile {
+                z-index: 10;
+            }
+        }
+    }
+
+    &.n_header {
+        @include mix.layout {
+            @include mix.mobile {
+                z-index: 4 !important;
+            }
+        }
+    }
+
+    &.bg_mask {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    z-index: 1000005;
+                }
+            }
+        }
+    }
+
+    .el_header_grp & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .lb_header_grp & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    display: block;
+                    position: absolute;
+                    height: unset;
+                }
+            }
+        }
+    }
+}
+
+.lb_arrow,
+.lb_desc,
+.lb_arrow2,
+.lb_desc2 {
+
+    .footer_main &,
+    .lb_c & {
+        @include mix.layout {
+            @include mix.mobile {
+                display: none;
+            }
+        }
+    }
+}
+
+.lb_arrow {
+    .lb_c.lb_mask>& {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.transform(scaleX(-1));
+                position: absolute;
+                display: block;
+                top: -48px;
+
+                @include mix.mAsiaCyberbattle {
+                    left: 196px;
+                }
+
+                @include mix.mEuro {
+                    left: 228px;
+                }
+            }
+        }
+    }
+
+    .lb_mask .ss_tml_btn & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.transform(rotate(-166deg));
+                position: absolute;
+                display: block;
+
+                @include mix.mAsiaCyberbattle {
+                    top: 36px;
+                }
+
+                @include mix.mEuro {
+                    top: 96px;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.brightTheme {
+                    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 1)) drop-shadow(0 0 10px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 20px rgba(0, 0, 0, 0.8));
+                }
+            }
+        }
+    }
+
+    .footer_main.lb_footer_mask & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include base.transform(scaleX(-1));
+                    position: absolute;
+                    display: block;
+                    top: -70px;
+                }
+            }
+        }
+    }
+
+    .lb_header_grp & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    @include base.transform(rotate(-23deg) scaleX(-1) scaleY(-1));
+                    position: absolute;
+                    top: 58px;
+                    left: 152px;
+                }
+            }
+        }
+    }
+}
+
+.lb_desc {
+    @include mix.theme {
+        @include mix.mobile {
+            color: brand.t(White);
+        }
+    }
+
+    .lb_c.lb_mask>& {
+        @include mix.layout {
+            @include mix.mobile {
+                position: absolute;
+                display: block;
+                width: 180px;
+                padding: 8px 16px;
+                left: 10px;
+                top: -50px;
+            }
+        }
+    }
+
+    .lb_mask .ss_tml_btn & {
+        @include mix.layout {
+            @include mix.mobile {
+                position: absolute;
+                display: block;
+                width: 180px;
+                padding: 8px 16px;
+                font-size: base.$n_font5;
+                font-weight: 400;
+                white-space: normal;
+
+                @include mix.mAsiaCyberbattle {
+                    top: 70px;
+                    right: 88px;
+                }
+
+                @include mix.mEuro {
+                    top: 130px;
+                    right: 100px;
+                }
+            }
+        }
+    }
+
+    .footer_main.lb_footer_mask & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    position: absolute;
+                    display: block;
+                    width: 180px;
+                    top: -130px;
+                    left: -100px;
+                    padding: 8px 16px;
+                    text-align: left;
+                    font-size: base.$n_font5;
+                }
+            }
+        }
+    }
+
+    .lb_header_grp & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    position: absolute;
+                    width: 180px;
+                    top: 120px;
+                    left: 40px;
+                    padding: 8px 16px;
+                    text-align: left;
+                    font-size: base.$n_font5;
+                }
+            }
+        }
+    }
+}
+
+.lb_arrow2 {
+    .lb_c.lb_mask>& {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    position: absolute;
+                    display: block;
+                    top: -48px;
+                    left: 10px;
+                }
+            }
+        }
+    }
+}
+
+.lb_desc2 {
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                color: brand.t(White);
+            }
+        }
+    }
+
+    .lb_c.lb_mask>& {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    position: absolute;
+                    display: block;
+                    width: 230px;
+                    padding: 8px 16px;
+                    left: 70px;
+                    top: -80px;
+                }
+            }
+        }
+    }
+}
+
+.lb_header_grp {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mEuro {
+                z-index: 1000006 !important;
+            }
+        }
+    }
+}
+
+.lb_tab {
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mEuro {
+                background: brand.t(BG_er_main_menu);
+            }
+        }
+    }
+
+    .lb_header_grp & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    position: relative;
+                    z-index: 1000006;
+                    padding: 2px 8px !important;
+                }
+            }
+        }
+    }
+}
+
+.lb_btn {
+    .lb_mask & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    position: absolute;
+                    bottom: 70px;
+                    right: 10px;
+
+                    @supports (-webkit-touch-callout: none) {
+                        bottom: 150px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.lb_msk_btn {
+    &.mask_button {
+        @include mix.layout {
+            @include mix.mobile {
+                bottom: 10vh;
+                display: block;
+                width: fit-content;
+                position: fixed;
+                right: 3%;
+                z-index: 1000006;
+            }
+        }
+    }
+}
+
+// tutorial: end
+.lb_menu_cover {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.flexbox();
+                padding: 8px 8px 0;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    background: brand.t(BGGray);
+                }
+
+                @include mix.darkTheme {
+                    @include mix.notThemeName(default1) {
+                        background: brand.t(DarkBlack);
+                    }
+
+                    @include mix.themeName(default1) {
+                        background: brand.t(BGDarkBlue);
+                    }
+                }
+            }
+        }
+    }
+
+    .ai_playbook & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        background: brand.t(White);
+                    }
+
+                    @include mix.darkTheme {
+                        background: brand.t(DarkBlack);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.lb_menu_itm {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                font-size: 14px;
+                padding-bottom: 6px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+
+    &.active {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    font-weight: 700;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    color: brand.t(ActiveLight);
+                    border-bottom: 2px solid brand.t(ActiveLight);
+                }
+            }
+        }
+    }
+
+    &:not(:first-child) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding-right: 6px;
+                }
+            }
+        }
+    }
+}
+
+.lb_exp {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            font-size: 10px;
+            font-weight: 700;
+            padding-left: 8px;
+            padding-bottom: 6px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(DarkGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(LightGray);
+            }
+        }
+    }
+
+    i:not(.info_icn i) {
+        @include mix.layout {
+            @include mix.mobile {
+                padding-right: 4px;
+            }
+        }
+    }
+
+    &.w_padding {
+        @include mix.layout {
+            @include mix.mobile {
+                padding-top: 14px;
+            }
+        }
+    }
+
+    .strat_card_wrp & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding: 0 0 6px;
+                }
+            }
+        }
+    }
+
+    .sd_cont .fl_comp+& {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding: 14px 0 6px;
+                }
+            }
+        }
+    }
+
+    .sd_grp & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding: 0;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        color: brand.t(Black);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(LightGray);
+                    }
+                }
+            }
+        }
+    }
+
+    .strat_note & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding: 0;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        color: brand.t(Black);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(White);
+                    }
+                }
+            }
+        }
+    }
+
+    .le_bnnr+& {
+        @include mix.layout {
+            @include mix.mobile {
+                padding: 14px 8px 0;
+            }
+        }
+    }
+
+    .sd_msg:not([style*="display: none"])+& {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding-top: 14px;
+                }
+            }
+        }
+    }
+
+    .rw_panel & {
+        @include mix.layout {
+            @include mix.mobile {
+                padding-bottom: 12px;
+                padding-top: 14px;
+            }
+        }
+    }
+
+    &.lb_exp_cb {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 9px;
+            }
+        }
+
+        i {
+            @include mix.layout {
+                @include mix.mobile {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
+
+.tips_btm {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.borderRadius(0 0 4px 4px);
+                margin: 8px -10px -10px -10px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    background: brand.t(DividerGray);
+                    border-top: 1px solid brand.t(DividerGray);
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(Gray);
+                    color: brand.t(LightGray);
+
+                    @include mix.themeName(default1) {
+                        border-top: 1px solid brand.t(Stroke);
+                    }
+
+                    @include mix.notThemeName(default1) {
+                        border-top: 1px solid brand.t(Gray02);
+                    }
+                }
+            }
+        }
+    }
+
+    .sd_grp & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        background: brand.t(BGGray);
+                        border-top: 1px solid brand.t(BGGray);
+                    }
+
+                    @include mix.darkTheme {
+                        background: brand.t(Gray01);
+                        border-top: 1px solid brand.t(Gray02);
+                    }
+                }
+            }
+        }
+    }
+
+    .betslip_status_wrap+& {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+.tips_t {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(space-between);
+                padding: 8px 10px;
+                font-size: 10px;
+            }
+        }
+    }
+
+    .chat_bet_grp & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin: 6px -12px 0;
+                    z-index: 1;
+                    position: relative;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    background: #3B266E;
+                    border-top: 1px solid #5E44A5;
+                    color: #CCC;
+                }
+            }
+        }
+    }
+
+    .preload & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    min-height: 30px;
+                }
+            }
+        }
+    }
+}
+
+.tips_t_l {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                font-weight: 700;
+            }
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    padding-right: 4px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .preload & {
+        @include mix.lazyLoading {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsia {
+                        min-width: 80px;
+                        min-height: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.tips_t_r {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                gap: 6px;
+            }
+        }
+    }
+
+    .icon-fi-full-up {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include base.rotateIcon();
+                    font-size: 6px;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.brightTheme {
+                        color: brand.t(DarkGray);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(Gray03);
+                    }
+                }
+            }
+        }
+    }
+
+    .preload & {
+        @include mix.lazyLoading {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsia {
+                        width: 15%;
+                        min-height: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    .chat_bet_grp & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    color: #CCC;
+                }
+            }
+        }
+    }
+
+    .chat_bet_grp & .icon-fi-full-up {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    color: #CCC;
+                }
+            }
+        }
+    }
+}
+
+.tips_b {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                padding: 10px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    border-top: 1px solid brand.t(DividerGray);
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+
+                    @include mix.themeName(default1) {
+                        border-top: 1px solid brand.t(Stroke);
+                    }
+
+                    @include mix.notThemeName(default1) {
+                        border-top: 1px solid brand.t(Gray02);
+                    }
+                }
+            }
+        }
+    }
+
+    ul {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    padding-left: 12px;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    li:not(:first-child) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    padding-top: 6px;
+                }
+            }
+        }
+    }
+
+    .sd_grp & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        color: brand.t(Black);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(White);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ss_ex {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                font-size: 14px !important;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray) !important;
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(Gray03) !important;
+                }
+            }
+        }
+    }
+}
+
+.lb_combo_t {
+    &.fl_comp_t {
+        .lb_top_rw .fl_comp.fl_comp_lb & {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mEuro {
+                        padding: 5px 6px;
+                    }
+                }
+            }
+        }
+
+        img {
+            @include mix.layout {
+                @include mix.mobile {
+                    width: 20px;
+                }
+            }
+        }
+    }
+}
+
+.icon-fi-combo1 {
+    .lb_combo_t & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    padding-right: 4px;
+                    font-size: 18px !important;
+                }
+            }
+        }
+    }
+}
+
+.lb_combo_info {
+    @include mix.layout {
+        @include mix.mobile {
+            padding: 6px 10px 10px;
+        }
+    }
+}
+
+.fl_at {
+    .lb_combo & {
+        @include mix.layout {
+            @include mix.mobile {
+                font-weight: 400;
+                padding-left: 0;
+                padding-right: 2px;
+            }
+        }
+    }
+
+    .lb_combo_info & {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.lb_cb_t {
+    @include mix.layout {
+        @include mix.mobile {
+            position: relative;
+            font-size: 10px;
+            font-weight: 400;
+            padding-right: 6px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(DarkGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(LightGray);
+            }
+        }
+    }
+}
+
+.lb_t_wrp {
+    @include mix.layout {
+        @include mix.mobile {
+            position: relative;
+            margin-left: 4px;
+            border-bottom: 1px solid;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                border-color: brand.t(DividerGray);
+            }
+
+            @include mix.darkTheme {
+                border-color: brand.t(Gray02);
+            }
+        }
+    }
+
+    .lb_combo_info & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    @include mix.darkTheme {
+                        border-color: #525E73;
+                    }
+                }
+            }
+        }
+    }
+
+    .le_rwp_collapsible & {
+        @include mix.layout {
+            @include mix.mobile {
+                border-bottom: none;
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.lb_cslt_wrp {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.justifyContent(space-between);
+            padding-bottom: 6px;
+        }
+    }
+}
+
+.lb_i {
+    @include mix.layout {
+        @include mix.mobile {
+            position: relative;
+            padding-left: 10px;
+        }
+    }
+
+    .item {
+        i {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mEuro {
+                        position: absolute;
+                        top: -1px;
+                        left: -2px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    &:nth-child(n + 4) {
+
+        // Default show 3 selections
+        @include mix.layout {
+            @include mix.mobile {
+                display: none;
+            }
+        }
+
+        .le_rwp_collapsible & {
+            @include mix.layout {
+                @include mix.mobile {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .lb_combo_info.is_open & {
+        @include mix.layout {
+            @include mix.mobile {
+                display: block;
+            }
+        }
+    }
+
+    &:has(~ .lb_i):after {
+        @include mix.layout {
+            @include mix.mobile {
+                content: "";
+                position: absolute;
+                top: 10px;
+                left: 4.5px;
+                height: 95%;
+                z-index: 0;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                border-left: 0.5px solid brand.t(Gray03);
+            }
+        }
+
+        .le_rwp_collapsible & {
+            @include mix.theme {
+                @include mix.mobile {
+                    @include mix.darkTheme {
+                        border-color: brand.t(Gray02);
+
+                        @include mix.mEuro {
+                            @include mix.themeName(default) {
+                                border-color: #525E73;
+                            }
+                        }
+                    }
+
+                    @include mix.brightTheme {
+                        border-color: brand.t(DividerGray);
+                    }
+                }
+            }
+        }
+    }
+
+    &:nth-child(3):after {
+        .lb_combo_info:not(.is_open) & {
+            @include mix.layout {
+                @include mix.mobile {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .le_rwp_collapsible & {
+        @include mix.layout {
+            @include mix.mobile {
+                padding-left: 16px;
+            }
+        }
+    }
+
+    &:not(:last-child) {
+        .le_rwp_collapsible & {
+            @include mix.layout {
+                @include mix.mobile {
+                    padding-bottom: 12px;
+                }
+            }
+        }
+    }
+
+    img,
+    .le_rwp_collapsible &>i {
+        @include mix.layout {
+            @include mix.mobile {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 10px;
+                height: 10px;
+                z-index: 1;
+            }
+        }
+    }
+
+    >i {
+        .le_rwp_collapsible & {
+            @include mix.layout {
+                @include mix.mobile {
+                    font-size: 10px;
+                    top: 2px;
+                }
+            }
+
+            @include mix.theme {
+                @include mix.mobile {
+                    color: brand.t(Green);
+
+                    @include mix.darkTheme {
+                        background: brand.t(LightBlack);
+                    }
+
+                    @include mix.brightTheme {
+                        background: brand.t(LightGray);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.lb_showmore {
+    @include mix.layout {
+        @include mix.mobile {
+            font-size: 10px;
+            text-align: center;
+            padding-top: 4px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(DarkGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(LightGray);
+            }
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                padding-left: 4px;
+                font-size: 8px;
+            }
+        }
+    }
+}
+
+.lb_csl_wrp {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+        }
+    }
+}
+
+.lb_btn_wrp {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.justifyContent(flex-end);
+            @include base.alignItems(flex-end);
+            @include base.flexDirection(column);
+            flex-wrap: wrap;
+        }
+    }
+}

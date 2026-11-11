@@ -1,0 +1,48 @@
+$activeView: mAsia !default;
+@use '../../../themes/colours/config'with ($activeView: $activeView,
+    $view: asia,
+    $language: eng,
+);
+@use '../../layout/css/base'as base;
+@use '_font';
+@use '../../layout/css/_layout_shared';
+@use '../../layout/css/_fl_layout_shared';
+@use '../../layout/css/_layout_sub_asia';
+$n_font1: 8px;
+$event_lsiting_header_minheight: 42px;
+$event_lsiting_overallcontent_minheight: 95px;
+// .handicap {
+// .title { // ttl (moved)
+//     padding-right: 2px;
+// }
+// }
+// .n_header {
+//     &.n_header_sports,
+//     &.n_header_promo {
+//         .title { // ttl (moved)
+//             font-size: $n_font1 + 4px !important;
+//         }
+//     }
+// }
+// .n_footer {
+//     font-size: $n_font1 + 3px !important;
+// }
+// .pop_tutorial {
+// 	.result_wrap {
+// 		font-size: $n_font1 + 2px;
+// 	}
+// }
+// [DES-808] Soccer Player Proposition Bet Type - start
+// .sld_new { // sev (moved)
+//     right: -2px;
+// }
+// [DES-808] Soccer Player Proposition Bet Type - end
+// pb_rmb_ls_tooltip not in used already
+// .pb_rmb_ls_tooltip {
+//     width: 180px;
+//     top: -87px;
+//     left: -83px;
+//     .fl & {
+//         left: -72px;
+//     }
+// }

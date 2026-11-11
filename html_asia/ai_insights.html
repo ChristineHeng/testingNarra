@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Narra - html template</title>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover,user-scalable=no"
+        />
+        <!-- <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#000"> -->
+        <!--Base Styles-->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="../assets/public/layout/css/basestyle.min.css"
+        />
+        <!--<link rel="stylesheet" type="text/css" href="../merchants/merchant1/css/style_asia.css">-->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="../assets/public/languages/eng/layout_asia.min.css"
+            id="detect_language"
+        />
+        <link rel="stylesheet" type="text/css" href="#" id="design_view" />
+
+        <script src="../assets/public/lib/jquery.js"></script>
+        <script src="../assets/public/layout/js/scripts_main.js"></script>
+        <script src="../assets/public/layout/js/scripts_asia.js"></script>
+    </head>
+
+    <body id="root">
+        <div class="n_container">
+            <div class="n_header n_header_sports">
+                <div class="n_back">
+                    <a class="n_back_link mock_cb_n_back_link" target="_self"
+                        ><i class="icon-fi-arrow-left"></i> Back</a
+                    >
+                </div>
+                <div class="title">
+                    <i class="icon-fi-insight"></i> AI Insights
+                </div>
+            </div>
+            <div class="n_content_wrap_wth_bcktop">
+                <div class="new_prcdTab">
+                    <div class="prcdWrp">
+                        <div
+                            class="prcdItm active"
+                            id="demoOnly_ssMatches_trigger"
+                        >
+                            Sister Song Matches
+                        </div>
+                        <div class="prcdItm" id="demoOnly_tipsRecord_trigger">
+                            Tips Record
+                        </div>
+                    </div>
+                </div>
+                <div id="demoOnly_insights_content"></div>
+            </div>
+        </div>
+        <div id="demoOnly_global_pop_item"></div>
+
+        <script>
+            $(document).ready(function () {
+                $("#demoOnly_global_pop_item").load(
+                    "_global_pop_item.html",
+                    function () {
+                        $("#main_footer")
+                            .unwrap()
+                            .load("../html_asia/_footer_eventlisting.html");
+                    }
+                );
+
+                // onload show ss matches page
+                // $("#demoOnly_insights_content").load('_ss_matches.html', function() {
+                //     toggleCollapsible();
+                //     pinClick(".fl_event_grp_wrp", ".fl_event_live_wrp");
+                //     pinClone(".fl_event_grp_wrp", ".n_container", ".fl_comp_h.pinned", ".fl_event_live_wrp");
+                //      $(".fl_team_info").click(() => {
+                //         $(".sev_popup").show();
+                //         $("body > .n_container").css("pointer-events", "none");
+                //         $("body > .n_container").css("display", "none");
+
+                //         $("#link_to_sev").load("_sev_mainpage_soccer.html", function () {
+                //             $(".n_footer").not(".pb_footer").load("../html_asia/_footer_innerfooter_sev.html");
+                //         });
+                //     })
+                // })
+
+                $("#demoOnly_insights_content").load(
+                    "_ss_tips_record.html",
+                    function () {
+                        $(".ss_rec_itm").on("click", function () {
+                            $(this)
+                                .addClass("active")
+                                .siblings()
+                                .removeClass("active");
+                        });
+                        $(".new_prcdTab").hide();
+                        $("#demoOnlyTemporarySSMatchesTrigger").on(
+                            "click",
+                            function () {
+                                const $this = $(this);
+                                const body = $("#demoOnly_insights_content");
+                                body.load("_ss_matches.html", function () {
+                                    $(".new_prcdTab").show();
+                                    // OverallEventListing("today", "_sev_mainpage_soccer.html");
+                                    toggleCollapsible();
+                                    pinClick(
+                                        ".fl_event_grp_wrp",
+                                        ".fl_event_live_wrp"
+                                    );
+                                    pinClone(
+                                        ".fl_event_grp_wrp",
+                                        ".n_container",
+                                        ".fl_comp_h.pinned",
+                                        ".fl_event_live_wrp"
+                                    );
+                                    $(".fl_team_info").click(() => {
+                                        $(".sev_popup").show();
+                                        $("body > .n_container").css(
+                                            "pointer-events",
+                                            "none"
+                                        );
+                                        $("body > .n_container").css(
+                                            "display",
+                                            "none"
+                                        );
+
+                                        $("#link_to_sev").load(
+                                            "_sev_mainpage_soccer.html",
+                                            function () {
+                                                $(".n_footer")
+                                                    .not(".pb_footer")
+                                                    .load(
+                                                        "../html_asia/_footer_innerfooter_sev.html"
+                                                    );
+                                            }
+                                        );
+                                    });
+                                });
+                            }
+                        );
+                    }
+                );
+
+                // $(".new_prcdTab .prcdItm").click(function () {
+                //     const $this = $(this);
+                //     $(".prcdItm").removeClass("active");
+                //     $(this).addClass("active");
+                //     const body = $("#demoOnly_insights_content");
+
+                //     if($this.attr('id') === "demoOnly_ssMatches_trigger") {
+                //         body.load('_ss_matches.html', function() {
+                //             // OverallEventListing("today", "_sev_mainpage_soccer.html");
+                //             toggleCollapsible();
+                //             pinClick(".fl_event_grp_wrp", ".fl_event_live_wrp");
+                //             pinClone(".fl_event_grp_wrp", ".n_container", ".fl_comp_h.pinned", ".fl_event_live_wrp");
+                //             $(".fl_team_info").click(() => {
+                //                 console.log("hi")
+                //                 $(".sev_popup").show();
+                //                 $("body > .n_container").css("pointer-events", "none");
+                //                 $("body > .n_container").css("display", "none");
+
+                //                 $("#link_to_sev").load("_sev_mainpage_soccer.html", function () {
+                //                     $(".n_footer").not(".pb_footer").load("../html_asia/_footer_innerfooter_sev.html");
+                //                 });
+                //             })
+                //         })
+                //     } else {
+                //         body.load('_ss_tips_record.html', function() {
+                //             $(".ss_rec_itm").on('click', function() {
+                //                 $(this).addClass('active').siblings().removeClass('active');
+                //             })
+                //         })
+                //     }
+                // });
+
+                // functions
+                const toggleCollapsible = () => {
+                    $(".fl_comp_h").click(function (e) {
+                        if (e.target.classList.contains("icon-fi-pin")) return;
+
+                        $(this)
+                            .find(".icon-fi-arrow-up1")
+                            .toggleClass("fl_rotate");
+                        $(this)
+                            .closest(".fl_event_grp_wrp")
+                            .find(".ss_mxcs_wrap")
+                            .slideToggle(200);
+                    });
+
+                    $(".fl_el_h").click(function (e) {
+                        $(this)
+                            .find(".icon-fi-full-up")
+                            .toggleClass("fl_rotate");
+                        $(this)
+                            .next()
+                            .find(".fl_event_grp_wrp")
+                            .find(".icon-fi-arrow-up1")
+                            .toggleClass("fl_rotate");
+                        $(this)
+                            .next()
+                            .find(".fl_event_grp_wrp")
+                            .find(".ss_mxcs_wrap")
+                            .slideToggle(200);
+                    });
+                };
+            });
+        </script>
+    </body>
+</html>

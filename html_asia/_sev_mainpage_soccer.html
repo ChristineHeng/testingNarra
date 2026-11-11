@@ -1,0 +1,102 @@
+<div class="n_sev_view n_sticky">
+    <div class="n_visualization_wrap soccer">
+        <div class="bg_mask ply_mask" style="display: none;"></div>
+        <div class="n_header_sev">
+            <div class="n_back"><a class="n_back_link" id="close_sev_popup"><i class="icon-fi-arrow-left"></i> 返回</a>
+            </div>
+            <div class="s_title_wrp">
+                <img class="fl_s_title_img" src="../assets/public/layout/images/icon/icon_s1.png">
+                <div class="s_title">FIFA U20世界杯2019(在波兰)FIFA U20世界杯2019(在波兰)FIFA U20世界杯2019(在波兰)</div>
+                <div class="event_selection_expand">
+                    <i class="icon-fi-arrow-down1" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="n_balance bal_promo">
+                (RMB)<br>
+                999,888,777.66
+                <div class="promo_arrow moving_down">
+                    <div class="double_angle_down right_pd"></div>
+                </div>
+            </div>
+        </div>
+        <div id="s_sev_top" class="s_sev_top">
+            <div class="n_sev_top" id="demo_sample_dashboard_scenarios">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="n_content_wrap_wth_bcktop" id="sev_content">
+    <div class="sev_content">
+        <!--load from "_sev_dashboard_innerpage_shared.html"-->
+        <div class="sev_inner_content" id="sev_all">
+            <div class="n_sev_item_content_wrap">
+                <!--load from "../html_asia/_sev_content_template.html"-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    //refer to
+     //1. _sev_scoreboard_global_prematch.html,
+     //2. _sev_scoreboard_soccer_live.html-->
+
+    //var d1 = $.get("../html_asia/_sev_scoreboard_soccer_live.html");
+    //var d2 = $.get("../html_asia/_sev_dashboard_innerpage_shared.html");
+    //var d3 = $.get("_sev_content_soccer_main.html");
+    //var d4 = $.get("_sev_content_soccer_others.html");
+    //var d5 = $.get("_sev_content_soccer_corner.html");
+    //var d6 = $.get("_sev_content_soccer_special.html");
+    //var d7 = $.get("_sev_content_soccer_booking.html");
+    //var d8 = $.get("../html_asia/_global_norecord.html");
+
+    //$.when(d1, d2, d3, d4, d5, d6, d7, d8 ).done(function(data1, data2, data3, data4, data5, data6, data7, data8) {
+    //    $("#demo_sample_dashboard_scenarios").empty().append(data1[0]);
+    //    $(".sev_content").prepend(data2[0]);
+    //    $("#sev_all .n_sev_item_content_wrap").append(data3[0]);
+    //    $("#sev_all .n_sev_item_content_wrap").append(data4[0]);
+    //    $("#sev_all .n_sev_item_content_wrap").append(data5[0]);
+    //    $("#sev_all .n_sev_item_content_wrap").append(data6[0]);
+    //    $("#sev_all .n_sev_item_content_wrap").append(data7[0]);
+    //    $("#sev_all .n_sev_item_content_wrap").append(data8[0]);
+    //    $("#sev_all").siblings(".sev_inner_content").hide();
+    //    SEV_Group("", true);
+    //    //$("#MockOnly_sb_compact_soccer").show();
+    //    //$("#MockOnly_sb_compact_soccer").siblings(".sb_compact").hide();
+    //});
+    // window.location.href = localStorage.getItem("isFacelift") == "true" ?"el-marble-magic-live.html" :"el-marble-magic-live.html";
+
+    var sevScoreboardPath = window.sevSoccerScoreboardOverride || "../html_asia/_sev_scoreboard_soccer_live.html";
+    delete window.sevSoccerScoreboardOverride;
+
+    var d1 = $.get(sevScoreboardPath);
+    var d2 = $.get("../html_asia/_sev_dashboard_innerpage_shared.html");
+    var d3 = $.get( localStorage.getItem("isFacelift") == "true" ? "../html_asia/_sev_content_template.html" : "../html_asia/_sev_content_template.html");
+    var d4 = $.get("../html_asia/_global_norecord.html");
+
+    $.when(d1, d2, d3, d4).done(function (data1, data2, data3, data4) {
+
+        $("#demo_sample_dashboard_scenarios").empty().append(data1[0]);
+        $(".sev_content").prepend(data2[0]);
+        $("#sev_all .n_sev_item_content_wrap").append(data3[0]);
+        $("#sev_all .n_sev_item_content_wrap").append(data4[0]);
+        $("#sev_all").siblings(".sev_inner_content").hide();
+        
+        $("#MockOnly_sb_compact_soccer").show();
+        $("#MockOnly_sb_compact_soccer").siblings(".sb_compact").hide();
+        SEV_Group("", true);
+    });
+
+    //Cyber Battle View: start
+    if (window.location.href.indexOf("cyber") > -1) {
+        $(".n_visualization_wrap").removeClass("soccer").addClass("cs1");
+        $(".s_title_wrp").find(".icon").removeClass("icon-fi-title-s1").addClass("icon-fi-title-cs1");
+        $(".s_title").text("VS - IM 独家FIFA20意大利");
+
+        detectSportsType();
+    }
+    //Cyber Battle View: end
+
+</script>

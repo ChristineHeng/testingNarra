@@ -1,0 +1,14 @@
+//Import from Sportradar
+//generated from https://widgets.sir.sportradar.com/live-match-tracker#matches:(matchId:31976951,sportId:1)
+@use '_lmt_default';
+
+//Customize for Raichu
+.mainbody_day {
+  background: #fff;
+}
+.mainbody_night {
+  background: #000;
+}
+.mainbody_default {
+  background: #333436;
+}

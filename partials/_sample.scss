@@ -1,0 +1,492 @@
+// Reference only. Do not include this file in layout/theme compile.
+// Copy examples into files inside partials/components/.
+// Standard component header:
+@use "../../assets/themes/colours/brand"as brand;
+@use "../../assets/public/layout/css/base"as base;
+@use "../mixin"as mix;
+
+// Recommended order for current component migration:
+// 1. output folder: layout / theme
+// 2. view wrapper: mobile / web inside layout or theme when needed
+// 3. specific view: mAsia / mEuro / mCyberbattle / mAsiaCyberbattle / mAsiaEuro / wAsia
+// 4. language: languageName(...) / languageNames(...) / notLanguageName(...) / notLanguageNames(...)
+// 5. theme: brightTheme / darkTheme / redTheme / themeName(...) / themeNames(...)
+// 6. CSS property
+// Concept: Selector-Scoped Output
+// Use this when the same class has both layout CSS and theme CSS.
+// Keep the selector once, then split output inside it.
+// Preferred sample shape: put layout/theme first, then mobile/web inside.
+.sample_selector_scoped_output {
+    @include mix.layout {
+        @include mix.mobile {
+            font-size: 20px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(Orange);
+            }
+        }
+    }
+}
+
+// Nested selectors: selector first, then layout/theme inside.
+// Use this for children, modifiers, pseudo-elements, parent conditions, and state-owned children.
+.sample_nested_selector_scoped_output {
+    img {
+        @include mix.layout {
+            @include mix.mobile {
+                margin-right: 6px;
+            }
+        }
+    }
+
+    &.change {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.borderRadius(4px);
+                padding: 2px;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                background: brand.t(BG_handiChange);
+                color: brand.t(Color_handiChange);
+            }
+        }
+    }
+
+    &.active i {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.rotate(0deg);
+            }
+        }
+    }
+
+    &:before {
+        @include mix.layout {
+            @include mix.mobile {
+                content: "";
+                position: absolute;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                background: brand.t(Orange);
+            }
+        }
+    }
+
+    .parent & {
+        @include mix.layout {
+            @include mix.mobile {
+                margin-left: 10px;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                color: brand.t(Gray03);
+            }
+        }
+    }
+}
+
+// Parent state inside a target pseudo-element: keep this nesting when the
+// parent condition changes the pseudo-element owned by the target.
+.sample_nested_pseudo_parent_state {
+    &:after {
+        @include mix.layout {
+            @include mix.mobile {
+                content: "";
+                display: none;
+                position: absolute;
+            }
+        }
+
+        .parent.active & {
+            @include mix.layout {
+                @include mix.mobile {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+// Layout only: all mobile views
+.sample_layout_mobile {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            @include base.justifyContent(center);
+        }
+    }
+}
+
+// Layout only: each mobile view
+.sample_layout_m_asia {
+    @include mix.layout {
+        @include mix.mAsia {
+            display: block;
+        }
+    }
+}
+
+.sample_layout_m_euro {
+    @include mix.layout {
+        @include mix.mEuro {
+            display: flex;
+        }
+    }
+}
+
+.sample_layout_m_cyberbattle {
+    @include mix.layout {
+        @include mix.mCyberbattle {
+            display: grid;
+        }
+    }
+}
+
+// Layout only: web Asia
+.sample_layout_w_asia {
+    @include mix.layout {
+        @include mix.wAsia {
+            display: table;
+        }
+    }
+}
+
+// Layout only: Asia + Cyberbattle mobile bundle
+.sample_layout_m_asia_cyberbattle {
+    @include mix.layout {
+        @include mix.mAsiaCyberbattle {
+            @include base.borderRadius(4px);
+        }
+    }
+}
+
+// Layout only: Asia + Euro mobile, exclude Cyberbattle.
+.sample_layout_m_asia_euro {
+    @include mix.layout {
+        @include mix.mAsiaEuro {
+            min-height: 40px;
+        }
+    }
+}
+
+// Layout only: all mobile views except Cyberbattle.
+.sample_layout_mobile_not_cyberbattle {
+    @include mix.layout {
+        @include mix.mAsiaEuro {
+            min-height: 40px;
+        }
+    }
+}
+
+// Same Asia + Euro only idea with separated layout and theme CSS.
+.sample_m_asia_euro_only {
+    @include mix.layout {
+        @include mix.mAsiaEuro {
+            @include base.flexbox();
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mAsiaEuro {
+            @include mix.brightTheme {
+                color: brand.t(Orange);
+            }
+        }
+    }
+}
+
+// Language helpers:
+// Use languageName(xxx) when the rule should output only for that language folder.
+// Note: Vietnamese folder name is vn.
+.sample_layout_lang_chs_named {
+    @include mix.layout {
+        @include mix.languageName(chs) {
+            font-size: 13px;
+        }
+    }
+}
+
+// Use notLanguageName(xxx) when every language except that one should receive the rule.
+.sample_layout_not_language_chs {
+    @include mix.layout {
+        @include mix.notLanguageName(chs) {
+            min-width: 96px;
+        }
+    }
+}
+
+// Example with another language.
+.sample_layout_lang_vn_named {
+    @include mix.layout {
+        @include mix.languageName(vn) {
+            line-height: 1.4;
+        }
+    }
+}
+
+// Same layout rule for 2 languages: English + Vietnamese.
+.sample_layout_lang_eng_vn {
+    @include mix.layout {
+        @include mix.languageNames(eng, vn) {
+            min-width: 112px;
+        }
+    }
+}
+
+// Same notLanguageName(xxx) idea, but for theme-token output.
+.sample_theme_not_language_eng {
+    @include mix.theme {
+        @include mix.notLanguageName(eng) {
+            color: brand.t(ActiveLight);
+        }
+    }
+}
+
+// Same layout rule for all languages except English + Vietnamese.
+.sample_layout_not_lang_eng_vn {
+    @include mix.layout {
+        @include mix.notLanguageNames(eng, vn) {
+            min-width: 96px;
+        }
+    }
+}
+
+// Theme only: all themes
+.sample_theme_all {
+    @include mix.theme {
+        color: brand.t(ActiveLight);
+    }
+}
+
+// Theme only: bright / dark / red theme groups
+.sample_theme_group {
+    @include mix.theme {
+        @include mix.brightTheme {
+            color: brand.t(Orange);
+        }
+
+        @include mix.darkTheme {
+            color: brand.t(ActiveLight);
+        }
+
+        @include mix.redTheme {
+            border-color: brand.t(PeachHDP);
+        }
+    }
+}
+
+// Theme only: each exact theme
+.sample_theme_name {
+    @include mix.theme {
+        @include mix.themeName(default) {
+            color: brand.t(ActiveLight);
+        }
+
+        @include mix.themeName(default1) {
+            color: brand.t(Orange);
+        }
+
+        @include mix.themeName(red) {
+            color: brand.t(PeachHDP);
+        }
+    }
+}
+
+// Same theme rule for 2 exact themes: default + dark1.
+.sample_theme_default_dark1 {
+    @include mix.theme {
+        @include mix.themeNames(default, dark1) {
+            color: brand.t(ActiveLight);
+        }
+    }
+}
+
+// Important: theme groups can overlap exact themes.
+// default1 is inside darkTheme, so exclude it from darkTheme when needed.
+.sample_dark_except_default1 {
+    @include mix.theme {
+        @include mix.darkTheme {
+            @include mix.notThemeName(default1) {
+                color: brand.t(Gray03);
+            }
+        }
+
+        @include mix.themeName(default1) {
+            color: brand.t(Stroke);
+        }
+    }
+}
+
+// View + language condition:
+// Example: mEuro + English only.
+.sample_m_euro_eng {
+    @include mix.layout {
+        @include mix.mEuro {
+            @include mix.languageName(eng) {
+                min-width: 120px;
+            }
+        }
+    }
+}
+
+// View + 2 languages condition:
+// Example: mAsia + English/Vietnamese only.
+.sample_m_asia_eng_vn {
+    @include mix.layout {
+        @include mix.mAsia {
+            @include mix.languageNames(eng, vn) {
+                min-width: 112px;
+            }
+        }
+    }
+}
+
+// View + theme condition:
+// Example: apply border only on mEuro + green theme.
+.sample_m_euro_green {
+    @include mix.theme {
+        @include mix.mEuro {
+            @include mix.themeName(green) {
+                border: 1px solid brand.t(Stroke);
+            }
+        }
+    }
+}
+
+// View + language + theme condition:
+// Example: apply color only on mAsia + English + bright themes.
+.sample_m_asia_eng_bright {
+    @include mix.theme {
+        @include mix.mAsia {
+            @include mix.languageName(eng) {
+                @include mix.brightTheme {
+                    color: brand.t(Orange);
+                }
+            }
+        }
+    }
+}
+
+// View + 2 languages + 2 exact themes:
+// Example: mAsia + English/Vietnamese + default/dark1.
+.sample_m_asia_eng_vn_default_dark1 {
+    @include mix.theme {
+        @include mix.mAsia {
+            @include mix.languageNames(eng, vn) {
+                @include mix.themeNames(default, dark1) {
+                    color: brand.t(ActiveLight);
+                }
+            }
+        }
+    }
+}
+
+// Same class with separated layout and theme CSS.
+.sample_split_layout_theme {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+        }
+
+        @include mix.web {
+            display: block;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(Orange);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(ActiveLight);
+            }
+        }
+    }
+}
+
+// Keyframes:
+// A percentage block is the keyframe step. For layout-only or theme-only
+// animations, guard the complete at-rule so the other output does not receive
+// an empty @keyframes block.
+
+// Layout-only keyframe: mobile layout output only.
+@include mix.layout {
+    @include mix.mobile {
+        @include base.keyframes(sample_layout_only) {
+            0% {
+                @include base.transform(translateY(4px));
+                opacity: 0;
+            }
+
+            100% {
+                @include base.transform(translateY(0));
+                opacity: 1;
+            }
+        }
+    }
+}
+
+// Theme-only keyframe: mobile theme output only.
+@include mix.theme {
+    @include mix.mobile {
+        @include base.keyframes(sample_theme_only) {
+            0% {
+                background: brand.t(BG_handiChange);
+                color: brand.t(Color_handiChange);
+            }
+
+            100% {
+                background: brand.t(BG_n_header);
+                color: brand.t(ActiveLight);
+            }
+        }
+    }
+}
+
+// Mixed keyframe: split layout and theme declarations inside each step.
+// The outer mobile gate prevents empty keyframes in web output. Use this form
+// when the layout and theme output are combined into one CSS file. If layout
+// and theme are separate files, keep one complete keyframe definition in one
+// output or use CSS custom properties instead of splitting the same name.
+@include mix.mobile {
+    @include base.keyframes(sample_layout_theme_mixed) {
+        0% {
+            @include mix.layout {
+                @include base.transform(translateY(4px));
+                opacity: 0;
+            }
+
+            @include mix.theme {
+                background: brand.t(BG_handiChange);
+                color: brand.t(Color_handiChange);
+            }
+        }
+
+        100% {
+            @include mix.layout {
+                @include base.transform(translateY(0));
+                opacity: 1;
+            }
+
+            @include mix.theme {
+                background: brand.t(BG_n_header);
+                color: brand.t(ActiveLight);
+            }
+        }
+    }
+}

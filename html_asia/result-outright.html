@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Narra - html template</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover,user-scalable=no" />
+		<!-- <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#000"> -->
+		<!--Base Styles-->
+		<link rel="stylesheet" type="text/css" href="../assets/public/layout/css/basestyle.min.css" />
+		<!--<link rel="stylesheet" type="text/css" href="../merchants/merchant1/css/style_asia.css">-->
+		<link rel="stylesheet" type="text/css" href="../assets/public/languages/eng/layout_asia.min.css" id="detect_language" />
+		<link rel="stylesheet" type="text/css" href="#" id="design_view" />
+
+		<script src="../assets/public/lib/jquery.js"></script>
+		<script src="../assets/public/layout/js/scripts_main.js"></script>
+		<script src="../assets/public/layout/js/scripts_asia.js"></script>
+	</head>
+
+	<body id="root" class="lvl_field">
+		<div class="n_container">
+			<div class="n_header n_header_sports header_center" id="demoonly_sample1">
+				<div class="n_back">
+					<a class="n_back_link" href="javascript:history.back()"><i class="icon-fi-arrow-left"></i> 返回</a>
+				</div>
+				<div class="tab_group">
+					<div class="tab" onclick="window.location.href = 'result-live.html'">滚球</div>
+					<div class="tab" onclick="window.location.href = 'result-completed.html'">完成</div>
+					<div class="tab active" onclick="window.location.href = 'result-outright.html'">冠军</div>
+				</div>
+				<div class="n_balance">
+					(RMB)<br />
+					999,999,999.99
+				</div>
+			</div>
+			<div class="n_content_wrap">
+				<div class="filter_group n_sticky" id="result_outright_filter">
+					<div class="filter_item selectbox_grp">
+						<div class="selectbox_title">
+							<div class="selectbox_titlerow">足球</div>
+							<div class="select" style="display: none">
+								<select class="filter_item selectbox_grp" name="slct" id="slct1">
+									<option value="1">足球</option>
+									<option value="2">足球足球</option>
+									<option value="3">足球足球足球足球足球</option>
+								</select>
+							</div>
+							<div class="betslip_arrow">
+								<i class="icon-fi-angle-down" aria-hidden="true"></i>
+							</div>
+							<div class="ob_st_popup" style="display: none">
+								<div class="ob_st_content">
+									<div class="ob_st_rw active">足球</div>
+									<div class="ob_st_rw">足球足球</div>
+									<div class="ob_st_rw">足球足球足球足球足球</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="filter_item selectbox_grp">
+						<div class="selectbox_title">
+							<div class="selectbox_titlerow">所有联赛所有联赛所有联赛所有联赛所有联赛所有联赛所有联赛所有联赛</div>
+							<div class="select" style="display: none">
+								<select class="filter_item selectbox_grp" name="slct" id="slct2">
+									<option value="1">所有联赛</option>
+									<option value="2">所有联赛所有联赛</option>
+									<option value="3">所有联赛所有联赛所有联赛</option>
+								</select>
+							</div>
+							<div class="betslip_arrow">
+								<i class="icon-fi-angle-down" aria-hidden="true"></i>
+							</div>
+							<div class="ob_st_popup" style="display: none">
+								<div class="ob_st_content">
+									<div class="ob_st_rw active">所有联赛</div>
+									<div class="ob_st_rw">T所有联赛所有联赛</div>
+									<div class="ob_st_rw">所有联赛所有联赛所有联赛</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="filter_item selectbox_grp">
+						<div class="selectbox_title">
+							<div class="selectbox_titlerow">22/10/2019</div>
+							<div class="select" style="display: none">
+								<select class="filter_item selectbox_grp" name="slct" id="slct3">
+									<option value="1">22/10/2019</option>
+									<option value="2">22/10/2019</option>
+									<option value="3">22/10/2019</option>
+								</select>
+							</div>
+							<div class="betslip_arrow">
+								<i class="icon-fi-angle-down" aria-hidden="true"></i>
+							</div>
+							<div class="ob_st_popup" style="display: none">
+								<div class="ob_st_content">
+									<div class="ob_st_rw active">22/10/2019</div>
+									<div class="ob_st_rw">22/10/2019</div>
+									<div class="ob_st_rw">22/10/2019</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="disclaimer n_sticky" id="demoonly_sample3">
+					** Please note that the display time is based on GMT-4 hours
+					<br />
+					** C : event cancelled
+					<br />
+					** Please note that all results are including overtime
+				</div>
+				<div class="n_event_listing outright">
+					<div class="n_grp_header lv2 n_sticky">
+						<div class="competition">
+							<div>UEFA Champions League 2016/2017 - Winner 15/07/2017</div>
+							<div class="icon">
+								<i class="icon-fi-arrow-up1"></i>
+							</div>
+						</div>
+					</div>
+					<div class="outrightresult_wrap">
+						<div class="outrightresult_header">
+							<div class="teamInfo">League</div>
+							<div class="teamInfo">Winner</div>
+						</div>
+						<div class="outrightresult_item">
+							<div class="team_wrap">
+								<div class="teamInfo">
+									<div class="datetime">19/09/2019 12:00:00 AM</div>
+									<div class="league">*UEFA Champions League 2019/09/19 - Highest Scoring Team</div>
+								</div>
+								<div class="teamInfo">
+									<div class="teamnameWrap">
+										<div class="teamIcon">
+											<img class="fl_team_img" src="../assets/public/layout/images/fl_team_home.svg" />
+										</div>
+										<div class="teamname">NK Dinamo Zagreb</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="outrightresult_item">
+							<div class="team_wrap">
+								<div class="teamInfo">
+									<div class="datetime">29/06/2017 9:55:00 AM</div>
+									<div class="league">AFC Champions League</div>
+								</div>
+								<div class="teamInfo">
+									<div class="teamnameWrap">
+										<div class="teamIcon">
+											<img class="fl_team_img" src="../assets/public/layout/images/fl_team_away.svg" />
+										</div>
+										<div class="teamname">Western Sydney Wanderers FC (N)</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="n_event_listing outright">
+					<div class="n_grp_header lv2 n_sticky">
+						<div class="competition">
+							<div>UEFA Champions League 2016/2017 - Winner 15/07/2017</div>
+							<div class="icon">
+								<i class="icon-fi-arrow-up1"></i>
+							</div>
+						</div>
+					</div>
+					<div class="outrightresult_wrap">
+						<div class="outrightresult_header">
+							<div class="teamInfo">League</div>
+							<div class="teamInfo">Winner</div>
+						</div>
+						<div class="outrightresult_item">
+							<div class="team_wrap">
+								<div class="teamInfo">
+									<div class="datetime">29/06/2017 9:55:00 AM</div>
+									<div class="league">China Super League</div>
+								</div>
+								<div class="teamInfo">
+									<div class="teamnameWrap">
+										<div class="teamIcon">
+											<img class="fl_team_img" src="../assets/public/layout/images/fl_team_home.svg" />
+										</div>
+										<div class="teamname">Guangzhou Evergrande Taobao</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="outrightresult_item">
+							<div class="team_wrap">
+								<div class="teamInfo">
+									<div class="datetime">29/06/2017 9:55:00 AM</div>
+									<div class="league">Japan J-League Division 1</div>
+								</div>
+								<div class="teamInfo">
+									<div class="teamnameWrap">
+										<div class="teamIcon">
+											<img class="fl_team_img" src="../assets/public/layout/images/fl_team_home.svg" />
+										</div>
+										<div class="teamname">Kawasaki Frontale</div>
+									</div>
+									<div class="teamnameWrap">
+										<div class="teamIcon">
+											<img class="fl_team_img" src="../assets/public/layout/images/fl_team_away.svg" />
+										</div>
+										<div class="teamname">Ural Sverdlovsk Oblast</div>
+									</div>
+									<div class="teamnameWrap">
+										<div class="teamIcon">
+											<img class="fl_team_img" src="../assets/public/layout/images/fl_team_home.svg" />
+										</div>
+										<div class="teamname">Bourg en Bresse Peronnas 01</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="eventListingRefresh btn_backtop" id="toTop">
+			<i class="icon-fi-backtotop-euro"></i>
+		</div>
+		<div class="popup_overWrap solid" id="mybet"></div>
+
+		<script>
+			$(document).ready(function () {
+				$('#mybet').load('_popup_mybet_unsettled.html');
+				$('#mybet').hide();
+				$('.n_grp_header').click(function () {
+					if (localStorage.getItem('isFacelift') === 'true') {
+						$(this).find('.icon').toggleClass('fl_rotate');
+					}
+					$(this).closest('.n_event_listing').find('.outrightresult_wrap').slideToggle(200);
+				});
+				//add in sticky header: demo only
+				setTimeout(function () {
+					$('#demoonly_sample2').css('top', $('#demoonly_sample1').outerHeight());
+					$('#demoonly_sample3').css('top', $('#demoonly_sample1').outerHeight() + $('#demoonly_sample2').height());
+					$('.n_grp_header').css('top', $('#demoonly_sample1').outerHeight() + $('#demoonly_sample2').outerHeight() + $('#demoonly_sample3').outerHeight());
+					$('.lv2').css('top', $('#demoonly_sample1').outerHeight() + $('#demoonly_sample2').outerHeight() + $('#demoonly_sample3').outerHeight());
+				}, 10);
+				if (localStorage.getItem('isFacelift') === 'true') {
+					$('#result_outright_filter .filter_item').click(function () {
+						$(this).find('.ob_st_popup').toggle();
+						$(this).find('.betslip_arrow').toggleClass('fl_rotate');
+					});
+				} else {
+					$('#result_outright_filter .filter_item').find('.select').show();
+				}
+			});
+		</script>
+	</body>
+</html>

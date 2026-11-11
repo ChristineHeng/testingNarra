@@ -1,0 +1,34 @@
+﻿// when not chrome (safari & UC) in IOS,
+// for iOS chrome, all android > remain full screen
+// will lock address bar in notch phone (cannot enter full screen)
+// for ticket: SFCRQ-2245
+html, body {
+	touch-action: manipulation;
+	-ms-touch-action: manipulation;
+	-webkit-text-size-adjust: none;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+#root > .n_container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	overflow-scrolling: touch;
+}
+
+.sev_popup {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	overflow-scrolling: touch;
+}

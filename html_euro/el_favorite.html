@@ -1,0 +1,660 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Narra - html template</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover,user-scalable=no" />
+		<!--Base Styles-->
+		<link rel="stylesheet" type="text/css" href="../assets/public/layout/css/basestyle.min.css" />
+		<!--<link rel="stylesheet" type="text/css" href="../merchants/merchant1/css/style_euro.css">-->
+		<link rel="stylesheet" type="text/css" href="../assets/public/languages/eng/layout_euro.min.css" id="detect_language" />
+		<!--theme-->
+		<link rel="stylesheet" type="text/css" href="#" id="design_view" />
+		<!-- Public JS -->
+		<script src="../assets/public/lib/jquery.js"></script>
+		<script src="../assets/public/layout/js/scripts_main.js"></script>
+		<script src="../assets/public/layout/js/scripts_euro.js"></script>
+	</head>
+
+	<body id="root" class="euro">
+		<div class="n_container">
+			<div class="n_header n_header_main">
+				<!-- main header here-->
+				<div class="heder_lf">
+					<div class="lf_menu">
+						<i class="icon-fi-left-menu"></i>
+					</div>
+					<div class="v_split"></div>
+					<div class="logo">
+						<img src="../merchants/merchant1/images/logo.png" />
+					</div>
+				</div>
+				<div class="heder_rt">
+					<i class="icon-fi-n-results dontcoopythisclass_sample_button_results"></i>
+					<div class="item demoOnlyDontCopt_betslip">
+						<i class="icon-fi-n-betlist"></i>
+						<div class="noti mybet_noti_cancel">2</div>
+						<div class="noti mybet_noti_pending">1</div>
+					</div>
+					<div class="er_myacct">
+						<i class="icon-fi-n-mine dontcoopythisclass_sample_button_myacct"></i>
+						<div class="red_dot"></div>
+					</div>
+					<div class="n_balance">
+						<div class="currency">(RMB)</div>
+						7,676,100,962,132.55
+					</div>
+				</div>
+			</div>
+			<div class="n_content_wrap_wth_bcktop with_ref">
+				<div class="el_top_panel n_sticky">
+					<div class="n_annoucement">
+						<div class="n_annoucement_icon sample_dontcopy_mock_link_annouce">
+							<i class="icon-fi-announcements"></i>
+							Announcements
+						</div>
+						<div class="n_annoucement_text">
+							<marquee scrollamount="3">
+								<span style="margin-left: 20px"> [足球][墨西哥杯] '艾特莱-vs-帕丘卡' -30/07. *直播 由于错误显示分数，注单号：[1907302235531883,1907302235491858 ] 将被退款。正确运行的赛事分数是[1-0]而不是[0-0]。 </span>
+								<span style="margin-left: 20px"> [足球][美国职业大联盟] '科罗拉多急流-vs-新英伦革命' -04/07. *直播。由于直播中断，这场赛事将从网页删除。造成不便之处，敬请原谅！。 *** </span>
+								<span style="margin-left: 20px"> 请重新检查您的投注单与账户结余，造成不便之处，敬请原谅！ ** end!!</span>
+							</marquee>
+						</div>
+					</div>
+					<div class="selected_nav" id="demoOnly_header_euro" style="display: none">Euro Cup 2021</div>
+					<div class="selected_nav" id="demoOnly_header_inplay" style="display: none"><i class="icon-fi-n-liveball"></i>In-play Events</div>
+					<div class="selected_nav" id="demoOnly_header_today" style="display: none">
+						<i class="icon-fi-upcoming"></i>Today's Events
+						<div class="fltr_grp fltr_grp_test_el_top_panel">
+							<i class="icon-fi-n-filter-league"></i>
+							<div class="fltr_dd" style="display: none">
+								<div class="fltr_dd_itm active">All</div>
+								<div class="fltr_dd_itm">Next 3 Hours</div>
+								<div class="fltr_dd_itm">Next 6 Hours</div>
+								<div class="fltr_dd_itm">Next 9 Hours</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="el_header_grp n_sticky">
+					<div class="er_main_menu smaller_tab" id="menu_scroll">
+						<div class="m_tab" id="featured_tab">
+							<div class="icon home"><i class="icon-fi-n-popular"></i></div>
+							Featured
+						</div>
+						<div class="v_split"></div>
+						<div class="m_tab" id="obAllBoost_tab">
+							<div class="icon home"><i class="icon-fi-odds-boost"></i></div>
+							Odds Boost
+						</div>
+						<div class="v_split"></div>
+						<div class="m_tab active" id="favorite_tab">
+							<!-- <div class="m_tab" id="fav_tab"> -->
+							<div class="icon fav">
+								<i class="icon-fi-n-myfav"></i>
+								<sup>1</sup>
+							</div>
+							Favorites (demo)
+						</div>
+						<div class="v_split"></div>
+						<div class="m_tab" id="all_tab">
+							<div class="icon fav">
+								<i class="icon-fi-all-sports"></i>
+								<sup>142</sup>
+							</div>
+							All Sports
+						</div>
+						<div class="v_split"></div>
+						<div class="m_tab" id="soccer_tab">
+							<div class="icon">
+								<i class="icon-fi-title-s1"></i>
+								<sup>420</sup>
+							</div>
+							Soccer
+						</div>
+						<div class="v_split"></div>
+						<div class="m_tab" id="racing_tab">
+							<div class="icon">
+								<i class="icon-fi-title-s1001"></i>
+								<sup>40</sup>
+							</div>
+							Racing
+						</div>
+						<div class="v_split"></div>
+						<div class="m_tab" id="cyber_sport_tab">
+							<div class="icon">
+								<i class="icon-fi-title-cyber-sport"></i>
+								<sup>40</sup>
+							</div>
+							Cyber Sport
+						</div>
+						<div class="v_split"></div>
+						<div class="m_tab" id="basketball_tab">
+							<div class="icon">
+								<i class="icon-fi-title-s2"></i>
+								<sup>300</sup>
+							</div>
+							Basketball
+						</div>
+						<div class="v_split"></div>
+						<div class="m_tab" id="esports_tab">
+							<div class="icon">
+								<i class="icon-fi-title-esports"></i>
+								<sup>300</sup>
+							</div>
+							Esports
+							<div class="new_tag">New</div>
+						</div>
+						<div class="v_split"></div>
+						<div class="m_tab" id="cricket_tab">
+							<div class="icon">
+								<i class="icon-fi-title-s13"></i>
+								<sup>300</sup>
+							</div>
+							板球
+						</div>
+						<div class="v_split"></div>
+						<div class="m_tab" id="tennis_tab">
+							<div class="icon">
+								<i class="icon-fi-title-s3"></i>
+								<sup>3</sup>
+							</div>
+							Tennis
+						</div>
+						<div class="v_split"></div>
+						<div class="m_tab" id="table_tennis_tab">
+							<div class="icon">
+								<i class="icon-fi-title-s36"></i>
+								<sup>3</sup>
+							</div>
+							Table Tennis
+						</div>
+						<div class="v_split"></div>
+						<div class="m_tab" id="badminton_tab">
+							<div class="icon">
+								<i class="icon-fi-title-s7"></i>
+							</div>
+							Badminton
+							<div class="new_tag">新</div>
+						</div>
+						<div class="v_split"></div>
+						<div class="m_tab" id="baseball_tab">
+							<div class="icon">
+								<i class="icon-fi-title-s8"></i>
+							</div>
+							Baseball
+							<div class="new_tag">新</div>
+						</div>
+						<div class="v_split"></div>
+						<div class="m_tab" id="icehockey_tab">
+							<div class="icon">
+								<i class="icon-fi-title-s25"></i>
+							</div>
+							Ice Hockey
+						</div>
+						<div class="v_split"></div>
+						<div class="m_tab" id="volleyball_tab">
+							<div class="icon">
+								<i class="icon-fi-title-s40"></i>
+							</div>
+							Volleyball
+							<div class="new_tag">新</div>
+						</div>
+						<div class="v_split"></div>
+						<div class="m_tab" id="virtual_tab">
+							<div class="icon">
+								<i class="icon-fi-title-s52"></i>
+							</div>
+							Virtual
+						</div>
+						<div class="m_tab" id="american_football_tab">
+							<div class="icon">
+								<i class="icon-fi-title-s19"></i>
+							</div>
+							American Football
+							<div class="new_tag">新</div>
+						</div>
+						<div class="m_tab" id="rugby_tab">
+							<div class="icon">
+								<i class="icon-fi-title-s31"></i>
+							</div>
+							Rugby
+							<div class="new_tag">新</div>
+						</div>
+						<div class="m_tab" id="snooker_tab">
+							<div class="icon">
+								<i class="icon-fi-title-s34"></i>
+							</div>
+							Snooker / Pool
+							<div class="new_tag">新</div>
+						</div>
+					</div>
+				</div>
+				<div class="el_header n_sticky" id="demoOnly_sportsheader">
+					<div class="sport_info"><i class="icon-fi-title-esports icon"></i>Esports</div>
+					<div class="see_all"><i class="icon-fi-arrow-up1"></i></div>
+				</div>
+				<div class="sub_menu_panel n_sticky">
+					<div id="el_nav_slider3" class="n_sports_menu slider_wrap_flexi n_sticky n_sports_menu_es">
+						<div class="item_wrap active">
+							<div class="item">
+								<i class="icon-fi-title-s63"></i>
+								LOL
+							</div>
+						</div>
+						<div class="item_wrap">
+							<div class="item">
+								<i class="icon-fi-title-s64"></i>
+								DOTA2
+							</div>
+						</div>
+						<div class="item_wrap">
+							<div class="item">
+								<i class="icon-fi-title-s65"></i>
+								CS:GO
+							</div>
+						</div>
+						<div class="item_wrap">
+							<div class="item">
+								<i class="icon-fi-title-s66"></i>
+								KOG
+							</div>
+						</div>
+						<div class="item_wrap demoOnly_activeTabSlider">
+							<div class="item">
+								<i class="icon-fi-title-s66"></i>
+								Active Tab Slider
+							</div>
+						</div>
+						<div class="slider"></div>
+					</div>
+				</div>
+				<div class="el_content_wrp">
+					<div class="el_items">
+						<div class="el_grp_header n_sticky">
+							<i class="icon-fi-arrow-up1"></i>
+							<div class="name">NLC 2024</div>
+							<span class="comp_count">6</span>
+						</div>
+						<div class="bet_type_wrp n_sticky">
+							<div class="bet_item">1</div>
+							<div class="bet_item">2</div>
+						</div>
+						<div class="el_grp_wrp">
+							<div class="event_content">
+								<div class="content_lf">
+									<div class="team_info">
+										<div class="name">Team One</div>
+										<div class="score_grp">
+											<div class="score">1</div>
+										</div>
+									</div>
+									<div class="team_info">
+										<div class="name">Evil Geniuses Black</div>
+										<div class="score_grp">
+											<div class="score">0</div>
+										</div>
+									</div>
+									<div class="info_btm">
+										<div class="info_lf">Game 2 48:44</div>
+										<div class="more_icons">
+											<div class="n_fav_on">
+												<i class="icon-fi-n-fav-on"></i>
+											</div>
+											<i class="icon-fi-livestream stream_ico" aria-hidden="true"></i>
+											<div class="n_btn_sev">196<i class="icon-fi-angle-right"></i></div>
+										</div>
+									</div>
+								</div>
+								<div class="content_rt">
+									<div class="odds_box big">4.76</div>
+									<div class="odds_box big">4.76</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="el_header n_sticky">
+					<div class="sport_info"><i class="icon-fi-title-esports icon"></i>Esports 1</div>
+					<div class="see_all"><i class="icon-fi-arrow-up1"></i></div>
+				</div>
+				<div class="el_content_wrp">
+					<div class="el_items">
+						<div class="el_grp_header n_sticky">
+							<i class="icon-fi-arrow-up1"></i>
+							<div class="name">NLC 2024</div>
+							<span class="comp_count">6</span>
+						</div>
+						<div class="bet_type_wrp n_sticky">
+							<div class="bet_item">1</div>
+							<div class="bet_item">2</div>
+						</div>
+						<div class="el_grp_wrp">
+							<div class="event_content">
+								<div class="content_lf">
+									<div class="team_info">
+										<div class="name">Team One</div>
+										<div class="score_grp">
+											<div class="score">1</div>
+										</div>
+									</div>
+									<div class="team_info">
+										<div class="name">Evil Geniuses Black</div>
+										<div class="score_grp">
+											<div class="score">0</div>
+										</div>
+									</div>
+									<div class="info_btm">
+										<div class="info_lf">Game 2 48:44</div>
+										<div class="more_icons">
+											<div class="n_fav_on">
+												<i class="icon-fi-n-fav-on"></i>
+											</div>
+											<i class="icon-fi-livestream stream_ico" aria-hidden="true"></i>
+											<div class="n_btn_sev">196<i class="icon-fi-angle-right"></i></div>
+										</div>
+									</div>
+								</div>
+								<div class="content_rt">
+									<div class="odds_box big">4.76</div>
+									<div class="odds_box big">4.76</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="el_header n_sticky">
+					<div class="sport_info"><i class="icon-fi-title-esports icon"></i>Esports 2</div>
+					<div class="see_all"><i class="icon-fi-arrow-up1"></i></div>
+				</div>
+				<div class="el_content_wrp">
+					<div class="el_items">
+						<div class="el_grp_header n_sticky">
+							<i class="icon-fi-arrow-up1"></i>
+							<div class="name">NLC 2024</div>
+							<span class="comp_count">6</span>
+						</div>
+						<div class="bet_type_wrp n_sticky">
+							<div class="bet_item">1</div>
+							<div class="bet_item">2</div>
+						</div>
+						<div class="el_grp_wrp">
+							<div class="event_content">
+								<div class="content_lf">
+									<div class="team_info">
+										<div class="name">Team One</div>
+										<div class="score_grp">
+											<div class="score">1</div>
+										</div>
+									</div>
+									<div class="team_info">
+										<div class="name">Evil Geniuses Black</div>
+										<div class="score_grp">
+											<div class="score">0</div>
+										</div>
+									</div>
+									<div class="info_btm">
+										<div class="info_lf">Game 2 48:44</div>
+										<div class="more_icons">
+											<div class="n_fav_on">
+												<i class="icon-fi-n-fav-on"></i>
+											</div>
+											<i class="icon-fi-livestream stream_ico" aria-hidden="true"></i>
+											<div class="n_btn_sev">196<i class="icon-fi-angle-right"></i></div>
+										</div>
+									</div>
+								</div>
+								<div class="content_rt">
+									<div class="odds_box big">4.76</div>
+									<div class="odds_box big">4.76</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="el_header n_sticky">
+					<div class="sport_info"><i class="icon-fi-title-esports icon"></i>Esports 3</div>
+					<div class="see_all"><i class="icon-fi-arrow-up1"></i></div>
+				</div>
+				<div class="el_content_wrp">
+					<div class="el_items">
+						<div class="el_grp_header n_sticky">
+							<i class="icon-fi-arrow-up1"></i>
+							<div class="name">NLC 2024</div>
+						</div>
+						<div class="bet_type_wrp n_sticky">
+							<div class="bet_item">1</div>
+							<div class="bet_item">2</div>
+						</div>
+						<div class="el_grp_wrp">
+							<div class="event_content">
+								<div class="content_lf">
+									<div class="team_info">
+										<div class="name">Team One</div>
+										<div class="score_grp">
+											<div class="score">1</div>
+										</div>
+									</div>
+									<div class="team_info">
+										<div class="name">Evil Geniuses Black</div>
+										<div class="score_grp">
+											<div class="score">0</div>
+										</div>
+									</div>
+									<div class="info_btm">
+										<div class="info_lf">Game 2 48:44</div>
+										<div class="more_icons">
+											<div class="n_fav_on">
+												<i class="icon-fi-n-fav-on"></i>
+											</div>
+											<i class="icon-fi-livestream stream_ico" aria-hidden="true"></i>
+											<div class="n_btn_sev">196<i class="icon-fi-angle-right"></i></div>
+										</div>
+									</div>
+								</div>
+								<div class="content_rt">
+									<div class="odds_box big">4.76</div>
+									<div class="odds_box big">4.76</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="el_header n_sticky">
+					<div class="sport_info"><i class="icon-fi-title-esports icon"></i>Esports 4</div>
+					<div class="see_all"><i class="icon-fi-arrow-up1"></i></div>
+				</div>
+				<div class="el_content_wrp">
+					<div class="el_items">
+						<div class="el_grp_header n_sticky">
+							<i class="icon-fi-arrow-up1"></i>
+							<div class="name">NLC 2024</div>
+							<span class="comp_count">6</span>
+						</div>
+						<div class="bet_type_wrp n_sticky">
+							<div class="bet_item">1</div>
+							<div class="bet_item">2</div>
+						</div>
+						<div class="el_grp_wrp">
+							<div class="event_content">
+								<div class="content_lf">
+									<div class="team_info">
+										<div class="name">Team One</div>
+										<div class="score_grp">
+											<div class="score">1</div>
+										</div>
+									</div>
+									<div class="team_info">
+										<div class="name">Evil Geniuses Black</div>
+										<div class="score_grp">
+											<div class="score">0</div>
+										</div>
+									</div>
+									<div class="info_btm">
+										<div class="info_lf">Game 2 48:44</div>
+										<div class="more_icons">
+											<div class="n_fav_on">
+												<i class="icon-fi-n-fav-on"></i>
+											</div>
+											<i class="icon-fi-livestream stream_ico" aria-hidden="true"></i>
+											<div class="n_btn_sev">196<i class="icon-fi-angle-right"></i></div>
+										</div>
+									</div>
+								</div>
+								<div class="content_rt">
+									<div class="odds_box big">4.76</div>
+									<div class="odds_box big">4.76</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="el_header n_sticky">
+					<div class="sport_info"><i class="icon-fi-title-esports icon"></i>Esports 5</div>
+					<div class="see_all"><i class="icon-fi-arrow-up1"></i></div>
+				</div>
+				<div class="el_content_wrp">
+					<div class="el_items">
+						<div class="el_grp_header n_sticky">
+							<i class="icon-fi-arrow-up1"></i>
+							<div class="name">NLC 2024</div>
+						</div>
+						<div class="bet_type_wrp n_sticky">
+							<div class="bet_item">1</div>
+							<div class="bet_item">2</div>
+						</div>
+						<div class="el_grp_wrp">
+							<div class="event_content">
+								<div class="content_lf">
+									<div class="team_info">
+										<div class="name">Team One</div>
+										<div class="score_grp">
+											<div class="score">1</div>
+										</div>
+									</div>
+									<div class="team_info">
+										<div class="name">Evil Geniuses Black</div>
+										<div class="score_grp">
+											<div class="score">0</div>
+										</div>
+									</div>
+									<div class="info_btm">
+										<div class="info_lf">Game 2 48:44</div>
+										<div class="more_icons">
+											<div class="n_fav_on">
+												<i class="icon-fi-n-fav-on"></i>
+											</div>
+											<i class="icon-fi-livestream stream_ico" aria-hidden="true"></i>
+											<div class="n_btn_sev">196<i class="icon-fi-angle-right"></i></div>
+										</div>
+									</div>
+								</div>
+								<div class="content_rt">
+									<div class="odds_box big">4.76</div>
+									<div class="odds_box big">4.76</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="el_header n_sticky">
+					<div class="sport_info"><i class="icon-fi-title-esports icon"></i>Esports 6</div>
+					<div class="see_all"><i class="icon-fi-arrow-up1"></i></div>
+				</div>
+				<div class="el_content_wrp">
+					<div class="el_items">
+						<div class="el_grp_header n_sticky">
+							<i class="icon-fi-arrow-up1"></i>
+							<div class="name">NLC 2024</div>
+						</div>
+						<div class="bet_type_wrp n_sticky">
+							<div class="bet_item">1</div>
+							<div class="bet_item">2</div>
+						</div>
+						<div class="el_grp_wrp">
+							<div class="event_content">
+								<div class="content_lf">
+									<div class="team_info">
+										<div class="name">Team One</div>
+										<div class="score_grp">
+											<div class="score">1</div>
+										</div>
+									</div>
+									<div class="team_info">
+										<div class="name">Evil Geniuses Black</div>
+										<div class="score_grp">
+											<div class="score">0</div>
+										</div>
+									</div>
+									<div class="info_btm">
+										<div class="info_lf">Game 2 48:44</div>
+										<div class="more_icons">
+											<div class="n_fav_on">
+												<i class="icon-fi-n-fav-on"></i>
+											</div>
+											<i class="icon-fi-livestream stream_ico" aria-hidden="true"></i>
+											<div class="n_btn_sev">196<i class="icon-fi-angle-right"></i></div>
+										</div>
+									</div>
+								</div>
+								<div class="content_rt">
+									<div class="odds_box big">4.76</div>
+									<div class="odds_box big">4.76</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- any share items-->
+		<div id="demoOnly_global_pop_item_euro"></div>
+
+		<script>
+			$(document).ready(function () {
+				var sevSlider = $('#el_nav_slider3');
+				var sevSlider_Active = $('#el_nav_slider3 .item_wrap.active');
+				var sevSlider_position = sevSlider_Active.offset().left - sevSlider.offset().left + sevSlider.scrollLeft();
+				$('#el_nav_slider3 .slider').css('left', sevSlider_position);
+				$('#el_nav_slider3 .slider').css('width', sevSlider_Active.width());
+
+				$('#el_nav_slider3 .item_wrap').click(function () {
+					$('#el_nav_slider3 .item_wrap').removeClass('active');
+					$(this).addClass('active');
+					sevSlider_position = $(this).offset().left - sevSlider.offset().left + sevSlider.scrollLeft();
+					$('#el_nav_slider3 .slider').css('width', $(this).width());
+					$('#el_nav_slider3 .slider').css('left', sevSlider_position);
+				});
+
+				var last_scroll_top = 0;
+
+				$(window).scroll(function () {
+					var st = $(this).scrollTop();
+					if (st > last_scroll_top) {
+						$('body').addClass('navScroll').removeClass('navReset');
+					} else {
+						$('body').removeClass('navScroll').addClass('navReset');
+					}
+
+					last_scroll_top = st <= 0 ? 0 : st;
+				});
+				$('.demoOnly_fixposition .n_container').scroll(function () {
+					var st = $(this).scrollTop();
+					if (st > last_scroll_top) {
+						$('body').addClass('navScroll').removeClass('navReset');
+					} else {
+						$('body').removeClass('navScroll').addClass('navReset');
+					}
+
+					last_scroll_top = st <= 0 ? 0 : st;
+				});
+
+				$('.el_top_panel.n_sticky').css('top', $('.n_header').outerHeight());
+				$('.el_header.n_sticky').css('top', $('.n_header').outerHeight() + $('.el_top_panel').outerHeight());
+				$('.sub_menu_panel.n_sticky').css('top', $('.n_header').outerHeight() + $('.el_top_panel').outerHeight() + $('.el_header').outerHeight());
+				$('.el_content_wrp:not(.sub_menu_panel + .el_content_wrp)').addClass('el_favContent');
+			});
+		</script>
+	</body>
+</html>

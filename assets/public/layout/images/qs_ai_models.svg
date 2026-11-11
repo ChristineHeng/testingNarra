@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" height="40" viewBox="0 0 304 40" width="304">
+    <style>
+        @keyframes qsFlow {
+            to {
+                stroke-dashoffset: -16;
+            }
+        }
+
+        .qs_lines {
+            animation: qsFlow 1.2s linear infinite;
+        }
+    </style>
+
+    <path d="M90 0 C100 20 132 26 142 40" stroke="#F23D4B" stroke-dasharray="1.5 5" stroke-linecap="round" stroke-opacity="0.2" stroke-width="1.4" style="stroke: #f23d4b" />
+    <path d="M152 0 L152 40" stroke="#F23D4B" stroke-dasharray="1.5 5" stroke-linecap="round" stroke-opacity="0.2" stroke-width="1.4" />
+    <path d="M214 0 C204 20 172 26 162 40" stroke="#F23D4B" stroke-dasharray="1.5 5" stroke-linecap="round" stroke-opacity="0.2" stroke-width="1.4" />
+    <path class="qs_lines" d="M90 0 C100 20 132 26 142 40" stroke="#F23D4B" stroke-dasharray="3 5" stroke-linecap="round" stroke-width="2.2" />
+    <path class="qs_lines" d="M152 0 L152 40" stroke="#F23D4B" stroke-dasharray="3 5" stroke-linecap="round" stroke-width="2.2" />
+    <path class="qs_lines" d="M214 0 C204 20 172 26 162 40" stroke="#F23D4B" stroke-dasharray="3 5" stroke-linecap="round" stroke-width="2.2" />
+</svg>

@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Narra - html template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover,user-scalable=no" />
+    <!-- <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#000"> -->
+    <!--Base Styles-->
+    <link rel="stylesheet" type="text/css" href="../assets/public/layout/css/basestyle.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="../merchants/merchant1/css/style_asia.css">-->
+    <link rel="stylesheet" type="text/css" href="../assets/public/languages/eng/layout_asia.min.css" id="detect_language">
+    <link rel="stylesheet" type="text/css" href="#" id="design_view">
+
+    <script src="../assets/public/lib/jquery.js"></script>
+    <script src="../assets/public/layout/js/scripts_main.js"></script>
+    <script src="../assets/public/layout/js/scripts_asia.js"></script>
+
+</head>
+
+<body id="root">
+    <div class="n_container">
+        <div class="n_header n_header_sports">
+            <div class="n_back"><a class="n_back_link mock_cb_n_back_link" target="_self"><i
+                        class="icon-fi-arrow-left"></i> Kembali</a></div>
+            <div class="title">
+                <i class="icon-fi-n-promo"></i>Sportsbook Promotion
+            </div>
+        </div>
+        <!--use "n_content_wrap_wth_bcktop" if include back to top feature, else , use "n_content_wrap"-->
+        <div class="n_content_wrap_wth_bcktop">
+            <div class="prcdTlAvlb">
+                <div class="prcdTlItm active" id="test_mock_daily_promotion">Daily Promotion</div>
+                <div class="prcdTlItm" id="test_mock_other_promotion">Other Promotions</div>
+                <div class="prcdSld"></div>
+            </div>
+            <div class="new_prcdTab" style="display: none;">
+                <div class="prcdWrp">
+                    <div class="prcdItm active" id="test_mock_daily_promotion">Daily Promotion</div>
+                    <div class="prcdItm" id="test_mock_other_promotion">Other Promotions</div>
+                </div>
+            </div>
+            <div class="promo_banner_wrp" id="test_mock_daily_promotion_wrap">
+                <div class="promo_banner latest">
+                    <div class="promo_box"></div>
+                    <div class="promo_right_btm"></div>
+                    <div class="promo_right_top">
+                        <div class="promo_right_inner"></div>
+                    </div>
+                    <div class="promo_left">
+                        <div class="dot"></div>
+                        <div class="duration">2023/05/01 -2023/10/01</div>
+                    </div>
+
+                    <div class="promo_float">
+                        <img src="../assets/public/layout/images/promo_banner_cn.png">
+                    </div>
+                </div>
+                <div class="promo_banner latest">
+                    <div class="promo_box"></div>
+                    <div class="promo_right_btm"></div>
+                    <div class="promo_right_top">
+                        <div class="promo_right_inner"></div>
+                    </div>
+                    <div class="promo_left">
+                        <div class="dot"></div>
+                        <div class="duration">2023/05/01 -2023/10/01</div>
+                    </div>
+                    <div class="promo_float">
+                        <img src="../assets/public/layout/images/promo_banner_en.png">
+                    </div>
+                </div>
+                <div class="promo_none">目前没有任何的优惠活动。</div>
+            </div>
+            <div class="promo_banner_wrp" id="test_mock_other_promotion_wrap" style="display: none;">
+                <div class="promo_banner latest">
+                    <div class="promo_box"></div>
+                    <div class="promo_right_btm"></div>
+                    <div class="promo_right_top">
+                        <div class="promo_right_inner"></div>
+                    </div>
+                    <div class="promo_left">
+                        <div class="dot"></div>
+                        <div class="duration">2023/05/01 -2023/10/01</div>
+                    </div>
+
+                    <div class="promo_float">
+                        <img src="../assets/public/layout/images/promo_banner_cn.png">
+                    </div>
+                </div>
+                <div class="promo_banner latest">
+                    <div class="promo_box"></div>
+                    <div class="promo_right_btm"></div>
+                    <div class="promo_right_top">
+                        <div class="promo_right_inner"></div>
+                    </div>
+                    <div class="promo_left">
+                        <div class="dot"></div>
+                        <div class="duration">2023/05/01 -2023/10/01</div>
+                    </div>
+                    <div class="promo_float">
+                        <img src="../assets/public/layout/images/promo_banner_en.png">
+                    </div>
+                </div>
+                <div class="promo_none">目前没有任何的优惠活动。</div>
+            </div>
+            <!-- <div class="promo_frame"></div> -->
+            <!-- <div class="promo_mid">
+                <div class="promo_eclipse"></div>
+                <div class="promo_dash"></div>
+                <div class="promo_eclipse"></div>
+                </div> -->
+            <!-- <div class="promo_text">
+                <div class="promo_title">
+                    每日活動
+                </div>
+                <div class="promo_subtitle">
+                    <span class="highlight">多种礼品</span>
+                    等你来拿
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="footer_main" id="main_footer"></div>
+    <div id="demoOnly_global_pop_item"></div>
+
+    <script>
+        $(document).ready(function () {
+            promoFooter();
+            $("#demoOnly_global_pop_item").load("_global_pop_item.html", function () {
+                $("#mybet").load("_popup_mybet_unsettled.html");
+            });
+            promo();
+            promotionSlider();
+
+
+            if(localStorage.getItem("isFacelift") === "true") {
+                $(".prcdTlAvlb").toggleClass("prcdTlAvlb prcdWrp")
+                $(".prcdWrp").find(".prcdTlItm").toggleClass("prcdTlItm prcdItm")
+            }
+
+            function promotionSlider() {
+                var sliderWidth = $(".prcdTlAvlb .prcdTlItm.active").width();
+                var slider = $(".prcdTlAvlb .prcdSld");
+                slider.css("width", sliderWidth);
+                slider.css("left", $(".prcdTlAvlb .prcdTlItm.active").offset().left);
+
+                if(localStorage.getItem("isFacelift") === "true") {
+                    $(".prcdTlAvlb").hide();
+                    $(".new_prcdTab").show();
+                    $(".new_prcdTab .prcdWrp .prcdItm").click(function() {
+                        $(".prcdItm").removeClass("active")
+                        $(this).addClass("active");
+                    })
+                }
+
+                $(".prcdTlAvlb .prcdTlItm").click(function () {
+                    $(".prcdTlAvlb .prcdTlItm").removeClass("active");
+                    $(this).addClass("active");
+                    slider.css("left", $(".prcdTlAvlb .prcdTlItm.active").offset().left);
+                    if ($(".prcdTlAvlb .prcdTlItm.active").attr('id') == "test_mock_daily_promotion") {
+                        $("#test_mock_daily_promotion_wrap").show();
+                        $("#test_mock_other_promotion_wrap").hide();
+                    } else {
+                        $("#test_mock_daily_promotion_wrap").hide();
+                        $("#test_mock_other_promotion_wrap").show();
+                    }
+                });
+            }
+            cyberbattleBackButton();
+        });
+    </script>
+</body>
+
+</html>

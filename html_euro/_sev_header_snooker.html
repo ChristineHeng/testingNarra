@@ -1,0 +1,169 @@
+<!-- note : for all slider, dev copy please add "slider_hidden_x" and use React/JS scroll, 
+     do not use native scroll, (IOS overscroll issue)
+     mock for demo purposes only -->
+<div class="euNav_bar_wrp">
+    <ul class="nav_bar">
+        <li onClick="(function(){window.location.href = 'index.html'})();">Home<i class="icon-fi-arrow-right"
+                aria-hidden="true"></i></li>
+        <li id="sample_only_dontcopy_closeSEV">Snooker / Pool: In Play<i class="icon-fi-arrow-right"
+                aria-hidden="true"></i></li>
+        <li>Belarus<i class="icon-fi-arrow-right" aria-hidden="true"></i></li>
+        <li>Belarus -Belarus Liga Pro</li>
+    </ul>
+    <div class="euTable_side">
+        <i class="icon-fi-arrow-down1" aria-hidden="true"></i>
+    </div>
+</div>
+<!-- snooker with slider -->
+<div class="eu_snooker_board">
+    <div class="board_left">
+        <div class="period_hd">
+            <div class="total_fm">Frames</div>
+        </div>
+        <div id="dont_copy_sev_click" class="euTable">
+            <div class="euTable_side">
+                <div>Frame 20</div>
+                <div>BO5</div>
+            </div>
+            <div class="euTable_main">
+                <div class="eu_row">
+                    <div class="team_dot off"></div>
+                    <div class="eu_team">Molot-Pro</div>
+                    <div class="total_num euHighlight">3</div>
+                </div>
+                <div class="eu_row">
+                    <div class="team_dot on"></div>
+                    <div class="eu_team">Vityaz-Pro</div>
+                    <div class="total_num euHighlight">3</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="board_main">
+        <div class="snk_wrp DevDontCopy_euSnooker_scoreBoard">
+            <div class="snk_nav iconWrp_left snk_disable">
+                <div class="arrow_btn">
+                    <i class="icon-fi-double-angle-left"></i>
+                </div>
+            </div>
+            <div class="board_content">
+                <div class="row_score_grp">
+                    <div class="row_score_tit">
+                        <div class="period_grp">
+                            <div>1</div>
+                            <div>2</div>
+                            <div>3</div>
+                            <div>4</div>
+                            <div>5</div>
+                            <div>6</div>
+                            <div>7</div>
+                            <div>8</div>
+                            <div>9</div>
+                        </div>
+                    </div>
+                    <div class="snk_score_row">
+                        <div class="period_grp">
+                            <div>0</div>
+                            <div>3</div>
+                            <div>7</div>
+                            <div>3</div>
+                            <div>13</div>
+                            <div>1</div>
+                            <div>14</div>
+                            <div>13</div>
+                            <div>1</div>
+                        </div>
+                    </div>
+                    <div class="snk_score_row">
+                        <div class="period_grp">
+                            <div>7</div>
+                            <div>0</div>
+                            <div>3</div>
+                            <div>3</div>
+                            <div>13</div>
+                            <div>0</div>
+                            <div>13</div>
+                            <div>13</div>
+                            <div>0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="snk_nav iconWrp_right">
+                <div class="arrow_btn">
+                    <i class="icon-fi-double-angle-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="board_rt">
+        <div class="rt_top"></div>
+    </div>
+</div>
+<!-- snooker without slider layout-->
+<div class="eu_snooker_board" style="display: none;">
+    <div class="board_left">
+        <div class="period_hd">
+            <div class="total_fm">Frames</div>
+        </div>
+        <div class="euTable">
+            <div class="euTable_side">
+                <div>Frame 20</div>
+                <div>BO5</div>
+            </div>
+            <div class="euTable_main">
+                <div class="eu_row">
+                    <div class="team_dot off"></div>
+                    <div class="eu_team">Molot-Pro</div>
+                    <div class="total_num euHighlight">3</div>
+                </div>
+                <div class="eu_row">
+                    <div class="team_dot on"></div>
+                    <div class="eu_team">Vityaz-Pro</div>
+                    <div class="total_num euHighlight">3</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="board_main">
+        <div class="snk_wrp">
+            <div class="board_content">
+                <div class="row_score_grp">
+                    <div class="row_score_tit">
+                        <div class="period_grp">
+                            <div>1</div>
+                            <div>2</div>
+                            <div>3</div>
+                            <div>4</div>
+                        </div>
+                    </div>
+                    <div class="snk_score_row">
+                        <div class="period_grp">
+                            <div>0</div>
+                            <div>3</div>
+                            <div>7</div>
+                            <div>3</div>
+                        </div>
+                    </div>
+                    <div class="snk_score_row">
+                        <div class="period_grp">
+                            <div>7</div>
+                            <div>0</div>
+                            <div>3</div>
+                            <div>3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="board_rt">
+        <div class="rt_top"></div>
+    </div>
+</div>
+
+<!--display period title-->
+
+<script>
+	SnkScroll(".DevDontCopy_euSnooker_scoreBoard", ".board_content", ".iconWrp_left", ".iconWrp_right");
+</script>

@@ -1,0 +1,572 @@
+@use '../../assets/themes/colours/brand'as brand;
+@use '../../assets/public/layout/css/base'as base;
+@use '../mixin'as mix;
+
+.tut_slider_wrp {
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                background: brand.t(White);
+            }
+
+            @include mix.darkTheme {
+                @include mix.themeName(default1) {
+                    background: brand.t(BGDarkBlue);
+                }
+
+                @include mix.notThemeName(default1) {
+                    background: brand.t(LightBlack);
+                }
+            }
+        }
+    }
+}
+
+.tut_slider {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            padding: 0 10px;
+            min-height: 40px;
+            overflow-y: hidden;
+        }
+    }
+}
+
+.item {
+    .tut_slider & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(center);
+                padding: 8px 30px;
+                font-size: 12px;
+                font-weight: normal;
+                cursor: pointer;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+
+        &.active {
+            @include mix.layout {
+                @include mix.mobile {
+                    font-size: 14px;
+                    font-weight: 700;
+                }
+            }
+
+            @include mix.theme {
+                @include mix.mobile {
+                    @include mix.brightTheme {
+                        color: brand.t(Black);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(White);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.inner_wrap {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.boxSizing(border-box);
+            padding: 6px;
+            width: 100%;
+            height: 44px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                background: brand.t(White);
+            }
+
+            @include mix.darkTheme {
+                @include mix.themeName(default1) {
+                    background: brand.t(BGDarkBlue);
+                }
+
+                @include mix.notThemeName(default1) {
+                    background: brand.t(DarkBlack);
+                }
+            }
+        }
+    }
+}
+
+.header {
+    .tutorial_content_wrap & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(flex-start);
+                @include base.borderRadius(4px 4px 0 0);
+                min-height: 30px;
+                padding: 8px;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.brightTheme {
+                    border-bottom: 1px solid brand.t(DividerGray);
+                    background: brand.t(White);
+                }
+
+                @include mix.darkTheme {
+                    @include mix.themeName(default1) {
+                        border-bottom: 1px solid brand.t(Stroke);
+                        background: brand.t(Blue);
+                    }
+
+                    @include mix.notThemeName(default1) {
+                        border-bottom: 1px solid brand.t(Gray02);
+                        background: brand.t(Gray);
+                    }
+                }
+            }
+        }
+    }
+
+    &.fl_hd {
+        @include mix.theme {
+            @include mix.mobile {
+                border-bottom: 0;
+                background: 0;
+            }
+        }
+    }
+}
+
+.content {
+    .tutorial_content_wrap & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.borderRadius(0 0 4px 4px);
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.brightTheme {
+                    background: brand.t(White);
+                }
+
+                @include mix.darkTheme {
+                    @include mix.themeName(default1) {
+                        background: brand.t(MediumBlue);
+                    }
+
+                    @include mix.notThemeName(default1) {
+                        background: brand.t(LightBlack);
+                    }
+                }
+            }
+        }
+    }
+
+    .tutorial_item & {
+        @include mix.layout {
+            @include mix.mobile {
+                padding: 0 8px 8px;
+            }
+        }
+    }
+}
+
+.team {
+    .tutorial_item & {
+        @include mix.layout {
+            @include mix.mobile {
+                margin-bottom: 4px;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+
+    .result_wrap & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+}
+
+.fl_round {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.borderRadius(4px);
+        }
+    }
+}
+
+.game_summary {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            @include base.justifyContent(center);
+            padding: 6px 0 11.2px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(DarkGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(LightGray);
+            }
+        }
+    }
+}
+
+.game_status {
+    @include mix.layout {
+        @include mix.mobile {
+            margin-top: 10.4px;
+            font-size: 10px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            color: brand.t(Color_game_status_tutorial_item);
+        }
+    }
+}
+
+.middle_circle {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            @include base.justifyContent(center);
+            @include base.borderRadius(28px);
+            width: 60px;
+            height: 60px;
+            flex-direction: column;
+            text-align: center;
+            font-size: 10px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                background: brand.t(LightGray);
+                border: 2px solid brand.t(DividerGray);
+            }
+
+            @include mix.darkTheme {
+                @include mix.themeName(default1) {
+                    background: brand.t(DarkBlue);
+                    border: 2px solid brand.t(DarkPurple);
+                }
+
+                @include mix.notThemeName(default1) {
+                    background: brand.t(Gray01);
+                    border: 2px solid brand.t(Gray02);
+                }
+            }
+        }
+    }
+}
+
+.middle_group {
+    @include mix.layout {
+        @include mix.mobile {
+            flex: 1;
+            padding: 0 6px;
+        }
+    }
+}
+
+.handicap_group {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            @include base.justifyContent(space-between);
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(DarkGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(LightGray);
+            }
+        }
+    }
+}
+
+.tutorial_item {
+    @include mix.layout {
+        @include mix.mobile {
+            margin: 12px 8px;
+        }
+    }
+}
+
+.result_wrap {
+    .tutorial_item & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(space-between);
+                @include base.borderRadius(24px);
+                margin-bottom: 11.2px;
+                height: 50px;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                    background: brand.t(BGGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+
+                    @include mix.themeName(default1) {
+                        background: brand.t(BGDarkBlue);
+                    }
+
+                    @include mix.notThemeName(default1) {
+                        background: brand.t(Gray);
+                    }
+                }
+            }
+        }
+    }
+
+    .pop_tutorial & {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+.up {
+    .tutorial_item & {
+        @include mix.layout {
+            @include mix.mobile {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.period {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            @include base.justifyContent(center);
+            @include base.borderRadius(2px);
+            margin-right: 3px;
+            padding: 0 3px;
+            font-size: 14px;
+            font-weight: 700;
+            height: 14px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            background: brand.t(Yellow);
+            color: brand.t(Black);
+        }
+    }
+
+    &.empty {
+        @include mix.layout {
+            @include mix.mobile {
+                content: '';
+                padding: 0;
+                width: 2px;
+            }
+        }
+    }
+}
+
+.description {
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(DarkGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(LightGray);
+            }
+        }
+    }
+}
+
+.result_detail {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            @include base.justifyContent(center);
+            @include base.calWidth(50%, 28px); //28px=half of width of middle_circle
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(Black);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(White);
+            }
+        }
+    }
+
+    div {
+        @include mix.layout {
+            @include mix.mobile {
+                padding: 0 3px;
+            }
+        }
+    }
+}
+
+.options_grp {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.borderRadius(6px);
+            position: relative;
+            overflow: hidden;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                border: 2px solid brand.t(BGGray);
+                background: brand.t(BGGray);
+            }
+
+            @include mix.darkTheme {
+                @include mix.themeName(default1) {
+                    border: 2px solid brand.t(Blue);
+                    background: brand.t(Blue);
+                }
+
+                @include mix.notThemeName(default1) {
+                    border: 2px solid brand.t(LightBlack);
+                    background: brand.t(LightBlack);
+                }
+            }
+        }
+    }
+
+    &.tab_2 {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.tab_nav_slider(2);
+            }
+        }
+    }
+}
+
+.options {
+    .options_grp & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.boxSizing(border-box);
+                @include base.flexbox();
+                @include base.alignItems(center);
+                width: 100%;
+                cursor: pointer;
+            }
+        }
+
+        div {
+            @include mix.layout {
+                @include mix.mobile {
+                    padding: 6px 0;
+                    width: 100%;
+                    text-align: center;
+                    z-index: 2;
+                }
+            }
+        }
+    }
+}
+
+.active {
+    .options_grp .options & {
+        @include mix.layout {
+            @include mix.mobile {
+                font-weight: 700;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.themeName(default1) {
+                    color: brand.t(White);
+                }
+
+                @include mix.notThemeName(default1) {
+                    color: brand.t(ActiveLight);
+                }
+            }
+        }
+    }
+}

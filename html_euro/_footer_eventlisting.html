@@ -1,0 +1,460 @@
+<div class="bg_mask ply_mask" style="display: none"></div>
+<div id="sample_footer_pre_bet" class="n_footer_combo pre parlay_boost">
+	<!-- [DES-905] -->
+	<div class="nav_selection bs_parlay">
+		<!--add .disabled for disabled effect-->
+		<div class="nav_tab active" id="btn_single">
+			Bet Slips
+			<span class="count">4</span>
+		</div>
+		<div class="v_split"></div>
+		<div class="nav_tab" id="btn_combo">Combo Slips</div>
+	</div>
+	<!-- [SFCRQ-10113] remove vnd's info icon and tooltip -->
+	<!-- <div class="info_wrp info_top">
+		<div class="info_icn"><i class="icon-fi-info"></i></div>
+		<div class="info_txt">VND 1 displayed in UI is equivalent to VND 1000 in actual value.</div>
+	</div> -->
+	<div class="footer_arrow" id="sample_arrow_status">
+		<i class="icon-fi-arrow-down1"></i>
+	</div>
+</div>
+<div class="ios_notch_footer"></div>
+<div id="sample_footer_status_bet" class="n_footer_combo" style="display: none">
+	<div>
+		Bet successful
+		<!-- [SFCRQ-10113] remove vnd's info icon and tooltip -->
+		<!-- <div class="info_wrp info_top">
+			<div class="info_icn"><i class="icon-fi-info"></i></div>
+			<div class="info_txt">VND 1 displayed in UI is equivalent to VND 1000 in actual value.</div>
+		</div> -->
+	</div>
+</div>
+<div id="sample_footer_post_bet" class="n_footer_combo sub" style="display: none">
+	<!--  this extra div is to ensure notch phone have extra div to push into right position -->
+	<div class="post_bet_inner_wrap">
+		<div id="sample_single_combo_text_switch">
+			Single(3)
+			<!-- [SFCRQ-10113] remove vnd's info icon and tooltip -->
+			<!-- <div class="info_wrp info_top">
+				<div class="info_icn"><i class="icon-fi-info"></i></div>
+				<div class="info_txt">VND 1 displayed in UI is equivalent to VND 1000 in actual value.</div>
+			</div> -->
+		</div>
+		<div class="nav_mybet" id="nav_mybet_single">
+			<i class="icon-fi-arrow-up1"></i>
+		</div>
+		<!-- remove class "nav_mybet" when trigger this scenario in single bet-->
+		<div class="nav_mybet" style="display: none" id="nav_mybet_combo">
+			View My Bets
+			<i class="icon-fi-arrow-right"></i>
+		</div>
+	</div>
+</div>
+
+<div class="pb_content"></div>
+
+<div class="n_footer pb_footer" style="display: none">
+	<div class="combo_details" id="combo_step1">
+		<div class="pb_footer_details">
+			<div class="eu_combo_info">
+				Trebles @
+				<div class="betlist_odds">
+					<span class="odds">9.50 </span>
+				</div>
+			</div>
+			<div class="pb_input_wrap">
+				<div class="pb_times">x1</div>
+				<div class="betlist_input active focus">5.00</div>
+			</div>
+		</div>
+		<div class="pb_footer_info">
+			<div class="stake_info">Potential Winnings 50.00 RMB</div>
+			<div class="showmore">
+				<span>Show less combo types</span>
+				<i class="icon-fi-arrow-down1"></i>
+			</div>
+		</div>
+		<div class="pb_footer_alert_msg">Sample error message.</div>
+		<div class="keypad_wrap" style="display: none">
+			<div class="keypad_row">
+				<div class="keypad_itm fastbet">100</div>
+				<div class="keypad_itm fastbet">200</div>
+				<div class="keypad_itm fastbet">500</div>
+			</div>
+			<div class="keypad_row">
+				<div class="keypad_itm fastbet">Max</div>
+			</div>
+			<div class="keypad_row">
+				<div class="keypad_itm">1</div>
+				<div class="keypad_itm">2</div>
+				<div class="keypad_itm">3</div>
+				<div class="keypad_itm">4</div>
+				<div class="keypad_itm">5</div>
+				<div class="keypad_itm">6</div>
+				<div class="keypad_itm">7</div>
+				<div class="keypad_itm">8</div>
+				<div class="keypad_itm">9</div>
+				<div class="keypad_itm">0</div>
+			</div>
+			<div class="keypad_row">
+				<div class="keypad_itm">.</div>
+				<div class="keypad_itm keypad_itm_sp">
+					<div class="itm"><i class="icon-fi-back"></i></div>
+				</div>
+				<div class="keypad_itm keypad_itm_sp">Done</div>
+			</div>
+		</div>
+		<div class="pb_footer_details">
+			<div class="eu_combo_info">Doubles</div>
+			<div class="pb_input_wrap">
+				<div class="pb_times">x3</div>
+				<div class="betlist_input active focus">5.00</div>
+			</div>
+		</div>
+		<div class="pb_footer_info">
+			<div class="stake_info">Potential Winnings 50.00 RMB</div>
+		</div>
+		<div class="pb_footer_alert_msg" style="display: none">Sample error message.</div>
+		<div class="keypad_wrap" style="display: none">
+			<div class="keypad_row">
+				<div class="keypad_itm fastbet">100</div>
+				<div class="keypad_itm fastbet">200</div>
+				<div class="keypad_itm fastbet">500</div>
+			</div>
+			<div class="keypad_row">
+				<div class="keypad_itm fastbet">Max</div>
+			</div>
+			<div class="keypad_row">
+				<div class="keypad_itm">1</div>
+				<div class="keypad_itm">2</div>
+				<div class="keypad_itm">3</div>
+				<div class="keypad_itm">4</div>
+				<div class="keypad_itm">5</div>
+				<div class="keypad_itm">6</div>
+				<div class="keypad_itm">7</div>
+				<div class="keypad_itm">8</div>
+				<div class="keypad_itm">9</div>
+				<div class="keypad_itm">0</div>
+			</div>
+			<div class="keypad_row">
+				<div class="keypad_itm">.</div>
+				<div class="keypad_itm keypad_itm_sp">
+					<div class="itm"><i class="icon-fi-back"></i></div>
+				</div>
+				<div class="keypad_itm keypad_itm_sp">Done</div>
+			</div>
+		</div>
+		<div class="pb_footer_details">
+			<div class="eu_combo_info">Trixie</div>
+			<div class="pb_input_wrap">
+				<div class="pb_times">x4</div>
+				<div class="betlist_input">Stake</div>
+			</div>
+		</div>
+		<div class="pb_footer_info">
+			<div class="stake_info">Potential Winnings 50.00 RMB</div>
+		</div>
+		<div class="pb_footer_alert_msg" style="display: none">Sample error message.</div>
+		<div class="keypad_wrap" style="display: none">
+			<div class="keypad_row">
+				<div class="keypad_itm fastbet">100</div>
+				<div class="keypad_itm fastbet">200</div>
+				<div class="keypad_itm fastbet">500</div>
+			</div>
+			<div class="keypad_row">
+				<div class="keypad_itm fastbet">1000</div>
+				<div class="keypad_itm fastbet">10000</div>
+				<div class="keypad_itm fastbet">Max</div>
+			</div>
+			<div class="keypad_row">
+				<div class="keypad_itm">1</div>
+				<div class="keypad_itm">2</div>
+				<div class="keypad_itm">3</div>
+				<div class="keypad_itm">4</div>
+				<div class="keypad_itm">5</div>
+				<div class="keypad_itm">6</div>
+				<div class="keypad_itm">7</div>
+				<div class="keypad_itm">8</div>
+				<div class="keypad_itm">9</div>
+				<div class="keypad_itm">0</div>
+			</div>
+			<div class="keypad_row">
+				<div class="keypad_itm">.</div>
+				<div class="keypad_itm keypad_itm_sp">
+					<div class="itm"><i class="icon-fi-back"></i></div>
+				</div>
+				<div class="keypad_itm keypad_itm_sp">Done</div>
+			</div>
+		</div>
+	</div>
+	<div class="combo_details" id="combo_step_changed" style="display: none">
+		<div class="betlist_item">
+			<div class="bet_item_result">
+				<div class="selection">
+					Trebles @
+					<div class="betlist_odds">
+						<span class="odds">9.50 </span>
+					</div>
+				</div>
+				<div class="info">x1</div>
+				<div class="price">5.00 RMB</div>
+			</div>
+			<div class="eu_bet_status">
+				<div></div>
+				<div class="">Potential Winnings 50.00 RMB</div>
+			</div>
+		</div>
+	</div>
+	<div class="combo_details" id="combo_step_fail" style="display: none">
+		<div class="betlist_item">
+			<div class="bet_item_result">
+				<div class="selection">
+					Trebles @
+					<div class="betlist_odds up">
+						<span class="odds">9.50 </span>
+						<span class="arrow"><i class="icon-fi-arrow-up"></i></span>
+					</div>
+				</div>
+				<div class="info">x1</div>
+				<div class="price">5.00 RMB</div>
+			</div>
+			<div class="eu_bet_status">
+				<div class="failed">Bet Rejection - Selection not available for double</div>
+				<div class="text_nowrap">Potential Winnings 50.00 RMB</div>
+			</div>
+		</div>
+	</div>
+	<div class="combo_details" id="combo_step_success" style="display: none">
+		<div class="betlist_item">
+			<div class="bet_item_result">
+				<div class="selection">Trebles</div>
+				<div class="info">x1</div>
+				<div class="price">5.00 RMB</div>
+			</div>
+			<div class="eu_bet_status">
+				<div class="success">Place bet successful</div>
+				<div class="">Potential Winnings 50.00 RMB</div>
+			</div>
+		</div>
+		<div class="betlist_item">
+			<div class="bet_item_result">
+				<div class="selection">Super Yankee</div>
+				<div class="info">x 26</div>
+				<div class="price">5.00 RMB</div>
+			</div>
+			<div class="eu_bet_status">
+				<div class="success">Place bet successful</div>
+				<div class="">Potential Winnings 50.00 RMB</div>
+			</div>
+		</div>
+	</div>
+	<div id="sample_footer_input_single" class="pb_footer_details">
+		<div>Single</div>
+		<div class="pb_input_wrap">
+			<div class="pb_times">x3</div>
+			<!-- <div class="betlist_input active">400</div> -->
+			<div class="betlist_input">Stake</div>
+		</div>
+	</div>
+	<div class="keypad_wrap" style="display: none">
+		<div class="keypad_row">
+			<div class="keypad_itm fastbet">100</div>
+			<div class="keypad_itm fastbet">200</div>
+			<div class="keypad_itm fastbet">500</div>
+		</div>
+		<div class="keypad_row">
+			<div class="keypad_itm fastbet">1000</div>
+			<div class="keypad_itm fastbet">10000</div>
+			<div class="keypad_itm fastbet">Max</div>
+		</div>
+		<div class="keypad_row">
+			<div class="keypad_itm">1</div>
+			<div class="keypad_itm">2</div>
+			<div class="keypad_itm">3</div>
+			<div class="keypad_itm">4</div>
+			<div class="keypad_itm">5</div>
+			<div class="keypad_itm">6</div>
+			<div class="keypad_itm">7</div>
+			<div class="keypad_itm">8</div>
+			<div class="keypad_itm">9</div>
+			<div class="keypad_itm">0</div>
+		</div>
+		<div class="keypad_row">
+			<div class="keypad_itm">.</div>
+			<div class="keypad_itm keypad_itm_sp">
+				<div class="itm"><i class="icon-fi-back"></i></div>
+			</div>
+			<div class="keypad_itm keypad_itm_sp">Done</div>
+		</div>
+	</div>
+	<div class="alert_msg">Sample error messsage. Sample error messsage. Sample error messsage.</div>
+	<div class="pb_footer_total_est" style="display: none">
+		<div class="total_est">
+			<div>Total Stake:</div>
+			<div>500.0000 FARTCOINNNN</div>
+		</div>
+		<div class="total_est">
+			<div>Total Potential Winnings：</div>
+			<div>4,500.0000 FARTCOINNNN</div>
+		</div>
+		<div class="total_est" style="display: none">
+			<div>Total Stake:</div>
+			<div>5.00 RMB</div>
+		</div>
+		<div class="total_est" style="display: none">
+			<div>Potential Winnings：</div>
+			<div>6.15 RMB</div>
+		</div>
+	</div>
+	<div class="pb_rmb_ls">
+		<div class="pb_rmb_ls_l">
+			Remember Last Stake
+			<div class="info_wrp info_top">
+				<div class="info_icn"><i class="icon-fi-info"></i></div>
+				<div class="info_txt">If your last stake amount exceeds max bet limit, your stake amount is auto adjusted to the max bet limit</div>
+			</div>
+		</div>
+		<div class="mylabel">
+			<input type="checkbox" id="switch_last_stake" />
+			<div class="slidinggroove"></div>
+			<label class="mylabel" for="switch_last_stake" name="skills"></label>
+		</div>
+	</div>
+	<div class="pb_footer_actions" id="actions_step1">
+		<div class="pb_clear">
+			<i class="icon-fi-dustbin"></i><br />
+			Clear All
+		</div>
+		<div class="pb_button">
+			<!--note: test demo for "GAMERSTAKE", replace it to RMB, GAMERSTAKE for normal scenario-->
+			Place Bet 400.0000 FARTCOINNNN<br />
+			<span class="pb_button_btm">Potential Winning 789.09 GAMERSTAKE</span>
+		</div>
+	</div>
+	<div class="pb_footer_actions" id="actions_step2" style="display: none">
+		<div class="pb_clear">
+			<i class="icon-fi-dustbin"></i><br />
+			Clear All
+		</div>
+		<div class="pb_button">Accept Changes</div>
+	</div>
+	<div class="pb_footer_actions post" id="actions_step3" style="display: none">
+		<div class="pb_button normal_btn">Ok</div>
+		<div class="pb_button">Retain Selections</div>
+	</div>
+	<div class="pb_footer_actions post" id="actions_step_combo" style="display: none">
+		<div class="pb_button normal_btn">Cancel Bet (Fail)</div>
+		<div class="pb_button">Accept Changes</div>
+	</div>
+	<div class="bg_mask ob_tut_mask" id="obTutMsk3" style="display: none">
+		<div class="mask_button highlighted" id="obTutBtn3">Got It</div>
+	</div>
+</div>
+<div id="dont_copy_link_to_tutor_betslip1" class="mask_button mask_btnBR highlighted" style="display: none">知道了</div>
+<script>
+	$(document).ready(function () {
+		$('#main_footer').addClass('v2');
+		sample_footer_eventlisting();
+
+		function calculateOPHeightSetting(transition) {
+			notch_bottomgap = getComputedStyle(document.getElementsByClassName('pb_content')[0])
+				.getPropertyValue('--sab')
+				.replace(/[^-\d\.]/g, '');
+			normal_footer_height = parseFloat(notch_bottomgap);
+			pb_footer_height = $('.pb_footer').outerHeight() - parseFloat(notch_bottomgap);
+
+			if (transition == true) {
+				blockBGscrolling(true);
+				console.log('transition TRUE');
+
+				if ($('#main_footer').hasClass('on')) {
+					//open footer with animation
+					if (showLoading == true) {
+						displayLoading();
+						showLoading = false;
+					} else {
+						StartPlaceBet();
+					}
+				} else {
+					//close footer with animation
+					$('.pb_footer').css('display', 'none');
+					$('.pb_footer').siblings('n_footer').show();
+					console.log('transition TRUE with footer');
+					setTimeout(function () {
+						$('.footer_main').removeClass('transition');
+						$('#main_footer').removeClass('on-transition');
+					}, 400);
+				}
+			} else {
+				blockBGscrolling(true);
+				console.log('transition FALSE');
+				if ($('#main_footer').hasClass('on')) {
+					$('.pb_footer').css('display', '');
+					$('.pb_footer').siblings('n_footer').hide();
+					sessionStorage.getItem('ob_p2') == 'false' ? $('#parlay').css('bottom', 0) : $('.pb_content').css('bottom', pb_footer_height);
+					console.log('transition FALSE with footer');
+				} else {
+					$('.pb_footer').css('display', 'none');
+					$('.pb_footer').siblings('n_footer').show();
+					$('.pb_content').css('bottom', normal_footer_height);
+					console.log('transition FALSE NO footer');
+				}
+			}
+		}
+		function reset_sa_pb_default() {
+			$('#sample_footer_status_bet').css('top', '');
+			$('#sample_footer_post_bet').css('top', '');
+			$('.pb_content').css('top', '');
+			$('.betlist_input').removeClass('focus');
+			$('.keypad_wrap').hide();
+			console.log('RESET placebet footer');
+		}
+
+		const obTutTrigger3 = () => {
+			$('#obTut3, #obTutMsk3').show();
+			$('#main_footer').addClass('transition').toggleClass('on').removeClass('rec_zIndex');
+			$('#sample_arrow_status i').toggleClass('icon-fi-arrow-down1 icon-fi-arrow-up1');
+			reset_sa_pb_default();
+			$('#demo_footer_background').toggle();
+			calculateOPHeightSetting();
+			$('#sample_footer_input_single, .alert_msg').hide();
+			$('.n_footer_combo.pre').addClass('highlighted');
+			$('#parlay, #parlay .keypad_wrap').show();
+
+			$('#parlay').siblings('.bet_item_wrap').hide();
+			$('#btn_parlay').addClass('active').siblings('.nav_tab').removeClass('active');
+			// $(".slider").css("left", $("#btn_parlay").offset().left);
+		};
+
+		const obtutClose = () => {
+			window.location.reload();
+			sessionStorage.setItem('ob_p2', 'end');
+			sessionStorage.removeItem('ob_p1');
+			sessionStorage.removeItem('ob_p2');
+		};
+
+		$('.pb_content').load('_footer_placebet.html', function () {
+			sample_footer_placebet();
+			sessionStorage.getItem('ob_p2') == 'false' && obTutTrigger3();
+			$('#obTutBtn3').click(() => obtutClose());
+		});
+
+		//[DES-43][Narra][Tutorial Page] Recommended Correct Scores: start
+		$('#dont_copy_link_to_tutor_betslip1').click(function () {
+			//all refer to sessionStorage.getItem('enter_tutor_recCS') == "yes" in scrips_euro.js
+			$('body').removeClass('rec_zIndex popupOn');
+			$('#dont_copy_tutor_betslip').hide();
+			$('#tutor_rcd_bet').parent().css('position', '');
+			$('#tutor_rcd_bet').removeClass('highlighted');
+			$('#tutor_rcd_bet .rec_float, .details .dot_box, #dont_copy_link_to_tutor_betslip1').hide();
+		});
+		//[DES-43][Narra][Tutorial Page] Recommended Correct Scores: end
+
+		rememberLastStake();
+
+		/*standardize popup and toolti: start*/
+		infoPop('.footer_main');
+		/*standardize popup and toolti: end*/
+	});
+</script>

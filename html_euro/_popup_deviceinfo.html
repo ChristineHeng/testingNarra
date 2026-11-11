@@ -1,0 +1,21 @@
+﻿<div class="n_container">
+    <div class="n_header n_header_sports tall">
+        <div class="n_back"><div class="n_back_link"><i class="icon-fi-arrow-left"></i></div></div>
+        <div class="title">Device Info</div>
+    </div>
+    <div id="sample_mock_deviceInfo">
+            <!--shared file from ../html_public/_device-info.html-->
+    </div>        
+   
+</div>
+<script>
+    $(document).ready(function () {
+        $("#sample_mock_deviceInfo").load("../html_public/_device-info.html");
+        $("#demodeviceInfo .n_back_link").on("click", function () {
+                $("#demodeviceInfo").css("display", "none");
+                //$("body").removeClass("popupOn");
+                popupOff();
+        });
+    });
+  
+</script>

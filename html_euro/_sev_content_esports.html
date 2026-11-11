@@ -1,0 +1,71 @@
+﻿<!--for statistics-->
+<iframe id="iframe_statistics" scrolling="yes"
+    style="display: none; background-position: center center; background-repeat: no-repeat;" width="100%"
+    frameborder="no" src="../html_public/sev_stats_sample.html"></iframe>
+<div class="n_sev_item_content_wrap">
+    <div id="sample_sev_main"></div>
+    <!-- <div id="sample_sev_others"></div>
+    <div id="sample_sev_corner"></div>
+    <div id="sample_sev_booking"></div>
+    <div id="sample_sev_special"></div> -->
+</div>
+<div id="sample_short_content" class="msg_wrap">抱歉，暂无搜索结果</div>
+
+<script>
+    $(document).ready(function () {
+        $("#sample_sev_main").load("_sev_content_template.html", function () {
+            pinClick(".bet_type", "#sample_sev_main");
+        });
+        // $("#sample_sev_others").load("_sev_content_soccer_others.html", function () {
+        //    /*  $('.dont_copy_trigger_eu_moreTab').hide();
+
+        //     $('.eu_moreTab').click(function () {
+        //         $(this).parent().find(".dont_copy_trigger_eu_moreTab").slideToggle("fast");
+        //         //$(this).text(function (i, text) {
+        //         //    return text === "Show More" ? "Show More" : "Show Less";
+        //         //})
+        //         $(this).find("i").toggleClass("icon-fi-arrow-down1 icon-fi-arrow-up1");
+        //     }); */
+        // });
+        // $("#sample_sev_corner").load("_sev_content_soccer_corner.html");
+        // $("#sample_sev_special").load("_sev_content_soccer_special.html");
+        // $("#sample_sev_booking").load("_sev_content_soccer_booking.html");
+
+        function hideAllTabs() {
+            $("#sample_sev_main").hide();
+            // $("#sample_sev_others").hide();
+            // $("#sample_sev_corner").hide();
+            // $("#sample_sev_booking").hide();
+            // $("#sample_sev_special").hide();
+            $("#sample_short_content").hide();
+        }
+        // $("#tabSoccerMain").click(function () {
+        //     $("#sample_sev_main").show();
+        //     $("#sample_sev_others").show();
+        //     $("#sample_sev_corner").show();
+        //     $("#sample_sev_booking").show();
+        //     $("#sample_sev_special").show();
+        // });
+        // $("#tabSoccerOthers").click(function () {
+        //     hideAllTabs();
+        //     $("#sample_sev_others").show();
+        // });
+        // $("#tabSoccerCorner").click(function () {
+        //     hideAllTabs();
+        //     $("#sample_sev_corner").show();
+        // });
+        // $("#tabSoccerBooking").click(function () {
+        //     hideAllTabs();
+        //     $("#sample_sev_booking").show();
+        // });
+        // $("#tabSoccerSpecial").click(function () {
+        //     hideAllTabs();
+        //     $("#sample_sev_special").show();
+        // });
+        $("#tabSoccerTestingShortContent").click(function () {
+            hideAllTabs();
+            $("#sample_short_content").show();
+            //$("#sample_short_content").unwrap();
+        });
+    });
+</script>

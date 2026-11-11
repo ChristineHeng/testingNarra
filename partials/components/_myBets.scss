@@ -1,0 +1,3368 @@
+@use "../../assets/themes/colours/brand"as brand;
+@use "../../assets/themes/colours/config"as config;
+@use "../../assets/public/layout/css/base"as base;
+@use "../mixin"as mix;
+@use "sass:color";
+$PaddingTB_evnt_cancel: 6px;
+$PaddingLR_evnt_cancel: 13px;
+$betslip_id_wrapWH: 32px;
+
+.filter_Bettrade {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            @include base.justifyContent(space-between);
+            padding: 0 8px;
+
+            @include mix.mAsia {
+                min-height: 30px;
+            }
+
+            @include mix.mEuro {
+                min-height: 40px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    background: brand.t(DividerGray);
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(Gray);
+                    color: brand.t(LightGray);
+                }
+            }
+
+            @include mix.mEuro {
+                background: brand.t(BG_filter_Bettrade);
+
+                @include mix.notThemeNames(default, dark1, dark2, default1) {
+                    border-bottom: 1px solid brand.t(Border_bottom_filter_Bettrade);
+                }
+            }
+        }
+    }
+
+    // .mylabel>label.mylabel {
+    //     @include mix.layout {
+    //         @include mix.mobile {
+    //             position: absolute;
+    //             top: 0;
+    //             right: 0;
+    //             bottom: 0;
+    //             left: 0;
+    //             z-index: 1;
+    //             width: auto;
+    //             height: auto;
+    //         }
+    //     }
+    // }
+}
+
+.filter_Bettrade_title {
+    .filter_Bettrade & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(center);
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                }
+            }
+
+            @include mix.mEuro {
+                @include mix.themeNames(default, dark1, dark2) {
+                    color: brand.t(Color_main_text_title);
+                }
+
+                @include mix.themeName(green) {
+                    color: brand.t(Color_main_text_body);
+                }
+
+                @include mix.notThemeNames(default, dark1, dark2, green) {
+                    color: brand.t(Color_main_text_body);
+                }
+            }
+        }
+    }
+}
+
+.filter_Bettrade_grp {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                max-width: 50%;
+            }
+        }
+    }
+
+    &+& {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding-left: 8px;
+                }
+            }
+        }
+    }
+
+    .evnt_cancel_wrp & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    padding: 0 8px;
+                }
+            }
+        }
+    }
+}
+
+.filter_Bettrade_label {
+    @include mix.layout {
+        @include mix.mobile {
+            font-size: 12px;
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                padding-right: 4px;
+            }
+        }
+    }
+}
+
+.betslip_status_wrap {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.flexbox();
+                @include base.justifyContent(space-between);
+                @include base.alignItems(center);
+                position: relative;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+                }
+            }
+        }
+    }
+
+    .sd_grp & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    margin: 0 -10px;
+                    padding: 8px 10px 0;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    @include mix.brightTheme {
+                        border-top: 1px solid brand.t(DividerGray);
+                    }
+
+                    @include mix.darkTheme {
+                        border-top: 1px solid brand.t(Gray02);
+                    }
+                }
+            }
+        }
+    }
+
+    .sd_grp &:has(+ .tips_btm) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    padding: 8px 10px;
+                }
+            }
+        }
+    }
+
+    .lb_cs+& {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+.betslip_status_left {
+    .preload & {
+        @include mix.lazyLoading {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsia {
+                        width: 30%;
+                        height: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.betslip_status_title {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                padding-right: 4.5px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+}
+
+.betslip_status_amount {
+    .sd_grp & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    .betslip_detail_bottom & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.brightTheme {
+                        color: brand.t(Black);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(White);
+                    }
+                }
+            }
+        }
+    }
+
+    .betslip_status_wrap.win & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    color: brand.t(Green);
+                }
+            }
+        }
+    }
+
+    .betslip_status_wrap.lose & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    color: brand.t(Red);
+                }
+            }
+        }
+    }
+
+    .betslip_status_wrap.draw & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @if config.$themeType=="bright_theme" {
+                        color: brand.t(Black);
+                    }
+
+                    @if config.$themeType=="dark_theme" {
+                        color: brand.t(White);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.betslip_status_statement {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                text-align: right;
+                word-break: keep-all;
+            }
+        }
+    }
+
+    // &.negative { // pngt (moved)
+    //     @include mix.theme {
+    //         @include mix.mobile {
+    //             @include mix.mAsiaCyberbattle {
+    //                 color: brand.t(Red) !important;
+    //             }
+    //         }
+    //     }
+    // }
+    // &.positive { // pngt (moved)
+    //     @include mix.theme {
+    //         @include mix.mobile {
+    //             @include mix.mAsiaCyberbattle {
+    //                 color: brand.t(Green) !important;
+    //             }
+    //         }
+    //     }
+    // }
+    .preload & {
+        @include mix.lazyLoading {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsia {
+                        min-width: 56px;
+                        min-height: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.betslip_tag {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            @include base.borderRadius(20px);
+            font-size: 10px;
+            font-weight: 700;
+            white-space: nowrap;
+            min-height: 18px;
+            padding: 0 4px;
+
+            @include mix.mEuro {
+                margin-top: -2px;
+                height: fit-content;
+            }
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                padding-right: 2px;
+            }
+        }
+    }
+
+    .betslip_teams_title+& {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+
+    .info_wrp+& {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    margin-left: 4px;
+                }
+            }
+        }
+    }
+
+    .bet_status+& {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    margin-left: 4px;
+                }
+            }
+        }
+    }
+}
+
+.bt_ai {
+    @include mix.theme {
+        @include mix.mobile {
+            border: 1px solid #23DAE7;
+            color: #23DAE7;
+        }
+    }
+}
+
+.bt_chatbot {
+    @include mix.theme {
+        @include mix.mobile {
+            border: 1px solid #9D2DEB;
+            color: #9D2DEB;
+        }
+    }
+}
+
+.bt_ss {
+    @include mix.theme {
+        @include mix.mobile {
+            border: 1px solid #D16E77;
+            color: #D16E77;
+        }
+    }
+}
+
+.evnt_cancel_wrp {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            @include base.justifyContent(space-between);
+            min-height: 32px;
+
+            @include mix.mEuro {
+                position: relative;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @if not (config.$view==euro and config.$theme==default) {
+                @include mix.brightTheme {
+                    background: brand.t(DividerGray);
+                }
+
+                @include mix.darkTheme {
+                    @include mix.notThemeName(default1) {
+                        background: brand.t(LightBlack);
+                    }
+
+                    @include mix.themeName(default1) {
+                        background: brand.t(DarkBlue);
+                        color: brand.t(LightGray);
+                    }
+                }
+            }
+
+            @include mix.mEuro {
+                @include mix.brightTheme {
+                    background: brand.t(LightGray);
+                }
+
+                @include mix.darkTheme {
+                    @include mix.themeName(default) {
+                        background: #242932;
+                    }
+                }
+            }
+        }
+    }
+
+    &:before {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: -8px;
+                    right: -8px;
+                    height: 0.5px;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    @include mix.notThemeName(default) {
+                        @include mix.brightTheme {
+                            background: brand.t(DividerGray);
+                        }
+
+                        @include mix.darkTheme {
+                            background: brand.t(Gray02);
+                        }
+                    }
+
+                    @include mix.themeName(default) {
+                        background: color.adjust(#393d43, $lightness: -3%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.evnt_cancel {
+    @include mix.layout {
+        @include mix.mobile {
+            padding: $PaddingTB_evnt_cancel $PaddingLR_evnt_cancel;
+
+            @include mix.mAsiaCyberbattle {
+                margin-bottom: 8px;
+
+                &+.league_header {
+                    padding-top: 0;
+                }
+            }
+
+            @include mix.mEuro {
+                position: relative;
+            }
+        }
+    }
+
+    //remove soon after .evnt_cancel_wrp apply: start
+    @include mix.theme {
+        @include mix.mobile {
+            @if not (config.$view==euro and config.$theme==default) {
+                @include mix.brightTheme {
+                    background: brand.t(LightGray);
+                }
+
+                @include mix.darkTheme {
+                    @include mix.notThemeName(default1) {
+                        background: brand.t(LightBlack);
+                    }
+
+                    @include mix.themeName(default1) {
+                        background: brand.t(DarkBlue);
+                        color: brand.t(LightGray);
+                    }
+                }
+            }
+
+            @include mix.mEuro {
+                @include mix.themeName(default) {
+                    background: #242932;
+                }
+            }
+        }
+    }
+
+    .evnt_cancel_wrp & {
+        @include mix.layout {
+            @include mix.mobile {
+                padding: 0 8px;
+
+                @include mix.mAsiaCyberbattle {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                background: none;
+            }
+        }
+
+        &:before {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mEuro {
+                        content: none;
+                    }
+                }
+            }
+        }
+    }
+
+    //remove soon after .evnt_cancel_wrp apply: end
+    &:before {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: -8px;
+                    right: -8px;
+                    height: 0.5px;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    @include mix.notThemeName(default) {
+                        @include mix.brightTheme {
+                            background: brand.t(DividerGray);
+                        }
+
+                        @include mix.darkTheme {
+                            background: brand.t(Gray02);
+                        }
+                    }
+
+                    @include mix.themeName(default) {
+                        background: color.adjust(#393d43, $lightness: -3%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+//[DES-1845]
+.pending_settlement {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                position: absolute;
+                top: -6px;
+                right: 10px;
+                z-index: 1;
+            }
+        }
+    }
+}
+
+@keyframes yellowDotFlicker {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.4);
+    }
+}
+
+.yellow_dot {
+    @include mix.layout {
+        @include mix.mobile {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            top: -1px;
+            right: -1px;
+            @include base.borderRadius(50%);
+            animation: yellowDotFlicker 2s ease-in-out infinite;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            background: brand.t(Yellow);
+        }
+    }
+}
+
+.filter_Bettrade_wrap {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mEuro {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                width: 50%;
+            }
+        }
+    }
+
+    &:last-child {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    @include base.justifyContent(end);
+                    margin-left: 6px;
+                }
+            }
+        }
+    }
+
+    .mylabel {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    margin-left: 6px;
+                }
+            }
+        }
+    }
+
+    .evnt_cancel_wrp & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    margin-left: 0;
+                    padding: 0 8px;
+                }
+            }
+        }
+    }
+}
+
+.betslip_detail {
+    @include mix.layout {
+        @include mix.mobile {
+            margin-bottom: 8px;
+
+            @include mix.mAsiaCyberbattle {
+                @include base.borderRadius(4px);
+                font-size: 12px;
+            }
+
+            @include mix.mEuro {
+                @include base.borderRadius(2px);
+                font-size: 12px;
+                position: relative;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    background: brand.t(White);
+                }
+
+                @include mix.darkTheme {
+                    @include mix.themeName(default1) {
+                        background: brand.t(MediumBlue);
+                    }
+
+                    @include mix.notThemeName(default1) {
+                        background: brand.t(LightBlack);
+                    }
+                }
+            }
+
+            @include mix.mEuro {
+                @include mix.brightTheme {
+                    background: brand.t(Color_main_text_title);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(BG_betslip_detail);
+                }
+            }
+        }
+    }
+
+    .popup_window_center & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .cashout & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+.betslip_detail_top {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                position: relative;
+            }
+        }
+    }
+}
+
+.betslip_teams_wrap {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                padding-bottom: 10px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+                }
+            }
+        }
+    }
+
+    .popup_window_center & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include base.justifyContent(center);
+                    text-align: center;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .popup_window_center & .icon-fi-exclamation-sign {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    vertical-align: text-top;
+                }
+            }
+        }
+    }
+
+    .popup_window_center:not(:has(.msgPopCont)) & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    display: block;
+                    justify-content: unset;
+                }
+            }
+        }
+    }
+
+    .cashout & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include base.justifyContent(flex-start);
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    &:has(+ .betslip_league_wrap) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    padding-bottom: 4px;
+                }
+            }
+        }
+    }
+}
+
+.betslip_league_wrap {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.flexbox();
+                @include base.justifyContent(space-between);
+                @include base.alignItems(center);
+                padding-bottom: 9px;
+            }
+        }
+    }
+}
+
+.betslip_league {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.flexbox();
+                @include base.alignItems(center);
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+}
+
+.betslip_detail_top_datetime {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                padding-left: 3.625px;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+.betslip_info {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.borderRadius(4px);
+                padding: 9px;
+                position: relative;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    background: brand.t(BGGray);
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+
+                    @include mix.themeName(default1) {
+                        background: brand.t(DarkBlue);
+                    }
+
+                    @include mix.notThemeName(default1) {
+                        background: brand.t(Black);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.betslip_rb {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                padding-bottom: 6px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+                }
+            }
+
+            @include mix.mEuro {
+                @include mix.themeNames(default, dark1, dark2) {
+                    color: brand.t(Color_main_text_title);
+                }
+
+                @include mix.notThemeNames(default, dark1, dark2) {
+                    color: brand.t(Color_main_text_body);
+                }
+            }
+        }
+    }
+}
+
+.betslip_selection_wrap {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.flexbox();
+                @include base.justifyContent(space-between);
+                @include base.alignItems(center);
+            }
+        }
+    }
+}
+
+.betslip_border {
+    @include mix.layout {
+        @include mix.mobile {
+            height: 1px;
+            width: 100%;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    background: brand.t(DividerGray);
+                }
+
+                @include mix.darkTheme {
+                    @include mix.themeName(default1) {
+                        background: brand.t(Stroke);
+                    }
+
+                    @include mix.notThemeName(default1) {
+                        background: brand.t(Gray02);
+                    }
+                }
+            }
+
+            @include mix.mEuro {
+                background: brand.t(BG_betslip_border);
+            }
+        }
+    }
+}
+
+.betslip_bet_amount_wrap {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.flexbox();
+                @include base.justifyContent(space-between);
+                @include base.alignItems(center);
+            }
+        }
+    }
+}
+
+.betslip_bet_amount_inner {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                padding-right: 4px;
+            }
+        }
+    }
+
+    &:not(:first-child) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+}
+
+.betslip_bet_amount_title {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                padding-right: 4.5px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+}
+
+.betslip_datetime {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                padding-right: 4.5px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+}
+
+.betslip_bet_amount_detail {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                padding-left: 4px;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+                }
+            }
+        }
+    }
+}
+
+.betslip_bet_amount {
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                color: #73cbff;
+            }
+
+            @include mix.mEuro {
+                @include mix.themeName(default) {
+                    color: brand.t(Color_main_text_title);
+                }
+
+                @include mix.notThemeName(default) {
+                    color: brand.t(Color_main_text_body);
+                }
+            }
+        }
+    }
+}
+
+.betslip_bottom_info {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.flexbox();
+                @include base.justifyContent(space-between);
+                @include base.alignItems(center);
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+.betslip_reference {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                font-size: 11px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    margin-left: 4px;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.brightTheme {
+                        color: brand.t(Black);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(White);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.betslip_teams_title {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                font-weight: 700;
+                margin-right: 14.4px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    ccolor: brand.t(White);
+                }
+            }
+        }
+    }
+}
+
+.betslip_teams_title {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                font-weight: 700;
+            }
+
+            @include mix.mEuro {
+                font-size: 14px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    ccolor: brand.t(White);
+                }
+            }
+        }
+    }
+}
+
+.betslip_bettype_wrap {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.flexbox();
+                @include base.justifyContent(space-between);
+                padding-bottom: 6px;
+            }
+        }
+    }
+}
+
+.betslip_selection_handicap_odds {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.inlineFlex();
+                @include base.alignItems(center);
+                font-size: 14px;
+            }
+
+            @include mix.mEuro {
+                margin: 0 4px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+                }
+            }
+        }
+    }
+
+    .betslip_detail_wrap.highlight {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.highlightColor();
+                }
+            }
+        }
+    }
+}
+
+.betslip_selection_at_sign {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.inlineFlex();
+                @include base.alignItems(center);
+                font-size: 14px;
+                padding-right: 3.375px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    ccolor: brand.t(LightGray);
+                }
+            }
+        }
+    }
+
+    .betslip_detail_wrap.highlight {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    .betslip_selection_handicap_odds+& {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    padding-left: 3.375px;
+                }
+            }
+        }
+    }
+}
+
+.betslip_selection_result {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                white-space: nowrap;
+            }
+        }
+    }
+
+    // pngt (moved): start
+    // &.negative {
+    //     @include mix.theme {
+    //         @include mix.mobile {
+    //             @include mix.mAsiaCyberbattle {
+    //                 color: brand.t(Red) !important;
+    //             }
+    //         }
+    //     }
+    // }
+    // &.positive {
+    //     @include mix.theme {
+    //         @include mix.mobile {
+    //             @include mix.mAsiaCyberbattle {
+    //                 color: brand.t(Green) !important;
+    //             }
+    //         }
+    //     }
+    // }
+    // pngt (moved): end
+}
+
+.betslip_header {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.justifyContent(space-between);
+            @include base.alignItems(center);
+
+            @include mix.mAsiaCyberbattle {
+                padding: 8px;
+            }
+
+            @include mix.mEuro {
+                padding: 0 16px;
+                height: 33px;
+            }
+        }
+    }
+}
+
+.betslip_teams_icon {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.flexbox();
+            }
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+.betslip_replay {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                margin-left: auto;
+                line-height: 12px;
+                font-size: base.$n_font5;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+                }
+            }
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    padding-left: 4px;
+                }
+            }
+        }
+    }
+
+    &.active {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    color: brand.t(ActiveLight);
+                }
+            }
+        }
+    }
+}
+
+.betstatement_wrap {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                padding: 5px 10px;
+                font-size: 10px;
+            }
+
+            @include mix.mEuro {
+                padding: 8px;
+                margin: auto;
+                font-size: 11.5px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    background: brand.t(LightGray);
+                    color: brand.t(DarkGray);
+                    border-bottom-color: brand.t(DividerGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+
+                    @include mix.themeName(default1) {
+                        background: brand.t(MediumBlue);
+                        border-bottom-color: brand.t(Stroke);
+                    }
+
+                    @include mix.notThemeName(default1) {
+                        background: brand.t(Gray);
+                        border-bottom-color: brand.t(Gray02);
+                    }
+                }
+            }
+
+            @include mix.mEuro {
+                @include mix.brightTheme {
+                    background: brand.t(LightGray);
+                    border-bottom-color: brand.t(DividerGray);
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    @include mix.themeName(default) {
+                        background: brand.t(Border_n_popup_header);
+                    }
+
+                    @include mix.notThemeName(default) {
+                        background: brand.t(Gray);
+                        border-bottom-color: brand.t(Gray02);
+                        color: brand.t(LightGray);
+                    }
+                }
+            }
+        }
+    }
+
+    table td {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 10.5px;
+            }
+        }
+    }
+}
+
+.row_div2 {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+        }
+    }
+}
+
+.col_div1 {
+    @include mix.layout {
+        @include mix.mobile {
+            width: 40%;
+        }
+    }
+}
+
+.col_div2 {
+    @include mix.layout {
+        @include mix.mobile {
+            width: 60%;
+        }
+    }
+}
+
+.msgPopCont {
+    @include mix.layout {
+        @include mix.mobile {
+            position: relative;
+        }
+    }
+}
+
+.msgPopWrp {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            @include base.justifyContent(center);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+}
+
+.msgPop {
+    @include mix.layout {
+        @include mix.mobile {
+            text-align: center;
+            padding: 16px;
+
+            @include mix.mAsiaCyberbattle {
+                @include base.borderRadius(4px);
+                font-size: 14px;
+                max-width: 60%;
+            }
+
+            @include mix.mEuro {
+                @include base.borderRadius(22px);
+                width: calc(100% - #{16px * 4} + #{8px * 2});
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                background: brand.t(BG_small_rounded_pop);
+                color: brand.t(Color_small_rounded_pop);
+            }
+
+            @include mix.mEuro {
+                @include mix.themeName(default) {
+                    background: brand.t(BG_smallpop_box);
+                    color: brand.t(Color_main_text_lvl_secondary);
+                }
+
+                @include mix.notThemeName(default) {
+                    background: brand.t(BG_smallpop_box);
+                    color: brand.t(Color_main_text_body);
+                }
+            }
+        }
+    }
+}
+
+.betslip_bettype {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.alignItems(center);
+                @include base.flexbox();
+                flex-wrap: wrap;
+                padding-right: 3.625px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+
+    span {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.brightTheme {
+                        color: brand.t(Black);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(White);
+                    }
+                }
+            }
+        }
+    }
+
+    .betslip_info_pap & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    display: block;
+                    padding-right: 0;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.betslip_mr_info {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsia {
+                @include base.inlineFlex();
+                @include base.alignItems(center);
+                z-index: 0;
+                position: relative;
+            }
+        }
+    }
+
+    &+& {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    margin-left: 12px;
+                }
+            }
+        }
+    }
+}
+
+.league_header {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(space-between);
+                font-size: 12px;
+                width: 100%;
+                padding: 14.4px 0;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                    background: brand.t(BGGray);
+                    border-bottom: brand.t(DividerGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+
+                    @include mix.themeName(default1) {
+                        background: brand.t(BGDarkBlue);
+                        border-bottom: brand.t(Stroke);
+                    }
+
+                    @include mix.notThemeName(default1) {
+                        background: brand.t(DarkBlack);
+                        border-bottom: brand.t(Gray02);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.league_header_group {
+    &:first-child {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    padding-left: 8px;
+                }
+            }
+        }
+    }
+
+    &:last-child {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    padding-right: 8px;
+                }
+            }
+        }
+    }
+
+    &.betslip_arrow {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    font-size: 8px;
+                }
+            }
+        }
+    }
+
+    &.betslip_arrow i {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include base.rotateIcon();
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+.league_datetime {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                padding-bottom: 9px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+                }
+            }
+        }
+    }
+}
+
+.league_statement_wrap {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.flexbox();
+            }
+        }
+    }
+}
+
+.league_statement_border {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                margin: 0 13.5px;
+                width: 1px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    background: brand.t(DividerGray);
+                }
+
+                @include mix.darkTheme {
+                    @include mix.themeName(default1) {
+                        background: brand.t(Stroke);
+                    }
+
+                    @include mix.notThemeName(default1) {
+                        background: brand.t(Gray02);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.league_statement_wrap_text {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                padding-right: 5.5px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+}
+
+.league_statement_wrap_value {
+    &.win {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    color: brand.t(Green);
+                }
+            }
+        }
+    }
+
+    &.lose {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    color: brand.t(Red);
+                }
+            }
+        }
+    }
+
+    // &.negative { // pngt (moved)
+    //     @include mix.theme {
+    //         @include mix.mobile {
+    //             @include mix.mAsiaCyberbattle {
+    //                 color: brand.t(Red);
+    //             }
+    //         }
+    //     }
+    // }
+}
+
+.bet_status {
+
+    &.bet_win,
+    &.bet_hwin {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    color: brand.t(Green) !important;
+                }
+
+                @include mix.mEuro {
+                    color: brand.t(Color_win_text) !important;
+                }
+            }
+        }
+    }
+
+    &.bet_lose,
+    &.bet_hlose,
+    &.bet_cancel {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    color: brand.t(Red) !important;
+                }
+
+                @include mix.mEuro {
+                    color: brand.t(Color_lose_text) !important;
+                }
+            }
+        }
+    }
+
+    &.bet_draw {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.brightTheme {
+                        color: brand.t(Black) !important;
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(White) !important;
+                    }
+                }
+
+                @include mix.mEuro {
+                    @include mix.brightTheme {
+                        color: brand.t(BG_draw_dot2) !important;
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(BG_draw_dot1) !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .bslp_score & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    padding-right: 4px;
+                }
+            }
+        }
+    }
+}
+
+.betslip_selection {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.inlineFlex();
+                @include base.alignItems(center);
+                @include base.flexWrap(wrap);
+                font-size: 14px;
+                padding-right: 3.625px;
+                z-index: 0;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+                }
+            }
+        }
+    }
+
+    .betslip_detail_wrap.highlight {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    font-weight: 700;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.highlightColor();
+                }
+            }
+        }
+    }
+}
+
+.betslip_detail_bottom {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mEuro {
+                @include base.flexbox();
+                @include base.justifyContent(space-between);
+                padding: 16px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+                }
+            }
+
+            @include mix.mEuro {
+                @include mix.themeName(betway) {
+                    color: brand.t(Color_main_text_lvl_secondary);
+                }
+
+                @include mix.notThemeName(betway) {
+                    color: brand.t(Color_betslip_detail_bottom);
+                }
+            }
+        }
+    }
+
+    .betslip_detail_wrap &,
+    .popup_window_center & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    padding: 10px;
+                }
+            }
+        }
+    }
+
+    .fl_launch_popup & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+
+    >div:not(:last-child) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    padding-bottom: 9px;
+                }
+            }
+        }
+    }
+}
+
+.betslip_detail_top {
+
+    .betslip_detail_wrap &,
+    .popup_window_center & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    padding: 10px;
+                }
+            }
+        }
+    }
+
+    .fl_launch_popup & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    padding: 0 10px 22px;
+                }
+            }
+        }
+    }
+
+    &:has(.fl_mybets_table) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    padding: 16px 10px 20px;
+                }
+            }
+        }
+    }
+}
+
+.fl_mybets_table {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.borderRadius(4px);
+                width: 100%;
+                overflow: hidden;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    border: 1px solid brand.t(DividerGray);
+                    color: brand.t(Black);
+                    background: brand.t(LightGray);
+                }
+
+                @include mix.darkTheme {
+                    @include mix.themeName(default1) {
+                        border: 1px solid brand.t(Stroke);
+                        background: brand.t(Blue);
+                    }
+
+                    @include mix.notThemeName(default1) {
+                        border: 1px solid brand.t(Gray02);
+                        background: brand.t(Gray);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.fl_mybets_row {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                word-break: break-word;
+            }
+        }
+    }
+
+    &:first-child {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    font-size: 12px;
+                    padding: 10px;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.brightTheme {
+                        background: brand.t(DividerGray);
+                        border-bottom: 1px solid brand.t(DividerGray);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(LightGray);
+
+                        @include mix.themeName(default1) {
+                            background: brand.t(MediumBlue);
+                            border-bottom: 1px solid brand.t(Stroke);
+                        }
+
+                        @include mix.notThemeName(default1) {
+                            background: brand.t(Black);
+                            border-bottom: 1px solid brand.t(Gray02);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &:not(:first-child) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    font-size: 14px;
+                    position: relative;
+                    padding: 15px 10px;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.darkTheme {
+                        color: brand.t(White);
+                    }
+                }
+            }
+        }
+    }
+
+    &:not(:first-child):has(+ .fl_mybets_row)::after {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    content: "";
+                    position: absolute;
+                    left: 10px;
+                    right: 10px;
+                    height: 1px;
+                    bottom: 0;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.brightTheme {
+                        border: 1px solid brand.t(DividerGray);
+                    }
+
+                    @include mix.darkTheme {
+                        @include mix.themeName(default1) {
+                            border: 1px solid brand.t(Stroke);
+                        }
+
+                        @include mix.notThemeName(default1) {
+                            border: 1px solid brand.t(Gray02);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.betslip_bottom_button {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.borderRadius(2px);
+
+            @media all and (orientation: portrait) {
+                transition: all 0.3s linear;
+            }
+
+            @include mix.mEuro {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(center);
+                padding: 8px 0;
+                font-size: 14px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mEuro {
+                @include mix.themeNames(bafa, blue, red, brown, green) {
+                    color: brand.t(Color_main_text_title);
+                }
+
+                @include mix.themeName(default) {
+                    color: brand.t(Color_main_text_lvl_secondary);
+                }
+
+                @include mix.themeName(betway) {
+                    color: brand.t(Color_main_text_body);
+                }
+            }
+        }
+    }
+
+    .betslip_detail_bottom & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include base.borderRadius(4px);
+                    padding: 10px 0;
+                    font-weight: 700;
+                    font-size: 14px;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .betslip_detail_bottom &.disabled {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    opacity: 0.5;
+                    cursor: none;
+                }
+            }
+        }
+    }
+
+    .bt_cashout & {
+        @include mix.layout {
+            @include mix.mobile {
+                font-weight: 700;
+                padding: 6.5px 0 !important;
+                align-content: center;
+
+                @include mix.mAsiaCyberbattle {
+                    min-height: 32px;
+                }
+
+                @include mix.mEuro {
+                    font-size: 12px;
+                    min-height: 30px;
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+
+    .bt_cashout &.disabled {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    font-size: 12px !important;
+                    font-weight: 400 !important;
+                }
+            }
+        }
+    }
+
+    &.confirm {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    background: brand.t(ActiveLight);
+
+                    @include mix.themeName(default) {
+                        color: brand.t(Black);
+                    }
+
+                    @include mix.notThemeName(default) {
+                        color: brand.t(White);
+                    }
+                }
+
+                @include mix.mEuro {
+                    @include mix.themeNames(red, bafa, blue, wellbet) {
+                        background: brand.t(Main_Active_Color);
+                    }
+
+                    @include mix.notThemeNames(red, bafa, blue, wellbet) {
+                        background: brand.t(BG_betslip_button_confirm);
+                    }
+                }
+            }
+        }
+    }
+
+    &.cancel {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    color: brand.t(White);
+
+                    @include mix.brightTheme {
+                        background: brand.t(DarkGray);
+                    }
+
+                    @include mix.darkTheme {
+                        @include mix.themeName(default1) {
+                            background: brand.t(Stroke);
+                        }
+
+                        @include mix.notThemeName(default1) {
+                            background: brand.t(Gray02);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.center_inner {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    border-color: brand.t(Red) !important;
+                    color: brand.t(Red) !important;
+
+                    @include mix.brightTheme {
+                        background: brand.t(LightGray);
+                    }
+
+                    @include mix.darkTheme {
+                        background: brand.t(Gray);
+                    }
+                }
+            }
+        }
+    }
+
+    &.in_progress {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    @include mix.themeNames(bafa, blue, red) {
+                        background: brand.t(Main_Active_Color);
+                    }
+
+                    @include mix.themeName(default) {
+                        background: brand.t(BG_betslip_button_confirm);
+                        color: brand.t(Color_main_text_title);
+                    }
+
+                    @include mix.themeNames(brown, green) {
+                        background: brand.t(BG_betslip_button_confirm);
+                    }
+
+                    @include mix.themeName(betway) {
+                        background: brand.t(BG_betslip_button_confirm);
+                    }
+                }
+            }
+        }
+    }
+
+    &.sold {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    background: brand.t(BG_sold_bettrade);
+
+                    @include mix.themeName(default) {
+                        color: brand.t(Color_main_text_body);
+                    }
+                }
+            }
+        }
+    }
+
+    &.disabled {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.brightTheme {
+                    background: brand.t(MediumGray);
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+
+                    @include mix.mAsiaCyberbattle {
+                        background: rgba(58, 58, 58, 0.8);
+                    }
+
+                    @include mix.mEuro {
+                        @include mix.themeName(default) {
+                            background: rgba(40, 48, 58, 0.8);
+                        }
+
+                        @include mix.notThemeName(default) {
+                            background: rgba(58, 58, 58, 0.8);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.betslip_winningselection {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                padding: 0 9px 9px 9px;
+            }
+
+            @include mix.mEuro {
+                margin: 10px 18px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+
+    .win {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    color: brand.t(Green);
+                }
+            }
+        }
+    }
+
+    .lose {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    color: brand.t(Red);
+                }
+            }
+        }
+    }
+
+    .draw {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.brightTheme {
+                        color: brand.t(Black);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(White);
+                    }
+                }
+            }
+        }
+    }
+
+    &:has(.mr_icon) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    z-index: 0;
+                    position: relative;
+                }
+            }
+        }
+    }
+}
+
+.betstatement_wrap_content {
+    &.win {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    color: brand.t(Green);
+                }
+            }
+        }
+    }
+
+    &.lose {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    color: brand.t(Red);
+                }
+            }
+        }
+    }
+}
+
+.betslip_selection_handicap_odds_wrap {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                padding-left: 4px;
+                flex-shrink: 0;
+            }
+        }
+    }
+}
+
+.bt_dpd {
+    @include mix.layout {
+        @include mix.mobile {
+            font-size: 11px;
+
+            @include mix.mAsiaCyberbattle {
+                padding: 0 10px 8px;
+            }
+
+            @include mix.mEuro {
+                @include base.borderRadius(4px);
+                overflow: hidden;
+                margin: 0 16px 8px;
+            }
+        }
+    }
+}
+
+.bt_dpd_hdr {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            @include base.justifyContent(space-between);
+
+            @include mix.mEuro {
+                padding: 5px 6px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(DarkBlack);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(White);
+            }
+
+            @include mix.mEuro {
+                @include mix.brightTheme {
+                    background: brand.t(DividerGray);
+                }
+
+                @include mix.darkTheme {
+                    @include mix.themeName(default) {
+                        background: #28303a;
+                    }
+
+                    @include mix.notThemeName(default) {
+                        background: brand.t(Black);
+                    }
+                }
+            }
+        }
+    }
+
+    >span {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    font-weight: 700;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    >div {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include base.flexbox();
+                    @include base.alignItems(center);
+                    @include base.justifyContent(space-between);
+                    gap: 4px;
+                }
+            }
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include base.rotateIcon();
+                }
+
+                @include mix.mEuro {
+                    position: relative;
+                    top: -1px;
+                }
+            }
+        }
+    }
+}
+
+.bt_dpd_body {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                padding: 8px 0 0;
+            }
+
+            @include mix.mEuro {
+                padding: 6px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mEuro {
+                @include mix.brightTheme {
+                    background: brand.t(Gray);
+                }
+
+                @include mix.darkTheme {
+                    @include mix.themeName(default) {
+                        background: rgba(35, 40, 47, 0.3);
+                    }
+
+                    @include mix.notThemeName(default) {
+                        background: brand.t(Gray);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.bt_dpd_info {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            gap: 2px;
+            line-height: 16px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(DarkGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(LightGray);
+            }
+        }
+    }
+
+    >span:last-child {
+        @include mix.layout {
+            @include mix.mobile {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .currency {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    @include mix.brightTheme {
+                        color: brand.t(DarkGray);
+                    }
+
+                    @include mix.darkTheme {
+                        color: #999;
+                    }
+                }
+            }
+        }
+    }
+
+    &:not(:first-child) {
+        @include mix.layout {
+            @include mix.mobile {
+                padding-top: 2px;
+            }
+        }
+    }
+}
+
+//remove after 30 Sep 2026
+.table_t1 {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                font-size: 11.5px;
+                border-collapse: collapse;
+            }
+        }
+    }
+
+    th {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    border: 1px solid brand.t(Border_table_t1);
+
+                    @include mix.themeNames(betway, blue, bafa, default, dark1, dark2, green) {
+                        background-color: brand.t(BG_table_t1_th);
+                    }
+
+                    @include mix.themeNames(red, brown, wellbet) {
+                        background-color: brand.t(BG_table_t1_th);
+                        color: brand.t(Color_main_text_title);
+                    }
+                }
+            }
+        }
+    }
+
+    td {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    border: 1px solid brand.t(Border_table_t1);
+                }
+            }
+        }
+    }
+}
+
+.bet_summary {
+    @include mix.layout {
+        @include mix.mobile {
+            width: 100%;
+            padding: 6px 8px;
+            text-align: center;
+            font-size: 10px;
+            position: fixed;
+            word-break: break-word;
+            bottom: 0;
+
+            @include mix.mAsiaCyberbattle {
+                z-index: 999999;
+            }
+
+            @include mix.mEuro {
+                z-index: 1000003;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                color: brand.t(DarkGray);
+                background: brand.t(LightGray);
+                border-top: 0.5px solid brand.t(DividerGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(LightGray);
+
+                @include mix.mEuro {
+                    @include mix.themeName(default) {
+                        background: #242932;
+                        border-top: 0.5px solid #2F353F;
+                        color: brand.t(White);
+                    }
+                }
+
+                @include mix.mAsiaCyberbattle {
+                    @include mix.themeName(default) {
+                        background: brand.t(Black);
+                        border-top: 0.5px solid brand.t(Gray02);
+                    }
+                }
+
+                @include mix.themeName(default1) {
+                    background: brand.t(DarkBlue);
+                    border-top: 0.5px solid brand.t(Stroke);
+                }
+
+                @include mix.notThemeNames(default1, default) {
+                    background: brand.t(Black);
+                    border-top: 0.5px solid brand.t(Gray02);
+                }
+            }
+        }
+    }
+
+    .item {
+        @include mix.layout {
+            @include mix.mobile {
+                display: inline-block;
+                padding: 1px 10px;
+                position: relative;
+            }
+        }
+    }
+
+    .item:not(:last-child)::after {
+        @include mix.layout {
+            @include mix.mobile {
+                content: "";
+                position: absolute;
+                width: 1px;
+                right: -1.5px;
+                height: 8px;
+                top: 25%;
+                bottom: 25%;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.brightTheme {
+                    background: brand.t(DividerGray);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(Gray03);
+                }
+            }
+        }
+    }
+
+    .v2 & {
+        @include mix.layout {
+            @include mix.mobile {
+                position: relative;
+                bottom: 50px;
+            }
+        }
+    }
+
+    .cb_web & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mCyberbattle {
+                    width: 480px;
+                }
+            }
+        }
+    }
+}
+
+.w_footer {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.transition(all 0.3s linear);
+                bottom: 50px;
+            }
+        }
+    }
+
+    .navScroll & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    bottom: 0;
+                }
+            }
+        }
+    }
+
+    .navReset & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    bottom: 50px;
+                }
+            }
+        }
+    }
+}
+
+.rec_wrp {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mEuro {
+                @include base.flexbox();
+                @include base.alignItems(center);
+            }
+        }
+    }
+}
+
+.icon_rec {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+
+            @include mix.mEuro {
+                @include base.justifyContent(center);
+                width: $betslip_id_wrapWH;
+                height: $betslip_id_wrapWH;
+                min-width: $betslip_id_wrapWH;
+                font-size: 14px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                }
+            }
+
+            @include mix.mEuro {
+                color: brand.t(Color_euro_icon_rec);
+            }
+        }
+    }
+}
+
+.betslip_header_title_wrap {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+        }
+    }
+}
+
+.betslip_bottom_button_wrap {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mEuro {
+                padding: 0 16px 16px;
+            }
+        }
+    }
+}
+
+.condition_per_bet {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mEuro {
+                text-align: right;
+                word-wrap: break-word;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mEuro {
+                @include mix.themeName(betway) {
+                    color: brand.t(Color_main_text_lvl_secondary);
+                }
+
+                @include mix.notThemeName(betway) {
+                    color: brand.t(Color_condition_per_bet);
+                }
+            }
+        }
+    }
+}
+
+.bslp_score {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mEuro {
+                padding-bottom: 4px;
+                line-height: 120%;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mEuro {
+                color: brand.t(Main_Active_Color);
+            }
+        }
+    }
+
+    &:has(.mr_bslp_score) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    @include base.flexbox();
+                    @include base.alignItems(center);
+                    position: relative;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+
+    &>.win_circle:first-child {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    flex: none;
+                }
+            }
+        }
+    }
+}
+
+.odds_wrap {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(flex-end);
+            }
+        }
+    }
+
+    .betslip_bottom_button & {
+        @include mix.layout {
+            @include mix.mobile {
+                overflow: hidden;
+
+                @include mix.mEuro {
+                    @include base.flexbox();
+                    @include base.alignItems(center);
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.themeName(default) {
+                        color: brand.t(Black);
+                    }
+
+                    @include mix.notThemeName(default) {
+                        color: brand.t(White);
+                    }
+                }
+            }
+        }
+    }
+
+    .bettrade_button & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    @include base.flexbox();
+                    @include base.alignItems(center);
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}
+
+.details_subhdr {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mEuro {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(space-between);
+            }
+        }
+    }
+}
+
+.popup_bettrade_wrap {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mEuro {
+                @include base.flexbox();
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 2;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mEuro {
+                background: brand.t(BG_smallpop_top);
+            }
+        }
+    }
+}
+
+.popup_bettrade_box {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mEuro {
+                @include base.borderRadius(2px);
+                margin: auto 8px;
+                padding: 16px;
+                width: 100%;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mEuro {
+                @include mix.brightTheme {
+                    background: brand.t(Color_main_text_title);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(BG_betslip_detail);
+                }
+            }
+        }
+    }
+
+    &.confirm {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    border: 1px solid brand.t(Main_Active_Color);
+                }
+            }
+        }
+    }
+
+    &.failed {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    border: 1px solid brand.t(Color_pb_err);
+                }
+            }
+        }
+    }
+
+    &.success {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    border: 1px solid brand.t(Color_pb_ok);
+                }
+            }
+        }
+    }
+}
+
+.popup_bettrade_title {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mEuro {
+                font-size: 14px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mEuro {
+                @include mix.themeName(default) {
+                    color: brand.t(Color_main_text_title);
+                }
+
+                @include mix.notThemeName(default) {
+                    color: brand.t(Color_main_text_body);
+                }
+            }
+        }
+    }
+}
+
+.popup_bettrade_content {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mEuro {
+                margin-top: 8px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mEuro {
+                color: brand.t(Color_main_text_body);
+            }
+        }
+    }
+}
+
+.popup_bettrade_button_wrap {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mEuro {
+                @include base.flexbox();
+                @include base.flexDirection(row-reverse);
+                margin-top: 16px;
+            }
+        }
+    }
+}

@@ -1,0 +1,828 @@
+@use "../../assets/themes/colours/brand"as brand;
+@use "../../assets/public/layout/css/base"as base;
+// @use "../../assets/themes/colours/config"as config;
+@use "../../assets/public/layout/css/fl_layout_variables"as fl;
+@use "../mixin"as mix;
+// landing (moved)
+// landing (moved): start / end
+$margin_per_item: 8px+4px;
+
+// currently only being used in euro virtual sports el landing page
+@mixin sportsImg($sports_id, $img_width, $img_height, $img_top, $img_left) {
+    background-image: url("#{base.$imgFolderFromComponent}sports/banner_title_s#{$sports_id}.png#{base.$img_version}") !important;
+    background-size: cover !important;
+
+    .img_float {
+        background: url("#{base.$imgFolderFromComponent}sports/float_title_s#{$sports_id}.png#{base.$img_version}") no-repeat;
+        background-size: cover;
+        position: absolute;
+        width: $img_width;
+        height: $img_height;
+        top: $img_top;
+        left: $img_left;
+    }
+}
+
+// used in latest Asia landing page
+@mixin flSportsImg($sports_id, $sport_type: none) {
+    @if $sport_type=="cyber" {
+        background-image: url("#{base.$imgFolderFromComponent}fl_sports/banner_title_cs#{$sports_id}.png#{base.$img_version}") !important;
+    }
+
+    @else {
+        background-image: url("#{base.$imgFolderFromComponent}fl_sports/banner_title_s#{$sports_id}.png#{base.$img_version}") !important;
+    }
+
+    background-size: cover !important;
+    background-position-x: left;
+
+    .img_float {
+        display: none;
+    }
+}
+
+$code_wrap: 1,
+2,
+3,
+6,
+7,
+8,
+9,
+11,
+13,
+14,
+15,
+18,
+19,
+21,
+23,
+25,
+29,
+31,
+32,
+34,
+35,
+36,
+39,
+40,
+41,
+42,
+43,
+44,
+45,
+46,
+47,
+49,
+51,
+52,
+53,
+54,
+55,
+56,
+59,
+60,
+63,
+64,
+65,
+66,
+67,
+102,
+130,
+191,
+201,
+252,
+255,
+271,
+571,
+1001,
+1002,
+3277,
+4528,
+34055,
+58652,
+59175,
+59237,
+"wildrift",
+"kabaddi",
+"cb";
+$code_wrap_cyber: 1,
+2,
+3,
+13,
+1002;
+
+.n_home_slider_wrap {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                padding-bottom: 0.15px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    background: brand.t(White);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(DarkBlack);
+                }
+            }
+        }
+    }
+}
+
+.n_home_slider {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                margin: 0 auto 8px; // fl
+                position: relative; // fl
+                @include base.flexbox(); // old asia
+                @include base.hide_scrollbar(); // old asia
+                overflow: scroll; // old asia
+            }
+        }
+    }
+
+    &.fl_nav {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.brightTheme {
+                        background: brand.t(White);
+                    }
+
+                    @include mix.darkTheme {
+                        background: brand.t(DarkBlack);
+                    }
+                }
+            }
+        }
+    }
+
+    &.fl_top_pos {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    padding-top: 8px;
+                    margin: 0 8px 8px;
+                    position: relative;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    color: brand.t(White);
+
+                    @include mix.brightTheme {
+                        background: brand.t(White);
+                    }
+
+                    @include mix.darkTheme {
+                        background: brand.t(DarkBlack);
+                    }
+                }
+            }
+        }
+
+        &:after {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                    }
+                }
+            }
+
+            @include mix.theme {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        @include mix.brightTheme {
+                            background: brand.t(White);
+                        }
+
+                        @include mix.darkTheme {
+                            background: brand.t(DarkBlack);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .item {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include base.flexbox();
+                    @include base.justifyContent(flex-end);
+                    @include base.alignItems(center);
+                    @include base.borderRadius(6px);
+                    height: 95px;
+                    overflow: hidden;
+                    margin: 0;
+                    width: 100%;
+                    position: relative;
+                    flex-basis: 100%; // old asia
+                    flex-shrink: 0; // old asia
+                }
+            }
+        }
+
+        &:not(:first-child) {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        margin-left: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.n_fix_top_home {
+    @include mix.layout {
+        @include mix.mobile {
+            position: -webkit-sticky !important;
+            position: -moz-sticky !important;
+            position: -ms-sticky !important;
+            position: sticky !important;
+            width: 100%;
+            top: 0;
+            @include base.boxSizing(border-box);
+
+            /* @include transform(translateZ(0));
+        contain: layout; */
+            @include mix.mAsiaCyberbattle {
+                z-index: 5 !important; //DES-367: esports tutorial
+                padding-bottom: 1px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    background: brand.t(White);
+                }
+
+                @include mix.darkTheme {
+                    background: brand.t(DarkBlack);
+                }
+            }
+        }
+    }
+
+    &:has(.main_filter3) {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.brightTheme {
+                        background: brand.t(White);
+                    }
+
+                    @include mix.darkTheme {
+                        background: brand.t(Gray_02);
+                    }
+                }
+            }
+        }
+    }
+
+    &.fl_top_pos {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    position: unset !important;
+                    padding-top: 0;
+                    margin-bottom: 4px;
+                }
+            }
+        }
+    }
+}
+
+.n_home_sports {
+    @include mix.layout {
+        @include mix.mobile {
+            padding: 8px;
+            margin-bottom: 16px - ($margin_per_item);
+            // for animation
+            overflow: hidden;
+        }
+    }
+
+    &.theme_t2 {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    // padding: 10px fl.$fl_fixed_padding fl.$fl_fixed_padding;
+                    padding: 10px 8px 8px;
+                    width: 100%;
+                }
+            }
+        }
+
+        .fl.cb_web & {
+            .item {
+                @include mix.layout {
+                    @include mix.mobile {
+                        @include mix.mCyberbattle {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .item {
+        @include mix.layout {
+            @include mix.mobile {
+                height: 73px;
+                width: 100%;
+                @include base.borderRadius(8px);
+                background: black;
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.justifyContent(flex-end);
+                position: relative;
+                margin-bottom: $margin_per_item;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    border: 1px solid brand.t(BG_n_home_sports_item) inset;
+                    background-color: brand.t(BG_n_home_sports_item) !important;
+                    color: brand.t(Color_item_despt);
+                }
+
+                @include mix.mAsiaCyberbattle {
+                    color: brand.t(White);
+
+                    @include mix.brightTheme {
+                        background-color: brand.t(DarkGray) !important;
+                    }
+
+                    @include mix.darkTheme {
+                        background-color: brand.t(LightBlack) !important;
+                    }
+                }
+            }
+        }
+
+        // $sports_id, $img_width, $img_height, $img_top, $img_bottom, $img_left, &bg_posx
+        //euro banner - starts (39, 43, 44, 46, 47, 49, 52, 53)
+        &.s39 {
+
+            //Virtual Soccer
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mEuro {
+                        @include sportsImg(39, 105px, 86px, -5px, 5%);
+                    }
+                }
+            }
+        }
+
+        &.s43 {
+
+            //Virtual Basketball
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mEuro {
+                        @include sportsImg(43, 100px, 82px, -4px, 5%);
+                    }
+                }
+            }
+        }
+
+        &.s44 {
+
+            //Virtual World Cup
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mEuro {
+                        @include sportsImg(44, 115px, 82px, -4px, 0);
+                    }
+                }
+            }
+        }
+
+        &.s46 {
+
+            //Virtual Nations Cup
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mEuro {
+                        @include sportsImg(46, 110px, 82px, -4px, 5%);
+                    }
+                }
+            }
+        }
+
+        &.s47 {
+
+            //Virtual Soccer England League
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mEuro {
+                        @include sportsImg(47, 130px, 82px, -4px, 0);
+                        background-size: 100% 100% !important;
+                    }
+                }
+            }
+        }
+
+        &.s49 {
+
+            //Virtual Soccer Spanish Friendly
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mEuro {
+                        @include sportsImg(49, 130px, 82px, -4px, 0);
+                        background-size: 100% 100% !important;
+                    }
+                }
+            }
+        }
+
+        &.s52 {
+
+            //Virtual Soccer Spain League
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mEuro {
+                        @include sportsImg(52, 130px, 82px, -4px, 0);
+                        background-size: 100% 100% !important;
+                    }
+                }
+            }
+        }
+
+        &.s53 {
+
+            //Virtual Soccer Italy League
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mEuro {
+                        @include sportsImg(53, 130px, 82px, -4px, 0);
+                        background-size: 100% 100% !important;
+                    }
+                }
+            }
+        }
+
+        //euro banner - ends
+        .fl & {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        @each $code in $code_wrap {
+                            &.s#{$code} {
+                                @include flSportsImg($code);
+                            }
+                        }
+
+                        @each $code in $code_wrap_cyber {
+                            &.cs#{$code} {
+                                @include flSportsImg($code, "cyber");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &:before {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include base.borderRadius(8px);
+                }
+            }
+        }
+    }
+}
+
+.main_filter3 {
+    &.fl_top_pos {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include base.flexbox();
+                    @include base.alignItems(center);
+                    margin: 0 fl.$fl_fixed_padding 20px;
+                    height: 30px;
+                    position: sticky;
+                    z-index: 5;
+                    top: 0px;
+                }
+            }
+        }
+
+        &:before {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        content: "";
+                        position: absolute;
+                        height: calc(100% + 28px);
+                        width: calc(100% + 16px);
+                        left: -8px;
+                        z-index: -1;
+                    }
+                }
+            }
+        }
+
+        &:after {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        @include base.borderRadius(10px);
+                        content: "";
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sports_wrap {
+    .fl_top_pos.main_filter3 & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include base.flexbox();
+                    @include base.alignItems(center);
+                    @include base.justifyContent(center);
+                    min-height: 24px;
+                    margin: 3px;
+                    width: 100%;
+                    position: relative;
+                    z-index: 1;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    &.active {
+        .fl_top_pos.main_filter3 & {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        @include base.borderRadius(8px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.n_home_wrp {
+    .cb_web.fl .n_home_sports.theme_t2 & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mCyberbattle {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+        }
+    }
+}
+
+.banner_img {
+    .fl_top_pos.n_home_slider & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    min-width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .n_home_sports.theme_t2 .item & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    position: absolute;
+                    min-width: 100%;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+.item_despt {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                z-index: 2;
+            }
+        }
+    }
+
+    .n_home_sports .item & {
+        @include mix.layout {
+            @include mix.mobile {
+                text-align: right;
+                @include base.flexbox();
+                @include base.justifyContent(flex-end);
+                @include base.translateZ(0);
+                contain: layout;
+
+                @include mix.mAsiaCyberbattle {
+                    @media screen and (max-width: 350px) {
+                        // font-size: base.$n_font7 !important;
+                        font-size: 14px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .n_home_sports.theme_t2 .item & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include base.flexDirection(column-reverse);
+                    @include base.alignItems(flex-end);
+                    width: 56%;
+                    padding: 14px 8px 0 0;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+
+    &.animated {
+        .n_home_sports .item & {
+            @include mix.layout {
+                @include mix.mobile {
+                    transition-delay: 0.2s;
+                }
+            }
+        }
+    }
+
+    .virtual_wrp & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    // font-size: base.$n_font7;
+                    font-size: 14px;
+                    // padding: 8px 8px * 2 8px 8px !important;
+                    padding: 8px 12px 8px 8px !important;
+                }
+            }
+        }
+    }
+
+    :first-child {
+        .n_home_sports .item & {
+            @media screen and (max-width: 350px) {
+                @include mix.layout {
+                    @include mix.mobile {
+                        @include mix.mAsiaCyberbattle {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .n_home_sports .item.s63 & {
+            @media screen and (max-width: 350px) {
+                @include mix.layout {
+                    @include mix.mobile {
+                        @include mix.mAsiaCyberbattle {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .n_home_sports .item.s66 & {
+            @media screen and (max-width: 350px) {
+                @include mix.layout {
+                    @include mix.mobile {
+                        @include mix.mAsiaCyberbattle {
+                            width: 42%;
+                        }
+                    }
+                }
+            }
+
+            .n_home_sports.theme_t2 .item & {
+                @include mix.layout {
+                    @include mix.mobile {
+                        @include mix.mAsiaCyberbattle {
+                            @include base.limit2line();
+                            width: 100%;
+                            // font-size: fl.$font14;
+                            font-size: 14px;
+                            overflow: visible;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.item_despt_big {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.flexbox();
+                @include base.justifyContent(flex-end);
+                width: 55%;
+                padding-right: 10px;
+                font-size: 16px;
+                font-weight: 700;
+                text-align: right;
+                z-index: 1;
+                word-break: break-word;
+            }
+        }
+    }
+}
+
+.img_float {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mEuro {
+                left: 0 !important;
+            }
+        }
+    }
+
+    .item.s46 & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    left: 1% !important;
+                }
+            }
+        }
+    }
+
+    .item.s44 & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    left: -3% !important;
+                }
+            }
+        }
+    }
+}
+
+.item_loading {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                position: absolute;
+                left: 10%;
+            }
+        }
+    }
+}
+
+.fl_launch_img {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.borderRadius(6px 6px 0 0);
+                background: url("#{base.$imgFolderFromComponent}launch_anncm.png#{base.$img_version}") no-repeat;
+                background-size: cover;
+                background-position: top center;
+                height: 180px;
+            }
+        }
+    }
+}

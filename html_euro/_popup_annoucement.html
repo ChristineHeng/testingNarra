@@ -1,0 +1,36 @@
+﻿<link rel="stylesheet" type="text/css" href="../assets/public/lib/calendar.css">
+<div class="n_container">
+    <div class="n_header n_header_sports tall">
+        <div class="n_back"><div class="n_back_link"><i class="icon-fi-arrow-left"></i></div></div>
+        <div class="title">Inbox</div>
+    </div>
+
+    <div class="n_content_wrap">
+        <div class="tab_nav n_menu_slider tab_nav_2 slider_wrap n_sticky">
+            <div class="tab_nav_item anmt" id="sample2_public_annoucement">Annoncement</div>
+            <div class="tab_nav_item active" id="sample2_personalized_annoucement"><span class="er_noti_title">Notification<div class="red_dot"></div></span></div>
+            <div class="slider"></div>
+        </div>
+        <div class="annoucement_wrap" id="samplemock_loadinContentfromShared">
+            <!-- refer to html_public/_annoucements.html -->
+        </div>
+    </div>
+
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#samplemock_loadinContentfromShared").load("../html_public/_annoucements.html", function () {
+            personalized_annoucement_shared();
+            /* hide tutorial in euro view  == change to show*/
+            $(".layout_psl").show();
+        });
+
+        $("#myannouce .n_back_link").on("click", function () {
+            $("#myannouce").css("display", "none");
+            //$("body").removeClass("popupOn");
+            popupOff();
+            $(".footer_main").hide();
+        });
+    });
+</script>

@@ -1,0 +1,506 @@
+<style>
+	.sample_for_demo_only_dev_dont_copy,
+	#sample_for_demo_only_dev_dont_copy_oldbetslip {
+		background: rgba(0, 0, 0, 0.1);
+	}
+
+	.sample_for_demo_only_dev_dont_copy .list,
+	#sample_for_demo_only_dev_dont_copy_oldbetslip .list {
+		padding: 10px 20px;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	}
+
+	.demo_block {
+		width: 10px;
+		height: 10px;
+		display: inline-block;
+		margin: 0 5px;
+	}
+</style>
+
+<div class="n_container">
+	<div class="n_content_wrap_v n_content_wrap_wth_bcktop">
+		<div class="account_icon_wrap">
+			<!--facelift new ui-->
+			<div class="account_header">
+				<i class="account_icon icon-fi-n-mine-active"></i>
+				<div class="account_info_grp">
+					<div class="account_info">欢迎，Username123-new</div>
+					<div class="date">2017-04-13 19:30:02 GMT+8</div>
+				</div>
+			</div>
+			<div class="account_wallet">
+				<div class="item">
+					<div class="title">
+						Balance
+						<div class="info_wrp info_bottom">
+							<div class="info_icn"><i class="icon-fi-info"></i></div>
+							<div class="info_txt">Bet wins if selection finishes 1st place or 2nd place.</div>
+						</div>
+					</div>
+					<div class="balance">RMB 99,861,356.60</div>
+				</div>
+				<div class="item">
+					<div class="title">Open Bet</div>
+					<div class="balance">RMB 800.60</div>
+				</div>
+			</div>
+			<div class="promo_wallet">
+				<!-- <svg class="rec_arrow" xmlns="http://www.w3.org/2000/svg" width="30.91" height="51.39" viewBox="0 0 30.91 51.39">
+					<path d="M.36,.33C1.02-.22,1.62,0,2.27,.41,15.45,8.6,22.13,24.14,18.98,39.31c-.63,3.03-1.62,5.94-3,8.72-.03,.06-.04,.12-.1,.27,.24-.05,.42-.08,.59-.12,4.17-1.03,8.34-2.06,12.5-3.09,1.32-.33,1.88,.09,1.94,1.41l-.35,.58c-.36,.13-.71,.3-1.09,.39-5.13,1.27-10.26,2.54-15.39,3.81-1.13,.28-1.62,0-1.9-1.11-1.32-5.25-2.63-10.51-3.93-15.76-.21-.84,.12-1.47,.85-1.65,.72-.18,1.32,.22,1.53,1.06,1.03,4.12,2.05,8.24,3.08,12.35,.04,.17,.09,.34,.24,.53,.4-.95,.84-1.88,1.18-2.85,3.96-11.35,2.57-22.03-4.17-31.99C8.32,8.01,4.92,4.91,.92,2.47,.31,2.1-.06,1.65,0,.91L.36,.33Z" />
+				</svg> -->
+				<svg class="rec_arrow" xmlns="http://www.w3.org/2000/svg" width="55" height="50" viewBox="0 0 38.12 50">
+					<path d="M4.35355 46.4339C4.15829 46.6292 3.84171 46.6292 3.64645 46.4339L0.464466 43.252C0.269203 43.0567 0.269203 42.7401 0.464466 42.5449C0.659729 42.3496 0.976311 42.3496 1.17157 42.5449L4 45.3733L6.82843 42.5449C7.02369 42.3496 7.34027 42.3496 7.53553 42.5449C7.7308 42.7401 7.7308 43.0567 7.53553 43.252L4.35355 46.4339ZM48.4115 2.07251C41.0848 0.75534 30.1008 1.3784 20.9657 7.49584C11.8618 13.5924 4.5 25.2099 4.5 46.0804H3.5C3.5 24.9509 10.9715 12.9851 20.4093 6.66495C29.8158 0.365723 41.0819 -0.261215 48.5885 1.08828L48.4115 2.07251Z"></path>
+				</svg>
+				<div class="dot_box highlighted prmsk_desc">免费投注额也会显示在"我的“页面</div>
+				<div class="item">
+					<div class="balance">18</div>
+					<div class="title">有效免费投注</div>
+				</div>
+			</div>
+			<div class="close_icon"><i class="icon-fi-remove-thin"></i></div>
+		</div>
+		<div class="account_listmenu_wrap">
+			<div class="menu_type_name">Layout Preference</div>
+			<div class="account_menu_grp">
+				<a class="list demoOnlyDevDontCopy_exitCyberBattle simple_pro_switch" href="../html_asia/index.html" id="asian_view">
+					<div class="acct_title">
+						<div class="acct_icon"><i class="icon-fi-switch-as"></i></div>
+						<div class="acct_name">Asian View Simple</div>
+					</div>
+					<i class="icon-fi-arrow-right"></i>
+				</a>
+				<div class="list demoOnlyDevDontCopy_exitCyberBattle switch" onClick="(function(){localStorage.setItem('isswitchedtoeuro', 'true'); window.location.href = '../html_euro/index.html'})();localStorage.setItem('isswitchedtoasia', 'false')">
+					<div class="acct_title">
+						<div class="acct_icon"><i class="icon-fi-switch-eu"></i></div>
+						<div class="acct_name">Euro View</div>
+						<!--Chuyển sang phiên bản cũ-->
+					</div>
+					<i class="icon-fi-arrow-right"></i>
+				</div>
+			</div>
+			<div class="menu_type_name">General</div>
+			<div class="account_menu_grp">
+				<a class="list" href="promo-free-record.html" id="promo_record">
+					<svg class="rec_arrow" xmlns="http://www.w3.org/2000/svg" width="55" height="50" viewBox="0 0 38.12 50">
+						<path d="M4.35355 46.4339C4.15829 46.6292 3.84171 46.6292 3.64645 46.4339L0.464466 43.252C0.269203 43.0567 0.269203 42.7401 0.464466 42.5449C0.659729 42.3496 0.976311 42.3496 1.17157 42.5449L4 45.3733L6.82843 42.5449C7.02369 42.3496 7.34027 42.3496 7.53553 42.5449C7.7308 42.7401 7.7308 43.0567 7.53553 43.252L4.35355 46.4339ZM48.4115 2.07251C41.0848 0.75534 30.1008 1.3784 20.9657 7.49584C11.8618 13.5924 4.5 25.2099 4.5 46.0804H3.5C3.5 24.9509 10.9715 12.9851 20.4093 6.66495C29.8158 0.365723 41.0819 -0.261215 48.5885 1.08828L48.4115 2.07251Z"></path>
+					</svg>
+					<div class="dot_box highlighted prmsk_desc">有效免费投注额和其他优惠记录也可以在我的免费投注记录里查看哦~</div>
+
+					<div class="acct_title">
+						<div class="acct_icon"><i class="icon-fi-n-record"></i></div>
+						<div class="acct_name">我的免费投注记录</div>
+					</div>
+					<i class="icon-fi-arrow-right"></i>
+					<div class="new_tag">new</div>
+					<div class="red_dot"></div>
+				</a>
+				<a class="list" href="preferences.html">
+					<div class="acct_title">
+						<div class="acct_icon"><i class="icon-fi-preferences"></i></div>
+						<div class="acct_name">个人设置</div>
+					</div>
+					<i class="icon-fi-arrow-right"></i>
+				</a>
+				<a class="list" href="annoucements.html">
+					<div class="acct_title">
+						<div class="acct_icon"><i class="icon-fi-n-announcements"></i></div>
+						<div class="acct_name">个人信箱</div>
+					</div>
+					<i class="icon-fi-arrow-right"></i>
+				</a>
+				<a class="list" href="faq-bettingrules-content-iframe.html">
+					<div class="acct_title">
+						<div class="acct_icon"><i class="icon-fi-n-faq"></i></div>
+						<div class="acct_name">投注规则</div>
+					</div>
+					<i class="icon-fi-arrow-right"></i>
+				</a>
+				<a class="list" href="result-live.html">
+					<div class="acct_title">
+						<div class="acct_icon"><i class="icon-fi-n-results2"></i></div>
+						<div class="acct_name">Results</div>
+					</div>
+					<i class="icon-fi-arrow-right"></i>
+				</a>
+				<a class="list" href="tutorial.html" id="tutorial">
+					<div class="acct_title">
+						<div class="acct_icon"><i class="icon-fi-n-tutorial"></i></div>
+						<div class="acct_name">玩法教程</div>
+					</div>
+					<i class="icon-fi-arrow-right"></i>
+				</a>
+				<a class="list" href="device-info.html">
+					<div class="acct_title">
+						<div class="acct_icon"><i class="icon-fi-n-device-info"></i></div>
+						<div class="acct_name dv">设备信息</div>
+					</div>
+					<i class="icon-fi-arrow-right"></i>
+				</a>
+				<a class="list demoOnlyDevDontCopy_exitCyberBattle" href="../html_asia/index.html" id="asian_view" style="display: none">
+					<div class="acct_title">
+						<div class="acct_icon"><i class="icon-fi-switchview"></i></div>
+						<div class="acct_name">Asian View</div>
+					</div>
+					<i class="icon-fi-arrow-right"></i>
+				</a>
+				<a class="list demoOnlyDevDontCopy_exitCyberBattle" href="../html_euro/index.html" style="display: none">
+					<div class="acct_title">
+						<div class="acct_icon"><i class="icon-fi-switch-eu"></i></div>
+						<div class="acct_name">Euro View</div>
+						<!--Chuyển sang phiên bản cũ-->
+					</div>
+					<i class="icon-fi-arrow-right"></i>
+				</a>
+				<div class="list asiaFacelift">
+					<div class="acct_title">
+						<div class="acct_icon"><i class="icon-fi-switch-cb"></i></div>
+						<div class="acct_name">CyberBattle View</div>
+					</div>
+					<i class="icon-fi-arrow-right"></i>
+				</div>
+				<a class="list" id="select_ui">
+					<div class="acct_title">
+						<div class="acct_icon"><i class="icon-fi-n-switchview"></i></div>
+						<div class="acct_name">Select UI Version</div>
+					</div>
+					<div class="acct_int">New Interface</div>
+					<i class="icon-fi-arrow-right"></i>
+				</a>
+				<a class="list" href="index-prelogin.html">
+					<div>No Login (Demo purposes only)</div>
+					<i class="icon-fi-arrow-right"></i>
+				</a>
+				<div class="list sample_for_demo_only_dev_dont_copy sample_themes">
+					<div>Themes (Demo purposes only)</div>
+					<i class="icon-fi-arrow-right"></i>
+				</div>
+				<div class="sample_for_demo_only_dev_dont_copy sample_themes_content">
+					<div class="list theme_default">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							<div class="demo_block" style="background: #3d4655"></div>
+							Default
+						</div>
+					</div>
+					<div class="list theme_red">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							<div class="demo_block" style="background: #a92128"></div>
+							Red
+						</div>
+					</div>
+					<div class="list theme_blue">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							<div class="demo_block" style="background: #26739d"></div>
+							Blue
+						</div>
+					</div>
+					<div class="list theme_green">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							<div class="demo_block" style="background: #009d73"></div>
+							Green
+						</div>
+					</div>
+					<div class="list theme_brown">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							<div class="demo_block" style="background: #9c7656"></div>
+							Brown
+						</div>
+					</div>
+					<div class="list theme_bafa">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							<div class="demo_block" style="background: #0badff"></div>
+							Bafa
+						</div>
+					</div>
+					<div class="list theme_betway">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							<div class="demo_block" style="background: #acc540"></div>
+							Betway
+						</div>
+					</div>
+					<div class="list theme_wellbet">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							<div class="demo_block" style="background: #c3272f"></div>
+							WellBet
+						</div>
+					</div>
+					<div class="list theme_xinli">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							<div class="demo_block" style="background: #a92128"></div>
+							Xinli
+						</div>
+					</div>
+					<div class="list theme_dark1">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							<div class="demo_block" style="background: #71c5fb"></div>
+							Dark 1
+						</div>
+					</div>
+					<div class="list theme_dark2">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							<div class="demo_block" style="background: #ff4122"></div>
+							Dark 2
+						</div>
+					</div>
+					<div class="list theme_default1">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							<div class="demo_block" style="background: #7230ff"></div>
+							Default 1
+						</div>
+					</div>
+				</div>
+				<div class="list sample_for_demo_only_dev_dont_copy sample_languages">
+					<div>Languages (Demo purposes only)</div>
+					<i class="icon-fi-arrow-right"></i>
+				</div>
+				<div class="sample_for_demo_only_dev_dont_copy sample_languages_content">
+					<div class="list langEng">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							English
+						</div>
+					</div>
+					<div class="list langChs">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							Chinese
+						</div>
+					</div>
+					<div class="list langHi">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							Hindi
+						</div>
+					</div>
+					<div class="list langId">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							Indonesian
+						</div>
+					</div>
+					<div class="list langKor">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							Korean
+						</div>
+					</div>
+					<div class="list langPt">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							Portuguese
+						</div>
+					</div>
+					<div class="list langTh">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							Thai
+						</div>
+					</div>
+					<div class="list langVn">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							Vietnamese
+						</div>
+					</div>
+					<div class="list langEs">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							Spanish
+						</div>
+					</div>
+					<div class="list langTr">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							Turkish
+						</div>
+					</div>
+				</div>
+				<div class="list sample_for_demo_only_dev_dont_copy sample_facelift">
+					<div>Asian Facelift (Demo purposes only)</div>
+					<i class="icon-fi-arrow-right"></i>
+				</div>
+				<div class="sample_for_demo_only_dev_dont_copy sample_facelift_content">
+					<div class="list asiaDefault">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							Default
+						</div>
+					</div>
+					<div class="list asiaFacelift">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							New Facelift
+						</div>
+					</div>
+				</div>
+				<div id="sample_for_demo_only_dev_dont_copy_oldbetslip">
+					<a class="list" href="bk-placebetSingle-Success.html">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							Single - Success
+						</div>
+					</a>
+					<a class="list" href="bk-placebetSingle-Failed.html">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							Single - Failed
+						</div>
+					</a>
+					<a class="list" href="bk-placebetSingle-Pending.html">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							Single - Pending
+						</div>
+					</a>
+					<a class="list" href="bk-placebetCombo-SuccessandFailed.html">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							Combo - Success & failed
+						</div>
+					</a>
+					<a class="list" href="bk-placebetCombo-Success.html">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							Combo - Success
+						</div>
+					</a>
+					<a class="list" href="bk-placebetCombo-Failed.html">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							Combo - Failed
+						</div>
+					</a>
+					<a class="list" href="bk-placebetCombo-Pending.html">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							Combo - Pending
+						</div>
+					</a>
+					<a class="list" href="bk-placebetCombo-SuccessandFailed.html">
+						<div>
+							<i class="icon-fi-angle-right"></i>
+							Combo - Success & failed
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="acct_msg">
+				<!--<i class="icon-fi-info-round" aria-hidden="true"></i>-->
+				<i class="icon-fi-info"></i>
+				The legacy interface won’t be updated and will be removed soon.
+			</div>
+		</div>
+	</div>
+</div>
+<!-- <div class="bg_mask"></div> -->
+<div class="bg_mask prm_mask" id="promo_act_mask" style="display: none"></div>
+
+<script>
+	$(document).ready(function () {
+		function detectAndRunFunction() {
+			var currentPath = window.location.pathname;
+			if (currentPath.includes('asia')) {
+				switchThemes('asia');
+				languages('asia');
+			} else if (currentPath.includes('cyber')) {
+				switchThemes('cyber');
+				languages('cyber');
+			}
+		}
+		detectAndRunFunction();
+
+		asiaFacelift();
+
+		$('#sample_for_demo_only_dev_dont_copy_oldbetslip').hide();
+		$('.sample_themes_content').hide();
+		$('.sample_languages_content').hide();
+		$('.sample_facelift_content').hide();
+
+		$('#sample_for_demo_only_dev_dont_copy_openoldbetslip')
+			.off('click')
+			.on('click', function () {
+				$('#sample_for_demo_only_dev_dont_copy_oldbetslip').slideToggle();
+				$('#testing_only2').toggleClass('icon-fi-arrow-right icon-fi-arrow-down1');
+			});
+
+		$('.sample_themes')
+			.off('click')
+			.on('click', function () {
+				$(this).next().slideToggle();
+				$(this).find('i').toggleClass('icon-fi-arrow-right icon-fi-arrow-down1');
+			});
+
+		$('.sample_languages')
+			.off('click')
+			.on('click', function () {
+				$('.sample_languages_content').slideToggle();
+				$(this).find('i').toggleClass('icon-fi-arrow-right icon-fi-arrow-down1');
+			});
+
+		$('.sample_facelift')
+			.off('click')
+			.on('click', function () {
+				$('.sample_facelift_content').slideToggle();
+				$(this).find('i').toggleClass('icon-fi-arrow-right icon-fi-arrow-down1');
+			});
+
+		$('.close_icon')
+			.off('click')
+			.on('click', function () {
+				$('#myacctpage').hide();
+				popupOff();
+				if (localStorage.getItem('isFacelift') === 'true' && localStorage.getItem('isFirstFl') === 'true') {
+					$('#demoOnlyLaunchPopup').show();
+				}
+			});
+
+		function switchSimplePro() {
+			//default to pro
+			if (localStorage.getItem('iscurrentsimpleview') == null) {
+				localStorage.setItem('iscurrentsimpleview', 'false');
+				$('.simple_pro_switch').attr('href', '../html_asia/index.html');
+				$('.simple_pro_switch').find('.acct_name').text('Asian View Simple');
+			} else if (localStorage.getItem('iscurrentsimpleview') == 'false') {
+				$('.simple_pro_switch').attr('href', '../html_asia/index.html');
+				$('.simple_pro_switch').find('.acct_name').text('Asian View Simple');
+			} else {
+				$('.simple_pro_switch').attr('href', '../html_asia/index.html');
+				$('.simple_pro_switch').find('.acct_name').text('Asian View Professional');
+			}
+
+			//switch event
+			$('.simple_pro_switch').click(function (e) {
+				e.preventDefault();
+				localStorage.setItem('isswitchview', 'true');
+				if (localStorage.getItem('iscurrentsimpleview') == 'false') {
+					localStorage.setItem('iscurrentsimpleview', 'true');
+				} else {
+					localStorage.setItem('iscurrentsimpleview', 'false');
+				}
+				window.location.href = $(this).attr('href');
+			});
+		}
+		switchSimplePro();
+
+		/*standardize popup and toolti: start*/
+		infoPop('.account_wallet');
+		/*standardize popup and toolti: end*/
+
+		$('.sample_themes_content .list').click(function () {
+			merchantlogo();
+		});
+	});
+</script>

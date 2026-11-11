@@ -1,0 +1,140 @@
+<!-- note : for all slider, dev copy please add "slider_hidden_x" and use React/JS scroll,
+	 do not use native scroll, (IOS overscroll issue)
+	 mock for demo purposes only -->
+<div class="euNav_bar_wrp">
+	<ul class="nav_bar">
+		<li onClick="(function(){window.location.href = 'index.html'})();">Home<i class="icon-fi-arrow-right" aria-hidden="true"></i></li>
+		<li id="sample_only_dontcopy_closeSEV">Cricket: In-Play<i class="icon-fi-arrow-right" aria-hidden="true"></i></li>
+		<li>International<i class="icon-fi-arrow-right" aria-hidden="true"></i></li>
+		<li>VS - IM Cricket 19 Cyberbattle</li>
+	</ul>
+	<div class="euTable_side">
+		<i class="icon-fi-arrow-down1" aria-hidden="true"></i>
+	</div>
+</div>
+<!-- <div id="dont_copy_sev_click" class="euTable">
+	<div class="euTable_main">
+		<div class="eu_row">
+			<div class="team_dot off"></div>
+			<div class="eu_team">Gauff, Cori (USA)/Mcnally, Caty (USA)</div>
+			<div class="eu_score big">
+				<div>250/8</div>
+				<div>250/8</div>
+				<div>15/0</div>
+				<div>15/0</div>
+			</div>
+		</div>
+		<div class="eu_row">
+			<div class="team_dot on"></div>
+			<div class="eu_team">Aoyama, Shuko (JPN)/Shibahara, Ena</div>
+			<div class="eu_score big">
+				<div>250/8</div>
+				<div>250/8</div>
+				<div>15/0</div>
+				<div>15/0</div>
+			</div>
+		</div>
+	</div>
+	<div class="euTable_side">
+		<i class="icon-fi-arrow-up1" aria-hidden="true"></i>
+	</div>
+</div> -->
+<!--display period title-->
+<div class="period_hd">
+    <div class="eu_score jumbo">   
+        <div>Innings 1</div>
+    </div>
+</div>
+<div id="dont_copy_sev_click" class="euTable">
+	<div class="euTable_side">
+		<div>T20</div>
+	</div>
+	<div class="euTable_main">
+		<div class="eu_row">
+			<div class="team_dot on"></div>
+			<div class="eu_team cur_betTeam">VS - Royal Challenger Bangalore</div>
+			<div class="eu_score jumbo">
+				<!--add "big" class for SO-->
+				<div>180/7 (20.0)</div>
+			</div>
+		</div>
+		<div class="eu_row">
+			<div class="team_dot off"></div>
+			<div class="eu_team">VS - Punjab Kings</div>
+			<div class="eu_score jumbo">
+				<!--add "big" class for SO-->
+				<div>17/2 (3.4)</div>
+			</div>
+		</div>
+	</div>
+	<!--<div class="euTable_side">
+		<i class="icon-fi-arrow-up1" aria-hidden="true"></i>
+	</div>-->
+</div>
+<div class="euTable_bottom partition demo_sev_cricket_live">
+	<div>Last Deliveries</div>
+	<div class="eu_sequence">
+		<div class="eu_num">6</div>
+		<div class="eu_num">4</div>	
+		<div class="eu_num"><div class="team_dot"></div></div>
+		<div class="eu_num">W</div>
+		<div class="eu_num">1</div>
+	</div>
+</div>
+<div class="euTable_bottom partition partitionM demo_sev_cricket_liveMore" style="display: none;">
+	<div>Last 6 Deliveries</div>
+	<div class="eu_sequence">
+		<div class="eu_num">6</div>
+		<div class="eu_num">1</div>
+		<div class="eu_num">1</div>
+		<div class="eu_num">2</div>
+		<div class="eu_num"><div class="team_dot"></div></div>
+		<div class="eu_num ldw">1W</div>
+		<div class="eu_num">7</div>
+		<div class="eu_num">8</div>
+		<div class="eu_num">9</div>
+		<div class="eu_num">0</div>
+		<div class="eu_num">1</div>
+		<div class="eu_num">2</div>
+		<div class="eu_num">3</div>
+		<div class="eu_num">4</div>
+	</div>
+</div>
+<div class="euTable_bottom demo_sev_cricket_liveScroll" style="display: none;">
+	<div class="cur_team euHighlight">RCB Super Over</div>
+	<div class="dlv_arrow"><i class="icon-fi-caret-right-solid" aria-hidden="true"></i></div>
+	<div class="deliveries">
+		<div class="dlv_wrp">
+			<!--remove "dlv_title" when it with SO-->
+			<div class="dlv_title">Over 59</div>
+			<div class="dlv_grp">
+				<!--total 4 design-->
+				<!--1. "team_dot"-->
+				<!--2. "dlv" used for normal delivery with border-->
+				<!--3. "dlv grey" used for 4 & 6, but NOT with letters, for eg. 4l -->
+				<!--4. "dlv white" used for W-->
+				<div class="team_dot"></div>
+				<div class="team_dot"></div>
+				<div class="dlv grey">4</div>
+				<div class="dlv">2n</div>
+				<div class="dlv">4ar</div>
+				<div class="team_dot"></div>
+			</div>
+		</div>
+		<div class="dlv_wrp">
+			<!--remove "dlv_title" when it with SO-->
+			<div class="dlv_title">Over 60</div>
+			<div class="dlv_grp">
+				<!--total 4 design-->
+				<!--1. "team_dot"-->
+				<!--2. "dlv" used for normal delivery with border-->
+				<!--3. "dlv grey" used for 4 & 6, but NOT with letters, for eg. 4l -->
+				<!--4. "dlv white" used for W-->
+				<div class="dlv">3</div>
+				<div class="dlv white">W</div>
+				<div class="team_dot"></div>
+				<div class="team_dot"></div>
+			</div>
+		</div>
+	</div>
+</div>

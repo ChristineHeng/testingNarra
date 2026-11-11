@@ -1,0 +1,943 @@
+@use "../../assets/themes/colours/brand"as brand;
+@use "../../assets/themes/colours/config"as config;
+@use "../../assets/public/layout/css/base"as base;
+@use "../mixin"as mix;
+
+// league (moved)
+.select_league {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            @include base.justifyContent(space-between);
+            width: 100%;
+        }
+    }
+
+    .n_header_search & {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 12px !important;
+            }
+        }
+    }
+
+    input {
+        .n_header_search & {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        width: calc(100% - 20px);
+                    }
+
+                    @include mix.mEuro {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.select_league_nav {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.flexbox();
+                @include base.alignItems(stretch);
+                width: 100%;
+            }
+        }
+    }
+}
+
+.listItem {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                padding-right: 8px;
+                padding-left: 4px;
+                padding-right: 4px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(Black);
+                    background: brand.t(White);
+                    border-bottom: 1px solid brand.t(DividerGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+
+                    @include mix.notThemeName(default1) {
+                        background: brand.t(Black);
+                        border-bottom: 1px solid brand.t(Gray02);
+                    }
+
+                    @include mix.themeName(default1) {
+                        background: brand.t(Blue);
+                        border-bottom: 1px solid brand.t(Stroke);
+                    }
+                }
+            }
+        }
+    }
+
+    label {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    // font-size: base.$n_font6 + -2px;
+                    font-size: 11px;
+                    // padding-left: base.$n_font6 * 2.5;
+                    padding-left: 32.5px;
+                    /*cehckbox width + padding*/
+                    width: calc(100% - #{(base.$n_font6 * 2.5)});
+                }
+            }
+        }
+    }
+
+    .search_content_wrap & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include base.flexbox();
+                    @include base.alignItems(center);
+                    @include base.justifyContent(space-between);
+                }
+            }
+        }
+    }
+
+    &.header_main {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    border-bottom: none;
+
+                    @include mix.brightTheme {
+                        color: brand.t(DarkBlack);
+                        background: brand.t(DividerGray);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(White);
+
+                        @include mix.notThemeName(default1) {
+                            background: brand.t(LightBlack);
+                        }
+
+                        @include mix.themeName(default1) {
+                            background: brand.t(DarkBlue);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.header {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    border-bottom: none !important;
+
+                    @include mix.brightTheme {
+                        color: brand.t(DarkGray);
+                        background: brand.t(LightGray);
+                    }
+
+                    @include mix.darkTheme {
+                        @include mix.notThemeName(default1) {
+                            background: brand.t(Gray);
+                            color: brand.t(Gray03);
+                        }
+
+                        @include mix.themeName(default1) {
+                            background: brand.t(DarkBlue);
+                            color: brand.t(LightGray);
+                        }
+                    }
+                }
+            }
+        }
+
+        .search_content_wrap & {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        padding-top: 0 !important;
+                        padding-bottom: 0 !important;
+                        font-weight: 700;
+                        margin-top: 4px;
+                    }
+                }
+            }
+        }
+    }
+
+    &:has(+ .header_main_alt),
+    &:has(+ .header) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+
+.titleheader_title {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.flexbox();
+                @include base.alignItems(center);
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include mix.brightTheme {
+                    color: brand.t(DarkBlack);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+                }
+            }
+        }
+    }
+
+    >div {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @extend .titleheader_title;
+                }
+            }
+        }
+    }
+}
+
+.leagueCount {
+    .listItem & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    padding-right: 0;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    i {
+        .listItem & {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        // font-size: base.$n_font11_andhalf;
+                        font-size: 18.5px;
+                        @include base.rotateIcon();
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    &.w_joystick {
+        .listItem & {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        @include base.flexbox();
+                    }
+                }
+            }
+
+            .icon-fi-joystick {
+                @include mix.layout {
+                    @include mix.mobile {
+                        @include mix.mAsiaCyberbattle {
+                            margin: 3px 4px 0 0;
+                            // font-size: base.$n_font7;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.league_wrap {
+    .titleheader_title & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @extend .titleheader_title;
+                }
+            }
+        }
+    }
+}
+
+.league_name {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                font-size: 11px;
+            }
+        }
+    }
+
+    .ob_st_rw & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include base.limit2line();
+                }
+            }
+        }
+    }
+}
+
+.custom_check {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.flexbox();
+                @include base.alignItems(center);
+            }
+        }
+    }
+
+    &.checkbox {
+        label {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        padding-left: 26px;
+                    }
+                }
+            }
+        }
+    }
+
+    .search_content_wrap & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    padding: 4px;
+                }
+            }
+        }
+    }
+
+    .header_main_alt .leagueDetails & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include base.flexbox();
+                    @include base.alignItems(center);
+                    gap: 7px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    input:checked~.checkmark,
+    .container input:checked~.checkmark {
+        .listItem.header & {
+            @include mix.theme {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        background-color: brand.t(ActiveLight);
+                    }
+                }
+            }
+        }
+    }
+
+    input:checked~.checkmark {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    background-color: brand.t(ActiveLight);
+                    border-color: brand.t(ActiveLight);
+                }
+            }
+        }
+
+        &::after {
+            @include mix.theme {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+
+                        // @if config.$theme==default1 {
+                        @include mix.themeName(default1) {
+                            border-color: brand.t(White);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    i {
+        .header_main_alt & {
+            @include mix.theme {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+
+                        // @if config.$themeType=="bright_theme" {
+                        @include mix.brightTheme {
+                            color: brand.t(DarkGray);
+                        }
+
+                        // @if config.$themeType=="dark_theme" {
+                        @include mix.darkTheme {
+                            color: brand.t(LightGray);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.container {
+    .custom_check & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    display: block;
+                    position: relative;
+                    cursor: pointer;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                }
+            }
+        }
+
+        &:not(.ob_st_rw &, .listItem.header &) {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    .custom_check.checkbox & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include base.flexbox();
+                    @include base.alignItems(center);
+                    min-height: 18px;
+                }
+            }
+        }
+    }
+
+    .search_content_wrap .custom_check & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    min-height: 16px + 2px;
+                    /*2px for border*/
+                    @include base.flexbox();
+                    @include base.alignItems(center);
+                }
+            }
+        }
+    }
+
+    input {
+
+        /* Hide the browser's default checkbox */
+        .custom_check & {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        position: absolute;
+                        opacity: 0;
+                        cursor: pointer;
+                        height: 0;
+                        width: 0;
+                    }
+                }
+            }
+
+            /* When the checkbox is checked, add a blue background */
+            &:checked~.checkmark {
+                @include mix.layout {
+                    @include mix.mobile {
+                        @include mix.mAsiaCyberbattle {
+                            background-color: #2196f3;
+                        }
+                    }
+                }
+            }
+
+            /* Show the checkmark when checked */
+            &:checked~.checkmark:after {
+                @include mix.layout {
+                    @include mix.mobile {
+                        @include mix.mAsiaCyberbattle {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .listItem.header & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    // font-size: base.$n_font5_andhalf;
+                    font-size: 12.5px;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    color: brand.t(ActiveLight);
+                }
+            }
+        }
+    }
+
+    input:checked~.checkmark {
+        .custom_check & {
+            @include mix.theme {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        background-color: brand.t(ActiveLight);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.checkmark {
+
+    /* Create a custom checkbox */
+    .custom_check & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: #eee;
+                    border-radius: 2px;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.brightTheme {
+                        border: 1px solid brand.t(DividerGray);
+                        background: brand.t(White);
+                    }
+
+                    @include mix.darkTheme {
+                        @include mix.notThemeName(default1) {
+                            border: 1px solid brand.t(Gray02);
+                            background: brand.t(Black);
+                        }
+
+                        @include mix.themeName(default1) {
+                            border: 1px solid brand.t(Stroke);
+                            background: brand.t(BGDarkBlue);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .custom_check.checkbox .container & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    height: 18px;
+                    width: 18px;
+                }
+            }
+        }
+    }
+
+    .search_content_wrap .custom_check & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    top: unset !important;
+                    height: 16px;
+                    width: 16px;
+                }
+            }
+        }
+    }
+
+    &:after {
+        .custom_check & {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        content: "";
+                        position: absolute;
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        /* Style the checkmark/indicator */
+        .container & {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        // border: solid white;
+                        border: solid brand.t(Border_custom_check_checkmark_b3);
+                        border-width: 0 2px 2px 0;
+                        -webkit-transform: rotate(45deg);
+                        -ms-transform: rotate(45deg);
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+
+        .search_content_wrap .custom_check .container & {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        width: 4px;
+                        height: 8px;
+                        left: (16px - (8px - 1)) * 0.5;
+                        top: (16px - (4px + 8px)) * 0.5;
+                    }
+                }
+            }
+        }
+
+        .custom_check.checkbox .container & {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        width: 6px;
+                        height: 10px;
+                        left: 5px;
+                        top: 1.5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .listItem.header .custom_check & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.brightTheme {
+                        background: brand.t(White);
+                    }
+
+                    @include mix.darkTheme {
+                        @include mix.notThemeName(default1) {
+                            background: brand.t(Black);
+                        }
+
+                        @include mix.themeName(default1) {
+                            background: brand.t(BGDarkBlue);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.w_alph_scroll {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                width: calc(100% - 20px);
+            }
+        }
+    }
+}
+
+.alph_scroll {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                @include base.flexDirection(column);
+                width: 20px;
+                position: fixed;
+                top: 10svh;
+                right: 0;
+                align-self: center;
+                max-height: calc(90svh - var(--nLeagueHdr) - var(--nLeagueFtr));
+                gap: 8px;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+    }
+
+    .item {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    font-size: 10px;
+                    flex-shrink: 0;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.brightTheme {
+                        color: brand.t(DarkGray);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(LightGray);
+                    }
+                }
+            }
+        }
+
+        &.active {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            @include mix.theme {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        color: brand.t(ActiveLight);
+                    }
+                }
+            }
+        }
+    }
+
+    .item_dot {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include base.borderRadius(50%);
+                    width: 2px;
+                    height: 2px;
+                    flex-shrink: 0;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.brightTheme {
+                        background: brand.t(MediumGray);
+                    }
+
+                    @include mix.darkTheme {
+                        background: brand.t(Gray03);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.tooltip {
+    .alph_scroll & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include base.borderRadius(12px 12px 0 12px);
+                    @include base.flexbox();
+                    @include base.alignItems(center);
+                    @include base.justifyContent(center);
+                    font-size: 32px;
+                    height: 47px;
+                    width: 50px;
+                    right: 28px;
+                    position: absolute;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    background: brand.t(ActiveLight);
+
+                    @include mix.notThemeName(default) {
+                        color: brand.t(White);
+                    }
+
+                    @include mix.themeName(default) {
+                        color: brand.t(Black);
+                    }
+                }
+            }
+        }
+    }
+
+    &.alph_scroll_t {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include base.borderRadius(12px 12px 0 12px);
+                    @include base.flexbox();
+                    @include base.alignItems(center);
+                    @include base.justifyContent(center);
+                    font-size: 32px;
+                    height: 47px;
+                    width: 50px;
+                    right: 28px;
+                    position: fixed;
+                    z-index: 9;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    background: brand.t(ActiveLight);
+
+                    @include mix.notThemeName(default) {
+                        color: brand.t(White);
+                    }
+
+                    @include mix.themeName(default) {
+                        color: brand.t(Black);
+                    }
+                }
+            }
+        }
+
+        &:after {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        @include base.transform(rotate(45deg));
+                        content: "";
+                        position: absolute;
+                        border-style: solid;
+                        border-width: 6px 6px 0;
+                        display: block;
+                        width: 0;
+                        z-index: 1;
+                        bottom: -1px;
+                        right: -5px;
+                    }
+                }
+            }
+
+            @include mix.theme {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        border-color: brand.t(ActiveLight) rgba(0, 0, 0, 0);
+                    }
+                }
+            }
+        }
+    }
+
+    &:after {
+        .alph_scroll & {
+            @include mix.layout {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        @include base.transform(rotate(45deg));
+                        content: "";
+                        position: absolute;
+                        border-style: solid;
+                        border-width: 6px 6px 0;
+                        display: block;
+                        width: 0;
+                        z-index: 1;
+                        bottom: -1px;
+                        right: -5px;
+                    }
+                }
+            }
+
+            @include mix.theme {
+                @include mix.mobile {
+                    @include mix.mAsiaCyberbattle {
+                        border-color: brand.t(ActiveLight) rgba(0, 0, 0, 0);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.leagueDetails {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.flexbox();
+                width: 100%;
+            }
+        }
+    }
+}
+
+.leagueToggle {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            padding-right: 5px;
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 8px;
+                @include base.rotateIcon();
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+<div class="popup_top_wrp">
+    <div class="popup_box_top">
+        温馨提示 : 由于推荐波胆盘口通知已开启。 任何足球大小盘投注，我们会将推荐选项推送至投注单供您投注。
+    </div>
+    <div class="popup_box_bottom">
+        <div class="countdown_icn">
+            <div class="countdown_number">3</div>
+            <svg>
+                <circle r="9" cx="10" cy="10"></circle>
+            </svg>
+        </div>
+        <div class="btn_ok">Dikonfirmasi</div>
+    </div>
+</div>
+<div class="popup_top_wrp" style="display: none;">
+    <div class="popup_box_top">
+        投注单几乎已满。您稍后可前往"未结算投注"查看波胆盘口推荐选项。
+    </div>
+    <div class="popup_box_bottom">
+        <div class="btn_ok">确定</div>
+    </div>
+</div>
+<div class="popup_top_wrp" style="display: none;">
+    <div class="popup_box_top">
+        投注单几乎已满。点击波胆盘口推荐图标之前请先移除部分注单。
+    </div>
+    <div class="popup_box_bottom">
+        <div class="btn_ok">确定</div>
+    </div>
+</div>
+<!--[DES-43][Narra][Tutorial Page] Recommended Correct Scores (Pop Up Message): start-->
+<div class="tutor_recCS highlighted" style="display: none;">
+    <svg class="rec_arrow rec_aRT" xmlns="http://www.w3.org/2000/svg" width="50" height="38.12" viewBox="0 0 50 38.12">
+        <path d="M50,37.2c-.28,.81-.91,.93-1.67,.92-15.52-.22-29.26-10.08-34.39-24.7-1.03-2.92-1.68-5.93-1.93-9.02,0-.06-.02-.12-.05-.28-.18,.17-.32,.28-.44,.41-3.04,3.03-6.08,6.06-9.12,9.1-.96,.96-1.66,.9-2.39-.21v-.68c.24-.3,.46-.63,.73-.9C4.46,8.09,8.2,4.36,11.94,.63c.82-.82,1.39-.84,2.2-.03,3.84,3.82,7.67,7.64,11.5,11.47,.61,.61,.65,1.32,.13,1.85-.52,.53-1.24,.49-1.85-.12-3.01-2.99-6.01-5.99-9.01-8.99-.12-.12-.25-.24-.48-.33,.15,1.02,.25,2.04,.46,3.05,2.46,11.77,9.17,20.2,20.08,25.24,4.24,1.96,8.76,2.86,13.44,2.88,.71,0,1.27,.19,1.59,.86v.68Z" />
+    </svg>
+    <div class="dot_box tutor_box highlighted">
+        由于您下注于大小盘口，我们将带您回投注单给您推荐波胆盘口进行下注~
+        <!-- 如有尝试或者成功投注与足球大小盘，我们会提示而带您回投注单并推荐波胆盘口给您~ -->
+    </div>
+    <div class="mask_button mask_btnBR">知道了</div>
+</div>
+<!--[DES-43][Narra][Tutorial Page] Recommended Correct Scores (Pop Up Message): end-->
+
+<script>
+    $(document).ready(function () {
+        //close pop up message tutorial
+        $('#sample_dont_copy_popup_rmd_bet .mask_btnBR').click(function () {
+            $("body").removeClass("rec_zIndex popupOn");
+            $("#sample_dont_copy_popup_rmd_bet").hide();
+            $(".popup_top_wrp").removeClass("highlighted");
+            $("#sample_dont_copy_popup_rmd_bet .tutor_recCS").hide();
+        });
+    });
+</script>

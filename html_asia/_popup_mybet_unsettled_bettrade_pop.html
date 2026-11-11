@@ -1,0 +1,120 @@
+<div class="popup_window_center cashout">
+	<div class="n_popup_content">
+		<div class="n_popup_header">兑现</div>
+		<div class="betslip_detail">
+			<div class="msgPopCont">
+				<div class="betslip_detail_top">
+					<div class="betslip_teams_wrap">
+						<div class="betslip_teams_icon">
+							<!-- <i class="icon-fi-title-s1 sports_icon"></i> -->
+							<img class="fl_s_title_img" src="../assets/public/layout/images/icon/icon_s54.png" />
+							<!-- <img class="fl_s_title_img" src="../assets/public/layout/images/icon/icon_s55.png"> -->
+							<!-- <img class="fl_s_title_img" src="../assets/public/layout/images/icon/icon_s59.png"> -->
+							<!-- <img class="fl_s_title_img" src="../assets/public/layout/images/icon/icon_s67.png"> -->
+						</div>
+						<div class="betslip_teams_title">格鲁吉亚 vs 瑞士</div>
+					</div>
+					<div class="betslip_league_wrap">
+						<div class="betslip_league">欧洲足球竞标赛预选赛</div>
+						<div class="betslip_league betslip_detail_top_datetime">23/03 10:00 AM</div>
+					</div>
+					<div class="betslip_info">
+						<div class="betslip_bettype_wrap">
+							<div class="betslip_bettype">
+								<div class="live_icon smaller_icon_v2">LIVE</div>
+								<div>1x2</div>
+								<div class="score_det b_sprt">
+									0-0
+									<div class="info_wrp info_top">
+										<div class="info_icn"><i class="icon-fi-info"></i></div>
+										<div class="info_txt">Place Bet Score</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="betslip_rb"><i class="icon-fi-n-liveball"></i>1H 43:45<span class="pipe"></span>1-0</div>
+						<div class="betslip_selection_wrap">
+							<div class="betslip_selection">
+								<div class="bs_hl">格鲁吉亚</div>
+								<div class="betslip_selection_handicap_odds_wrap">
+									<div class="betslip_selection_handicap_odds bs_hl">+0.75</div>
+									<div class="betslip_selection_at_sign">@</div>
+									<div class="betslip_selection_handicap_odds bs_hl">0.93</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="betslip_border"></div>
+				<div class="betslip_detail_bottom">
+					<div class="betslip_bet_amount_wrap">
+						<div class="betslip_bet_amount_inner">
+							<span class="betslip_bet_amount_title">投注金额 (RMB):</span>
+							<span class="betslip_bet_amount">5.00</span>
+						</div>
+						<div class="betslip_status_statement" id="test_status"></div>
+						<!--<div class="betslip_status_statement negative">兑现中</div>-->
+						<!--<div class="betslip_status_statement positive">兑现成功</div>-->
+					</div>
+					<div class="betslip_status_wrap">
+						<div class="betslip_status_left">
+							<span class="betslip_status_title">兑现价格 (RMB):</span>
+							<span class="betslip_status_amount">3.80</span>
+						</div>
+					</div>
+					<div class="betslip_bottom_info">
+						<div class="betslip_datetime_wrap">
+							<span class="betslip_datetime">22/03/2019 03:53:07 AM</span>
+							<span class="betslip_odds_type">(香港盘)</span>
+						</div>
+						<div class="betslip_reference">1903130125179869<i class="icon-fi-copy"></i></div>
+					</div>
+					<div class="n_popup_button_wrap" id="bettrade_btn_initial">
+						<div class="betslip_bottom_button cancel" id="bettrade_btn_cancel">关闭</div>
+						<div class="betslip_bottom_button confirm" id="bettrade_btn_sell">兑现</div>
+					</div>
+					<!--<div class="n_popup_button_wrap" id="bettrade_btn_loading">
+						<div class="betslip_bottom_button confirm center_inner">
+							<img width="25" src="../assets/public/layout/images/loading.svg" />
+						</div>
+					</div>-->
+				</div>
+				<!--[SFCRQ-2719][SFCRQ-2720] To implement new handling for message pop up-->
+				<div class="msgPopWrp" style="display: none">
+					<div class="msgPop">已复制注单号</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--Wager copied popup-->
+<div class="smallpop" style="display: none">
+	<div class="smallpop_wrp">
+		<div class="smallpop_wrp_inner">已复制注单号</div>
+	</div>
+</div>
+<!--General Popup: Small Grey popup on TOP of screen : Refer to My Bet Wager ID-->
+<div class="smallpop_top" style="display: none">
+	<div class="smallpop_box">
+		<i class="icon-fi-ok-sign" style="display: none"></i>
+		已复制注单号
+	</div>
+</div>
+
+<script>
+	$(document).ready(function () {
+		$('.icon-fi-copy').click(function () {
+			// $(this).parents(".msgPopCont").find(".msgPopWrp").show().delay(1000).queue(function (next) {
+			//     $(this).parents(".msgPopCont").find(".msgPopWrp").hide();
+			//     next();
+			// });
+			//[SFCRQ-4830][Main] To display "Wager ID has been copied!" on top of page (Open/Settled Bets)
+			$('.smallpop_top').show();
+			localStorage.getItem('isFacelift') === 'true' && $('.smallpop_top').find('.icon-fi-ok-sign').show();
+			setTimeout(function () {
+				$('.smallpop_top').hide();
+			}, 1000);
+		});
+		liveScoreDetails();
+	});
+</script>

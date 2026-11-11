@@ -1,0 +1,631 @@
+<!--Footer-->
+<div class="footer_main" id="main_footer"></div>
+
+<!--Back to top-->
+<div class="eventListingRefresh btn_backtop" id="toTop">
+	<i class="icon-fi-backtotop-euro"></i>
+</div>
+
+<!--SEV-->
+<div class="sev_popup" style="display: none">
+	<div id="link_to_sev"></div>
+</div>
+
+<!--SEV: Event Selection-->
+<div class="event_selection_dropdown" style="display: none"></div>
+
+<!--Select league: Content-->
+<div class="popup_overWrap solid" id="selectleague" style="display: none"></div>
+
+<!--CyberBattle Drag: Content-->
+<div class="popup_overWrap solid" id="dragcb" style="display: none"></div>
+
+<!--Select league: Footer-->
+<div class="n_footer_popover n_footer_league" id="selectleague_footer" style="display: none">
+	<div class="footer_nav_inner">
+		<div class="select_league_nav" style="display: none">
+			<div class="normal_btn">Select All</div>
+			<div class="normal_btn">Clear All</div>
+			<div class="placebet_nav_button">Done</div>
+		</div>
+		<div class="select_league_nav">
+			<div class="checkbox custom_check">
+				<label class="container">
+					Select All
+					<input type="checkbox" />
+					<span class="checkmark"></span>
+				</label>
+			</div>
+			<div class="btn btn_cancel">Clear All</div>
+			<div class="btn btn_ok">Done</div>
+		</div>
+	</div>
+</div>
+<!--Select league: Footer-->
+<div class="n_footer_popover n_footer_league" id="cb_drag_footer" style="display: none">
+	<div class="footer_nav_inner">
+		<div class="btn btn_cancel cb_drag_btn">Reset</div>
+		<div class="btn btn_ok cb_drag_btn">Save</div>
+	</div>
+</div>
+
+<!-- DES-389 Add in Event Filter by Amount of Time (Today) -->
+<div class="fltr_popup" id="selectfilter" style="display: none"></div>
+
+<!--My Bet-->
+<div class="popup_overWrap solid fpt" id="mybet" style="display: none"></div>
+
+<!--Large Bet-->
+<div class="popup_overWrap solid fpt" id="largebetinsights" style="display: none"></div>
+
+<!--AI Playbook-->
+<div class="devDontCopy_aiPB_popup"></div>
+
+<!--Combo : Popup odds selection-->
+<div id="acceptodds_options_popup" class="popup_window" style="display: none">
+	<div class="popup_window_center">
+		<div class="acceptodds_wrp">
+			<div class="custom_radio_grp active">
+				<div>System will auto accept higher odds</div>
+				<div class="bullet"></div>
+			</div>
+			<div class="custom_radio_grp">
+				<div>System will auto accept any odds</div>
+				<div class="bullet"></div>
+			</div>
+			<div class="custom_radio_grp">
+				<div>Do not accept odds changes</div>
+				<div class="bullet"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--Combo : Popup odds selection-->
+<div id="select_ui_popup" class="popup_window" style="display: none">
+	<div class="popup_window_center">
+		<div class="acceptodds_wrp">
+			<div class="custom_radio_grp asiaFacelift">
+				<div>Switch to New Interface (Recommended)</div>
+				<div class="bullet"></div>
+			</div>
+			<div class="custom_radio_grp asiaDefault">
+				<div>Switch to Legacy Interface</div>
+				<div class="bullet"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--Combo : Popup Tutorial-->
+<div id="combo_pop_tutorial" class="popup_window pop_combo_tuto" style="display: none">
+	<div class="popup_window_center">
+		<div class="content">
+			<div class="head">什么是4串1</div>
+			<div class="body">
+				四串一是由4项在不同赛事的单独投注项目连成的投注组合 <br />
+				这4项单独投注必须为赢, 则投注的回报是4项单独投注的赔率乘积的金额
+			</div>
+			<div class="foot"><span id="demoOnly_foot_click_sample">我知道了</span></div>
+		</div>
+	</div>
+</div>
+<!--Combo limit popup-->
+<div class="smallpop" style="display: none" id="demoOnlyBetCount">
+	<div class="smallpop_wrp">
+		<div class="smallpop_wrp_inner">最多可选择10个投注项</div>
+	</div>
+</div>
+<div class="smallpop" style="display: none" id="demoOnlyUnvailable">
+	<div class="smallpop_wrp">
+		<div class="smallpop_wrp_inner">This selection is not available for betting at the moment</div>
+	</div>
+</div>
+
+<!--Bettrade Popup-->
+<div class="popup_window" id="bettrader_sell" style="display: none"></div>
+
+<!--Hidden Scenario:
+1. general error popup
+2. bettrade failed popup > popup-mybet-bettrade-alert.html or popup_bettradefailed
+3. bettrade action popup > refer above
+4. pref setting popup > preferences.html
+5. annoucement popup > index.html
+
+General Popup: on top of everything
+-->
+<div class="popup_window" id="popup_sample" style="display: none">
+	<div class="popup_window_center">
+		<div class="n_popup_content">
+			<div class="n_popup_header">错误</div>
+			<div class="betslip_detail">
+				<div class="betslip_detail_top">
+					<div class="betslip_teams_wrap">
+						<i class="icon-fi-exclamation-sign"></i> 所选投注盘口已关闭。请选择其他盘口。
+						<br />
+						[Message : 429]
+					</div>
+				</div>
+				<div class="betslip_border"></div>
+				<div class="betslip_detail_bottom">
+					<div class="n_popup_button_wrap">
+						<div class="betslip_bottom_button confirm">确认</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup_window" id="popup_bettradefailed" style="display: none">
+	<div class="popup_window_center">
+		<div class="n_popup_content">
+			<div class="n_popup_header">Bettrade Fail</div>
+			<div class="betslip_detail">
+				<div class="betslip_detail_top">
+					<div class="betslip_teams_wrap">
+						<div class="fl_mybets_table" style="display: none">
+							<div class="fl_mybets_row">Reference Number</div>
+							<div class="fl_mybets_row">001202937491029374</div>
+							<div class="fl_mybets_row">001202937491029374</div>
+						</div>
+						<table class="section_score_table table_t1" width="100%">
+							<tbody>
+								<tr>
+									<th align="left">Reference Number</th>
+								</tr>
+								<tr>
+									<td>001202937491029374</td>
+								</tr>
+								<tr>
+									<td>001202937491029374</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="betslip_border"></div>
+				<div class="betslip_detail_bottom">
+					<div class="n_popup_button_wrap">
+						<div class="betslip_bottom_button confirm" id="testclose2">确认</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--Hidden Scenario: Rotate Your Screen-->
+<div id="rotateScreen" class="rotate_wrap_outer">
+	<div class="rotate_wrap">
+		<div class="rotate_wrap_content">
+			<div class="rotate_wrap_content_inner">
+				<i class="icon_rotate icon-fi-rotate" aria-hidden="true"></i>
+				<br />
+				Rotate Your Device
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--Hidden Scenario: Loading: on top of everything : Sample Refer to My Fav-->
+<div id="sample_loading" class="loading_wrap_outer" style="display: none">
+	<div class="loading_wrap">
+		<div class="rotate_wrap_content">
+			<div class="rotate_wrap_content_inner">
+				<div style="display: none">
+					<div class="loading">
+						<!-- <div class="loading_icon">
+						</div> -->
+						<div class="spinner_wrapper">
+							<i class="spinner"></i>
+							<i class="spinner"></i>
+							<i class="spinner"></i>
+							<i class="spinner"></i>
+							<i class="spinner"></i>
+						</div>
+					</div>
+					<br />
+					loading
+				</div>
+				<div class="fl_loading_wrp">
+					<div class="fl_loading">
+						<div class="fl_load_ring">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div style="display: none"></div>
+						</div>
+					</div>
+					Loading...
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--Hidden Scenario: No Record Found / Not Available : Sample Refer to My Fav -->
+<!--DES-40 Recommended correct score-->
+<div class="popup_window" id="sample_dont_copy_popup_rmd_bet" style="display: none"></div>
+
+<!--[DES-43][Narra][Tutorial Page] Recommended Correct Scores (Preference): start-->
+<div class="bg_mask" id="dont_copy_tutor_pref" style="display: none">
+	<div class="tutor_recCSWrp">
+		<div class="tutor_recCS highlighted">
+			<div class="dot_box tutor_box highlighted">Never miss a chance to place bet on correct score! Just turn on the push correct score notification in “My Preference” ~</div>
+			<svg class="rec_arrow rec_aRB" xmlns="http://www.w3.org/2000/svg" width="50" height="38.12" viewBox="0 0 50 38.12">
+				<path d="M0,.92C.28,.11,.91-.01,1.67,0c15.52,.22,29.26,10.08,34.39,24.7,1.03,2.92,1.68,5.93,1.93,9.02,0,.06,.02,.12,.05,.28,.18-.17,.32-.28,.44-.41,3.04-3.03,6.08-6.06,9.12-9.1,.96-.96,1.66-.9,2.39,.21v.68c-.24,.3-.46,.63-.73,.9-3.73,3.74-7.48,7.47-11.22,11.2-.82,.82-1.39,.84-2.2,.03-3.84-3.82-7.67-7.64-11.5-11.47-.61-.61-.65-1.32-.13-1.85,.52-.53,1.24-.49,1.85,.12,3.01,2.99,6.01,5.99,9.01,8.99,.12,.12,.25,.24,.48,.33-.15-1.02-.25-2.04-.46-3.05-2.46-11.77-9.17-20.2-20.08-25.24C10.79,3.39,6.27,2.49,1.59,2.46c-.71,0-1.27-.19-1.59-.86V.92Z" />
+			</svg>
+			<div class="preferences_wrap">
+				<div class="form_grp_wrap">
+					<div class="rec_row">
+						<i class="icon-fi-notification"></i>
+						Receive recommended correct score, never miss out any chances!
+						<div class="custom_switch">
+							<div class="mylabel">
+								<input type="checkbox" id="coding" checked />
+								<div class="slidinggroove"></div>
+								<label class="mylabel" for="coding" name="skills"></label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="preferences_wrap">
+				<div class="form_grp_wrap">
+					<div class="form_grp_item">
+						<div class="form_item_label"><label>Betting Style：</label></div>
+						<div class="form_item_checkbox">
+							<div class="filter_group active">
+								<div class="filter_item selectbox_grp">
+									<div class="selectbox_title">
+										<div class="selectbox_titlerow" id="sample_mock_setting">Professional</div>
+										<i class="icon-fi-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form_grp_item">
+						<div class="form_item_label"><label>Preferred Odds Type：</label></div>
+						<div class="form_item_checkbox">
+							<div class="filter_group">
+								<div class="filter_item selectbox_grp">
+									<div class="selectbox_title">
+										<div class="selectbox_titlerow">Hong Kong</div>
+										<i class="icon-fi-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form_grp_item" id="pref_sort">
+						<div class="form_item_label"><label>Sorting Type：</label></div>
+						<div class="form_item_checkbox">
+							<div class="filter_group">
+								<div class="filter_item selectbox_grp">
+									<div class="selectbox_title">
+										<div class="selectbox_titlerow">Sort by Popularity 1234 12345 12312342</div>
+										<i class="icon-fi-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form_grp_item">
+						<div class="form_item_label"><label>Time Zone：</label></div>
+						<div class="form_item_checkbox">
+							<div class="filter_group">
+								<div class="filter_item selectbox_grp">
+									<div class="selectbox_title">
+										<div class="selectbox_titlerow">GMT-12</div>
+										<i class="icon-fi-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form_grp_item" id="pref_lang">
+						<div class="form_item_label"><label>语言：</label></div>
+						<div class="form_item_checkbox">
+							<div class="filter_group">
+								<div class="filter_item selectbox_grp">
+									<div class="selectbox_title">
+										<div class="selectbox_titlerow">简体中文</div>
+										<i class="icon-fi-angle-down" aria-hidden="true"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mask_button mask_btnBR">知道了</div>
+		</div>
+	</div>
+</div>
+<!--[DES-43][Narra][Tutorial Page] Recommended Correct Scores (Preference): end-->
+<!--DES-45 Standalone Odds Panel & Popup Bet Slip-->
+<div class="popup_window" id="sample_popup_video" style="display: none"></div>
+<div class="popup_side_wrp" id="sample_side_oddsPanel" style="display: none"></div>
+
+<div class="promo_drpd" style="display: none">
+	180 免費投注总额
+	<div class="promo_drpd_itm">
+		<!--<i class="icon-fi-exclamation-sign"></i>10今日即将失效
+		<div class="promo_drpd_tt" style="display: none;">即将到期的免费投注会以GMT+8 24:00时间段刷新</div>-->
+		<div class="info_wrp info_bottom">
+			<div class="info_icn"><i class="icon-fi-info"></i></div>
+			<div class="info_txt">即将到期的免费投注会以GMT+8 24:00时间段刷新</div>
+		</div>
+		10今日即将失效
+	</div>
+</div>
+<!-- [DES-826] -->
+<div class="popup_window odds_type_popup" id="popupOddsChg" style="display: none">
+	<div class="popup_window_center">
+		<div class="n_popup_content">
+			<div class="n_popup_header">Confirm Odds Type Change?<i class="icon-fi-close-icon"></i></div>
+			<div class="betslip_detail">
+				<div class="betslip_detail_top">
+					<div class="betslip_teams_wrap">We will clear all bet selections in bet slip to proceed.</div>
+				</div>
+				<div class="betslip_border"></div>
+				<div class="betslip_detail_bottom">
+					<div class="n_popup_button_wrap">
+						<div class="betslip_bottom_button normal_btn">Cancel</div>
+						<div class="betslip_bottom_button confirm">Confirm</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--free bet credits popup-->
+<!--add "popup_with_close" class for popup with "x" button-->
+<div class="popup_window popup_with_close demoOnlyDevDontCopy_freeBetCreditsPopup" style="display: none">
+	<div class="popup_window_center">
+		<div class="n_popup_content">
+			<div class="n_popup_header">Free Bet Credits!<i class="icon-fi-close-icon"></i></div>
+			<div class="betslip_detail">
+				<div class="betslip_detail_top">
+					<div class="betslip_teams_wrap">Free Bet amount has been credited to your account.</div>
+				</div>
+				<div class="betslip_border"></div>
+				<div class="betslip_detail_bottom">
+					<div class="n_popup_button_wrap">
+						<div class="betslip_bottom_button normal_btn" id="popup_click_promo_free_record">Check Records</div>
+						<div class="betslip_bottom_button confirm" id="popup_click_bet_now">Bet Now</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- ai playbook -->
+<!-- General Error States (Pop-Up) -->
+<div class="smallpop sp_aiPB" style="display: none">
+	<div class="smallpop_wrp">
+		<div class="smallpop_wrp_inner">Unable to copy strategy at the moment. <br />Please try again later.</div>
+	</div>
+</div>
+<!-- Stop Copy Strategy -->
+<!--add "popup_with_close" class for popup with "x" button-->
+<div class="popup_window popup_with_close devDontCopy_stop_copying" style="display: none">
+	<div class="popup_window_center">
+		<div class="n_popup_content">
+			<div class="n_popup_header">Stop copying this strategy?<i class="icon-fi-close-icon"></i></div>
+			<div class="betslip_detail">
+				<div class="betslip_detail_top">
+					<div class="betslip_teams_wrap">No bets will be placed. Your existing bets will remain active until settled.</div>
+				</div>
+				<div class="betslip_border"></div>
+				<div class="betslip_detail_bottom">
+					<div class="n_popup_button_wrap">
+						<div class="betslip_bottom_button normal_btn">Cancel</div>
+						<div class="betslip_bottom_button confirm">Stop Copying</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--Switched view popup-->
+<div class="smallpop" style="display: none" id="demoSwitched_Professinal">
+	<div class="smallpop_wrp">
+		<div class="smallpop_wrp_inner">Switched to Professional View!</div>
+	</div>
+</div>
+
+<!--Switched view popup-->
+<div class="smallpop" style="display: none" id="demoSwitched_simple">
+	<div class="smallpop_wrp">
+		<div class="smallpop_wrp_inner">Switched to Simple View!</div>
+	</div>
+</div>
+
+<!--chatbot-->
+<div class="uncle_boris"></div>
+<!--chatbot: error pop up message-->
+<div class="smallpop" id="demoOnlyUncleBorisError" style="display: none">
+	<div class="smallpop_wrp">
+		<div class="smallpop_wrp_inner">Something unexpected happened. Please Try again.</div>
+	</div>
+</div>
+
+<script>
+	$(document).ready(function () {
+		backtotopv2();
+		if (typeof loadAsiaSelectPopupData === 'function') {
+			loadAsiaSelectPopupData();
+		}
+
+		//DES-40 Recommended correct score: start
+		$('#sample_dont_copy_popup_rmd_bet').load('../html_public/_popup_rcd_bet.html', function () {
+			$('.popup_box_bottom .btn_ok').click(function () {
+				$('.countdown_icn circle').removeClass('animated');
+				$('.countdown_icn').hide();
+				$('.popup_top_wrp')
+					.removeClass('slideOut')
+					.addClass('slideIn')
+					.delay(300)
+					.queue(function (next) {
+						$('#sample_dont_copy_popup_rmd_bet').hide();
+						$('.popup_top_wrp').removeClass('slideIn');
+						next();
+					});
+			});
+		});
+		//DES-40 Recommended correct score: end
+
+		if (window.location.href.indexOf('cyber') > -1) {
+			$('#pref_sort, #pref_lang').hide();
+		}
+
+		//DES-45 Standalone Odds Panel & Popup Bet Slip: start
+		$('#sample_side_oddsPanel').load('../html_public/_popup_side_bet.html', function () {
+			$('.odds_box').on('click', function () {
+				oddscount($(this).parent(), $(this), 'sev');
+				//calcHeight_fs();
+			});
+			$('#sample_asia_oddspanel').show();
+			$('#rotateScreen').hide();
+			//calcHeight_fs();
+			//add condition to show after close side bar
+			$('#pb_status_demo_only').on('click', function () {
+				$('.fs_footer .tab_nav').removeClass('tab_nav_2').addClass('tab_nav_1');
+				$('.fs_footer .tab_nav>.seperator, .fs_footer #btn_combo').hide();
+			});
+		});
+		//DES-45 Standalone Odds Panel & Popup Bet Slip: end
+
+		//DES-826
+		if (localStorage.getItem('isFacelift') === 'true') {
+			$('#popupOddsChg .icon-fi-close-icon').hide();
+			$('#popupOddsChg .betslip_bottom_button').click(function () {
+				$(this).closest($('#popupOddsChg')).hide();
+				$('#selectfilter').hide();
+			});
+		} else {
+			$('#popupOddsChg .betslip_bottom_button, #popupOddsChg .icon-fi-close-icon').click(function () {
+				$(this).closest($('#popupOddsChg')).hide();
+				$('#selectfilter').hide();
+			});
+		}
+		//DES-826 ends
+
+		//free bet credits popup
+		$('.popup_with_close .icon-fi-close-icon, .popup_with_close .betslip_bottom_button').click(function () {
+			var $popup = $(this).closest('.popup_with_close');
+			var $aiPlaybookPopup = typeof getActiveAiPlaybookPage === 'function' ? getActiveAiPlaybookPage() : $('.devDontCopy_leaderboard_strategies');
+			var showAiRecommendation = $popup.hasClass('devDontCopy_stop_copying') && $(this).hasClass('confirm') && typeof window.showAiPlaybookStopCopyingRecommendation === 'function';
+
+			$popup.hide();
+			$('#selectfilter').hide();
+
+			if (showAiRecommendation) {
+				window.showAiPlaybookStopCopyingRecommendation();
+			}
+
+			if ($popup.hasClass('devDontCopy_stop_copying') && typeof releaseAiPlaybookPageNestedPopupOn === 'function') {
+				releaseAiPlaybookPageNestedPopupOn($aiPlaybookPopup);
+			}
+		});
+
+		localStorage.getItem('isFacelift') === 'true' && $('.fl_mybets_table').show().siblings('.table_t1').hide();
+
+		$('.select_league_nav .btn').click(function () {
+			$('#selectleague_footer, #selectleague').hide();
+			popupOff();
+		});
+
+		$('#cb_drag_footer .btn').click(function () {
+			$('#cb_drag_footer, #dragcb').hide();
+			popupOff();
+		});
+
+		$('#popup_click_promo_free_record').click(function () {
+			checkCyberbattlePage('promo-free-record.html');
+		});
+		$('#popup_click_bet_now').click(function () {
+			checkCyberbattlePage('el-prof-soccer-todaycyberbattle.html');
+		});
+
+		function showSimpleProSwitchedPopup() {
+			$('#demoSwitched_Asian_landing').click(function () {
+				$('#demoSwitched_Asian_landing').hide();
+			});
+			var path = window.location.pathname;
+			var page = path.split('/').pop();
+			var urlParams = new URLSearchParams(window.location.search);
+			var from = urlParams.get('from');
+			if ((from == 'euro' || from == 'classic') && page == 'index.html' && localStorage.getItem('isswitchedtoasia') == 'true') {
+				$('#demoSwitched_Asian_landing').show();
+				// localStorage.setItem("isswitchedtoasia", "false");
+				setTimeout(function () {
+					$('#demoSwitched_Asian_landing').hide();
+				}, 2000);
+			} else if (localStorage.getItem('isswitchview') == 'true' && localStorage.getItem('iscurrentsimpleview') == 'false' && page == 'el-prof-soccer-today.html') {
+				$('#demoSwitched_Professinal').click(function () {
+					$('#demoSwitched_Professinal').hide();
+				});
+				$('#demoSwitched_Professinal').show();
+				setTimeout(function () {
+					$('#demoSwitched_Professinal').hide();
+				}, 2000);
+				localStorage.removeItem('isswitchview');
+			} else if (localStorage.getItem('isswitchview') == 'true' && localStorage.getItem('iscurrentsimpleview') == 'true' && page == 'el-begin-soccer-today.html') {
+				$('#demoSwitched_simple').click(function () {
+					$('#demoSwitched_simple').hide();
+				});
+				$('#demoSwitched_simple').show();
+				setTimeout(function () {
+					$('#demoSwitched_simple').hide();
+				}, 2000);
+				localStorage.removeItem('isswitchview');
+			}
+		}
+		showSimpleProSwitchedPopup();
+
+		$('.promo_drpd_itm i').click(function () {
+			$(this).parent().find('.promo_drpd_tt').toggle();
+		});
+
+		$('.promo_drpd_itm .info_icn').click(function () {
+			$(this).parent().toggleClass('active');
+			$(this).next().toggleClass('right');
+		});
+
+		$('#dont_copy_tutor_pref .mask_btnBR').click(function () {
+			$('body').removeClass('rec_zIndex popupOn');
+			$('#dont_copy_tutor_pref').hide();
+		});
+	});
+</script>
+
+<style>
+	/* from dev side*/
+	#rotateScreen {
+		display: block;
+		width: 100%;
+		height: 100%;
+		top: 0px;
+		left: 0px;
+		position: fixed;
+		visibility: visible;
+	}
+
+	@media all and (orientation: landscape) {
+		#rotateScreen {
+			visibility: visible;
+		}
+	}
+
+	@media all and (orientation: portrait) {
+		#rotateScreen {
+			visibility: hidden !important;
+			display: none !important;
+		}
+	}
+</style>

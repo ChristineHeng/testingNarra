@@ -1,0 +1,1171 @@
+@use 'sass:meta';
+@use 'sass:color';
+@use '../../assets/themes/colours/brand'as brand;
+@use '../../assets/public/layout/css/base'as base;
+@use '../mixin'as mix;
+
+@mixin bgOpacity($value, $opacity, $fallback: transparent) {
+    $c: null;
+
+    @if $value !=null and meta.type-of($value)=='color' {
+        $c: $value;
+    }
+
+    @else {
+        $c: brand.tcolor($value, $fallback);
+    }
+
+    @if $c==null or meta.type-of($c) !='color' {
+        $c: $fallback;
+    }
+
+    background: color.change($c, $alpha: $opacity);
+    border-color: transparent;
+}
+
+.preferences_wrap {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                padding: 10px 8px 0;
+            }
+
+            @include mix.mEuro {
+                padding: 8px 8px 0 8px;
+            }
+        }
+    }
+
+    &:last-of-type {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    padding: 8px;
+                }
+            }
+        }
+    }
+
+    .tutor_recCS & {
+        @include mix.layout {
+            @include mix.mobile {
+                padding: 0;
+            }
+        }
+    }
+
+    .tutor_recCS &+& {
+        @include mix.layout {
+            @include mix.mobile {
+                padding: 8px 0 0 0;
+                position: relative;
+            }
+        }
+    }
+
+    .tutor_recCS &+&:before {
+        @include mix.layout {
+            @include mix.mobile {
+                content: '';
+                position: absolute;
+                top: 8px;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 1;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                background: brand.t(BG_bg_mask);
+            }
+        }
+    }
+}
+
+.selectbox_grp {
+    .preferences_wrap & select {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.boxSizing(border-box);
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                -o-appearance: none;
+                appearance: none;
+                resize: none;
+            }
+        }
+    }
+
+    .preferences_wrap & select:after,
+    .preferences_wrap & select:before {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.boxSizing(border-box);
+                -webkit-appearance: none;
+                -moz-appearance: none;
+            }
+        }
+    }
+}
+
+.form_grp_wrap {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.borderRadius(4px);
+                overflow: visible;
+                border: 0;
+            }
+
+            @include mix.mEuro {
+                @include base.borderRadius(5.5px);
+                overflow: hidden;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                @include base.shadows(none);
+
+                // background: brand.t(BG_form_grp_wrap);
+                @include mix.brightTheme {
+                    background: brand.t(White);
+                    color: brand.t(Black);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+
+                    @include mix.themeName(default1) {
+                        background: brand.t(MediumBlue);
+                    }
+
+                    @include mix.notThemeName(default1) {
+                        background: brand.t(LightBlack);
+                    }
+                }
+            }
+
+            @include mix.mEuro {
+                @include base.shadows(0px 0px 2px 0px brand.t(Shadow_form_grp_wrap));
+                background: brand.t(BG_form_grp_wrap);
+                border: 1px solid brand.t(Border_form_grp_wrap);
+            }
+        }
+    }
+
+    &:has(.selectbox_odds) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    overflow: visible;
+                }
+            }
+        }
+    }
+}
+
+.rec_row {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+
+            @include mix.mAsiaCyberbattle {
+                padding: 10px 8px;
+            }
+
+            @include mix.mEuro {
+                padding: 8px;
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mEuro {
+                color: brand.t(Color_pref_label_euro);
+            }
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    font-size: 14px;
+                    padding-right: 10px;
+                }
+
+                @include mix.mEuro {
+                    font-size: 18px;
+                    padding-right: 8px;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.themeName(default1) {
+                        color: brand.t(Orange);
+                    }
+
+                    @include mix.notThemeName(default1) {
+                        color: brand.t(Yellow);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.form_grp_wrap_label {
+    @include mix.layout {
+        @include mix.mobile {
+            font-weight: 700;
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+    }
+}
+
+.form_grp_item {
+    @include mix.layout {
+        @include mix.mobile {
+            position: relative;
+            display: block;
+
+            @include mix.mAsiaCyberbattle {
+                @include base.flexbox();
+                @include base.justifyContent(space-between);
+                @include base.alignItems(center);
+                padding: 10px 8px;
+                margin: auto;
+            }
+
+            @include mix.mEuro {
+                padding: 16px;
+            }
+        }
+    }
+
+    &:not(:last-child) {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.brightTheme {
+                        border-bottom: 1px solid brand.t(DividerGray);
+                    }
+
+                    @include mix.darkTheme {
+                        @include mix.themeName(default1) {
+                            border-bottom: 1px solid brand.t(Stroke);
+                        }
+
+                        @include mix.notThemeName(default1) {
+                            border-bottom: 1px solid brand.t(Gray02);
+                        }
+                    }
+                }
+
+                @include mix.mEuro {
+                    border-bottom: 1px solid brand.t(Border_form_grp_wrap);
+                }
+            }
+        }
+    }
+}
+
+.form_item_label {
+    .form_grp_item & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    width: 50%;
+                }
+
+                @include mix.mEuro {
+                    position: relative;
+                    padding-bottom: 16px;
+                    width: 100%;
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    color: brand.t(Color_pref_label_euro);
+                }
+            }
+        }
+    }
+
+    .fltr_grp_itm & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+.form_item_label_icon {
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mEuro {
+                color: brand.t(Main_Active_Color);
+            }
+        }
+    }
+
+    .dialog_bubble & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    @include mix.themeName(red) {
+                        color: brand.t(Main_Active_Color_lt10);
+                    }
+                }
+            }
+        }
+    }
+
+    .form_grp_item & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    position: absolute;
+                    top: 4px * 0.5;
+                    right: 0;
+                    margin-left: auto;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+.form_item_label_title {
+    .form_grp_item & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    width: calc(100% - 20px);
+                }
+            }
+        }
+    }
+}
+
+.form_item_sublabel {
+    .form_grp_item & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    padding-bottom: 8px;
+                }
+            }
+        }
+    }
+}
+
+.fastbet_title {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+
+            @include mix.mAsiaCyberbattle {
+                padding-top: 10px;
+                padding-bottom: 6px;
+                font-size: 12px;
+            }
+
+            @include mix.mEuro {
+                font-size: 12px;
+                padding: 0;
+            }
+        }
+    }
+}
+
+.fastbet_wrap {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+
+            @include mix.mAsiaCyberbattle {
+                margin-bottom: 8px;
+                padding: 0;
+            }
+
+            @include mix.mEuro {
+                font-size: 12px;
+                padding: 8px 0;
+            }
+        }
+    }
+
+    .form_grp_wrap_fastbet & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    width: 100%;
+                    padding-top: 0 !important;
+                }
+            }
+        }
+    }
+}
+
+.fastbet_item {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.borderRadius(4px);
+            text-align: center;
+            width: calc((100% - 16px) / 3);
+        }
+    }
+
+    &:not(:first-child) {
+        @include mix.layout {
+            @include mix.mobile {
+                @include base.borderRadius(4px);
+                margin-left: 8px;
+            }
+        }
+    }
+
+    .fastbet_title & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    text-align: left;
+                    padding: 0;
+                }
+
+                @include mix.mEuro {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .fastbet_wrap & {
+        @include mix.layout {
+            @include mix.mobile {
+                line-height: 32px;
+                font-family: base.$font_number;
+                cursor: pointer;
+
+                @include mix.mAsiaCyberbattle {
+                    @include base.borderRadius(3px);
+                    font-size: 16px;
+                }
+
+                @include mix.mEuro {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    @include mix.brightTheme {
+                        background: brand.t(BGGray);
+                        color: brand.t(DarkGray);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(LightGray);
+
+                        @include mix.themeName(default1) {
+                            background: brand.t(Stroke);
+                        }
+
+                        @include mix.notThemeName(default1) {
+                            background: brand.t(Gray01);
+                        }
+                    }
+                }
+
+                @include mix.mEuro {
+                    background: brand.t(BG_pref_fastbet_item_euro);
+                    color: brand.t(Color_pref_fastbet_item_euro);
+                }
+            }
+        }
+    }
+}
+
+.form_item_checkbox {
+    @include mix.layout {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                width: 50%;
+            }
+
+            @include mix.mEuro {
+                width: 100%;
+                @include base.borderRadius(4px);
+            }
+        }
+    }
+
+    .form_grp_item &.active {
+        @include mix.theme {
+            @include mix.mobile {
+                border: 1px solid brand.t(Border_pref_filter_group_Active);
+            }
+        }
+    }
+
+    .fltr_grp_itm & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+    .fltr_grp_itm.ts & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.form_grp_item_inner {
+    @include mix.layout {
+        @include mix.mobile {
+            width: 100%;
+        }
+    }
+}
+
+.error_msg_wrap {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.borderRadius(4px);
+            font-size: 12px;
+            padding: 10px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include bgOpacity(brand.t(Red), 0.2);
+            color: brand.t(Red);
+        }
+    }
+}
+
+.msg {
+    .error_msg_wrap & {
+        @include mix.theme {
+            @include mix.mobile {
+                color: brand.t(Color_error_msg_wrap);
+            }
+        }
+    }
+}
+
+// tutorial: start
+.form_grp_wrap_label {
+
+    .pref_tutor &.highlighted,
+    .fl_pref_tutor &.highlighted {
+        @include mix.layout {
+            @include mix.mobile {
+                z-index: 1000006;
+                position: relative;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                color: brand.t(White);
+            }
+        }
+    }
+}
+
+.form_grp_wrap {
+
+    .pref_tutor &,
+    .fl_pref_tutor & {
+        @include mix.layout {
+            @include mix.mobile {
+                position: relative;
+                overflow: visible;
+            }
+        }
+    }
+}
+
+.bet_input_wrap_outer {
+    @include mix.layout {
+        @include mix.mobile {
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+    }
+
+    .pref_tutor &.highlighted,
+    .fl_pref_tutor &.highlighted {
+        @include mix.layout {
+            @include mix.mobile {
+                position: relative;
+                z-index: 1000007;
+            }
+        }
+    }
+}
+
+.pb_input_wrp,
+.bet_input_wrap_outer {
+
+    .pref_popup_tutor &.highlighted,
+    .fl_pref_popup_tutor &.highlighted {
+        @include mix.layout {
+            @include mix.mobile {
+                position: relative;
+                z-index: 1000009;
+            }
+        }
+    }
+}
+
+.bet_input_wrap {
+    @include mix.layout {
+        @include mix.mobile {
+            font-size: 14px;
+            height: 42px;
+            @include base.borderRadius(5.5px);
+            position: relative;
+            @include base.flexbox();
+            @include base.alignItems(center);
+            @include base.justifyContent(space-between);
+            overflow: hidden;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                background: brand.t(BG_bet_input_wrap);
+                border: 1px solid brand.t(Border_bet_input_wrap);
+
+                @include mix.themeNames(blue, bafa) {
+                    color: brand.t(Color_bet_input_wrap);
+                }
+            }
+        }
+    }
+
+    .error_wrap & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    border: 1px solid brand.t(Border_error_msg_bet_input_wrap) !important;
+                }
+            }
+        }
+    }
+
+    .customize_fast_bet & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.brightTheme {
+                    background: brand.t(BGGray);
+                    border: 1px solid brand.t(DividerGray);
+                }
+
+                @include mix.darkTheme {
+                    @include mix.themeName(default1) {
+                        background: brand.t(DarkBlue);
+                        border: 1px solid brand.t(Stroke);
+                    }
+
+                    @include mix.notThemeName(default1) {
+                        background: brand.t(LightBlack);
+                        border: 1px solid brand.t(Gray02);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.bet_input_title {
+    .bet_input_wrap & {
+        @include mix.layout {
+            @include mix.mobile {
+                line-height: 14px;
+                min-width: 16%;
+                padding-left: 2%;
+                padding-right: 2%;
+            }
+        }
+    }
+
+    .customize_fast_bet & {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 12px;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(LightGray);
+                }
+            }
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.mAsiaCyberbattle {
+                color: brand.t(Color_bet_input_title);
+            }
+        }
+    }
+}
+
+.bet_input {
+    .bet_input_wrap & {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 14px;
+                height: 42px;
+                line-height: 42px;
+                flex: 1;
+            }
+        }
+
+        input {
+            @include mix.layout {
+                @include mix.mobile {
+                    font-size: 22px;
+                    width: 100%;
+                }
+            }
+
+            @include mix.theme {
+                @include mix.mobile {
+                    background: transparent none !important;
+                }
+            }
+        }
+    }
+}
+
+.bet_input_wrap_despt {
+    @include mix.layout {
+        @include mix.mobile {
+            font-size: 12px;
+        }
+    }
+
+    .customize_fast_bet & {
+        @include mix.layout {
+            @include mix.mobile {
+                margin-bottom: 8px;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.brightTheme {
+                    color: brand.t(DarkGray);
+                }
+
+                @include mix.darkTheme {
+                    color: brand.t(White);
+                }
+            }
+        }
+    }
+}
+
+label.highlighted {
+
+    .pref_popup_tutor &,
+    .fl_pref_popup_tutor & {
+        @include mix.layout {
+            @include mix.mobile {
+                position: relative;
+                z-index: 1000009;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    color: brand.t(White);
+                }
+
+                @include mix.mEuro {
+                    @include mix.brightTheme {
+                        color: brand.t(black);
+                    }
+
+                    @include mix.darkTheme {
+                        color: brand.t(White);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.prm_rd_mask {
+    .pref_tutor & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    position: absolute;
+                    left: 3px;
+                    bottom: 5%;
+                    width: 67.5%;
+                    height: 40%;
+                    z-index: 1000005;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .pref_popup_tutor & {
+        @include mix.layout {
+            @include mix.mobile {
+                position: absolute;
+                display: block;
+                z-index: 1000007;
+
+                @include mix.mEuro {
+                    z-index: -1;
+                    top: 0;
+                    height: 570%;
+                    width: 106%;
+                    right: -3%;
+                    left: -3%;
+                }
+            }
+        }
+    }
+
+    .fl_pref_tutor & {
+        @include mix.layout {
+            @include mix.mobile {
+                position: absolute;
+                left: -2px;
+                bottom: 4%;
+                width: 67.5%;
+                height: 38%;
+                z-index: 1000005;
+                display: block;
+            }
+        }
+    }
+
+    .fl_pref_popup_tutor & {
+        @include mix.layout {
+            @include mix.mobile {
+                position: absolute;
+                width: 102%;
+                height: 206%;
+                right: -1%;
+                left: -1%;
+                top: 0;
+                z-index: -1;
+                display: block;
+            }
+        }
+    }
+}
+
+.rec_arrow {
+
+    .pref_tutor &,
+    .fl_pref_tutor & {
+        @include mix.layout {
+            @include mix.mobile {
+                position: absolute;
+                z-index: 1000005;
+            }
+        }
+    }
+
+    .pref_popup_tutor &,
+    .fl_pref_popup_tutor & {
+        @include mix.layout {
+            @include mix.mobile {
+                position: absolute;
+                z-index: 1000008;
+            }
+        }
+    }
+
+    .pref_tutor & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    top: -22%;
+                    right: 75%;
+                    transform: scaleX(-1) scaleY(1) rotate(96deg);
+                }
+            }
+        }
+    }
+
+    .pref_popup_tutor & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mAsia {
+                    transform: scaleX(-1) scaleY(-1) rotate(175deg);
+                }
+
+                @include mix.mEuro {
+                    top: -200%;
+                    right: 90%;
+                    transform: scaleX(-1) scaleY(1) rotate(96deg);
+                }
+            }
+        }
+    }
+
+    .fl_pref_tutor & {
+        @include mix.layout {
+            @include mix.mobile {
+                top: -34%;
+                right: 66%;
+                transform: scaleX(-1) scaleY(-1) rotate(175deg);
+            }
+        }
+    }
+
+    .fl_pref_popup_tutor & {
+        @include mix.layout {
+            @include mix.mobile {
+                top: -72%;
+                right: 80%;
+            }
+        }
+    }
+}
+
+.pref_msk_des {
+
+    .pref_tutor &,
+    .fl_pref_tutor & {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 12px;
+                z-index: 1000008;
+                right: 1%;
+                width: 63%;
+                padding: 8px 16px;
+                position: absolute;
+            }
+        }
+    }
+
+    .pref_popup_tutor &,
+    .fl_pref_popup_tutor & {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 12px;
+                z-index: 1000008;
+                right: 8%;
+                width: 55%;
+                padding: 8px 16px;
+                position: absolute;
+                text-align: left;
+            }
+        }
+    }
+
+    .pref_tutor & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    top: -34%;
+                }
+            }
+        }
+    }
+
+    .pref_popup_tutor & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    top: -300%;
+                    width: 75%;
+                    right: 0;
+                }
+            }
+        }
+    }
+
+    .fl_pref_tutor & {
+        @include mix.layout {
+            @include mix.mobile {
+                top: -50%;
+            }
+        }
+    }
+
+    .fl_pref_popup_tutor & {
+        @include mix.layout {
+            @include mix.mobile {
+                right: 9%;
+                top: -115%;
+                width: 70%;
+            }
+        }
+    }
+}
+
+.pref_content_pop {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.std_Wrap();
+        }
+    }
+
+    .fl_pref_popup_tutor & {
+        @include mix.layout {
+            @include mix.mobile {
+                position: relative;
+            }
+        }
+    }
+
+    .customize_fast_bet & {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.brightTheme {
+                    background: brand.t(White);
+                }
+
+                @include mix.darkTheme {
+                    @include mix.themeName(default1) {
+                        background: brand.t(DarkBlue);
+                    }
+
+                    @include mix.notThemeName(default1) {
+                        background: brand.t(LightBlack);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.pref_msk_pop_close {
+    @include mix.layout {
+        @include mix.mobile {
+            top: unset;
+            bottom: 5%;
+        }
+    }
+}
+
+.form_item_label {
+
+    .pref_tutor &.highlighted,
+    .fl_pref_tutor &.highlighted {
+        @include mix.layout {
+            @include mix.mobile {
+                z-index: 1000006;
+                position: relative;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.mAsiaCyberbattle {
+                    color: brand.t(White);
+                }
+
+                @include mix.mEuro {
+                    color: brand.t(White);
+                }
+            }
+        }
+    }
+}
+
+.form_grp_wrap_fastbet {
+
+    .pref_tutor &.highlighted,
+    .fl_pref_tutor &.highlighted {
+        @include mix.layout {
+            @include mix.mobile {
+                z-index: 1000006;
+                position: relative;
+            }
+        }
+    }
+}
+
+.customize_fast_bet {
+    .pref_popup_tutor & {
+        @include mix.layout {
+            @include mix.mobile {
+                position: relative;
+            }
+        }
+    }
+}
+
+.n_popup_container {
+    .pref_popup_tutor & {
+        @include mix.layout {
+            @include mix.mobile {
+                @include mix.mEuro {
+                    position: relative;
+                    overflow: unset;
+                }
+            }
+        }
+    }
+}
+
+.fastbet_item {
+
+    .pref_tutor .form_grp_wrap_fastbet &.highlighted,
+    .fl_pref_tutor .form_grp_wrap_fastbet &.highlighted {
+        @include mix.layout {
+            @include mix.mobile {
+                z-index: 1000006;
+                position: relative;
+            }
+        }
+    }
+}
+
+// tutorial: end

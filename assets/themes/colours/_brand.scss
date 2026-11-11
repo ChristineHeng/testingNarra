@@ -1,0 +1,280 @@
+@use "sass:map";
+@use "sass:list";
+@use "sass:string";
+@use "sass:meta";
+@use "sass:color";
+@use "sass:math";
+@use "config"as config;
+@use './bafa/_variables'as bafaTheme;
+@use './betway/_variables'as betwayTheme;
+@use './blue/_variables'as blueTheme;
+@use './brown/_variables'as brownTheme;
+@use './dark1/_variables'as dark1Theme;
+@use './dark2/_variables'as dark2Theme;
+@use './default/_variables'as defaultTheme;
+@use './default1/_variables'as default1Theme;
+@use './green/_variables'as greenTheme;
+@use './red/_variables'as redTheme;
+@use './wellbet/_variables'as wellbetTheme;
+@use './xinli/_variables'as xinliTheme;
+@use "fl_bright_variables"as bright;
+@use "fl_dark_variables"as dark;
+$themes: (bafa: bafaTheme.$theme-colors,
+    betway: betwayTheme.$theme-colors,
+    blue: blueTheme.$theme-colors,
+    brown: brownTheme.$theme-colors,
+    dark1: dark1Theme.$theme-colors,
+    dark2: dark2Theme.$theme-colors,
+    default: defaultTheme.$theme-colors,
+    default1: default1Theme.$theme-colors,
+    green: greenTheme.$theme-colors,
+    red: redTheme.$theme-colors,
+    wellbet: wellbetTheme.$theme-colors,
+    xinli: xinliTheme.$theme-colors,
+);
+$viewColorsByTheme: (bafa: bafaTheme.$view-colors,
+    betway: betwayTheme.$view-colors,
+    blue: blueTheme.$view-colors,
+    brown: brownTheme.$view-colors,
+    dark1: dark1Theme.$view-colors,
+    dark2: dark2Theme.$view-colors,
+    default: defaultTheme.$view-colors,
+    default1: default1Theme.$view-colors,
+    green: greenTheme.$view-colors,
+    red: redTheme.$view-colors,
+    wellbet: wellbetTheme.$view-colors,
+    xinli: xinliTheme.$view-colors,
+);
+
+// ---------------------------
+// 取 brand / mode / view（含型別相容）
+// ---------------------------
+@function _theme-map($themes-map, $theme) {
+    $m: map.get($themes-map, $theme);
+
+    @if $m==null and meta.type-of($theme)=='string' {
+        $m: map.get($themes-map, string.unquote($theme));
+    }
+
+    @return $m;
+}
+
+@function _view-map($views, $view) {
+    @if $views==null {
+        @return ();
+    }
+
+    $v: map.get($views, $view);
+
+    @if $v==null and meta.type-of($view)=="string" {
+        $v: map.get($views, string.unquote($view));
+    }
+
+    @if $v==null {
+        @return ();
+    }
+
+    @return $v;
+}
+
+$brand-colors: _theme-map($themes, config.$theme);
+
+@if $brand-colors==null {
+    // @warn "Unknown theme `#{config.$theme}`, fallback to `default`.";
+    $brand-colors: map.get($themes, default);
+}
+
+$mode-colors: null;
+
+@if config.$themeType=="dark_theme" {
+    $mode-colors: dark.$mode-colors;
+}
+
+@else {
+    $mode-colors: bright.$mode-colors;
+}
+
+$themeViews: _theme-map($viewColorsByTheme, config.$theme);
+$viewMap: _view-map($themeViews, config.$view);
+// ---------------------------
+/* 合併：brand → mode(黑名單保護) → view(允許全部鍵) */
+// ---------------------------
+// 不希望被 mode 覆蓋的主題專屬鍵（可自行增減）
+$mode-ban-keys: (ActiveLight, ActiveLight2, ActiveDark, Main_Active_Color);
+
+@function _pick-not($map, $ban) {
+    $out: ();
+
+    @if $map==null {
+        @return $out;
+    }
+
+    @each $k,
+    $v in $map {
+        @if list.index($ban, $k)==null {
+            $out: map.merge($out, ($k: $v));
+        }
+    }
+
+    @return $out;
+}
+
+$theme-colors: $brand-colors; // brand
+$theme-colors: map.merge($theme-colors, _pick-not($mode-colors, $mode-ban-keys)); // mode (黑名單)
+
+@if $viewMap !=null {
+    $theme-colors: map.merge($theme-colors, $viewMap);
+}
+
+// ---------------------------
+// 自動補鍵：把缺的 token 用「預設鏈」補齊
+// default(view) → default(base) → mode → transparent
+// ---------------------------
+@function _union-keys($maps...) {
+    $set: ();
+
+    @each $m in $maps {
+        @if $m !=null {
+
+            @each $k,
+            $v in $m {
+                $set: map.merge($set, ($k: true));
+            }
+        }
+    }
+
+    @return map.keys($set);
+}
+
+$default-base: map.get($themes, default);
+$default-views: map.get($viewColorsByTheme, default);
+$default-view-map: _view-map($default-views, config.$view);
+// 目標鍵集合：brand + mode + view + default(base/view)
+$all-keys: _union-keys($brand-colors, $mode-colors, $viewMap, $default-base, $default-view-map);
+
+// 小工具：安全寫回（在本檔案作用域內使用）
+@mixin _ensure($key, $val) {
+    @if not map.has-key($theme-colors, $key) and $val !=null {
+        $theme-colors: map.merge($theme-colors, ($key: $val)) !global;
+    }
+}
+
+// 逐鍵補值
+@each $k in $all-keys {
+    @if not map.has-key($theme-colors, $k) {
+        $v: null;
+
+        // default 該 view 的覆寫
+        @if $v==null and $default-view-map !=null and map.has-key($default-view-map, $k) {
+            $v: map.get($default-view-map, $k);
+        }
+
+        // default 主題基礎
+        @if $v==null and $default-base !=null and map.has-key($default-base, $k) {
+            $v: map.get($default-base, $k);
+        }
+
+        // 當前 mode
+        @if $v==null and $mode-colors !=null and map.has-key($mode-colors, $k) {
+            $v: map.get($mode-colors, $k);
+        }
+
+        @if $v==null {
+            $v: transparent;
+        }
+
+        @include _ensure($k, $v);
+    }
+}
+
+// ---------------------------
+// 衍生色票 (Derived tokens) — color.adjust 在這裡只算一次
+// 命名: <BaseToken>_dk{n} = darker n%, <BaseToken>_lt{n} = lighter n%
+// ---------------------------
+// 基底 token 不存在或非 color 時，回退為 transparent，避免編譯錯誤
+@function _adj($key, $lightness) {
+    $v: map.get($theme-colors, $key);
+
+    @if $v==null or meta.type-of($v) !="color" {
+        @return transparent;
+    }
+
+    @return color.adjust($v, $lightness: $lightness);
+}
+
+// Spec table: base token → list of $lightness adjustments (% values)
+// 正數 (positive) → _lt{n}, 負數 (negative) → _dk{n}
+// 單一值記得加尾逗號: (30%,) 才會被當成 list
+$_derived-specs: (Main_Odds_up: (20%, 15%, -30%),
+    Main_Odds_down: (30%, ),
+    Main_Odds_add: (-20%, ),
+    Main_Active_Color: (10%, -10%),
+    Color_main_text_title: (5%, ),
+    BG_el_header: (20%, ),
+    BG_prematch_live_icon: (10%, ),
+    BG_filter_Bettrade: (-3%, -5%, 5%, 18%),
+    BG_mr_ct_hdr: (-8%, -5%),
+    BG_main_odds_boost: (-15%, ),
+    BG_n_fix_top_home_color: (-5%, ),
+    BG_tab_nav_item_active: (10%, -15%),
+    BG2_pb_wrap_footer: (5%, ),
+    BG_slider_options_grp_pop_tutorial: (10%, -15%),
+    Border_odds_btn_up_cls: (-10%, -15%),
+    DarkGray: (15%, ),
+    Gray_02: (10%, ),
+    Green: (-5%, ),
+);
+// 展開 spec → 建立 derived map
+$_derived: ();
+
+@each $base,
+$amounts in $_derived-specs {
+    @each $a in $amounts {
+        $n: math.abs(math.div($a, 1%));
+        $prefix: lt;
+
+        @if $a < 0 {
+            $prefix: dk;
+        }
+
+        $key: #{$base}_#{$prefix}#{$n};
+        $_derived: map.merge($_derived, ($key: _adj($base, $a)));
+    }
+}
+
+$theme-colors: map.merge($theme-colors, $_derived);
+
+// ---------------------------
+// API
+// ---------------------------
+@function has($key) {
+    @return map.has-key($theme-colors, $key);
+}
+
+@function t($key) {
+    @return map.get($theme-colors, $key);
+}
+
+@function t-or($key, $fallback) {
+    @if has($key) {
+        @return map.get($theme-colors, $key);
+    }
+
+    @return $fallback;
+}
+
+@function tcolor($key, $fallback) {
+    $v: t-or($key, $fallback);
+
+    @if $v !=null and meta.type-of($v)=="color" {
+        @return $v;
+    }
+
+    @return $fallback;
+}
+
+// ---------------------------
+// for debug
+// ---------------------------
+// @warn "[brand] theme=#{config.$theme} view=#{config.$view} type=#{config.$themeType}";
+// @warn "[final keys count] #{length(map.keys($theme-colors))}";

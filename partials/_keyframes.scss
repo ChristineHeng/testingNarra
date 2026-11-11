@@ -1,0 +1,173 @@
+@use "../assets/public/layout/css/base"as base;
+@use "mixin"as mix;
+
+@include mix.layout {
+    @include mix.mobile {
+        @include base.keyframes(showLoop) {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@include mix.layout {
+    @include mix.mobile {
+        @include base.keyframes(closeLoop) {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+@include mix.layout {
+    @include mix.mobile {
+        @include base.keyframes(showOut) {
+            95% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+@include mix.layout {
+    @include mix.mobile {
+        @include mix.mAsia {
+            @include base.keyframes(qsFloat) {
+
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+
+                50% {
+                    transform: translateY(-4px);
+                }
+            }
+        }
+    }
+}
+
+@include mix.layout {
+    @include mix.mobile {
+        @include mix.mAsia {
+            @include base.keyframes(qsUp) {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: none;
+                }
+            }
+        }
+    }
+}
+
+@include mix.layout {
+    @include mix.mobile {
+        @include mix.mAsia {
+            @include base.keyframes(qsRing) {
+
+                0%,
+                46% {
+                    filter: none;
+                }
+
+                56% {
+                    filter: drop-shadow(0 0 12px rgba(242, 61, 75, 0.55));
+                }
+
+                70%,
+                100% {
+                    filter: none;
+                }
+            }
+        }
+    }
+}
+
+@include mix.layout {
+    @include mix.mobile {
+        @include mix.mAsia {
+            @include base.keyframes(qsFill) {
+                from {
+                    transform: scaleX(0);
+                }
+
+                to {
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+}
+
+@include mix.layout {
+    @include mix.mobile {
+        @include mix.mAsia {
+            @include base.keyframes(qsLineReveal) {
+                from {
+                    clip-path: inset(0 100% 0 0);
+                }
+
+                to {
+                    clip-path: inset(0 0 0 0);
+                }
+            }
+        }
+    }
+}
+
+@include mix.layout {
+    @include mix.mobile {
+        @include mix.mAsia {
+            @include base.keyframes(qsChev) {
+
+                0%,
+                100% {
+                    transform: translateY(0);
+                    opacity: .5
+                }
+
+                50% {
+                    transform: translateY(4px);
+                    opacity: 1
+                }
+            }
+        }
+    }
+}
+
+@include mix.layout {
+    @include mix.mobile {
+        @include mix.mAsia {
+            @include base.keyframes(qsSpin) {
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @include base.keyframes(qsSpinBack) {
+                to {
+                    transform: rotate(-360deg);
+                }
+            }
+        }
+    }
+}

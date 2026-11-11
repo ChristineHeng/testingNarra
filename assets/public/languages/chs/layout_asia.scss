@@ -1,0 +1,58 @@
+$activeView: mAsia !default;
+@use '../../../themes/colours/config'with ($activeView: $activeView,
+    $view: asia,
+    $language: chs,
+);
+@use '../../layout/css/base'as base;
+@use '_font';
+@use '../../layout/css/_layout_shared';
+@use '../../layout/css/_fl_layout_shared';
+@use '../../layout/css/_layout_sub_asia';
+$n_font1: 8px;
+
+.completedresult_wrap {
+    .results2 {
+        width: 20% !important;
+    }
+}
+
+.main_nav2 {
+    .main_slider3 {
+        .menu_item {
+            div {
+                padding-top: 2px;
+            }
+        }
+    }
+}
+
+// @media screen and (max-width: 407px) { // promo (moved)
+//     .prmRcd.n_record {
+//         .n_header.n_header_sports & {
+//             max-width: 68px;
+//         }
+//     }
+// }
+// [DES-808] Soccer Player Proposition Bet Type - start
+// .sld_new { // sev (moved)
+//     right: 6px;
+// }
+// [DES-808] Soccer Player Proposition Bet Type - end
+// pb_rmb_ls_tooltip not in used already
+// .pb_rmb_ls_tooltip {
+//     width: 166px;
+//     top: -77px;
+//     left: -76px;
+//     .fl & {
+//         top: -93px;
+//         left: -65px;
+//     }
+// }
+// [DES-1062][SFQAT-20006][Narra][AsianView][Marble Magic] Past outcome have no spacing when view in chinese
+// .mr_last_results {
+//     span {
+//         @media screen and (max-width: 420px) {
+//             width: 35%;
+//         }
+//     }
+// }

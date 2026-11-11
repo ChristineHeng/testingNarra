@@ -1,0 +1,254 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Narra - html template - Demo</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover,user-scalable=no" />
+    <!-- <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#000"> -->
+
+    <script src="./jquery.js"></script>
+
+    <style>
+        body {
+            scroll-behavior: smooth;
+            font-size: 12px;
+            padding: 0;
+            margin: 0;
+            font-family: Helvetica, Arial, "Microsoft Yahei", "微软雅黑", STXihei, "华文细黑", sans-serif;
+            -moz-user-select: none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            margin-top: 0;
+            padding-top: 0;
+            overflow-y: auto;
+            background: #000;
+            color: #cacaca;
+        }
+
+        .cookies {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .cookies_top {
+            margin-bottom: 30px;
+            font-weight: bold;
+            padding: 0 32px;
+        }
+
+        .cookies_top img {
+            max-width: 200px;
+            margin: 0 auto;
+            padding-bottom: 35px;
+            width: 100%;
+            display: block;
+        }
+
+        .cookies_mid {
+            margin-bottom: 24px;
+            padding: 0 32px;
+        }
+
+        .cookies_img_wrp {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .cookies_img_wrp img {
+            margin: 0 auto 8px;
+            display: block;
+        }
+
+        .cookies_itm {
+            flex-shrink: 0;
+            width: 33.33%;
+            padding: 8px 0;
+            position: relative;
+        }
+
+        .cookies_itm.active::before {
+            content: "";
+            position: absolute;
+            width: 70%;
+            top: 0;
+            border-radius: 6px;
+            left: 14%;
+            border: 1px solid #23dae7;
+            height: 100%;
+        }
+
+        .cookies_dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            margin: 0 4px;
+            display: inline-block;
+            background: #fff;
+        }
+
+        .cookies_dot.active {
+            background: #23dae7;
+        }
+
+        .cookies_btm {
+            display: flex;
+            align-items: center;
+            overflow-x: auto;
+        }
+
+        .cookies_btm::-webkit-scrollbar {
+            display: none !important;
+
+        }
+
+        .cookies_steps {
+            min-width: calc(100% - 40px);
+            width: calc(100% - 40px);
+            padding: 0 20px;
+        }
+    </style>
+</head>
+
+<body id="root" class="cookies_pg">
+    <div class="cookies">
+        <div class="cookies_wrp">
+            <div class="cookies_top">
+                <img src="./images/cookies_disabled.png" />
+                This page cannot be loaded. Please follow the instructions below to disable the blocking of third-party
+                cookies and refresh the page afterwards.
+            </div>
+            <div class="cookies_mid">
+                <div class="cookies_img_wrp">
+                    <div class="cookies_itm active">
+                        <img src="./images/macsafari.png" />
+                        Safari
+                    </div>
+                    <div class="cookies_itm">
+                        <img src="./images/gglchrome.png" />
+                        Chrome
+                    </div>
+                    <div class="cookies_itm">
+                        <img src="./images/mozfirefox.png" />
+                        Firefox
+                    </div>
+                </div>
+                <div class="cookies_dot_wrp">
+                    <div class="cookies_dot active"></div>
+                    <div class="cookies_dot"></div>
+                    <div class="cookies_dot"></div>
+                </div>
+
+            </div>
+            <div class="cookies_btm">
+                <div class="cookies_steps">
+                    1. On your iPhone, open the "Settings" App.<br /><br />
+
+                    2. Scroll and tap on the "Safari" item.<br /><br />
+
+                    3. Scroll down until you find Privacy & Security. <br /><br />
+
+                    4. Under the tab Block All Cookies, do not select it (leave it white).<br /><br />
+
+                    5. Restart Safari.<br /><br />
+
+                    <i>*Please note that browser interfaces and settings can change over time, so the exact steps might
+                        vary slightly.</i>
+                </div>
+                <div class="cookies_steps">
+                    1.On your Android phone or tablet, open the Chrome app.<br /><br />
+
+                    2. At the top right, tap More Settings.<br /><br />
+
+                    3. Tap Site settings Cookies.<br /><br />
+
+                    4. Turn Allow cookies on.<br /><br />
+
+                    <i>*Please note that browser interfaces and settings can change over time, so the exact steps might
+                        vary slightly.</i>
+                </div>
+                <div class="cookies_steps">
+                    1. On your phone or tablet, open the Firefox app.<br /><br />
+
+                    2. Tap the Menu button next to the address bar.<br /><br />
+
+                    3. Tap Settings.<br /><br />
+
+                    4. Go to Privacy & Security.<br /><br />
+
+                    5. Tap Allow cookies.<br /><br />
+
+                    <i>*Please note that browser interfaces and settings can change over time, so the exact steps might
+                        vary slightly.</i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            var cookies_steps_width = $(".cookies_steps").outerWidth(true);
+            var scrolling = false;
+            var activeDot = 0;
+            var scrollLeftValue;
+            $(".cookies_itm").click(function () {
+                var itmIndex = $(this).index();
+                scrollLeftFunction(itmIndex);
+            })
+
+            function scrollLeftFunction(itmIndex) {
+                $(".cookies_btm").stop();
+                scrolling = true;
+                scrollLeftValue = itmIndex * cookies_steps_width;
+                $(".cookies_dot").removeClass("active").eq(itmIndex).addClass("active");
+                $(".cookies_itm").removeClass("active").eq(itmIndex).addClass("active");
+                $(".cookies_btm").animate({
+                    scrollLeft: scrollLeftValue
+                }, 100 , function () {
+                    activeDot = itmIndex;
+                    scrolling = false;
+                    $(".cookies_btm").css("overflow-x", "hidden");
+                    setTimeout(() => {
+                        $(".cookies_btm").css("overflow-x", "auto");
+                    }, 10);
+                });
+            }
+
+            $(window).on("orientationchange resize", function (e) {
+                cookies_steps_width = $(".cookies_steps").outerWidth(true);
+                scrollLeftFunction(0);
+            });
+
+            $(".cookies_btm").scroll(function () {
+                if (scrolling) {
+                    return false;
+                }
+                var content_scroll_left = $(this).scrollLeft();
+                if (activeDot == 0) {
+                    if (content_scroll_left >= 1) {
+                        scrollLeftFunction(1);
+                    }
+                } else if (activeDot == 1) {
+                    if (content_scroll_left < cookies_steps_width) {
+                        scrollLeftFunction(0);
+                    } else if (content_scroll_left >= cookies_steps_width + 1) {
+                        scrollLeftFunction(2);
+                    }
+                } else {
+                    if (content_scroll_left < cookies_steps_width * 2) {
+                        scrollLeftFunction(1);
+                    }
+                }
+            });
+        })
+    </script>
+</body>

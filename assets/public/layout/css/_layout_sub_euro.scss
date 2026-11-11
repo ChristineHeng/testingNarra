@@ -1,0 +1,3648 @@
+﻿/* Scss Document */
+@charset "utf-8";
+@use "sass:math";
+@use "sass:string";
+@use 'base'as base;
+$odds_btnW: 64px;
+$odds_btnH: 96px;
+$fn_odds_btnW: 72px;
+$fn_odds_btnH: 38px;
+$search_odds_btnW: 64px;
+$search_odds_btnH: 52px;
+// $backToTopSize_euro: 38px; //n_content_wrap_wth_bcktop (moved)
+$v_splitH: 18px;
+$er_main_menuH: 70px;
+$search_barH: 44px;
+$league_itemH: 64px;
+$sliderH: 2px;
+$leftmenu_tab_nav: 46px;
+$fn_rowH: 46px;
+$normal_headerH: 34px;
+$selected_navH: 30px;
+$small_headerH: 28px;
+$virtual_wrpH: 76px;
+$footerComboH: 16px* 2.75;
+$evet_drp_btnW: 26px;
+/* from asia*/
+$euro_button_padding: 11px;
+
+//move from layout_shared - start
+//Global Popup:start
+.dialog_bubble {
+    @include base.borderRadius(4px);
+    @include base.boxSizing(border-box);
+    padding: 20px 10px;
+    margin: 8px;
+    width: calc(100% - #{16px});
+    position: absolute;
+
+    &::before {
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        height: 0;
+        width: 0;
+        content: " ";
+        position: absolute;
+        top: -5px;
+        right: 16px;
+    }
+
+    &::before {
+        right: 18px;
+    }
+
+    i {
+        margin-right: 4px;
+    }
+}
+
+//Global Popup:end
+//SEV=====================================================: start//
+// .drpDown { // sev (moved)
+//     left: 0;
+//     right: 0;
+//     width: 100%;
+//     position: absolute;
+// }
+// .eu_subHeader {// sev (moved)
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+//     @include base.justifyContent(space-between);
+//     div {
+//         text-align: center;
+//     }
+// &+.n_sev_content { // sev (moved)
+//     border-top: none;
+// }
+// }
+//sev odds listing: end
+//SEV=====================================================: end//
+//Left menu========================================================:start//
+// .leftmenu_wrp { // ld (moved)
+//     // to overwrite loading background
+//     .loading_wrap {
+//         background: none !important;
+//         @include base.flexbox();
+//         @include base.alignItems(center);
+//         .rotate_wrap_content {
+//             flex: 1;
+//         }
+//     }
+// }
+//Left menu========================================================:ends//
+//Racing========================================================:start//
+// bet_item_left_wrp not in used already
+// .bet_item_left_wrp {
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+//     @include base.justifyContent(space-between);
+//     margin-right: auto;
+//     width: 100%;
+//     i {
+//         font-size: base.$n_font6; //13px
+//         margin-right: 8px;
+//     }
+// }
+.bet_item_left_inner {
+    @include base.flexbox();
+    @include base.alignItems(center);
+}
+
+.icon-fi-title-s58,
+.icon-fi-title-s57 {
+    .el_grp_header & {
+        font-size: base.$n_font13; //20px
+    }
+}
+
+// .content_pop_drpdn {
+//     @include base.borderRadius(4px);
+//     @include transform(translateX(-50%));
+//     position: absolute;
+//     min-width: 136px;
+//     top: 24px;
+//     left: 50%;
+//     text-align: left;
+//     z-index: 5;
+//     &:before {
+//         content: "";
+//         position: absolute;
+//         top: -6px;
+//         left: 62px;
+//         width: 0;
+//         height: 0;
+//         border-left: 6px solid transparent;
+//         border-right: 6px solid transparent;
+//     }
+// }
+// .pop_drpdn_row {
+//     padding: 8px;
+// }
+//Racing========================================================:end//
+//DES-389 Add in Event Filter by Amount of Time (Today) - start
+.fltr_dd {
+    @include base.borderRadius(3px);
+    position: absolute;
+    margin-top: 4px;
+    white-space: nowrap;
+    right: 0px;
+
+    &:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        bottom: 100%;
+        border: 4px solid rgba(0, 0, 0, 0);
+        border-top: 0;
+        right: 10px;
+    }
+}
+
+.fltr_dd_itm {
+    padding: 8px;
+    font-size: base.$n_font4;
+
+    &:first-child {
+        @include base.borderRadius(3px 3px 0 0);
+    }
+
+    &:last-child {
+        @include base.borderRadius(0 0 3px 3px);
+    }
+}
+
+.fltr_grp {
+    position: relative;
+    margin-left: auto;
+}
+
+//DES-389 Add in Event Filter by Amount of Time (Today) - end
+$sports_menu_fltr_width: 30px;
+
+.n_sports_menu_wrap {
+    position: relative;
+
+    .n_sports_menu {
+        width: calc(100vw - $sports_menu_fltr_width);
+    }
+
+    .fltr_grp {
+        @include base.flexbox();
+        @include base.alignItems(center);
+        @include base.justifyContent(center);
+        height: 100%;
+        width: $sports_menu_fltr_width;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .fltr_dd {
+        top: 26px;
+        right: 1px;
+    }
+}
+
+//move from layout_shared - end
+//* Global: starts ================================================*/
+// .n_header {
+// nhdr (moved)
+// min-height: base.$euroview_header_height;
+// @include base.flexbox();
+// @include base.alignItems(center);
+// @include base.justifyContent(space-between);
+// padding: 0 8px;
+// overflow: hidden;
+// nhdr (moved)
+// img { // nhdr (moved)
+//     margin-top: unset !important;
+// }
+// &.tall {
+// min-height: base.$euroview_header_height_tall; // nhdr (moved)
+// &+.annoucement_wrap {
+//     min-height: 350px;
+// }
+// }
+// }
+// .n_back,
+// .n_back_link {
+//     font-size: 16px;
+// }
+ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+.msg_wrap {
+    padding: 8px;
+    margin: auto;
+    text-align: left;
+    // .annoucement_group & {
+    /*height: 100vh;*/
+    //     height: 100%;
+    // }
+    // .media_restricted & {
+    //     text-align: center;
+    //     width: 50%;
+    // }
+}
+
+// n_content_wrap_wth_bcktop (moved): start
+// .n_content_wrap_wth_bcktop {
+//     padding-bottom: $backToTopSize_euro + 8px;
+// }
+// n_content_wrap_wth_bcktop (moved): end
+//* Global: ends ================================================*/
+//* Global Popup: starts ================================================*/
+//* Global Popup: ends ================================================*/
+.euro {
+
+    /*z-index*/
+    .n_header {
+        z-index: 11;
+    }
+
+    // .el_stickymenu {
+    //     z-index: 10;
+    //     overflow: hidden;
+    //     /* chrome issue*/
+    // }
+    .n_annoucement {
+        z-index: 10;
+    }
+
+    // .selected_nav {
+    //     z-index: 9;
+    // }
+    // .er_main_menu,
+    .el_header_grp {
+        z-index: 8;
+
+        &:has(.ob_menu) {
+            z-index: 5;
+        }
+    }
+
+    // .el_header {
+    //     z-index: 7;
+    // }
+    // .sub_menu_panel,
+    .el_favContent {
+        z-index: 6;
+    }
+
+    // .el_top_row {
+    //     z-index: 4;
+    // }
+    // .el_grp_header {
+    //     z-index: 4;
+    // }
+    // .bet_type_wrp {
+    //     z-index: 3;
+    // }
+    .n_sticky {
+        &.tutorl_on {
+            z-index: 9;
+        }
+    }
+
+    .tut_ply.n_sev_item_content_wrap {
+        z-index: 9;
+    }
+}
+
+.er_popupOnsearch .n_filter_menu {
+    z-index: 5 !important;
+}
+
+// .er_popupOnsearch .search_head { // search (moved)
+//     z-index: 4 !important;
+// }
+// .er_popupOnsearch .search_menu { // search (moved)
+//     z-index: 3 !important;
+// }
+.esports_mask {
+    z-index: 1000005;
+}
+
+.esports_tut1 {
+
+    // &.m_tab {
+    //     z-index: 9;
+    // }
+    &.el_header_grp {
+        z-index: 1000006;
+    }
+}
+
+.esports_tut2 {
+    &.n_sports_menu_es {
+        z-index: 9;
+    }
+
+    &.sub_menu_panel {
+        z-index: 1000006;
+    }
+}
+
+// .drpBG { // sev (moved)
+//     z-index: 1000004; //changed from 101 for SFCRQ-4051 & SFCRQ-4056 (4.4)
+//     //changed from 100002 for SFUAT-7182
+//     //changed to 1000004 for SFQAT-12864
+// }
+// .drpDown { /// sev (moved)
+//     .drpWrp & {
+//         z-index: 1000005; //changed from 102 for SFCRQ-4051 & SFCRQ-4056 (4.4)
+//         //changed from 100003 for SFUAT-7182
+//         //changed to 1000005 for SFQAT-12864
+//     }
+// }
+//[SFSSR-7461] used when keypad shown in search result page (to block user scroll on content)
+.blockScroll {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: base.$euroview_header_height_tall;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/*Event listing start*/
+.logo {
+    padding-left: 8px;
+
+    img {
+        max-width: 118px;
+        height: 22px;
+    }
+}
+
+$minwidth: 380;
+$diff: 20;
+$through: math.ceil(math.div(320, $diff));
+$from: math.ceil(math.div($minwidth, $diff));
+$step: 2;
+
+@for $i from $from through $through {
+    $step: $step + 2;
+    $logoheight: 22 - $step;
+    $i: $i * $diff;
+    $w: math.div($i, $minwidth);
+
+    @media screen and (max-width: #{$i}px) {
+        .logo {
+            img {
+                height: #{($logoheight)}px;
+            }
+        }
+    }
+}
+
+.lf_menu {
+    font-size: base.$n_font11;
+    padding-right: 8px;
+}
+
+// .heder_lf>div {
+//     @include base.flexbox();
+// }
+// .heder_rt {
+//     i {
+//         font-size: base.$n_font11;
+//         @include base.flexbox();
+//         &:not(:first-child) {
+//             margin-left: 16px;
+//         }
+//     }
+// .item {
+//     /* for my bet*/
+//     margin-left: 16px;
+//     position: relative;
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+//     @include base.justifyContent(flex-end);
+// }
+// .er_myacct {
+// margin-left: 16px;
+// position: relative;
+//     .red_dot {
+//         left: 16px;
+//         top: -4px;
+//         bottom: auto;
+//     }
+// }
+// }
+.n_balance {
+
+    // font-size: base.$n_font5;
+    // margin-left: 8px;
+    .currency {
+        font-size: base.$n_font3;
+    }
+}
+
+// .n_header.n_header_sports {
+//     .n_balance {
+//         right: 8px !important;
+//     }
+// }
+.v_split {
+    height: $v_splitH;
+}
+
+// .heder_lf,
+// .heder_rt {
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+// }
+.n_annoucement {
+    font-size: base.$n_font5;
+    min-height: 16px * 1.75; //28px
+}
+
+// .el_stickymenu {
+//     top: base.$euroview_header_height;
+// }
+// .er_main_menu {
+// @include base.flexbox();
+// @include base.alignItems(center);
+// @include base.boxSizing(border-box);
+// min-height: $er_main_menuH;
+// padding: 8px 0 8px 0;
+// white-space: nowrap;
+// overflow-x: auto;
+// overflow-y: hidden;
+// -webkit-overflow-scrolling: touch;
+// -ms-overflow-style: none;
+// scrollbar-width: none;
+// scrollbar-height: none;
+// &::-webkit-scrollbar {
+//     display: none;
+//     width: 0px;
+//     background: transparent;
+// }
+// .m_tab {
+// font-size: base.$n_font5;
+// text-align: center;
+// /*min-width: 20%;*/
+// padding: 0 16px;
+// @include base.flexbox();
+// @include base.flexDirection(column);
+// @include base.alignItems(center);
+// position: relative;
+// flex-shrink: 0;
+// .new_tag {
+//     position: absolute;
+//     top: -13px;
+//     right: 55%;
+//     &:after {
+//         left: calc(50%);
+//     }
+// ppl not in used already
+//     &.ppl {
+//         top: -15px;
+//         right: 50%;
+//         font-size: base.$n_font1;
+//         &:after {
+//             left: 35%;
+//         }
+//     }
+// &.hot_tag {
+//     @include base.hot_tag();
+//     height: 12px;
+//     line-height: 12px;
+//     padding: 0 3px;
+//     font-weight: 700;
+// }
+// }
+//olympics not in used already
+// &.olympics {
+//     .icon {
+//         height: base.$n_font13;
+//     }
+// }
+// large bet: start
+// .icon-fi-insight {
+//     font-size: 16px;
+//     line-height: 20px;
+// }
+// large bet: end
+// }
+// &.smaller_tab {
+//     .m_tab {
+//         padding: 0 8px;
+//     }
+// }
+// .icon {
+// position: relative;
+// padding-bottom: 4px * 0.5;
+// width: 8px * 2.75;
+// sup {
+//     position: absolute;
+//     top: - 8px * 0.75;
+// }
+// &.home,
+// &.fav {
+//     i {
+//         font-size: base.$n_font11 !important;
+//     }
+// }
+// i {
+//     font-size: base.$n_font13;
+// }
+// }
+// img.olympics {
+//     height: base.$n_font13;
+// }
+// img.soccerfifa {
+//     height: 18px;
+// }
+//     .lb_header_grp & {
+//         @supports(-webkit-touch-callout: none) {
+//             -webkit-overflow-scrolling: unset !important;
+//         }
+//     }
+// }
+// .selected_nav {
+// font-size: base.$n_font7;
+// padding: 8px * 0.25 8px;
+// min-height: $selected_navH;
+// @include base.flexbox();
+// @include base.alignItems(center);
+// @include base.boxSizing(border-box);
+//     i {
+//         margin-right: 8px;
+//     }
+// }
+.euro {
+    .n_annoucement_icon {
+        @include base.flexbox();
+        @include base.alignItems(center);
+        padding: 0 8px; // due to added min-height for "n_annoucement"
+
+        i {
+            margin-right: 8px * 0.5;
+        }
+    }
+
+    // .vr_timer {
+    //     min-height: $small_headerH;
+    //     max-height: $small_headerH;
+    //     height: $small_headerH;
+    //     padding: 4px 8px;
+    // }
+    // .vr_timer_arrow {
+    //     i {
+    //         font-size: base.$n_font3;
+    //     }
+    // }
+    .n_header {
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+    }
+}
+
+// .el_header,
+// .el_top_row {
+//     @include base.flexbox();
+//     @include base.boxSizing(border-box);
+//     @include base.justifyContent(space-between);
+//     @include base.alignItems(center);
+//     padding: 8px * 0.25 8px;
+//     min-height: $normal_headerH;
+// }
+.el_header {
+    i {
+        margin-right: 8px;
+    }
+}
+
+.sport_info {
+
+    // font-size: base.$n_font7;
+    // margin-left: -(8px) * 0.25;
+    // padding-right: 8px * 0.5;
+    i {
+        font-size: base.$n_font11;
+    }
+
+    // .new_tag { // nt (moved)
+    //     margin-left: 8px;
+    //     &:after {
+    //         content: unset !important;
+    //     }
+    // }
+}
+
+.el_top_row {
+    i {
+        font-size: base.$n_font3;
+        margin-right: 0 !important;
+    }
+
+    &.outright_in {
+        &:not(first-child) {
+            margin-top: 8px;
+        }
+    }
+
+    .icon-fi-joystick {
+        font-size: base.$n_font5;
+    }
+
+    .icon-fi-pin {
+        margin-left: auto;
+        margin-right: 4px !important;
+    }
+}
+
+// .live_tag {
+//     padding: 0;
+// }
+// .sport_info // .see_all // ,.el_grp_header 
+//     {
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+// }
+.see_all {
+
+    // font-size: base.$n_font5;
+    span {
+        white-space: nowrap;
+    }
+
+    i {
+        font-size: base.$n_font3 !important;
+        margin-left: 8px;
+        margin-right: 0;
+    }
+}
+
+/* .sub_info{
+    padding-left: 4px;
+} */
+.el_grp_header {
+
+    // font-size: base.$n_font5;
+    /*note: 20/5/21: 
+     1.use height instead of min height, due to rendering sequences issue
+     2.remove padding top since using fix height & limit to 2 lines*/
+    // padding: 0 * 0.25 8px;
+    // height: $normal_headerH;
+    // max-height: $normal_headerH;
+    // @include base.boxSizing(border-box);
+    i:not(.icon-fi-joystick):not(.icon-fi-pin) {
+        font-size: base.$n_font3 !important;
+        margin-right: 8px;
+    }
+
+    .icon-fi-pin {
+        margin-left: auto;
+    }
+
+    .icon-fi-joystick+.icon-fi-pin {
+        margin-left: 6px;
+    }
+}
+
+// .el_grp_header,
+// .el_top_row {
+//     .name {
+//         @include base.limit2line();
+//     }
+// }
+// .single_line {
+//     @include base.limit1line();
+// }
+// .bet_type_wrp {
+// font-size: base.$n_font5;
+// width: 100%;
+// padding: 8px * 0.625;
+// min-height: $small_headerH;
+// @include base.flexbox();
+// @include base.alignItems(center);
+// @include base.justifyContent(flex-end);
+// @include base.boxSizing(border-box);
+//     .bet_item {
+//         min-width: $odds_btnW;
+//         max-width: $odds_btnW;
+//         width: $odds_btnW;
+//         text-align: center;
+//         margin-left: 8px * 0.625;
+//     }
+// }
+// .event_content {
+// padding: 4px;
+// @include base.flexbox();
+// @include base.justifyContent(space-between);
+//fn_row not in used already
+// &.fn_row {
+//     height: $fn_rowH;
+//     @include base.boxSizing(border-box);
+//     .content_lf {
+//         @include base.flexbox();
+//         @include base.alignItems(center);
+//     }
+//     .odds_box {
+//         font-size: base.$n_font7;
+//         &.up,
+//         &.down {
+//             i {
+//                 font-size: base.$n_font5;
+//             }
+//         }
+//     }
+// }
+// &.disable {
+//     opacity: 0.4;
+// }
+// }
+// .content_lf {
+// min-width: 0;
+// flex: 1;
+// white-space: nowrap;
+// text-overflow: ellipsis;
+// padding-right: 4px + 8px;
+// &.iconPop {
+//     padding-right: 4px * 2;
+// }
+// &.remove_na {
+//     @include base.flexbox();
+//     @include base.flexDirection(column);
+// }
+// .team_info {
+// font-size: base.$n_font5;
+// padding-left: 8px * 0.5 !important;
+// height: $normal_headerH;
+// @include base.flexbox();
+// @include base.alignItems(center);
+// &.remove_na {
+//     flex: 2;
+// }
+// }
+// }
+// .score_grp {
+// margin-left: auto;
+// @include base.flexbox();
+//     .score {
+//         text-align: center;
+//         word-break: keep-all;
+//         padding-left: 8px * 0.5 !important;
+//         min-width: 8px * 2;
+//     }
+// }
+// .gitc_st {
+//     padding-left: 4px;
+//     margin-top: -(8px);
+//     font-size: base.$n_font3;
+// }
+// .content_rt {
+//     /*64px * 3 + margin 15px*/
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+//     @include base.justifyContent(space-between);
+// }
+// .team_info {
+//     .name {
+// white-space: nowrap;
+// overflow: hidden;
+// text-overflow: ellipsis;
+// padding-right: 8px * 0.5;
+// margin: 8px * 0.625 0;
+//tx_bgt not in used already
+// &.tx_bgt {
+//     font-weight: bold;
+//     font-size: base.$n_font5_andhalf;
+//     width: 100%;
+// }
+//     }
+// }
+// .odds_box {
+// font-size: base.$n_font5;
+// border: none;
+//     &.big {
+//         min-width: $odds_btnW;
+//         height: $odds_btnH;
+//     }
+//     &.small {
+//         min-width: $fn_odds_btnW;
+//         height: $fn_odds_btnH;
+//     }
+//     &.search {
+//         min-width: $search_odds_btnW;
+//         height: $search_odds_btnH;
+//     }
+// }
+.info_btm {
+
+    // font-size: base.$n_font5;
+    // @include base.flexbox();
+    // @include base.alignItems(center);
+    // min-height: $selected_navH;
+    // padding-left: 4px !important;
+    // .info_lf {
+    // @include base.flexbox();
+    // @include base.alignItems(center);
+    // white-space: normal !important;
+    // padding-right: 2px;
+    //     .info_lf_time {
+    //         white-space: nowrap;
+    //         flex-shrink: 0;
+    //         max-width: 110px;
+    //         text-overflow: ellipsis;
+    //         overflow: hidden
+    //     }
+    // }
+    // &.info_btm_top {
+    // @include base.alignItems(flex-start);
+    // >div {
+    //     padding-top: 4px;
+    // }
+    // .more_icons {
+    //     @include base.alignItems(flex-start);
+    //     flex: 1;
+    // }
+    // .more_icons_wrp {
+    //     @include base.flexbox();
+    //     @include base.alignItems(center);
+    //     @include base.justifyContent(flex-end);
+    //     flex-wrap: wrap;
+    // }
+    // }
+    // &.icons_1line {
+    //     flex-wrap: wrap;
+    // .more_icons_wrp {
+    //     flex-wrap: nowrap;
+    // }
+    // }
+    &.int_wrp {
+        display: block;
+
+        .n_indicator {
+            padding-left: 2px;
+
+            i {
+                font-size: base.$n_font5;
+            }
+
+            &:has(.icon-fi-info-circle) {
+                padding-left: 4px;
+            }
+
+            &:has(.icon-fi-visualization) {
+                padding-left: 2px;
+            }
+        }
+
+        // .more_icons {
+        //     padding-top: 4px;
+        // }
+        .info_lf,
+        .icon-fi-info-circle {
+            font-size: base.$n_font4 !important;
+        }
+    }
+}
+
+.more_icons {
+
+    // @include base.flexbox();
+    // @include base.alignItems(center);
+    // @include base.justifyContent(flex-end);
+    // margin-left: auto;
+    // .n_fav_off, // nfo (moved)
+    // .n_fav_on, // nfo (moved)
+    .stream_ico,
+    .vis {
+        padding-right: 4px;
+    }
+
+    .stream_ico,
+    .vis {
+        padding-top: 4px * 0.25;
+    }
+
+    // .n_fav_off,
+    // .n_fav_on { // nfo (moved)
+    //     @include base.flexbox();
+    //     @include base.alignItems(center);
+    // }
+    .icon-fi-stats {
+        font-size: base.$n_font3;
+    }
+
+    .n_btn_sev {
+        margin-left: 4px;
+        @include base.flexbox();
+        @include base.alignItems(center);
+
+        i {
+            margin-left: 4px;
+        }
+    }
+
+    .iconPop & {
+
+        // .n_fav_off,
+        // .n_fav_on { // nfo (moved)
+        //     padding-right: 4px * 0.5;
+        // }
+        .n_btn_sev {
+            margin-left: 4px * 0.5;
+        }
+    }
+
+    .info_event {
+        padding-right: 2px;
+    }
+}
+
+.stream_ico,
+.vis {
+    font-size: base.$n_font3;
+}
+
+// .el_info_row,
+// .grp_info {
+//     min-height: $small_headerH;
+//     line-height: $small_headerH;
+//     padding: 0 8px;
+// }
+// .grp_info {
+//     @include base.flexbox();
+//     @include base.justifyContent(space-between);
+// }
+// .fnbet_info {
+//     padding: 0 4px;
+//     white-space: nowrap;
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+// }
+.sub_menu_panel {
+
+    //type_wrp not in used already
+    // .type_wrp {
+    //     @include base.flexbox();
+    //     padding: 0 8px;
+    // }
+    //type_item not in used already
+    // .type_item {
+    //     min-width: 15%;
+    //     height: $normal_headerH;
+    //     @include base.flexbox();
+    //     @include base.alignItems(center);
+    //     @include base.justifyContent(center);
+    // }
+    // .slider_wrap_flexi {
+    // position: relative;
+    // .slider { // sld (moved)
+    //     box-shadow: none;
+    //     height: $sliderH !important;
+    //     transform: scale(.3, 1);
+    //     bottom: 0;
+    // }
+    // }
+    .n_sports_menu {
+
+        // padding: 0px !important;
+        // margin-left: -(8px);
+        // height: $normal_headerH;
+        // @include base.boxSizing(border-box);
+        .item {
+            padding: 8px * 1.125 8px * 2;
+        }
+    }
+
+    .n_sports_menu_es {
+        .item {
+            line-height: 16px;
+        }
+
+        i {
+            padding-right: 4px;
+            font-size: base.$n_font9;
+        }
+
+        .item_wrap {
+            .item {
+                padding: 9px 16px 9px 0;
+            }
+
+            &:first-child {
+                .item {
+                    padding: 9px 16px;
+                }
+            }
+        }
+    }
+}
+
+// .outright_row {
+// @include base.flexbox();
+// @include base.alignItems(center);
+// @include base.justifyContent(space-between);
+// @include base.boxSizing(border-box);
+// padding: 8px 8px;
+// min-height: $normal_headerH;
+//dont need
+// &:only-child {
+//     border-bottom: none;
+// }
+//     .icon-fi-arrow-up1,
+//     .icon-fi-arrow-down1 {
+//         font-size: 10px;
+//     }
+// }
+// .el_content_wrp+.outright_row {
+//     margin-top: 4px;
+// }
+// .match_name {
+// @include base.limit2line();
+// padding-right: 8px * 0.5;
+//     &.pinned,
+//     &.featured {
+//         font-size: base.$n_font7;
+//     }
+// }
+//isOutright not in used already
+// .outright_row.isOutright:has(.match_name.pinned),
+// .outright_row.isOutright:has(.match_name.featured) {
+//     display: none;
+// }
+.leagues_list_grp {
+    @include base.flexbox();
+    flex-wrap: wrap;
+    margin: auto;
+    padding-bottom: 8px;
+
+    .odds_box {
+        padding: 8px;
+
+        &.league_item {
+            width: calc((100% - 32px) / 3);
+            padding: 8px;
+            height: $league_itemH;
+            @include base.flexbox();
+            @include base.flexDirection(column);
+            @include base.alignItems(start);
+            @include base.justifyContent(space-between);
+            margin-top: 8px;
+            margin-right: 8px;
+            border: .5px solid transparent;
+
+            .odds_value {
+                text-align: left;
+            }
+
+            // .title { // ttl (moved)
+            //     text-align: left;
+            //     @include base.limit2line();
+            // }
+            &:nth-child(3n+1) {
+                margin-left: 8px;
+            }
+
+            &:nth-child(3n) {
+                margin-right: 8px;
+            }
+        }
+    }
+}
+
+// .leftmenu_wrp {
+// leftmenu (moved): start 
+// width: 320px;
+// left: -320px;
+// height: 100%;
+// position: fixed;
+// top: 0;
+// overflow: auto;
+// -webkit-transition: left .3s;
+// transition: left .3s;
+// &.active {
+//     left: 0 !important;
+// }
+// leftmenu (moved): end
+// .tab_nav, // leftmenu (moved)
+// .n_fav_off,
+// .n_fav_on { // nfo (moved)
+//     font-size: base.$n_font7;
+// }
+// .tab_nav.slider_wrap {
+//     .slider { // sld (moved)
+//         height: $sliderH;
+//         transform: scale(.9, 1);
+//     }
+// }
+// }
+// .search_bar {
+// search (moved): start
+// min-height: $search_barH;
+// @include base.flexbox();
+// @include base.alignItems(center);
+// @include base.justifyContent(space-between);
+// padding: 0 8px;
+// search (moved): end
+// .search_btn {
+// search (moved): start
+// @include base.flexbox();
+// height: $small_headerH;
+// width: 80%;
+// @include base.borderRadius(4px);
+// padding: 4px;
+// box-sizing: border-box;
+// position: relative;
+// i {
+//     position: absolute;
+//     top: 0;
+//     bottom: 0;
+//     left: 8px;
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+// }
+// search (moved): end
+// }
+// span {
+// search (moved): start
+// text-align: left;
+// padding: 4px 0 !important;
+// @include base.flexbox();
+// @include base.alignItems(center);
+// search (moved): end
+// }
+// }
+.leftmenu_select_nav {
+    @include base.flexbox();
+    @include base.alignItems(center);
+    height: $selected_navH;
+    padding: 0 8px;
+}
+
+.select_panel {
+    font-size: base.$n_font5;
+
+    .dot {
+        width: 4px;
+        min-width: 4px;
+        height: 4px;
+        @include base.borderRadius(50%);
+        margin-right: 8px;
+    }
+}
+
+// .select_type { // sev (moved)
+//     .euGrp {
+//         min-height: $search_barH;
+//         padding: 16px;
+//         @include base.boxSizing(border-box);
+//         .euTitle {
+//             font-size: base.$n_font7;
+//             @include base.flexbox();
+//             @include base.alignItems(center);
+//             width: 100%;
+//             /*below code are to fix to euTitle override*/
+//             overflow: visible;
+//             white-space: unset;
+//             word-break: unset;
+//             img {
+//                 max-height: base.$sports_pro_logoH;
+//                 margin-right: 8px;
+//             }
+//         }
+//     }
+// }
+// .all_type {
+// leftmenu (moved): start
+// position: relative;
+// min-height: 70%;
+// leftmenu (moved): end
+// .sports_item {
+// leftmenu (moved): start
+// min-height: 8px * 5.75;
+// padding: 0 8px * 2;
+// @include base.flexbox();
+// @include base.justifyContent(space-between);
+// @include base.alignItems(center);
+// leftmenu (moved): end
+// .sport_info {
+// leftmenu (moved): start
+// i {
+//     margin-right: 8px;
+// }
+// leftmenu (moved): end
+//olympics not in used already
+// .olympics {
+//     width: 20px;
+//     margin-right: 6px;
+// }
+// }
+// }
+// }
+// .e_num { // leftmenu (moved)
+//     font-size: base.$n_font5;
+//     white-space: nowrap;
+// }
+.virtual_wrp {
+    padding: 0 !important;
+
+    // .item_despt { // landing (moved)
+    //     font-size: base.$n_font7;
+    //     padding: 8px 8px * 2 8px 8px !important;
+    // }
+    .item {
+        height: $virtual_wrpH;
+
+        &:not(:first-child) {
+            margin-top: 8px * 3.5;
+        }
+    }
+
+    // .tab_nav {
+    // tn (moved): start
+    // @include base.justifyContent(flex-start);
+    // height: $normal_headerH;
+    // @include base.boxSizing(border-box);
+    // tn (moved): end
+    // .slider { // sld (moved)
+    //     height: $sliderH;
+    //     transform: scale(.9, 1);
+    //     bottom: 0;
+    // }
+    // }
+    // .tab_nav_item { // tn (moved)
+    //     font-size: base.$n_font5;
+    // }
+}
+
+// .img_float { // landing (moved)
+//     left: 0 !important;
+// }
+// .item.s46 .img_float { // landing (moved)
+//     left: 1% !important;
+// }
+// .item.s44 .img_float { // landing (moved)
+//     left: -3% !important;
+// }
+.virtual_list {
+    padding: 8px * 2.75 8px * 1.25;
+
+    .item:nth-child(5),
+    .item:nth-child(9) {
+        margin-top: 0;
+    }
+}
+
+.el_favContent {
+    position: relative;
+}
+
+/*****************Event listing end****************/
+/*sev: start*/
+/*sev: note , added*/
+// .n_visualization_wrap { // sev (moved)
+//     background: black;
+//     &.kabaddi:before {
+//         background-position: center center;
+//     }
+// }
+// .n_iframe_visualization { // sev (moved0
+//     z-index: 1;
+//     overflow: hidden;
+// }
+// .euSev_icn_relative { // sev (moved)
+//     position: relative;
+//     min-height: 44px; // (28px) n_visualization_btn's height + (8px + 8px) n_visualization_btn's margin
+// }
+// .n_sev_view { // sev (moved)
+//     position: -webkit-sticky !important;
+//     position: -moz-sticky !important;
+//     position: -ms-sticky !important;
+//     position: sticky !important;
+//     width: 100%;
+//     top: 0;
+//     @include base.boxSizing(border-box);
+//     z-index: 3;
+// }
+// .euSev_header { // sev (moved)
+//     font-size: base.$n_font5;
+//     position: relative;
+// }
+// .euNav_bar_wrp { // sev (moved)
+//     @include base.flexbox();
+//     @include base.justifyContent(space-between);
+//     width: 100%;
+// }
+// .nav_bar { // sev (moved)
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+//     white-space: nowrap;
+//     overflow-x: auto;
+//     -webkit-overflow-scrolling: touch;
+//     -ms-overflow-style: none;
+//     scrollbar-width: none;
+//     scrollbar-height: none;
+//     height: 16px * 2.125;
+//     &::-webkit-scrollbar {
+//         display: none;
+//     }
+//     li {
+//         display: inline-flex;
+//         @include base.alignItems(center);
+//         cursor: pointer;
+//         position: relative;
+//         padding-left: 8px;
+//         &:last-child {
+//             padding-right: 8px;
+//         }
+//         i {
+//             font-size: base.$n_font3 * 0.6;
+//             vertical-align: middle;
+//             padding-left: 8px;
+//         }
+//     }
+//     .euNav_bar_wrp & {
+//         width: calc(100% - $evet_drp_btnW);
+//     }
+//     .sevEnh .euNav_bar_wrp & {
+//         width: calc(100% - 18px);
+//     }
+//     .lb_header & {
+//         overflow: visible;
+//     }
+// }
+.sev_popup.popupOn {
+    // sev (moved): start
+    //note: add position fixed to prevent background scrolling
+    //update 21/2: cannot use position fixed, will affect android + chrome (not iphone mode)
+    // .drpWrp & {
+    //     overflow: auto !important;
+    // }
+    // @supports (-webkit-touch-callout: none) {
+    //     /* CSS specific to iOS devices */
+    //     position: fixed;
+    //     .drpWrp & {
+    //         position: absolute; // refer .sev_popup
+    //     }
+    // }
+    // @supports not (-webkit-touch-callout: none) {
+    //     /* CSS for other than iOS devices */
+    //     //position: absolute;
+    //     overflow: unset !important;
+    //     .drpWrp & {
+    //         overflow: auto !important;
+    //     }
+    // }
+    // &:before {
+    //     z-index: 100;
+    //     overflow: hidden;
+    //     .drpWrp & {
+    //         background: transparent;
+    //         content: unset !important;
+    //         position: unset !important;
+    //     }
+    // }
+    // .n_sev_view {
+    //     z-index: 101 !important;
+    // }
+    // sev (moved): end
+    // n_content_wrap_wth_bcktop (moved): start
+    // .n_content_wrap_wth_bcktop {
+    //     pointer-events: none;
+    // }
+    // n_content_wrap_wth_bcktop (moved): end
+}
+
+// .drpBG { // sev (moved)
+//     position: fixed;
+//     left: 0;
+//     right: 0;
+//     width: 100%;
+//     background: rgba(0, 0, 0, 0.7);
+//     bottom: 0px;
+//     top: var(--nSevViewH);
+//     @supports not (-webkit-touch-callout: none) {
+//         /* CSS for other than iOS devices */
+//         height: calc(100vh - var(--nSevViewH));
+//     }
+// }
+// .drpDown {
+// sev (moved): start
+// font-size: base.$n_font5;
+// /*position: fixed;
+// top: calc((#{16px * 2.125} * 2) + 1px);*/
+// top: 100%;
+// z-index: 5;
+// border-radius: 0 0 4px 4px;
+// padding: 0 16px;
+// min-height: 374px;
+// max-height: 374px;
+// overflow-y: auto;
+// overscroll-behavior: contain;
+// @include base.boxSizing(border-box);
+// .drpWrp & {
+//     position: fixed;
+//     top: var(--nSevViewH);
+// }
+// li {
+//     padding: 16px * 0.875 0;
+//     /*word-break: break-word;*/
+// }
+// sev (moved): end
+// to overwrite loading background
+// .loading_wrap { // ld (moved)
+//     background: none !important;
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+//     .rotate_wrap_content {
+//         flex: 1;
+//     }
+// }
+// test SFUAT-3868
+/* position: fixed !important;
+    top: 114px !important;
+    z-index: 9999999 !important; */
+// }
+// .euGrp { // sev (moved)
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+//     i {
+//         font-size: base.$n_font3;
+//     }
+//     &:not(:first-child) {
+//         .euTable_wrp & {
+//             padding-top: 8px;
+//         }
+//     }
+// }
+// .euGrpHead { // sev (moved)
+//     height: 16px * 2.125;
+//     padding: 0 8px;
+// }
+// .euTitle { // sev (moved)
+//     text-overflow: ellipsis;
+//     white-space: nowrap;
+//     overflow: hidden;
+//     word-break: break-all;
+//     padding-right: 4px;
+//     //Racing Icons
+//     .icon-fi-title-s57,
+//     .icon-fi-title-s58,
+//     .icon-fi-title-s1001 {
+//         padding-right: 8px;
+//         font-size: base.$n_font9;
+//         vertical-align: sub;
+//     }
+//     i+& {
+//         padding-left: 8px;
+//     }
+//     &+i {
+//         margin-left: auto;
+//     }
+//     &.euRc {
+//         @include base.flexbox();
+//         @include base.alignItems(center);
+//     }
+// }
+// .euRadio { // sev (moved)
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+//     @include base.justifyContent(center);
+//     border-radius: 50%;
+//     width: 16px * 0.75;
+//     min-width: 16px * 0.75;
+//     height: 16px * 0.75;
+//     margin-left: auto;
+//     position: relative;
+//     .eu_selected & {
+//         &:before {
+//             content: "";
+//             position: absolute;
+//             width: 8px;
+//             height: 8px;
+//             border-radius: 50%;
+//         }
+//     }
+// }
+// .euTable_wrp {// sev (moved)
+//     padding-top: 16px * 1.5;
+// }
+// .euTable {// sev (moved)
+//     font-size: base.$n_font3;
+//     @include base.flexbox();
+//     @include base.justifyContent(space-between);
+//     .euGrp & {
+//         width: calc(100% - #{16px * 0.75} - #{8px});
+//         @include base.borderRadius(16px * 0.125);
+//         @include base.boxSizing(border-box);
+//     }
+// }
+// .drpDown .euTable_side {// sev (moved)
+//     .icon-fi-livestream,
+//     .icon-fi-visualization {
+//         &:not(:only-child) {
+//             margin-top: 1.5px;
+//         }
+//     }
+// }
+.euTable_side {
+
+    // sev (moved): start
+    //     @include base.flexbox();
+    //     @include base.flexDirection(column);
+    //     @include base.justifyContent(center);
+    //     padding: 0 8px;
+    //     text-align: center;
+    //     div:not(.info_wrp):not(.info_wrp *) {
+    //         min-width: 16px * 1.75;
+    //         &:not(:last-child) {
+    //             padding-bottom: 8px * 0.25;
+    //         }
+    //         .rpo & {
+    //             font-weight: bold;
+    //         }
+    //     }
+    //     .euTable_main+&,
+    //     .nav_bar+& {
+    //         border-right: none;
+    //         i {
+    //             font-size: base.$n_font3;
+    //         }
+    //     }
+    //     &.remove_na {
+    //         padding: 4px 8px;
+    //     }
+    // sev (moved): end
+    &.int_wrp {
+
+        // sev (moved): start
+        //         font-weight: 700;
+        //         width: 50px;
+        //         position: relative;
+        //         padding: 4px 10px;
+        // sev (moved): end
+        .n_indicator {
+            position: absolute;
+            top: 6px;
+            right: -6px;
+            font-weight: 400;
+
+            .indicator_pop {
+                left: 0;
+                right: unset
+            }
+        }
+    }
+
+    // sev (moved): start
+    //     .sevEnh .euTable & {
+    //         width: 60px;
+    //         min-width: 60px;
+    //         font-weight: bold;
+    //     }
+    //     .sevEnh .euNav_bar_wrp & {
+    //         width: 26px;
+    //         min-width: 26px;
+    //         padding: 0;
+    //     }
+    // sev (moved): end
+}
+
+// .euTable_main {// sev (moved)
+//     @include base.flexbox();
+//     @include base.flexDirection(column);
+//     @include base.justifyContent(center);
+//     padding: 0 8px;
+//     flex: 1;
+//     .sevEnh & {
+//         padding: 0;
+//     }
+// }
+// .euTable_bottom {// sev (moved)
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+//     @include base.justifyContent(space-between);
+//     padding: 8px;
+//     .rpo & {
+//         @include base.boxSizing(border-box);
+//         padding: 0;
+//         align-items: unset;
+//         justify-content: unset;
+//         min-height: base.$deliveriesRowH;
+//     }
+// }
+// .eu_sequence {// sev (moved)
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+// }
+// .eu_num {// sev (moved)
+//     width: calc((base.$n_num_large * 2) / 7);
+//     text-align: center;
+//     .partitionM & {
+//         width: calc((base.$n_num_large * 2) / 8);
+//     }
+//     &:not(:last-child) {
+//         position: relative;
+//         &:before {
+//             content: "";
+//             position: absolute;
+//             right: 0;
+//             height: 8px * 1.5;
+//             width: 1px;
+//             background: rgba(255, 255, 255, 0.3);
+//         }
+//     }
+//     &.ldw {
+//         width: 8px * 3.25;
+//     }
+// }
+// .eu_row {// sev (moved)
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+//     padding: 8px 0;
+//     .sevEnh & {
+//         padding: 8px;
+//         height: 28px;
+//         box-sizing: border-box;
+//         &:has(.team_dot) {
+//             padding-left: 0;
+//         }
+//     }
+//     .sevEnh .eu_snooker_board & {
+//         padding: 8px 0 8px 8px;
+//         &:has(.team_dot) {
+//             padding: 8px 0;
+//         }
+//     }
+//     .sevEnh.small & {
+//         padding-right: 4px;
+//     }
+// }
+// .eu_team {// sev (moved)
+//     @include base.limit1line();
+// }
+// .eu_score {// sev (moved)
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+//     @include base.justifyContent(center);
+//     margin-left: auto;
+//     >div {
+//         min-width: 16px;
+//         text-align: center;
+//         padding-left: 8px;
+//         white-space: unset;
+//         &:not(.eu_yellowCard):not(.eu_redCard) {
+//             line-height: 10px;
+//         }
+//         .rpo & {
+//             padding-left: unset;
+//         }
+//         .sevEnh & {
+//             min-width: 28px;
+//             text-align: center;
+//             padding: 0 2px;
+//             padding-left: 0;
+//             word-break: break-word;
+//             &.wide {
+//                 width: 30px;
+//             }
+//         }
+//     }
+//     &.medium {
+//         >div {
+//             width: 30px;
+//             padding-left: 4px;
+//         }
+//     }
+//     &.big {
+//         >div {
+//             width: 8px * 4;
+//             text-align: center;
+//             padding-left: 8px;
+//             .sevEnh & {
+//                 width: 36px;
+//             }
+//         }
+//     }
+//     &.extra_big {
+//         >div {
+//             width: 46px;
+//         }
+//         .period_hd & {
+//             font-size: 9.5px;
+//         }
+//     }
+//     &.jumbo {
+//         >div {
+//             width: 16px * 4;
+//         }
+//     }
+//     &.large {
+//         >div {
+//             width: base.$n_num_large;
+//         }
+//     }
+//     div.big {
+//         width: 8px * 6.2;
+//     }
+//     div.medium {
+//         width: 45px;
+//     }
+//     div.small {
+//         width: 16px;
+//     }
+// }
+// period title start
+// .period_hd {// sev (moved)
+//     @include base.flexbox();
+//     min-height: 22px;
+//     padding: 0 8px;
+//     font-size: 10px;
+//     .sevEnh.small & {
+//         padding-right: 4px;
+//     }
+// }
+// .sevEnh { // sev (moved)
+//     .euTable_main {
+//         padding: 0;
+//         .eu_row:not(:last-child) {
+//             border-bottom: 0;
+//         }
+//     }
+// }
+// .board_content { // sev (moved)
+//     @include base.hide_scrollbar();
+//     position: relative;
+//     overflow-y: hidden;
+//     overflow-x: auto;
+//     width: 100%;
+//     height: 100%;
+// }
+// .eu_snooker_board { // sev (moved)
+//     @include base.flexbox();
+//     @include base.flexDirection(row);
+//     width: 100%;
+//     .period_hd {
+//         padding: 0;
+//     }
+//     .board_left {
+//         flex: 1;
+//         height: 100%;
+//     }
+//     .euTable {
+//         flex: 1
+//     }
+//     .board_main {
+//         @include base.flexbox();
+//         width: calc(40% - 7px);
+//     }
+// }
+// .snk_wrp { // sev (moved)
+//     @include base.flexbox();
+//     width: 100%;
+//     position: relative;
+//     z-index: 1;
+// }
+// .eu_snooker_board { // sev (moved)
+//     &:not(:has(.snk_nav)) {
+//         .board_main {
+//             width: calc(40% + 3px);
+//         }
+//         .board_rt {
+//             display: none;
+//         }
+//     }
+// }
+// .row_score_grp { // sev (moved)
+//     @include base.flexbox();
+//     @include base.flexDirection(column);
+//     position: relative;
+//     min-width: 100%;
+//     height: 100%;
+// }
+// .snk_score_row,
+// .row_score_tit { // sev (moved)
+//     width: fit-content;
+//     min-width: 100%;
+// }
+// .board_rt { // sev (Moved)
+//     width: 10px;
+//     .rt_top {
+//         height: 22px;
+//     }
+// }
+// .total_fm { // sev (moved)
+//     width: 50px;
+//     text-align: center;
+//     font-size: 9px;
+//     margin-left: auto;
+//     line-height: 22px;
+// }
+// .total_num { // sev (moved)
+//     margin-left: auto;
+//     width: 50px;
+//     text-align: center;
+//     flex-shrink: 0;
+// }
+// .row_score_tit { // sev (moved)
+//     font-size: 9px;
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+//     @include base.boxSizing(border-box);
+//     height: 22px;
+//     width: fit-content;
+//     min-width: 100%;
+// }
+// .arrow_btn { // sev (moved)
+//     position: absolute;
+//     font-size: 16px;
+//     height: 16px;
+//     bottom: calc((100% - 16px - 22px)/2);
+//     .iconWrp_left & {
+//         left: -6px;
+//     }
+//     .iconWrp_right & {
+//         right: -8px;
+//     }
+// }
+// .period_grp { // sev (moved)
+//     @include base.flexbox();
+//     @include base.justifyContent(flex-end);
+//     >div {
+//         width: 30px;
+//         min-width: 30px;
+//         max-width: 30px;
+//         align-self: center;
+//         text-align: center;
+//         font-size: 10px;
+//         .row_score_tit & {
+//             font-size: 9px;
+//         }
+//     }
+// }
+// .snk_score_row { // sev (moved)
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+//     @include base.justifyContent(flex-start);
+//     box-sizing: border-box;
+//     flex: 1;
+//     width: fit-content;
+//     min-width: 100%;
+// }
+// .snk_nav { // sev (moved)
+//     position: absolute;
+//     height: 100%;
+//     z-index: 3;
+//     bottom: 0;
+//     &.iconWrp_left {
+//         left: 0;
+//     }
+//     &.iconWrp_right {
+//         right: 0;
+//     }
+// }
+// period title end
+// .eu_redCard,
+// .eu_yellowCard { // sev (moved)
+//     position: relative;
+//     z-index: 1;
+//     width: 8px * 1.25 !important;
+//     height: 8px * 1.5;
+//     line-height: 8px * 1.5;
+//     padding: 0 !important;
+//     @include base.borderRadius(16px * 0.0625);
+//     @include base.boxSizing(border-box);
+//     margin-left: 8px;
+//     .sevEnh & {
+//         min-width: 8px !important;
+//         width: 8px !important;
+//         height: 10px;
+//         @include base.borderRadius(0);
+//         margin: auto !important;
+//         line-height: 10px;
+//     }
+//     .sevEnh .euTable_main & {
+//         width: fit-content !important;
+//     }
+// }
+// .sev_icon { // sev (moved)
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+//     position: absolute;
+//     width: 100%;
+//     left: 0;
+//     right: 0;
+//     /*note: for ios issue: z-index on this layer will block all background (btn from iframe video), move to "sev_IconLft, .sev_IconRgt"*/
+//     /* z-index: 1; */
+//     i {
+//         font-size: base.$n_font5;
+//     }
+//     .icon-fi-stats {
+//         font-size: base.$n_font3;
+//     }
+//     .icon-fi-info-round,
+//     .icon-fi-sev-pin {
+//         font-size: base.$n_font7;
+//     }
+// }
+// .eu_sevSlider,
+// .eu_sevSliderStats { // sev (moved)
+//     font-size: base.$n_font7;
+//     +.cover_btn {
+//         &:before {
+//             content: "";
+//             position: absolute;
+//             top: -1px;
+//             left: 0;
+//             right: 0;
+//             height: 1px;
+//             width: 100%;
+//         }
+//     }
+// }
+// .eu_Itop { // sev (moved)
+//     top: 0;
+//     &.esVsBtn {
+//         .sev_IconLft>*,
+//         .sev_IconRgt>* {
+//             opacity: 0.8;
+//         }
+//     }
+// }
+// $visulizationfooterSpace: 32px; // sev (moved)
+// .eu_Ibtm { // sev (moved)
+//     bottom: 0;
+//     &.withfooter {
+//         //note: to cater when visualization have footer
+//         bottom: $visulizationfooterSpace !important;
+//     }
+//     // this class eu_esport_Ibtm to cater visul buttons block certain sev content
+//     &.eu_esport_Ibtm {
+//         bottom: 16px;
+//         // .n_visualization_btn { // sev (moved)
+//         //     margin: 4px;
+//         // }
+//     }
+// }
+// .sev_IconLft,
+// .sev_IconRgt { // sev (moved)
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+//     z-index: 1;
+// }
+// .sev_IconLft { // sev (moved)
+//     margin-right: auto;
+// }
+// .sev_IconRgt { // sev (moved)
+//     margin-left: auto;
+// }
+// .eu_txtBot { // sev (moved)
+//     padding-top: 8px;
+// }
+// .n_visualization_btn { // sev (moved)
+//     margin: 8px;
+// }
+// .n_streaming_icon_wrap { // sev (moved)
+//     font-size: 14px;
+//     right: auto;
+//     left: 0;
+// }
+/*class "chan_error_wrp" remove soon for [SFCRQ-2719][SFCRQ-2720]*/
+// .chan_error_wrp { // sev (moved)
+//     bottom: 50px;
+// }
+// .chan_indi { // sev (moved)
+//     margin: 8px;
+// }
+/*table tennis*/
+// .n_tab_nav_withBG { // sev (moved)
+//     padding: 4px;
+//     .tab_nav_item {
+//         padding: 4px * 1.5;
+//         margin: 0 4px * 1.5;
+//     }
+//     .eu_h2h & {
+//         height: 30px;
+//         position: relative;
+//     }
+// }
+// .eu_teamInfo { // sev (moved)
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+//     @include base.justifyContent(space-between);
+//     text-align: center;
+//     padding: 8px;
+//     &.remove_na {
+//         @include base.flexDirection(column);
+//     }
+// }
+// .eu_teamGrp { // sev (moved)
+//     width: 30%;
+//     .remove_na & {
+//         margin-bottom: 16px;
+//     }
+//     img {
+//         width: 16px * 2;
+//         min-width: 16px * 2;
+//         max-width: 16px * 2;
+//     }
+// }
+// .eu_teamname { // sev (moved)
+//     font-size: base.$n_font5;
+//     @include base.limit3line();
+//     img+& {
+//         padding-top: 8px;
+//     }
+//     .odds_box & {
+//         @include base.limit2line();
+//     }
+// }
+// .eu_txtBig { // sev (moved)
+//     font-size: base.$n_font9;
+// }
+// .eu_txtSmall { // sev (moved)
+//     font-size: base.$n_font5;
+// }
+// .eu_flxCenter { // sev (moved)
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+//     @include base.justifyContent(center);
+//     .n_bo {
+//         padding-left: 4px;
+//     }
+// }
+// .eu_mid { // sev (moved)
+//     min-width: 30%;
+//     padding: 0 4px;
+//     div {
+//         &:not(:first-child) {
+//             padding-top: 8px;
+//         }
+//         &.n_bo {
+//             padding-top: 0;
+//         }
+//     }
+// }
+// media_restricted not in used already
+// .media_restricted { // sev (moved)
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+//     @include base.justifyContent(center);
+//     @include base.boxSizing(border-box);
+//     padding: 16px * 2.75 0;
+// }
+/*sev's match template: start*/
+// .sev_content_all {
+//     .sev_content_item {
+//         &:first-child:nth-last-child(1) {
+//             width: $width_sev_1;
+//         }
+//         &:first-child:nth-last-child(2),
+//         &:first-child:nth-last-child(2) ~ div {
+//             width: $width_sev_2;
+//         }
+//         &:first-child:nth-last-child(3),
+//         &:first-child:nth-last-child(3) ~ div {
+//             width: $width_sev_3;
+//         }
+//     }
+// }
+.sev_content_item {
+    .odds_box {
+        @include base.borderRadius(2px);
+        min-height: 16px * 2.125;
+    }
+}
+
+.up,
+.down {
+    i {
+        margin-right: 8px * 0.5;
+    }
+}
+
+// .eu_subHeader { // sev (moved)
+//     font-size: base.$n_font5;
+//     padding: 8px 8px 0;
+//     div {
+//         width: 100%;
+//     }
+// }
+//*remove after [SFCRQ-3166] live: start*//commented on 29 July 22- YS
+// .eu_moreTab {
+//     padding: 4px;
+//     margin: 0 8px 8px;
+// }
+/*remove after [SFCRQ-3166] live: end*/
+/*sev's match template: end*/
+/*sev: end*/
+//* My Acct: starts ================================================*/
+// .myacct_wrap {
+//     padding: 16px;
+// }
+// .account_icon_wrap_euro {
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+//     padding: 16px;
+//     @include base.borderRadius(8px);
+//     .account_icon {
+//         font-size: 40px;
+//     }
+//     .account_info {
+//         padding-left: 16px;
+//     }
+//     .username {
+//         font-weight: bold;
+//         font-size: 14px;
+//     }
+//     .balance {
+//         font-size: 12px;
+//         margin-top: 8px;
+//         .balance_amt {
+//             padding-left: 8px;
+//         }
+//     }
+// }
+// .account_listmenu_wrap { 
+//     .list {
+//         @include base.borderRadius(8px);
+//         padding: 13px 16px;
+//         margin-top: 16px;
+//         >div>i {
+//             padding-right: 8px;
+//         }
+//         .red_dot {
+//             right: 8px*3.75;
+//         }
+//     }
+// }
+//* My Acct: ends ================================================*/
+//* Search: starts ================================================*/
+$search_header_input_height: 28px;
+
+// Search: input box: shared between search and results
+// .search_head { // search (moved)
+//     padding: 8px;
+//     font-size: 12px;
+// }
+// .search_box_selectLeague {
+// line-height: $search_header_input_height !important;
+// min-height: $search_header_input_height !important;
+// }
+// remove it for ticket [DES-1786]
+// .n_header_search {
+//     .clear_icon {
+//         top: 4px* 1.5;
+//     }
+// }
+// .search_wrap_action { // search (moved)
+//     padding-left: 16px;
+//     padding-right: 8px;
+//     font-size: 14px;
+//     white-space: nowrap;
+// }
+.search_item {
+
+    // search (moved): start
+    // @include base.flexbox();
+    // @include base.alignItems(center);
+    // padding: 4px 8px;
+    // search (moved): end
+    .odds_box {
+        text-align: center;
+        background: none !important;
+        line-height: 16px;
+        display: -webkit-box !important;
+        display: -ms-flexbox() !important;
+        @include base.alignItems(center);
+
+        label {
+            font-size: 10px;
+            display: contents;
+            padding-bottom: 4px;
+        }
+    }
+
+    // .n_fav_on,
+    // .n_fav_off { // nfo (moved)
+    //     padding-right: 8px;
+    // }
+    .team_wrap {
+        width: 100%;
+    }
+
+    .team_name {
+        padding-right: 4px;
+        margin: 5px 0;
+        @include base.limit3line();
+    }
+}
+
+// Search - for Asia View Only: can remove after updated with latest euro search - event listing: starts
+.search_results_wrap {
+    //sports icon(moved): start
+    // .sports_icon {
+    //     font-size: 16px;
+    // }
+    //sports icon(moved): end
+    // .league_title_list { // search (moved)
+    //     @include base.flexbox();
+    //     @include base.alignItems(center);
+    //     padding: 4px;
+    //     margin-top: 4px;
+    //     &.search_fbets {
+    //         @include base.justifyContent(space-between);
+    //     }
+    //     .event_league_wrap {
+    //         @include base.flexbox();
+    //         @include base.alignItems(center);
+    //     }
+    // }
+    // .event_details { // search (moved)
+    //     @include base.flexbox();
+    //     @include base.alignItems(center);
+    //     .event_details_list {
+    //         padding: 8px;
+    //         width: 90%;
+    //     }
+    //     .event_details_action {
+    //         width: 10%;
+    //         text-align: right;
+    //     }
+    // }
+    // .n_fav_on,
+    // .n_fav_off { // nfo (moved)
+    //     margin: 0 6.4px;
+    // }
+    // .n_inner_loading { // ld (moved)
+    //     height: 80vh !important;
+    //     padding-top: initial !important;
+    // }
+}
+
+// .search_header { // search (moved)
+//     @include base.limit2line();
+// }
+// Search - for Asia View Only: can remove after updated with latest euro search - event listing: ends
+//* Search: ends ================================================*/
+//* Completed results: starts ================================================*/
+// .goal_timeline_icon {
+//     line-height: base.$n_font9;
+// }
+// .result_searchwrap {
+// padding: 8px;
+//result_searchwrap_inner not in used already
+// .result_searchwrap_inner+.disclaimer {
+//     padding-top: 8px;
+// }
+// .disclaimer {
+//     font-size: 10px;
+// }
+// }
+// result: start
+// .disclaimer {
+//     >span {
+//         display: block;
+//         &:has(+ span) {
+//             padding-bottom: 2px;
+//         }
+//     }
+// }
+//result_searchwrap_inner not in used already
+// .result_searchwrap_inner {
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+// }
+// .completed_result .competition {
+//     font-size: base.$n_font5;
+//     padding: 0 * 0.25 8px;
+//     @include base.boxSizing(border-box);
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+//     /* font-weight: bold; */
+//     /*  > div:first-child {
+//         white-space: nowrap;
+//         overflow: hidden;
+//         text-overflow: ellipsis;
+//     } */
+//     min-height: $normal_headerH;
+//     max-height: none;
+//     height: auto;
+// }
+// result: end
+//manle magic was hidden in eruo completed result
+.type_3vs3,
+.solo {
+    display: none;
+}
+
+//* Completed results: ends ================================================*/
+/*bet placement: start*/
+//placebet footer & header
+.bet_item_result {
+    @include base.alignItems(center);
+
+    &:not(:last-child) {
+        padding-bottom: 16px;
+
+        .footer_euro & {
+            padding-bottom: 10px;
+        }
+    }
+
+    .selection {
+        font-size: base.$n_font7;
+        min-width: 100px; //changed from 70px, to align parallel
+        padding-right: 8px;
+        font-weight: bold;
+    }
+
+    .price {
+        font-weight: bold;
+    }
+}
+
+// .nav_selection {
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+// }
+// .nav_tab {
+// font-size: base.$n_font7;
+// min-width: 16px*7.5;
+// line-height: $footerComboH;
+// text-align: center;
+// .fs_footer & {
+//     line-height: $footerComboH*0.9;
+// }
+//     &:first-child {
+//         padding-left: 8px;
+//     }
+//     &.active {
+//         font-weight: bold;
+//     }
+//     &.disabled {
+//         opacity: 0.5;
+//     }
+// }
+// [DES-905]
+// .nav_selection {
+//     &.bs_parlay {
+//         .nav_tab {
+//             min-width: 16px*6;
+//         }
+//     }
+// }
+// END [DES-905]
+// not being read
+// .nav_mybet {
+//     i {
+//         font-size: base.$n_font3;
+//     }
+// }
+.n_footer_combo {
+
+    //top: 70px;
+    // min-height: $footerComboH;
+    // z-index: 5;
+    &.vnd_popup {
+        z-index: 1000004;
+    }
+
+    // .fs_footer & {
+    //     min-height: $footerComboH*0.9;
+    // }
+    &.pre {
+
+        // padding: 0;
+        &.highlighted {
+            z-index: 1000006;
+        }
+    }
+
+    // .footer_arrow {
+    // width: 16px* 2.75;
+    // line-height: $footerComboH;
+    // .fs_footer & {
+    //     line-height: $footerComboH*0.9;
+    // }
+    // }
+    .v_split {
+        height: 8px*1.75;
+    }
+
+    &+.n_footer_combo.sub {
+        top: 114px;
+
+        .trans_comb & {
+            top: 0;
+        }
+    }
+
+    &.parlay_boost {
+        padding-right: 16px* 2.75;
+        // .nav_selection {
+        // flex: 1;
+        // .nav_tab {
+        // @include base.flexbox();
+        // @include base.alignItems(center);
+        // @include base.justifyContent(center);
+        // line-height: unset;
+        // min-width: unset;
+        // flex: 1 0 0;
+        // padding: 0 4px;
+        //         .count {
+        //             margin-left: 2px;
+        //         }
+        //     }
+        // }
+        // .footer_arrow {
+        //     @include base.flexbox();
+        //     @include base.alignItems(center);
+        //     @include base.justifyContent(center);
+        //     line-height: unset;
+        //     position: absolute;
+        //     right: 0;
+        // }
+    }
+}
+
+// .post_bet_inner_wrap {
+//     @include base.flexbox();
+//     @include base.justifyContent(space-between);
+//     @include base.alignItems(center);
+//     width: 100%;
+//     height: $footerComboH;
+// .fs_footer & {
+//     height: $footerComboH*0.9;
+// }
+// }
+.footer_main {
+    &.v2 {
+        &.transition {
+            transition: .3s;
+            transition-timing-function: ease-in;
+        }
+
+        &.on-transition {
+            top: 0;
+            transform: translateY(calc(100% - #{$footerComboH}));
+
+            &.trans_comb {
+                transform: translateY(calc(100% - #{$footerComboH} - #{$footerComboH + 1})); //1px from .n_footer_combo.sub's border-top
+            }
+        }
+
+        .pb_content {
+            overflow: hidden;
+            bottom: 0;
+            display: block;
+            visibility: hidden;
+            // css transition move to dev control, toggle class ".transition"
+            // transition: all 0.25s ease-in-out;
+            /*  transition: all 0.1s ease-in-out; */
+        }
+
+        &.on {
+            position: fixed;
+            top: base.$footer_main_onH;
+            transform: translateY(0);
+
+            .pb_content {
+                overflow-y: auto;
+                overscroll-behavior: contain;
+                overflow-x: hidden;
+                visibility: visible;
+            }
+
+            &.trans_comb {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    //DES-45 Standalone Odds Panel & Popup Bet Slip
+    // &.fs_footer {
+    //     width: 100%;
+    //     left: unset;
+    //     right: 0;
+    //     &.v2 {
+    //         &.on {
+    //             position: fixed;
+    //             top: 0;
+    //             transform: translateY(0);
+    //         }
+    //     }
+    // }
+}
+
+.pb_content {
+    position: fixed;
+    width: 100%;
+    @include base.boxSizing(border-box);
+    overflow-x: hidden;
+    // top: 114px; //70px+44px
+    top: $footerComboH;
+    // .fs_footer & {
+    //     top: $footerComboH*0.9;
+    // }
+}
+
+// .pb_input_wrap {
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+// }
+.pb_footer {
+    width: 100%;
+
+    .alert_msg {
+        padding: 8px;
+        margin-top: -(8px);
+    }
+
+    .keypad_wrap {
+        margin: 4px 8px;
+    }
+}
+
+.bs_parlay_eu.disabled {
+    .alert_msg {
+        padding-top: 8px;
+    }
+}
+
+// .pb_footer_actions {
+// padding: 8px;
+// .pb_clear {
+//     width: 35%;
+// }
+//     .pb_button {
+//         @include base.flexDirection(column);
+//         width: 65%;
+//         padding: 0 8px;
+//     }
+// }
+// .pb_footer_alert_msg {
+//     font-size: base.$n_font3;
+//     @include base.flexbox();
+//     @include base.justifyContent(flex-end);
+//     padding: 0 8px 8px;
+//     margin-top: -(4px);
+// }
+// .pb_footer_details {
+//     padding: 8px;
+// }
+// .pb_footer_info {
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+//     @include base.justifyContent(space-between);
+//     @include base.flexDirection(row-reverse);
+//     @include base.boxSizing(border-box);
+//     width: 100%;
+//     padding: 0 8px 8px;
+// .showmore {
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+//     i {
+//         margin-left: 4px;
+//     }
+// }
+// }
+// .pb_footer_total_est {
+//     @include base.flexbox();
+//     @include base.flexDirection(column);
+//     padding: 16px 0;
+//     margin: 0 16px;
+// }
+.pb_times {
+    margin-right: 8px;
+}
+
+.total_est {
+    @include base.flexbox();
+    @include base.alignItems(center);
+    @include base.justifyContent(space-between);
+
+    &:not(:first-child) {
+        margin-top: 8px;
+    }
+}
+
+//placebet inner content
+.bet_item_wrap {
+    .details {
+        font-size: base.$n_font5;
+        line-height: base.$n_font4*2;
+    }
+
+    .details_nl {
+
+        // idctr_alg not in used already
+        // &.idctr_alg {
+        //     .selection {
+        //         @include base.flexbox();
+        //         @include base.alignItems(center);
+        //         @include base.justifyContent(space-between);
+        //     }
+        // }
+        .selection {
+            font-size: base.$n_font5;
+            font-weight: 700;
+            // .match_lose,
+            // .match_sold,
+            // .match_win,
+            // .match_nostart,
+            // .match_cancel {
+            //     position: relative;
+            //     top: 2px;
+            // }
+        }
+    }
+
+    .selection {
+
+        // @include base.flexbox();
+        // @include base.alignItems(center);
+        .betslip_detail & {
+            flex: 6;
+            word-break: break-word;
+
+            &:has(.mr_icon) {
+                @include base.flexbox();
+                @include base.alignItems(center);
+                z-index: 0;
+                i+.mr_icon // .match_win+.mr_icon,
+
+                // .match_lose+.mr_icon,
+                // .match_cancel+.mr_icon 
+                    {
+                    margin-right: 4px;
+                }
+
+                i+.mr_sti_bal // .match_win+.mr_sti_bal,
+
+                // .match_lose+.mr_sti_bal,
+                // .match_cancel+.mr_sti_bal
+                    {
+                    padding-right: 4px;
+                }
+            }
+        }
+
+        i {
+            margin-right: 4px;
+        }
+    }
+}
+
+// [DES-905]
+.bs_parlay_eu {
+    .betlist_item {
+
+        // padding: 16px+4 8px*2;
+        // margin: 0;
+        // @include base.boxSizing(border-box);
+        .remove {
+            top: 50%;
+            @include base.transform(translateY(-50%));
+        }
+    }
+
+    .details {
+        font-size: base.$n_font5;
+        line-height: base.$n_font4*2;
+
+        .selection {
+            font-weight: 700;
+
+            &>span {
+                float: right;
+            }
+
+            i {
+                margin-right: 4px;
+            }
+        }
+
+        .obp_wrp {
+            margin: 10px 0 20px 0;
+        }
+    }
+
+    // .omp .obp_wrp { // odds boost (remove)
+    //     margin-top: 0;
+    // }
+    .betlist_input {
+        margin: 4px 0 0 0;
+    }
+
+    .keypad_wrap {
+        margin: 4px*5 0;
+    }
+
+    &.bs_parlay_eu_for_ing {
+        .betlist_item {
+            .selection {
+                &>span {
+                    text-align: right;
+                }
+
+                // odds: start
+                // .odds {
+                //     font-size: 14px;
+                //     &.old {
+                //         font-weight: 400;
+                //     }
+                // }
+                // odds: end
+                .date_index {
+                    font-size: 10px;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .success {
+            margin-top: -10px;
+        }
+    }
+}
+
+// END [DES-905]
+//place bet only
+.pb_content {
+    word-break: break-word;
+}
+
+//my bet only
+.betlist_close_wrap {
+    position: relative;
+}
+
+.betlist_input {
+    font-size: base.$n_font5;
+    @include base.borderRadius(2px);
+    width: 16px*10;
+    line-height: 30px;
+    padding: 0 8px;
+
+    // .fs_footer & {
+    //     line-height: 28px;
+    // }
+    &.active {
+        font-size: base.$n_font5;
+        font-weight: bold;
+    }
+
+    &:has(.stk_multiplier) {
+        @include base.flexbox();
+        @include base.alignItems(center);
+        @include base.justifyContent(space-between);
+    }
+}
+
+.betlist_item {
+
+    // margin: 0 16px;
+    // padding: 8px*1.5 0;
+    // .fs_footer & {
+    //     margin: 0 8px*1.5;
+    //     padding: 8px 0;
+    //     .betlist_input {
+    //         margin: 2px 0 0 (-(2px));
+    //     }
+    // }
+    br {
+        margin-bottom: 8px;
+    }
+
+    .betlist_input {
+        margin: 4px 0 0 (-(2px));
+    }
+
+    &.disabled {
+        .betlist_input {
+            opacity: 0.5;
+        }
+    }
+
+    .details {
+        position: relative;
+        // &.idctr_alg {
+        //     div {
+        //         &:not(.details_header, .details_header *, .date_score_wrap *, .mr_bslp_score, .mr_icon) {
+        //             margin-left: 18px;
+        //         }
+        //     }
+        // }
+    }
+
+    // handi: start
+    // .handi {
+    //     margin-left: 4px;
+    //     //use div, due to ios15 issue in rendering
+    //     display: inline-block;
+    // }
+    // handi: end
+    .remove {
+        bottom: 0;
+    }
+
+    .selection {
+
+        .highlight &,
+        .bs_hl {
+            font-weight: 700;
+        }
+    }
+
+    // odds: start
+    //  .odds {
+    //     .highlight &,
+    //     .bs_hl {
+    //         font-weight: 700;
+    //     }
+    // }
+    // odds: end
+}
+
+.betlist_odds {
+
+    // word-break: keep-all;
+    // white-space: nowrap;
+    .betslip_detail & {
+        // white-space: initial;
+        text-align: right;
+        max-width: 40%;
+        flex: 4;
+    }
+
+    // odds: start
+    // .odds {
+    //     font-size: base.$n_font7;
+    //     font-weight: 700;
+    //     .pb_footer_details & {
+    //         font-size: base.$n_font5;
+    //     }
+    //     .betslip_detail & {
+    //         font-size: 12px;
+    //     }
+    // }
+    // odds: end
+    &.up,
+    &.down {
+        i {
+            margin-right: 0px;
+        }
+    }
+
+    .pb_footer_details &,
+    .selection & {
+        display: inline-block;
+    }
+
+    // odds: start
+    // .details_nl & {
+    //     .odds {
+    //         font-size: base.$n_font5;
+    //     }
+    // }
+    // odds: end
+}
+
+// .betlist_wrap {
+//     padding: 0 8px;
+//     &.conflict {
+//         &:before {
+//             height: base.$n_font5;
+//             top: 4px;
+//             left: 0;
+//         }
+//     }
+// }
+.conflict {
+    position: relative;
+
+    &:before {
+        height: base.$n_font11;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -(16px);
+    }
+}
+
+.date_index {
+    text-align: right;
+    min-width: 120px;
+}
+
+//note: score_index to be remove after Winning Selection CRQ
+.date_score_wrap,
+.bslp_score,
+.bslp_indx {
+    // line-height: base.$n_font5;
+    padding-bottom: 4px;
+    line-height: 120%;
+
+    >div:first-child {
+        flex: 1;
+    }
+
+    // .score_index {
+    //     line-height: 90% !important;
+    // }
+}
+
+// .bslp_score {
+// &:has(.mr_bslp_score) {
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+//     position: relative;
+//     z-index: 1;
+// }
+// .mr_bslp_score {
+// @include base.flexbox();
+// @include base.alignItems(center);
+//     .mr_icon {
+//         margin-left: 6px;
+//     }
+// }
+// &>.mr_bslp_score:first-child,
+// &>.win_circle:first-child {
+//     flex: none;
+// }
+// .mr_bslp_score+.mr_bslp_score {
+//     padding-left: 8px;
+// }
+// .bet_status {
+//     padding-right: 4px;
+// }
+// }
+.date_score_wrap // .details_header
+
+    {
+    @include base.flexbox();
+    @include base.justifyContent(space-between);
+}
+
+.details_header {
+
+    // line-height: base.$n_font11;
+    .selection {
+        i {
+            font-size: base.$n_font5;
+        }
+    }
+
+    &:has(+ .obp_wrp),
+    &:has(+ .omp) {
+        padding-bottom: 10px;
+
+        .selection {
+            font-weight: 700;
+        }
+    }
+}
+
+// .details_subhdr {
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+//     @include base.justifyContent(space-between);
+// live icon: start
+// .live_icon {
+//     &:not(.smaller_icon_v2) {
+//         line-height: 12px;
+//         margin-left: 4px;
+//     }
+// }
+// live icon: end
+// }
+.icn.remove {
+    &+.date_score_wrap {
+        margin-right: 16px;
+    }
+}
+
+// .ind_conflict {
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+// }
+// .rb_score {
+//     font-size: base.$n_font7;
+// }
+// .showmore,
+// .stake_info {
+//     font-size: base.$n_font3;
+// }
+//keypad
+// .keypad_itm {
+//     width: 100%;
+//     margin: 0 4px*.25;
+// }
+// .keypad_itm_sp {
+//     &:last-child {
+//         font-size: base.$n_font7;
+//         min-width: 39.5%;
+//     }
+// }
+// .keypad_wrap {
+//     @include base.borderRadius(4px*.5);
+// }
+/*bet placement: end*/
+/*my bet: start*/
+//sharing across mybet, leftmenu, sev, virtual
+// .tab_nav_item { // tn (moved)
+//     font-size: base.$n_font7;
+// }
+//bettrade filter switch
+// .filter_Bettrade_label {
+//     font-size: base.$n_font5;
+// }
+//betslip
+// .betslip_bet_amount_inner {
+//     &:not(:first-child) {
+//         margin-top: 8px;
+//     }
+// }
+// betslip_bet_condition not in used already
+// .betslip_bet_condition {
+//     margin-left: 4px;
+// }
+// .betslip_bottom_button {
+//     font-size: base.$n_font7;
+// }
+.betslip_bottom_button,
+.bettrade_button {
+    @include base.flexbox();
+    @include base.alignItems(center);
+    @include base.justifyContent(center);
+    padding: 8px 0;
+
+    // .odds_wrap {
+    //     @include base.flexbox();
+    //     @include base.alignItems(center);
+    // }
+    /*mybet: bettrade price change: starts*/
+    @include base.keyframes(arrrow-slide-bottom) {
+        0% {
+            -webkit-transform: translateY(-25px);
+            transform: translateY(-25px);
+        }
+
+        50% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+
+        100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+    }
+
+    @include base.keyframes(arrrow-slide-up) {
+        0% {
+            -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+        }
+
+        50% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+
+        100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+    }
+
+    .arrow {
+        width: 8px*1.5;
+        margin-top: 2px;
+
+        &.up {
+            @include base.animation(arrrow-slide-up 1s linear infinite both);
+        }
+
+        &.down {
+            @include base.animation(arrrow-slide-bottom 1s linear infinite both);
+        }
+    }
+
+    /*mybet: bettrade price change: end*/
+}
+
+// .betslip_bottom_button_wrap {
+//     padding: 0 16px 16px;
+// }
+// .betslip_detail {
+//     font-size: base.$n_font5;
+//     position: relative;
+// }
+.betslip_detail_bottom {
+
+    // @include base.flexbox();
+    // @include base.justifyContent(space-between);
+    // padding: 16px;
+    &:has(+ .bt_dpd) {
+        padding-bottom: 6px;
+    }
+}
+
+// .betslip_header {
+//     padding: 0 16px;
+//     height: base.$betslip_headerH;
+// }
+// .betslip_header_title {
+//     font-size: base.$n_font7;
+// }
+// .betslip_header_title_wrap {
+//     @include base.alignItems(center);
+// }
+// .betslip_id_wrap {
+//     @include base.flexbox();
+//     @include base.alignItems(center);
+//     @include base.justifyContent(center);
+//     @include base.borderRadius(50%);
+//     width: base.$betslip_id_wrapWH;
+//     height: base.$betslip_id_wrapWH;
+//     min-width: base.$betslip_id_wrapWH;
+// }
+// .betslip_selection_handicap_odds {
+//     margin: 0 4px;
+// }
+// .condition_per_bet {
+//     text-align: right;
+//     // margin-top: - 8px;
+//     word-wrap: break-word;
+// }
+// score_index not in used already
+// .score_index {
+//     text-align: right;
+//     /*min-width: 35px;
+//     white-space: nowrap;*/
+//     min-width: 56px; //SFUAT-4807
+//     padding-left: 4px;
+//     max-width: 50%;
+//     .date_index & {
+//         padding-left: 0;
+//     }
+// }
+// .match_lose,
+// .match_win,
+// .match_nostart,
+// .match_sold,
+// .match_cancel {
+//     display: inline-block;
+//     width: 8px;
+//     height: 8px;
+//     min-width: 8px;
+//     @include base.borderRadius(50%);
+//     margin-right: 4px;
+// }
+//popup_bettrade_window
+// .popup_bettrade_box {
+//     @include base.borderRadius(2px);
+//     margin: auto 8px;
+//     padding: 16px;
+//     width: 100%;
+// }
+// .popup_bettrade_title {
+//     font-size: base.$n_font7;
+// }
+.bettrade_button {
+    @include base.flexbox();
+    @include base.alignItems(center);
+    @include base.justifyContent(center);
+    @include base.borderRadius(2px);
+    padding: 0 8px;
+    min-width: 168px;
+    height: 28px;
+    // .odds_wrap {
+    //     overflow: hidden;
+    // }
+    // .loading_lantency { // ld (moved)
+    //     background: url("#{base.$sharedImgFolder}loading_bettrade.svg#{base.$img_version}");
+    //     background-size: cover;
+    // }
+}
+
+// .popup_bettrade_button_wrap {
+//     @include base.flexbox();
+//     @include base.flexDirection(row-reverse);
+//     margin-top: 16px;
+// }
+// .popup_bettrade_content {
+//     margin-top: 8px;
+// }
+// .popup_bettrade_wrap {
+//     @include base.flexbox();
+//     position: absolute;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     z-index: 2;
+// }
+/*my bet: end*/
+// personalized annoucement start
+.er_noti_title {
+    position: relative;
+    // .red_dot { // red dot (moved)
+    //     right: -8px !important;
+    //     top: -15px !important;
+    // }
+}
+
+//Racing========================================================:start//
+// .bet_item_left_wrp {
+//     .n_btn_sev {
+//         @include base.borderRadius(2px);
+//         font-size: base.$n_font3; //10px
+//         padding: 0 2px;
+//         height: base.$n_font5; //12px
+//     }
+// }
+//Racing========================================================:end//
+//DES-520 Cyber PES - Start
+// make world cup icon bigger
+.n_visualization_btn {
+    .icon-fi-world-cup {
+        font-size: base.$n_font7; // 14px
+    }
+}
+
+// .sev_inner_world_cup_stat { // sev (moved)
+//     .team_info {
+//         img {
+//             width: 15px;
+//             min-width: 15px;
+//         }
+//     }
+// }
+//DES-520 Cyber PES - End
+// slider_wrap_flexi: make slider height thinner and no transform
+// .thinner_slider {
+//     .slider { // sld (moved)
+//         height: 2px - 1 !important; // 1px
+//         transform: none; // remove transform scale effect
+//     }
+// }
+/*=================Shared across: start====================*/
+@supports(padding: max(0px)) {
+
+    // wh: 27/5/21 :remove all checking
+    /* .footer_main:not(.on){
+        .n_footer_combo{
+            .nav_selection {
+                padding-bottom: unquote('max(env(safe-area-inset-bottom))');
+            }
+    
+            .footer_arrow {
+                margin-bottom: unquote('max(env(safe-area-inset-bottom))');
+            }
+    
+            .post_bet_inner_wrap {
+                padding-bottom: unquote('max(env(safe-area-inset-bottom))');
+            }
+        }
+    } */
+    /*  .footer_main:not(.on){
+        .ios_notch_footer{
+            width: 100%;
+             height: unquote('max(env(safe-area-inset-bottom))');
+            padding-bottom: unquote('max(env(safe-area-inset-bottom))');
+            background: black;
+        }
+    } */
+    .pb_content {
+        padding-bottom: string.unquote('max(env(safe-area-inset-bottom))');
+    }
+}
+
+/*=================Shared across: end====================*/
+/*snooker*/
+// .el_score_row {
+//     position: relative;
+//     @include base.flexbox();
+//     align-items: center;
+// }
+// .el_items:has(.scrol_tab) {
+//     padding-right: 4px;
+// }
+// [DES-791, DES-792] day night mode setting, left panel enhancement - start
+.leftmenu_wrp.lm2_euro {
+
+    // .tab_nav_item { // tn (moved)
+    //     font-size: base.$n_font5;
+    //     &.active {
+    //         font-weight: 700;
+    //     }
+    // }
+    // .tab_nav { // leftmenu (moved)
+    //     height: 30px;
+    // }
+    // .euGrp {
+    // sev (moved): start
+    // min-height: $search_barH;
+    // padding: 0 16px;
+    // sev (moved): end
+    // .euTitle {
+    // sev (moved): start
+    // @include base.flexbox();
+    // @include base.alignItems(center);
+    // font-size: base.$n_font5;
+    // width: 100%;
+    // overflow: visible;
+    // white-space: unset;
+    // word-break: unset;
+    // sev (moved): end
+    // sev (moved): start
+    // img {
+    //     max-height: base.$sports_pro_logoH;
+    //     margin-right: 8px;
+    // }
+    // sev (moved): end
+    // .new_tag { // nt (moved)
+    //     margin-left: 8px;
+    //     &:after {
+    //         content: none;
+    //     }
+    // }
+    // }
+    // }
+    // .eu_lm2_sh { // leftmenu (moved)
+    //     padding: 8px 16px;
+    //     font-size: base.$n_font5;
+    // }
+    // .eu_lm2_h {  // leftmenu (moved)
+    //     padding: 8px 16px;
+    //     font-size: base.$n_font7;
+    // }
+    .sport_info {
+        font-size: base.$n_font5;
+
+        img {
+            max-height: base.$sports_pro_logoH;
+            margin-right: 8px;
+        }
+    }
+}
+
+// [DES-791, DES-792] day night mode setting, left panel enhancement - end
+.sev_content .ply_mask {
+    position: fixed;
+}
+
+* {
+
+    &:has(.esports_tut1),
+    &:has(.esports_tut2) {
+        -webkit-overflow-scrolling: unset !important;
+    }
+}
+
+.esports_desc {
+    position: absolute;
+    padding: 8px 16px;
+}
+
+.esports_tut1 {
+    &.bg_mask {
+        position: absolute;
+        height: unset;
+    }
+
+    .rec_arrow {
+        position: absolute;
+        top: 68px;
+        left: 188px;
+    }
+
+    .esports_desc {
+        top: 127px;
+        left: 38px;
+    }
+}
+
+.esports_tut2 {
+    &.bg_mask {
+        position: absolute;
+        height: unset;
+    }
+
+    .rec_arrow {
+        position: absolute;
+        top: 45px;
+        left: 135px;
+    }
+
+    .esports_desc {
+        top: 105px;
+        left: 15px;
+        width: 250px;
+    }
+
+    &.n_sports_menu_es {
+        width: fit-content;
+    }
+}
+
+.esports_mask {
+    .esports_desc {
+        bottom: 80px;
+        left: 10px;
+
+        @supports (-webkit-touch-callout: none) {
+            bottom: 150px;
+        }
+    }
+}
+
+.esports_btn {
+    position: absolute;
+    bottom: 70px;
+    right: 10px;
+
+    @supports (-webkit-touch-callout: none) {
+        bottom: 150px;
+    }
+}
+
+//odds boost parlay tutorial
+// .ob_tut { // odds boost (remove)
+//     .dot_box,
+//     .rec_arrow { // redundant
+//         position: absolute;
+//     }
+//     .dot_box {
+//         max-width: 60%;
+//         padding: base.$padding_10;
+//         font-size: base.$n_font5;
+//         line-height: base.$n_font9;
+//     }
+//     &.ob_tut_1 {
+//         z-index: 1000005;
+//         .dot_box {
+//             left: 30%;
+//             top: 30px;
+//         }
+//         .rec_arrow {
+//             left: 40px;
+//             top: 8px;
+//             transform: rotate(-90deg)
+//         }
+//     }
+//     &.ob_tut_2 {
+//         z-index: 1000005;
+//         .dot_box {
+//             left: 30%;
+//             top: -115px;
+//         }
+//         .rec_arrow {
+//             left: 40px;
+//             top: -95px;
+//             transform: scale(-1, 1) rotate(90deg);
+//         }
+//     }
+//     &.ob_tut_3 {
+//         position: unset;
+//         .dot_box {
+//             top: 105px;
+//             left: 8px;
+//             max-width: 175px;
+//             font-weight: 400;
+//         }
+//         .rec_arrow {
+//             top: 110%;
+//             left: 215px;
+//             transform: scale(1, -1) rotate(90deg);
+//         }
+//     }
+// }
+// .ob_tut2_btn { // odds boost (remove)
+//     margin-top: 0;
+//     position: absolute;
+//     top: 70%;
+//     right: 20px;
+// }
+// .ob_tut_mask { // odds boost (remove)
+//     z-index: 1000005 !important;
+//     .mask_button {
+//         position: absolute;
+//         top: 90%;
+//         right: 10%;
+//         margin: 0;
+//         .footer_euro & {
+//             top: 80%;
+//         }
+//     }
+// }
+// .obp_cancel { // odds boost (remove)
+//     padding-top: 8px;
+//     .obp_outer_wrp & {
+//         flex-basis: 100%;
+//     }
+// }
+.fltr_tut {
+    &.n_header.n_header_main {
+        overflow: visible;
+        z-index: 1000005;
+    }
+
+    &.lf_menu {
+        padding-left: 7px;
+        margin-left: -7px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        z-index: 1000006;
+        position: relative;
+        font-size: 18px;
+    }
+}
+
+.fltr_msk_btn {
+    position: absolute;
+    right: 10%;
+    top: 90%;
+    margin: unset;
+}
+
+// .betstatement_wrap {
+// @include base.std_Wrap();
+// font-size: base.$n_font4_andhalf;
+//     table td {
+//         font-size: base.$n_font3_andhalf;
+//     }
+// }
+// .row_div2 {
+//     @include base.flexbox();
+//     .col_div1 {
+//         width: 40%;
+//     }
+//     .col_div2 {
+//         width: 60%;
+//     }
+// }
+.freebetIcon {
+    position: absolute;
+    margin-left: -(16px);
+}
+
+// freebetTooltip not in used already
+// .freebetTooltip {
+//     @include base.borderRadius(4px*0.5);
+//     position: absolute;
+//     margin-top: 4px*4.5;
+//     margin-left: -(4px)*5;
+//     padding: 4px 8px;
+//     font-size: base.$n_font3;
+//     max-width: 16px*10;
+//     display: none;
+//     &:before {
+//         transform-origin: 0 0;
+//         transform: rotate(135deg);
+//         content: "";
+//         position: absolute;
+//         width: 0;
+//         height: 0;
+//         top: 0;
+//         border: 6px solid transparent;
+//         border-top: 0;
+//         left: 4px*3.5;
+//     }
+// }
+.eu_bet_status {
+    @include base.flexbox();
+    @include base.justifyContent(space-between);
+    flex-wrap: nowrap;
+    font-size: base.$n_font4;
+
+    .failed {
+        margin-right: 4px;
+    }
+}
+
+// .big_comp_img {
+//     height: 20px;
+//     .sport_info & {
+//         padding-right: 8px;
+//         height: 18px;
+//     }
+// }
+// .ob_dpd_wrp .ob_listing_hdr { // odds boost (moved)
+//     img {
+//         max-height: 16px;
+//     }
+// }
+// .betslip_winningselection {
+//     margin: 10px 18px;
+// }

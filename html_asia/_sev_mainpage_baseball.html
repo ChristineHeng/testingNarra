@@ -1,0 +1,54 @@
+<div class="n_sev_view n_sticky">
+    <div class="n_visualization_wrap baseball">
+        <div class="n_header_sev">
+            <div class="n_back"><a class="n_back_link" id="close_sev_popup"><i class="icon-fi-arrow-left"></i> 返回</a></div>
+            <div class="s_title_wrp">
+                <img class="fl_s_title_img" src="../assets/public/layout/images/icon/icon_s8.png">
+                <div class="s_title">Mexico Liga</div>
+                <div class="event_selection_expand">
+                    <i class="icon-fi-arrow-down1" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="n_balance">
+                (RMB)<br>
+               999,888,777.66
+            </div>
+        </div>
+        <div id="s_sev_top" class="s_sev_top">
+            <div class="n_sev_top" id="demo_sample_dashboard_scenarios">
+                <!--refer to 
+                    1. _sev_scoreboard_baseball_live.html
+                    2. _sev_scoreboard_baseball_prematch.html-->
+            </div>
+        </div>
+    </div>
+</div>
+<div class="n_content_wrap_wth_bcktop " id="sev_content">
+    <div class="sev_content">
+         <!--load from "_sev_dashboard_innerpage_shared.html"-->
+
+         <div class="sev_inner_content" id="sev_all">
+            <div class="n_sev_item_content_wrap">
+                <!--load from "_sev_content_xxxx.html"-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+      /*refer to 
+        1. _sev_scoreboard_baseball_live.html
+        2. _sev_scoreboard_baseball_prematch.html
+        3. _sev_scoreboard_baseball_ibc_live.html */
+        var d1 = $.get("_sev_scoreboard_baseball_live.html");
+        var d2 = $.get("_sev_dashboard_innerpage_shared.html");
+        var d3 = $.get("_sev_content_template.html");
+
+        $.when(d1, d2, d3).done(function(data1, data2, data3) {
+            $("#demo_sample_dashboard_scenarios").empty().append(data1[0]);
+            $(".sev_content").prepend(data2[0]);
+            $("#sev_all .n_sev_item_content_wrap").append(data3[0]);
+            $("#sev_all").siblings(".sev_inner_content").hide();
+            SEV_Group("", true);
+        });
+</script>

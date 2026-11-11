@@ -1,0 +1,271 @@
+@use "../../assets/themes/colours/brand"as brand;
+@use "../../assets/public/layout/css/base"as base;
+@use "../mixin"as mix;
+
+.dv_top_info {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            @include base.shadows(none);
+            padding: 7px 10px;
+            border: 0;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.brightTheme {
+                background: brand.t(DividerGray);
+                color: brand.t(Black);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(White);
+
+                @include mix.themeName(default1) {
+                    background: brand.t(MediumBlue);
+                }
+
+                @include mix.notThemeName(default1) {
+                    background: brand.t(LightBlack);
+                }
+            }
+        }
+    }
+
+    i {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 15px;
+                margin-right: 8px;
+            }
+        }
+    }
+}
+
+.dv_msg {
+    @include mix.layout {
+        @include mix.mobile {
+            font-size: 12px;
+        }
+    }
+}
+
+.deviceInfo_wrap {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.std_Wrap();
+        }
+    }
+}
+
+.screenshot_msg {
+    @include mix.layout {
+        @include mix.mobile {
+            padding: 17.6px 16px;
+            line-height: 19.2px;
+            font-size: 11.2px;
+            text-align: center;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            color: brand.t(Color_screenshot_msg);
+        }
+    }
+}
+
+.deviceInfo_inner {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.borderRadius(4px);
+            @include base.shadows(none);
+            overflow: hidden;
+            border: 0;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+
+            // background: brand.t(BG_form_grp_wrap);
+            @include mix.brightTheme {
+                background: brand.t(White);
+                color: brand.t(DarkGray);
+            }
+
+            @include mix.darkTheme {
+                color: brand.t(LightGray);
+
+                @include mix.themeName(default1) {
+                    background: brand.t(MediumBlue);
+                }
+
+                @include mix.notThemeName(default1) {
+                    background: brand.t(LightBlack);
+                }
+            }
+        }
+    }
+}
+
+.deviceInfo_item {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+            padding: 10px;
+        }
+    }
+
+    &:not(:last-child) {
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.brightTheme {
+                    border-bottom: 1px solid brand.t(DividerGray);
+                }
+
+                @include mix.darkTheme {
+                    @include mix.themeName(default1) {
+                        border-bottom: 1px solid brand.t(Stroke);
+                    }
+
+                    @include mix.notThemeName(default1) {
+                        border-bottom: 1px solid brand.t(Gray02);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.info_icon {
+    .deviceInfo_item & {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 24px;
+                padding: 0 14px 0 0;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                color: brand.t(Color_info_icon);
+            }
+        }
+    }
+}
+
+.icon-fi-n-browser {
+    .deviceInfo_item & {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.item_title {
+    .deviceInfo_item .details & {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 12px;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                color: brand.t(Color_deviceInfo_item_title);
+            }
+        }
+    }
+}
+
+.info {
+    .deviceInfo_item .details & {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 14px;
+                margin-top: 7px;
+            }
+        }
+
+        @include mix.theme {
+            @include mix.mobile {
+                @include mix.themeName(default1) {
+                    color: brand.t(Orange);
+                }
+
+                @include mix.notThemeName(default1) {
+                    color: brand.t(ActiveLight);
+                }
+            }
+        }
+    }
+}
+
+.lastitem {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.justifyContent(space-between);
+        }
+    }
+}
+
+.left_lantency {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.flexbox();
+            @include base.alignItems(center);
+        }
+    }
+}
+
+.right_lantency {
+    @include mix.layout {
+        @include mix.mobile {
+            @include base.boxSizing(border-box);
+            @include base.borderRadius(4px);
+            padding: 3px 0;
+            min-width: 80px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+    }
+
+    @include mix.theme {
+        @include mix.mobile {
+            @include mix.themeName(default1) {
+                background: brand.t(PurpleMain);
+            }
+
+            @include mix.notThemeName(default1) {
+                background: brand.t(Green);
+            }
+        }
+    }
+
+    span {
+        @include mix.theme {
+            @include mix.mobile {
+                color: brand.t(White);
+            }
+        }
+    }
+}
+
+.test {
+    .right_lantency & {
+        @include mix.layout {
+            @include mix.mobile {
+                font-size: 14px;
+                height: 25px;
+                line-height: 25px;
+            }
+        }
+    }
+}

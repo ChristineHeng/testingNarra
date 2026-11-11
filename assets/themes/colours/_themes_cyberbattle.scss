@@ -1,0 +1,332 @@
+﻿@use "sass:map";
+@use "sass:color";
+@use 'config'as config;
+@use 'brand'as brand;
+
+//* == profile page == *//
+// .cbWrp {
+// 	&:after {
+// 		background: rgba(brand.t(ActiveLight), 0.4);
+// 	}
+// }
+// .cb_list {
+// 	@if config.$themeType == "bright_theme" {
+// 		background: brand.t(White);
+// 		color: brand.t(Black) !important;
+// 	}
+// 	@if config.$themeType == "dark_theme" {
+// 		color: brand.t(White) !important;
+// 		@if config.$theme == "default1" {
+// 			background: brand.t(MediumBlue);
+// 		}
+// 		@else {
+// 			background: brand.t(LightBlack);
+// 		}
+// 	}
+// 	.icon-fi-arrow-right {
+// 		@if config.$themeType == "bright_theme" {
+// 			color: brand.t(DarkGray);
+// 		}
+// 		@if config.$themeType == "dark_theme" {
+// 			color: brand.t(LightGray);
+// 		}
+// 	}
+// }
+// .cb_acct_icon {
+// 	color: brand.t(White);
+// 	&.yellow {
+// 		background: brand.t(Yellow);
+// 	}
+// 	&.orange {
+// 		background: brand.t(Orange);
+// 	}
+// 	&.turquoise {
+// 		background: brand.t(Turquoise);
+// 	}
+// 	&.green {
+// 		background: brand.t(Green);
+// 	}
+// 	&.red {
+// 		background: brand.t(Red);
+// 	}
+// 	&.purple {
+// 		background: brand.t(PurpleMain);
+// 	}
+// 	&.magenta {
+// 		background: #F429EC;
+// 	}
+// }
+.cb_hdr_sev {
+    @if config.$themeType=="bright_theme" {
+        background: brand.t(White);
+        color: brand.t(Black);
+    }
+
+    @if config.$themeType=="dark_theme" {
+        color: brand.t(White);
+
+        @if config.$theme=="default1" {
+            background: brand.t(BGDarkBlue);
+        }
+
+        @else {
+            background: brand.t(DarkBlack);
+        }
+    }
+}
+
+.cb_filter_wrp {
+    @if config.$themeType=="bright_theme" {
+        background: brand.t(BGGray);
+        color: brand.t(Black);
+    }
+
+    @if config.$themeType=="dark_theme" {
+        color: brand.t(LightGray);
+
+        @if config.$theme=="default1" {
+            background: brand.t(Blue);
+        }
+
+        @else {
+            background: brand.t(LightBlack);
+        }
+    }
+}
+
+.cb_filter_itm {
+    &.active {
+        @if config.$themeType=="bright_theme" {
+            color: brand.t(ActiveLight);
+        }
+
+        @if config.$themeType=="dark_theme" {
+            @if config.$theme=="betway"or config.$theme=="default" {
+                color: brand.t(Black);
+            }
+
+            @else {
+                color: brand.t(White);
+            }
+        }
+
+        &::before {
+            @if config.$themeType=="bright_theme" {
+                background: brand.t(White);
+            }
+
+            @if config.$themeType=="dark_theme" {
+                @if config.$theme=="default1" {
+                    background: brand.t(PurpleMain);
+                }
+
+                @else {
+                    background: brand.t(ActiveLight);
+                }
+            }
+        }
+    }
+}
+
+.cb_menu_slider {
+    @if config.$themeType=="bright_theme" {
+        border: 1px solid brand.t(DividerGray);
+        background: brand.t(White);
+    }
+
+    @if config.$themeType=="dark_theme" {
+        @if config.$theme=="default1" {
+            border: 1px solid brand.t(Stroke);
+            background: brand.t(DarkBlue);
+        }
+
+        @else {
+            border: 1px solid brand.t(Gray02);
+            background: brand.t(Gray01);
+        }
+    }
+}
+
+.cb_menu_tab {
+    @if config.$themeType=="bright_theme" {
+        color: brand.t(DarkGray);
+    }
+
+    @if config.$themeType=="dark_theme" {
+        color: brand.t(LightGray);
+    }
+
+    &.active {
+        @if config.$themeType=="bright_theme" {
+            color: brand.t(Black);
+        }
+
+        @if config.$themeType=="dark_theme" {
+            color: brand.t(White);
+        }
+
+        .cb_menu_count {
+            @if config.$theme=="default"or config.$theme=="betway" {
+                color: brand.t(Black);
+            }
+
+            @else {
+                color: brand.t(White);
+            }
+
+            @if config.$themeRed {
+                background: brand.t(PeachHDP);
+            }
+
+            @else if config.$theme=="default1" {
+                background: brand.t(Orange);
+            }
+
+            @else {
+                background: brand.t(ActiveLight);
+            }
+        }
+    }
+}
+
+.cb_menu_count {
+    @if config.$themeType=="bright_theme" {
+        background: brand.t(BGGray);
+        color: brand.t(DarkGray);
+    }
+
+    @if config.$themeType=="dark_theme" {
+        color: brand.t(White);
+
+        @if config.$theme=="default1" {
+            background: brand.t(LightBlue);
+        }
+
+        @else {
+            background: brand.t(Gray03);
+        }
+    }
+}
+
+.cb_menu_s {
+    @if config.$theme=="default1" {
+        background: brand.t(PinkPurpleGradient);
+    }
+
+    @else {
+        background: brand.t(ActiveLight);
+    }
+}
+
+.cb_menu_drag {
+    @if config.$themeType=="bright_theme" {
+        color: brand.t(DarkGray);
+        background: brand.t(Gray);
+    }
+
+    @if config.$themeType=="dark_theme" {
+        @if config.$theme=="default1" {
+            color: brand.t(LightBlue);
+            background: brand.t(BGDarkBlue);
+        }
+
+        @else {
+            color: brand.t(Gray03);
+            background: brand.t(DarkBlack);
+        }
+    }
+}
+
+// cb_mybet_filter not in used already
+// .cb_mybet_filter {
+// 	.filter_item {
+// 		@if config.$theme=="default1" {
+// 			background: brand.t(DarkBlue);
+// 			border-color: brand.t(Stroke);
+// 		}
+// 	}
+// }
+// n_content_wrap_wth_bcktop (moved): start
+// .cb_web {
+//     .n_content_wrap_wth_bcktop {
+//         @if config.$themeType=="bright_theme" {
+//             background: brand.t(BGGray);
+//         }
+//         @if config.$themeType=="dark_theme" {
+//             @if config.$theme=="default1" {
+//                 background: brand.t(BGDarkBlue);
+//             }
+//             @else {
+//                 background: brand.t(DarkBlack);
+//             }
+//         }
+//     }
+// }
+// n_content_wrap_wth_bcktop (moved): end
+.cb_drag_t {
+    @if config.$themeType=="bright_theme" {
+        color: brand.t(DarkGray);
+    }
+
+    @if config.$themeType=="dark_theme" {
+        color: brand.t(LightGray);
+    }
+}
+
+.cb_drag_ic {
+    @if config.$themeType=="bright_theme" {
+        color: brand.t(DarkGray);
+    }
+
+    @if config.$themeType=="dark_theme" {
+        @if config.$theme=="default1" {
+            color: brand.t(LightBlue);
+        }
+
+        @else {
+            color: brand.t(Gray03);
+        }
+    }
+}
+
+.cb_drag_i {
+    @if config.$themeType=="bright_theme" {
+        color: brand.t(Black);
+    }
+
+    @if config.$themeType=="dark_theme" {
+        color: brand.t(White);
+    }
+
+    &.active {
+        @if config.$themeType=="bright_theme" {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        @if config.$themeType=="dark_theme" {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .cb_drag_ic {
+            @if config.$themeType=="bright_theme" {
+                color: brand.t(Black);
+            }
+
+            @if config.$themeType=="dark_theme" {
+                color: brand.t(White);
+            }
+        }
+    }
+}
+
+.cb_drag_noti {
+    @if config.$themeType=="bright_theme" {
+        color: brand.t(DarkYellow);
+    }
+
+    @if config.$themeType=="dark_theme" {
+        color: brand.t(Yellow);
+    }
+
+    background: rgba(255, 201, 21, 0.10);
+}

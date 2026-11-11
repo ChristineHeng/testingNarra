@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Narra - html template</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover,user-scalable=no" />
+
+		<!--Base Styles-->
+		<link rel="stylesheet" type="text/css" href="../assets/public/layout/css/basestyle.min.css" />
+		<!--<link rel="stylesheet" type="text/css" href="../merchants/merchant1/css/style_euro.css">-->
+		<link rel="stylesheet" type="text/css" href="../assets/public/languages/eng/layout_euro.min.css" id="detect_language" />
+
+		<!--theme-->
+		<link rel="stylesheet" type="text/css" href="#" id="design_view" />
+
+		<!-- Public JS -->
+		<script src="../assets/public/lib/jquery.js"></script>
+		<script src="../assets/public/layout/js/scripts_main.js"></script>
+		<script src="../assets/public/layout/js/scripts_euro.js"></script>
+	</head>
+
+	<body id="root" class="euro">
+		<div class="n_container">
+			<div class="n_header n_header_main">
+				<!-- main header here-->
+				<div class="heder_lf">
+					<div class="lf_menu">
+						<i class="icon-fi-left-menu"></i>
+					</div>
+					<div class="v_split"></div>
+					<div class="logo">
+						<img src="../merchants/merchant1/images/logo.png" />
+					</div>
+				</div>
+				<div class="heder_rt">
+					<i class="icon-fi-n-results dontcoopythisclass_sample_button_results"></i>
+					<div class="item demoOnlyDontCopt_betslip">
+						<i class="icon-fi-n-betlist"></i>
+						<div class="noti mybet_noti_cancel">2</div>
+						<div class="noti mybet_noti_pending">1</div>
+					</div>
+					<div class="er_myacct">
+						<i class="icon-fi-n-mine dontcoopythisclass_sample_button_myacct"></i>
+						<div class="red_dot"></div>
+					</div>
+					<div class="n_balance">
+						<div class="currency">(RMB)</div>
+						7,676,100,962,132.55
+					</div>
+				</div>
+			</div>
+			<div class="n_content_wrap_wth_bcktop with_ref">
+				<!-- content start here-->
+				<!--<div id="el_stickymenu" class="el_stickymenu sticky"></div>-->
+				<div id="el_stickymenu" class=""></div>
+				<!-- virtual sports -->
+				<div class="virtual_wrp n_home_sports">
+					<div class="sports_nav n_sticky">
+						<div class="tab_nav n_menu_slider tab_nav_3 slider_wrap">
+							<div id="betradar" class="tab_nav_item active">Betradar Virtual Sports</div>
+							<div id="kiron" class="tab_nav_item">Kiron Virtual Sports</div>
+							<div id="im" class="tab_nav_item">IM Virtual Sports</div>
+							<div class="slider"></div>
+						</div>
+					</div>
+					<div class="virtual_list">
+						<!-- betradar -->
+						<div id="s39" class="item s39">
+							<div class="img_float"></div>
+							<div class="item_despt">
+								<div>Virtual Soccer League</div>
+							</div>
+						</div>
+						<div id="s43" class="item s43">
+							<div class="img_float"></div>
+							<div class="item_despt">
+								<div>Virtual Basketball</div>
+							</div>
+						</div>
+						<div id="s46" class="item s46">
+							<div class="img_float"></div>
+							<div class="item_despt">
+								<div>Virtual Nations Cup</div>
+							</div>
+						</div>
+						<div id="s44" class="item s44">
+							<div class="img_float"></div>
+							<div class="item_despt">
+								<div>Virtual World Cup</div>
+							</div>
+						</div>
+						<!-- kiron -->
+						<div id="s52" class="item s52">
+							<div class="img_float"></div>
+							<div class="item_despt">
+								<div>Virtual Soccer Spain League</div>
+							</div>
+						</div>
+						<div id="s53" class="item s53">
+							<div class="img_float"></div>
+							<div class="item_despt">
+								<div>Virtual Soccer Italy League</div>
+							</div>
+						</div>
+						<div id="s47" class="item s47">
+							<div class="img_float"></div>
+							<div class="item_despt">
+								<div>虚拟足球英国友谊赛</div>
+							</div>
+						</div>
+						<div id="s49" class="item s49">
+							<div class="img_float"></div>
+							<div class="item_despt">
+								<div>虚拟足球西班牙友谊赛</div>
+							</div>
+						</div>
+						<!-- Sportsdraw -->
+						<div id="s571" class="item s571">
+							<div class="img_float"></div>
+							<div class="item_despt">
+								<div>Sportsdraw</div>
+							</div>
+							<div class="new_tag">Hot</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- any share items-->
+		<div id="demoOnly_global_pop_item_euro"></div>
+
+		<script>
+			$(document).ready(function () {
+				eventListing(false, 'virtual', 'virtualmain');
+
+				/*virtual tabs display*/
+
+				$('#s571').hide();
+				$('#s52').hide();
+				$('#s53').hide();
+				$('#s47').hide();
+				$('#s49').hide();
+
+				$('#betradar').click(function () {
+					$('#s39').show();
+					$('#s43').show();
+					$('#s46').show();
+					$('#s44').show();
+
+					$('#s571').hide();
+					$('#s52').hide();
+					$('#s53').hide();
+					$('#s47').hide();
+					$('#s49').hide();
+				});
+
+				$('#kiron').click(function () {
+					$('#s52').show();
+					$('#s53').show();
+					$('#s47').show();
+					$('#s49').show();
+
+					$('#s571').hide();
+					$('#s39').hide();
+					$('#s43').hide();
+					$('#s46').hide();
+					$('#s44').hide();
+				});
+
+				$('#im').click(function () {
+					$('#s571').show();
+
+					$('#s39').hide();
+					$('#s43').hide();
+					$('#s46').hide();
+					$('#s44').hide();
+					$('#s52').hide();
+					$('#s53').hide();
+					$('#s47').hide();
+					$('#s49').hide();
+				});
+
+				/*link to virtual event listing betradar, kiron*/
+
+				$('#s39').click(function () {
+					window.location.href = 'el_virtual_betradar_soccer.html';
+				});
+				$('#s52').click(function () {
+					window.location.href = 'el_virtual_kiron_sports.html';
+				});
+				$('#s571').click(function () {
+					window.location.href = 'el_virtual_sportsdraw.html';
+				});
+
+				SEV_Group('', true);
+			});
+		</script>
+	</body>
+</html>

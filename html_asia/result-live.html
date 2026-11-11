@@ -1,0 +1,420 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Narra - html template</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../assets/public/layout/css/basestyle.min.css" />
+		<link rel="stylesheet" type="text/css" href="../assets/public/languages/eng/layout_asia.min.css" id="detect_language" />
+		<link rel="stylesheet" type="text/css" href="#" id="design_view" />
+		<script src="../assets/public/lib/jquery.js"></script>
+		<script src="../assets/public/layout/js/scripts_main.js"></script>
+		<script src="../assets/public/layout/js/scripts_asia.js"></script>
+	</head>
+
+	<body id="root">
+		<div class="n_container">
+			<div class="n_header n_header_sports header_center">
+				<div class="n_back">
+					<a class="n_back_link mock_cb_n_back_link"><i class="icon-fi-arrow-left"></i> 返回</a>
+				</div>
+				<div class="tab_group">
+					<div class="tab active mock_result_live_trigger">滚球</div>
+					<div class="tab mock_result_completed_trigger">完成</div>
+					<div class="tab demo_mock_result_outright" onclick="window.location.href = 'result-outright.html'">冠军</div>
+				</div>
+				<div class="n_balance">
+					(RMB)<br />
+					999,999,999.99
+				</div>
+			</div>
+			<div class="n_content_wrap">
+				<div class="fl_menu_wrp n_sticky" id="mock_fl_menu_wrp_asia">
+					<div class="n_sport_type pseudo">
+						<div class="sport_item active" id="sports_all">All sports</div>
+						<div class="seperator">|</div>
+						<div class="sport_item" id="sports_es">E-sports</div>
+						<!-- <div class="slider"></div> -->
+					</div>
+					<div class="fl_menu">
+						<div class="fl_menu_t active btn_result_live_soccer sports_all">
+							<div class="fl_menu_i">
+								<img src="../assets/public/layout/images/icon/icon_s1.png" />
+								<div class="fl_menu_tx">Soccer</div>
+							</div>
+							<div class="fl_menu_n">420</div>
+						</div>
+						<div class="fl_menu_t btn_result_live_cybersoccer sports_all">
+							<div class="new_tag">New</div>
+							<div class="fl_menu_i">
+								<img src="../assets/public/layout/images/icon/icon_s54.png" />
+								<div class="fl_menu_tx">Cyber Soccer</div>
+							</div>
+							<div class="fl_menu_n">189</div>
+						</div>
+						<div class="fl_menu_t btn_result_live_basketball sports_all">
+							<div class="fl_menu_i">
+								<img src="../assets/public/layout/images/icon/icon_s2.png" />
+								<div class="fl_menu_tx">Basketball</div>
+							</div>
+							<div class="fl_menu_n">263</div>
+						</div>
+						<div class="fl_menu_t btn_result_live_basketball sports_all">
+							<div class="new_tag">New</div>
+							<div class="fl_menu_i">
+								<img src="../assets/public/layout/images/icon/icon_s55.png" />
+								<div class="fl_menu_tx">Cyber Basketball</div>
+							</div>
+							<div class="fl_menu_n">189</div>
+						</div>
+						<div class="fl_menu_t btn_result_live_tennis sports_all">
+							<div class="fl_menu_i">
+								<img src="../assets/public/layout/images/icon/icon_s3.png" />
+								<div class="fl_menu_tx">Tennis</div>
+							</div>
+							<div class="fl_menu_n">189</div>
+						</div>
+						<div class="fl_menu_t btn_result_live_tennis sports_all">
+							<div class="new_tag">New</div>
+							<div class="fl_menu_i">
+								<img src="../assets/public/layout/images/icon/icon_s67.png" />
+								<div class="fl_menu_tx">Cyber Tennis</div>
+							</div>
+							<div class="fl_menu_n">189</div>
+						</div>
+						<div class="fl_menu_t btn_result_live_cricket sports_all">
+							<div class="fl_menu_i">
+								<img src="../assets/public/layout/images/icon/icon_s13.png" />
+								<div class="fl_menu_tx">Cricket</div>
+							</div>
+							<div class="fl_menu_n">15</div>
+						</div>
+						<div class="fl_menu_t btn_result_live_cricket sports_all">
+							<div class="new_tag">New</div>
+							<div class="fl_menu_i">
+								<img src="../assets/public/layout/images/icon/icon_s59.png" />
+								<div class="fl_menu_tx">Cyber Cricket</div>
+							</div>
+							<div class="fl_menu_n">15</div>
+						</div>
+						<div class="fl_menu_t btn_result_live_table_tennis sports_all">
+							<div class="fl_menu_i">
+								<img src="../assets/public/layout/images/icon/icon_s36.png" />
+								<div class="fl_menu_tx">Table Tennis</div>
+							</div>
+							<div class="fl_menu_n">420</div>
+						</div>
+						<div class="fl_menu_t btn_result_live_badminton sports_all">
+							<div class="fl_menu_i">
+								<img src="../assets/public/layout/images/icon/icon_s7.png" />
+								<div class="fl_menu_tx">Badminton</div>
+							</div>
+							<div class="fl_menu_n">420</div>
+						</div>
+						<div class="fl_menu_t btn_result_live_icehockey sports_all">
+							<div class="fl_menu_i">
+								<img src="../assets/public/layout/images/icon/icon_s25.png" />
+								<div class="fl_menu_tx">Ice Hockey</div>
+							</div>
+							<div class="fl_menu_n">420</div>
+						</div>
+						<div class="fl_menu_t btn_result_live_volleyball sports_all">
+							<div class="fl_menu_i">
+								<img src="../assets/public/layout/images/icon/icon_s40.png" />
+								<div class="fl_menu_tx">Volleyball</div>
+							</div>
+							<div class="fl_menu_n">420</div>
+						</div>
+						<div class="fl_menu_t btn_result_live_kabaddi sports_all">
+							<div class="fl_menu_i">
+								<img src="../assets/public/layout/images/icon/icon_s1.png" />
+								<div class="fl_menu_tx">Kabaddi</div>
+							</div>
+							<div class="fl_menu_n">420</div>
+						</div>
+						<div class="fl_menu_t btn_result_live_baseball sports_all">
+							<div class="fl_menu_i">
+								<img src="../assets/public/layout/images/icon/icon_s8.png" />
+								<div class="fl_menu_tx">Baseball</div>
+							</div>
+							<div class="fl_menu_n">420</div>
+						</div>
+						<div class="fl_menu_t btn_result_live_american_football sports_all">
+							<div class="fl_menu_i">
+								<img src="../assets/public/layout/images/icon/icon_s19.png" />
+								<div class="fl_menu_tx">American Football</div>
+							</div>
+							<div class="fl_menu_n">420</div>
+						</div>
+						<div class="fl_menu_t btn_result_live_snooker sports_all">
+							<div class="fl_menu_i">
+								<img src="../assets/public/layout/images/icon/icon_s34.png" />
+								<div class="fl_menu_tx">Snooker</div>
+							</div>
+							<div class="fl_menu_n">420</div>
+						</div>
+						<div class="fl_menu_t btn_result_live_rugby sports_all">
+							<div class="fl_menu_i">
+								<img src="../assets/public/layout/images/icon/icon_s31.png" />
+								<div class="fl_menu_tx">Rugby</div>
+							</div>
+							<div class="fl_menu_n">420</div>
+						</div>
+						<div class="fl_menu_t btn_result_live_lol sports_es" style="margin-left: 0">
+							<div class="fl_menu_i">
+								<img src="../assets/public/layout/images/icon/icon_s1.png" />
+								<div class="fl_menu_tx">LOL</div>
+							</div>
+							<div class="fl_menu_n">420</div>
+						</div>
+					</div>
+				</div>
+				<div class="fl_menu_wrp" id="mock_fl_menu_wrp_cb">
+					<div class="fl_menu">
+						<div class="fl_menu_t active btn_result_live_soccer">
+							<div class="new_tag">New</div>
+							<div class="fl_menu_i">
+								<img src="../assets/public/layout/images/game/cricket_bright.png" />
+							</div>
+							<div class="fl_menu_n">68</div>
+						</div>
+						<div class="fl_menu_t btn_result_live_tennis">
+							<div class="fl_menu_i">
+								<img src="../assets/public/layout/images/game/ao_tennis_bright.png" />
+							</div>
+							<div class="fl_menu_n">420</div>
+						</div>
+						<div class="fl_menu_t btn_result_live_soccer">
+							<div class="fl_menu_i">
+								<img src="../assets/public/layout/images/game/fifa_bright.png" />
+							</div>
+							<div class="fl_menu_n">268</div>
+						</div>
+						<div class="fl_menu_t btn_result_live_soccer">
+							<div class="fl_menu_i">
+								<img src="../assets/public/layout/images/game/footballPES_bright.png" />
+							</div>
+							<div class="fl_menu_n">37</div>
+						</div>
+						<div class="fl_menu_t btn_result_live_basketball">
+							<div class="fl_menu_i">
+								<img src="../assets/public/layout/images/game/nba2k_bright.png" />
+							</div>
+							<div class="fl_menu_n">12</div>
+						</div>
+						<div class="fl_menu_t btn_result_live_basketball">
+							<div class="fl_menu_i">
+								<img src="../assets/public/layout/images/game/cba2k_bright.png" />
+							</div>
+							<div class="fl_menu_n">420</div>
+						</div>
+						<div class="fl_menu_t btn_result_live_basketball">
+							<div class="fl_menu_i">
+								<img src="../assets/public/layout/images/game/world_basketball_bright.png" />
+							</div>
+							<div class="fl_menu_n">36</div>
+						</div>
+					</div>
+				</div>
+				<!--[SFCRQ-3708] [Asian] To sync sports icon display (Live Results): end-->
+				<div id="result_live_soccer"></div>
+				<div id="result_live_basketball"></div>
+				<div id="result_live_tennis"></div>
+				<div id="result_live_table_tennis"></div>
+				<div id="result_live_cricket"></div>
+				<div id="result_live_badminton"></div>
+				<div id="result_live_icehockey"></div>
+				<div id="result_live_volleyball"></div>
+				<div id="result_live_kabaddi"></div>
+				<div id="result_live_baseball"></div>
+				<div id="result_live_american_football"></div>
+				<div id="result_live_lol"></div>
+				<div id="result_live_snooker"></div>
+				<div id="result_live_rugby"></div>
+			</div>
+			<div class="eventListingRefresh btn_backtop" id="toTop">
+				<i class="icon-fi-backtotop-euro"></i>
+			</div>
+		</div>
+
+		<div class="popup_overWrap solid" id="mybet"></div>
+
+		<script>
+			$(document).ready(function () {
+				sportSlider();
+				$('#mybet').load('_popup_mybet_unsettled.html');
+				$('#mybet').hide();
+
+				var header_height = $('.n_header').outerHeight();
+
+				$('#result_live_soccer').load('_result_live_soccer.html');
+				$('#result_live_basketball').load('_result_live_basketball.html');
+				$('#result_live_tennis').load('_result_live_tennis.html');
+				$('#result_live_table_tennis').load('_result_live_table_tennis.html');
+				$('#result_live_cricket').load('_result_live_cricket.html');
+				$('#result_live_icehockey').load('_result_live_icehockey.html');
+				$('#result_live_badminton').load('_result_live_badminton.html');
+				$('#result_live_volleyball').load('_result_live_volleyball.html');
+				$('#result_live_baseball').load('_result_live_baseball.html');
+				$('#result_live_kabaddi').load('_result_live_kabaddi.html');
+				$('#result_live_american_football').load('_result_live_american_football.html');
+				$('#result_live_lol').load('_result_live_lol.html');
+				$('#result_live_snooker').load('_result_live_snooker.html');
+				$('#result_live_rugby').load('_result_live_rugby.html');
+				$('#result_live_soccer').show();
+				$('#result_live_soccer').siblings().hide();
+
+				if (sessionStorage.getItem('enterCyberBattle') === 'true') {
+					$('#mock_fl_menu_wrp_asia').hide();
+					$('#mock_fl_menu_wrp_cb').show();
+					$('.n_sport_type').hide();
+					document.querySelector('.demo_mock_result_outright')?.remove();
+				} else {
+					if (localStorage.getItem('isFacelift') === 'true') {
+						$('#mock_fl_menu_wrp_asia').show();
+						$('.n_sport_type, #mock_fl_menu_wrp_cb, .el_header_grp').hide();
+					} else {
+						$('.el_header_grp').css('top', header_height);
+						$('.el_header_grp, .n_sport_type').show();
+						$('.fl_menu_wrp').hide();
+					}
+
+					$('.n_sport_type').show();
+				}
+
+				$('.btn_result_live_soccer').click(function () {
+					$('#result_live_soccer').show();
+					$('#result_live_soccer').siblings(':not(.fl_menu_wrp, .el_header_grp)').hide();
+					$(this).addClass('active');
+					$(this).siblings().removeClass('active');
+				});
+
+				// [DES-1440: cybersoccer entry
+				$('.btn_result_live_cybersoccer').click(function () {
+					$('#result_live_soccer').show();
+					$('#result_live_soccer').siblings(':not(.fl_menu_wrp, .el_header_grp)').hide();
+					$(this).addClass('active');
+					$(this).siblings().removeClass('active');
+				});
+
+				$('.btn_result_live_basketball').click(function () {
+					$('#result_live_basketball').show();
+					$('#result_live_basketball').siblings(':not(.fl_menu_wrp, .el_header_grp)').hide();
+					$(this).addClass('active');
+					$(this).siblings().removeClass('active');
+				});
+				$('.btn_result_live_tennis').click(function () {
+					$('#result_live_tennis').show();
+					$('#result_live_tennis').siblings(':not(.fl_menu_wrp, .el_header_grp)').hide();
+					$(this).addClass('active');
+					$(this).siblings().removeClass('active');
+				});
+				$('.btn_result_live_table_tennis').click(function () {
+					$('#result_live_table_tennis').show();
+					$('#result_live_table_tennis').siblings(':not(.fl_menu_wrp, .el_header_grp)').hide();
+					$(this).addClass('active');
+					$(this).siblings().removeClass('active');
+				});
+				$('.btn_result_live_cricket').click(function () {
+					$('#result_live_cricket').show();
+					$('#result_live_cricket').siblings(':not(.fl_menu_wrp, .el_header_grp)').hide();
+					$(this).addClass('active');
+					$(this).siblings().removeClass('active');
+				});
+				$('.btn_result_live_badminton').click(function () {
+					$('#result_live_badminton').show();
+					$('#result_live_badminton').siblings(':not(.fl_menu_wrp, .el_header_grp)').hide();
+					$(this).addClass('active');
+					$(this).siblings().removeClass('active');
+				});
+				$('.btn_result_live_icehockey').click(function () {
+					$('#result_live_icehockey').show();
+					$('#result_live_icehockey').siblings(':not(.fl_menu_wrp, .el_header_grp)').hide();
+					$(this).addClass('active');
+					$(this).siblings().removeClass('active');
+				});
+				$('.btn_result_live_volleyball').click(function () {
+					$('#result_live_volleyball').show();
+					$('#result_live_volleyball').siblings(':not(.fl_menu_wrp, .el_header_grp)').hide();
+					$(this).addClass('active');
+					$(this).siblings().removeClass('active');
+				});
+				$('.btn_result_live_kabaddi').click(function () {
+					$('#result_live_kabaddi').show();
+					$('#result_live_kabaddi').siblings(':not(.fl_menu_wrp, .el_header_grp)').hide();
+					$(this).addClass('active');
+					$(this).siblings().removeClass('active');
+				});
+				$('.btn_result_live_baseball').click(function () {
+					$('#result_live_baseball').show();
+					$('#result_live_baseball').siblings(':not(.fl_menu_wrp, .el_header_grp)').hide();
+					$(this).addClass('active');
+					$(this).siblings().removeClass('active');
+				});
+				$('.btn_result_live_american_football').click(function () {
+					$('#result_live_american_football').show();
+					$('#result_live_american_football').siblings(':not(.fl_menu_wrp, .el_header_grp)').hide();
+					$(this).addClass('active');
+					$(this).siblings().removeClass('active');
+				});
+				$('.btn_result_live_lol').click(function () {
+					$('#result_live_lol').show();
+					$('#result_live_lol').siblings(':not(.fl_menu_wrp, .el_header_grp)').hide();
+					$(this).addClass('active');
+					$(this).siblings().removeClass('active');
+				});
+				$('.btn_result_live_snooker').click(function () {
+					$('#result_live_snooker').show();
+					$('#result_live_snooker').siblings(':not(.fl_menu_wrp, .el_header_grp)').hide();
+					$(this).addClass('active');
+					$(this).siblings().removeClass('active');
+				});
+				$('.btn_result_live_rugby').click(function () {
+					$('#result_live_rugby').show();
+					$('#result_live_rugby').siblings(':not(.fl_menu_wrp, .el_header_grp)').hide();
+					$(this).addClass('active');
+					$(this).siblings().removeClass('active');
+				});
+
+				function sportSlider() {
+					var slider_active = $('.n_sport_type .sport_item.active');
+					var slider_width = slider_active.width();
+					var slider_position = slider_active.offset().left;
+					$('.n_sport_type .slider').css('left', slider_position);
+					$('.n_sport_type .slider').css('width', slider_width);
+					$('.sports_all').show();
+					$('.sports_es').hide();
+
+					$('.n_sport_type .sport_item').click(function () {
+						$('.n_sport_type .sport_item').removeClass('active');
+						$(this).addClass('active');
+						$('.n_sport_type .slider').css('width', $('.n_sport_type .sport_item.active').width());
+						$('.n_sport_type .slider').css('left', $('.n_sport_type .sport_item.active').offset().left);
+
+						if ($('.n_sport_type .sport_item.active').attr('id') == 'sports_all') {
+							$('.sports_all').show();
+							$('.sports_es').hide();
+							$('.btn_result_live_soccer').addClass('active');
+							$('#result_live_soccer').show();
+							$('#result_live_soccer').siblings(':not(.fl_menu_wrp, .el_header_grp)').hide();
+						} else if ($('.n_sport_type .sport_item.active').attr('id') == 'sports_es') {
+							$('.sports_all').hide();
+							$('.sports_es').show();
+							$('.btn_result_live_lol').addClass('active');
+							$('#result_live_lol').show();
+							$('#result_live_lol').siblings(':not(.fl_menu_wrp, .el_header_grp)').hide();
+						}
+					});
+				}
+
+				$('.mock_result_live_trigger').click(function () {
+					checkCyberbattlePage('result-live.html');
+				});
+				$('.mock_result_completed_trigger').click(function () {
+					checkCyberbattlePage('result-completed.html');
+				});
+				cyberbattleBackButton();
+			});
+		</script>
+	</body>
+</html>

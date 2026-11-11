@@ -1,0 +1,305 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Narra - html template</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover,user-scalable=no" />
+
+		<!--Base Styles-->
+		<link rel="stylesheet" type="text/css" href="../assets/public/layout/css/basestyle.min.css" />
+		<!--<link rel="stylesheet" type="text/css" href="../merchants/merchant1/css/style_euro.css">-->
+		<link rel="stylesheet" type="text/css" href="../assets/public/languages/eng/layout_euro.min.css" id="detect_language" />
+
+		<!--theme-->
+		<link rel="stylesheet" type="text/css" href="#" id="design_view" />
+
+		<!-- Public JS -->
+		<script src="../assets/public/lib/jquery.js"></script>
+		<script src="../assets/public/layout/js/scripts_main.js"></script>
+		<script src="../assets/public/layout/js/scripts_euro.js"></script>
+	</head>
+
+	<body id="root" class="euro">
+		<div class="n_container">
+			<div class="n_header n_header_main">
+				<!-- main header here-->
+				<div class="heder_lf">
+					<div class="lf_menu">
+						<i class="icon-fi-left-menu"></i>
+					</div>
+					<div class="v_split"></div>
+					<div class="logo">
+						<img src="../merchants/merchant1/images/logo.png" />
+					</div>
+				</div>
+				<div class="heder_rt">
+					<i class="icon-fi-n-results dontcoopythisclass_sample_button_results"></i>
+
+					<div class="item demoOnlyDontCopt_betslip">
+						<i class="icon-fi-n-betlist"></i>
+						<div class="noti mybet_noti_cancel">2</div>
+						<div class="noti mybet_noti_pending">1</div>
+					</div>
+					<div class="er_myacct">
+						<i class="icon-fi-n-mine dontcoopythisclass_sample_button_myacct"></i>
+						<div class="red_dot"></div>
+					</div>
+					<div class="n_balance">
+						<div class="currency">(RMB)</div>
+						7,676,100,962,132.55
+					</div>
+				</div>
+			</div>
+
+			<div class="n_content_wrap_wth_bcktop with_ref">
+				<!-- content start here-->
+				<!--<div id="el_stickymenu" class="el_stickymenu sticky"></div>-->
+				<div id="el_stickymenu" class=""></div>
+				<div class="n_iframe_betradar" style="background: black">
+					<!--Note: handling added in dev side: -->
+					<!--1. for scenario in iframe AND IOS = add in style="z-index: -1; position: relative;" > to enable info icon-->
+					<!--2. for scenario in non iframe OR non IOS = no need to add extra CSS, adding above will block native button ins2ide video-->
+					<div id="vsm_container" class="vsm-container sr-widget sr-widget-level-0 sr-vsmobile-vflm-widget-mobile sr-widgetHeight-auto" data-sr-lang="en" data-sr-handle="0" style="height: 410px !important"></div>
+					<img style="position: absolute; top: 0; left: 0; width: 100%; height: 100%" src="../assets/public/layout/images/betradar_widget.png" />
+					<!-- add "res" next to "pin_wrp_betr" to show the pin button within "vsm-livepanel-live" -->
+					<!-- <div class="n_streaming_icon_wrap pin_wrp_betr res" style="--height_vsmLive: 213.938px">
+						<div class="n_visualization_btn">
+							<i class="icon-fi-sev-pin"></i>
+						</div>
+					</div> -->
+				</div>
+				<div class="btn_row">
+					<div class="n_visualization_btn">
+						<i class="icon-fi-sev-pin"></i>
+					</div>
+				</div>
+				<div class="el_content_wrp">
+					<div class="el_items">
+						<div class="el_grp_header n_sticky">
+							<i class="icon-fi-arrow-up1"></i>
+							<div class="name">Virtual Soccer League</div>
+						</div>
+						<div class="bet_type_wrp n_sticky">
+							<div class="bet_item">1</div>
+							<div class="bet_item">x</div>
+							<div class="bet_item">2</div>
+						</div>
+						<div class="el_grp_wrp">
+							<div class="event_content">
+								<div class="content_lf">
+									<div class="team_info">
+										<div class="name">VL Amsterdam</div>
+									</div>
+									<div class="team_info">
+										<div class="name">VL Lisbon</div>
+									</div>
+									<div class="info_btm">
+										<div class="info_lf">03/03 20:15</div>
+										<div class="more_icons">
+											<div class="n_btn_sev">100<i class="icon-fi-angle-right"></i></div>
+										</div>
+									</div>
+								</div>
+								<div class="content_rt">
+									<div class="odds_box big">24.00</div>
+									<div class="odds_box big">24.00</div>
+									<div class="odds_box big">24.00</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="el_items">
+						<div class="el_grp_header n_sticky">
+							<i class="icon-fi-arrow-up1"></i>
+							<div class="name">Italy Serie B</div>
+						</div>
+						<div class="bet_type_wrp n_sticky">
+							<div class="bet_item">1</div>
+							<div class="bet_item">x</div>
+							<div class="bet_item">2</div>
+						</div>
+						<div class="el_grp_wrp">
+							<div class="event_content">
+								<div class="content_lf">
+									<div class="team_info">
+										<div class="name">Virtus Entella</div>
+									</div>
+									<div class="team_info">
+										<div class="name">Pisa</div>
+									</div>
+									<div class="info_btm">
+										<div class="info_lf">25/01 46:00</div>
+										<div class="more_icons">
+											<div class="n_btn_sev">100<i class="icon-fi-angle-right"></i></div>
+										</div>
+									</div>
+								</div>
+								<div class="content_rt">
+									<div class="odds_box big add">24.00</div>
+									<div class="odds_box big">24.00</div>
+									<div class="odds_box big">24.00</div>
+								</div>
+							</div>
+							<div class="event_content">
+								<div class="content_lf">
+									<div class="team_info">
+										<div class="name">Virtus Entella</div>
+									</div>
+									<div class="team_info">
+										<div class="name">Pisa</div>
+									</div>
+									<div class="info_btm">
+										<div class="info_lf">25/01 46:00</div>
+										<div class="more_icons">
+											<div class="n_btn_sev">100<i class="icon-fi-angle-right"></i></div>
+										</div>
+									</div>
+								</div>
+								<div class="content_rt">
+									<div class="odds_box big">24.00</div>
+									<div class="odds_box big">24.00</div>
+									<div class="odds_box big">24.00</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="el_content_wrp">
+					<div class="el_items">
+						<div class="el_grp_header n_sticky">
+							<i class="icon-fi-arrow-up1"></i>
+							<div class="name">Italy Serie A</div>
+							<span class="comp_count">3</span>
+						</div>
+						<div class="bet_type_wrp n_sticky">
+							<div class="bet_item">1</div>
+							<div class="bet_item">2</div>
+						</div>
+						<div class="el_grp_wrp">
+							<div class="event_content">
+								<div class="content_lf">
+									<div class="team_info">
+										<div class="name">Utah State Aggies</div>
+									</div>
+									<div class="team_info">
+										<div class="name">Colorado State Rams</div>
+									</div>
+									<div class="info_btm">
+										<div class="info_lf">25/01 11:15</div>
+										<div class="more_icons">
+											<div class="n_btn_sev">100<i class="icon-fi-angle-right"></i></div>
+										</div>
+									</div>
+								</div>
+								<div class="content_rt">
+									<div class="odds_box big up">
+										<i class="icon-fi-arrow-up"></i>
+										1600.00
+									</div>
+									<div class="odds_box big down">
+										<i class="icon-fi-arrow-down"></i>
+										1600.00
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="el_items">
+						<div class="el_grp_header n_sticky">
+							<i class="icon-fi-arrow-up1"></i>
+							<div class="name">Italy Serie B</div>
+						</div>
+						<div class="bet_type_wrp n_sticky">
+							<div class="bet_item">1</div>
+							<div class="bet_item">2</div>
+						</div>
+						<div class="el_grp_wrp">
+							<div class="event_content">
+								<div class="content_lf">
+									<div class="team_info">
+										<div class="name">Utah State Aggies utah State Aggies utah State Aggies</div>
+									</div>
+									<div class="team_info">
+										<div class="name">Colorado State Rams</div>
+									</div>
+									<div class="info_btm">
+										<div class="info_lf">21/02 06:00</div>
+										<div class="more_icons">
+											<div class="n_btn_sev">100<i class="icon-fi-angle-right"></i></div>
+										</div>
+									</div>
+								</div>
+								<div class="content_rt">
+									<div class="odds_box big">
+										<i class="lock_icon icon-fi-lock"></i>
+									</div>
+									<div class="odds_box big empty">--</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- any share items-->
+		<div id="demoOnly_global_pop_item_euro"></div>
+
+		<script type="text/JavaScript" src="http://vsw.betradar.com/ls/mobile/?/srvirtualgaming/en/Europe:Berlin/page/vsmobile"></script>
+		<script>
+			$(document).ready(function () {
+				$('.pin_wrp .n_visualization_btn').removeClass('pin');
+				var $extraPinButton = $('.btn_row .n_visualization_btn:has(.icon-fi-sev-pin)');
+				$extraPinButton.removeClass('pin');
+
+				$('.pin_wrp .n_visualization_btn').click(function () {
+					var isPinned = $(this).toggleClass('pin').hasClass('pin');
+					$(this).find('i').toggleClass('pinned', isPinned);
+					$(window).trigger('scroll');
+				});
+
+				$extraPinButton.click(function () {
+					$(this).toggleClass('pin');
+					$(window).trigger('scroll');
+				});
+				var betradarShowLoopTimeout;
+				var betradarCloseLoopTimeout;
+				$('.n_iframe_betradar').click(function () {
+					var $betradarIframe = $('.n_iframe_betradar');
+					clearTimeout(betradarShowLoopTimeout);
+					clearTimeout(betradarCloseLoopTimeout);
+					$betradarIframe.removeClass('showOut').addClass('showLoop');
+					betradarShowLoopTimeout = setTimeout(function () {
+						$betradarIframe.removeClass('showLoop').addClass('closeLoop');
+					}, 5000);
+					betradarCloseLoopTimeout = setTimeout(function () {
+						$betradarIframe.removeClass('closeLoop');
+					}, 5500);
+				});
+
+				SEV_Group('_sev_content_soccer_all.html', true, '_sev_mainpage_virtual_betradar.html', '_sev_header_soccer_prematch.html', 'prematch', 'haveVisual');
+				eventListing(true, 'virtual', 'betradar');
+
+				var instance = vsmobile.init('.vsm-container', {
+					sport: 'vflm.widget-mobile' || undefined,
+					currentMatchdayTitleContainer: '#vsm-current-matchday-title',
+					nextMatchdayTitleContainer: '#vs-next-matchday-title',
+				});
+
+				// The widget clears #vsm_container's inline style whenever it (re)renders,
+				// so keep forcing the 410px height back instead of setting it once.
+				var $vsmContainer = $('#vsm_container');
+				var vsmContainerEl = $vsmContainer[0];
+				if (vsmContainerEl) {
+					var enforceVsmHeight = function () {
+						if (vsmContainerEl.style.height !== '410px') {
+							vsmContainerEl.style.height = '410px';
+						}
+					};
+					enforceVsmHeight();
+					new MutationObserver(enforceVsmHeight).observe(vsmContainerEl, { attributes: true, attributeFilter: ['style'] });
+				}
+			});
+		</script>
+	</body>
+</html>
