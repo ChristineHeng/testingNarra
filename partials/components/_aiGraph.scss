@@ -3,6 +3,7 @@
 @use "../../assets/public/layout/css/base"as base;
 @use "../mixin"as mix;
 
+// scss change
 .trend-performance-card {
     &.win {
         @include mix.theme {
